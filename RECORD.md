@@ -114,3 +114,14 @@ part is updated with the shipped facts; the child's day (fear,
 literacy, the experience throttle, the archetypes, from Growing
 Up's plain-Lua systems) is the next batch. Live receipts for both
 batches remain the operator's.
+
+## 9 - The child's day shipped in SAO (2026-09-06)
+
+Batch C31 shipped: Growing Up's fear model, literacy gate,
+experience throttle and birthday floors, kid types' kits and the
+rule for a child's head, each carried at SAO's own seam with the
+mod's numbers and every engine surface verified against the jar
+and the game's own definitions. The catalogue's fourth part records
+what was carried and what was not. Next in SAO: the conditions -
+the memory ports and the required Build 42 mods. Live receipts for
+the three batches of the evening remain the operator's.

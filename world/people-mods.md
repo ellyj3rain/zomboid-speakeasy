@@ -268,8 +268,32 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    the age code in the engine's own VM. Three older mirrors of the
    bands had to be corrected in the same close - they divided the
    hash by a hundred and read the table with a regex that dropped
-   a column-aligned row - which is recorded in SAO's batch. Next:
-   the child's day, from Growing Up's plain-Lua systems.
+   a column-aligned row - which is recorded in SAO's batch.
+6. **The child's day: SHIPPED in SAO as batch C31**, the same
+   evening. Growing Up's plain-Lua systems, carried at SAO's own
+   seams with the mod's numbers: a fear floor by age (0.55 at eight
+   and under, nothing at eighteen) that the night deepens under
+   fifteen and a carried comfort object and the child's own kills
+   ease, read by the disposition's decisions (a frightened child
+   breaks further out, holds against a smaller crowd, will not
+   engage past half fear, runs, needs more nerve to shoot) and held
+   on the engine's own panic; literacy by the school years lived
+   before the fall (none before eight, slow to eleven, reading from
+   twelve), gating the skill book; the experience throttle (a
+   quarter under ten, half under fourteen; strength, fitness and
+   sprinting exempt) on every grant through the bridge, and the
+   birthday floors on strength and fitness; the kit from the child's
+   own eight axes (bully, crybaby, shy, nerd, jock, scout - the
+   outer fifth of the envelope on the axis that names each), a
+   schoolbag and for most under twelve a bear or a doll; the child's
+   head (no beard, no bald, receding, spiked or mullet styles - every
+   name checked against the game's own hair definitions). Not
+   carried: nightmares (SAO's sleep is the agent's state, not the
+   engine's), growth spurts, the cooking, driving and grief systems,
+   the voice lines. A border drives it in the engine's own VM, and
+   the older border that holds the disposition's documented ranges
+   now samples the county with its children. Next: the conditions -
+   the memory ports and the required Build 42 mods.
 
 ## Could not source
 
