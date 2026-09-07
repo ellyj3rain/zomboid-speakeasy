@@ -158,9 +158,13 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    habits** (the society arc's S6): the eight-dependency pattern of N
    and C's Narcotics and the period set of Drugs of '93 inform SAO's
    own; The Alcoholic and Just Drugs are taken from. No dependency.
-4. **Children's bodies: open.** The operator asked whether the
-   child mod's source is genuinely unavailable; the answer and the
-   decision follow in the record below.
+4. **Children's bodies: read Growing Up first.** Ruled after the
+   source question was answered (its Lua is on disk for a
+   subscriber; only the copied Java classes are compiled): the
+   operator subscribes to Growing Up (3701972216) and its Realism
+   dependency (3701964565), the Lua is read and the Java classes
+   inspected, and what it does that a scaled mesh does not is
+   reported before the body decision. Nothing built until then.
 
 ## Could not source
 
