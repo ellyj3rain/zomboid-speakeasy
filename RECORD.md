@@ -87,3 +87,17 @@ the Kentucky Guard in the Gulf. The media document's chart, ratings,
 box-office, radio and MTV gaps were closed from the trade paper's
 own July and August issues and the period wire lists. The remaining
 LOW rows are named in each document's closing section.
+
+## 7 - The catalogue closed on its decisions; the body seam shipped in SAO (2026-09-06)
+
+The people catalogue's three parts were read and ruled on: Getting
+Old's mechanics come into SAO from its public source; the Build 42
+condition mods are required and the memory conditions ported; the
+dependency model comes into SAO's habits; and the child body, after
+Growing Up was subscribed and read and a wrong claim of this record
+withdrawn against the jar, goes through SAO's own Java agent. That
+batch shipped in SAO the same evening (C29), with Growing Up's
+height-by-age table carried in SAO's age code and credited. The
+operator also added a zombie hunger mod, read and recorded here for
+the lessons and the knowledge surface. What remains theirs: the live
+receipt, and the review of every document before it teaches.

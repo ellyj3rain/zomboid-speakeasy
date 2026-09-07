@@ -245,7 +245,13 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    ruled: SAO's own Java agent instruments the animation player
    first - a load-time transformer that scales bone transforms per
    character, verified live - and the age systems follow it. The
-   body batch comes before the age batch.
+   body batch comes before the age batch. SHIPPED in SAO the same
+   evening as batch C29: an exit advice woven onto the animation
+   player's model-transform build, a size held on SAO's own shell,
+   Growing Up's height table carried in SAO's age code with credit,
+   and a border that weaves the installed class off the game and
+   has the JVM verify it. The live receipt - a survivor seen at
+   three quarters - is the operator's to take.
 
 ## Could not source
 
