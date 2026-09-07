@@ -167,6 +167,19 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 14 - The art crossed (2026-09-07)
+
+Bandits and Week One were subscribed and read on disk, then the
+operator named Lifestyle: Hobbies as already holding most of the art
+on the player's own tree. The selection went through Crucible and
+the art shipped in SAO as C35: gestures, seats, tunes and dances
+from Hobbies, the serving and the coughs and claps from Week One,
+copied with permission, credited per author, bound by SAO's own
+nodes and wired to the county's own moments. For this project's
+speech work the gestures matter: a listener now answers a mood in
+the body, which the speaker model's register will have to agree
+with when it exists.
+
 ## 13 - Week One named (2026-09-06)
 
 The operator named Week One, Slayer's pre-outbreak living world

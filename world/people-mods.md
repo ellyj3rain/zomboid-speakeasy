@@ -734,3 +734,28 @@ timeline, and both would collide with the county. What can cross is
 the art, file by file, with the credited author's permission for
 each group - the operator's to settle, as with every mod here - and
 the binding written new for SAO's own people.
+
+## Selected and shipped (2026-09-07, SAO's DR-034 and batch C35)
+
+The operator ruled through Crucible that all four groups cross,
+copied into SAO with permission and credited, and named Lifestyle:
+Hobbies (Angry, Workshop 3403870858, 1.4 GB, installed) as already
+holding the gestures, the sitting, the dances and the instruments on
+the player's own animation tree - richer than Week One's and rigged
+for the player. Read on disk: 400 animations (a talking table of
+twenty-two conversation gestures keyed by a listener's mood, forty-one
+sitting loops, a hundred and twenty dances, eighty-seven instrument
+plays, yoga, cleaning, painting, hygiene) bound by a `PerformingAction`
+variable through its own timed actions; its page asks that its work
+be extended only with the creator's express permission and credit.
+So Hobbies is the source for the shared groups and Week One for what
+nobody else has. Shipped in SAO as C35: twenty-two conversation
+gestures, eight sitting loops, eight instrument plays and sixteen
+dances from Hobbies; the waiter's serving and twenty-one coughs and
+claps from Week One; every file checked for the player's rig, named
+in a manifest with its source and author, bound by SAO's own nodes
+on SAO's own variables, and wired to the moments the county already
+has - the meeting's verdict, the voice's events, the evening seat,
+the porch tune. What waits: the cashier, the protest, CPR, the
+building ambiences and the helicopters, each for the moment that
+would show it.
