@@ -241,8 +241,11 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    instance's field. Growing Up's plain-Lua systems - the age curves,
    the fear model, the literacy progression, the experience throttle,
    the archetypes - still come into SAO as ruled. The body itself
-   goes back to the operator with the corrected facts; the record
-   below carries the answer.
+   went back to the operator with the corrected facts, and they
+   ruled: SAO's own Java agent instruments the animation player
+   first - a load-time transformer that scales bone transforms per
+   character, verified live - and the age systems follow it. The
+   body batch comes before the age batch.
 
 ## Could not source
 
