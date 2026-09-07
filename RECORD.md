@@ -167,6 +167,18 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 15 - The record on the county's calendar (2026-09-07)
+
+SAO's batch C36 built what DR-031 scoped and knox-event.md keyed:
+the game's own broadcasts and dated papers reach the county on the
+record's own dates from any 1993 start, the shipped July 9 start
+unchanged. A start before July 6 now hears an ordinary county and
+reads the Knox Knews of July 1 to 5 first; a later start finds the
+record under way. For this project: the day-to-date mapping this
+document computed is now the mapping SAO runs, and the corpus can
+assume a person heard each broadcast on the date the document
+gives.
+
 ## 14 - The art crossed (2026-09-07)
 
 Bandits and Week One were subscribed and read on disk, then the

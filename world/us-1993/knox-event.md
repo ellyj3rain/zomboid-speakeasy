@@ -53,7 +53,11 @@ it can be used.
 The consequence for this project: every claim below carries an
 absolute date. The consequence on the SAO side is recorded there
 (DR-031): a living start drives when each part of this record
-reaches the county.
+reaches the county - built as SAO's batch C36 on 2026-09-07: every
+vanilla channel is re-keyed once per save to begin on the save day
+July 9 falls on, and every paper a container is filled with shows
+the newest issue printed by the county's date or is not on the
+shelf yet. The mapping computed above is the one it runs on.
 
 ## The county before (July 1-5, 1993) - Knox Knews
 
