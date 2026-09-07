@@ -100,6 +100,30 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    SAO's off-slot people at all (the source is readable now), and
    which age is the one source of truth.
 
+# Ruled 2026-09-06 (Crucible, after part 3)
+
+1. **Age: Getting Old's mechanics come into SAO.** Its source is
+   public; SAO's own age stays the one source of truth and the
+   life-stage effects run natively on SAO's people, credited through
+   CREDITS.md. No runtime dependency. (Verification before the port:
+   how the mod attaches to a character, so the port attaches to
+   SAO's off-slot people.)
+2. **Memory and cognition: both.** The Build 42 condition mods are
+   required at runtime for the conditions players see - Infirmities,
+   Even More Traits, and Humans: Are Weak as it fills in - with their
+   frameworks; and the memory conditions are ported into SAO as its
+   own: the Alzheimer's, ADHD and Bipolar traits of Neurodiverse
+   Traits, Dyslexia from Custom Traits, Scotty's Mental Health
+   Expansion's six conditions, and the Build 42 ADHD Trait. These
+   feed the decay rule in who-knows-what.md.
+3. **Substances and habits: the dependency model comes into SAO's
+   habits** (the society arc's S6): the eight-dependency pattern of N
+   and C's Narcotics and the period set of Drugs of '93 inform SAO's
+   own; The Alcoholic and Just Drugs are taken from. No dependency.
+4. **Children's bodies: open.** The operator asked whether the
+   child mod's source is genuinely unavailable; the answer and the
+   decision follow in the record below.
+
 ## Could not source
 
 - Zombie Kids (2970602033): Steam returns its error page; the API

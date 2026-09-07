@@ -180,12 +180,14 @@ The rule, per claim per person:
    told claim can be wrong because the teller was; the models are
    taught both.
 
-What this needs from the mod decisions: the conditions in items 2
-and 3 exist as traits in the catalogued mods. Whether SAO requires
-them, takes their mechanics in, or names its own is the operator's
-call, made through Crucible after part 3 of the catalogue. Until
-then the rule runs on vanilla traits, SAO's own age, and SAO's own
-states.
+What the mod decisions settled (Crucible, 2026-09-06): the memory
+conditions in item 2 are ported into SAO as its own (the Alzheimer's,
+ADHD and Bipolar traits, Dyslexia, the six mental-health conditions,
+the Build 42 ADHD trait), the Build 42 condition mods are required
+at runtime for what players see, the age effects come in from
+Getting Old's source, and the substance dependencies of item 3 come
+into SAO's own habits. The rule therefore runs on SAO-native
+conditions plus the required mods' traits where present.
 
 ## What this forbids
 
