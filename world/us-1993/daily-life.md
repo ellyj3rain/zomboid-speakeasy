@@ -14,8 +14,8 @@ national city averages; a Kentucky grocery ran a little under them.
 
 | Item | Price | When | Conf. | Source series | Who carries it |
 |---|---|---|---|---|---|
-| Gasoline, unleaded regular, per gallon | $1.174 | July 1993 | HIGH | BLS APU00007471A | everyone |
-| Milk, whole, per gallon | $1.406 (June), $1.396 (July) | June-July 1993 | HIGH | BLS APU0000709111 | everyone |
+| Gasoline, all types, per gallon (the series' own title; an earlier draft called it unleaded regular, which is the next table's series and stood at $1.109 in July) | $1.174 | July 1993 | HIGH | BLS APU00007471A | everyone |
+| Milk, whole fortified, per HALF gallon (the series' own unit; an earlier draft said per gallon, which was wrong) | $1.406 (June), $1.396 (July) | June-July 1993 | HIGH | BLS APU0000709111 (discontinued Dec 1997; the per-gallon series APU0000709112 begins July 1995) | everyone |
 | White bread, per pound | $0.752 (May-June), $0.762 (July) | May-July 1993 | HIGH | BLS APU0000702111 | everyone |
 | Eggs, grade A large, per dozen | $0.921 (June), $0.900 (July) | June-July 1993 | HIGH | BLS APU0000708111 | everyone |
 | Ground beef, per pound | $1.562 (June), $1.577 (July) | June-July 1993 | HIGH | BLS APU0000703112 | everyone |
@@ -24,6 +24,27 @@ national city averages; a Kentucky grocery ran a little under them.
 | Coffee, ground roast, per pound | $2.533 (June), $2.548 (July) | June-July 1993 | HIGH | BLS APU0000717311 | adults |
 | Bananas, per pound | $0.446 (June), $0.448 (July) | June-July 1993 | HIGH | BLS APU0000711211 | everyone |
 | Electricity, per kilowatt-hour | $0.094 (June), $0.095 (July) | June-July 1993 | HIGH | BLS APU000072610 | adults (the bill-payer) |
+
+### August to December 1993 (for later starts and living starts)
+
+The same series, read from the Bureau's data through FRED on
+2026-09-06; monthly, U.S. city average, all HIGH; everyone carries
+the store prices, the bill-payer the electricity, adults the rate.
+
+| Item | Aug | Sep | Oct | Nov | Dec | Series |
+|---|---|---|---|---|---|---|
+| Gasoline, unleaded regular, per gallon | $1.097 | $1.085 | $1.127 | $1.113 | $1.070 | BLS APU000074714 (May $1.129, June $1.130, July $1.109) |
+| Milk, whole fortified, per half gallon | $1.417 | $1.413 | $1.395 | $1.408 | $1.432 | BLS APU0000709111 |
+| White bread, per pound | $0.745 | $0.748 | $0.750 | $0.771 | $0.760 | BLS APU0000702111 |
+| Eggs, grade A large, per dozen | $0.929 | $0.890 | $0.897 | $0.917 | $0.871 | BLS APU0000708111 |
+| Ground beef, per pound | $1.573 | $1.551 | $1.556 | $1.600 | $1.574 | BLS APU0000703112 |
+| Chicken, whole, per pound | $0.896 | $0.897 | $0.893 | $0.918 | $0.910 | BLS APU0000706111 |
+| Potatoes, white, per pound | $0.370 | $0.341 | $0.341 | $0.347 | $0.364 | BLS APU0000712112 |
+| Coffee, ground roast, per pound | $2.500 | $2.493 | $2.415 | $2.433 | $2.480 | BLS APU0000717311 |
+| Bananas, per pound | $0.422 | $0.395 | $0.405 | $0.404 | $0.414 | BLS APU0000711211 |
+| Electricity, per kilowatt-hour | $0.097 | $0.097 | $0.093 | $0.091 | $0.090 | BLS APU000072610 |
+| Unemployment rate, percent (the series as revised since) | 6.8 | 6.7 | 6.8 | 6.6 | 6.5 | BLS UNRATE. As published at the time: November 6.4 (the December 3 release, revised to 6.5 a month later); December 6.4, published January 7, 1994, past the horizon |
+| Consumer price index, all items (1982-84 = 100) | 144.8 | 145.0 | 145.6 | 146.0 | 146.3 | BLS CPIAUCSL |
 
 ## Wages and work
 

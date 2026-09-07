@@ -39,3 +39,23 @@ floor. The operator then ruled the record's schedule controllable
 for a living start; the engine's re-keying surface is verified and
 recorded on the SAO side, and this document's absolute dating is
 what makes the record usable from any start.
+
+## 4 - The year completed to December 31; the scoping index drafted (2026-09-06)
+
+The timeline now runs to the end of 1993: thirty-odd rows from July
+19 to December 15, each from a primary source read directly - the
+Public Papers and the Weekly Compilation on govinfo, House and
+Senate roll calls, NASA, the NTSB, FEMA, the Bureau of Labor
+Statistics releases, and period newspapers where the government
+record is silent - with the unsourced left marked LOW and untaught
+(the Letterman premiere rating, the X-Files' exact day, the
+Billboard charts). Daily life carries the monthly prices for August
+to December and corrects two series labels from the first draft:
+milk is per half gallon, and the July gasoline figure is all types.
+The game's own July papers pointed at three real events, now
+confirmed in the timeline. who-knows-what.md was drafted the same
+day, after the operator asked that the world model be cut by
+personal history from the game's own attributes: the inputs verified
+against the installed build, the carrier tags resolved per person,
+age at the event, the provenance paths, and three parameters left
+open for the operator.

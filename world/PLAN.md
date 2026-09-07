@@ -121,7 +121,13 @@ approved as a whole.
 7. **who-knows-what.md** - the scoping index: an explicit map from
    kinds of people (age bands, trades, regions, service) to the
    sections above, so the models are taught differences in
-   knowledge, not one shared encyclopedia.
+   knowledge, not one shared encyclopedia. Direction of 2026-09-06,
+   the operator's: the map keys on the attributes the game itself
+   makes available per character (age, gender, profession, traits,
+   personality, skills - verified against the installed build) and
+   on SAO's derived history (birth year, service, occupation class,
+   origin region, lessons), so that nobody knows everything and
+   personal history decides. Drafted 2026-09-06 for review.
 8. **knox-event.md** - the game's own record of the fall, added
    2026-09-06 on the operator's word and verified against the
    shipped files: the broadcast schedule (RadioData.xml, eighteen
