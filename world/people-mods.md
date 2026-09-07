@@ -17,18 +17,24 @@
 - `IsoGameCharacter.getAge` / `setAge` store an integer nothing in the
   jar reads; the shipped Lua calls `getAge()` only on animals and trap
   bait.
-- A model instance carries a scale: `ModelInstance.scale` (public) and
-  `applyModelScriptScale(String)`, the mechanism by which a calf is a
-  scaled cow. TOTC (part 3; MIT, full source) makes its child zombies
-  with exactly this from Lua alone: on the zombie's creation and
-  update it takes `zombie:getModelInstance()` and sets
-  `modelInstance.scale = targetScale` (size as a sandbox percentage,
-  default 50), stored in modData and applied after a five-tick delay
-  for the model to load. SAO's own people are `IsoPlayer` shells, so
-  the same call is available to SAO without Java and without a
-  dependency: a child as a scaled adult mesh with the adult's
-  animations - crude, and the same thing the one child mod does
-  underneath its four dependencies.
+- CORRECTED 2026-09-06, the same evening. A model instance carries a
+  public `scale` field, filled from the model script by
+  `applyModelScriptScale`, and an earlier draft here called it the
+  engine-native path to a child body. The jar says otherwise: nothing
+  in the character render path reads `ModelInstance.scale` - its only
+  reader is the vehicle class - and `ModelScript.scale` is read only
+  by the drawers of world objects and items. A calf is not a scaled
+  cow; it is its own mesh (`Calf_Skeleton_NoHead.x` is in the tree).
+  TOTC (part 3) sets `modelInstance.scale` from Lua and its README
+  says its zombies are child-sized; the bytecode gives that write no
+  effect on a character, and the class is not exposed to Lua in the
+  vanilla exposer either. The claim is withdrawn until someone sees
+  it on screen. What remains true: per-character scaling of a human
+  body exists in this engine only where the animation player's bone
+  transforms are changed - which is exactly what Realism does by
+  replacing that class, and what SAO's own Java agent could do by
+  instrumenting it at load. That is a real piece of work, not a
+  field write.
 - The developer's stated policy, from two Steam discussion posts by
   nasKo of The Indie Stone (developer badge, read directly): June 20,
   2018 - children are "not something we want to have in the game," with
@@ -142,15 +148,15 @@ of traits, starting perks, items (the vanilla children's school bag,
 a teddy bear), clothing, milestones.
 
 **What SAO can take natively, with the author's permission as the
-operator has settled it:** the age curves for height, speed and
-weight (height through the engine's own `ModelInstance.scale`, as
-TOTC does, losing only the head-and-hands proportions); the fear
-model by age; the literacy progression; the experience throttle and
-the birthday floors; the archetypes as household roles; the hair
-rule and the children's items. **What it cannot take without an
-engine patch:** the bone proportions, unless SAO's own Java agent
-instruments the animation player at load - a legitimate route the
-javaagent already has, but a separate and heavy piece of work.
+operator has settled it:** the age curves for speed and weight; the
+fear model by age; the literacy progression; the experience throttle
+and the birthday floors; the archetypes as household roles; the hair
+rule and the children's items. **What it cannot take without
+changing the renderer:** any change of body size or proportion - the
+vanilla renderer reads no per-character scale (corrected above), so
+a child body needs SAO's own Java agent to instrument the animation
+player at load, the route the javaagent already has, and a separate
+and heavy piece of work.
 
 ## Elders
 
@@ -228,14 +234,15 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    habits** (the society arc's S6): the eight-dependency pattern of N
    and C's Narcotics and the period set of Drugs of '93 inform SAO's
    own; The Alcoholic and Just Drugs are taken from. No dependency.
-4. **Children's bodies: native scale plus Growing Up's systems.**
-   Ruled after Growing Up was subscribed and read (the section
-   above): SAO scales its own people through the engine's
-   model-instance scale and takes Growing Up's age curves for
-   height, speed and weight, its fear model by age, its literacy
-   progression, its experience throttle with birthday floors and
-   its archetypes as its own, credited. The head-and-hands
-   proportions are given up; no dependency, no engine patch.
+4. **Children's bodies: re-opened the same evening.** The ruling
+   "native scale plus Growing Up's systems" rested on a claim this
+   record has since withdrawn (the corrected engine bullet above):
+   the vanilla renderer does not scale a character by the model
+   instance's field. Growing Up's plain-Lua systems - the age curves,
+   the fear model, the literacy progression, the experience throttle,
+   the archetypes - still come into SAO as ruled. The body itself
+   goes back to the operator with the corrected facts; the record
+   below carries the answer.
 
 ## Could not source
 
