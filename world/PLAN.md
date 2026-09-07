@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | PROPOSED - nothing below is research yet; this is the plan for it, awaiting approval. |
+| Status | APPROVED 2026-08-31 with the three decisions below settled. Research follows this plan. |
 | First cut | The national frame: the United States as an ordinary person knew it in mid-1993. Kentucky and Knox County follow as the second cut. |
 
 ## The boundary
@@ -22,12 +22,14 @@ claim carries:
 
 - **the claim** - one fact, stated plainly
 - **when** - the date or span it holds for
-- **confidence** - HIGH (two independent references agree, dated
-  precisely), MEDIUM (one solid reference, or an approximate date),
-  LOW (plausible for the period, unverified). LOW claims never
-  teach a model; they wait for an upgrade or are struck.
-- **source** - what was consulted, so the confidence can be
-  re-checked by anyone
+- **confidence** - HIGH (a primary source dates it exactly),
+  MEDIUM (a primary source supports it with an approximate date or
+  indirectly), LOW (no primary source yet). LOW claims never teach
+  a model; they wait for an upgrade or are struck.
+- **source** - the PRIMARY source consulted: a period newspaper,
+  a broadcast record, a government record, a trade publication of
+  the time. Secondary sources (encyclopedias, retrospectives) may
+  locate a primary source; they are never the citation.
 - **who carries it** - which kinds of people would plausibly hold
   it: everyone, adults, a trade, a region, an age band, a follower
   of the topic. This is the scoping the design requires.
@@ -70,24 +72,20 @@ approved as a whole.
    sections above, so the models are taught differences in
    knowledge, not one shared encyclopedia.
 
-## Open decisions for approval
+## Decisions settled (2026-08-31)
 
-1. **Size of the first cut.** All seven documents before anything
-   trains, or the first three (timeline, daily life, media) as the
-   floor with the rest following.
-2. **Real names and brands.** World documents will contain real
-   public figures (the president, anchors, musicians) and real
-   brands (cars, stores, products) as historical fact. The question
-   is what survivors may then SAY: names as history, or generic
-   references (the president, the grocery chain). This shapes the
-   voice material too.
-3. **Source posture for research.** Encyclopedic secondary sources
-   are acceptable for MEDIUM; HIGH requires a second independent
-   reference. Primary period sources (newspapers, broadcasts) where
-   available. This is the proposed rule; the corpus store has a
-   stricter one (public-domain or MIT-compatible only) because
-   corpus text ships into training, while research citations do
-   not.
+1. **Size of the first cut: three as the floor.** Timeline, daily
+   life, and media are researched and approved first; training may
+   begin on those while institutions, work and money, the military,
+   and the who-knows-what index follow.
+2. **Real names as history.** Survivors may name the president,
+   the store, the band on the radio - the world as it was, in
+   ordinary nominative use.
+3. **Primary sources only.** Every claim traces to a period
+   newspaper, broadcast record, government record, or trade
+   publication of the time. Slower and thinner where nobody
+   recorded daily life formally - and where that is so, the claim
+   stays LOW and does not teach.
 
 ## What the plan does not do
 
