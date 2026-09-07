@@ -5,6 +5,8 @@
 | Status | DRAFT 2026-09-06, part 1 of 2: bodies and age. Part 2, traits and health conditions, follows. Feeds DR-032 on the SAO side: which mods SAO requires is decided through Crucible, mod by mod, after part 2. |
 | Rule | Every row was read from the mod's own Workshop page (Steam rate-limited the fetch tool, so the pages were read by direct request and cross-checked against Steam's item-details API for title, app, dates and tags). No row rests on a search snippet. |
 | Why it exists | The operator ruled 2026-09-06 that the county is to have children and elders, and people with the conditions that shape knowledge and memory, and that the mods supplying them become native requirements. The engine supplies none of it (below). |
+| Permissions and credit | The license column records what a page states and nothing more; "none stated" is a fact, not a verdict. Permission is the operator's business and has been dealt with directly with the authors; a visible repository is usable. Nothing here argues for or against a mod on licensing grounds - only on technical ones. Integration credits through SAO's existing CREDITS.md convention (a required mod gets a hard-runtime-dependency entry, as ZombieBuddy has); no new standard. Selection goes to the operator first. |
+| Scope of the search | Part 1 read the Workshop and Steam's item API, and followed repositories only where a page pointed at one. A sweep of GitHub, GitLab, Codeberg, Nexus Mods, ModDB, the Indie Stone forums and itch.io is in progress (2026-09-06) and lands as part 3. |
 
 ## What the engine holds (verified 2026-09-06 against the installed 42.20 tree and jar)
 
@@ -73,9 +75,10 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
 
 ## What this means for DR-032 (for the Crucible after part 2)
 
-1. A native requirement on the one child-body mod is not sound: it is
-   closed, unlicensed, a challenge scenario, dependent on four other
-   mods, and it patches the game directory by hand.
+1. A native requirement on the one child-body mod is not sound on
+   technical grounds: it is a challenge scenario, dependent on four
+   other mods, and it patches the game directory by hand with copied
+   Java classes - an engine patch SAO cannot carry as a dependency.
 2. Elders need no body work at all (ruled 2026-09-06): the adult
    mesh with grey hair from the visual layer, plus SAO's own age and
    whatever age system is chosen for condition and behavior. The age
@@ -86,10 +89,15 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    SAO's Java bridge. Crude, dependency-free, and the same thing the
    child mod does underneath.
 4. Age as a system: Getting Old is Build 42.20, single- and
-   multiplayer, updated this month, closed and unlicensed; TIHYD is
-   open under GPL-3.0 but Build 41 and abandoned since 2023; SAO
-   already derives its own age (`SAO_History.ageOf`), so the fork is
-   between requiring an age system and extending SAO's own.
+   multiplayer, updated this month, with no public repository found
+   yet; TIHYD's repository is public (GPL-3.0 stated) but it is Build
+   41 and untouched since 2023; SAO already derives its own age
+   (`SAO_History.ageOf`), so the fork is between requiring an age
+   system, taking what is usable from one into SAO's own, and
+   extending SAO's own outright. Two things are verifiable before
+   any of these: whether an age mod written for the player reaches
+   SAO's off-slot people at all (its Lua is readable once
+   subscribed), and which age is the one source of truth.
 
 ## Could not source
 
