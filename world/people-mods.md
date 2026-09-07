@@ -292,8 +292,33 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    engine's), growth spurts, the cooking, driving and grief systems,
    the voice lines. A border drives it in the engine's own VM, and
    the older border that holds the disposition's documented ranges
-   now samples the county with its children. Next: the conditions -
-   the memory ports and the required Build 42 mods.
+   now samples the county with its children.
+7. **Conditions: SHIPPED in SAO as batch C32**, the same evening.
+   The county's people draw the mind's and the body's conditions
+   from their own hash at the record's prevalence (each figure with
+   its primary source beside it in the code), gated by age:
+   dementia by band among the old, a restless mind in children,
+   depression, anxiety, the haunted, high and low spells, hearing
+   things, sleeping badly, reading slowly, short of breath,
+   diabetic. Each is read by what already decides: the axes bend
+   inside the envelope; the anxious and the haunted carry fear; a
+   belief is kept for the person's own horizon (the demented and
+   the old keep the recent less long, the haunted keep a threat
+   longer) - the decay-per-person rule of who-knows-what.md, now
+   running; the body carries a condition's load every ten minutes;
+   the demented lose skill by the day (Neurodiverse Traits'
+   Alzheimer's, carried whole); the psychotic hear a threat nobody
+   else does and run from it; the dyslexic learn and read slower
+   (Custom Traits' figures). Every word a player reads is plain.
+   The two Build 42 condition mods are required in the manifests
+   for the player's side: Infirmities (3579088411, with Moodle
+   Framework and TchernoLib) and Even More Traits (3777663603).
+   Two names in the ruling have their answer: Humans: Are Weak has
+   no Workshop upload and its non-commercial terms do not cross
+   into GPL, so it is read and not required; the Build 42 ADHD
+   Trait is a comic mechanic (the character dies standing still),
+   not a memory condition. Next: substances - the dependency model
+   into SAO's habits.
 
 ## Could not source
 

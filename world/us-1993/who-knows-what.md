@@ -132,7 +132,7 @@ cordon from July 6 the papers of July 12-16 are outside knowledge
 unless found; the broadcasts end for everyone on July 18-20; a later
 arrival carries what their origin region knew.
 
-## Decay per person (drafted 2026-09-06, after the catalogue)
+## Decay per person (drafted 2026-09-06, after the catalogue; running in SAO since C32 the same evening)
 
 What decays is a claim in a person, never a fact in the world. SAO
 already runs the mechanism: beliefs age and are pruned in

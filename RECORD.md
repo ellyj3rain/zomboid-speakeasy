@@ -125,3 +125,17 @@ and the game's own definitions. The catalogue's fourth part records
 what was carried and what was not. Next in SAO: the conditions -
 the memory ports and the required Build 42 mods. Live receipts for
 the three batches of the evening remain the operator's.
+
+## 10 - Conditions shipped in SAO; decay per person runs (2026-09-06)
+
+Batch C32 shipped: the county's people carry conditions drawn at
+the record's prevalence from primary sources (NCHS, NIMH's
+surveys, the era's own papers), gated by age, and everything that
+decides reads them; the decay-per-person rule of who-knows-what.md
+now runs in SAO's perception. The two Build 42 condition mods are
+required for the player's side. Two of the ruling's names are
+answered in SAO's credits (one cannot be required and does not
+cross licenses; one is a comic mechanic). Next in SAO: substances.
+Live receipts for the four batches of the evening remain the
+operator's, and the requirement means SAO will not load in their
+game until the two mods are subscribed and enabled.
