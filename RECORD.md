@@ -139,3 +139,16 @@ cross licenses; one is a comic mechanic). Next in SAO: substances.
 Live receipts for the four batches of the evening remain the
 operator's, and the requirement means SAO will not load in their
 game until the two mods are subscribed and enabled.
+
+## 11 - Habits shipped in SAO; the people arc built through (2026-09-06)
+
+Batch C33 shipped: the drinker and the users the county fell with,
+drawn at primary-source prevalence and living on the record with
+The Alcoholic's phases and N and C's clean-day schedule, the drink
+taken and found through the engine's own fluid surfaces. With it
+the arc the people catalogue opened - body, age, the child's day,
+conditions, habits - is built through in five batches of one
+evening, none yet seen live. What remains is the operator's: the
+receipts, the subscriptions the requirement needs, the review of
+every document before it teaches, and the figures still waiting on
+a primary source.

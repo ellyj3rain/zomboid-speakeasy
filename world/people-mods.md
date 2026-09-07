@@ -317,8 +317,28 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    no Workshop upload and its non-commercial terms do not cross
    into GPL, so it is read and not required; the Build 42 ADHD
    Trait is a comic mechanic (the character dies standing still),
-   not a memory condition. Next: substances - the dependency model
-   into SAO's habits.
+   not a memory condition.
+8. **Habits: SHIPPED in SAO as batch C33**, the same evening - the
+   dependency model into SAO's habits (S6). The drinker is drawn at
+   the record's prevalence (alcohol dependence, twelve-month, adults,
+   4.38 percent - the 1992 National Longitudinal Alcohol
+   Epidemiologic Survey, read in full) and then lives on the record:
+   The Alcoholic's four withdrawal phases by the hours dry, a drink
+   taken through the engine's own fluid action (Build 42 keeps drink
+   as fluids in the Alcoholic category, not as food) or found where
+   one is through the forage path, the habit gone after three weeks
+   dry and gained by drinking often, every drink a body finishes
+   counted. The users the county fell with - past-month use from the
+   1993 National Household Survey on Drug Abuse where a primary
+   figure was read - sweat it out on N and C's schedule (withdrawal
+   medium from day one, bad from day five, mild from day ten; gone
+   after eighteen to twenty clean days, a fact about the person)
+   from the world's first day, since nobody has a supply: the county
+   the living start walks into has people coming off things in its
+   first week and nobody by its third. Smoking stays as it was. The
+   arc the catalogue opened is built through; what remains is the
+   operator's - live receipts of five batches, the two required mods
+   subscribed, and the figures still waiting on a primary.
 
 ## Could not source
 
