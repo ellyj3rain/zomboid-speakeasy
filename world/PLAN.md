@@ -8,12 +8,33 @@
 ## The horizon (corrected 2026-08-31)
 
 There is no single boundary date. The game's start date is a
-sandbox option, read from the engine's own option table: the start
-year is a hundred-value list anchored at 1993, the month runs 1 to
-12, the day 1 to 31. The shipped presets start on July 9, 1993 (the
-engine's constructor default reads as July 23); the game's own
-broadcast scripts anchor the world in 1993. A separate option can
-start a world months AFTER the fall.
+sandbox option, and what each option does was read from the engine
+itself, not assumed:
+
+- **Start Year** is a hundred-value list whose first value is 1993
+  (`SandboxOptions.getFirstYear()` returns 1993); the shipped
+  presets select that first value. The chosen year feeds the game
+  clock (`GameTime.getStartYear` / `getYear`), so a later value
+  is a later calendar year on the clock - the engine attaches no
+  history to it, and its broadcast scripts are keyed to days since
+  the start, not to the year. (An earlier draft cited the radio
+  scripts as naming 1993; that was a false match on identifier
+  strings and is withdrawn.)
+- **Start Month** (1-12) and **Start Day** (1-31) set the date; the
+  presets say July 9, 1993 (the constructor default reads as July
+  23).
+- **Months since the Apocalypse** (0-12) is the separate option
+  that sets how deep into the fall a world begins. The game's own
+  tooltip: it affects starting erosion and food spoilage and does
+  not affect the starting date.
+
+Policy for this project, the operator's: the world is 1993. A
+later Start Year value is treated as a calendar setting with no
+history behind it - nothing past December 31, 1993 is researched,
+and a survivor in a later-year world still carries 1993. (The
+operator described the later years as the apocalypse-depth knob;
+the engine gives that role to Months since the Apocalypse. The
+policy stands either way; the description is corrected.)
 
 So the documents are DATED, and the horizon is computed per save:
 
@@ -22,16 +43,15 @@ So the documents are DATED, and the horizon is computed per save:
   year a 1993 start can reach.
 - A survivor's horizon is the day the world stopped delivering
   news: the fall. Normally that is the save's start date (the
-  engine exposes it). Where the world starts months after the
-  fall, the fall is that many months earlier, and nothing from the
-  gap is known.
+  engine exposes it). Where Months since the Apocalypse is set,
+  the fall is that many months before the start date, and nothing
+  from the gap is known.
 - In SAO's day-zero mode the county starts BEFORE the fall - a
   living start. The calendar runs, and the horizon advances with it
   day by day until the first witnessed horror; a person's world
   keeps filling in from the dated documents until then.
-- Starts in later years are outside this cut; the game's world
-  diverges from history after its fall, and how far real events
-  should reach into a 1994-or-later start is its own decision.
+- How a living start decides its exact 1993 date is a later and
+  separate matter, and a large one.
 
 And still: knowable by THAT person. A soldier out of Fort Knox, a
 nurse in Muldraugh, and a teenager carry different slices of the
