@@ -132,6 +132,61 @@ cordon from July 6 the papers of July 12-16 are outside knowledge
 unless found; the broadcasts end for everyone on July 18-20; a later
 arrival carries what their origin region knew.
 
+## Decay per person (drafted 2026-09-06, after the catalogue)
+
+What decays is a claim in a person, never a fact in the world. SAO
+already runs the mechanism: beliefs age and are pruned in
+`SAO_Perception`'s decay pass, lessons carry an epistemic age, and
+the knowledge surface renders an age word with every claim. What was
+missing was variation between people. The catalogue
+(../people-mods.md, part 2) settles what exists to build on:
+
+- No Build 42 mod removes knowledge a person already holds. The
+  nearest things are Build 41: an Alzheimer's trait (each day, each
+  skill has a 50 percent chance to lose 2.5 percent of its
+  experience), a Dyslexia trait (reading a quarter slower, a tenth
+  less taken in), and an ADHD trait whose forgetfulness is rendered
+  as dropped items. Vanilla has no memory trait; its learning traits
+  change the rate of taking in only.
+- What Build 42 has bears on the forming of claims rather than their
+  keeping: addiction and withdrawal (eight dependency traits gained
+  by use and lost after eighteen to twenty clean days; a period drug
+  set for 1993 with tolerance, withdrawal and relapse), psychiatric
+  conditions (schizophrenia, anxiety, narcolepsy, Parkinson's; PTSD,
+  insanity), sanity as a running value, sleep (the vanilla sleep
+  traits; narcolepsy), and the senses (deaf, hard of hearing, short
+  sighted; cannot read without glasses; a hearing aid).
+
+The rule, per claim per person:
+
+1. **A base rate** from the claim's provenance and age: lived
+   slowest, read and heard faster, told fastest. This is SAO's
+   existing decay.
+2. **A person factor**, deterministic from attributes: age at the
+   claim (what was learned young decays slowest; the elderly keep the
+   old and lose the recent - a pattern to teach, not a number yet);
+   a cognitive condition where a person has one (a dementia condition
+   raises the rate on everything recent and, late, on names and
+   places; ADHD raises the rate on told claims and lowers the rate at
+   which read claims form; dyslexia thins read claims at the source);
+   an attention condition (depression and anxiety narrow what forms;
+   PTSD pins certain lived claims and does not let them decay).
+3. **The state at the time**, of learning and since: drunk,
+   withdrawing, feverish, sleepless, panicked - the claim forms weakly
+   or with a gap. SAO holds the sleep and sickness states; the
+   substance mods hold the rest.
+4. **Mis-remembering, not only forgetting.** A decayed claim is
+   rendered with its age word (the surface does this already), and a
+   told claim can be wrong because the teller was; the models are
+   taught both.
+
+What this needs from the mod decisions: the conditions in items 2
+and 3 exist as traits in the catalogued mods. Whether SAO requires
+them, takes their mechanics in, or names its own is the operator's
+call, made through Crucible after part 3 of the catalogue. Until
+then the rule runs on vanilla traits, SAO's own age, and SAO's own
+states.
+
 ## What this forbids
 
 - **One shared fact list.** The training store samples attribute
