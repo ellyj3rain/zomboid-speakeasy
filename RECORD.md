@@ -152,3 +152,17 @@ evening, none yet seen live. What remains is the operator's: the
 receipts, the subscriptions the requirement needs, the review of
 every document before it teaches, and the figures still waiting on
 a primary source.
+
+## 12 - The register follows the strain (2026-09-06)
+
+The operator refined the talking system's direction the same
+evening (SAO's DR-033): talk is text, written or dictated; people
+speak in their own idiom in ordinary company and pragmatically at
+work and under threat, weighing every word; orders in a fight
+follow social standing and shown competence, as the standard
+project's Authority pillar has it; and the county's logic should
+generate a living world with no game loaded, though the game is
+loaded anyway and that surface is not scoped. SAO's knowledge
+surface now carries the situation and the speaker's energy (C34),
+and the voice material's rules carry the register: the seed must
+show the same person in both registers.
