@@ -23,3 +23,19 @@ anchored at 1993, any month, any day; shipped default July 9), a
 world can start months after the fall, and a living start runs the
 calendar before the fall. The documents now cover all of 1993, and
 the horizon is applied per save from the save's own dates.
+
+## 3 - The game's record of the fall, and its schedule ruled controllable (2026-09-06)
+
+The operator pointed at the game's own record of the Knox Event,
+and the claim was verified against the installed files before
+anything was written: eighteen broadcast channel entries with 905
+broadcasts on days 0 to 27 after the start, twenty-two dated
+newspaper issues from July 1 to July 16, 1993, and the automated
+emergency lines. knox-event.md was drafted from them - every event
+keyed to its absolute date, the broadcasts mapped onto those dates
+through the shipped July 9 start and checked line against
+headline. The plan carries it as document 8, proposed for the
+floor. The operator then ruled the record's schedule controllable
+for a living start; the engine's re-keying surface is verified and
+recorded on the SAO side, and this document's absolute dating is
+what makes the record usable from any start.

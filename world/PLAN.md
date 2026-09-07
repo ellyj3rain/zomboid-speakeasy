@@ -50,8 +50,17 @@ So the documents are DATED, and the horizon is computed per save:
   living start. The calendar runs, and the horizon advances with it
   day by day until the first witnessed horror; a person's world
   keeps filling in from the dated documents until then.
-- How a living start decides its exact 1993 date is a later and
-  separate matter, and a large one.
+- The game's own record of the fall is dated: its newspapers run
+  from July 1 to July 16, 1993, and its broadcasts - keyed by the
+  engine to days since the save began - line up with those dates
+  only on the shipped July 9 start (knox-event.md lays the two
+  side by side). The operator ruled on 2026-09-06 that this
+  schedule is controllable: a living start drives when each part
+  of the record reaches the county, so the shipped assets serve
+  any 1993 start. The engine's re-keying surface was verified on
+  the SAO side (its engine contract, Addendum E; ruling DR-031).
+  This project's part is to key every event to its absolute date,
+  which knox-event.md does.
 
 And still: knowable by THAT person. A soldier out of Fort Knox, a
 nurse in Muldraugh, and a teenager carry different slices of the
@@ -113,6 +122,25 @@ approved as a whole.
    kinds of people (age bands, trades, regions, service) to the
    sections above, so the models are taught differences in
    knowledge, not one shared encyclopedia.
+8. **knox-event.md** - the game's own record of the fall, added
+   2026-09-06 on the operator's word and verified against the
+   shipped files: the broadcast schedule (RadioData.xml, eighteen
+   channel entries across the radio, television, amateur and
+   military bands, 905 broadcasts on days 0 to 27 after the start,
+   13,166 lines of text in RadioData.json), the dated in-game
+   newspapers (Print_Text.json - twenty-two issues of four papers:
+   Knox Knews July 1 to 6, and the Kentucky Herald, the Louisville
+   Sun Times and the National Dispatch July 6 to 16, 1993, from
+   "Illness outbreak in Muldraugh" to "Louisville overrun"), the
+   automated emergency broadcast lines (DynamicRadio.json), and the
+   developer's own statements (The Indie Stone's July 2023 post
+   dating the outbreak to July 6, 1993, read through the search
+   index). This is what survivors LIVE - the news that reaches them
+   after the start - and the reason a living start has something to
+   run on. The primary source is the game itself; community wikis
+   are finding aids only. Proposed for the floor alongside the
+   first three, because a survivor knows the Knox Event before they
+   know Jurassic Park. Drafted 2026-09-06.
 
 ## Decisions settled (2026-08-31)
 
