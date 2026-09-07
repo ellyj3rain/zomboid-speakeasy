@@ -156,10 +156,13 @@ arrival carries what their origin region knew.
 2. **The child's-memory band teaches vagueness** - the event as a
    household mood, no dates or numbers - and the county is to have
    children and elders at all: mods that add child and elder bodies
-   are being catalogued so that SAO can make them native
-   requirements, after which the age bands extend below 19 and
-   above 68. (The engine ships no child bodies; SAO's bands stop
-   where they do for that reason.)
+   are catalogued in ../people-mods.md (part 1, bodies and age)
+   so that SAO can make them native requirements, after which the
+   age bands extend below 19 and above 68. (The engine ships no
+   child or elder bodies; SAO's bands stop where they do for that
+   reason. The catalogue found one child-body mod, closed and
+   patching the game directory by hand, and no elder body at all;
+   the engine-native path is a scaled adult mesh.)
 3. **The follower share is not a global number.** Who follows what
    depends on who survives, or is simulated to survive: the living
    are not a random sample of the county, and the census governs
@@ -170,6 +173,8 @@ arrival carries what their origin region knew.
    health - dementia, memory loss, chronic illness, age - set each
    person's rate of forgetting and mis-remembering. Vanilla carries
    no dementia; the traits and health mods that do are being
-   catalogued (with anything else that fleshes out a person) so
-   that SAO can require them and the models can be taught the
-   variation. A "Decay per person" section follows the catalogue.
+   catalogued in ../people-mods.md (part 2, traits and health
+   conditions, in progress) with anything else that fleshes out a
+   person, so that SAO can require them and the models can be
+   taught the variation. A "Decay per person" section follows the
+   catalogue.
