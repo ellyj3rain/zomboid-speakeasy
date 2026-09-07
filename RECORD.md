@@ -59,3 +59,16 @@ personal history from the game's own attributes: the inputs verified
 against the installed build, the carrier tags resolved per person,
 age at the event, the provenance paths, and three parameters left
 open for the operator.
+
+## 5 - Four rulings on the scoping index (2026-09-06, Crucible)
+
+knox-event.md joins the floor: four documents now gate training.
+The trade tag is layered - census class first, engine profession
+where a document has specifics. The child's-memory band teaches
+vagueness, and the county is to have children and elders: the mods
+that add those bodies are being catalogued for SAO to require. The
+follower share is not a parameter at all - it depends on who
+survives or is simulated to survive - and knowledge decay varies
+per person through traits and health, for which the trait and
+health mods are being catalogued alongside anything else that
+fleshes out a person.

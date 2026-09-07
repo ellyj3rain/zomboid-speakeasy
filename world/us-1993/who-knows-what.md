@@ -14,7 +14,11 @@ Per character the engine holds:
 
 - **Name:** `SurvivorDesc.getForename` / `getSurname`.
 - **Gender:** `isFemale`, `getCharacterGender`.
-- **Age:** `IsoGameCharacter.getAge` / `setAge`.
+- **Age:** `IsoGameCharacter.getAge` / `setAge` - an integer the
+  engine stores and nothing reads: no body, animation or behavior
+  changes with it, and the jar has no child or elder class at all
+  (verified 2026-09-06). Children and elders therefore come only
+  through mods (ruled below).
 - **Profession:** `SurvivorDesc.getCharacterProfession` - 25 shipped
   definitions in `character_professions.txt` (burglar, burger
   flipper, carpenter, chef, construction worker, doctor,
@@ -85,7 +89,7 @@ about the same person.
 |---|---|---|
 | everyone | every adult in the county, gated by age at the date (below) | the floor is small: the fall, the President's name, the war, the prices of what they buy |
 | adults | age at the claim's date of 18 or more | a person born in 1972 carries the Gulf War as an adult and 1979 as a child |
-| followers | a per-topic draw from profession, traits and personality: politics and institutions favour police, fire, doctor, nurse, engineer, veteran, security guard and fast readers; science and space favour engineer, doctor, nurse and fast readers; sport favours athletic, baseball player, jogger, fitness instructor and the young; music and film favour the young and night owls; outdoors and weather favour farmer, rancher, park ranger, hunter, outdoorsman, fisherman | the draw is a threshold on the identity hash, so the county has the right proportion of followers rather than all or none |
+| followers | a per-topic draw from profession, traits and personality: politics and institutions favour police, fire, doctor, nurse, engineer, veteran, security guard and fast readers; science and space favour engineer, doctor, nurse and fast readers; sport favours athletic, baseball player, jogger, fitness instructor and the young; music and film favour the young and night owls; outdoors and weather favour farmer, rancher, park ranger, hunter, outdoorsman, fisherman | the draw is per person from these attributes, deterministic on the identity hash; the county's proportion is whatever the living add up to, not a fraction set in advance (ruled 2026-09-06) |
 | service | `servedIn` non-nil, or the veteran profession | military.md reaches them whole; others get it only as followers |
 | region:X | origin region X; the county itself for region:Kentucky | region claims are lived (provenance paid-for), not read |
 | everyone under fifty | age at the date under 50 | sport, popular music, television for the young |
@@ -143,12 +147,29 @@ arrival carries what their origin region knew.
   carry provenance and an age, and a person can be wrong about them
   the way people are.
 
-## Open for the operator
+## Ruled 2026-09-06 (Crucible)
 
-1. The follower proportions per topic - a parameter with a
-   principled default (about a third of adults follow politics, a
-   fifth science and space, half of those under fifty follow sport).
-2. Whether the child's-memory band teaches anything, or only the
-   absence.
-3. The trade tag's granularity: the engine's 25 professions, or the
-   census's classes.
+1. **The trade tag is layered.** The census class decides which
+   slice a person gets; the engine profession (the 25 shipped, plus
+   mods) adds its specifics where a document has them; an unknown
+   mod profession falls back to its class, so nothing is unmapped.
+2. **The child's-memory band teaches vagueness** - the event as a
+   household mood, no dates or numbers - and the county is to have
+   children and elders at all: mods that add child and elder bodies
+   are being catalogued so that SAO can make them native
+   requirements, after which the age bands extend below 19 and
+   above 68. (The engine ships no child bodies; SAO's bands stop
+   where they do for that reason.)
+3. **The follower share is not a global number.** Who follows what
+   depends on who survives, or is simulated to survive: the living
+   are not a random sample of the county, and the census governs
+   who they are. The follower draw is therefore computed per person
+   from attributes, and the county's proportion is whatever the
+   living add up to - never a fraction set in advance.
+4. **Knowledge decays per person, not at one rate.** Traits and
+   health - dementia, memory loss, chronic illness, age - set each
+   person's rate of forgetting and mis-remembering. Vanilla carries
+   no dementia; the traits and health mods that do are being
+   catalogued (with anything else that fleshes out a person) so
+   that SAO can require them and the models can be taught the
+   variation. A "Decay per person" section follows the catalogue.

@@ -144,16 +144,19 @@ approved as a whole.
    index). This is what survivors LIVE - the news that reaches them
    after the start - and the reason a living start has something to
    run on. The primary source is the game itself; community wikis
-   are finding aids only. Proposed for the floor alongside the
-   first three, because a survivor knows the Knox Event before they
-   know Jurassic Park. Drafted 2026-09-06.
+   are finding aids only. Part of the floor with the first three
+   (ratified 2026-09-06), because a survivor knows the Knox Event
+   before they know Jurassic Park. Drafted 2026-09-06.
 
 ## Decisions settled (2026-08-31)
 
 1. **Size of the first cut: three as the floor.** Timeline, daily
    life, and media are researched and approved first; training may
    begin on those while institutions, work and money, the military,
-   and the who-knows-what index follow.
+   and the who-knows-what index follow. Amended 2026-09-06 via
+   Crucible: the floor is four documents - knox-event.md joins
+   timeline, daily life and media, so nothing trains on the national
+   frame without the fall.
 2. **Real names as history.** Survivors may name the president,
    the store, the band on the radio - the world as it was, in
    ordinary nominative use.
