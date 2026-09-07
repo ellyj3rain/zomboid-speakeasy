@@ -19,10 +19,16 @@
   bait.
 - A model instance carries a scale: `ModelInstance.scale` (public) and
   `applyModelScriptScale(String)`, the mechanism by which a calf is a
-  scaled cow. A child as a scaled adult mesh with the adult's
-  animations is therefore reachable from SAO's own Java bridge with no
-  third-party dependency; it is the same crude path the one child mod
-  takes, without its dependencies.
+  scaled cow. TOTC (part 3; MIT, full source) makes its child zombies
+  with exactly this from Lua alone: on the zombie's creation and
+  update it takes `zombie:getModelInstance()` and sets
+  `modelInstance.scale = targetScale` (size as a sandbox percentage,
+  default 50), stored in modData and applied after a five-tick delay
+  for the model to load. SAO's own people are `IsoPlayer` shells, so
+  the same call is available to SAO without Java and without a
+  dependency: a child as a scaled adult mesh with the adult's
+  animations - crude, and the same thing the one child mod does
+  underneath its four dependencies.
 - The developer's stated policy, from two Steam discussion posts by
   nasKo of The Indie Stone (developer badge, read directly): June 20,
   2018 - children are "not something we want to have in the game," with
@@ -32,6 +38,16 @@
   .../3882722163303225908/.
 
 ## Child bodies
+
+On the source question (asked by the operator 2026-09-06): a
+Workshop mod's Lua is on disk for anyone subscribed, so Growing Up's
+Lua is readable that way (it is not subscribed here); what has no
+source is the folder of compiled `zombie` Java classes it asks the
+player to copy into the game directory, and that mechanism - not
+availability - is the objection: it replaces engine classes, so it
+breaks on every game update and conflicts with anything else that
+touches the same classes. The scaled-mesh path below needs none of
+it.
 
 | Mod | Workshop id | Author | Adds | Build 42 standing (page) | Requires | License | Source |
 |---|---|---|---|---|---|---|---|
@@ -43,6 +59,28 @@ Java classes into the game directory is an engine patch, not a mod
 dependency. The "Zombie kids" items that search engines return for
 Project Zomboid queries (2832590702, 2833712631) are DayZ items and
 are excluded; a third (2970602033) could not be read at all.
+
+## What Getting Old does, read from its source (for the port)
+
+`ClientAgeInit.lua` hooks `OnPlayerUpdate` and `OnGameStart` and acts
+on `getPlayer()` only - the local player; nothing reaches other
+`IsoPlayer` objects. Age and birthday live in the player's modData
+(`Age`, `birthDay`, `birthMonth`, `birthYear`, with `_AgeAssigned`
+and `_AgeClientInit` flags); the assignment happens server-side.
+`AgeEffects.lua` is written against a passed character
+(`AgeSystem.apply(player)`, `AgeSystem.updatePlayerHair(player)`),
+which is what makes the port straightforward: called per SAO person
+with SAO's age in the same modData key, it does the rest. Its
+effects: under 30, small per-tick gains (endurance up, fatigue and
+pain down, 0.015 at a 60 percent chance); 30 to 69, the reverse plus
+stress (0.010); 70 and over, larger losses (0.02), hair greying from
+30 on a fifty-year blend toward white through `setHairColor` and
+`setBeardColor`, a death-of-old-age roll from 80 (base 0.002 scaled
+by how far past 70), an accelerated decline once dying, and
+stumbling through `stats:setTripping(true)`. Multiplayer sync by
+`transmitModData` and `transmitVisual`. `AgeGroups.lua` names five
+stages: Zoomer 12-17, Young 18-25, Adult 26-40, Middle 41-60,
+Elderly 61-90.
 
 ## Elders
 
