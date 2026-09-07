@@ -166,3 +166,14 @@ loaded anyway and that surface is not scoped. SAO's knowledge
 surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
+
+## 13 - Week One named (2026-09-06)
+
+The operator named Week One, Slayer's pre-outbreak living world
+on the Bandits NPC engine, as existing art SAO could use. The
+catalogue's fourth part records both mods from their own pages -
+what they do, the credited authors of the animations, models,
+sounds and suits, and the author's copyright statement - and how
+the legacy version works from a third party's copy of its Lua.
+Nothing selected: the mods are not on disk, and the choice of what
+to take, with each author's permission, is the operator's.

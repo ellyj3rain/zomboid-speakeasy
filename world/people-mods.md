@@ -613,3 +613,77 @@ mod is present (the standing rule: recognised, never named in code).
 It belongs with the lessons and the knowledge surface, not with the
 people catalogue; recorded here because the operator added it in
 this pass. Its place in the design is the operator's call.
+
+# Operator-named, 2026-09-06: Week One, and the Bandits engine under it (part 4)
+
+The operator named Week One as an existing mod with animations and a
+society already living, whose art SAO could use. Read the same
+evening from the Workshop's own item details (the pages were
+rate-limiting, so the details came through Steam's published-file
+API, the same text) and from a third party's copy of the legacy Lua;
+neither mod is on the operator's disk yet, so what the files hold is
+unread. Permission is the operator's business, as everywhere in this
+catalogue; the page's own statement is recorded and nothing more.
+
+| Mod | Workshop | Author | What the page says it is | Build | Requires | Permission stated |
+|---|---|---|---|---|---|---|
+| [B42] Week One NPC (mod id `BanditsWeekOne`) | 3403180543 | Slayer | Begin seven days before the outbreak in a clean, zombie-free world among other people; events progress to the Knox Event; the player and some survivors immune to airborne transmission; hidden features, clues in sleep; NPC-driven vehicles; police, SWAT, medics, firemen, hazmat teams; chat with NPCs by pressing T in simple American English. "Not meant to be a faithful simulation... supposed to be funny." Performance-heavy; must start a new world at 9:00; modifies the world permanently; comments disabled. 325,000 subscribers; 464 MB. | 42.19 or 42.20 | Bandits (the NPC engine) | none on this page; see Bandits. Credits name the art (below). |
+| [B42] Bandits NPC (mod id `Bandits2`) | 3268487204 | Slayer (Piotr Pawlowski) | Hostile NPC bandits with melee and firearms; steal, sabotage, break doors and furniture; wanderers between places; friendly NPCs that "aren't complex companions"; the base NPC mod for Week One and The Ark; Bandit Creator (3469292499) for loadouts and AI. 1,020,000 subscribers; 163 MB. | 42.20+, single and multiplayer | none | "all my work is copyrighted by default and I do not wish it to be reuploaded without my written permission... not authorized for posting on Steam except for the Steam account named Slayer" |
+| [B42.13] Week One Multiplayer (`BanditsWeekOneMultiplayer`) | 3631385356 | Slayer | A from-scratch multiplayer rewrite: one "Day One"-like scenario so far, waiting room, shared spawn | 42.13.1+ | Bandits | as Bandits |
+| Week One & Beyond [Addon] (`BeyondOneWeek`) | 3405043636 | PLECO | Rebalances NPC melee damage, varies police, SWAT and hazmat raids, lets the nuke be toggled off | Build 42 | Week One | none stated |
+| Slayer's Week One - You are not the main character AI Overhaul (`YANMCBanditsCoreFresh` and two more) | 3780868604 | TSD | Removes the AI's knowledge of the player's position through walls: line of sight and sound instead; events pick safe targets; bandits urban-only if wished; can run on Bandits alone | 42.20 | Bandits; Week One optional | none stated |
+| Others on the search: Adjustable Fallout (3567597317, Nuhill), week one without zombies (3786506302, TheLurkiest), Week One NPC RU (3795084143, RAD), and some thirty translations and add-ons | - | - | - | - | - | - |
+
+## What the art is, as the credits state it
+
+Week One's credits name: vehicle 3D models (Peter Hammerman); radio
+transmission scripts and sounds, and other sounds (Lauren Sinclair);
+NPC animations (SaneGuy); poster art and icons (Ravense); voice acting
+(Shadesz, Joey Bracken); some animations modified and fixed for Build
+42 that originate in iBrRus's True Actions Act 3 - Dancing and
+Johngood's Bard Interactive Music; some sounds from AuD's item-action
+sound mod; some NPC inquiry chat lines (PandaBlyat); hazmat suits
+(BongoRaccoon32). Bandits' credits name some coding
+(changshashinumaoyiyouxiangongsi), the notification icon framework
+and code from Expanded Helicopter Events (Shark), icons and picture
+(Ravense), four voice actors, and translators. So the art is
+several authors' work carried under one mod, and permission for any
+piece runs to its own author.
+
+## How it works, from the legacy Lua a third party republished
+
+TheLurkiest's repository altered_BWO_B41_V1_Lua_files carries altered
+files of the Build 41 version (not the author's repository; read for
+the mechanism only). The people are the engine's zombies under
+"zombie programs" (`ZPActive`, `ZPBabe`, `ZPInhabitant`, `ZPWalker`),
+not player objects: a population controller (`BWOPopControl`) spawns
+and despawns walkers, runners, postal workers, farmers, janitors,
+vandals and sanitation workers on the streets, inhabitants in rooms
+near the player, and survivors, by an hour-of-day activity curve
+(lowest at two to four in the morning, peaks at six to eight and
+three to five) and a world-age timeline (the outbreak at a set day,
+civilians thinning and zombies rising over the days after, a
+zombie-only world past a later day), with named outfits
+(`StreetSports`, `Postal`, `Farmer`, `Sanitation`, `BWOFormal`,
+`BWOYoung`, `BWOLeather`, rain sets, `HazardSuit`). An event module
+(`BWOEvents`) holds eighty-odd scripted events - police, SWAT, medics,
+firemen, hazmat, criminals, bikers, inmates, riot police, army
+patrols, thieves, entertainers (musicians, priests, clowns), building
+parties, protests, arson, bomb and jet and gas runs, a nuke, and six
+nights of dreams - dispatched on a schedule held elsewhere.
+
+## What it is to SAO, and what it is not
+
+SAO's people are player objects driven by the four pillars from
+derived state; Week One's are zombies driven by programs and a
+scripted timeline, and its author calls it funny rather than
+faithful. Nothing of its logic crosses. What the operator named is
+the ART: civilian animations, the vehicle models, the sounds, the
+outfits - the dressing SAO's innocent county ([A29]) and the record
+on the county's calendar (DR-031) lack. Whether an animation bound
+to the zombie skeleton plays on a player object, and which files are
+Slayer's own and which are the credited authors', cannot be known
+from the pages; it needs the two mods on disk. The selection is the
+operator's: subscribe to Bandits and Week One, then the assets are
+read and the choice brought to Crucible, with each author's
+permission the operator's to settle as before.
