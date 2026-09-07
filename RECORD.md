@@ -72,3 +72,18 @@ survives or is simulated to survive - and knowledge decay varies
 per person through traits and health, for which the trait and
 health mods are being catalogued alongside anything else that
 fleshes out a person.
+
+## 6 - Documents 4 to 6 drafted; the media gaps closed (2026-09-06)
+
+Institutions, work and money, and the military are drafted, each
+from primary sources read directly: the Congress, Cabinet and Court
+of 1993, the drawdown and the Bottom-Up Review, the Guard and FEMA,
+police, hospitals, schools; the recession's dates and the wage,
+income, tax, job, price, assistance and layoff figures a household
+felt; the Army's strength and separations, the 1993 pay table from
+the Federal Register, Fort Knox and its units, the 1993 base-closure
+round that left Knox untouched, Somalia, Los Angeles, the flood, and
+the Kentucky Guard in the Gulf. The media document's chart, ratings,
+box-office, radio and MTV gaps were closed from the trade paper's
+own July and August issues and the period wire lists. The remaining
+LOW rows are named in each document's closing section.

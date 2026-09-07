@@ -110,14 +110,15 @@ approved as a whole.
    debates of that spring, Congress, the military after the Gulf War
    drawdown, the National Guard and emergency management (the
    structures a quarantine would fall on), police, hospitals,
-   schools.
+   schools. Drafted 2026-09-06.
 5. **work-and-money.md** - the economy as lived: the early-90s
    recession and its slow recovery, unemployment, the kinds of work
    an ordinary town had, what a paycheck bought, who was hiring.
+   Drafted 2026-09-06.
 6. **military.md** - the Army of 1993 for the people who served in
    it: structure, the post-Gulf mood, Fort Knox as the Armor Center
    (the bridge to the Kentucky cut). Carried by soldiers and
-   military families, not by everyone.
+   military families, not by everyone. Drafted 2026-09-06.
 7. **who-knows-what.md** - the scoping index: an explicit map from
    kinds of people (age bands, trades, regions, service) to the
    sections above, so the models are taught differences in
