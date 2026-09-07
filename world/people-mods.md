@@ -252,6 +252,24 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    and a border that weaves the installed class off the game and
    has the JVM verify it. The live receipt - a survivor seen at
    three quarters - is the operator's to take.
+5. **Age as a system: SHIPPED in SAO as batch C30**, the same
+   evening, the operator having chosen to keep building before
+   testing. The county's age bands now run from six to ninety,
+   weighted from the 1990 resident population by age (NCHS,
+   Health, United States, 2003, Table 1) and cut to a county that
+   keeps no infants; Getting Old's five stages (credited) drift the
+   living every ten in-game minutes on the engine's own stats; the
+   age decides the work (a child is a student, an elder past
+   sixty-eight a retiree), the pace and the size; and the old die
+   of it on the life table (NCHS United States Life Tables, 1997,
+   the nearest machine-readable year), once a day, as a fact about
+   the person and the day. Getting Old's stumble is not taken: the
+   method it calls is not on this build's stats. A border drives
+   the age code in the engine's own VM. Three older mirrors of the
+   bands had to be corrected in the same close - they divided the
+   hash by a hundred and read the table with a regex that dropped
+   a column-aligned row - which is recorded in SAO's batch. Next:
+   the child's day, from Growing Up's plain-Lua systems.
 
 ## Could not source
 

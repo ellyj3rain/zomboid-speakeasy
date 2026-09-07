@@ -101,3 +101,16 @@ height-by-age table carried in SAO's age code and credited. The
 operator also added a zombie hunger mod, read and recorded here for
 the lessons and the knowledge surface. What remains theirs: the live
 receipt, and the review of every document before it teaches.
+
+## 8 - Age shipped in SAO as a system (2026-09-06)
+
+The operator chose to keep building before testing, and the age
+batch (C30) shipped: bands from six to ninety weighted from the
+1990 population table, Getting Old's stages drifting the living on
+the engine's stats, the age deciding work, pace and size, and death
+of old age on the 1997 life table. Children now exist in the county
+and are drawn small through the body seam. The catalogue's fourth
+part is updated with the shipped facts; the child's day (fear,
+literacy, the experience throttle, the archetypes, from Growing
+Up's plain-Lua systems) is the next batch. Live receipts for both
+batches remain the operator's.
