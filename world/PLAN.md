@@ -5,15 +5,37 @@
 | Status | APPROVED 2026-08-31 with the three decisions below settled. Research follows this plan. |
 | First cut | The national frame: the United States as an ordinary person knew it in mid-1993. Kentucky and Knox County follow as the second cut. |
 
-## The boundary
+## The horizon (corrected 2026-08-31)
 
-The world ends on **July 9, 1993**. That is the game's own default
-start (the shipped presets set the start day 9, month 7; the year
-is the game's established 1993). Nothing after that date exists to
-these people. Anything a person "knows" must have been knowable by
-an ordinary adult in the United States on or before that day - and
-knowable by THAT person: a soldier out of Fort Knox, a nurse in
-Muldraugh, and a teenager carry different slices of the same world.
+There is no single boundary date. The game's start date is a
+sandbox option, read from the engine's own option table: the start
+year is a hundred-value list anchored at 1993, the month runs 1 to
+12, the day 1 to 31. The shipped presets start on July 9, 1993 (the
+engine's constructor default reads as July 23); the game's own
+broadcast scripts anchor the world in 1993. A separate option can
+start a world months AFTER the fall.
+
+So the documents are DATED, and the horizon is computed per save:
+
+- Every claim carries the date it became knowable. The first cut
+  covers January 1990 through December 31, 1993 - the whole of the
+  year a 1993 start can reach.
+- A survivor's horizon is the day the world stopped delivering
+  news: the fall. Normally that is the save's start date (the
+  engine exposes it). Where the world starts months after the
+  fall, the fall is that many months earlier, and nothing from the
+  gap is known.
+- In SAO's day-zero mode the county starts BEFORE the fall - a
+  living start. The calendar runs, and the horizon advances with it
+  day by day until the first witnessed horror; a person's world
+  keeps filling in from the dated documents until then.
+- Starts in later years are outside this cut; the game's world
+  diverges from history after its fall, and how far real events
+  should reach into a 1994-or-later start is its own decision.
+
+And still: knowable by THAT person. A soldier out of Fort Knox, a
+nurse in Muldraugh, and a teenager carry different slices of the
+same year.
 
 ## What a document is
 
@@ -39,8 +61,8 @@ approved as a whole.
 
 ## The proposed document set, first cut
 
-1. **timeline.md** - what happened, January 1990 to July 9, 1993,
-   as it reached ordinary people: the Gulf War, the Soviet collapse,
+1. **timeline.md** - what happened, January 1990 to December 31,
+   1993, as it reached ordinary people: the Gulf War, the Soviet collapse,
    the 1992 election and the new administration, the Los Angeles
    riots, Hurricane Andrew, the World Trade Center bombing, Waco,
    the Midwest flood beginning that summer. Each entry dated, each
@@ -91,5 +113,6 @@ approved as a whole.
 
 - It invents nothing. Every claim in a document is researched and
   cited; anything uncited is LOW and never teaches.
-- It does not reach past July 9, 1993.
+- It does not reach past December 31, 1993, and it never decides
+  what a save knows - the save's own dates do.
 - It does not decide Kentucky. The second cut has its own plan.

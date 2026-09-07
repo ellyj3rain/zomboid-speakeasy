@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Status | DRAFT - not approved; nothing here teaches a model yet. |
-| Boundary | Values for June and July 1993 unless stated. |
+| Horizon | Values for June and July 1993 unless stated; each is dated so the save's start decides what applies. |
 | Rule | Every claim carries when, confidence, a primary source, and who would carry it. LOW never teaches. |
 
 ## Prices at the store (U.S. city average, Bureau of Labor Statistics)
@@ -42,14 +42,25 @@ national city averages; a Kentucky grocery ran a little under them.
 
 ## What a household had
 
+All rows below except the computer are from one government table:
+Census Bureau, Statistical Abstract of the United States: 2000,
+Table 910, "Utilization of Selected Media: 1970 to 1998," 1993
+column (the Bureau's compilation of Nielsen, FCC, and industry
+counts). Read directly from the Bureau's PDF.
+
 | Claim | When | Conf. | Source | Who carries it |
 |---|---|---|---|---|
-| About 22.8 percent of households had a computer in 1993; home computers were still a minority. | October 1993 survey | MEDIUM | U.S. Census Bureau, Current Population Survey, October 1993, "Computer Use in the United States" (tables located; the percentage read so far from a Census Bureau newsletter summary, not the table) | adults |
+| Nearly every home had a television - 98.3 percent of households, 93 million homes - with 2.2 sets per home on average (201 million sets in all), and 92 million of those homes had color. | 1993 | HIGH | Statistical Abstract 2000, Table 910 | everyone |
+| Just over three in five television homes had cable - 61.4 percent, 57 million homes. | 1993 | HIGH | Statistical Abstract 2000, Table 910 | everyone |
+| More than three in four television homes had a VCR - 77.1 percent, 72 million homes. | 1993 | HIGH | Statistical Abstract 2000, Table 910 | everyone |
+| Radio was universal - 99 percent of households, about 5.6 sets per home. | 1993 | HIGH | Statistical Abstract 2000, Table 910 | everyone |
+| 94.2 percent of households had telephone service. | 1993 | HIGH | Statistical Abstract 2000, Table 910 | everyone |
+| About 22.8 percent of households had a computer; home computers were still a minority. | October 1993 survey | MEDIUM | U.S. Census Bureau, Current Population Survey, October 1993, "Computer Use in the United States" (tables located; the percentage read so far from a Census Bureau newsletter summary, not the table) | adults |
 
 ## Not yet placed (research continues)
 
-Pending primary confirmation: rent; cars and their prices; the
-telephone at home (cordless handsets, answering machines, pagers;
-cellular subscribers as a small minority); television, cable, and
-the VCR; music formats (cassette and CD); what did not yet exist
-for ordinary homes.
+Pending primary confirmation: rent; cars and their prices;
+cellular subscribers as a small minority (FCC counts); answering
+machines and cordless handsets; music formats (cassette and CD
+shipments, from the recording industry's own counts); what did not
+yet exist for ordinary homes.
