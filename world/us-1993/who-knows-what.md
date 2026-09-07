@@ -161,8 +161,10 @@ arrival carries what their origin region knew.
    age bands extend below 19 and above 68. (The engine ships no
    child or elder bodies; SAO's bands stop where they do for that
    reason. The catalogue found one child-body mod, closed and
-   patching the game directory by hand, and no elder body at all;
-   the engine-native path is a scaled adult mesh.)
+   patching the game directory by hand; the engine-native path for
+   a child is a scaled adult mesh. Elders need no model at all - the
+   operator ruled it the same day: an elderly person is the adult
+   body with hair, condition, behavior and age.)
 3. **The follower share is not a global number.** Who follows what
    depends on who survives, or is simulated to survive: the living
    are not a random sample of the county, and the census governs

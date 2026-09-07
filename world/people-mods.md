@@ -42,9 +42,12 @@ dependency. The "Zombie kids" items that search engines return for
 Project Zomboid queries (2832590702, 2833712631) are DayZ items and
 are excluded; a third (2970602033) could not be read at all.
 
-## Elder bodies
+## Elders
 
-None exist. What exists is age as a system on the adult mesh:
+No elder mesh exists, and none is needed - the operator ruled it on
+2026-09-06: an elderly person is represented on the adult body by
+hair, condition, behavior and age, not by a separate model. What
+exists, and what matters here, is age as a system on the adult mesh:
 
 | Mod | Workshop id | Author | Adds | Build standing (page) | Requires | License | Source |
 |---|---|---|---|---|---|---|---|
@@ -73,13 +76,15 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
 1. A native requirement on the one child-body mod is not sound: it is
    closed, unlicensed, a challenge scenario, dependent on four other
    mods, and it patches the game directory by hand.
-2. Elder bodies would have to be made, not required. Nothing to
-   require exists.
-3. The engine-native path exists for both: a scaled adult mesh with
-   the adult's animations (the engine's own calf-from-cow mechanism),
-   set from SAO's Java bridge, plus grey hair from the visual layer.
-   Crude, dependency-free, and the same thing the child mod does
-   underneath.
+2. Elders need no body work at all (ruled 2026-09-06): the adult
+   mesh with grey hair from the visual layer, plus SAO's own age and
+   whatever age system is chosen for condition and behavior. The age
+   bands extend above 68 without a model.
+3. Children are the only case that needs a smaller body, and the
+   engine-native path exists: a scaled adult mesh with the adult's
+   animations (the engine's own calf-from-cow mechanism), set from
+   SAO's Java bridge. Crude, dependency-free, and the same thing the
+   child mod does underneath.
 4. Age as a system: Getting Old is Build 42.20, single- and
    multiplayer, updated this month, closed and unlicensed; TIHYD is
    open under GPL-3.0 but Build 41 and abandoned since 2023; SAO
