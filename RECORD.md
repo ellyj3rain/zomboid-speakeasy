@@ -167,6 +167,23 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 16 - The player's word lands through standing (2026-09-07)
+
+SAO's batch C37 built the command arc's first slice under DR-033:
+every ask the player makes of a person goes through SAO's new
+command surface, which decides whether the person takes the word
+the way CAO's Authority pillar decides it - the office the giver
+holds over them, their trust in the giver, a hand proven in the
+matter standing as a second, their own conformity and discipline -
+and then whether they would do the thing at all, with a plain
+reason for every no. For this project: the understander's order
+kind (beside questions, statements, requests, offers and threats)
+has a landing surface to call - a giver, a person, a kind of ask
+and its argument in, a verdict and a reason out - and a reply
+model can be conditioned on that verdict the way it is on the
+moment. A refusal is a spoken event with a reason, so the corpus
+needs refusals in every register, not only assent.
+
 ## 15 - The record on the county's calendar (2026-09-07)
 
 SAO's batch C36 built what DR-031 scoped and knox-event.md keyed:
