@@ -167,6 +167,23 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 17 - Before, and the day it started (2026-09-07)
+
+SAO's batch C38 gave the knowledge surface two topics the corpus
+will need: "before" - the year a person was born, the war their
+life put them in, where they were from, where home is from here,
+and whether the fall has taught them anything yet - and "the day
+it started" - their own first horror with the county's date and
+what it taught, the county's own stamps aired as news, and the
+record's first day for anyone with a radio. Every fact carries its
+provenance (lived or told) and, where the calendar answers, the
+date in a person's words. For this project: a question about the
+old life or the first days has facts to be answered from, the
+innocent-to-hardened arc is a stated fact the reply can lean on,
+and the dates a person gives are the county's own - the same
+calendar knox-event.md is keyed to - so the corpus can hold a
+person to them.
+
 ## 16 - The player's word lands through standing (2026-09-07)
 
 SAO's batch C37 built the command arc's first slice under DR-033:
