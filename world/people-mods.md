@@ -82,6 +82,76 @@ stumbling through `stats:setTripping(true)`. Multiplayer sync by
 stages: Zoomer 12-17, Young 18-25, Adult 26-40, Middle 41-60,
 Elderly 61-90.
 
+## What Growing Up does, read from its files (2026-09-06, subscribed and read)
+
+**The body.** Growing Up never touches a model itself. Each day it
+writes a height scale into the player's mod data
+(`md.rsf.heightScale`; display height over 170 cm, 0.753 at age 8,
+1.0 at 18 on a slow-then-fast curve) and, on birthdays, a set of ten
+bone-group sliders for child proportions (at 8: head +13 percent,
+torso +4, hands +6, fading to nothing by 14). Realism V4 applies
+them every tick through `ModelManager.setUniformScale`,
+`setBoneScaleOverride` and `setHeightScaleOverride` - static methods
+that exist only in Realism's replacement `ModelManager` (55 public
+members added to the engine's), backed by Realism's own
+`zombie.modelz.BoneScaleApplicator` inside replaced copies of the
+animation player, the animated model, the model instance, the model
+slot renderer, the human visual, the texture creator, the model
+script and the Lua exposer. Forty-one engine classes in all, built
+for 42.17-42.18 and copied over the installed 42.20; the replacement
+`ModelManager` lacks two public members the installed one has and
+`ItemContainer` lacks three - the mark of a different game revision.
+Speed follows age (0.70 at 8 to 1.00 at 18, plus 0.15 sprinting);
+weight runs 25 to 70 kg, with the Java nutrition told a floor of 60
+kg so vanilla hunger and emaciation do not punish a child's body;
+hair is policed (no beards, a child hair pool). Child zombies get
+the same treatment through `md.GU_KidZombie` and Realism's zombie
+preset registry.
+
+**Growth.** Forty-five game days per year by default (configurable),
+start at 8 to 14, adult at 18. Birthdays raise Strength and Fitness
+floors to 5 and 5 by 18, fire archetype milestones (traits removed
+at ages: Short Sighted at 10, Feeble at 14, Slow Learner at 14 or
+16, Cowardly at 16, Hearty Appetite at 12 or 18, the child trait at
+18), and growth spurts spike hunger.
+
+**Fear.** A panic floor of 55 at 8 falling linearly to 0 at 18,
+lowered by half a point per zombie killed; a first kill spikes panic
+by 30; night terrors add panic from 22:00 to 05:00 (20 under 12, 10
+at 12 to 14, none from 15); a carried teddy bear lowers the floor
+and lets the child sleep through mild panic; a panicked sleeper can
+wake screaming.
+
+**Skills.** Experience is scaled by age (a quarter under 10, half to
+14, full after; Strength, Fitness and Sprinting exempt); no hard
+skill locks remain; archetypes may override.
+
+**Literacy - the part that maps straight onto the scoping index.**
+Children start illiterate (the Nerd excepted). Only easy reads -
+comics, magazines, newspapers - are allowed; fifty of them grant
+Slow Reader and a sticky literacy; a hundred books remove Slow
+Reader; two hundred and fifty grant Fast Reader. The gate sits on
+`ISReadABook.isValid`. This is the "read" provenance path opening
+with age, written as play.
+
+**Driving** from 10 with an adaptation curve; a mechanics manual
+unlocks it earlier.
+
+**Archetypes.** Scout, Jock, Nerd, Shy, Bully, Crybaby - each a set
+of traits, starting perks, items (the vanilla children's school bag,
+a teddy bear), clothing, milestones.
+
+**What SAO can take natively, with the author's permission as the
+operator has settled it:** the age curves for height, speed and
+weight (height through the engine's own `ModelInstance.scale`, as
+TOTC does, losing only the head-and-hands proportions); the fear
+model by age; the literacy progression; the experience throttle and
+the birthday floors; the archetypes as household roles; the hair
+rule and the children's items. **What it cannot take without an
+engine patch:** the bone proportions, unless SAO's own Java agent
+instruments the animation player at load - a legitimate route the
+javaagent already has, but a separate and heavy piece of work.
+
 ## Elders
 
 No elder mesh exists, and none is needed - the operator ruled it on
