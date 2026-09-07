@@ -687,3 +687,50 @@ from the pages; it needs the two mods on disk. The selection is the
 operator's: subscribe to Bandits and Week One, then the assets are
 read and the choice brought to Crucible, with each author's
 permission the operator's to settle as before.
+
+## Read from disk the same evening (both mods subscribed)
+
+Bandits (159 MB) and Week One (447 MB) were subscribed and read. What
+the files hold, by group, with the credit each group runs to:
+
+| Group | Files | Where | Whose, by the credits |
+|---|---|---|---|
+| Conversation gestures | BobTA_Talking_1 to 5, BobTA_Standing_Arguing_1 and 2, BobTA_Yelling, BobTA_Nodding, Talking (11 FBX) | Week One `anims_X/Zombie` | iBrRus (True Actions), fixed for Build 42 by Slayer |
+| Seated life | SitTalk, SitEat, SitDrink, SitRead, SitSmoke, Bob_SittingChair, pl_DrinkOnChair, pl_DrinkOnGround | Week One | SaneGuy (Week One's animator), Slayer |
+| Work and street | Cashier, WaiterServing, Protest1 to 3, BallThrow, CPR (start, loop, end, Cpr) | Week One | SaneGuy, Slayer |
+| Dances | BWO_Dance1 to 4; 45 "ordinary" and 30 "difficult" BobTA dances (Macarena, YMCA, Charleston, Thriller, salsas, breakdance...) | Week One | iBrRus (True Actions Act 3 - Dancing) |
+| Instruments | BardPlay flute, guitars (acoustic, bass, electric), pianos (grand, upright, seated, by facing), saxophone, synthesizer, trumpet, violin (19) | Week One | Johngood (Bard Interactive Music) |
+| Combat | Bob_FrontKick, HighKick, PushKick, walk-back attacks by weapon (14 X files) | Bandits `anims_X/Zombie` | Slayer |
+| Models | Bob and Kate hazmat suits; A-10 wreck, AS350 helicopter full and wreck, plane and rotor; stop sign and "truth" sign as one-handed weapons; a world car | Week One `models_X` | BongoRaccoon32 (suits); Peter Hammerman (aircraft) |
+| Clothing | nine hazmat suit colours, a bullet vest, with textures | Week One | BongoRaccoon32 |
+| Sounds | 114 registered: building ambiences (church, school, gigamart, pharmacy, restaurants, Zippee), choppers (generic, CDC, police), Boeing, jet, A-10, explosions, sirens, gas, car horns, thirteen claps, coughs and vomits by sex, eighteen male and nine female "truth" shouts, instruments, party music (71 MB), a radio channel's spoken transmissions (21 broadcasts), a television channel | Week One `sound` | Lauren Sinclair (radio and other sounds), AuD (item sounds), the voice actors |
+| Effects and sprites | flyover sprites of an A-10 and two helicopters by facing, explosions, clouds, fire, flamethrower, gas, mist, smoke | Week One `textures` | Ravense and Slayer, as far as the credits say |
+| Its own record | `radio/BWONews.xml` with 21 KB of broadcast text, a print-media file and flyer pictures, party tapes as recorded media | Week One | Slayer, Lauren Sinclair |
+
+How it plays them: every animation is bound to the ZOMBIE animation
+tree's "bumped" state - an XML node per animation conditioned on a
+`BumpType` string, and the program calls `setBumpType("Cashier")` on
+the zombie. The skeleton is the game's own Bip01 rig (pelvis, spine,
+clavicles, arms, hands and fingers, legs, feet, the two prop bones,
+the pack and dress bones), the same bones the player model and its
+animations carry, so the files themselves are not zombie-specific;
+what is zombie-specific is the binding. On SAO's player shells the
+equivalent binding is a player animation-set node conditioned on a
+variable SAO sets, or a registered emote played through the engine's
+own emote path - to be verified in the engine before any is taken.
+
+What vanilla Build 42 already has, so it is not wanted from here:
+drinking from bottles, cups and the floor; sitting idle with any
+weapon; sitting on furniture, eating and reading there; forty-odd
+emotes (clap, come here, follow me, insult, no, cough, pain...).
+What it lacks and Week One holds: gestures for talking, arguing,
+nodding and yelling; work at a counter and serving; protest; CPR;
+dancing and playing instruments; the sounds of buildings and of the
+fall's aircraft.
+
+Requiring either mod is not a route: Bandits spawns its own people
+as programmed zombies and Week One rewrites the world and its
+timeline, and both would collide with the county. What can cross is
+the art, file by file, with the credited author's permission for
+each group - the operator's to settle, as with every mod here - and
+the binding written new for SAO's own people.
