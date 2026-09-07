@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| Status | DRAFT 2026-09-06. Part 1: bodies and age. Part 2: traits and health conditions. Part 3, repositories and non-Workshop hosts, pending. Feeds DR-032 on the SAO side: which mods SAO requires, takes from, or declines is decided through Crucible, mod by mod. |
+| Status | DRAFT 2026-09-06. Part 1: bodies and age. Part 2: traits and health conditions. Part 3: repositories and non-Workshop hosts. Feeds DR-032 on the SAO side: which mods SAO requires, takes from, or declines is decided through Crucible, mod by mod. |
 | Rule | Every row was read from the mod's own Workshop page (Steam rate-limited the fetch tool, so the pages were read by direct request and cross-checked against Steam's item-details API for title, app, dates and tags). No row rests on a search snippet. |
 | Why it exists | The operator ruled 2026-09-06 that the county is to have children and elders, and people with the conditions that shape knowledge and memory, and that the mods supplying them become native requirements. The engine supplies none of it (below). |
 | Permissions and credit | The license column records what a page states and nothing more; "none stated" is a fact, not a verdict. Permission is the operator's business and has been dealt with directly with the authors; a visible repository is usable. Nothing here argues for or against a mod on licensing grounds - only on technical ones. Integration credits through SAO's existing CREDITS.md convention (a required mod gets a hard-runtime-dependency entry, as ZombieBuddy has); no new standard. Selection goes to the operator first. |
-| Scope of the search | Part 1 read the Workshop and Steam's item API, and followed repositories only where a page pointed at one. A sweep of GitHub, GitLab, Codeberg, Nexus Mods, ModDB, the Indie Stone forums and itch.io is in progress (2026-09-06) and lands as part 3. |
+| Scope of the search | Parts 1 and 2 read the Workshop and Steam's item API, and followed repositories only where a page pointed at one. Part 3 swept GitHub (keyword, topic and code search), GitLab, Codeberg, Nexus Mods (every listing page), ModDB, the Indie Stone forums and itch.io. |
 
 ## What the engine holds (verified 2026-09-06 against the installed 42.20 tree and jar)
 
@@ -89,15 +89,16 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    SAO's Java bridge. Crude, dependency-free, and the same thing the
    child mod does underneath.
 4. Age as a system: Getting Old is Build 42.20, single- and
-   multiplayer, updated this month, with no public repository found
-   yet; TIHYD's repository is public (GPL-3.0 stated) but it is Build
-   41 and untouched since 2023; SAO already derives its own age
-   (`SAO_History.ageOf`), so the fork is between requiring an age
-   system, taking what is usable from one into SAO's own, and
+   multiplayer, updated this month, and its full source is public
+   (part 3); TIHYD's repository is public (GPL-3.0) but Build 41 and
+   untouched since 2023; Pao's Aging has a public GPL-3.0 repository
+   with a Build 42 folder in progress. SAO already derives its own
+   age (`SAO_History.ageOf`), so the fork is between requiring an
+   age system at runtime, taking its mechanics into SAO's own, and
    extending SAO's own outright. Two things are verifiable before
    any of these: whether an age mod written for the player reaches
-   SAO's off-slot people at all (its Lua is readable once
-   subscribed), and which age is the one source of truth.
+   SAO's off-slot people at all (the source is readable now), and
+   which age is the one source of truth.
 
 ## Could not source
 
@@ -255,3 +256,92 @@ only.
   trait; the page was not read.
 - SOTO and New Professions and Traits keep their trait lists in
   discussions or images; not itemized.
+
+# Part 3 - repositories and non-Workshop hosts (2026-09-06)
+
+GitHub was swept by keyword, topic (project-zomboid and its
+variants, every page) and code search; Nexus Mods' whole Project
+Zomboid section (fourteen listing pages) was read; ModDB, GitLab,
+Codeberg, itch.io and the Indie Stone forums were searched. Nexus,
+ModDB and the forums refuse the fetch tool and were read through the
+browser pane; rows marked (index) were not opened. The license
+column records what a page or file states.
+
+## Homes of the catalogued mods
+
+| Mod | Home | Holds | Build | Last update | License (as stated) | Author | Workshop id |
+|---|---|---|---|---|---|---|---|
+| Getting Old | github.com/Bruce-Devlin/ProjectZomboidMods, folder Mods/GettingOld | full source, workshop.txt, preview (the repository also holds two other mods) | "Updated for Project Zomboid Build 42.20 stable"; tags Build 42, framework, multiplayer, traits, WIP | 2026-08-05 | none stated (no license file) | Bruce-Devlin | 3643959369 |
+| This Is How You Died | github.com/dy0gu/tihyd; also Nexus mods/199 | full source, README, license | not stated | 2023-12-01 (Nexus upload July 2024) | GPL-3.0 (license file; the Nexus page repeats it and asks for credit) | dy0gu | 3013368173 |
+| Aging (Pao) | github.com/ZioPao/Aging | full source with a 42 folder ("wip for b42"), a Build 41 mod.info, workshop.txt | Build 41 tag; Build 42 work in progress | 2025-04-13 | GPL-3.0 (license file) | ZioPao | 2982401230 |
+| Age Traits | github.com/mxswat/pz-age-trait | full source, workshop.txt | Build 41 | 2022-04-18 | none stated | mxswat | 2796508003 |
+| Neurodiverse Traits | github.com/mxswat/pz-neurodiverse-traits | full source, workshop.txt (ADHD, Bipolar I, Tourette, Alzheimer's with daily skill loss) | Build 41 | 2022-06-06 | none stated | mxswat | 2754581597 |
+| The Only Cure | github.com/ZioPao/The-Only-Cure | full source (42 and common), mod.info | Build 42.20 | 2026-08-23 | GPL-3.0 | ZioPao | 3580276809 |
+| Psychology - Mental Resilience Skill | github.com/WindLother/ZModPsychologySkill | full source, tests, workshop.txt | Build 41 and 42.20.2 | 2026-08-07 | none stated | WindLother | 3561213456 |
+| Just Drugs - DLC | github.com/Leuansin/Just-Drugs---DLC; a Nexus listing (mods/215, index) | full source, readme | Build 41 and 42 | 2025-10-30 | none stated | Leuansin | 3339758426 |
+| The Alcoholic | github.com/axxessdenied/thealcoholic | full source | not stated (Build 41 era) | 2024-08-27 | MIT | axxessdenied | 2679739572 |
+| Evolving Traits World | github.com/MusicManiac/EvolvingTraitsWorld | full source, workshop content, changelog | Build 42; a Build 41 legacy at 3773982162 | 2026-09-06 | no license file; redistribution prohibited without permission | MusicManiac | 2914075159 |
+| More Traits | github.com/hypnotoadtrance/MoreTraits (archived Sept 2, 2026) | full source, authors file, changelog | Build 41 and 42 | 2026-08-29 | none stated | HypnoToadTrance, Fajdek, MusicManiac | 1299328280 |
+| Tomb's Player Body | a Sketchfab model listing only (tomb_art) | the model's description; no download stated | not stated | Feb 18, 2025 | a NoAI tag | tomb_art | 3429790870 (by name) |
+| HGO Expansion B42 | ModDB moddb.com/mods/hgo-expansion-b42; Nexus mods/247 | a cannabis system with sandbox smoking effects | Build 42 | Feb 9, 2025 (release); Aug 19, 2025 | no repacks, reuploads or edits without permission; credit required | HGO | 3424309174 |
+
+## Mods found only outside the Workshop, or not yet uploaded
+
+| Category | Mod | Home | Holds | Build | Last update | License (as stated) | Author | Workshop |
+|---|---|---|---|---|---|---|---|---|
+| child bodies | TOTC: Think Of The Children | github.com/Zomboides/TOTC | full source (common and 42 folders), documentation, a site - child-sized zombies | 42.13.1 | 2026-01-14 | MIT (README; no license file at root) | Zomboides / raulillana | not stated |
+| health | Humans: Are Weak | github.com/SeahDokki/seah_haw_pz | full source, README, design documents: thirteen negative traits (Epileptic, Narcoleptic, Diabetic, Depressive, Immunocompromised, Asthmatic, Ehlers-Danlos, Neuralgia, Tourette's, Allergic, Osteoarthritis, ADHD, Colour Blind), partly implemented | Build 42 | 2026-09-02 | a non-commercial source-available license, version 1.0 ("not Open Source") | SeahDokki | none stated |
+| health | Humans: Are Resilient; Humans: Are Shaped | github.com/SeahDokki/seah_har_pz; seah_hash_pz | eleven positive traits (behavior pending); five occupations and starting-kit fixes | Build 42 | 2026-09-01 | the same source-available terms | SeahDokki | none stated |
+| health | PzDiabetes | github.com/fopwoc/PzDiabetes | full source, tests, README, license | Build 42.20 | 2026-08-23 (one commit) | WTFPL | fopwoc | none stated |
+| health | Tourette Syndrome | github.com/pavel-voronin/pz-tourette-syndrome | full source, README, workshop.txt | not stated | 2025-05-31 | MIT | pavel-voronin | 3490803451 |
+| cognition | ADHD Trait | github.com/JoshuaSHenderson/ProjectZomboid-ADHD-Trait | full source, README (the Build 41 tree removed) | Build 42 only | 2026-08-04 | MIT | JoshuaSHenderson | not uploaded |
+| mental health | Scotty's Mental Health Expansion | github.com/ScottyVenable/Project-Zomboid-Mod--Scottys-Mental-Health-Expansion | media, docs, mod.info, README: Depression, Anxiety, PTSD, Insomnia, Psychosis, OCD, with fictional medications | Build 41.78.16 and later | 2025-06-22 | MIT | ScottyVenable | "coming soon" |
+| sight | EyeTraits | github.com/Aurocka/EyeTraits-Project-Zomboid | an idea text only (photophobia, night blindness, cataracts, permanent blindness) | not stated | 2025-01-15 | none stated | Aurocka | none |
+| sight | PZ_BlindTrait | github.com/JulienLaclaverie/PZ_BlindTrait | a 2017 mod folder | 2016-17 era | 2017-06-15 | none stated | JulienLaclaverie | none |
+| substances | Cryzers-Drugs | github.com/CryzerFranz/Cryzers-Drugs | full source (cannabis growing, joints) | not stated | 2025-04-24 | MIT | CryzerFranz | none |
+| substances | pz-dnd; AddictionMod; lactoseIntolerantMod | GitHub (SirNoName2705; 7Roses; brycepg) | a template with little content (2020); a 2013 nicotine script; a lactose-intolerance trait (2023) | old | 2020; 2013; 2023 | MIT; none; not checked | - | none |
+| substances | Reefer Madness (B42) | Nexus mods/252 (index) | marijuana items and a high moodle | Build 42 | Nov 5, 2025 | not read | a deleted user | not read |
+| traits and occupations | SOTO-Refactored | github.com/Susjin/SOTO-Refactored | full source, documentation, to-do - a refactor of SOTO | Build 42 stable | 2026-09-05 | MIT (copyright Pedro Henrique 2026) | Susjin | none stated (SOTO is 2840805724) |
+| traits and occupations | Universal Traits (UT_CORE) | github.com/rk-gamemods/pz-universal-traits | full source, tests, audit and planning documents | Build 42, single-player | 2026-07-25 | "No open-source license has been granted"; public for review and collaboration | rk-gamemods | none stated |
+| traits and occupations | Overkill Traits and Professions | github.com/CThurston2003/OverkillTraitsAndProfessions | full source, README | not stated | 2026-05-25 | MIT | CThurston2003 | none stated |
+| traits and occupations | Traits and Occupations Expanded | github.com/1SnowFall1/Traits-and-Occupations-Expanded | mod.info (Portuguese), registries, media | Build 42 layout | 2026-05-06 | none stated | 1SnowFall1 | none stated |
+| traits and occupations | Survival Instincts | github.com/Fenris91/SurvivalInstincts | full source, README (dynamic perks, negative traits) | Build 42 | 2026-03-13 | MIT | Fenris91 | "coming soon" |
+| traits and occupations | Kentucky National Guard Professions | github.com/CyclingGoose/Goose-s-Kentucky-National-Guard-Professions-B42 | full source in version folders 42.13 to 42.15 | Build 42.13 and later | 2026-08-15 | MIT (license file) | CyclingGoose | 3659605156 |
+| traits and occupations | ra's Professions | github.com/razab87/rasProfessions | full source, releases | Build 41 stable and 42 unstable | 2026-03-15 | a custom text: free to use, modify and share any element, as long as no plain copy is published on Steam | razab87 | 2675128168 |
+| traits and occupations | True Detective | github.com/kodexArg/TrueDetective | full source, docs, CI | Build 42.20 | 2026-08-19 | MIT | kodexArg | 3383387174 |
+| traits and occupations | Hardwork Rework; Project_Survival; Biochemistry Occupation Traits Skills | GitHub (ruEngineer; Grammarsalad; Grammarsalad) | full source; Lua source (a Survival skill, occupations, traits); an add-on for Biochemistry of Life | not stated | 2025-08-15; 2024-06-27; 2024-06-18 | none stated; not checked; not checked | - | workshop.txt present (id not read); none; none |
+| traits and occupations | Profession Framework | github.com/FWolfe/ProfessionFramework (archived Sept 13, 2023) | media, docs, examples, mod.info - the framework Build 41 profession mods required | not stated | 2022-02-14 | none stated | FWolfe | 1343686691 |
+| traits and occupations | Dan's Rebalance; A-anon's Professions; ProfessionMod | Nexus mods/107, mods/43, mods/287 (browser pane) | a point rebalance with Couch Potato and Desk Jockey traits and a Streamer profession; five professions; a Soldier profession with a Military Training trait | not stated; not stated; Build 41.78 | May 2023; Apr 2021; Apr 2026 | none quoted | thedanofdans; Aanon0133; Abad | not stated |
+| traits and occupations | (WIP) More Occupations; The Trait Modifier | Indie Stone forums (index; threads not opened) | a Build 41 occupations thread with starting equipment; a 2015 trait modifier | Build 41; version 31 | 2021; 2015 | none stated | fritozy101; not captured | not captured |
+
+## Notes on part 3
+
+- Nothing on any host swept models dementia, memory loss or
+  cognitive decline for Build 42. The nearest remain the Build 41
+  Alzheimer's trait in Neurodiverse Traits (source public) and the
+  Build 41 Dyslexia in Custom Traits (Workshop only); ADHD exists for
+  Build 42 with MIT source.
+- No child, teen or elder player-body mod exists outside the
+  Workshop for Build 42; TOTC's child-sized zombies (MIT, full
+  source, 42.13) are the nearest, and a working reference for a
+  scaled child mesh in this engine.
+- Three re-uploads of PepperCat's Dynamic Traits sit in other
+  people's repositories (NoR734/Dynamic, besterry/HC-modpack,
+  jguz1990/mods-pz); none is an author's home and they are not
+  tabled. VsCodeHubb/pz-chronicles is an empty repository, not a
+  home for PZ Chronicles.
+- Dynamic Body Shape ships Java classes inside its Workshop folder
+  (a `zombie` folder for Build 41, a `42` folder for Build 42), as
+  Realism does; True Model Z's page states that anyone may add to
+  and extend it with credit in the files.
+
+## Could not source (part 3)
+
+- Growing Up and Realism (PZ Chronicles): no repository, Nexus,
+  ModDB, forum or itch.io listing; only a Discord and Ko-fi pages.
+- Aging Mod (Vivi), Babies (Scimmia; a Build 42 port is said to be
+  planned in the page's comments), Tomb's Player Body Overhaul (a
+  Sketchfab listing only), True Model Z, Dynamic Body Shape, Moodle
+  Framework, [B42+] Sandbox Options: nothing outside the Workshop.
+- Nexus mods/29, returned by search as an aging mod: hidden behind
+  the adult-content preference; unread. Nexus mods/16: not read.
