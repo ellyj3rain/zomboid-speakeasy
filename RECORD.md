@@ -167,6 +167,21 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 18 - SAO stopped requiring other people's mods (2026-09-07)
+
+SAO's batch C39 removed both hard dependencies it had carried
+since C32. They were required so the player could carry the same
+conditions the county's people carry; no code had ever been taken
+from either, so the requirement bought a trait framework and
+charged every user two subscriptions for it. SAO now registers
+those conditions as its own engine character traits, uses
+vanilla's where vanilla already ships one, and prices each by the
+vanilla trait its shape is anchored to. For this project: a
+person's conditions are now a fact the engine itself carries on
+the character, so a corpus built from play can read them off the
+character rather than out of SAO's own store, and the player's
+conditions and a survivor's are the same kind of fact.
+
 ## 17 - Before, and the day it started (2026-09-07)
 
 SAO's batch C38 gave the knowledge surface two topics the corpus
