@@ -228,13 +228,14 @@ unreadable twice, API record: Build 41 and 42, updated Dec 25, 2025).
    habits** (the society arc's S6): the eight-dependency pattern of N
    and C's Narcotics and the period set of Drugs of '93 inform SAO's
    own; The Alcoholic and Just Drugs are taken from. No dependency.
-4. **Children's bodies: read Growing Up first.** Ruled after the
-   source question was answered (its Lua is on disk for a
-   subscriber; only the copied Java classes are compiled): the
-   operator subscribes to Growing Up (3701972216) and its Realism
-   dependency (3701964565), the Lua is read and the Java classes
-   inspected, and what it does that a scaled mesh does not is
-   reported before the body decision. Nothing built until then.
+4. **Children's bodies: native scale plus Growing Up's systems.**
+   Ruled after Growing Up was subscribed and read (the section
+   above): SAO scales its own people through the engine's
+   model-instance scale and takes Growing Up's age curves for
+   height, speed and weight, its fear model by age, its literacy
+   progression, its experience throttle with birthday floors and
+   its archetypes as its own, credited. The head-and-hands
+   proportions are given up; no dependency, no engine patch.
 
 ## Could not source
 
@@ -481,3 +482,31 @@ column records what a page or file states.
   Framework, [B42+] Sandbox Options: nothing outside the Workshop.
 - Nexus mods/29, returned by search as an aging mod: hidden behind
   the adult-content preference; unread. Nexus mods/16: not read.
+
+# Operator-added, 2026-09-06: Starving Zombies: Realism (B42.20)
+
+Subscribed by the operator the same evening (Workshop 3793611785,
+Amostradinho, version 2.3, versionMin 42.20.4, Lua only, single- and
+multiplayer; incompatible with the older Starving Zombies). Read from
+its files: zombie hunger (fed hours, starving after hours, a starving
+scent multiplier), scent carried on wind, rain, fog and temperature
+from bodies (fresh, peak, fade, dry, burned) and from the player
+(blood, wounds, clean and dirty bandages, infected wounds, perfume
+and cologne masking), feeding on corpses (eat time, eaters per body,
+feeding effects, frenzy radius and size, blood trails, corpse
+flies), world stories, physical stability and trips, and a push
+system. It writes its state on the zombie and the world (`szrHungerState`,
+`szrFedUntil`, `szrTargetKind`, `szTarget`, `szrFragranceUntilHours`,
+the body-yield and trail keys) and exposes globals (`SZRealism`,
+`SZRealismClient`, `SZBodyGroup`, `SZBodyGrid`, `SZPlayerTrips`); it
+hooks `OnZombieUpdate`, `OnDeadBodySpawn`, `OnWeaponHitCharacter`,
+`LoadGridsquare` and the tick and player updates. Sixty-one sandbox
+options.
+
+What it is to SAO: a change in what a survivor has to know - that
+the dead smell blood and wounds, that they feed and gather to feed,
+that scent travels on the wind - and a state SAO can read where the
+mod is present (the standing rule: recognised, never named in code).
+It belongs with the lessons and the knowledge surface, not with the
+people catalogue; recorded here because the operator added it in
+this pass. Its place in the design is the operator's call.
