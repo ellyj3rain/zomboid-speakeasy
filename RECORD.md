@@ -167,6 +167,23 @@ surface now carries the situation and the speaker's energy (C34),
 and the voice material's rules carry the register: the seed must
 show the same person in both registers.
 
+## 20 - Day zero is the generator (2026-09-07)
+
+The operator settled how SAO's worlds come to exist, and it
+matters here. A county started at the fall produces its own
+structure: people collaborate, choose ground, settle it, hold or
+lose it, survive or do not. That path is the generator. A save
+that begins years later runs the same machinery forward with
+nobody watching, and whoever is alive at the end is who the
+player meets. Two batches followed: the county now exists in full
+before the first body is spawned, and the county can be asked
+whether the fall has reached it, so it keeps an ordinary life
+until it has. For this project: a corpus can be gathered from any
+point on that range and the people in it will have a history that
+actually happened, at the scale of time the save claims - which
+is what makes their speech about the past answerable rather than
+invented.
+
 ## 19 - SAO stands on its own (2026-09-07)
 
 SAO's batch C40 took the self-containment a step past C39. Where
