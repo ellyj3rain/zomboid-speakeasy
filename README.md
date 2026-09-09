@@ -4,13 +4,17 @@ Modeling the cognition of Project Zomboid NPCs: how a person decides
 in the game space with limited awareness, from their own attributes
 and personality.
 
-The first consumer is Survivor Awareness Overhaul (SAO); the project
-is built so others can build on it too.
+This and Survivor Awareness Overhaul (`../survivor-awareness`) are one
+project. This repository is its dataset and training side: what is
+built here is a dataset, and it ports into SAO. The repositories are
+separate for licensing and for nothing else - SAO is GPL-3.0, this is
+MIT, and no code crosses. The work is built so others can build on it
+too.
 
 | | |
 |---|---|
 | Status | Early. Charter and structure; the world documents are drafted, no models yet. |
-| License | MIT. SAO is GPL-3.0; no code is shared between the repositories; what is produced here ships into SAO. |
+| License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
 ## What this project is

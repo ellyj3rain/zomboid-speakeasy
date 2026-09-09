@@ -326,3 +326,13 @@ because this session treated it as blocked when it was not.
 The operator ruled that the project keeps the name Speakeasy. Entry
 21 left it open as the one thing outstanding; it is not outstanding.
 The redefinition stands on its own and the name carries over to it.
+
+## 23 - One project, two repositories (2026-09-08)
+
+Recorded because a session got it wrong and spent effort on it:
+this and SAO are the same project. This repository is its dataset
+and training side, and what is built here ports into SAO. The
+split is licensing - SAO is GPL-3.0, this is MIT, no code crosses
+- and nothing else. There is no cross-project interface to design,
+and treating the two as separate projects negotiating a contract
+is the error to avoid.
