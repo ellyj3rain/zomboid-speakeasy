@@ -283,3 +283,40 @@ sounds and suits, and the author's copyright statement - and how
 the legacy version works from a third party's copy of its Lua.
 Nothing selected: the mods are not on disk, and the choice of what
 to take, with each author's permission, is the operator's.
+
+## 21 - The project is cognition, and speech is one part of it (2026-09-08)
+
+The charter said trained speech models for Project Zomboid NPCs.
+It is wider than that and has been for a while: modeling the
+cognition of an NPC - how a person decides in the game space with
+limited awareness, from their own attributes and personality.
+Speech is one thing a cognition produces. The earlier speech work
+stands and is not withdrawn; it stopped being the identity.
+
+What made it visible was SAO. A house there is dealt its work from
+a five-word list mapped off an occupation class, and its creed
+from four fixed names. Nobody in that house decided anything, and
+two houses that organise identically cannot have different words
+for it. The operator's correction: a group can create a position
+because it needed one and have its own word for it, another group
+can create a position that functions the same and call it
+something else, and that is derived from their cognition. A table
+cannot stand in for that, and neither can a bigger table.
+
+The same holds for a group's relationship to place. SAO's model is
+one bounds rectangle per group name, so a base in one town plus
+stash houses around it is unrepresentable, and so is a group
+deciding to leave. That is an ontological error rather than a
+missing feature, and it is the shape this project exists to
+answer: the categories a simulation's people think in cannot be
+authored by the consumer.
+
+Competency is part of it. Nothing modeled here is a capability
+every group gets. A group that never works out it could run
+stashes across a town does not run them, and that is a correct
+outcome. The model makes the range possible and never enforces a
+point in it.
+
+Not renamed. The name is the operator's and is not what was
+holding this up - the redefinition was, and it was outstanding
+because this session treated it as blocked when it was not.
