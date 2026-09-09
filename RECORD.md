@@ -420,3 +420,23 @@ stock a larder unless a player is watching, because the only call
 sites for those are in the controller - so a row about what a house
 does with a place has nothing to be a row about yet.
 
+## 25 - The three projects, and the edge to the turned (2026-09-09)
+
+The architecture across the three repositories is written down, on the
+operator's direction, and is held in SAO's `PROJECTS.md` because SAO
+holds the person record the other two read. This README points at it.
+
+What it names that was written nowhere before is the edge from
+Zombie Awareness Overhaul to here. A turned mind is a cognition with
+its inputs failing: ZAO's first mechanism is the same person deciding
+with perception, verbs and continuity coming apart at rates that differ
+per body. That is this project's model under a transform rather than a
+second model, and treating it as a second one is how it would get
+invented twice.
+
+Nothing is designed for that edge yet and nothing should be until ZAO's
+G2 lands - the record reaching a turned body with provenance intact.
+ZAO is at `[A5]`, with the turned body's control surface and the
+player's own twenty-nine zombie dials verified against the installed
+build, and no mod code by design of its own gate.
+

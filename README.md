@@ -4,6 +4,12 @@ Modeling the cognition of Project Zomboid NPCs: how a person decides
 in the game space with limited awareness, from their own attributes
 and personality.
 
+The architecture across the three repositories - what this,
+[Survivor Awareness Overhaul](../survivor-awareness) and
+[Zombie Awareness Overhaul](../zombie-awareness) each own, and the
+three seams between them - is held in
+[`../survivor-awareness/PROJECTS.md`](../survivor-awareness/PROJECTS.md).
+
 This and Survivor Awareness Overhaul (`../survivor-awareness`) are one
 project. This repository is its dataset and training side: what is
 built here is a dataset, and it ports into SAO. The repositories are
