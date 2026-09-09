@@ -320,3 +320,9 @@ point in it.
 Not renamed. The name is the operator's and is not what was
 holding this up - the redefinition was, and it was outstanding
 because this session treated it as blocked when it was not.
+
+## 22 - The name stays (2026-09-08)
+
+The operator ruled that the project keeps the name Speakeasy. Entry
+21 left it open as the one thing outstanding; it is not outstanding.
+The redefinition stands on its own and the name carries over to it.
