@@ -8,7 +8,11 @@ The architecture across the three repositories - what this,
 [Survivor Awareness Overhaul](../survivor-awareness) and
 [Zombie Awareness Overhaul](../zombie-awareness) each own, and the
 three seams between them - is held in
-[`../survivor-awareness/PROJECTS.md`](../survivor-awareness/PROJECTS.md).
+`../survivor-awareness/PROJECTS.md`, which is
+[`PROJECTS.md`](https://github.com/ellyj3rain/sao/blob/main/PROJECTS.md)
+on the forge. The relative path is for a reader with the three
+repositories side by side, which is how they are worked on; the link is
+for a reader who has only this one.
 
 This and Survivor Awareness Overhaul (`../survivor-awareness`) are one
 project. This repository is its dataset and training side: what is
