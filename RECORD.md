@@ -336,3 +336,87 @@ split is licensing - SAO is GPL-3.0, this is MIT, no code crosses
 - and nothing else. There is no cross-project interface to design,
 and treating the two as separate projects negotiating a contract
 is the error to avoid.
+
+## 24 - How the dataset is made, and what a row is (2026-09-08)
+
+The operator ruled the source. A person's own SAO record is put to a
+language model - their traits, conditions, habits, occupation, age,
+history and lessons, plus the belief set they hold at that moment -
+and the model decides as that person, in that situation, among the
+options actually available. What it produces is a decision and, where
+a group has just invented something, the words that group uses for it.
+Those rows are distilled into a small model that ships inside SAO's
+own tree, so nothing reaches an external service at play time and no
+capability requires another mod. SAO's county sweep measures whether
+the resulting distributions are sane; the distribution is the check
+and it is never a border, because a border is a point and a county is
+a distribution.
+
+Rows arrive as a proposal the operator rules on. AI-written behaviour
+is not ratified intent, and a dataset does not become intent by being
+large.
+
+**Why not the other two sources.** The county's own runs are cheap and
+unlimited and grounded in the real simulation, and they can only teach
+what the county already does - so they cannot produce a work word or a
+creed the tree never contained, which is the whole requirement. The
+era's real behavioural data is what SAO's conditions table is already
+built on, source by source, and it gives rates and prevalences rather
+than decisions: it can ground who is in the county and cannot answer
+what one of them does at a particular moment.
+
+## What a row is
+
+Derived from the decisions SAO's people actually face, read off the
+code rather than imagined. A row is four things.
+
+**The person.** What SAO already carries and can hand over unchanged:
+the eight traits, the wanted circle, conditions and habits, occupation
+and its class, age, the formative events of their history, the lessons
+they hold, and their standing toward whoever else is in the situation.
+
+**The situation.** Their belief set at that moment, with each belief's
+provenance and age - what they have seen, been told, heard, or lived,
+and how long ago. This is the half that keeps the model honest: a
+cognition that decides on facts the person does not hold is the
+omniscience failure, and it is the same defect whether a table or a
+model produced it.
+
+**The options.** What was actually available, which the consumer
+supplies. A model choosing from options the county cannot perform
+produces a row nothing can use.
+
+**The choice, and its words.** Which option, and where a group has
+created something that did not exist - a position, a relationship to a
+place - the word that group uses for it.
+
+## Where SAO currently authors, and what would replace it
+
+Measured in the SAO tree on 2026-09-08.
+
+| Site | What is authored now |
+|---|---|
+| `SAO_Standing.electLeader` | five work words, mapped off occupation class |
+| creeds | four fixed names |
+| `s.groupClaims[name]` | one bounds rectangle per group |
+| road meetings | a fixed trust increment per meeting |
+| the dormant day | which of need, a person, or a place the day is about |
+
+## What the county can and cannot supply today
+
+The person is fully available. The situation is not, and the gap was
+measured this session: over eight counties of 1096 days, no dormant
+survivor held a belief that any living person was anywhere, and the
+median county held one person with any belief about any person at all
+- so there was almost no situation to hand over. SAO's `[C71]` gives
+every person their own belief key and writes down the sightings a
+meeting leaves; `[C72]` gives the day a decision that can be about a
+person. Until those, a decision corpus about who somebody goes to
+would have been fitted to a county where nobody could know anybody.
+
+The options are available for the decisions that exist and absent for
+the ones that do not. A house cannot take ground, light a hearth or
+stock a larder unless a player is watching, because the only call
+sites for those are in the controller - so a row about what a house
+does with a place has nothing to be a row about yet.
+
