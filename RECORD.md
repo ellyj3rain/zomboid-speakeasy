@@ -485,3 +485,39 @@ discussed against numbers instead of nothing. It does not retire the
 receipt: the ladder still has to be fired from the debug menu in a real
 session before a size is chosen, and `training/`'s rule stands.
 
+
+## 27 - The tree said speech after the record said cognition (2026-09-09)
+
+Record 21 redefined this project on 2026-09-08: cognition, with speech
+as one thing a cognition produces. The record said so and the
+repository did not.
+
+**The public description still described the old project.** "World
+documents, corpora, and trained speech models... the data and training
+side of SAO's talking system" - which is what a reader arriving from
+the forge saw, a day after the charter changed underneath it. It now
+says what the project is.
+
+**The status line predated two rulings.** It read "Charter and
+structure; the world documents are drafted, no models yet", written
+before record 24 ratified where rows come from and what a row is, and
+before record 26 measured a ceiling for the inference budget. It states
+both now.
+
+**And the dataset had nowhere to live.** `world/`, `corpus/`, `voice/`
+and `training/` are all from the speech era and none of them is the
+thing record 24 ruled on. The row shape existed only as prose in this
+file, which is how a ratified decision quietly stops being work:
+`decisions/` carries it now, and carries no rows, which is the honest
+state.
+
+`voice/` is not withdrawn. Record 21 said the earlier speech work
+stands and stopped being the identity, so the entry for it says which
+of the two it is.
+
+**What this is an instance of.** A charter change is not finished when
+the record entry lands. Every surface that states what the project is -
+the description a stranger reads first, the status line, the shape of
+the directories - was written against the old charter and none of them
+knows. The record is append-only and the surfaces are not, so the
+surfaces have to be walked deliberately.

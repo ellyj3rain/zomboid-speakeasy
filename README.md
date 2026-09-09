@@ -23,7 +23,7 @@ too.
 
 | | |
 |---|---|
-| Status | Early. Charter and structure; the world documents are drafted, no models yet. |
+| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). No rows and no models yet. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
@@ -71,6 +71,10 @@ point in it.
 
 ## What this project holds
 
+- `decisions/` - the dataset this project exists to make: a person,
+  the situation they are in, the options actually available, and what
+  they chose. Record 24 ratified where rows come from and what a row
+  is; the directory carries that shape and, so far, no rows.
 - `world/` - the 1993 world model as researched documents: what a
   person can know, scoped by who they were. Every claim carries its
   confidence, and nothing teaches a model until it has been reviewed
@@ -78,7 +82,9 @@ point in it.
 - `corpus/` - curated public-domain period text, with source and
   license recorded per item.
 - `voice/` - authored voice material demonstrating will, choice, and
-  mood; machine-expanded at build time.
+  mood; machine-expanded at build time. Speech is one thing a cognition
+  produces (record 21), so this is a part of the project rather than
+  the whole of it.
 - `training/` - the runs that produce the models, sized against
   measured in-game inference budgets, and the export contract
   consumers load them by.
