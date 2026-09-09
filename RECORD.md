@@ -440,3 +440,48 @@ ZAO is at `[A5]`, with the turned body's control surface and the
 player's own twenty-nine zombie dials verified against the installed
 build, and no mod code by design of its own gate.
 
+## 26 - A ceiling for the inference budget (2026-09-09)
+
+`training/` has said since it was written that model sizes cite
+measured in-game inference budgets and never a guess, and that it waits
+on those measurements. SAO built the instrument at its `[C28]` -
+`SAOBridge.inferenceBudgetProbe(dim, layers, runs)`, a model-shaped
+workload of chained dim-by-dim matrix-times-vector passes in float32
+with a tanh between, deterministic weights, one warm pass so the JIT is
+not what gets timed, nanosecond clocks, and a checksum riding the
+report so the JIT cannot delete the work. Border 102 holds its honesty.
+
+The measurement never happened, because `[C28]` fires it from the
+game's debug menu and that is a play receipt.
+
+**The probe touches no game state.** It is arithmetic. So it was run
+standalone against the compiled bridge, thirty runs at each of `[C28]`'s
+own five shapes:
+
+| shape | avg | min | max |
+|---|---|---|---|
+| 64 x 4 | 84 us | 38 us | 344 us |
+| 128 x 4 | 146 us | 141 us | 157 us |
+| 256 x 4 | 541 us | 231 us | 1464 us |
+| 256 x 8 | 387 us | 329 us | 484 us |
+| 512 x 8 | 1493 us | 1258 us | 2109 us |
+
+Java 25, 32 logical processors, idle machine.
+
+**These are a ceiling, not the figure the design waits on.** `[C28]`
+named the honest worst case as the game's own thread under the game's
+own load, and this is neither. The in-game numbers will be worse. What
+this establishes is the order of magnitude, which was previously
+unknown: against a 16,667 microsecond frame at 60fps, a 256x8 forward
+pass is about two percent of a frame here and a 512x8 is about nine.
+
+The 256x4 row is noisier than the 256x8 row above it, which is the
+measurement showing its own conditions rather than a property of the
+shapes; on an idle desktop the JIT and the scheduler are the variance.
+Read the minima as the cleaner signal.
+
+**What this unblocks and what it does not.** Sizing can now be
+discussed against numbers instead of nothing. It does not retire the
+receipt: the ladder still has to be fired from the debug menu in a real
+session before a size is chosen, and `training/`'s rule stands.
+
