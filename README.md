@@ -23,7 +23,7 @@ too.
 
 | | |
 |---|---|
-| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl` as a proposal the operator has not ruled on (record 28); no models yet. |
+| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl`, proposed in record 28 and ratified by the operator in record 29; no models yet. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
@@ -74,7 +74,8 @@ point in it.
 - `decisions/` - the dataset this project exists to make: a person,
   the situation they are in, the options actually available, and what
   they chose. Record 24 ratified where rows come from and what a row
-  is; the directory carries that shape and, so far, no rows.
+  is; the first 112 rows are in `work-words.jsonl`, ratified by
+  the operator (records 28 and 29).
 - `world/` - the 1993 world model as researched documents: what a
   person can know, scoped by who they were. Every claim carries its
   confidence, and nothing teaches a model until it has been reviewed

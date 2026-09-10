@@ -591,3 +591,31 @@ dump.
 **What this is an instance of.** The charter's first concrete output:
 rows that exist as rows, proposed as a whole, with the tree's own
 dealing beside them for the ruling to read against.
+
+## 29 - The rows are ratified (2026-09-09)
+
+The operator ruled on the 112 rows of record 28 the same day they
+were proposed: ratified. The ruling carried its own scope - the rows
+stand, and ratifying them does not preclude improving the dataset
+later. Nothing is lost by starting from what is here.
+
+**What the ruling makes.** `work-words.jsonl` is the dataset's first
+ratified rows: 112 choices, 83 that took a dealt word and 29 that
+founded a position the group created and named, each authored as the
+person from their own evidence with the tree's dealing joined beside
+them. They are intent now, and intent is what rows are for: the
+models in `training/`, when they are built, train on rows like
+these.
+
+**What the ruling does not change.** The limitations record 28 stated
+stand as named: census skills stubbed at -1, belief distances 0, an
+empty believed-zombie set, the [C73] sentinel for names, and 54 of
+the 112 moments being elections the person won. Ratification accepted
+the rows with those limitations on the table; making the evidence
+the rows are authored from richer is later work, and the ruling said
+it does not conflict with anything ratified today.
+
+**What this is an instance of.** The charter's first full cycle: rows
+proposed as a whole (record 28), read, ruled on, and the ruling
+recorded here the same day. Nothing in the file was intent before
+this entry; from this entry on, it is.
