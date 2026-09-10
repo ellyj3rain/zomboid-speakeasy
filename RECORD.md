@@ -521,3 +521,73 @@ the description a stranger reads first, the status line, the shape of
 the directories - was written against the old charter and none of them
 knows. The record is append-only and the surfaces are not, so the
 surfaces have to be walked deliberately.
+
+## 28 - The first rows, work words, 112 of them (2026-09-09)
+
+The operator ruled the first rows target work words - record 21's
+founding example, a group creating a position because it needed one,
+with its own word - at a scale of ~100+. They are here:
+`decisions/work-words.jsonl`, 112 rows, one row per person per county
+run - 71 distinct persons, 31 of them deciding in more than one
+county - proposed and not ratified. Nothing in the file is intent
+until the operator rules on it.
+
+**Where the rows come from.** The C83 decision-moment dump beside the
+county sweep: SAO's own shipped modules run through the mod's tick
+handler, `electLeader` wrapped from outside, each moment captured
+whole before the deal. Six county runs produced 1,545 moments and
+3,507 member-rows over one shared population - 187 people, each the
+same age and class wherever they appear, 121 of them in more than one
+run, 66 in houses of more than one creed. The selection took 112
+member-rows - deterministic, re-runnable, one row per person per
+county run - spread across creeds (wall 65, order 16, road 16, mercy
+15), all five occupation classes, every age decade from 0 to 90+,
+15 with conditions, all six counties, hours 24 through
+26280.
+
+**How the fourth part was written.** Each choice was authored as that
+person, from their evidence alone: traits, conditions, habits,
+lessons, occupation and class, age, trust toward the others, the
+house's creed and claim, the county hour. The tree's own dealing was
+held in a separate file until every one of the 112 choices was
+written, and joined only afterward, as the treeDealt column beside
+each row. The options are the five work words the consumer deals -
+watch, scout, medic, quartermaster, forager - plus the founding
+option: a group creates a position because it needs one, with its own
+word.
+
+**What the 112 hold.** 83 rows chose a dealt word and 29 founded one,
+in 22 words by 22 persons. Five persons founded in more than one
+county run, and each founded the same position each time, under the
+same word and the same description, with only the said words changing
+for the room: speaker at three doors, doorward at three sills, smith
+at two sheds, loreman at two chairs, day-marker on two walls. Four
+persons made a position of memory and named it four different things
+- rememberer, loreman, storykeeper, day-marker. Two children made a
+position of message-running and named it two - gap-runner at eight,
+fence-runner at thirteen, both along the wall and never past it.
+Doorward is watch from the sill and pathfinder is scout for the
+road: a dealt word's work under the group's own name. Record 21's
+founding example, now as rows.
+
+**The comparison, read after the authoring.** In 54 rows the tree's
+answer is "leads": the captured moment was an election that person
+won. In the other 58 the tree dealt a work word, and the authored
+choice took that same word 42 times, a different dealt word 5 times,
+and founded instead 11 times. Of the 29 founded rows, 18 sit in
+the election rows and 11 beside a dealt word. The class prior
+accounts for 42 of 58 and no more.
+
+**What the dump does not carry, stated plainly.** Census skills are
+all -1 in the harness, so the choices lean on traits, lessons,
+conditions, age, trust, beliefs, creed and hour - not skills. Belief
+distances read 0 and the believed-zombie set is empty for everyone:
+provenance and age are real, geometry is not. Names are the [C73]
+sentinel; members are identified by stable ids, and the name question
+stays the operator's. Every row cites county, hour, group and person,
+and [C66] determinism makes each citation answerable against the same
+dump.
+
+**What this is an instance of.** The charter's first concrete output:
+rows that exist as rows, proposed as a whole, with the tree's own
+dealing beside them for the ruling to read against.
