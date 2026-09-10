@@ -23,7 +23,7 @@ too.
 
 | | |
 |---|---|
-| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). No rows and no models yet. |
+| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl` as a proposal the operator has not ruled on (record 28); no models yet. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
