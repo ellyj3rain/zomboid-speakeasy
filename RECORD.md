@@ -619,3 +619,111 @@ it does not conflict with anything ratified today.
 proposed as a whole (record 28), read, ruled on, and the ruling
 recorded here the same day. Nothing in the file was intent before
 this entry; from this entry on, it is.
+
+## 30 - The trades-hinge rows, proposed (2026-09-10)
+
+The operator ruled on the C86 survey that the next dataset rows are
+the target the trades open up: rows where the person's trade is the
+situation's hinge. [C88] captured the need state at every election so
+those rows would carry the situation whole, and this batch ran the
+harvest the capture was built for: 120 engine counties, 33,671
+decision moments, 78,269 member-rows among them, zero capture
+failures, every election row carrying the state.
+
+**What the measurement found, and what it corrected.** The county's
+election holds exactly one place where a person's own trade moves
+their dealt work: the best-hand redirect, where the member's own
+engine-paid skill for another job beats the dealt pay by three or
+more and the deal yields (SAO_Standing.lua:718-741, the job space at
+SAO_Census.lua:437-443). Across the 120 counties it fired 85
+times for 28 people - in this harvest, every one of them a
+chef's cook pay 4 against a dealt forager pay 0, margin 4, the same
+trade word each time. The redirect rows are this proposal's rows:
+78 of them after the slot rule below, each cited by county,
+group, hour and person, the trade's pay and the dealt pay both in
+the person's own skills half, and the house's need state beside them
+reading peace - the absence that says the trade moved the work, not
+a lack.
+
+The measurement also corrected the earlier read of the watch-moves.
+The C86 survey read its eight designation-moves-to-watch as
+need-pull promotions over feuds, and that read flowed into C88's
+record. The code and both harvests say otherwise: they are the
+order-creed posting - an order company takes the first member the
+deal dealt forager and stands them to watch, whether the house
+already holds a watch or not (SAO_Standing.lua:1104-1116). All
+1,335 of them across the 120 counties sit in order-creed houses -
+1,011 in houses holding no other watch, 324 in houses that already
+held one - with the need state at entry reading peace on every
+one. The need-pull itself (SAO_Standing.lua:1124-1202) split under
+the same measurement. Its medic arm reads a body through the live
+half, and its forager arm needs an existing store, and a dormant
+house's stores age to nothing after forty-eight county hours:
+neither fired once across the 33,671 elections. Its watch arm
+reads a standing feud against a house the company has claimed, and
+a feud between claimed houses stands: nine elections in the whole
+harvest read one at entry, and those nine are the watch arm's
+whole harvest - two people in wall-creed houses that held no
+watch, eight of the nine against the same neighbor across
+consecutive elections. The trade decided none of the nine, so
+across the whole harvest the redirect is the one place a person's
+own trade moved their dealt work. The
+creed, not a trade and not a need, is the hinge of the watch-moves
+the C86 survey saw. Those rows are not in this proposal - the
+ruling's target is what the trades open up - but they are counted
+here: 1,335 order-creed firings for 193 people and nine need-pull
+firings for two, and the same harvest and the same instrument
+extract them the day a ruling asks for them.
+
+**The slot rule.** A county can hold more than one election for the
+same house in the same county hour - a join, an exile, a schism's
+recursive re-elections. The ratified citation cannot tell those
+moments apart, so one row is kept per county, group, hour and
+person: the first firing, the moment the trade first decided at
+that hour. Seven same-hour re-fires are counted in the
+measurement and dropped from the row set; every distinct hour
+stands.
+
+**The rows.** Each row is the record 24 shape, with the two
+extensions the capture made real: the situation half carries the
+house's need state as the election opened, and the options carry
+cook - the sixth work word, the one the deal never deals and only a
+member's own trade puts there. The choice is authored as the person,
+from their own evidence - their trade's pay, their lessons, the
+trust they hold, their house's creed - and the tree's own dealing
+lands beside it.
+
+**The rows against the tree.** All 78 authored choices took the
+trade word, cook - the same word the tree's sweep dealt on every
+row - and none took another word and none founded a position. The
+sweep's dealing lands on every row as treeDealt beside the choice,
+so a reader sees the authored answer and the tree's own move
+together. The agreement is the construction, not an independence
+result: the authoring pack carried the deal beside the pays,
+because the person's own evidence here is two pays set against each
+other, and a choice written honestly from that evidence lands
+where the pays point. What the rows add over the sweep is the
+person - the said line, in their own voice, for why the work is
+theirs.
+
+**What these rows carry that the first rows did not, and what they
+still do not.** These are the first rows authored from an engine
+dump: real names at the display layer and real profession pays under
+skills, where the work-words rows carried the sentinel name and
+stubbed pays. The C86-recorded limitation that lifted with them:
+census skills no longer stub at minus one. These are also the rows
+the standing condition names - the engine flag moves to the dump's
+default only after rows authored from an engine dump have been read;
+these are those rows. The limitations that stand: belief distances
+read zero and the believed-zombie set is empty for everyone -
+provenance and age are real, geometry is not. And one limitation the
+earlier rows did not have: this target is selected on the trade being
+the hinge, so the authored answers lean toward the trade word by
+construction - the distribution is the check, and here the check
+reads the target working, not a model flattering the tree.
+
+**What this is an instance of.** The charter's second concrete
+output: a new target the trades opened, measured before it was
+authored, the mechanism that moves each row pinned in code, and the
+rows proposed as a whole with the tree's dealing beside every
+choice.

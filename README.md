@@ -23,7 +23,7 @@ too.
 
 | | |
 |---|---|
-| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl`, proposed in record 28 and ratified by the operator in record 29; no models yet. |
+| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl`, proposed in record 28 and ratified by the operator in record 29; the trades-hinge rows are proposed in `decisions/trade-hinges.jsonl` (record 30), awaiting the ruling. No models yet. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 

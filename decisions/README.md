@@ -5,6 +5,10 @@ come from and what a row is; this directory carries that shape. The
 first rows are here, proposed in record 28 and ratified by the
 operator in record 29: `work-words.jsonl`, 112 rows of work words.
 
+A second target is proposed in record 30: `trade-hinges.jsonl`,
+78 rows where the person's own trade is the situation's hinge,
+authored from an engine dump of the county's elections.
+
 ## Where a row comes from
 
 A person's own SAO record is put to a language model - their traits,
