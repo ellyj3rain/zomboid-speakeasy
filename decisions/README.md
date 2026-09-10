@@ -2,9 +2,8 @@
 
 The dataset this project exists to make. Record 24 ratified where rows
 come from and what a row is; this directory carries that shape. The
-first rows are here as a proposal the operator has not ruled on:
-`work-words.jsonl`, 112 rows of work words, record 28. Nothing in
-them is intent until that ruling lands.
+first rows are here, proposed in record 28 and ratified by the
+operator in record 29: `work-words.jsonl`, 112 rows of work words.
 
 ## Where a row comes from
 
