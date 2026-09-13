@@ -1,3 +1,6 @@
 runs/
 tmp/
 *.tmp
+# Python bytecode from running the row tools
+__pycache__/
+*.pyc

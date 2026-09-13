@@ -23,7 +23,7 @@ too.
 
 | | |
 |---|---|
-| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The first rows are in `decisions/work-words.jsonl`, proposed in record 28 and ratified by the operator in record 29; the trades-hinge rows are proposed in `decisions/trade-hinges.jsonl` (record 30), awaiting the ruling. No models yet. |
+| Status | The dataset's source and row shape are ratified (record 24) and a ceiling for the inference budget is measured (record 26). The 112 work-words rows are ratified (records 28 and 29) and the 78 trades-hinge rows are ratified (record 30, the ruling recorded as entry 41) - 190 ratified rows in all. The cross-module row contract is ratified (entry 42), and the cross-module rows in `decisions/cross-module/` are keyed by person id and decision hour and cut against the event-driven pathogen state (records 38 and 39). No models yet; training waits on the world-document review, which the operator has taken up. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
