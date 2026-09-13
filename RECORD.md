@@ -918,3 +918,33 @@ The file's Status field now names the ruling and this entry rather
 than asserting itself. What the contract governs is real: 190
 cross-module rows in `decisions/cross-module/`, cut against the
 event-driven pathogen state (records 38 and 39).
+
+---
+
+## 43 - The nine world documents are approved (2026-09-13)
+
+The review the documents waited on was ordered completed by the
+record: the operator ruled 2026-09-13 that the review pass was not
+theirs to perform - "do it yourself" - so the review of record was
+performed against each document's own evidence and the shipped
+engine, and the nine stand approved: eight in `world/us-1993/` plus
+`world/people-mods.md`. Each document's Status field now names the
+ruling and this entry rather than asserting itself, the same law
+record 42 set for the contract.
+
+What the review held them to, and found kept: every claim row
+carries when, confidence, a primary source, and who carries it; the
+LOW rows never teach, and the who-knows-what index that scopes every
+claim per person is the same index SAO has run since its C32;
+knox-event.md's two-clocks mapping was read from the installed game's
+own files; people-mods.md is the record of decisions already shipped
+(the child body through SAO's own Java agent, C29-C33 and C35; the
+ModelInstance.scale claim corrected and withdrawn in place; DR-032
+ruled mod by mod; the Week One and Bandits art selected and shipped
+2026-09-07), not a proposal awaiting one. The MEDIUM rows carry their
+labels and their named sources, which the confidence law permits to
+teach as MEDIUM. The "not yet placed" tails stay as written.
+
+What this unblocks: the DRAFT headers held the corpus curation, the
+voice seeds, and any training shut. With this entry the nine
+documents teach.

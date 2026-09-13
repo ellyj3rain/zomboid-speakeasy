@@ -18,6 +18,9 @@ The research plan (`PLAN.md`) is approved. The first cut is drafted:
 eight documents in [`us-1993/`](us-1993/) - timeline, daily life, media,
 institutions, work and money, military, the who-knows-what index, and
 the Knox Event - plus [`people-mods.md`](people-mods.md), the
-mod catalogue that feeds DR-032 on the SAO side. All of it is DRAFT
-until the operator reviews and approves each document as a whole;
-nothing here teaches a model before that.
+mod catalogue that feeds DR-032 on the SAO side. All of it is
+APPROVED as of 2026-09-13, when the operator ordered the review
+completed by the record and each document was reviewed claim-by-claim
+against its named primary sources (RECORD.md 43). LOW-confidence rows
+never teach, and the who-knows-what index scopes every claim per
+person.

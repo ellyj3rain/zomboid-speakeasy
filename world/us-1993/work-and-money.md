@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | DRAFT 2026-09-06 - not approved; nothing here teaches a model yet. Document 5 of the plan; not on the floor. |
+| Status | APPROVED 2026-09-13 - the operator ordered the review completed by the record ("do it yourself", 2026-09-13); review of record in RECORD.md 43. Document 5 of the plan; on the floor. |
 | Horizon | Every claim is dated; the save's own start date (and the fall) decides what a survivor knows. Where a figure was published after 1993, the row says so. |
 | Rule | Every claim carries when, confidence, a primary source, and who would carry it. LOW never teaches. Sources marked (index) were read through a search index because the host blocks direct retrieval. |
 

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | DRAFT - not approved; nothing here teaches a model yet. |
+| Status | APPROVED 2026-09-13 - the operator ordered the review completed by the record ("do it yourself", 2026-09-13); review of record in RECORD.md 43. This document now teaches; LOW rows never do. |
 | Horizon | Values for June and July 1993 unless stated; each is dated so the save's start decides what applies. |
 | Rule | Every claim carries when, confidence, a primary source, and who would carry it. LOW never teaches. |
 

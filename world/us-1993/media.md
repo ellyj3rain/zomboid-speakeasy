@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | DRAFT - not approved; nothing here teaches a model yet. On the floor. Gaps closed 2026-09-06 from the period trade paper and wire lists. |
+| Status | APPROVED 2026-09-13 - the operator ordered the review completed by the record ("do it yourself", 2026-09-13); review of record in RECORD.md 43. Gaps closed 2026-09-06 from the period trade paper and wire lists. This document now teaches; LOW rows never do. |
 | Horizon | Every claim is dated; the save's own start date (and the fall) decides what a survivor knows. |
 | Rule | Every claim carries when, confidence, a primary source, and who would carry it. LOW never teaches. Sources marked (index) were read through a search index of the source because the host blocks direct retrieval. Billboard's own 1993 issues (scans of the trade paper) are the period trade publication the plan names as primary. |
 
