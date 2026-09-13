@@ -14,4 +14,10 @@ Rules:
 - The boundary of an answerable question is what THAT PERSON would
   plausibly have lived, not a refusal of the shared world.
 
-No documents yet. The research plan comes first.
+The research plan (`PLAN.md`) is approved. The first cut is drafted:
+eight documents in [`us-1993/`](us-1993/) - timeline, daily life, media,
+institutions, work and money, military, the who-knows-what index, and
+the Knox Event - plus [`people-mods.md`](people-mods.md), the
+mod catalogue that feeds DR-032 on the SAO side. All of it is DRAFT
+until the operator reviews and approves each document as a whole;
+nothing here teaches a model before that.

@@ -727,3 +727,194 @@ output: a new target the trades opened, measured before it was
 authored, the mechanism that moves each row pinned in code, and the
 rows proposed as a whole with the tree's dealing beside every
 choice.
+
+---
+
+## 31 - The cross-module row is proposed (2026-09-11)
+
+ZAO's `[A17]` records how the pathogen meets the branching graph: the
+pathogen owns the mutation roll and the roll for form performance, crossed
+is terminal, retained form traits are state rather than new branches, forms
+and attribute mutations stack, and forms enter Perception as visible facts.
+
+The dataset side now has a proposed contract for a row that spans the full
+simulation. `decisions/CONTRACT.md` defines the four halves and the
+cross-module blocks:
+
+- person + pathogen state
+- situation + visible forms
+- options
+- choice + form-pressure consequence
+
+No rows are collected under this contract yet. The contract is a proposal;
+it becomes canonical when the operator rules on it.
+
+---
+
+## 32 - The cross-module row exporter (2026-09-11)
+
+`tools/cross_module_rows.py` emits the cross-module row shape from two
+inputs: an SAO decision dump and a ZAO state dump keyed by the same person
+id. It keeps the SAO row unchanged, adds the `pathogen` block to the person
+half, adds the `visibleForms` block to the situation half, and writes one
+cross-module row per line.
+
+The tool is the first concrete implementation of record 31. It does not
+collect rows by itself, and it does not replace the existing decision rows.
+
+---
+
+## 33 - The first cross-module rows (2026-09-11)
+
+`decisions/cross-module/` now holds the first cross-module rows:
+
+- `work-words.jsonl` - 112 rows
+- `trade-hinges.jsonl` - 78 rows
+
+The ZAO state in these rows comes from ZAO's own `tools/state_dump.py`,
+keyed by person id and decision hour. It carries the pathogen facts SAO
+already records - infection, immune progress, death, cause, turn, and the
+terminal state - and leaves the mutation-specific fields null until ZAO has
+a real state surface to read them from.
+
+---
+
+## 34 - The state key is the decision moment (2026-09-11)
+
+`cross_module_rows.py` now matches a ZAO state row to an SAO row by person id
+and decision hour. This keeps the state attached to the moment it belongs to
+instead of collapsing a person's whole history into one state.
+
+`derive_zao_state.py` is removed. ZAO's own `tools/state_dump.py` is the state
+producer, and the exporter consumes its output.
+
+---
+
+## 35 - The state is no longer null (2026-09-11)
+
+ZAO's `[A19]` adds `ZAO_State.lua`, the runtime state surface. The
+cross-module rows now carry actual state values instead of nulls:
+
+- `currentForm`: `none` when no form has been assigned
+- `formPerformance`: `0.0` when no form has been assigned
+- `decayState`: `dormant`, `dead`, `course`, or `living`
+- `terminalState`: `turned`, `dead`, `infected`, or `living`
+
+The values are derived from the facts SAO already records. No mutation data
+is invented.
+
+---
+
+## 36 - The pathogen roll and the six forms (2026-09-11)
+
+ZAO's `[A20]` adds the form registry and the pathogen roll. The six
+source-port forms are Puker, Husk, Skitter, Wrecker, Leaper, and Weeper.
+A turned body has a 10 percent chance of taking one, uniform across the six by
+default, and form performance is a normalized state value between 0 and 1.
+
+The cross-module rows now carry the resulting form, performance, and visible
+form facts.
+
+---
+
+## 37 - The form gate and the overlay (2026-09-11)
+
+ZAO's `[A22]` corrects the form roll and adds the world-space overlay. A body
+carries a form only when the pathogen has already acted on it: infected,
+dead, or turned. The overlay draws the current form and its normalized
+performance above every nearby body that carries one.
+
+---
+
+## 38 - The pathogen state is event-driven (2026-09-12)
+
+ZAO now owns an event-driven pathogen state. An infection, death, or turn
+creates the state; daily advancement grows capability forms and attribute
+mutations, decays human capability, and can revert a mutant to afflicted.
+SAO emits those events from its own simulation and derives mutation
+knowledge only from actual proximity or testimony.
+
+`tools/state_dump.py` reads the state SAO records. It no longer hashes a
+person id or a decision hour to invent a form, and rows that predate the
+event state say so instead of filling the gap.
+
+---
+
+## 39 - The cross-module rows are re-cut against the event state (2026-09-12)
+
+The merged rows in `decisions/cross-module/` predated record 38. They
+carried eleven hash-invented forms (work-words held Skitter four times,
+Wrecker and Leaper and Weeper twice each, Husk once; trade-hinges held
+another eleven) and no `source` marker, so a row could not say whether
+its form came from a fact or from the old invention.
+
+Both state files and both merged files are regenerated with the
+record-38 tools, offline, from the ratified dumps:
+
+- `work-words.zao-state.jsonl` - 106 state rows from 112 SAO rows
+  (the dedup is the decision-moment key; shared moments share state)
+- `trade-hinges.zao-state.jsonl` - 63 state rows from 78 SAO rows
+- `work-words.jsonl` - 112 merged rows
+- `trade-hinges.jsonl` - 78 merged rows
+
+Every decision moment in the ratified dumps predates the event-driven
+pathogen state: `person.record` carries no `pathogenState`,
+`zaoPathogen`, or `pathogen` key in any row. So every row now reads
+`currentForm: "none"`, `formPerformance: 0.0`, `source: "record"`, and
+an empty `visibleForms` - the truth of the source data. The invented
+forms are gone. No form was invented to replace them.
+
+---
+
+## 40 - The world directory says where it stands (2026-09-12)
+
+`world/README.md` still said "No documents yet. The research plan comes
+first." That was true when it was written and false since 2026-09-06:
+the plan is approved and nine documents are drafted - the eight of the
+first cut in `us-1993/` and the `people-mods.md` catalogue that feeds
+DR-032 on the SAO side.
+
+The line now says what is actually there: drafted, and DRAFT until the
+operator reviews and approves each document as a whole. No document's
+own status changed - every one already carried its DRAFT header - and
+no document is approved by this entry. Only the directory's front door
+stopped contradicting its contents.
+
+---
+
+## 41 - The trades-hinge rows are ratified (2026-09-12)
+
+The operator ruled on the 78 trades-hinge rows proposed in record 30:
+ratified. The scope follows record 29's own shape - the rows stand,
+and ratifying them does not preclude improving the dataset later.
+
+`trade-hinges.jsonl` is intent now, alongside `work-words.jsonl`:
+190 ratified rows in all. Every one of the 78 carries the trade as the
+hinge - the best-hand redirect where the member's own engine-paid
+skill for another job beats the dealt pay by three or more - authored
+as the person from their own evidence with the deal joined beside
+them, and all 78 taking the trade word, the agreement record 30
+disclosed as by construction. The two engine-read corrections record
+30 carried stand as recorded.
+
+The cross-module copies of these rows (record 39) are the same rows
+re-cut against the event-driven pathogen state: `currentForm: "none"`,
+`source: "record"`, because every one of their decision moments
+predates that state.
+
+---
+
+## 42 - The cross-module contract is ratified (2026-09-12)
+
+`CONTRACT.md` carried the status ACTIVE from the day it was written,
+with no ruling behind it - a status authored rather than granted, and
+named as owed. The operator ruled on it: the contract is ratified as
+it stands, version 2, the four halves and the cross-module blocks, the
+rules carried from DR-022, and the event rule - a row never derives a
+form, a performance value, or knowledge from a person id, a clock, or
+a hash.
+
+The file's Status field now names the ruling and this entry rather
+than asserting itself. What the contract governs is real: 190
+cross-module rows in `decisions/cross-module/`, cut against the
+event-driven pathogen state (records 38 and 39).

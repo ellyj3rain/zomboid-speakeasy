@@ -5,9 +5,31 @@ come from and what a row is; this directory carries that shape. The
 first rows are here, proposed in record 28 and ratified by the
 operator in record 29: `work-words.jsonl`, 112 rows of work words.
 
-A second target is proposed in record 30: `trade-hinges.jsonl`,
-78 rows where the person's own trade is the situation's hinge,
-authored from an engine dump of the county's elections.
+A second target was proposed in record 30 and ratified by the operator
+the same week (the ruling is entry 41): `trade-hinges.jsonl`, 78 rows
+where the person's own trade is the situation's hinge, authored from
+an engine dump of the county's elections. They are intent now, with
+the 112 work-words rows: 190 ratified rows in all.
+
+A cross-module row contract is ratified in
+[`CONTRACT.md`](CONTRACT.md) (the ruling is entry 42, 2026-09-12). It
+extends the four halves so one row can
+carry the living county, the pathogen, and the branching graph together.
+`../tools/cross_module_rows.py` emits that row shape from an SAO dump and a
+ZAO state dump keyed by the same person id.
+
+The first cross-module rows are in `cross-module/`. `work-words.jsonl` holds
+112 rows, and `trade-hinges.jsonl` holds 78 rows. ZAO's own
+`tools/state_dump.py` supplies the pathogen block, keyed by person id and
+decision hour. A body with no assigned form is in the `none` form, its
+performance is zero, and its decay state follows the facts SAO already
+records.
+When the pathogen roll takes a form, the row also carries that form, its
+normalized performance, and the visible-form fact Perception reads. A body
+carries a form only when the pathogen has already acted on it: infected,
+dead, or turned.
+The exporter matches a state row to an SAO row by that same person id and
+decision hour.
 
 ## Where a row comes from
 
