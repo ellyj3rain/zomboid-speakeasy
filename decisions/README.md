@@ -11,8 +11,9 @@ where the person's own trade is the situation's hinge, authored from
 an engine dump of the county's elections. They are intent now, with
 the 112 work-words rows: 190 ratified rows in all.
 
-A cross-module row contract is proposed in
-[`CONTRACT.md`](CONTRACT.md). It extends the four halves so one row can
+A cross-module row contract is ratified in
+[`CONTRACT.md`](CONTRACT.md) (the ruling is entry 42, 2026-09-12). It
+extends the four halves so one row can
 carry the living county, the pathogen, and the branching graph together.
 `../tools/cross_module_rows.py` emits that row shape from an SAO dump and a
 ZAO state dump keyed by the same person id.
