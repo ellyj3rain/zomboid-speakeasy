@@ -1121,3 +1121,56 @@ play boundary; the corpus is three items against the full dataset
 the training passes will need. What stands between here and the
 training passes is curation and play, in that order named by entry
 45.
+
+---
+
+## 47 - The flood and the storm: the government vein's second cut (2026-09-13)
+
+The operator ordered more corpus down the government vein, and the
+named suggestion was the registers of the Great Flood of '93 - the
+summer the shipped save starts in. Four items enter, all United
+States Government work, not subject to copyright (17 U.S.C. §105),
+and all of them official publications rather than the personal
+speech of a living person, so the consent question settles the same
+way entry 44 settled it for the Monthly Labor Review: no identifiable
+person's speech enters, only the government's own record.
+
+The cut's one pre-horizon item, and the first in the corpus a
+survivor can carry rather than only hear the register of: NCDC
+Technical Report 93-01, "The Big One!" - the review of the March
+12-14, 1993 Superstorm, dated May 14, 1993, four months before the
+July 9 start (manifest 0004). Kentucky is in the report's own state
+table, five dead; the southern Appalachians took at least two feet
+of snow. A survivor lived under this storm, and who-knows-what
+scopes who carries it - the first corpus item that is lived memory,
+not texture.
+
+The other three are the flood's own registers, the USGS Circular
+1120 series on the Great Flood of 1993, all dated after the July 9
+start and therefore cut by the date horizon exactly as the Reno
+statement was (entry 44, manifest 0003): they enter as language
+texture only, never as a claim a person carries. What each is FOR
+is distinct, per the corpus rule that nothing enters just to be
+big. Circular 1120-A, the flood discharges (0005) - the measurement
+register, how the era says a river was higher than it has ever
+been: peak discharge, recurrence interval, the hundred-year flood.
+Circular 1120-B, the precipitation, January 1 through July 31 (0006)
+- the weather-side register, rain that would not stop, weather as
+an ongoing condition rather than an event. Circular 1120-F, the
+propagation and composition of the flood wave (0007) - the crest
+register, the language of a disaster that is COMING, crests
+forecast against towns in the water's path, the same register the
+county's radio would carry in any bad spring.
+
+What was considered and did not enter, named: the USGS reservoirs
+chapter (Circular 1120-E) - its register overlaps 1120-A's and
+nothing in it is for a distinct thing; the NWS Great Flood survey
+report - a 1994 post-horizon database page, not a period document,
+and the flood's registers are already carried by the three that
+entered.
+
+The corpus now holds seven items: two labor months, one media
+statement, one storm a survivor can say they slept through, and
+three flood registers. The vein stays open - the government's 1993
+public record is deep, and the training passes still wait on
+curation and play, in that order.
