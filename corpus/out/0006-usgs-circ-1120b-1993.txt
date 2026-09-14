@@ -1,0 +1,951 @@
+0006 - Precipitation in the Upper Mississippi River Basin, January 1 through July 31, 1993 (USGS Circular 1120-B)
+Source: text/usgs-circ-1120b-1993.pdf
+Pages: 19
+
+This file is a derived extraction of the item above; the manifest record in corpus/manifest.md is the authority for
+what the item is and what it is FOR. Regenerate with tools/extract_corpus.py.
+
+=== page 1 ===
+PRECIPITATION 
+IN THE 
+UPPER MISSISSIPPI 
+RIVER BASIN 
+JANUARY 1 THROUGH JULY 31 
+9 9 3 
+U.S. GEOLOGICAL SURVEY CIRCULAR 1120-B
+
+=== page 2 ===
+Front Cover-View of Highway 367, West Alton, Illinois, 
+(Srenco Photography, St . Louis, Mo.) 
+Back Cover-View of Spirit of St. Louis Airport, 
+Chesterfield, Mo. (Srenco Photography, 
+St . Louis, Mo.) 
+Field Hydrologist making streantflow 
+measurements (U.S . Geological Survey)
+
+=== page 3 ===
+PRECIPITATION IN THE
+UPPER MISSISSIPPI RIVER BASIN,
+JANUARY I THROUGH JULY 31, 1993
+By Kenneth L. Wahl, Kevin C. Vining, and Gregg J. Wiche 
+Floods in the Upper Mississippi River Basin, 1993
+U.S . GEOLOGICALSURVEYCIRCULAR 1120-B
+
+=== page 4 ===
+U.S . DEPARTMENT OF THE INTERIOR 
+BRUCE BABBITT, Secretary 
+U.S . GEOLOGICAL SURVEY 
+ROBERT M. HIRSCH, Acting Director 
+UNITED STATES GOVERNMENT PRINTING OFFICE : 1993 
+Free on application from
+U.S. Geological Survey, Branch of Distribution
+Box 25286, Denver Federal Center
+Denver, CO 80225
+
+=== page 5 ===
+FOREWORD 
+During spring and summer 1993, record flooding inundated much ofthe upper Mississippi 
+River Basin. The magnitude ofthe damages-in terms ofproperty, disruptedbusiness, and per­
+sonal trauma-was unmatched by any other flood disaster in United States history. Property dam 
+age alone is expectedto exceed $10 billion. Damaged highways and submerged roads disrupted 
+overland transportation throughout the flooded region. The Mississippi and the Missouri Rivers 
+were closed to shipping before and after the flooding. Millions of acres of productive farmland 
+remained under water for weeks during the growing season. Rills and gullies in many tilled fields 
+are the result of the severe erosion that occurred throughout the Midwestern United States farm-
+belt. The hydrologic effects of extended rainfall throughoutthe upperMidwestern United States 
+were severe andwidespread. The banks and channels of many rivers were severely eroded, and 
+sediment was deposited over large areas ofthe basin's flood plain. Record flows submerged many 
+areas thathad not been affected by previous floods. Industrial and agricultural areas were inun­
+dated, which causedconcern about the transport and fate of industrial chemicals, sewage effluent, 
+and agricultural chemicals in the floodwaters. The extent and duration ofthe flooding caused 
+numerous levees to fail. One failed levee on the Raccoon River in Des Moines, Iowa, led to flood­
+ing ofthe city's water treatment plant. As a result, the city was without drinking water for 19 days. 
+As the Nation's principal water-science agency, the U.S . Geological Survey (USGS) is in a 
+unique position to provide an immediate assessment of some of the hydrological effects ofthe 
+1993 flood. The USGS maintains a hydrologic data network and conducts extensive water 
+resources investigations nationwide. Long-term data from this network and information on local 
+and regional hydrology provide the basis for identifying and documenting the effects ofthe flood­
+ing. During the flood, the USGS provided continuous streamflow and related information to the 
+National Weather Service (NWS), the U.S . ArmyCorps of Engineers, the Federal Emergency 
+Management Agency (FEMA), and many State and local agencies as partofits role to provide 
+basic information on the Nation's surface- and ground-water resources at thousands oflocations 
+across the United States . The NWShas used the data in forecasting floods and issuing flood warn­
+ings. The data have been used by the Corps of Engineers to operate water diversions, dams, locks, 
+and levees. The FEMAand many State and local emergency management agencies have used 
+USGShydrologic data and NWS forecasts as part ofthe basis of their local flood-response activi­
+ties. In addition, USGShydrologists are conducting a series ofinvestigations to documentthe 
+effects ofthe flooding and to improve understanding of the related processes. The major initial 
+findings fromthese studies will be reported inthis Circular series as results become available. 
+U.S. Geological Survey Circular 1120, Floods in the UpperMississippi RiverBasin, 1993, 
+consists ofindividually published chapters that will document the effects ofthe 1993 flooding. 
+The series includes data and findings on the magnitude and frequency ofpeak discharges; precipi 
+tation; water-quality characteristics, including nutrients and man-made contaminants; transport of 
+sediment; assessment of sediment deposited on flood plains; effects ofinundation on ground-water 
+quality; flood-discharge volume; effects ofreservoir storage on flood peaks ; stream-channel scour 
+at selected bridges; extent offlood-plain inundation; and documentation of geomorphologic 
+changes . 
+A~~4 
+ActingDirector 
+September 8, 1993 
+Foreword III
+
+=== page 6 ===
+���������������������
+CONTENTS 
+Foreword . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. .. .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . . . .. .. .. .. .. .. .. .. .. .. . . .. .. .III 
+Abstract . . . . . . . . . . . . . . . .. .. .. . . . . . . . . .. .. . . . . .. .. .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . . . .. .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . 1 
+Introduction . .. . . . . . . .. .. .. . . . . .. .. .. .. . . .. .. .. .. . . . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. . . . . . . . . .. .. .. . . . . . . .. .. .. . . . . .. .. .. .. . . .. .. .. .. .. .. .. .. .. . . . . . . .. .. .. . . . . . . .. .. . 1 
+Precipitation, January 1 Through July 31, 1993 .. . . . . . . . . . . .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. .. .. .. .. .. .. . . . . . . .. .. .. . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . 1 
+Monthly Precipitation . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . .. .. .. .. .. .. .. .. .. .. .. .. .. .. . . . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . 6 
+DailyAccumulations . . . . . . . . . . . . . . . . .. . . . . . . . . . . .. . . . . .. .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . ... . . . . . . . . . . .. . . . . . . . . .. .. . . 8 
+Distribution ofJuly Precipitation . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . . . . . .. .. .. . . 9 
+Analysis ofSelected Storms . .. .. .. . . .. .. .. .. . . . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. . . .. . . .. .. .. .. .. . . . . .. .. .. .. . . 9 
+Southeastern Iowa, July4-5.. .. .. .. . . . . .. .. .. . . . . . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . 9 
+North Dakota andMinnesota, July 15-16. . . .. . . . . . . . . . .. .. . . . . . . . . . . .. . . . . .. .. .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. . . . . . . .. .. .. . . . . . . 10 
+Summary . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. .. .. .. .. .. . . . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . . . .. . . . . .. .. .. .. . . . . .. .. .. .. . . .. .. .. .. . . . . .. .. .. . . . . . . 12 
+References . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. . . . . .. .. .. . . .. . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. .. .. .. .. .. . . . . .. .. .. .. . . . . .. .. .. . . . . . . 13 
+FIGURES 
+1 .- 2. Maps showing: 
+1. Mississippi River Basin and general area offlooding streams, June throughAugust 1993 . . . . .. .. .. . . . . .. .. .. .. . . . . .. .. .. . 2 
+2. Dominant weather patterns over theUnitedStates for June through July 1993 . .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. . . .. . . .. .. . . . 3 
+3. Maps showing areal distribution oftotal precipitation in the area of flooding in the upperMississippiRiverBasin, 
+Januarythrough July 1993 .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . 4 
+4. Mapandgraphs showing monthly precipitation for January through July 1993 and 30-yearmonthly normals (Janu-
+ary through July 1961-90) at 10 weather-station locations in the upperMississippi River Basin. . . . . . . . . . . .. .. . . . . . . . . .. .. . . . . 7 
+5.-6. Graph showing: 
+5. Seasonal precipitation for 1993 at 10 weather-station locations in the upper Mississippi RiverBasin . . . .. .. .. .. . . .. 8 
+6. Precipitation forJanary throughJuly 1993, normal precipitation forJanuary throughJuly 1961-90, and normal 
+annual precipitation for 1961-90 at 10 weather-station locations in the upperMississippi River Basin .. .. .. . . . . .. 8 
+7. Graphs showing accumulated daily precipitation forJanuary throughJuly 1993 and accumulated normal daily pre-
+cipitation for Januarythrough July 1961-90 . . .. . . . . .. .. . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . . . .. . . .. .. .. .. .. .. . . .. .. .. .. . . .. .. .. .. . . . . .. .. .. . . . . . . .. 9 
+8.-11 . Maps showing: 
+8. Average weatherpatterns over the United States forJuly 4-5, 1993.. .. .. .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10 
+9. Areal distribution of rainfall for theJuly 4-5, 1993, stormin Iowa . .. . . . . .. .. .. .. . . . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . 11 
+10. Average weatherpatterns overthe United States for July 15-16, 1993. . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . .. .. . 11 
+11. Areal distribution of rainfall for theJuly 15-16, 1993, storm in North Dakota, South Dakota, andMinne­
+sota . .. . . .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . .. .. . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. .. 
+TABLES 
+1 . Summary of 1993 precipitation and 30-year averages (1961-90) at 10 weather-station locations in the upper 
+Mississippi River Basin . . . . . . . . .. .. . . . . .. .. .. .. .. .. .. .. . . . . . . .. .. .. .. . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . . . .. .. .. . . . . .. .. .. .. . . . . .. .. . . . . . 6 
+2. Five greatest Maythrough July precipitation totals at Bismarck, North Dakota, Cedar Rapids, Iowa, and 
+Manhattan, Kansas . . . .. .. . . . . . . . . .. . . . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. .. . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. .. .. .. .. .. .. .. .. .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . 8 
+3. Maximum 1-, 3-, and 5-day rainfall totals forJuly 1993 at Bismarck, North Dakota, CedarRapids, Iowa, and 
+Manhattan, Kansas . .. .. .. . . . . .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. .. . . .. . . .. .. .. . . . . . . .. .. . . . . . . . . .. . . . . . . . 9 
+Contents V
+
+=== page 7 ===
+�
+Precipitation in the Upper Mississippi River Basin, 
+January 1 Through July 31, 1993 
+ByKenneth L. Wahl, Kevin C. Vining, andGregg J. Wiche 
+Abstract 
+Excessive precipitation produced severe 
+flooding in a nine-State area in the upperMissis­
+sippi RiverBasin during spring andsummer 
+1993 . Following a spring that was wetter than 
+average, weather patterns that persisted from 
+early June throughJuly caused the upperMid­
+west to be deluged with an unusually large 
+amount of rainfall. Monthly precipitation data 
+were examined at 10 weather-station locations in 
+the flood-affected region to illustrate precipita­
+tion patterns and amounts in the flood-affected 
+area. In 1993, all 10 of the selected locations 
+received greater than the normal rainfall for Janu­
+ary throughJune 1961-90, 8ofthe 10 locations 
+received more than 200percent of the normal 
+rainfall for July 1961-90, and 3 received more 
+than 400percent of the normal rainfall forJuly. 
+(The average rainfall for any given30-year 
+period is termed the "normal" rainfall for the 
+givenperiod.) MaythroughJuly 1993 wasthe 
+wettest or nearly the wettest such period on 
+record at many locations in the flooded area. Of 
+the 10 locations, 6received more rainfall in the 
+first 7 months of 1993 than generally is received 
+in ayear. 
+INTRODUCTION 
+This report, one ofaseries that documents the 
+effects ofthe 1993 flooding in the upper Mississippi 
+River Basin, covers precipitation in the upper Missis 
+sippi River Basin fromJanuary 1 through July 31, 
+1993 . As ofAugust 1993, large storms continued to 
+pass through the affected area; however, weather con­
+ditions indicate that the widespread flooding mightbe 
+coming to an end. The floodwaters in the Mississippi 
+River crested at St. Louis, Missouri, on August 1, 
+while the river stages along the mainstem and on the 
+principal tributary streams upstream from St. Louis 
+were receding. 
+This report provides ageneral overview ofthe 
+unusually excessive precipitation that produced 
+severe flooding in a nine-State areain the upperMis 
+sissippi River Basin (fig. 1) during spring and sum-
+mer 1993 . Ageneral overview ofprecipitation 
+during the first 7 months of 1993 is presented and is 
+followed by an analysis of monthly precipitation for 
+10 weather-station locations distributed throughout 
+the flood-affected area. Weather patterns associated 
+with two specific storm systems and the resulting 
+rainfall totals are shown as examples of storms that 
+occurred throughout the area. 
+Preparation of this report required cooperation 
+amongmany persons in many organizations. The 
+authors are particularly appreciative of the coopera 
+tion of State Climatologists andof persons in various 
+State agencies and in the offices of the National 
+WeatherService, National Oceanic and Atmospheric 
+Administration, formaking provisional data and 
+maps available on a near real-time basis. 
+PRECIPITATION, JANUARY1-JULY31, 
+1993 
+General precipitation conditions throughout 
+the nine-State area ofthe upper Midwestfor the 7-
+month period ending in July are best summarized by 
+the following news item from the Associated Press, 
+July 17, 1993 : 
+The rain, of course, was the problem. 
+Although much of the spring downpour fell on 
+vast undammed tracts and could not be con 
+tained, the real culprit was the volume dumped 
+by stalled weather systems. With the ground 
+already saturated byspring rainfall, June was 
+Precipitation, January 1-July 31, 1993 1
+
+=== page 8 ===
+the wettest month in the region since record 
+keeping began. July has been just as soggy. 
+The Associated Press statement was accurate when 
+written in mid-July but proved to be conservative. 
+July ended up being much soggier than June. 
+Monthly Precipitation 
+Annual precipitation over the nine-State area 
+affected by flooding (fig. 1) generally averages 
+slightly more than 30 inches but ranges from about 
+16 inches in south-central North Dakota to about40 
+inches in southern Missouri. Although precipitation 
+is about evenly divided between the first and last 
+halves ofthe year, the accumulation rates are not uni­
+form throughout the year. Normally, 45 percent of 
+the annual precipitation falls between April 1 and 
+July 31 ; June precipitation represents about 15 per-
+cent (2-5 inches) of the average annual precipitation 
+total. 
+Precipitation amounts recorded throughout the 
+upperMississippi River Basin during the first 7 
+months of 1993 generally were substantially greater 
+than normal (January-July 1961-90). Although 
+120-
+715. 
+EXPLANATION 
+Area of flooding streams 
+-. .-Boundaryof Mississippi River Basin 
+April-through-July precipitation was much greater 
+than normal, little evidence early in the year indicated 
+that precipitation amounts in 1993 wouldbe above 
+normal. January-through-March precipitation in the 
+States of the upper Mississippi River Basin was near 
+normal to slightly above normal. Because precipita­
+tion for those 3 months is often in the form of snow 
+and generally totals less than 6 inches of moisture, 
+potential flooding caused little concern. However, 
+that situation began to change in April. 
+Precipitation in April and Mayover the area 
+ranged from near normal to much greater than nor­
+mal, but the areas ofgreatest precipitation differed 
+for the 2 months. April rainfall was nearly twice the 
+normal amounts in parts ofWisconsin and in Mis­
+souri but was only moderately above normal in much 
+ofthe remainder ofthe flood-affected area. Bycon­
+trast, May rainfall was more than twice the normal 
+amounts for the month over an areathat extended 
+from southeastern SouthDakota across Iowa to east­
+ern Kansas. The largest storms, though, were still to 
+come. 
+In early June, a weather pattern (fig. 2) devel­
+oped that was characterized by a strong low-pressure 
+system over the Western United States and acorre-
+Figure 1 . Mississippi River Basin and general area of flooding streams, Junethrough August 1993 (from Parrett and 
+others, 1993). 
+2 Precipitation in the Upper Mississippi River Basin, January 1 throughJuly 31, 1993
+
+=== page 9 ===
+�
+CANADA 
+EXPLANATION 
+Convergencezone; recurrent 
+thunderstorm systems 
+Little rainfall ; oppressive heat 
+and humidity 
+H 
+High atmospheric 
+pressure area 
+Figure 2. Dominant weatherpatterns over the United States for June through July 1993 (from National Weather Service, 
+1993). 
+sponding large high-pressure system positioned over 
+the Southeastern United States. The jetstream dipped 
+south over the Western United States and flowed 
+northeasterly across the upper Midwest. A southeast­
+ernhigh blocked the eastward movement of storms, 
+thus creating a convergence zone between the warm, 
+moist flow from the GulfofMexico and the much 
+cooler and drier air from Canada, which resulted in 
+thunderstorms. This pattern persisted through most 
+ofJune and July (National Weather Service, 1993). 
+As a result, the upper Midwest within this conver­
+gence zone was deluged with rain while the South-
+eastern and the Eastern United States from Alabama 
+to Vermont, under the influence of the high-pressure 
+system, was very hot and dry. Slight movements in 
+the atmospheric pattern determined the timing and 
+location of the excessive rainfall throughout the 
+upper Midwest. 
+The persistence ofthis weather pattern caused 
+unusually large amounts of rain to fall over the upper 
+Midwest. These large amounts and the wetter-than 
+normal spring producedflooding throughout the 
+upper Mississippi RiverBasin, including the lower 
+Missouri River Basin. The rains were extraordinary 
+in the areal extent and in the amounts accumulated in 
+the first 7 months ofthe year. Precipitation for the 7 
+months totaled more than 20 inches over most ofthe 
+flood-affected area and was more than 40 inches in 
+areas ofnortheast Kansas andeast-central Iowa 
+(fig. 3A). Most of the area received from 150 to 200 
+percent ofthe 1961-90 normal total amounts for Janu­
+ary through July (fig. 3B; Parrett and others, 1993). 
+Monthly precipitation data for 1993 and the 
+normal amounts for the period 1961 to 1990 are listed 
+in table 1 (National Oceanic and Atmospheric Admin 
+istration, 1992) and compared in figure 4 for 10 
+weather-station locations in the upper Mississippi 
+River Basin. These locations-Bismarck, North 
+Dakota, Sioux Falls, South Dakota, Minneapolis, 
+Minnesota, Des Moines and Cedar Rapids, Iowa, 
+Madison, Wisconsin, Peoria, Illinois, Manhattan, 
+Kansas, and Kansas City and St. Louis, Missouri­
+are illustrative ofprecipitation patterns in the flood­
+affected area. 
+The significance of the July 1993 rainfall 
+totals canbest be understood by examining them in 
+relation to the totals for the January-through-June 
+period. All 10 ofthe selected locations received 
+Precipitation, January 1-July 31, 1993 3
+
+=== page 10 ===
+�����
+90° 
+45° 
+40° 
+-40-Line of equal total precipitation 
+forJanuarythroughJuly 
+1993-Hachuresindicate 
+closed areas of lesser precipitation. 
+Interval 10 inches 100 200 MILES 
+i I I 
+100 200KILOMETERSA 
+Figure3. Areal distribution of total precipitation in the area of flooding in the upper Mississippi River Basin, January through July 
+1993. A, In inches; B, In percentage of 30-year precipitation normal for Januarythrough July 1961-90 (from Parrett and others, 
+1993). Datawere supplied bythe National Weather Service (David Miscus, National Weather Service, written commun., 1993). 
+4 Precipitation in the Upper Mississippi River Basin, January 1 through July 31, 1993
+
+=== page 11 ===
+���
+100° 
+40° 
+-200-Line of equal total precipitation for 
+January through July 1993 as 
+percentage of the 30-year pre 
+cipitation normal for January 
+through July 1961-90-Hachures 
+indicate closed areas of lesser I 
+100 200MILES 
+Iprecipitation. Interval 50 percent 100 200 KILOMETERS 
+Figure 3.-Continued 
+Precipitation, January I-July 31, 1993 5
+
+=== page 12 ===
+Table 1 . Summaryof 1993 precipitation and30-yearaverages (1961-90) at 10weather-station locations in the upperMississippi 
+River Basin 
+[in., inches. National Oceanic and Atmospheric Administration (1992) ] 
+Sioux DesBismarck, Falls, Minneapolis, Moines,North South MinnesotaDakota IowaDakota 
+January: 
+1993 (in.). . . . . . . . . . . . . 0.29 0.70 1.25 1.59€
+Average (in.) . . . . . . . . .45 .51 .95 .96€
+1993 (percent). . . . . . . 64 137 132 166€
+February: 
+1993 (in.). . . . . . . . . . . . . .33 .81 .39 1.52€
+Average (in.). . . . . . . . .43 .64 .88 1.11€
+1993 (percent). . . . . . . 77 127 44 137€
+March: 
+1993 (in.). .. . . . . . . . . . . .38 2.04 1.25 3.22€
+Average (in.) . . . . . . . . .77 1 .64 1.94 2.33€
+1993 (percent). . . . . . . 49 124 64 138€
+April: 
+1993 (in.) . . . .. .. .. . . . . 1.26 2.61 1.99 2.96 
+Average (in.). . . . . . . . 1 .67 2.52 2.42 3.36 
+1993 (percent) . . . . . . . 75 104 82 88€
+May: 
+1993 (in.) . . . . . . . . . . . . . 2.36 8.26 4.02 7.51 
+Average (in.) . . . . . . . . 2.18 3.03 3.39 3.66 
+1993 (percent) . . . . . . . 108 273 119 205€
+June: 
+1993 (in.). . . . . . . . . . . . . 4.57 6.43 6.28 7.68 
+Average (in.) . . . . . . . . 2.72 3.40 4.05 4.46 
+1993 (percent). . . . . . . 168 189 155 172€
+July :€
+1993 (in.). . . . . . . . . . . . . 13.75 7.86 5.58 9.75€
+Average (in.) . . . . . . . . 2.14 2.68 3.53 3.78€
+1993 (percent). . . . . . . 643 293 158 258€
+Seven months: 
+1993 (in.). . . . . . . . . . . . . 22.94 28.71 20.76 34.23 
+Average (in.) . . . . . . . . 10.36 14.42 17.16 19.66 
+1993 (percent). . . . . . . 221 199 121 174€
+Annual average. . . . . . . . 15 .47 23 .86 28.32 33 .12€
+more than 100 percent of the normal precipitation for 
+January through June 1961-90 (fig. 5), and 8 loca­
+tions received more than 130 percent of the normal 
+precipitation forthatperiod. By the end ofJune, the 
+soil was saturated; then came the 1993 July deluge. 
+Ofthe 10 locations, 8 received more than 200 percent 
+of the normal rainfall forJuly (1961-90). Only Min­
+neapolis (158 percent) and St. Louis (131 percent) 
+did not receive 200 percent ofthe normal rainfall in 
+July. Three locations, Bismarck, Cedar Rapids, and 
+Manhattan, received from about 400 to about 650 per-
+cent of the normal rainfall amounts for July. 
+Total January-through-July rainfall for 1993€
+for each ofthe 10 locations was compared to the 
+1961-90 normals for the 7-month period and the 
+Cedar Madison, Peoria, Manhattan, Kansas St. Louis,
+Rapids, Wisconsin Illinois Kansas Missouri 
+Iowa Missouri 
+1 .18 1 .60 3 .55 0.98 1 .96 3.54 
+1 .01 1 .07 1 .51 .81 1 .09 1 .81 
+117 150 235 121 180 196 
+1 .11 1 .18 1 .68 1 .12 1.28 2.75 
+1 .02 1 .08 1 .42 .93 1.10 2.12 
+109 109 118 120 116 130 
+3.63 3.29 4.08 3.46 2 .15 3 .31 
+2.32 2.17 2.91 2.36 2 .51 3 .58 
+156 152 140 147 88 92 
+3.86 5.33 4.89 1 .88 5 .59 6.16 
+3 .19 2.86 3.77 2 .95 3 .12 3 .50 
+121 186 130 64 179 176 
+5 .43 3.81 3.25 10.99 7.30 3 .94 
+3 .71 3.14 3.70 4.56 5.04 3 .97 
+146 121 88 241 145 99 
+8.79 6.67 5.70 6.83 5.67 7.12 
+4.55 3 .66 3 .99 5 .54 4.72 3.72 
+193 182 143 123 120 191 
+17.03 9.34 10.15 17.56 10.90 5.06 
+4.11 3 .39 4.20 3.28 4.38 3.85 
+414 276 242 535 249 131 
+41 .03 31 .22 33.30 42.82 34.91 31.88 
+19.91 17.37 21 .50 20.43 21.96 22.55 
+206 180 155 210 159 141 
+33.72 30.88 36.25 33.82 37.62 37.51 
+annual total (fig. 6). Of the 10 locations, 6 received 
+more rain in the first 7 months of 1993 than is gener­
+ally received in ayear, and 3 had nearly equaled their 
+1961-90 normal annual rainfall total. Only Minneap­
+olis had some reprieve; only 121 percent ofnormal 
+and 79 percent of the annual total was received dur­
+ing the first 7 months. 
+The National Weather Service (1993) com­
+puted statewide-average precipitation by month for 
+1895 to the present. They reported that the statewide 
+averages for July 1993 were among the three wettest 
+years since 1895 for eight of the nine States in the 
+flood-affected area. MayandJune were among the 
+wettest months for one-third ofthe years thathave 
+elapsed since 1895 for six and eight States, respec-
+6 Precipitation in the Upper Mississippi River Basin, January 1 throughJuly 31, 1993€
+
+=== page 13 ===
+�������
+W 15 
+x 
+U 
+Z 
+Z 10 
+z 
+O 
+a 5 
+U w ¢ 0-
+0 
+U w 
+U 10 _Z 
+Z 
+Z 
+O 5 
+FQH 
+aU w 0
+¢
+a Feb Mar Apr May June July
+U15
+w
+x
+U
+z
+z
+O
+F
+Q
+F 5 a 
+U w ¢ a 
+0 
+Jan Feb Mar Apr May June July 
+Jan Feb Mar Apr May June July 
+Jan Feb Mar Apr May June July 
+w 
+0 
+45° 
+40° 
+1993 precipitation O 5 
+1961-90 normal precipitation	 iZ a 
+Area of flooding streams	 w 0 
+¢ 
+,E Weather-station 
+location 
+U15 
+w 
+xU z_ 
+Z10 
+z 
+0 
+F 
+5 
+aU w 
+a 0 
+Jan Feb Mar Apr May June July 
+Jan Feb Mar Apr May lune July 
+Jan Feb Mar Apr May June July 
+Jan Feb Mar Apr May June July 
+Figure4. Monthly precipitation for Januarythrough July 1993 and 30-year monthly normals (Januarythrough July 1961-90) 
+at 10 weather-station locations in the upper Mississippi River Basin. Data were supplied by the National WeatherService. 
+Precipitation, January 1-July 31, 1993 7
+
+=== page 14 ===
+�����
+tively. Rainfall totals for the 3-month period (May 
+through July) were computed for this report for Bis­
+marck, Cedar Rapids, and Manhattan and were com­
+pared to period-of-record maximums for that 3-
+month period (table 2). At Bismarck and Cedar Rap-
+ids, May through July 1993 was the wettest such 
+period in more than 100 years ofrecordkeeping. At 
+Manhattan, May through July 1993 was the second 
+wettest such period in 104 years of record; in 1951, 
+700 
+J Q0m 600 
+zm 
+u_
+O rn 
+w0 500(5 O 
+H W z a. w 0 
+~z 400 
+wpCL Z 
+z0-a 
+zN 
+OQ 300 
+0 ¢~o 
+a M 
+w L . 200 
+a 
+100 
+~~~ aye owe cae `ae r0- oca ,aa° G`~ d 
+0~ecaa 
+5oo+
+F 
+~~c
+caaQ 
+Om
+~o~ 
+aaa10" Qa 
+~aor
+a ayae ~~ 
+G 
+WEATHER-STATION LOCATION 
+Figure 5. Seasonal precipitation for 1993 at 10 weather-sta­
+tion locations in the upper Mississippi RiverBasin. Data 
+were supplied by the National WeatherService. 
+50 
+Normal annual (1961-90) 
+January-July 1993 
+40 
+LLJ 
+zZ 
+Z 30 
+z 
+0 
+a 
+a 20 
+0 
+a 
+10 
+0 
+~ .aaNV-
++Fa
+S 
+aQ
+°~p 
+~oSz 
+PaQ
+aS 
+aa~
+eoc Qaoi~a raac
+acyae
+d,l 
+~ti. 
+0~yc 
+5oa ~~c�~ca ~ sac aaaOa 
+G 
+WEATHER-STATION LOCATION 
+Figure 6. Precipitation forJanuarythrough July 1993, nor­
+mal precipitation for January throughJuly 1961-90, and nor­
+mal average precipitation for 1961-90 at 10 weather-station 
+locations in the upper Mississippi River Basin. Data were 
+supplied by the National Weather Service. 
+Table 2. Five greatest May-through-July precipitation 
+totals at Bismarck, North Dakota, Cedar Rapids, Iowa, and 
+Manhattan, Kansas 
+[Totals, in inches; record of lengths, in parentheses] 
+May-through-July precipitation totals 
+Bismarck 
+(119 years) 
+Cedar Rapids
+(112 years) 
+Manhattan 
+(104 years) 
+Year Total Year Total Year Total 
+1993 20.68 1993 31.25 1951 36.73 
+1914 15.55 1969 25.44 1993 35.38 
+1915 14.15 1892 22.06 1915 28 .15 
+1879 12.91 1990 21.89 1908 25 .16 
+1927 12.02 1971 20.48 1977 22 .71 
+the 3-month rainfall total was only 4 percent greater 
+than that of 1993 . 
+Daily Accumulations 
+The rates of accumulation for 1993 daily pre­
+cipitation are compared with historic values in 
+figure 7. The historic values are the accumulated 
+daily averages for the period 1961 to 1990 smoothed 
+to pass through the month-end accumulated totals. 
+Theprecipitation totals for January throughJuly 1993 
+at all three locations were about 200 percent of nor­
+mal for January through July 1961-90, but the rates 
+at which the precipitation accumulated were different 
+(fig. 7). Although the rate of accumulation at Bis­
+marck was about normal through June, a dryer-than­
+normal January through March caused the amount of 
+precipitation received to be slightly less than normal 
+until the end ofJune. Three large storms, June 29 
+through July 1, July 15-16, and July 21-22, com­
+bined to produce the large seasonal totals. Precipita­
+tion at Manhattan followed a pattern similar to that of 
+Bismarck, except that several large storms came ear­
+lier in the year. Manhattan's large seasonal total 
+resulted primarily from precipitation during four dis­
+tinct periods: March 29 through 31, May 7 through 
+11, July 1-2, and July 18 through 22. 
+The rate ofaccumulation of precipitation at 
+Cedar Rapids was different from that at either Bis­
+marck or Manhattan. Although large storms, such as 
+that for July 4-5, contributed to the excessive mois­
+ture, the rate of accumulation was greater than nor­
+mal after mid-March. Unlike Bismarck and 
+Manhattan, the rate reflected the accumulation of 
+many small-to-moderate precipitation amounts and 
+shows the effects ofwidespread storms over the 
+entire area. 
+8 Precipitation in the Upper Mississippi River Basin, January 1 through July 31, 1993
+
+=== page 15 ===
+���
+--------
+45 
+w 40 
+Uz 35 
+O
+Z 30 
+a 25 
+U w 
+20 
+0 
+15 
+10 
+UQ 5 
+0 
+UZ 
+Z_ 
+z 
+O 
+a 
+a Uw 
+o-
+0 w 
+g 
+UUQ 
+Uw 
+UZ_ 
+Z 
+z 
+0 
+aF 
+a 
+Uw 
+a 
+0 
+F5 
+UU 
+A 
+1993 daily precipitation 
+1961-90 normal daily precipitation 
+Jan Feb Mar Apr May June July 
+1993 dailyprecipitation 
+1961-90 normal daily precipitation 
+Jan Feb Mar Apr May June July 
+Jan Feb Mar Apr May June July 
+Figure7. Accumulateddaily precipitation forJanuary through 
+July 1993 and accumulated normaldaily precipitation for Janu-
+arythroughJuly 1961-90. A, Bismarck, North Dakota; B, 
+Cedar Rapids, Iowa; C, Manhattan, Kansas. Dataweresup­
+plied bythe National Weather Service. 
+Distribution of July Precipitation 
+Muchofthe severe flooding in the upper Mis­
+sissippi RiverBasin in 1993 was the culmination of 
+the wet spring and a series of storms in July. Daily 
+rainfall totaled more than 4.00 inches at many loca­
+tions in July. Thus, flooding was influenced not only 
+by wet antecedent conditions and large rainfall totals, 
+but also by the way July daily rainfall was distrib­
+uted. Maximum 1- and 3-day rainfall totals forJuly 
+at Bismarck, Cedar Rapids, and Manhattan are simi­
+lar (table 3). Maximum 5-day rainfall totals are simi­
+lar at Bismarck and Cedar Rapids, but the maximum 
+5-day rainfall total at Manhattan was about 1 .6 inches 
+greater than at Bismarck and CedarRapids (table 3). 
+Based on the data in table 3, the maximum 1-day July 
+rainfall totals were greater than the total normal July 
+rainfall at many locations throughout the flooded area. 
+Table 3. Maximum 1-, 3-, and 5-day rainfall totals for July 
+1993 at Bismarck, North Dakota, Cedar Rapids, Iowa, and 
+Manhattan, Kansas 
+[Totals, in inches] 
+Rainfall 
+1-day 3-day 5-day 
+Bismarck. . . . . . . . . . . . . . . . 4.32 5 .74 6.18 
+Cedar Rapids. . . . . . . . . . . 4.18 5 .55 6.01 
+Manhattan. . . . . . . . . . . . . . . 4.81 5 .56 7.70 
+Analysis of Selected Storms 
+Several storms in July producedlarge amounts 
+of rainfall in the area offlooding. Twoof the larger 
+storms are described in detail. 
+Southeastern Iowa, July 4-5 
+The storm ofJuly 4-5 produced copious 
+amounts of rainfall and added to the flooding over 
+southeastern Iowa. This storm was only one in a 
+series that passed over Iowa and other areas of the 
+upper Mississippi River Basin during June and July. 
+Average weatherconditions over the Central 
+United States during the July 4-5 storm are depicted 
+in figure 8. A large high-pressure system was posi-
+tioned over the Southeastern United States while an 
+area of warm, moist air flowed into the Midwestern 
+United States as a result ofthe circulation around the 
+southeastern high and the low-pressure system in 
+southern Canada. Furthermore, a stationary front 
+Precipitation, January 1-,July 31, 1993 9
+
+=== page 16 ===
+EXPLANATION 
+Area of precipitation 
+Area of moistair- Dew point greater 
+than 60 degrees Fahrenheit 
+Cold front 
+L Lowatmoshperic pressure 
+rJ-r-tiStationary front area 
+-Bi~smarok
+Wind direction arrowandweather- H High atmoshperic pressure 
+station location area 
+Figure 8. Average weather patterns over the United States for July 4-5, 1993. Data were supplied by the National 
+Weather Service. 
+extended from northern Missouri across southeastern 
+Iowato southern Wisconsin, and a series of cold 
+fronts rotated cyclonically aroundthe low into west­
+ern Iowa. The dense air behind each cold front lifted 
+the lighter warmair ahead ofit, and as each front col­
+lided into the warm air over Iowa, thunderstorms 
+formed. Rain fell overmuchof Iowa, southern Min­
+nesota, and southern Wisconsin. Aiding the produc­
+tion ofrain was a strong area of vorticity in the 
+middle atmosphere (about 18,000 feet above sea 
+level), which created additional lift for thunderstorm 
+development. (Vorticity is an incipient storm that 
+contains enhanced cyclonic spin and associated 
+upward motion.) This area ofvorticity began over 
+Kansas and Nebraskajustto the west of the cold 
+front in western Iowa and proceeded over Iowa from 
+the southwest. The jetstream that passed directly 
+over Iowa from southwest to northeast also aided the 
+production of rain and created what is called the 
+chimney effect in which strong winds in the upper 
+atmosphere blow across the region of thunderstorm 
+development. The effect ofthe winds was to evacu­
+ate air from the top of thunderstorms, which created 
+an updraft. Thus, more warm, moist air was then 
+drawn up into the thunderstorms, and copious 
+amounts ofrain were produced. As the storm moved 
+northeastward at about 10 to 20 miles per hour, new 
+thunderstorms formed to the southwest ofthe original 
+thunderstorms and passed overthe same areas, thus 
+adding to the large rainfall totals. 
+Rain from the July 4-5 storm fell across Iowa; 
+one-third ofthe State received more than 2 inches 
+total (fig. 9). The greatest amounts ofrain fell in the 
+south- and east-central parts ofthe State. Rainfall 
+totals from the storm exceeded 4 inches in a 50- to 
+100-mile-wide band from Lamoni to Cedar Rapids 
+and Dubuque. The occurrence ofmany storms in the 
+span ofa few days led to the extensive and severe 
+flooding throughout much ofIowa, mostnotably in 
+Des Moines and Cedar Rapids and along the main-
+stem of the Mississippi River. 
+10 Precipitation in the Upper Mississippi River Basin, January 1 throughJuly 31, 1993
+
+=== page 17 ===
+��
+North Dakota and Minnesota, July 15-16 
+During July 15-16, 1993, thunderstorms that 
+produced large amounts ofrain moved slowly from 
+western North Dakota to west-central Minnesota. 
+Urban and stream flooding were considerable along 
+this path. Meteorological conditions thatcaused 
+these rains were part ofthe overall pattern responsi­
+ble for heavy rains in the upper Midwest throughout 
+the summer. 
+Average weather patterns over the North-Cen­
+tral United States during the July 15-16 storm are 
+depicted in figure 10. Awarmfront extended across 
+northern South Dakota while an area ofwarm, moist 
+air was drawn over the front on southerly winds of5 
+to 15 miles perhourby a developing low-pressure 
+system over Montana. Thunderstorms formed in 
+south-central North Dakota by late evening of July 
+14 andproduced moderate amounts ofrain before the 
+storms moved quickly towards the northeast. How­
+ever, the weather patterns that producedheavy rain­
+fall remained in place. 
+EXPLANATION 
+-7-Line of equal rainfall for 
+July 4-5, 1993-Interval 
+1 inch 
+Figure 9. Areal distribution of rainfall for the July 4-5, 1993, 
+storm in Iowa. Data were supplied by the National Weather 
+Service. 
+o. 
+EXPLANATION 
+Area of precipitation 
+Area of moistair-Dewpointgreater 
+than 60 degrees Fahrenheit 
+A	 Cold front 
+Warm front 
+Fargo 
+Winddirection arrowand weather- High atmoshperic pressure 
+station location area 
+Figure 10. Average weather patterns over the United States for July 15-16, 1993. Data were supplied by the National 
+Weather Service. 
+Precipitation, January 1-luly 31, 1993 1 1
+
+=== page 18 ===
+Acold front entered North Dakota from Mon­
+tana during the morning ofJuly 15 andincreased 
+atmospheric instability. A series of vorticity maxima 
+(incipient storms) at 18,000 feet above sea level also 
+approached North Dakota from the southwest and 
+provided additional lift and cyclonic motion for the 
+formation ofthunderstorms. By midafternoon ofJuly 
+15, all the above conditions-moist air, frontal bound­
+aries, vorticity maxima-collidedover Bismarck. 
+Thunderstorms formed and produced large amounts 
+ofrain and considerable flooding. The storms moved 
+slowly towards the east at only 10 to 15 miles per 
+hour, which permitted large amounts ofrain to fall. 
+The continued flow of moisture from the south over 
+the warm front and the lifting caused by the western 
+cold front maintainedthe large rainfalls. Intense rain 
+continued along a 50-mile-wide path from Bismarck 
+95° 
+a 
+to Fargo, North Dakota, and into west-central Minne-
+sota during the early hours ofJuly 16. Rainfall 
+reports of4 to 7 inches were common along this path 
+(fig. 11). Bismarck had arecord 24-hour rainfall 
+total of 5 .27 inches by the afternoon of July 16. Offi­
+cially, the greatest rainfall total from North Dakota 
+was 7.25 inches at Jamestown. The greatest rainfall 
+observed in Minnesotawas an unofficialtotal of 7 .50 
+inches at Callaway. 
+SUMMARY 
+Excessive precipitation during April through 
+July produced severe flooding in a nine-State area in 
+the upper Mississippi River Basin during spring and 
+summer 1993. Precipitation in Maywas more than 
+twice the normal (1961-90) amountover an area that 
+90' 
+EXPLANATION 
+-Line of equal rain-
+fall forJuly 15-16, 
+1993-Interval 1 inch 
+0 100	 200 MILES 
+J 
+0 200 KILOMETERS 
+Figure 11 . Areal distribution of rainfall for the July 15-16, 1993, storm in North Dakota, South Dakota, and Minnesota. Data 
+were supplied by the National Weather Service. 
+1 2 Precipitation in the Upper Mississippi River Basin, January 1 through July 31, 1993
+
+=== page 19 ===
+extended from southeastern South Dakota across 
+Iowa to eastern Kansas . In early June, weather pat­
+terns combinedto produce a convergence zone over 
+the upper Midwest between the warm, moist air from 
+the GulfofMexico and the much cooler, drier air 
+from Canada. These weather patterns persisted until 
+the end ofJuly. As a result, the upper Midwest was 
+deluged with rain while the Southeastern and the East-
+ern United States, under the influence of a high-pres­
+sure system, was hot and dry. The persistence ofthis 
+weather pattern caused unusually excessive rains that, 
+together with the wetter-than-normal spring, pro­
+duced severe flooding throughout theregion. 
+Monthly precipitation data at 10 weather-sta­
+tion locations in the flood-affected area were used to 
+illustrate precipitation patterns and amounts. In 
+1993, all 10 ofthe selected locations received greater 
+than the normal (1961-90) precipitation for January 
+through June, 8 received more than 200 percent of 
+the normal July rainfall; and 3 received from about 
+400 to about 650 percent ofthe normal rainfall for 
+July. May through July 1993 was the wettest or 
+u .s . c.P.6 .1993-342-389 :8oo16 
+nearly the wettest such period on record at many loca­
+tions in the flooded area. Of the 10 locations, 6 
+received more rain in the first 7 months of 1993 than 
+is generally received in a year. 
+REFERENCES 
+Parrett, Charles, Melcher, N.B ., andJames, R.W., Jr., 
+1993, Flood discharges in the Upper Mississippi 
+River Basin, in Floods in the Upper Mississippi 
+River Basin, 1993: U.S. Geological Survey Circular 
+1120-A, 14 p. 
+National Oceanic and Atmospheric Administration, 1992, 
+Daily normals oftemperature, precipitation, and heat­
+ing and cooling degree days, 1961-90-By State: 
+National Oceanic and Atmospheric Administration 
+Climatography of the United States 84, [variously 
+paged]. 
+National Weather Service, 1993, Update on Midwestern 
+floods-Heat and drought in the East: Special Cli­
+mate Summary, v. 93, no. 2, 8 p. 
+References 13

@@ -1174,3 +1174,33 @@ statement, one storm a survivor can say they slept through, and
 three flood registers. The vein stays open - the government's 1993
 public record is deep, and the training passes still wait on
 curation and play, in that order.
+
+---
+
+## 48 - The corpus's outputs (2026-09-13)
+
+The operator asked to see the corpus built and then see its outputs.
+The corpus holds seven curated items (entries 44, 45, 47); the
+outputs now exist: `tools/extract_corpus.py` is the one deterministic
+path from the curated PDFs to the plain text the work consumes - one
+file per item under `corpus/out/`, page-marked, plus an index of
+derived facts (pages, words per item). The corpus now reads as:
+233,629 words of period text - two Monthly Labor Review months
+(183,389 words of the labor-being-priced register), the Reno
+statement, the Superstorm a survivor can carry (14,471), and the
+three flood registers (32,326 words of measurement, weather, and
+crest).
+
+The law the outputs follow, written into corpus/README.md the same
+day: outputs are derived artifacts, never curation. Everything an
+output file says is in its PDF; the manifest remains the record; an
+item reaches the outputs by being in the manifest and never
+otherwise. The tool is deterministic the way the sister's jar is
+reproducible - two runs over the same corpus produce byte-identical
+outputs, verified by md5 across runs.
+
+This is also the first step of the ML readiness path named in entry
+46: the training passes read text, not PDFs, and the extraction is
+now the standing tool the passes will consume. What remains before
+those passes is unchanged: curation growth, and the in-session budget
+sizing that only play gives.
