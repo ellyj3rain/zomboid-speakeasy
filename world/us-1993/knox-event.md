@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | DRAFT 2026-09-06 - not approved; nothing here teaches a model yet. Proposed for the floor (PLAN.md, document 8). |
+| Status | APPROVED 2026-09-13 - the operator ordered the review completed by the record ("do it yourself", 2026-09-13); review of record in RECORD.md 43. Document 8 of the plan; on the floor, read from the installed game's own files. |
 | Scope | What the shipped game says happened, day by day, from July 1 to about July 21, 1993, and what it keeps saying after. |
 | Primary sources | The installed Build 42.20 files: `media/radio/RadioData.xml` joined with `media/lua/shared/Translate/EN/RadioData.json` (broadcasts, line text keyed `RD_<LineEntry ID>`); `media/lua/shared/Translate/EN/Print_Text.json` (newspapers and flyers); `media/lua/shared/Translate/EN/DynamicRadio.json` (the automated broadcast lines); `media/scripts/generated/items/literature.txt`, `media/lua/server/Items/Distributions.lua` and the `Newspaper` / `RecipeCodeHelper.nameNewspaper` bytecode (how the papers reach the world). |
 | Confidence | HIGH throughout unless marked: the shipped file says it. The developer's statements read through the search index are MEDIUM (index). |

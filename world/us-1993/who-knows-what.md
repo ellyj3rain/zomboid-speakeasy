@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | DRAFT 2026-09-06 - a design index for review; not the floor. Written the day the operator asked that the world model be cut by personal history built from the attributes the game makes available, never one shared encyclopedia. |
+| Status | APPROVED 2026-09-13 - the operator ordered the review completed by the record ("do it yourself", 2026-09-13); review of record in RECORD.md 43. The index is the floor, and SAO has resolved every claim through it per person since its C32. Written the day the operator asked that the world model be cut by personal history built from the attributes the game makes available, never one shared encyclopedia. |
 | What it is | The explicit map from a person's attributes to the slices of the world documents they carry, and the rules that resolve every "who carries it" tag per person. |
 | Rule | A claim reaches a person only if (1) the person's attributes match its carriers, (2) its date is inside the person's horizon, and (3) a provenance path exists for that person (read, heard, lived, told). Otherwise the person does not have it, and the models are taught that they do not. |
 
