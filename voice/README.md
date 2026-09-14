@@ -17,4 +17,6 @@ Rules:
   each; the floors that cut the register are SAO's and are
   bordered there.
 
-Empty. Seeds follow the world documents.
+The first seeds are written (`seeds.md`, 2026-09-13), following the
+approved world documents and the operator's ruling on what the
+knowledge is for (RECORD.md 44).

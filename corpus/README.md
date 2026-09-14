@@ -14,4 +14,9 @@ Rules:
   personal statements about a living person's life never enter at
   all.
 
-Empty. Curation starts after the world-document research plan.
+Curation opened 2026-09-13, the day the nine world documents were
+approved (RECORD.md 43) and the operator ruled what the corpus is for
+(RECORD.md 44). The first vein is United States Government work, which
+carries no copyright (17 U.S.C. §105); the manifest is `manifest.md`,
+and the first two entries are the Monthly Labor Review's June and
+July 1993 issues.
