@@ -13,6 +13,14 @@ Rules:
 
 Empty. Waits on the first approved data.
 
+The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
+end state is everything works and is ready to play, in theory, and
+then the ML work runs a few training passes over the full dataset
+and the runtime, tuned to a result sufficient for a first time play.
+That is the pre-alpha to alpha bar. The order into it: the sandbox
+options revision the operator named the same day, then readiness,
+then the passes.
+
 The budget has a ceiling now (record entry 26). SAO's `[C28]` probe is
 pure arithmetic and touches no game state, so it was run standalone
 against the compiled bridge over that batch's own five shapes: a 256x8

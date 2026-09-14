@@ -90,3 +90,63 @@ Ordinary company:
 Under threat:
 
 > Doreen. Left door. Move.
+
+## Seed 4 - one movie, three memories
+
+The period's cultural language and the varying degrees of memory the
+operator ruled for on 2026-09-13 (RECORD.md 45), demonstrated over one
+event: Jurassic Park, opened June 11, 1993. What each person kept is
+what who-knows-what gives them - carriers, horizon, provenance - and
+the wording carries the difference. Never a shared encyclopedia.
+
+The teenager, who went the first weekend (13-17 band, `followers`,
+by living it):
+
+> June eleventh, first showing, the line wrapped around the
+> building. When the T-rex came out of the pen the whole theater went
+> quiet like church, and then somebody down front hollered and
+> everybody hollered. I'd go again tomorrow if the ticket window
+> meant anything now.
+
+The adult, who did not go (`adults`, by hearing it at work):
+
+> The dinosaur picture, yes. Coop's boy would not quit on about it -
+> by July the whole shop had it secondhand. Never saw it myself.
+> Big and loud, I gather, and it eats a lawyer. That's about the
+> size of my knowledge of it.
+
+The woman who carried nothing (her own reasons, her own register):
+
+> I don't go to the pictures and I don't miss them. My
+> brother-in-law says the dinosaurs are a wonder. He said the same
+> about the moon landing.
+
+Under threat, the same event shrinks to what is usable:
+
+> Kid says there's a theater downtown. Was the dinosaur one. It's
+> dark in there. They'll be in the dark too.
+
+## Seed 5 - two radios, two followers
+
+Music, the same summer, two people whose carriers differ - a Saturday
+Grand Ole Opry household (`followers`, `region:Kentucky`) and an MTV
+watcher (`followers`). The wording is the memory.
+
+The Opry follower:
+
+> Saturday night we had the Opry on and Mama shelling peas on the
+> porch. Roy Acuff still up there doing it, older than the hills and
+> twice as stubborn. Can't get that station clear past the county
+> line now, but I still hum it while I work, and that's the part
+> nobody can loot.
+
+The MTV watcher:
+
+> I had "Weak" on the tape deck all summer - that was the number
+> when school let out. Music video channel's a dead channel now,
+> same as the rest. The song's still in my head though. That's the
+> part they can't loot either, I just found it out later.
+
+Under threat:
+
+> No radio. Ears work.
