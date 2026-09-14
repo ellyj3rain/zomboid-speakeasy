@@ -993,3 +993,48 @@ naming a chain a chain with pre-collapse knowledge and his
 family's history; the moral, the pacified, and the psychopath at
 one gate, worded differently over the same arrangement; and the
 dead's journey, named by someone who still knows who was walking.
+
+---
+
+## 45 - The media vein, the varying memories, and the end state (2026-09-13)
+
+The operator asked 2026-09-13 for archived media reviews and
+transcripts, to train the period's cultural language and give
+people varying degrees of memories of the world; and ruled the end
+state of the whole effort. The first half, and the limit it met:
+
+the archived reviews themselves - Variety, the Billboard issues,
+the UPI wire copy - and the commercial hearing and broadcast
+transcripts are copyrighted, and none of them can enter the corpus
+under its own rules. Where their content lives instead: the facts
+are already carried in media.md as sourced claims, scoped per
+person by who-knows-what; the era's official speech about
+entertainment entered from the government vein (manifest 0003 -
+the Attorney General's statement on violent programming, October
+20, 1993, dated past the July 9 horizon and therefore texture to
+the corpus and knowledge to no survivor); and the audiences'
+language is authored as voice seeds 4 and 5 - one movie, three
+memories (the one who went, the one who heard about it at work,
+the one who carried nothing), and two radios, the Opry household
+and the MTV watcher. The varying degrees the operator asked for
+are carried by who-knows-what and demonstrated in wording,
+never as a shared encyclopedia.
+
+The second half, the end state, preserved as near as the record
+can carry it:
+
+> The end goal is ensure all of this works and is ready to play,
+> in theory, so we can do the ML work and do a few training passes
+> over the full dataset and runtime and tune to a result that is
+> sufficient for a first time play. That is the actual end state
+> goal for what we can consider pre-alpha to alpha.
+
+What that makes plain, named. The end state is not "built" - it
+is playable: everything works, in theory, and then the ML work
+runs training passes over the full dataset and the runtime, tuned
+against the result of a first time play. The order of what stands
+between here and there: the sandbox options revision the operator
+named the same day - the current options are an absence of
+everything ruled configurable over 2026-09-11 to 13 - then
+readiness, then the training passes. The training README now
+carries this entry as its goal.
