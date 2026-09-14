@@ -948,3 +948,48 @@ teach as MEDIUM. The "not yet placed" tails stay as written.
 What this unblocks: the DRAFT headers held the corpus curation, the
 voice seeds, and any training shut. With this entry the nine
 documents teach.
+
+---
+
+## 44 - The corpus opens; what the data is FOR (2026-09-13)
+
+The operator ruled, the day the documents were approved, what the
+world documents' knowledge is for. Preserved as near as the record
+can carry it:
+
+> The information that exists about the world prior is how they
+> know that pre collapse, labor was priced and historically slavery
+> existed, slaves are an investment, but morality may still matter,
+> unless someone is explicitly psychopathic or has been lulled or
+> coerced into a raider environment that has pacified him with
+> trauma, etc. - the value of this data at modeling not just an
+> inner life, but a collapsing world, and a world that is open for
+> building and new civilizations but also rife with constant
+> danger - and those that died early don't necessarily have a
+> journey that has ended permanently. That is the beauty of this
+> work and how it affects emergent generation and world building.
+
+What the ruling means for what already runs, named. Knowledge
+reaches a person only scoped (who-knows-what), so the pre-collapse
+grounds stand per person, never as a shared encyclopedia. The
+priced labor is work-and-money.md's HIGH rows; the historical
+knowledge that names a chain a chain carries the same as any other
+claim. Morality is never encoded - the emergence rule stands:
+psychosis and the conditions are SAO's, the pacifying environment
+does its work on a person over time, and no pass authors an
+outcome; what a raider environment can lull a man into is a state
+of him, not a rule of the world. And the journey that does not
+necessarily end is ZAO's turned ecology - forms, decay, recovery -
+met by SAO's adaptation law: what the living know about the dead
+reaches them by proximity or testimony and no other way.
+
+What the ruling opened, the same day. Corpus curation began: the
+first vein is United States Government work, which carries no
+copyright (17 U.S.C. §105) - the Monthly Labor Review's June and
+July 1993 issues (manifest 0001 and 0002), the register of labor
+being priced, and the month the shipped save starts. The first
+voice seeds are written (voice/seeds.md): a man who paid wages
+naming a chain a chain with pre-collapse knowledge and his
+family's history; the moral, the pacified, and the psychopath at
+one gate, worded differently over the same arrangement; and the
+dead's journey, named by someone who still knows who was walking.
