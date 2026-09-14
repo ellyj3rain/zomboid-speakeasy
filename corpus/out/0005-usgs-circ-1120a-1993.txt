@@ -1,0 +1,1667 @@
+0005 - Flood Discharges in the Upper Mississippi River Basin, 1993 (USGS Circular 1120-A)
+Source: text/usgs-circ-1120a-1993.pdf
+Pages: 20
+
+This file is a derived extraction of the item above; the manifest record in corpus/manifest.md is the authority for
+what the item is and what it is FOR. Regenerate with tools/extract_corpus.py.
+
+=== page 1 ===
+F L O O D 
+D I S C H A R G E S 
+IN THE 
+UPPER MISSISSIPPI 
+RIVER BASIN 
+9 9 3 
+U.S. GEOLOGICAL SURVEY CIRCULAR 1120-A
+
+=== page 2 ===
+Front Cover-View of Highway 67, West Alton, Missouri, 
+(Srenco Photography, St . Louis, Mo.) 
+Back Cover-View of Spirit of St . Louis Airport, 
+Chesterfield, Mo. (Srenco Photography, 
+St. Louis, Mo.) 
+Field Hydrologist making streamflow 
+measurements (U.S . Geological Survey)
+
+=== page 3 ===
+FLOOD DISCHARGES IN THE
+UPPER MISSISSIPPI RIVER BASIN, 1993
+By Charles Parrett, Nick B. Melcher, and Robert W. James, Jr. 
+Floods in the Upper Mississippi River Basin, 1993
+U.S. GEOLOGICAL SURVEYCIRCULAR 1120-A
+
+=== page 4 ===
+U.S. DEPARTMENT OF THE INTERIOR 
+BRUCE BABBITT, Secretary 
+U.S. GEOLOGICAL SURVEY 
+Robert M. Hirsch, Acting Director 
+First Printing August 27, 1993
+Second Printing (with revisions) September 24, 1993
+UNITED STATES GOVERNMENT PRINTING OFFICE: 1993 
+Free on application to the
+U.S. Geological Survey
+Map Distribution
+Box 25286, MS 306
+Denver Federal Center
+Denver, CO 80225
+
+=== page 5 ===
+FOREWORD 
+During spring and summer 1993, record flooding inundated much ofthe upper Mississippi 
+River Basin. The magnitude of the damages-in terms ofproperty, disruptedbusiness, and per­
+sonal trauma-was unmatchedby any other flood disasterin United States history. Property dam 
+age alone is expected to exceed $10 billion. Damaged highways and submerged roads disrupted 
+overland transportation throughout the floodedregion. The Mississippi and the Missouri Rivers 
+were closed to navigation before and after the flooding. Millions ofacres ofproductive farmland 
+remained under water for weeks during the growing season. Rills and gullies in many tilled fields 
+are the result ofthe severe erosion that occurred throughout the Midwestern United States farm­
+belt. The hydrologic effects ofextendedrainfall throughout the upper Midwestern United States 
+were severe and widespread. The banks and channels ofmany rivers were severely eroded, and 
+sediment was deposited over large areas of the basin's flood plain. Record flows submerged many 
+areas that had not been affected by previous floods. Industrial and agricultural areas were inun­
+dated, which caused concern about the transport and fate of industrial chemicals, sewage effluent, 
+and agricultural chemicals inthe floodwaters. The extent and duration ofthe flooding caused 
+numerous levees to fail . One failed levee on the Raccoon River in Des Moines, Iowa, led to flood­
+ing ofthe city's water treatment plant. As aresult, the city was without drinking waterfor 19 days. 
+As the Nation's principal water-science agency, the U.S . Geological Survey (USGS) is in a 
+unique position to provide an immediate assessment of some ofthe hydrological effects ofthe 
+1993 flood. The USGSmaintains a hydrologic data network and conducts extensive water 
+resources investigations nationwide. Long-term data from this network and information on local 
+and regional hydrology provide the basis for identifying and documenting the effects ofthe flood­
+ing. During the flood, the USGS provided continuous streamflow and related information to the 
+NationalWeather Service (NWS), the U.S . ArmyCorps ofEngineers, the Federal Emergency Man­
+agement Agency (FEMA), and many State and local agencies as part of its role to provide basic 
+information on the Nation's surface- and ground-waterresources at thousands oflocations across 
+the United States. The NWShas used the data in forecasting floods and issuing flood warnings. 
+The data have been used by the Corps ofEngineers to operate water diversions, dams, locks, and 
+levees. The FEMAandmany State and local emergency management agencies have used USGS 
+hydrologic data and NWSforecasts as part of the basis oftheir local flood-response activities . In 
+addition, USGS hydrologists are conducting a series ofinvestigations to document the effects of 
+the flooding and to improveunderstanding ofthe related processes. The major initial findings 
+from these studies will be reported in this Circular series as results become available. 
+U.S . Geological Survey Circular 1120, Floods in the UpperMississippi RiverBasin, 1993, 
+consists ofindividually published chapters that will documentthe effects ofthe 1993 flooding. 
+The series includes data and findings on the magnitude and frequency ofpeak discharges; precipi 
+tation; water-quality characteristics, including nutrients and man-made contaminants; transport of 
+sediment; assessment of sediment deposited on flood plains; effects ofinundation on ground-water 
+quality; flood-discharge volume; effects ofreservoir storage on flood peaks ; stream-channel scour 
+at selected bridges; extent offlood-plain inundation; and documentation of geomorphologic 
+changes. 
+.&4"t /,~- /"/ 
+Acting Director 
+August 27, 1993 
+Foreword III
+
+=== page 6 ===
+���������������
+CONTENTS 
+Foreword . . . . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . . . .. . . . . .. .. .. .. . . . . .. .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . III 
+Abstract . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. .. .. .. .. .. .. . . .. .. .. .. . . . . .. .. .. .. . . . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . 1 
+Introduction . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. .. .. .. .. .. .. .. .. .. .. .. . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 
+Purpose and scope . . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . .. . . . . .. .. .. .. .. . . .. .. .. . . . . .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . .. .. . . . . . . . . .. .. . . . . .. . 2 
+Flood recurrence interval . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. . 2 
+Causes andchronology offlooding . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . . . . . .. .. .. . . .. .. . 2 
+Climatic conditions. . .. .. . . . . . . . . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . . . .. .. .. .. .. .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. . 2 
+Antecedent hydrologic conditions . . .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . .. . . . . .. .. .. .. . . . . .. .. .. .. .. .. .. . 3 
+Chronology oftheJune to August 1993 flooding .. .. .. . . .. . . . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . . ... . . . . .. .. .. .. . . . . . . . . .. .. . . . . .. .. .. .. .. .. .. .. .. .. .. .. .. . 3 
+Peakdischarges forthe 1993 flood . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . . . .. .. .. .. .. .. .. .. .. .. . . .. .. . 5 
+Criteria for selection.. . . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . . . .. .. .. .. . . .. .. .. .. .. . . .. .. . 8 
+Comparison with historic floods. . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . . . . . . . . . .. .. .. .. . . . . .. .. .. .. . . . . .. .. .. .. . . .. .. .. .. . . . . .. .. . 8 
+Selected references . . . . . . . . . . . . . . . . . . . . . . .. .. .. .. . . . . .. .. .. .. . . .. .. .. .. .. .. .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . 8 
+FIGURES 
+1 . Mapshowing the Mississippi River Basin and general area of flooding streams, June to August 1993. . . . . . . . . . . . . . . . . . . . . . . .. . . 1 
+2. Mapshowing areal distribution of total precipitation as apercentage ofnormal in the area of flooding in the 
+upperMississippi River Basin, January to July 1993 . . . . . . . . . .. .. . . . . .. .. .. .. . . . . .. .. .. .. .. .. .. .. .. .. .. .. .. .. . . . . . . .. .. .. . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . 4 
+3. Mapshowing peak discharges and dates ofoccurrence forthe 1993 flood at selected streamflow-gaging stations 
+in the upperMississippi River Basin.. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. .. .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . 5 
+4. Mapshowing location of selected streamflow-gaging stations and ranges in recurrence interval forthe 1993 peak 
+discharges in the upper Mississippi River Basin. . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . . .. . . . . . . . . . . .. .. . . 6 
+5. Mapshowing historic peak discharges andpeak discharges forthe 1993 flood at selected streamflow-gaging 
+stations in the upperMississippi River Basin . . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . ... . . . . . . .. .. .. . . . . . . .. .. .. . . 7 
+TABLE 
+1 . Summary of peak stages anddischarges at selected streamflow-gaging stations in the upperMississippi River 
+Basin . . . .. .. .. .. .. .. .. .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . . .. . . . . . . . . . . .. .. . . 9 
+CONVERSION FACTORS 
+Multiply By 
+inch 25.4 
+foot 0.3048 
+mile 1 .609 
+acre 4,047 
+squaremile 2.590 
+cubic foot per second 0.02832 
+To obtain 
+millimeter
+meter
+kilometer
+square meter
+square kilometer
+cubicmeterper second
+Contents V
+
+=== page 7 ===
+Flood Discharges in the Upper Mississippi River Basin, 1993 
+By Charles Parrett, Nick B. Melcher, and Robert W. James, Jr. 
+Abstract 
+From mid-June through early August 1993, 
+flooding was severe in the upper Mississippi 
+River Basinfollowing awet-weather pattern that 
+persisted overthe area foratleast 6 months before 
+the flood. Themagnitudeandtiming ofseveral 
+intense rainstorms in late June andJuly, combined 
+with wet antecedent climatic conditions, were the 
+principal causes of the flooding. 
+Flood-peak discharges thatequaledor 
+exceeded the 10-year recurrence interval were 
+recorded at 154streamflow-gaging stations in the 
+upperMississippi RiverBasin. At 41 streamflow-
+gaging stations, the peak discharge was greater 
+than the previous maximumknown discharge. At 
+15 additional gaging stations, peak discharges 
+0. 
+EXPLANATION 
+Area of flooding streams 
+-..-Boundaryof MississippiRiverBasin 
+exceeded the previous maximumregulated peak 
+discharge. At 45 gaging stations, peak discharges 
+exceeded 100-year recurrence intervals. 
+INTRODUCTION 
+From mid-June through early August 1993, 
+severe flooding inthe upperMississippi River Basin 
+(fig. 1) followed heavy and persistent rainfall from 
+January through July. The flooding was unusual 
+because it came so late in the spring-summer runoff 
+season and because of the large number of stream­
+flow-gaging stations that hadrecord or near-record 
+peak discharges. Record peak discharges were 
+recorded from mid-June through early August at U.S . 
+Geological Survey (USGS) streamflow-gaging sta­
+tions in the MinnesotaRiver Basin in Minnesota; in 
+the Iowa, the Skunk, the DesMoines, the Little 
+Figure 1 . The Mississippi River Basin and general area of flooding streams, June to August 1993. 
+Introduction 1
+
+=== page 8 ===
+�
+Sioux, and the Nishnabotna River Basins in Iowa; on 
+the Mississippi River at Keokuk, Iowa; in the James 
+River Basin in North and South Dakota; in the Platte 
+River Basin in Nebraska; in the Kansas River Basin 
+in Kansas ; in the Grand RiverBasin in Missouri; and 
+along the Missouri River from St. Joseph to Boonev­
+ille, Missouri. Unusually high flooddischarges were 
+recorded at other locations throughout the area of 
+flooding. The flooding also was unusual for its long 
+duration and widespread and severe damage. At St. 
+Louis, Missouri, the Mississippi Riverreached flood 
+stage on June 26 and was still above flood stage in 
+mid-August. Millions ofacres ofagricultural and 
+urban lands in the upper Mississippi Basin were inun­
+dated for weeks, and unofficial damage estimates 
+exceeded $10 billion. 
+Purposeand Scope 
+As the principal Federal agency responsible 
+for the collection of streamflow data, the USGSoper-
+ates anetwork ofabout 7,300 continuous-record 
+streamflow-gaging stations throughout the Nation. 
+These streamflow records, some of which extend 
+back to the 19th century, formthe basis for the discus-
+sion of the 1993 floodin this report. This report 
+describes the flooding inthe upperMississippi River 
+Basin frommid-June through early August 1993 and 
+the peak discharges at selected sites. Peak discharges 
+for the 1993 flood are compared with previous maxi-
+mum discharges and, for selected sites with long peri­
+ods ofrecord, are graphically compared with all 
+previously known annual peak discharges. 
+Flood Recurrence Interval 
+For comparative purposes, flood-peak dis­
+charges are referenced to a specific recurrence inter­
+val or probability of occurrence. The recurrence 
+interval is the average number ofyears between 
+occurrences ofannual peak discharges that equal or 
+exceed a specified discharge. For example, a dis­
+charge that has a 100-yearrecurrence interval is so 
+large that an equal or greater annual peak discharge is 
+expected, on average, only once in any 100-year 
+period. Because ofthe random nature of flood 
+events, the times between annual peakdischarges of a 
+certain magnitude are farfrom uniform; a large flood 
+in one year does notpreclude the occurrence ofan 
+even larger flood the next year. In any given year, 
+2 Flood Discharges in the Upper Mississippi River Basin, 1993 
+the annual peak discharge has 1 chance in 100 of 
+equaling or exceeding the 100-yearflood (U.S. Inter­
+agency Advisory Committee on Water Data, 1982). 
+Recurrence intervals for the 1993 flood peaks 
+presented in this report are generally determined by 
+using the most current published USGSflood 
+frequency reports for States in the area offlooding. 
+ForMinnesota, South Dakota, Nebraska, and Kansas, 
+however, published flood-frequency reports do not 
+include recent data; consequently, the recurrence 
+intervals for the 1993 peak discharges are based on 
+unpublished flood-frequency analyses archived in the 
+USGS District offices in these States. Recurrence 
+intervals for the 1993 peak discharges on the Kansas 
+River, the Missouri River, and Mississippi Riverare 
+based on unpublished flood-frequency analyses com­
+pleted by the U.S . ArmyCorps ofEngineers (Gary 
+Dyhouse, St. Louis District, U.S . ArmyCorps of 
+Engineers, 1993, written commun. ; Jerry Buehre, 
+Kansas City District, U.S . ArmyCorps ofEngineers, 
+1993, written commun.) . 
+For this report, recurrence intervals have been 
+categorized in ranges as follows: from 10 to 50 years, 
+greater than 50 to 100 years, and greater than 100 
+years. Flood-frequency relations for streamflow-gag­
+ing stations in the area offlooding are expected to be 
+updated on the basis of 1993 peak-discharge data. 
+CAUSES ANDCHRONOLOGY OF 
+FLOODING 
+The area ofsignificant flooding in the upper 
+Mississippi River Basin from mid-June to early 
+August 1993 includes southern Minnesota, southwest 
+ern Wisconsin, Iowa, western Illinois, northern 
+Missouri, southern North Dakota, and eastern parts of 
+South Dakota, Nebraska, and Kansas. 
+Climatic Conditions 
+The areal extent and magnitude of the 1993 
+Mississippi Riverfloodwas due to a persistent wet­
+weather pattern that was throughout the upper Mid 
+western United States for at least 6 months preceding 
+the flood. This persistent pattern resulted from an 
+eastward-flowingjetstream that extendedfrom cen­
+tral Colorado northeastward across Kansas to north-
+ern Wisconsin (National Weather Service, 1993). 
+Because ofthis jetstream, a weather-frontcon­
+vergence zoneformed across the upperMidwestern
+
+=== page 9 ===
+�
+United States during the spring and summer months 
+that preceded the flood. Moist, warmair from the Gulf 
+ofMexico was drawn northward along this jetstream 
+where it collided with cooler air masses drawn outof 
+central Canada. The resultant unstable air masses per-
+sisted throughoutthe flooded area during spring and 
+summer 1993 (National Weather Service, 1993). The 
+climatic conditions that preceded this floodwere 
+remarkably similar to those that preceded the last large 
+flood onthe upper Mississippi River in April 1973 
+(Chinn and others, 1975). 
+Antecedent Hydrologic Conditions 
+Inmany parts ofthe flooded area, rainfall totals 
+for January through July 1993 were one andone-half 
+to two times the January-through-July normal precipita 
+tion for 1961 to 1990 (David Miskus, National 
+Weather Service, written commun., 1993; fig. 2) . For 
+Iowa, which is centrally located in the area of flooding, 
+November 1992 to April 1993 was the second wettest 
+November-to-April period in 121 years ofrecord. 
+Intense rainfall in late March and early April caused 
+serious, localized flooding in the Cedar River Basin in 
+Iowa, the Rock River Basin in Illinois, and the Big 
+Sioux River Basin in South Dakota. 
+Rainfall and runoff were above average 
+throughout the flooded area from April to June 1993, 
+and streams were generally bankfull at the end of 
+June. The monthly discharge volumes for the Missis­
+sippi River at Keokuk for April through June were 
+more than 200 percent ofnormal (April-June 1961-
+90). By late June, most flood-control reservoirs in 
+the upper Mississippi River Basin were at or near 
+capacity, and soils throughout the flooded area were 
+saturated from excessive precipitation . 
+Chronology of the Juneto August 1993 
+Flooding 
+The magnitude and timing ofseveral rain-
+storms in mid-June and July, combined with wet ante­
+cedent climatic conditions, were the principal causes 
+ofthe severe flooding in the upper Mississippi River 
+Basin. To illustrate the influence ofthe timing ofrun-
+off from these storms on the peak discharge on the 
+Mississippi River, the peak discharges and their dates 
+ofoccurrence for selected streamflow-gaging stations 
+in the general area of flooding are shown in figure 3. 
+During June 17-18, 2 to 7 inches ofrain fell 
+throughout southern Minnesota, northern Iowa, and 
+southwestern Wisconsin. Runofffrom this storm 
+causedflooding on the Minnesota and the Mississippi 
+Rivers in Minnesota and the Chippewa and the Black 
+Rivers in Wisconsin. As a result of these floodwa­
+ters, the discharge ofthe Mississippi River at Clinton, 
+Iowa, peaked on July 5, 1993 (fig 3). 
+Two separate storms in early July caused 
+large-scale flooding in Iowa. During the first storm 
+on July 4-5, 2 to 5 inches ofrain fell in central Iowa 
+and caused lowland flooding on the Iowa, the Skunk, 
+and the Des Moines Rivers. During the second storm 
+on July 8-9, 2 to 8 inches ofrain fell in central Iowa. 
+Rivers throughout central Iowa had not receded from 
+the July 4-5 storm, and the three majorreservoirs in 
+this partofthe State were at capacity. The runoff 
+from this storm, combined with the runoff from the 
+July 4-5 storm, caused record or near-record peak dis­
+charges at streamflow-gaging stations throughout the 
+Iowa, the Skunk, the Raccoon, and the Des Moines 
+River Basins. The floodwaters from these rivers 
+entered the Mississippi River at about the same time 
+as the flood peak from the late June storm in northern 
+basins reached Keokuk (fig. 3). The coincident tim­
+ing of the flood peaks fromthese tributary rivers 
+increased the peak discharge on the Mississippi River 
+and aggravatedflooding on the Mississippi River 
+from Davenport, Iowa, to St. Louis. The discharge 
+on the Mississippi River at St. Louis that resulted 
+from these combined floodwaters peaked on July 20. 
+On July 15-16, 2 to 7 inches of rain fell in 
+eastern North Dakota and western Minnesota and 
+caused flooding in the upper reaches ofthe Minne 
+sotaRiver Basin in Minnesota andthe James River 
+Basin in North Dakota. Although peak discharges 
+from this stormwere not as large in the lower reaches 
+ofthese basins as the peak discharges oflate June, 
+the floodwaters from the James River added to the 
+flooding of late July on the Missouri River. 
+From July 22 to 24, 2 to 13 inches ofrain fell 
+in parts ofNebraska, Kansas, Missouri, Iowa, and Illi­
+nois. The runoff from this storm caused record peak 
+discharges on the Platte River in Nebraska and con­
+tributed large flows to previously filled reservoirs in 
+the Kansas River Basin in Kansas. Discharges also 
+were near-record on the Nishnabotna River in Iowa 
+and the Illinois River in Illinois. Peak discharges on 
+the Kansas River were the largest since 1951, which 
+is before significant riverregulation began. 
+Causesand Chronology of Flooding 3
+
+=== page 10 ===
+�����
+Before the July 22 to 24 storm, the Missouri Riverin North and South Dakota, the Big Sioux 
+River was at or near flood stage as a result oflarge Riverin South Dakota, and the Little Sioux River in 
+tributary inflows earlier in the month from the James Iowa. As a result, floodwaters from the Platte and 
+100° 95° 90, 
+40° 
+EXPLANATION 
+I Area of flooding streams 
+-200-Line of equal total precipitation for 
+January through July, 1993,as 
+percentage of the 30-yearpre 
+cipitation normal forJanuary 
+throughJuly, 1961-90-Hachures
+indicate closed areasof lesser 0 100 200MILES
+I I
+precipitation. Interval 50 percent 0 100 200KILOMETERS 
+Figure2. Arealdistribution of total precipitation as apercentage of normal in the area of flooding in the upper Mississippi River 
+Basin, January to July 1993. 
+Flood Discharges in theUpper Mississippi River Basin, 1993
+
+=== page 11 ===
+the Kansas Rivers caused record or near-record peak 
+discharges on the Missouri River at streamflow-gag­
+ing stations downstream from the confluence of the 
+Platte River. The flood peak on the Missouri River 
+reached Hermann, Missouri, on July 31 (fig. 3) . The 
+peak discharge from the Missouri River caused a sec­
+ond and greater peak discharge at the streamflow-gag­
+ing station on the Mississippi River at St. Louis on 
+August 1 . 
+Flood conditions on the Mississippi River dif­
+fered above and below the confluence ofthe Ohio 
+River. At Thebes, Illinois, just upstream from the 
+confluence, severe flooding on the Mississippi River 
+peaked on August 7. Downstream from the conflu­
+ence, flooding on the Mississippi River was not 
+severe because ofless-than-average discharge contrib­
+uted by the Ohio River and a substantially larger 
+channel capacity in this reach ofthe Mississippi 
+River. The discharge of the Ohio River was less than 
+average during July and August as a result ofgener­
+ally dry conditions and low reservoir outflows 
+throughoutthe Ohio River Basin. 
+PEAK DISCHARGES FORTHE 1993 
+FLOOD 
+Flood data for 154 streamflow-gaging stations 
+in the areaofflooding are listed in table 1 (at end of 
+report), and thelocations ofthe streamflow-gaging sta 
+tions and theranges ofcomputed recurrence intervals 
+forthe 1993 peak discharges are showninfigure 4. 
+SouthSkunkRiver below 
+Raccoon River at Van Meter, Iowa SquawCreeknearAmes,Iowa Mississippi River at St. Paul, Minn. 
+Q=70,200 cubicfeet persecond Q=25,300 cubic feet per second Q= 104,000 cubicfeet persecond 
+July 10, 1993 July 9, 1993 June 26, 1993 
+Minnesota River near Jordan,Minn. 
+Q=92,200 cubicfeet persecond Mississippi RiveratClinton, Iowa 
+June 24, 1993 Q= 245,000cubic feet persecond 
+95° July 5, 1993 
+Kansas River at Topeka,Kansas 
+Q= 166,000cubic feet persecond 
+July 25, 1993 
+Mississippi River at Keokuk,Iowa 
+Q=435,000cubicfeet persecond 
+July 10, 1993 
+Missouri River at Hermann, Mo. 
+Q=750,000cubicfeet per second 
+July 31, 1993 
+EXPLANATION€ Mississippi River at St . Louis, Mo. 
+Q=1,080,000cubic feet persecond 
+Area of flooding streams August 1, 1993 
+-. .-Boundaryof Mississippi RiverBasin 
+Streamflow-gaging station 
+Figure 3. Peakdischarges (Q) and dates of occurrence for the 1993 flood at selected streamflow-gaging stations in the 
+upper Mississippi River Basin. 
+Peak Discharges for the1993 Flood 5
+
+=== page 12 ===
+�
+45o 
+400 
+Streamflow-gaging station and number, 
+and ranges of recurrence intervals 
+for 1993 peak discharge 
+IL6 10 to 50 years 100 200MILES 
+I I®9 Greater than 50 to 100 years 100 200KILOMETERS 
+-12 Greater than 100 years 
+Figure 4. Location of selected streamflow-gaging stations and ranges in recurrence interval for the 1993 peak discharges in the 
+upper Mississippi River Basin. 
+6 Flood Discharges in the Upper Mississippi River Basin, 1993
+
+=== page 13 ===
+������
+z
+Cl) 0 80 
+0Z
+Z0 
+Nw 60Z) Cn 
+O¢ xw~a 
+?w 40 
+ww w 
+Cr U 
+am 20 x~ 
+00 0 
+1900 1920 1940 1960 1980 2000 1800 1850 1900 1950 2000 
+Raccoon River at Van Meter, Iowa Mississippi at Keokuk, Iowa 
+n^ 95, 
+0. 
+EXPLANATION 
+Area of flooding streams 
+-. .-Boundaryof Mississippi River Basin 
+Streamflow-gaging station 
+U) 0 1,500
+Z 00
+a 0	 Oz 
+z0 
+co w Z) U) rn w 
+O¢ Z) U) 
+xw O¢ 1,000 
+~a	 xwPa 
+-w zF­
+ww -w 
+w ww
+QU	 a w 
+500Q0
+2m 2 m 000U Q0 
+00 _00w 
+0 
+1800 1850 1900 1950 2000 1800 1850 1900 1950 2000 
+YEAR YEAR 
+Missouri River at Boonville, Missouri Mississippi River at St Louis, Missouri 
+Figure5. Historic peak discharges and peakdischarges for the 1993 flood at selected streamflow-gaging stations in the upper 
+Mississippi River Basin. 
+Peak Discharges for the 1993 Flood 7
+
+=== page 14 ===
+��
+Criteria for Selection 
+The streamflow-gaging stations that are shown 
+in figure 4 and table 1 generally are located on major 
+streams and had peak discharges with recurrence 
+intervals of 10 years or greater from June to August 
+1993 . After additional stage-discharge analyses are 
+completed, some June to August 1993 peak dis­
+charges might be updated, and some additional 
+streamflow-gaging stations, where 1993 peak dis­
+charges occurred during the antecedent hydrologic 
+months ofMarch to Mayand secondary peak dis­
+charges occurred from June to August, maybe identi­
+fied. 
+Although the focus of this report is on peak dis­
+charge, data on peak stage also are included in table 1 
+because peak stage is the primary indicator ofover 
+bank flooding and is used to definethe limits ofinun­
+dation. The inclusion ofpeak-stage data is ofparticu­
+lar interest for several sites on the Mississippi and the 
+Missouri River mainstems, where the peak stages in 
+1993 substantially exceeded the previous maximum 
+known stages. Because ofthe effect ofman-made and 
+natural changes in the channel and flood plain, some 
+sites that had record stages in 1993 had less-than­
+record peak discharges. 
+Comparison With Historic Floods 
+As shown in table 1, 41 streamflow-gaging sta­
+tions in the area offlooding had record peak dis-
+charges in 1993. In addition, 15 other stations had 
+peak discharges that exceeded theprevious maximum 
+regulated discharge. At 45 stations, peak discharges 
+had recurrence intervals ofgreater than 100 years. 
+Historic annualpeakdischarges and 1993 peak 
+discharges at four streamflow-gaging stations that have 
+long records ofdischarge are shownin figure 5 . As 
+shown in the figure, the 1993 peak discharge for the 
+Raccoon River at VanMeter, Iowa, is remarkable 
+because it was almost twice as large as any previous 
+peak discharge in almost 80 years ofrecord. 
+At two sites on the Mississippi River, the 1993 
+peak discharges were recordor near-record discharges. 
+The 1993 peak discharge forthe Mississippi River at 
+Keokuk was substantially greater than previous record 
+peak discharges in 1973 and 1851 . Although the 1993 
+peak discharge for theMississippi River at St. Louis 
+was not arecorddischarge, it was substantially larger 
+8 Flood Discharges in the Upper Mississippi RiverBasin, 1993 
+than that forthe large flood of 1973. The 1993 peak 
+discharge forthe Mississippi Riverat St. Louis was 
+also slightly greater than that in 1903 and only slightly 
+less thanthe estimated record peak discharge in 1844. 
+The 1993 peakdischarge forthe Missouri River 
+at Boonville, Missouri, also was a record discharge, 
+which exceededprevious historic flood-peak dis­
+charges in 1951, 1903, and 1844. Because floodwaters 
+upstream fromLewis and Clark Lake were contained 
+in 1993 by the Missouri River dam system, the large 
+peak discharge at Boonville is particularly notable. 
+At all four sites shown in figure 5, the 1993 
+peak discharge was greater than the discharge with a 
+100-year recurrence interval. At the MississippiRiver 
+at St. Louis, the 1993 peakdischarge was slightly 
+greater than the discharge with the 100-yearrecurrence 
+interval. Atthe Raccoon River at Van Meter, however, 
+the 1993 peak discharge was about40 percentgreater 
+thanthe discharge with a 100-year recurrence interval. 
+SELECTED REFERENCES 
+Chin, E.H., Skelton, J., and Guy, H.P., 1975, The 1973 Mis­
+sissippi Riverbasin flood-Compilation and analyses 
+of meteorologic, streamflow, and sediment data: U.S. 
+Geological Survey Professional Paper937, 137 p. 
+Curtis, G.W., 1987, Technique for estimatingflood-peak 
+dischargesandfrequencies onrural streams in 
+Illinois : U.S. Geological Survey Water-Resources 
+Investigations Report 87-4207, 79 p. 
+Eash, D.A., 1993, Estimating design-flood discharges for 
+streams in Iowausing drainage-basin and channel­
+geometry characteristics : U.S . Geological Survey 
+Water-Resources Investigations Report 93-4062, 
+96 p. 
+Krug, W.R., Conger, D.H., andGebert, W.A., 1991, Flood­
+frequency characteristics ofWisconsin streams : U.S. 
+Geological Survey Water-Resources Investigations 
+Report 91-4128, 185 p. 
+National Weather Service, 1993, Midwesternfloods-Heat 
+and drought in the East: Special Climate Summary, 
+v. 93, no. l, 4 p. 
+U.S. Interagency Advisory Committee on Water Data, 
+1982, Guidelines for determining floodflow fre­
+quency: U.S. Geological Survey, Hydrology Subcom 
+mittee Bulletin 17B, 183 p. 
+Williams-Sether, Tara, 1992, Techniques for estimating 
+peak-flow frequency relations for North Dakota 
+streams: U.S. Geological SurveyWater-Resources 
+Investigations Report 92-4020, 57 p.
+
+=== page 15 ===
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+Table 1. Summaryof peakstages anddichargesat selected streamflow-gaging stations in the upper Mississippi River Basin 
+[mil, square miles; ft, feet; ft3/s, cubic feet per second; >, greater than] 
+Flood data 
+Drainage Flood of June-August 1993 Previous maximum discharge 
+Peak Maximum 
+stage discharge Date 
+(ft) (ft3/s) 
+11 .78 4,300 09/1991 
+213 .35 4,730 304/1952 
+12.92 3,060 04/1952 
+314.58 5,520 307/1969 
+221 .68 35,100 04/1969 
+17 .50 25,200 06/1919 
+15.92 19,700 06/1957 
+211 .33 1,070 04/1985 
+17.79 930 04/1965 
+220.86 28,700 304/1969 
+8.96 1,340 03/1985 
+18.72 19,000 04/1965 
+21 .36 43,100 04/1965 
+22.72 24,700 304/1965 
+29.9 110,000 04/1881 
+19.78 920 06/1983 
+35 .07 117,000 06/1965 
+26 .01 171,000 04/1965 
+2 12.74 6,030 307/1990 
+14.01 36,100 04/1965 
+10.90 17,600 304/1986 
+18.80 46,000 08/1941 
+18.40 123,000 304/1967 
+23.80 48,800 09/1938 
+°15.46 65,500 304/1967 
+10.00 4,180 09/1942 
+Site Station num­
+ber number 
+05278930 
+05290000 
+05292000 
+05294000 
+05311000 
+05313500 
+05316500 
+05316570 
+05316700 
+05317000 
+05317200 
+05319500 
+05320000 
+05320500 
+05325000 
+05326100 
+05330000 
+05331000 
+05353800 
+05355200 
+05360500 
+05362000 
+05369500 
+05381000 
+05382000 
+05393500 
+Station name area Peak Peak 
+dis­(mil ) stage charge(ft)) W/O 
+Buffalo Creek neart 374 10.89 3,380 
+Glencoe, Minn. 
+Little Minnesota River 447 13.58 18,900 
+near Peever, S. Dak. 
+Minnesota River at 1,160 9.96 2,950 
+Ortonville, Minn. 
+Pomme De Terre River 905 9.57 2,400 
+at Appleton, Minn. 
+Minnesota River at 6,180 16.46 11,500 
+Montevideo, Minn. 
+Yellow Medicine Rivert 653 10.84 8,340 
+near Granite Falls, Minn. 
+Recurrence 
+Date interval 
+range 
+(years) 
+06/19 10- 50 
+07/25 >100 
+07/28 10- 50 
+07/10 10- 50 
+08/04 10- 50 
+06/21 10- 50 
+06/18 (>50)-100 
+06/17 > 100 
+06/17 (>50)-100 
+06/19 (>50)-100 
+06/20 >100 
+06/20 >100 
+06/20 10- 50 
+06/21 10- 50 
+06/21 (>50)-100 
+06/17 10- 50 
+06/24 (>50)-100 
+06/26 10- 50 
+06/17 > 10- 50 
+06/17 (>50)-100 
+06/21 10- 50 
+06/21 10- 50 
+06/23 10- 50 
+06/20 10- 50 
+06/21 > 100 
+06/21 10- 50 
+Redwood River near 
+Redwood Falls, Minn. 
+Beaver Creek at Beaver 
+Falls, Minn. 
+Spring Creek near Sleepy 
+Eye, Minn.
+Cottonwood River near 
+New Ulm, Minn. 
+Liattle Cottonwood River 
+near Courtland, Minn. 
+Wantonwan River near 
+Garden City, Minn. 
+Blue Earth River near 
+Rapidan, Minn. 
+Le Sueur River near 
+near Rapidan, Minn. 
+Minnesota River at 
+Mankato, Minn. 
+Middle Branch Rush River 
+near Gaylord, Minn. 
+Minnesota River near 
+Jordan, Minn. 
+Mississippi River at 
+St. Paul, Minn. 
+Straight River near 
+Faribault, Minn. 
+Cannon River at 
+Welch, Minn. 
+Flameau River near 
+Bruce, Wis. 
+Jump River at Sheldon, 
+Wis. 
+Chippewa River at 
+Durand, Wis. 
+Black River at 
+Neilsville, Wis. 
+Black River near 
+Galesville, Wis. 
+Spirit River at Spirit 
+Falls, Wis. 
+629 15 .73 12,600 
+194 14 .29 '2,750 
+31 .3 17.91 1960 
+1,280 18.87 24,200 
+230 10.46 9,540 
+812 15.89 14,400 
+2,430 13.32 20,300 
+1,100 13.33 11,500 
+14,900 30.11 75,600 
+68.5 19.93 1 1,380 
+16,200 33 .52 92,200 
+36,800 19 .13 104,000 
+442 11 .16 5,920 
+1,320 13.19 18,800 
+1,860 10.11 16,500 
+576 13.20 16,400 
+9,010 15.76 90,100 
+749 19.28 30,300 
+2,080 16.64 64,000 
+81 .6 7.4 2,700 
+See footnotes at end of table. 
+Table 9
+
+=== page 16 ===
+�
+Table 1 . Summary of peak stages and dicharges at selected streamflow-gaging stations in the upper Mississippi River 
+Basin-Continued 
+Flood data 
+Drainage Flood of June-August 
+Station name area Peak Peak 
+dis­(mil l stage charge Date 
+(ft)) MIA) 
+Wisconsin River at 4,020 27.48 44,400 06/21 
+Rothschild, Wis. 
+Wisconsin River near 8,090 18.16 59,100 06/24 
+Wisconsin Dells, Wis. 
+Baraboo River near 609 22.78 6,360 07/18 
+Baraboo, Wis. 
+Black Earth Creek at 
+Black Earth, Wis . 
+45.6 6.13 1,320 07/06 
+Wisconsin River at 
+Muscoda, Wis. 
+10,400 10.35 59,600 06/25 
+Sinsinawa River near 39.6 13.18 11,300 07/05 
+Menominee, Ill . 
+Galena River at 
+Buncombe, Wis. 
+125 16.7 16,000 07/06 
+Maquoketa River near 1,553 32.59 38,000 07/06
+Maquoketa, Iowa. 
+Mississippi River at 85,600 222.98 245,000 307/05
+Clinton, Iowa. 
+1993 Previous maximum dischargeSite Stationnum­ numberber 
+27 05398000 
+28 05404000 
+29 05405000 
+30 05406500 
+31 05407000 
+32 05414820 
+33 05415000 
+34 05418500 
+35 05420500 
+36 05422000 
+37 05427948 
+38 05429500 
+39 05431486 
+40 05432500 
+41 05433000 
+42 05448000 
+43 05451500 
+44 05451700 
+45 05452000 
+46 05453100 
+47 05454300 
+48 05454500 
+49 05455100 
+50 05455500 
+51 05455700 
+52 05463500 
+Recurrence Peakinterval stagerange 
+(years) (ft) 
+10- 50 5 18.46 
+10- 50 23.83 
+10- 50 6 ' 17.50 
+10- 50 6.58 
+10- 50 °11.48 
+(>50)-100 13.34 
+10- 50 19.57 
+10- 50 5 24.7 
+10- 50 24.65 
+10- 50 14.19 
+10- 50 8.54 
+10- 50 256.33 
+10- 50 7 12.85 
+10- 50 20.71 
+10- 50 15.74 
+10- 50 12.65 
+10- 50 20.47 
+10- 50 17.69 
+(>50)-100 20.00 
+> 100 19.79 
+10- 50 16.36 
+> 100 6 924.1 
+' 028.21 
+> 100 17.25 
+> 100 21 .45 
+> 100 20.27 
+10- 50 18.23 
+Maximum 
+discharge Date 
+MIA) 
+49,200 04/1965 
+72,200 09/1938 
+7,900 03/1917 
+1,750 07/1954 
+80,800 09/1938 
+11,600 06/1969 
+29,700 06/1969 
+48,000 06/1944 
+307,000 04/1965 
+31,100 06/1990 
+516 303/1975 
+867 304/1959 
+16,500 04/1973 
+22,000 07/1950 
+11,700 02/1948 
+9,300 04/1973 
+42,000 3 06/1918 
+12,000 08/1977 
+35,000 306/1947 
+30,800 303/1960 
+10,200 06/1990 
+6970,000 06/1851 
+`°26,900 07/1993 
+13,500 06/1982 
+20,000 09/1965 
+35,700 3 05/1974 
+19,300 07/1969 
+Wapsipinicon River 
+near DeWitt, Iowa. 
+Pheasant Branch at 
+Middleton, Wis. 
+Yahara River near 
+McFarland, Wis. 
+Turtle Creek at Carvers 
+Rock Road near 
+Clinton, Wis. 
+Pecatonica River at 
+Darlington, Wis. 
+East Branch Pecatonica 
+River near Blanchardville, 
+Wis. 
+Mill Creek at Milan, Ill . . . . 
+Iowa River at Marshall-
+town, Iowa. 
+Timber Creek near 
+Marshalltown, Iowa. 
+Salt Creek near Elberon, 
+Iowa. 
+Iowa River at Marengo,
+Iowa. 
+Clear Creek near 
+Coralville, Iowa. 
+Iowa River at Iowa City, 
+Iowa. 
+Old Mans Creek near 
+Iowa City, Iowa. 
+English River at Kalona, 
+Iowa. 
+Iowa River at Lone Tree, 
+Iowa. 
+Black Hawk Creek 
+at Hudson, Iowa. 
+2,330 12.86 24,100 07/09 
+18.3 8.92 '746 07/06 
+327 2 6.75 615 07/25 
+199 10.38 5,580 06/30 
+273 18.22 12,400 07/06 
+221 16.54 6,560 07/06 
+62.4 10.29 7,680 06/25 
+1,564 20.55 19,200 07/10 
+118 17.10 8,250 07/09 
+201 20.85 28,000 07/09 
+2,794 20.27 '39,000 07/19 
+98.1 14.82 6,910 07/06 
+3,271 28.52 828,200 08/10 
+201 18.58 127,000 07/06 
+573 22.55 '33,000 07/06 
+4,293 22.94 157,000 07/07 
+303 17.1 9,600 07/09 
+See footnotes at end of table . 
+10 Flood Discharges in the Upper Mississippi River Basin, 1993
+
+=== page 17 ===
+���������
+Table 1. Summary of peak stages and dicharges at selected streamflow-gaging stations in the upper Mississippi River 
+Basin-Continued 
+Flood data 
+Site Station Drainage Flood of June-August 1993 Previous maximum discharge 
+num­
+her number Station name area Peak Peak Recurrence Peak Maximum(mil) stage dis- Date interval stage discharge Date 
+�(years)
+range (ft) (ft3/s)(ft)) (ft/ss)e
+53 05465000 
+54 05465500 
+55 05467000 
+56 05469000 
+57 05470000 
+58 05470500 
+59 05471000 
+60 05471500 
+61 05472500 
+62 05474000 
+63 05474500 
+64 05476000 
+65 05476500 
+66 05476750 
+67 05480500 
+68 05481300 
+69 05481650 
+70 05481950 
+71 05482135 
+72 05482500 
+73 05483450 
+74 05483600 
+75 05484000 
+76 05484500 
+77 05485500 
+Cedar River near 
+Conesville, Iowa. 
+Iowa River at Wapello, 
+Iowa. 
+Pope Creek near 
+Keithsburg, Ill. 
+Henderson Creek near 
+Oquawka, Ill. 
+South Skunk River near 
+Ames, Iowa. 
+Squaw Creek at Ames, 
+Iowa. 
+South Skunk River below 
+Squaw Creek near 
+Ames, Iowa. 
+South Skunk River near 
+Oskaloosa, Iowa. 
+North Skunk River near 
+Sigoumey, Iowa. 
+Skunk River at Augusta, 
+Iowa. 
+Mississippi River at 
+Keokuk, Iowa. 
+Des Moines River at 
+Jackson, Minn. 
+Des Moines River at 
+Esterville, Iowa. 
+Des Moines River at 
+Humboldt, Iowa. 
+Des Moines River at 
+Fort Dodge, Iowa. 
+Des Moines River near 
+Stratford, Iowa. 
+Des Moines River near 
+Saylorville, Iowa. 
+Beaver Creek near 
+Grimes, Iowa. 
+North Raccoon River 
+near Newell, Iowa. 
+North Raccoon River 
+near Jefferson, Iowa. 
+Middle Raccoon River 
+near Bayard, Iowa. 
+Middle Raccoon River at 
+Panora, Iowa. 
+South Raccoon River at 
+Redfield, Iowa. 
+Raccoon River at 
+Van Meter, Iowa. 
+Des Moines River below 
+Raccoon River at 
+Des Moines, Iowa. 
+7,785 16.83 67,700 07/07 10- 50 16.85 70,800 `04/1961 
+12,499 29.53 '107,000 07/07 >100 28 .91 94,000 306/1947 
+174 229.08 6,860 07/24 10- 50 228 .61 8,900 304/1973 
+432 232 .58 30,100 07/25 (>50)-100 31 .05 34,600 07/1982 
+315 14 .15 '11,500 07/09 >100 13.90 8,630 306/1954 
+204 18 .54 '21,000 07/09 >100 15.97 12,500 06/1990 
+556 25.53 '25,300 07/09 >100 25.57 14,700 06/1975 
+1,635 25.10 20,400 07/15 10- 50 25.80 37,000 05/1944 
+730 24.72 22,600 07/06 (>50)-100 25.33 27,500 03/1960 
+4,303 23.68 54,400 07/10 >100 27.05 66,800 04/1973 
+119,000 27.15 '435,000 07/10 >100 21.0 360,000 06/1851 
+1,220 16.67 8,250 07/07 10- 50 19.45 15,700 04/1969 
+1,372 15.38 10,200 06/30 10- 50 17.68 16,000 04/1969 
+2,256 15.22 '19,000 07/13 >100 15.40 18,000 04/1969 
+4,190 15.73 31,000 07/14 10- 50 19.62 35,600 '04/1965 
+5,452 25.64 42,100 07/11 10- 50 29.7 57,400 06/1954 
+5,841 24.12 842,700 07/11 >100 924.50 860,000 06/1954 
+07/19 '020.72 930,100 06/1984 
+358 16.58 1 15,500 07/10 >100 14.73 7,980 06/1986 
+233 15.99 2,250 07/11 10- 50 16.73 2,850 06/1984 
+1,619 19.23 16,800 07/10 10- 50 22.3 29,100 06/1947 
+375 28.71 124,000 07/09 >100 24.70 14,600 307/1973 
+440 20.04 '22,400 07/09 >100 15.50 15,300 06/1986 
+994 26.98 '44,000 07/10 >100 529.04 35,000 07/1958 
+3,441 26.34 '70,200 07/10 >100 22.69 41,200 306/1947 
+9,879 34.29 1116,000 07/11 >100 "20.80 `77,000 06/1947 
+`°28.46 '°58,400 06/1984 
+See footnotes at end of table . 
+Table 1 1
+
+=== page 18 ===
+Table 1 . Summary of peak stages and dicharges at selected streamflow-gaging stations in the upper Mississippi River 
+Basin-Continued 
+Flood data 
+Site Station num­ numberber 
+78 05485640 
+79 05487980 
+80 05488500 
+81 05489000 
+82 05489500 
+83 05490500 
+84 05569500 
+85 05570000 
+86 05586100 
+87 06341800 
+88 06347500 
+89 06348000 
+90 06467600 
+91 06468170 
+92 06470000 
+93 06477150 
+94 06478052 
+95 06478390 
+96 06478500 
+97 06478513 
+98 06478540 
+99 06479000 
+100 06479980 
+101 06480000 
+102 06480400 
+103 06481000 
+Station name 
+Fourmile Creek at 
+Des Moines, Iowa. 
+White Breast Creek near 
+Dallas, Iowa. 
+Des Moines River near 
+Tracy, Iowa. 
+Cedar Creek near 
+Bussey, Iowa. 
+Des Moines River at 
+Ottumwa, Iowa. 
+Des Moines River at 
+Keosauqua, Iowa. 
+Spoon River at London 
+Mills, Ill . 
+Spoon River at Seville, Ill. . . 
+Illinois River at Valley 
+City, Ill. 
+Painted WoodsCreek near 
+Wilton, N. Dak. 
+Big Muddy Creek near 
+Almont, N. Dak. 
+Heart River near Lark, 
+N. Dak. 
+James River near Manfred, 
+N. Dak. 
+James River near Grace 
+City, N. Dak. 
+James River at James-
+town, N. Dak. 
+Rock Creek near Fulton, 
+S. Dak. 
+Enemy Creek near 
+Mitchell, S. Dak. 
+Wolf Creek near Clayton, 
+S. Dak. 
+James River near Scotland, 
+S. Dak. 
+James River near Yankton, 
+S. Dak. 
+Little Vermillion River near 
+Salem, S. Dak. 
+Vermillion River near 
+Wakonda, S. Dak. 
+Medary Creek near 
+Brookings, S. Dak. 
+Big Sioux River near 
+Brookings, S. Dak. 
+Spring Creek near 
+Flandreau, S. Dak. 
+Big Sioux River near Dell 
+Rapids, S . Dak. 
+Drainage 
+area PeakPeak(mil) dis­stage charge(ft)) (ft'/s) 
+92 .7 15.36 '6,400 
+342 30.11 25,300 
+12,479 24.16 8109,000 
+374 28.46 29,000 
+13,374 22.13 8112,000 
+14,038 32.66 8108,000 
+1,072 25.92 24,000 
+1,636 33.09 34,400 
+26,742 225.92 97,500 
+427 8.12 1,570 
+456 30.94 8,680 
+2,750 16.85 12,800 
+253 9.40 '2,600 
+1,060 13 .49 '3,520 
+2,820 13 .60 8 1,300 
+240 14.34 1,880 
+163 14.97 4,050 
+396 17.39 5,390 
+20,653 19.94 19,300 
+20,942 21 .15 15,600 
+78.6 11 .95 13,300 
+2,170 17.33 14,000 
+200 11 .78 13,300 
+3,898 13.44 11,300 
+63.2 16.84 '4,500 
+4,483 15.78 18,800 
+Flood of June-August 1993 Previous maximum discharge 
+Recurrence Peak Maximuminterval 
+range stage discharge Date 
+(years) (ft) (ft'/s) 
+10- 50 14.84 5,340 06/1974 
+>100 33.45 37,300 07/1982 
+>100 926.50 9155,000 06/1947 
+'018.11 '°42,600 06/1984 
+10- 50 34.61 96,000 07/1982 
+>100 ' 922 9140'000 305/1903 
+'14.64 '47,800 06/1984 
+>100 5 927.85 9 146,000 06/1903 
+`028.02 '72,200 04/1973
+10- 50 28.03 41,000 06/1974 
+10- 50 233 .0 37,300 308/1924 
+10- 50 28.61 123,000 05/1943 
+10- 50 9.64 4,050 04/1979 
+10- 50 630.7 20,200 04/1950 
+10- 50 20.7 29,200 04/1950 
+> 100 29.20 "2,000 04/1979 
+10- 50 12.00 3,100 04/1969 
+> 100 ' 915.82 96,390 05/1950 
+Date 
+07/09 
+07/06 
+07/12 
+07/05 
+07/12 
+07/13 
+07/25 
+07/26 
+308/01 
+07/23 
+07/23 
+07/23 
+07/23 
+07/28 
+07/23 
+07/06 
+07/06 
+07/05 
+10- 50 
+10- 50 
+10- 50 
+'°8.76 10996 06/1983 
+410.21 2,040 04/1969 
+15.15 4,280 06/1984 
+18.01 6,520 06/1984 
+20.45 29,400 06/1984 
+24.34 26,400 06/1984 
+29.88 900 06/1984 
+17.62 17,000 06/1984 
+11 .27 2,590 06/1984 
+14.77 33,900 04/1969 
+15 .72 2,030 06/1984 
+16.47 41,300 04/1969 
+07/06 (>50)-100 
+07/08 10- 50 
+07/04 > 100 
+07/07 10- 50 
+07/05 10- 50 
+07/06 10- 50 
+07/03 (>50)-100 
+07/06 10- 50 
+See footnotes at end of table. 
+1 2 Flood Discharges in the UpperMississippi River Basin, 1993
+
+=== page 19 ===
+Table 1 . Summary of peak stages and dicharges at selected streamflow-gaging stations in the upper Mississippi River 
+Basin-Continued 
+Flood data 
+Flood of June-August 1993 Previous maximum dischargeSite Station num­
+ber number 
+104 06482020 
+105 06482745 
+106 06483500 
+107 06605850 
+108 06606600 
+109 06608500 
+110 06609500 
+111 06799230 
+112 06799350 
+113 06800500 
+114 06801000 
+115 06803500 
+116 06803510 
+117 06805500 
+118 06806500 
+119 06807000 
+120 06807410 
+121 06808500 
+122 06809500 
+123 06810000 
+124 06811500 
+125 06813500 
+126 06815000 
+127 06817000 
+128 06817700 
+129 06818000 
+Drainage
+Station name area Peak Peak 
+dis­(mil) stage charge Date 
+(ft)) (ft'/s) 
+Big Sioux River at North 5,216 23.84 18,000 07/07
+Cliff Avenue at Sioux Falls, 
+Recurrence 
+interval Peak 
+range stage 
+(years) (ft) 
+10- 50 27.45 
+(>50)-100 24.21 
+10- 50 '17.32 
+10- 50 19.58 
+10- 50 25.86 
+10- 50 28.17 
+10- 50 225 .22 
+(>50)-100 25 .72 
+10- 50 216.09 
+10- 50 '16.60 
+>100 19 .23 
+(>50)-100 26.15 
+(>50)-100 20.02 
+(>50)-100 12.45 
+>100 29.80 
+(>50)-100 1927.66 
+'°24.78 
+10- 50 22.12 
+10- 50 24.50 
+10- 50 27.43 
+(>50)-100 28 .27 
+(>50)-100 27 .65 
+>100 925.60 
+'024.40 
+10- 50 31.40 
+10- 50 25.3 
+>100 23.34 
+>100 926.82 
+`°23.83 
+Maximum 
+discharge Date 
+(ft3/s) 
+40,700 04/1969 
+62,000 05/1993 
+40,400 04/1969 
+13,100 06/1984 
+29,800 04/1965 
+22,500 06/1950 
+30,800 06/1990 
+15,100 06/1990 
+33,000 306/1969 
+100,000 06/1944 
+'2130,000 03/1993 
+28,200 06/1951 
+8,000 307/1985 
+144,000 306/1984 
+60,300 05/1950 
+9414,000 04/1952
+'°182,000 06/1984 
+26,400 09/1972 
+40,800 05/1987 
+38,000 09/1972 
+55,500 306/1947 
+164,000 05/1950 
+9358,000 04/1952
+'0242,000 06/1984
+71,600 10/1973 
+31,100 06/1947 
+26,600 09/1989 
+9397,000 04/1952 
+' 0207,000 05/1987 
+S. Dak. 
+Beaver Creek at Valley
+Springs, S. Dak. 
+Rock River near Rock 
+Valley, Iowa 
+Little Sioux River at Linn 
+Grove, Iowa. 
+Little Sioux River at 
+Correctionville, Iowa. 
+Soldier River at Pisgah, 
+Iowa. 
+Boyer River at Logan, 
+Iowa. 
+Union Creek at Madison, 
+Nebr. 
+Elkhorn River at West 
+Point, Nebr. 
+Elkhorn River at Waterloo, 
+104 24.19 62,000 07/05 
+1,592 19.77 28,500 07/12 
+1,548 20.77 '16,400 07/02 
+2,500 23 .82 22,600 07/18 
+407 27.58 '23,000 07/10 
+871 22 .20 25,500 07/10 
+174 25 .52 14,500 07/09 
+5,100 13 .94 29,500 07/09 
+6,900 15.28 30,400 07/11 
+84,200 21 .45 114,000 07/25 
+684 26.52 '30,000 07/24 
+43 .6 20.5 '8,300 07/23 
+85,800 11 .90 '160,000 07/25 
+241 31 .15 '70,000 07/23 
+Nebr. 
+Platte River at Ashland, 
+Nebr. 
+Salt Creek at Lincoln, 
+Nebr. 
+Little Salt Creek near 
+Lincoln, Nebr. 
+Platte River at Louisville, 
+Nebr. 
+Weeping Water Creek 
+at Union, Nebr. 
+Missouri River at 
+Nebraska City, Nebr. 
+West Nishnabotna River at 
+Hancock, Iowa. 
+West Nishnabotna River at 
+Randolph, Iowa. 
+East Nishnabotna River 
+near Red Oak, Iowa. 
+Nishnabotna River above 
+Hamburg, Iowa. 
+Little Nemaha River at 
+Auburn, Nebr. 
+Missouri River at Rulo, 
+Nebr. 
+Big Nemaha River at 
+Falls City, Nebr. 
+Nodaway River at 
+Clarinda, Iowa. 
+Nodaway River near 
+Graham, Mo. 
+Missouri River at 
+St. Joseph, Mo. 
+410,000 27.19 8 196,000 07/23 
+609 23 .53 '27,000 07/10 
+1,326 23 .60 22,100 07/23 
+894 21 .88 21,400 07/23 
+2,806 30.56 37,700 07/25 
+793 26.3 92,000 07/25 
+414,900 25.37 8307,000 07/24 
+1,340 29.80 59,000 07/06 
+762 22.92 27,900 07/22 
+1,380 26.14 '70,000 07/23 
+420,300 32.07 8335,000 07/26 
+See footnotes at end of table . 
+Table 13
+
+=== page 20 ===
+Table 1 . Summary of peak stages and dicharges at selected streamflow-gaging stations in the upper Mississippi River 
+Basin-Continued 
+Flood data 
+Site Station num­
+ber number 
+130 06820500 
+131 06851500 
+132 06853020 
+133 06879100 
+134 06881500 
+135 06884000 
+136 06887500 
+137 06889000 
+138 06891000 
+139 06893000 
+140 06895500 
+141 06897500 
+142 06897950 
+143 06898000 
+144 06899500 
+145 06902000 
+146 06903400 
+147 06903700 
+148 06904500 
+149 06905500 
+150 06909000 
+151 06934500 
+152 07010000 
+153 07020500 
+154 07022000 
+Station name 
+Platte River near Agency, 
+Mo. 
+Thompson Creek at 
+Riverton, Nebr. 
+Republican River at Guide 
+Rock, Nebr. 
+Kansas River at Fort 
+Riley, Kans. 
+Big Blue River at Beatrice, 
+Nebr. 
+Little Blue River at 
+Fairbury, Nebr. 
+Kansas River at Wamego, 
+Kans. 
+Kansas River at Topeka, 
+Kans. 
+Kansas River at 
+Lecompton, Kans. 
+Drainage 
+area Peak Peak 
+dis­(mil)	 stage charge(ft)) (ft3/s) 
+1,760 36.07 '60,800 
+279 14.65 12,000 
+22,090 15 .40 9,600 
+44,870 27.93 885,500 
+3,900 28.8 29,000 
+2,350 21 .22 25,500 
+55,280 27.33 8171,000 
+56,720 34.90 8166,000 
+58,460 24.65 8186,000 
+Flood of June-August 1993 Previous maximum discharge 
+Recurrence 
+Date interval 
+range 
+(years) 
+07/25 >100 
+07/18 (>50)-100 
+07/19 10- 50 
+Peak Maximum 
+stage discharge 
+(ft) (ft3/s) 
+35 .05 53,000 
+413 .22 12,200 
+620.73 29,200 
+Date 
+07/1965 
+07/1950 
+06/1957 
+07/1951 
+3 10/1973
+06/1984 
+07/1992 
+07/1951 
+10/1973 
+07/1951 
+10/1973 
+07/1951 
+10/1973 
+06/1844 
+09/1973 
+07/1951 
+307/1965 
+306/1947 
+307/1990 
+09/1992 
+06/1947 
+06/1947 
+09/1992 
+09/1992 
+06/1947 
+04/1973 
+306/1844 
+10/1986
+06/1844 
+3 10/1986 
+306/1844 
+306/1844 
+07/1844 
+07/26 10- 50 "30.53 9298,000 
+07/26 10- 50 
+07/27 10- 50 
+07/26 (>50)-100 
+07/25 10- 50 
+07/27 (>50)-100 
+07/27 > 100 
+07/28 > 100 
+07/08 > 100 
+07/09 10- 50 
+07/05 >100 
+07/06 10- 50 
+07/10 (>50)-100 
+07/05 (>50)-100 
+07/05 (>50)-100 
+07/25 10- 50 
+07/01 > 100 
+07/29 > 100 
+07/31 > 100 
+08/01 > 100 
+08/06 10- 50 
+08/07 10- 50 
+`°23.74 '059,400 
+31 .27 55,100 
+24.33 54,000 
+930.56 9400,000 
+'18.70 1072,900 
+940.80 9469,000 
+'027.29 ' 0130,000 
+930.23 9483,000 
+'022.73 '0140,000 
+938.0 69625,000 
+'°28.86 '°313,000 
+928.20 9549,000 
+'029.22 `°276,000 
+35.0 69,100 
+28.22 18,000 
+24.29 57,000 
+25.7 95,000 
+39.5 180,000 
+29.32 37,700 
+34.84 70,600 
+28.50 22,900 
+21 .96 31,900 
+932.82 9710,000 
+`°31 .85 `°334,000 
+935.50 9892,000 
+'035.79 '0549,000 
+43.23 -1,300'000 
+43.32 61,350,000 
+45.14 61 375,000 
+Missouri River at Kansas 485,200 48.87 8541,000 
+City, Mo. 
+Missouri River at 487,200 31 .15 '600,000 
+Waverly, Mo. 
+Grand River near 
+Gallatin, Mo. 
+Elk Creek near Decatur 
+City, Iowa. 
+Thompson River at 
+Davis City, Iowa. 
+Thompson River at 
+Trenton, Mo. 
+Grand River near 
+Sumner, Mo. 
+Chariton River near 
+Chariton, Iowa. 
+South Fork Chariton River 
+near Promise City, Iowa. 
+Chariton River at Novinger, 
+Mo. 
+Chariton River near 
+Prarie Hill, Mo. 
+Missouri River at 
+Boonville, Mo . 
+Missouri River at 
+Hermann, mo. 
+Mississippi River at 
+St. Louis, Mo. 
+Mississippi River at 
+Chester, 111. 
+Mississippi River at 
+At Thebes, 111. 
+2,250 41.5 '89,900 
+52.5 29.10 '21,500 
+701 20.53 30,300 
+1,670 23.00 56,000 
+6,880 242 .14 150,000 
+182 22.37 14,200 
+168 25 .30 19,500 
+1,370 25.71 21,500 
+1,870 21 .93 31,500 
+501,700 36.97 '750,000 
+524,200 36.97 8750,000 
+697,000 49.58 1,080,000 
+708,600 49.59 950,000 
+713,200 45.50 975,000 
+'Peak discharge for 1993 exceeds the previous maximum known discharge . 'Gage at different site and datum. 
+'Backwater. 'Peak discharge for 1993 exceeds the previous maximum known regulated discharge.
+'Date of maximum discharge. Maximum stage was on different date. 'Before regulation .
+'Gage at different site and same datum. `After regulation .
+'Gage at different datum. "About.
+'Estimated. "Estimated, includes bypass flow caused by ice jam upstream from site.
+14 Flood Discharges in theUpper Mississippi River Basin, 1993 -U .s . G .P .O . 1993-342-389 :80023

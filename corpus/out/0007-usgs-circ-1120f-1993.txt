@@ -1,0 +1,1808 @@
+0007 - Propagation and Composition of the Flood Wave on the Upper Mississippi River, 1993 (USGS Circular 1120-F)
+Source: text/usgs-circ-1120f-1993.pdf
+Pages: 28
+
+This file is a derived extraction of the item above; the manifest record in corpus/manifest.md is the authority for
+what the item is and what it is FOR. Regenerate with tools/extract_corpus.py.
+
+=== page 1 ===
+P R O P A G A T I O N 
+A N D 
+C O M P O S I T I O N 
+O F T H E 
+FLOOD WAVE 
+ON THE UPPER 
+MISSISSIPPI RIVER 
+9 9 3 
+U.S . GEOLOGICAL SURVEY CIRCULAR 1120-F 
+Click here to return to USGS publications
+
+=== page 2 ===
+Front cover-View ofHighway 67, West Alton, Missouri 
+(Srenco Photography, St . Louis, Mo.) 
+Back cover-View of Spirit of St. Louis Airport, 
+Chesterfield, Mo. (Srenco Photography, 
+St . Louis, Mo.) 
+Field Hydrologist making streamflow 
+measurements (U.S. Geological Survey)
+
+=== page 3 ===
+PROPAGATION AND COMPOSITION OFTHE FLOOD 
+WAVE ON THE UPPER MISSISSIPPI RIVER, 1993 
+By John A. Moody 
+Floods in the Upper Mississippi River Basin, 1993 
+U.S. GEOLOGICAL SURVEY CIRCULAR 1120-F
+
+=== page 4 ===
+U.S . DEPARTMENT OF THE INTERIOR 
+BRUCE BABBITT, Secretary 
+U.S . GEOLOGICAL SURVEY 
+GORDON P EATON, Director 
+For sale by U.S . Geological Survey, Information Services 
+Box 25286, Federal Center, Denver, CO 80225 
+Any use of trade, product, or firm names in this publication is for descriptive purposes only and 
+does not imply endorsement by the U.S . Government. 
+Published in the Eastern Region, Reston, Va . 
+Manuscript approved for publication February 14, 1995 
+Library of Congress Cataloging in Publication Data 
+Moody, John A . (John Alexander), 1944-
+Propagation and composition of the flood wave on the upper Mississippi River, 1993 / by 
+John A . Moody. 
+p . cm. -(Floods in the upper Mississippi River basin, 1993) 
+(U .S . Geological Survey circular ; 1120-F) 
+Includes bibliographical references (p. - ) . 
+Supt. of Docs. no. : I 19 .4/2: 
+1 . Floods-Mississippi River Valley. 2 . Flood routing-Mississippi River Valley . 
+I . Title . II . Series . III . Series: U.S . Geological Survey circular ; 1120-F. 
+GB 1217158 1993 ch . F 
+[GB 1399A .M71 
+551 .48'9'0977 s-dc20 
+[551 .48'9'09771 95-38379 
+CIP
+
+=== page 5 ===
+FOREWORD 
+During spring and summer 1993, record flooding inundated much ofthe upper Mississippi River 
+Basin. The magnitude ofthe damages-in terms ofproperty, disrupted business, and personal trauma­
+was unmatched by any other flood disaster in United States history. Property damage alone is expected 
+to exceed $10 billion. Damaged highways and submerged roads disrupted overland transportation 
+throughout the flooded region. The Mississippi and the Missouri Rivers were closed to navigation 
+before, during, and after the flooding. Millions of acres ofproductive farmland remained under water for 
+weeks during the growing season. Rills and gullies in many tilled fields are the result ofthe severe ero-
+sion that occurred throughoutthe Midwestern United States farmbelt. The hydrologic effects of extended 
+rainfall throughout the upper Midwestern United States were severe and widespread. The banks and 
+channels ofmany rivers were severely eroded, and sediment was depositedover large areas ofthe basin's 
+flood plain. Record flows submerged many areas that had not been affected by previous floods . Indus­
+trial and agricultural areas were inundated, which caused concern about the transport and fate ofindus­
+trial chemicals, sewage effluent, and agricultural chemicals in the floodwaters. The extent and duration 
+ofthe flooding caused numerous levees to fail . One failed levee on the Raccoon River in Des Moines, 
+Iowa, led to flooding ofthe city's watertreatment plant. As aresult, the city was without drinking water 
+for 19 days. 
+As the Nation's principal water-science agency, the U.S. Geological Survey (USGS) is in a unique 
+position to provide an immediate assessment of some ofthe hydrological effects ofthe 1993 flood. The 
+USGS maintains a hydrologic data network and conducts extensive water-resources investigations nation 
+wide. Long-term data from this network and information on local and regional hydrology provide the 
+basis for identifying and documenting the effects ofthe flooding. During the flood, the USGSprovided 
+continuous streamflow and related information to the National Weather Service (NWS), the U.S. Army 
+Corps ofEngineers, the Federal Emergency Management Agency (FEMA), and many State and local 
+agencies as partofits role to provide basic information on the Nation's surface- and ground-water 
+resources at thousands of locations across the United States . The NWShas usedthe data in forecasting 
+floods and issuing flood warnings . The data have been used by the Corps ofEngineers to operate water 
+diversions, dams, locks, and levees. The FEMA and many State and local emergency management agen-
+cies have used USGShydrologic data and NWS forecasts as part ofthe basis oftheir local flood-response 
+activities. In addition, USGShydrologists are conducting a series ofinvestigations to document the 
+effects ofthe flooding and to improve understanding ofthe related processes. The major initial findings 
+from these studies willbe reported in this Circular series as results become available. 
+U.S . Geological Survey Circular 1120, Floods in the UpperMississippi RiverBasin, 1993, con­
+sists of individually published chapters thatwill documentthe effects ofthe 1993 flooding. The series 
+includes data and findings on the magnitude and frequency of peak discharges; precipitation; water-qual 
+ity characteristics, including nutrients and man-made contaminants; transport of sediment; assessment of 
+sediment deposited on flood plains; effects ofinundation on ground-water quality; flood-discharge vol­
+ume; effects of reservoir storage on floodpeaks; stream-channel scour at selected bridges; extent offlood­
+plain inundation; and documentation ofgeomorphologic changes. 
+Director 
+Foreword III
+
+=== page 6 ===
+������������
+Contents 
+Foreword . .. . . .. .. . . . . . . . . . . . . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . .. . . .. .. . . . . .. .. .. . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . ..III 
+Abstract .. .. . . .. .. . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . . . .. .. .. . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. 1 
+Introduction . .. .. . . . . . . . . . . . . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . .. .. .. . . . . .. .. .. .. . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. .. .. .. . . .. 1 
+Purpose and scope . . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . .. . . .. .. .. . . . . .. .. . . . . . . .. .. ... . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. 3 
+Flood wave . . . . . . . . . . . . . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. . . . . .. .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. 5 
+Flood-wave routing . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. . . .. . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. 6 
+Acknowledgments . . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. . . .. . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . .. . . . . . . .. .. .. . . .. 7 
+Flood-wave propagation . . .. .. .. . . . . .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . .. . . .. . . . . .. .. .. .. . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. 8 
+Tributary inflow. . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . .. . . . . . . . . . .. .. . . . . . . . . .. .. . . .. 8 
+Flood-plain storage . . . . . . .. .. .. . . .. .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . ..10 
+Levee breaks . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . .. . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . ..10 
+Levee seepage. . . . . . . . . .. .. .. . . . . .. .. .. . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. 11 
+Flood-wave composition. . .. .. .. . . . . .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . .. .. .. . . ..12 
+Mississippi River at Prescott, Wisconsin. . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . ..13 
+Mississippi River at Winona, Minnesota . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . ..13 
+Mississippi River at Clinton, Iowa. . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . ..13 
+Mississippi River at Keokuk, Iowa . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . ..19 
+Mississippi River at St. Louis, Missouri . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . . . . . . . . . . . .. .. . . . . . . .. .. .. . . ..19 
+Summary . .. . . .. .. . . . . . . . . .. . . . . . . . . . .. . . . . . . . . .. .. .. . . . . .. .. .. . . . . .. .. . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. .. .. .. . . . . .. .. .. . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . .. . . . . . .20 
+Selected References .. . . . . . . . . . .. .. . . . . .. .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . . . . . . . . . . . . .. . . . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . . . .. .. . . . . . . . . .. .. . . ..21 
+FIGURES 
+1 . Mapshowing the upper Mississippi Riverand some of its tributaries.. . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. 2 
+2. Graph showing the mean discharge of the upperMississippi River . .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. .. .. .. .. .. 3 
+3-4. Graphs showing: 
+3. Composite flood wave on the upper Mississippi River. . .. .. .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . .. .. .. .. .. .. 6 
+4. Periods of open channel for the upperMississippi River, 1992 and 1993. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. 7 
+5.- 8. Graph showing: 
+5. Dailymean waterdischarge at seven stream-gaging sites on the upper Mississippi Riverfrom April 
+through August 1993 . .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. 8 
+6. Times and locations ofmaximumstages anddischarges during the 1993 floodon the upper 
+Mississippi River.. . . . . .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . . . . . . . .. .. . . .. 9 
+7. Daily meandischarge of the upperMississippi River at St. Louis, Missouri, and at Thebes, 
+Illinois . . . . . . . . . . . . .. .. .. . . . . .. .. .. .. . . .. .. . . . . . . . . . . .. . . . . . . . . . .. . . . . . . . . .. .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. . . . . . . . . .. . . . . . . . . . . .. . . . . . . . . . .. .. . . . . . . . . .. .. . . ..12 
+8. Water levels forthe Mississippi River nearThebes, Illinois, and forthe adjacent East Cape 
+Girardeau and Clear Creek Levee Districts, July through October 1993. . . . . . . . . .. . . . . . . .. . . .. . . . . .. .. .. .. . . .. .. .. .. . . . . ..12 
+9.-13. Graph showing flood-wave composition of the Mississippi Riverat: 
+9. Prescott, Wisconsin.. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . .. . . .. .. . . . . .. .. . . . . . . .. .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . .. .. .. .. .. . . ..19 
+10. Winona, Minnesota.. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . .. .. .. .. . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . .. .. .. . . .. .. .. .. . . . . ..19 
+11 . Clinton, Iowa . .. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . . . .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. . . .. . . ..20 
+12. Keokuk, Iowa.. .. . . . . .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . . .20 
+13. St. Louis, Missouri .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . .. . . .. .. .. .. .. . . .. .. .. . . . . . . .. . . . . . . . . . . .. . . . . . . . . . . . .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . . .21 
+TABLES 
+1 . Drainage areas, meandischarges, and 1993 flood discharges for the upper Mississippi Riverand some 
+of its tributaries.. .. . . . . .. .. . . . . . . .. .. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. . . . . . . .. .. .. . . .. .. . . . . . . . . .. .. . . . . . . . . . . 4 
+2. Flood-wave propagation speeds onthe upperMississippi River . . . . . . . . .. . . . . . . . . . . .. . . .. . . .. .. .. .. .. .. .. .. . . . . .. . . . . . . . . . . . . . . . . . . . . . .. .10 
+3. Some levee breaks on the upperMississippi River, July and August 1993 . . .. .. . . .. .. .. .. . . . . .. .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .11 
+4. Daily mean discharges for the upperMississippiRiverand some of its tributaries, June through 
+August 1993 . . . . .. .. . . .. .. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .. .. .. . . . . .. .. .. . . . . .. .. . . . . . . . . .. . . . . . . . . . . . .. . . . . . . . . . . .. . . . . . . .. .. .. . . .. .. .. .. .. . . .. . . . . . . . . . . .. . . . . . . . . . . . .14 
+Contents V
+
+=== page 7 ===
+����������������
+CONVERSIONFACTORS ANDVERTICALDATUM 
+Multiply 
+meter (m) 
+kilometer (km) 
+square kilometer (km-) 
+cubic meter (m3) 
+meter per second (m/s) 
+cubic meter per second (m3 /s) 
+kilometer per day (km/d) 
+By 
+Length 
+3.281 
+0.6214 
+Area 
+0.3861 
+Volume 
+35.31 
+Velocity 
+3.281 
+35.31 
+0.6214 
+To obtain 
+foot 
+mile 
+square mile 
+cubic foot 
+foot per second 
+cubic foot per second 
+mile per day 
+Sea level: In this report, "sea level" refers to the National Geodetic Vertical Datum of 1929 (NGVD of 1929)-a geodetic datum derived from a
+general adjustment of the first-order level nets of both the United States and Canada, formerly called Sea Level Datum of 1929.
+Meandischarge: In this report, "mean discharge" is the arithmetic meanof individual daily meandischarges during a period, usually the period of
+record ofthe stream-gaging station .
+Contents VI
+
+=== page 8 ===
+Propagation and Composition of the Flood Wave on the
+Upper Mississippi River, 1993 
+ByJohn A. Moody 
+Abstract 
+The historic flood of 1993 affected the 
+entire 1,358-kilometer reach ofthe upperMissis-
+sippi Riverfrom Minneapolis, Minnesota, to 
+Cairo, Illinois, but had no unusual effect on the 
+lowerMississippi Riverfrom Cairoto the Gulf of 
+Mexico. Theflood was preceded by heavy (200 
+percent ofnormal) spring rains that saturated the 
+ground in muchofMinnesota, Iowa,Illinois, and 
+Wisconsin. Theflooding beganin June along the 
+upper200kilometers ofthe river. Intense rains 
+that continued into summercaused the Minnesota 
+Riverin Minnesotaandthe Chippewa and the 
+BlackRivers in Wisconsinto contribute simulta­
+neously near-record discharges to the upperMis-
+sissippi Riverfrom June 22 to 25. Themaximum 
+discharge in the flood wave,whichpropagated 
+downstream at about0.58 meterper second, was 
+five to seven times the daily mean discharge at 
+stream-gaging stations on the upper Mississippi 
+River. As the flood wave propagated southward, 
+the rains shifted southward in concert. The phase 
+or propagationspeedof the flood wave was influ­
+enced largely by hydrologic factors, such as tribu­
+tary inflow and flood-plain storage, rather than 
+by hydraulic factors, such as water depth, chan­
+nel width, andchannel roughness. TheIowa and 
+the DesMoines Rivers contributed near-record 
+discharges to the Mississippi in early July. A 
+record (greater than 100-year recurrence interval) 
+discharge of 12,300 cubic meters per second 
+occurred on the Mississippi Riverat Keokuk, 
+Iowa, on July 10. This part ofthe flood wave 
+probably passed St. Louis, Missouri, on July 20, 
+but was not the majorflood peak there; by late 
+July, the rains had shifted further southwardinto 
+Missouri andcentral Illinois, whichcaused the 
+Missouri and the Illinois Rivers to contribute 
+about20,900 and 2,220cubicmeters persecond, 
+respectively, to the upperMississippi Riverat St. 
+Louis from July 29 to July 31. Notall ofthis 
+water passed Thebes, Illinois (about 70 kilome­
+ters upstream from Cairo, where the last down­
+stream-gaging and sampling station on the upper 
+Mississippi Riveris located), becausewaterleft 
+the channel of the upperMississippi River 
+upstream from Thebes throughfailed levees and 
+by seepage throughand underthe levees that did 
+not fail andwas stored temporarily on the flood 
+plain. Themaximum discharge at St. Louis 
+(29,700 cubic meters per second) occurred on 
+August 1 ; however, the maximumdischarge at 
+Thebes (27,700 cubic meters per second) did not 
+occuruntil August 7, whichwas about4days 
+later than the normal travel time of 2days. 
+INTRODUCTION 
+Floodwavesthat move down the upper Missis­
+sippi River, which ends at the confluence with the 
+Ohio River at Cairo, Illinois, are confined and altered 
+by humanand natural processes. Starting in Minneap­
+olis, Minnesota, amoderate flood cannot propagate 
+as a free wave under normal conditions because the 
+free surface ofthe river is controlled by a drop of96 
+meters (m) through a series of stairstep pools created 
+by backwater from 29 navigation dams that regulate 
+the 1,050-kilometer (km) reach of the riverto its con­
+fluence with the Missouri Rivernear St. Louis, Mis­
+souri (fig. 1). BetweenMinneapolis andClinton, 
+Iowa (532km), the flood plain is narrow andcon­
+fined by high bluffs on either side; the average depth 
+of the riveris 2m. Downstream from Clinton to St. 
+Introduction 1
+
+=== page 9 ===
+����������
+95 . 
+ao 
+St-Croix Fallen 
+rndcdam 1 ank C 
+thony Falls upper
+46°i ewer lock and dam 
+Preseott r'P` I 
+,t3 &Durand 
+pDodge 
+AWinoir~t_&Galesville 
+EXPLANATION 
+-"" -Boundary of upperand lower 
+Mississippi River 110 Navigation lock and damand 
+number ,Joslin Stream-gaging station and 
+Chester name shown on tributaries 
+5 ~~SS~ o Stream-gaging station and 
+`o~Ea name shown on the 
+1 Sny Levee 1fllssissippi River 
+Levee 
+Base map from U.S . GeologicalSurvey National Atlas, 1970 
+100 200 MILES 
+100 200 KILOMETERS 
+Figure 1 . Upper Mississippi Riverandsome of its tributaries. 
+2 Propagation and Composition of the FloodWaveon the Upper Mississippi River, 1993
+
+=== page 10 ===
+�������
+Louis (518 km), the flood plain widens, and a series 
+of levees ofdifferent heights has been built by Fed­
+eral, State, and local agencies. The levees normally 
+confine a moderate flood wave to a narrow channel 
+within the wider flood plain; the average depth ofthe 
+river is 3 m. From St. Louis to Cairo (315 km), where 
+the Ohio Riverjoins the upper Mississippi River, the 
+Mississippi is channelized by using lateral dikes and 
+revetments to maintain an average depth of7 m. 
+Because there are no navigation dams on this reach of 
+the river, flood waves can propagate freely. 
+The flood of June through August 1993, how-
+ever, was not a moderate flood. For floods this large, 
+the gates in the navigation dams are raised out ofthe 
+water, which prevents damage to structures and 
+machinery at the dam, and the river surface more 
+closely resembles a natural, smoothly changing sur­
+face than a series ofstairsteps. 
+C	 N _o 
+3 O 
+UN 
+a 
+c~u ~ m 
+m m a`~ 
+±? Q m f 0 
+o K
+2 3 
+YA d0 U a~. 0c 0 
+Flows from tributaries also affect the timing 
+anc: shape ofaflood wave, depending upon the propor­
+tion ofthe tributary's dischargeto the discharge ofthe 
+main river. The mean discharge ofthe upper Missis­
+sippi River, whichreceives a large percentage ofits 
+water from its many tributaries (fig. 2; table 1), 
+increases from 225 cubic meters per second (m3/s) 
+nearAnoka, Minnesota, at an average rate of4.2 m3/s 
+perriverkilometer. In contrast, the mean dischargeof 
+the lower Mississippi River (downstreamfrom the con­
+fluence with the Ohio River), which has fewer signifi­
+cant tributaries, increased from 13,500m3/s near Cairo 
+at an average rate ofonly 1 .6 m3/s per river kilometer. 
+Purpose and Scope 
+This report describes the propagation of the 
+flood wave of 1993 through the engineered channel of 
+0 0 
+Y 41 
+Y J 
+Cm 
+.CE d Q 
+2 c N N 
+U
+U O C
+o N a 
+a ~ in v 3 3 Y H 
+6,000 
+5,000 
+O 
+z O 
+U W U 
+QW 4,000a 
+W 
+w 
+U 
+3,000 
+U
+z_
+111
+C7
+Q
+x 2,000
+U
+U
+O
+z
+Ww
+1,000 
+0 I I I 
+1,400 1,200 1,000 800 600 400 200 0 
+DISTANCE UPSTREAM FROM THEOHIO RIVER, IN RIVERKILOMETERS 
+Figure2. Mean discharge of the upper Mississippi River in relation to distance upstream from theconfluence of the 
+upper Mississippi Riverwith the Ohio River. Seefootnote in table 1 for references that give the period of record for 
+the mean discharges shown here. 
+Introduction
+
+=== page 11 ===
+���
+Table 1 . Drainage areas, mean discharges, and 1993 flood discharges for the upper Mississippi River and some of its 
+tributaries 
+[km, kilometer; km2, square kilometer; m3 /s, cubic meter per second; na, does not apply. Mean discharge is given for the stream-gaging station closest to the 
+mouth of the tributary ; distances upriver from the Mississippi-Ohio River confluence are measured to the mouth of the tributary. See Parrett and others 
+(1993) for other flood discharges] 
+Percentage EstimatedDistance of mean 
+upriverfrom discharge of Maximumdaily travel time 
+mean to next 
+Stream-gaging Mississippi Drainage Period of Mississippi Mean dischargefor downstream 
+stations and Ohio area River 
+River (km2) record downstream 
+discharge June through Mississippi 
+confluence from mouth of 
+(m3/s) August River stream­
+(km) tributary (m3/s) gaging stations 
+(percent) (days) 
+Mississippi River near 1,391 49,500 1931-88 na 225 974 2 
+Anoka, Minn. 
+Minnesota River near 1,358 42,000 1934-88 34 107 2,570 2 
+Jordan, Minn. 
+St. Croix River at 1,307 17,700 1902-89 25 122 558 2 
+St. Croix Falls, Wis. 
+Mississippi River at 1,306 116,000 1928-89 na 486 3,680 3 
+Prescott, Wis. 
+Chippewa River at 1,228 23,300 1928-89 28 216 2,400 1 
+Durand, Wis. 
+Mississippi River at 1,168 153,300 1928-88 na 788 4,810 6 
+Winona, Minn. 
+Trempealeau River at 1,154 1,670 1913-19 1 .5 12.2 145 6 
+Dodge, Wis. 1934-89 
+Black River near 1,141 5,400 1931-89 5.8 49.3 1,540 6 
+Galesville, Wis. 
+Root River near 1,116 3,290 1912-88 1 .2 10.1 214 5 
+Lanesboro, Minn. 2 
+Upper Iowa River near 1,080 1,990 1936-89 1 .8 15.6 231 4 
+Dorchester, Iowa. 
+Wisconsin River at 1,015 26,900 1902-03 22 246 1,670 3 
+Muscoda, Wis. 1913-89 
+Turkey River at 978 4,000 1913-89 2.3 26.7 456 3 
+Garber, Iowa. 3 
+Grant River at 954 700 1934-89 0.4 4.7 111 2 
+Burton, Wis. 
+Platte River near 947 370 1934-89 0.2 2.8 73.9 2 
+Rockville, Wis. 
+Maquoketa River near 883 4,020 1913-89 2.4 29.0 827 1 
+Maquoketa, Iowa. 
+Mississippi River at 823 221,700 1873-1989 na 1,350 6,230 4 
+Clinton, Iowa. 
+Wapsipinicon River 815 6,030 1934-89 3 .1 43.2 609 4 
+near DeWitt, Iowa. 
+Rock River near 771 24,700 1939-88 11 176 986 4 
+Joslin, Ill . 
+Iowa River at 698 32,400 1914-89 11 197 3,000 2 
+Wapello, Iowa. 
+4 Propagationand Composition of the FloodWaveonthe Upper Mississippi River, 1993
+
+=== page 12 ===
+��
+Table 1 . Drainage areas, mean discharges, and 1993 flood discharges for the upper Mississippi River and some of its 
+tributaries-Continued 
+Percentage EstimatedDistance of mean Maximum travel timeupriver from dischargeof dailmean tt 
+Stream-gaging Mississippi Drainage Period of Mississippi Mean y o ne 
+stations and Ohio area River discharge discharge for downstream 
+River (km21 record downstream (m3/s) June through Mississippi 
+confluence from mouth of August River stream­
+(km) tributary (m3/s) gagingstations 
+(percent) (days) 
+Skunk River at 637 11,100 1914-89 4.2 68.8 1,300 1 
+Augusta, Iowa. 
+Mississippi River at 586 308,200 1878-1989 na 1,810 12,100 4 
+Keokuk, Iowa. 
+Des Moines River at 582 36,400 1904-05 8 165 3,060 4 
+Keosauqua, Iowa. 1912-89 
+Illinois River at 351 69,700 1938-88 24 620 2,220 2 
+Meredosia, 111 . 
+Salt River near 457 6,400 1922-89 1 .8 48.2 317 1 
+New London, Mo. 
+Missouri River at 314 1,358,000 1897-1989 46 2,290 20,900 1 
+Hermann, Mo. 
+Mississippi River at 289 1,805,000 1861-1989 na 5,140 29,700 2 
+St. Louis, Mo. 
+Meramec River near 259 9,810 1903-06 1 .8 89.0 918 1 
+Eureka, Mo. 1921-89 
+Kaskaskia River near 189 11,400 1969-88 2 107 252 1 
+Venedy Station, 111. 
+Mississippi River at 70 1,847,000 1932-89 na 5,600 27,700 0 
+Thebes,111. 
+'Institute ofRiver Studies, 1983. Travel times from river kilometers 289 to 938 averaged about0.7 m/s; this speed was extrapolated and used from river 
+kilometers 938 to 1,228. Travel times between river kilometers 1,306 and 1,391 were based on information furnished by Joseph Hess, U.S . Geological Sur­
+vey, Minnesota District. The extrapolation of travel times was supported by the conservation ofmass calculations (with errors of about 10 percent) for Mis­
+sissippi River stream-gaging sites . 
+`1912-14, 1916-17, 1941-85, and 1987-88. 31913-16, 1919-27, 1929-30, and 1932-89. 
+the upper Mississippi River from Minneapolis to 
+Thebes, Illinois, and the effects oftributary inflow and 
+flood-plain storage on this flood wave. The composi­
+tion ofthis flood wave, in terms ofcontributions from 
+tributaries, is described for five U.S. Geological Sur­
+vey stream-gaging stations between Minneapolis and 
+Thebes-Prescott, Wisconsin, Winona, Minnesota, 
+Clinton and Keokuk, Iowa, and St. Louis. 
+Flood Wave 
+The shapeofthe upper Mississippi Riverflood 
+wave of 1993 was not the simple, solitary floodwave 
+commonly depicted in textbooks, but was acomposite 
+shape that resulted from the summation ofmany 
+separate tributary flood waves. The length ofthe 
+composite flood wave was essentially the length ofthe 
+upper Mississippi River, or 1,358 km(fig. 3A). The 
+water surface ofthe composite floodwaveforJune 25 
+droppedsharply (600 kmupstreamfromthe Ohio 
+River; fig. 3A); this was caused by the hydroelectric 
+power dam at Keokuk, which always controls the flow 
+oftheriver (fig. 4). This compositefloodwave 
+comprisedthree secondary peaks that can be seenwhen 
+the average river slope of91 x 10-6 is removed (fig. 
+3B). The daily mean discharge ofsometributaries was 
+routed into and down theupper Mississippi River at an 
+assumed average water speed ofabout 0.7 meterper 
+second (m/s) (Institute ofRiver Studies, 1983). The 
+shapes ofthe tributary discharge floodwaves forJune 
+25 had abrupt increases at the mouthofthe tributary 
+Introduction 5
+
+=== page 13 ===
+����
+---
+--------
+(fig. 3C). The summation ofthetributary discharges in 
+theupper Mississippi Riverupstream from Keokukhad 
+a shape similar to the composite flood wave (fig. 3B) . 
+The composite flood wave for August 1 (date ofpeak 
+discharge at St. Louis at river kilometer 289) distinctly 
+showedthe inflow ofthefloodwaters from theMissouri 
+River (fig. 3B). OnAugust 1, numerous drops in the 
+JW 
+J 
+Q 
+W 
+m
+a 
+W 
+z 
+0 
+N 
+W 
+W 
+3 
+25 
+wy 20 
+sJ W 
+W - 15 zwga
+a 0 am 
+W Q>w 100> 
+do a 
+F W 
+= H 
+(0= H 
+0 1 
+1,500 1,000 
+5,000 
+0
+O C ---- ChippewaRiver " - " RockRiver
+U
+W
+U . . . . ... . . . Black River Iowa River 
+4,000 w Wisconsin River Summationof five tributary 
+0) flood wavesforJune 25,1993 
+W 
+F 
+3,000 
+U 
+In 
+U 
+Z 
+- 2,000 
+ULT 
+a 
+0 1,000 
+W 
+3 
+0 
+1,500 1,000 500 0 
+DISTANCE UPSTREAM FROM THEOHIO RIVER, IN KILOMETERS 
+elevation ofthe watersurface were evident as theriver 
+flowedthrough navigation dams between 800 and 1,358 
+kmupstream from the Ohio River. By this time, some 
+dams were operational andwere again regulating the 
+river. 
+Flood-Wave Routing 
+Many methods for routing a flood wave assume 
+unsteady flow in anopenchannel andno significant 
+tributary inflow, but thesetwo assumptions are not 
+applicableto theupper Mississippi River. Duringlow 
+water conditions when theriver is regulated by naviga­
+tion dams, aflood wave cannotpropagate freely through 
+an open channel. However, floodwaves canpropagate 
+freely in an open channel during high water conditions 
+when the navigationdamsnolonger control the water 
+level. During spring andlate fall 1992, whenthe water 
+discharge was closer to meanconditions, the periods of 
+highwateror openchannel typically lasted a few days 
+andoccurredonly in shortreaches ofthe river between 
+somedams. During summer 1993,the periods ofopen 
+channel were longerandencompassed theentire reach of 
+river from Minneapolis to Cairo, with the exception of 
+the hydroelectric powerdamat Keokuk (fig. 4). Tribu­
+tary inflowto the upperMississippi Riverwas significant 
+and hadtwo effects on the flood wave. First, tributary 
+inflow produced several secondarypeaks and increased 
+the magnitude ofthe maximum discharge floodpeak as 
+distance increased downstream (fig. 5). This contrasts 
+withthe assumption made by many routing methods that 
+thereis asingle floodpeak and that themagnitude ofthe 
+peak is constant ordecreases in the downstream direction 
+(Gilcrest, 1950; Lawler, 1964). Second, the wave-propa­
+gation speed (phase speed or speed ofthe stage or dis­
+charge peak)wasdetermined by thetributary inflows 
+rather than the hydraulic characteristics ofthe channel. 
+Figure3. Compositeflood wave on the upperMississippi River. 
+A, Shape of thefloodwavefor June25wasbasedonwater-level 
+elevations from 78stations. Data werefurnished bythe U.S. 
+ArmyCorpsof Engineers in the St. Paul,theRock Island, andthe 
+St. Louis Districts; B, Thewater-level heights aboveanarbitrary 
+planewith slopeequalto theaverageriver slopeof 91 x10-6 . The 
+flood wave propagates downstream between June 25 and 
+August 1, butits height at thehydroelectric damat Keokuk, Iowa 
+(at about 600 km), is held constant. Thesecond large peak for 
+August 1 is the Missouri Riverfloodpeak; CSome individual dis­
+chargeflood waves for tributaries upstreamfrom Keokuk. They 
+are plotted for June25 byassuming that thedaily mean dis-
+charge moves0.7 meterper second. Thesummation of these 
+tributary floodwavesapproximates the solid-line curve in 8. 
+6 Propagation and Composition of the FloodWaveon the Upper Mississippi River, 1993
+
+=== page 14 ===
+���
+Q
+Q
+1,400 i i i iFord Dam at Minneapolis, Minn. A 1992 = 
+1,200 Lake Pepin, Minn. andWis. 5A 
+1,000 10 
+800 15 
+wHw 600 - Union Electric Dan, at K-kuk, Iowa 
+O 20 
+J_ 2224 
+w 400 
+> Mel Price27 Qz 
+200 0 
+a: 0 w zQ 
+O_ 0 U2 1,400 OO J 
+z
+O O 
+w 1,200 H 
+OQw QzH 1,000a 
+W
+U
+z 800
+H 
+0 600 
+400 
+200 
+0 
+JAN FEB MAR APR MAY JUNE JULY AUG SEPT OCT NOV DEC 
+Figure 4. Periods of open channel forthe upper Mississippi River. A, 1992; 8, 1993. Blue represents times when 
+all control gates in the navigation dam were out of the water. Information was furnished by U.S. Army Corps of 
+Engineers in the St. Paul, the Rock Island, and the St. Louis Districts. 
+The flood-wave routing method used in this 
+paper for the upper Mississippi River, therefore, 
+assumed a steady, open-channel flow only fromJune 
+through August 1993 and only along shortreaches of 
+the river between tributaries. The travel times within 
+these reaches were based on field data published by 
+the U.S . ArmyCorps of Engineers for the upper Mis­
+sissippi River (table 1 ; Institute ofRiver Studies, 
+1983) and the conservation ofmass at upper Missis­
+sippi River stream-gaging stations. The steady open-
+channel flow was increased abruptly by inflow from 
+tributaries or decreased abruptly by outflow to flood­
+plain storage. Following these abrupt gains orlosses 
+ofwater, steady open-channel flow was assumed to 
+resume until the next tributary downstream entered 
+the upper Mississippi River. 
+Acknowledgments 
+The discharge information used to prepare this 
+report was providedby many U.S. Geological Survey 
+personnel from the Minnesota, the Wisconsin, the 
+Iowa, the Illinois, and theMissouri Districts. Although 
+Introduction 7
+
+=== page 15 ===
+35,000 
+0 
+30,000 
+z 
+OU w rn 
+w 25,000 
+a 
+rn 
+wt-w 20,000 
+Um 
+U 
+z 
+ui 
+15,000 
+0 
+2U 
+10,000
+0 
+w 
+a3 5,000 
+Mississippi River€ St. Louis, Missouri 
+Keokuk, Iowa 
+Clinton, Iowa 
+McGregor, Iowa 
+Prescott, Wisconsin 
+St. Paul, Minnesota 
+Anoka, Minnesota 
+. . . . . . . ... . . . . . II- / 
+. . . .... . . . . . . . . . . ... . . . . . .. 
+. ._ . . 
+. . . . . . .. . . . . .... . . . . . . . . . . 
+April May June July August 
+1993 
+Figure 5. Daily meanwater discharges at seven stream-gaging stations onthe upper Missis­
+sippi River from April through August 1993. 
+working extrahours during the flood period, they still 
+took time to satisfy numerous requests forthe data 
+required to make the calculations ofpercent composi­
+tion ofthe flood wave. 
+The U.S . ArmyCorps of Engineers provided 
+most of the stage information for at least 50 stations 
+along the upper Mississippi River. Several requests 
+required considerable time to fulfill or required search 
+ing of archived records . Some ofthese very helpful 
+people were E.G. Eaton and K.W. Willus in the St. 
+Paul District; W.H. Koelner, J.D. Bledsoe, B.J. Goo­
+drum, G.F. Gitter, and K.W. Finch in the Rock Island 
+District; D.M. Coleman, S.G. Farkas, and R.J. Kopsky, 
+Jr., in the St. Louis District; and S.A. Lehr and H.W. 
+Barton in the Memphis District. 
+The water-level information along Illinois 
+Route 3 in AlexanderCounty, Illinois, behind the East 
+Cape Girardeau levee, was provided by K.L. Bartelsm 
+eyer and B.G. Stout, Jr., of the Illinois Department of 
+Transportation, Division ofHighways. 
+Discussions with J.F. Sullivan of the Wisconsin 
+Department ofNatural Resources were instrumental in 
+the conception of this chapter. 
+FLOOD-WAVE PROPAGATION 
+Hydrologic factors, such as tributary inflow or 
+flood-plain storage, were more important than hydrau­
+lic factors, such as water depth, channel width, and 
+channel roughness, in determining the flood-wave 
+propagation speed. Water speed is not the same as 
+wave-propagation speed. The wave-propagation speed 
+was determined from the times and locations ofmaxi­
+mum stages or discharges in the regulated reach ofthe 
+upper Mississippi River. The general observed wave­
+propagation speed was 0.58 m/s foropen-channel con­
+ditions during the 1993 flood (fig. 6) . This compares 
+closely with the wave-propagation speed of 0.52 m/s 
+calculated from measurements given by Seddon 
+(1900) for the upperMississippi River flood ofApril 
+1881 when no navigation dams were present. 
+Tributary Inflow 
+The peak inflow from the tributaries ofthe 
+upper Mississippi Riverupstream from the Illinois 
+and the Missouri Rivers was nearly synchronous with 
+the arrival ofthe flood wave from upstream because 
+the areas ofintense rainfall moved southward as the 
+summer progressed (Wahl and others, 1993). This pat­
+tern ofinflow contrasts with the inflow from the Illi­
+nois and the Missouri Rivers, which lagged behind the 
+arrival ofthe upper Mississippi River flood wave by 
+about 2 weeks and caused the wave-propagation 
+speed to decrease from 0.58 to about0.08 m/s (fig. 6). 
+The average wave-propagation speed in the open-
+8 Propagation and Composition of the Flood Wave on the Upper Mississippi River, 1993
+
+=== page 16 ===
+�������
+Q
+1,400 
+w 
+w 
+0J 
+Y 
+IZW 
+Q
+Z 
+QW 
+Q 
+2O w x 
+O 
+W 
+Qwtr 
+a 
+wUZQHN 
+0 
+Minnesota R. -AR' 
+St . Croix R. ~~ 
+1,300 
+Chippewa R. O\\ 
+1,200 
+Black R.~ 
+0 \\ 
+1,100 O \\ 
+Wisconsin R. O \ 
+o O \1,000 
+900 
+800 
+700 
+600 
+500 
+400 
+300 
+200 
+100 
+w Discharge 
+O Stage 
+Maximum discharge 
+for thetributary 
+-
+0 I . . . . . . . . . . . . . . . . . . .    I . . . . . . . . ~\ . . . . . . . . 1. I, 
+June July August 
+1993 
+Figure 6. Times and locations of maximum stages and discharges during the 1993 flood on the upper Missis­
+sippi River. Maximum stages are shown by open circles, and maximum discharges, by solid circles. The 
+times and locations of maximum discharges for the tributary are labeled. The three segments of the dashed 
+line were fit visually to show the general trend. The slope of the three line segments is an estimate of the 
+flood-wave propagation speeds and are equal to 0.58, 0.08, and 0.42 m/s. 
+channel reach from St. Louis to Thebes increased to 
+about 0.42 m/s (fig . 6); this still was much,less than 
+the average of 1.6 m/s for previous high-water events 
+in 1993 (table 2). Along some reaches, however (for 
+example, 300-400,700-800,900-1,100, and 1,100-
+1,200 km upstream from the Ohio River), the wave­
+propagation speed was much higher than 0.58 m/s. 
+This higher speed usually was causedby the arrival of 
+the tributary inflow at the downstream end of a reach 
+ofthe upper Mississippi River at the same time that 
+the flood wave was arriving at the upstream end ofthe 
+same reach. Consequently, the time ofmaximum 
+stage or discharge coincided nearly simultaneously 
+along the entire reach ofthe river and resulted in high 
+wave-propagation speeds . 
+Anestimate ofthe wave-propagation speed 
+for a simple kinematic wave in an open channel is the 
+slope ofthe regression line for a plot ofdischarge as 
+a function ofcross-sectional area (Gilcrest, 1950). 
+These estimates of the predicted kinematic wave-
+propagation speed for stations on the upper Missis­
+sippi River (table 2) generally differ from the speeds 
+observed during the flood of 1993 and the speeds cal­
+culated from measurements during previous high-
+water events. This is because the significant tributary 
+inflow, not the hydraulic factors, determined the prop­
+agation speed ofthe flood wave, and numerous levee 
+breaks and seepage under andthrough the levees 
+delayed the arrival ofthe flood wave downstream by 
+removing water from the riverand storing it on the 
+floodplain. 
+Flood-Wave Propagation 9
+
+=== page 17 ===
+Table 2. Flood-wave propagation speeds on the upper Mississippi River 
+[km, kilometer; m/s, meterper second; numbers following ± symbol are standard deviations] 
+Distance upstream Wave propagation speed(m/s)
+Upper Mississippi Riverstream-gaging from the Ohio River 
+Predicted' Observed 1993 Previous high waterstations (km) flood2 events3 
+Regulated river: 
+Prescott, Wis. . . . . . . . . . . . . . . . . . . 1,306 0.92±0.73 0.58 
+Nodata. 
+Winona, Minn. . . . . . . . . . . . . . . . . . 1,168 .91-1.4 .58 
+Do. 
+. . . . . . . . . . . . .Pool 8, Wis./Minn.4 1,097-1,102 .69 .58 
+Do. 
+McGregor, Iowa . . . . . . . . . . . . . . . . 1,019 .88± .06 .58 
+0.59 
+Clinton, Iowa . . . . . . . . . . . . . . . . . . 823 2.3± .21 .58 
+1 .86 
+Keokuk,Iowa. . . . . . . . . . . . . . . . . . 582 1 .9± .15 .58 
+Open river: .65 
+St. Louis, Mo. . . . . . . . . . . . . . . . . . 289 3.0± .30 .42 
+1 .3±0.3 
+Chester, Ill. . . . . . . . . . . . . . . . . . . . 177 2.1± .12 .42 
+1 .9± .8 
+Thebes, Ill. . . . . . . . . . . . . . . . . . . . . 70 3.9± .28 .42 
+'From the slope of a regression line ofmeasured discharge as function ofa cross-sectional area. 
+2From slope of dashed lines (fig. 6), which is an average over several stream-gaging stations but listed for each station as the same value. 
+3From measurements of historic high water events of various magnitude previous to the flood of 1993 in the regulated river reach (Institute of River 
+Studies, 1983, Plate II) and for seven events previous to the flood of 1993 in the open-channel reach. 
+4Based on three measurements at different locations made on July 14 and October 18, 1991, and April 16, 1992. 
+Flood-Plain Storage 
+During the flood of 1993, water was stored on 
+flood plains because oftwo mechanisms-levee breaks 
+and levee seepage. No levee breaks occurred upstream 
+from Clinton, a few occurred between Clinton and St. 
+Louis, but the largest levee breaks occurred down­
+stream from St. Louis andcaused a delay in the arrival 
+of the discharge flood peak at Thebes. 
+Levee Breaks 
+Among the most dramatic pictures seen on 
+television and in the newspapers during the upper 
+Mississippi River flood of 1993 were those of 
+floodwaters raging through levee breaks and flooding 
+adjacent flood plains. The floodwalls that protect St. 
+Louis and East St. Louis, Illinois, held throughout the 
+flood and confined the river to a narrow channel near 
+the Gateway Arch at St. Louis. However, many levees 
+failed downstream from St. Louis (table 3) and allowed 
+water to flow onto the flood plain, thus decreasing the 
+discharge ofthe river at Thebes where natural bluffs 
+again confined the floodwaters to anarrow channel. 
+The plot of water discharge at St. Louis (fig. 7) has 
+been lagged 2 days (on the basis ofthe wave­
+propagation speed ofprevious high-water events in 
+1993) so that the two red shaded areas (in July and 
+August) between the water-discharge graphs for St. 
+Louis and Thebes represent the water volume stored 
+on the floodplain between St. Louis and Thebes. 
+These volumes of water stored on flood plains (fig. 7) 
+between St. Louis and Thebes were estimated to be 
+1 .36 x 109 m3 during July and an additional 
+1 .54 x 109 m3 during August. The volume ofwater 
+stored on floodplains also can be estimated by using 
+the approximate area protected by the levees that 
+broke and an assumed average depth (table 3) . A 
+generous estimate of the average depth is 6 m, but this 
+is still not enough to account for all the water stored 
+on the flood plain, which is based on the difference in 
+10 Propagationand Composition of the FloodWave onthe Upper Mississippi River, 1993
+
+=== page 18 ===
+���
+Table3. Some levee breaks on the upper Mississippi River, July and August 1993 
+[km, kilometer; kmz, square kilometer; m3, cubic meter; m, meter. Information between St. Louis, Missouri, and Thebes, Illinois, was provided by S.G. Farkas, 
+U.S. ArmyCorpsof Engineers, St. Louis District ; informationbetween Clinton and Keokuk, Iowa, was supplied by G.F. Gitter, U.S. ArmyCorps of Engineers,
+RockIsland District, November 19931 
+Distance of levee Approximatevolume of waterstored 
+breakupstream Date of break Approximate onthe floodplain for various assumed 
+depthsLevee from theOhio 1993 area protected (109 m)River (km2) 
+2-m deep 4-m deep 6-m deep 
+Clinton to Keokuk, Iowa 
+Green Island . . . . . . . . . . . . . . . . 879-882 July 2 29 0.06 0.12 0.17 
+Henderson Co. No. 3 . . . . . . . . . 663-668 July 1 9 .02 .04 .05 
+Green Bay . . . . . . . . . . . . . . . . . . 623-637 July 10 55 .11 .22 .33 
+Keokuk, Iowa, to St. Louis, Missouri 
+Meyer . . . . . . . . . . . . . . . . . . . . . 550-576 July 9 40 0.08 0.16 0.24 
+Indian Grave South and North . . 531-550 July 13 69 .14 .28 .41 
+Sny . . . . . . . . . . . . . . . . . . . . . . . 478-507 July 25 445 .89 1.78 2.67 
+St. Louis, Missouri, to Cairo, Illinois 
+St. Genevieve . . . . . . . . . . . . . . . 196 July 18 28 0.06 0.11 0.17 
+Kaskaskia . . . . . . . . . . . . . . . . . . 179 July 22 38 .08 .15 .23 
+Bois Brule . . . . . . . . . . . . . . . . . . 156 July 25 106 .21 .42 .64 
+Subtotal for July levee 174 0.35 0.68 1 .04 
+breaks. 
+Columbia . . . . . . . . . . . . . . . . . . 265 August 1 57 0.11 0.23 .34 
+Harrisonvillel . . . . . . . . . . . . . . . 249 August 2 188 .38 .75 1 .13 
+Subtotal for Augustlevee 
+breaks. 
+'Laterbreached deliberately atriverkilometer 212. 
+the discharge graphs for St. Louis and Thebes (fig. 7). 
+The levee breaks, therefore, probably do not account 
+forall the water stored on the flood plain; additional 
+water was stored by seepage through and under levees 
+that did not fail. 
+Levee Seepage 
+Although the levee breaks made national news, 
+the seepage ofwater through and under the levees also 
+was important. Levee breaks happen suddenly and 
+allow rapidinundation ofthe flood plain, whereas 
+seepage continues steadily for as long as the river 
+level is higher than that of the water in the adjacent 
+245 0.49 0.98 1 .47 
+floodplain protected by the levee. Seepage can con­
+tinue long after the flood peak in the riverhas passed 
+the levee (fig. 8). Forexample, although the flood peak 
+passedThebes onAugust 7, water continued to seep 
+under the 51-km-long levee that protectedthe East 
+Cape Girardeau (an area of38 km2) and the Clear 
+Creek (an area of73 km2) Levee Districts, which are 
+just upstream from Thebes, until September 25. The 
+seepage slowly raised the water level an additional 0.6 
+m (B.G. Stout, Illinois Department ofTransportation, 
+written commun., 1993) . The waterlevel behind the 
+levees rose even as theriver level was falling and in 
+spite ofpumps that were operating to lower the water 
+level. Homes and businesses behind the levees that 
+Flood-Wave Propagation 11
+
+=== page 19 ===
+�����
+32,000 
+0 zQU 
+a 28,000 
+ii W t-
+U 
+m 24,000
+U 
+z_ 
+W 
+a 
+U 20,000 
+s 
+W 
+16,000 
+DATE OF MAJORLEVEE BREAKANDAPPROXIMATE 
+AREA EACH LEVEE PROTECTED, IN SQUAREKILOMETERS 
+m m m co o nm N M r Nr 
+July August 
+1993 
+Figure 7. Daily mean discharge of the upper Mississippi River at 
+St. Louis, Missouri, and at Thebes, Illinois . The discharge at St. 
+Louis was plotted 2 days later to compensatefor the travel time 
+of water between the two stations. The red shaded area repre-
+sents the volumeof water lost between St. Louisand Thebes. 
+ForJuly, this volumewas 1 .36 x 109 cubicmeters, and for 
+August, it was 1 .54 x 109 cubic meters. 
+were dry on August 7 were flooded on September 25. 
+No measurements of the water level were made after 
+September 25, but the water level probably rose a lit­
+tle higher when a minor flood peak passed Thebes on 
+October 2. The river level did not drop sufficiently 
+below the water level behind the levees until Octo­
+ber 11, when the gates in the levees were opened, and 
+the water began to drain back into the river (R.R. 
+Colyer, East Cape Girardeau Levee District, oral com­
+mun., 1993) . If a conservative mean water depth of 
+about I mis assumed, then the volume ofwater 
+stored on the flood plain in these levee districts must 
+have been about 0.1 x 109 m3. If seepage in other 
+levee districts along the 217 kmofriver between St. 
+Louis and Thebes is allowed for, then an additional 
+0.2 to 0.3 x 109 m3 ofwatermayhave been storedon 
+the flood plain. This volume, when added to the 
+water stored from the levee breaks, may account for 
+the difference in discharge between St. Louis and 
+Thebes (fig. 7). The storage ofwater on the flood 
+plain explains the observation that the wave-propaga­
+tion speed between St. Louis and Thebes was slower 
+than the predicted speeds or the measured speeds of 
+previous high-water events that had no discharge 
+losses caused by levee breaks or seepage (table 2) . 
+FLOOD-WAVE COMPOSITION 
+Awaterbudgetwas constructed bycomputing 
+the discharge contribution from upstream tributaries to 
+the flood wave andcomparing it to themeasured dis 
+charge at five primary stream-gaging stations on the 
+upper Mississippi River-Prescott, Winona, Clinton, 
+Keokuk, and St. Louis. Forcomputationsoftributary 
+contributions during open-channel conditions fromJune 
+through Augustdischargesoftributaries and the dis­
+charges at stream-gaging stations on the upper Missis­
+sippi River upstream fromtheprimary gaging station 
+were laggedrelative to the downstream primary gaging 
+station (see travel times in table 1). The tributary and 
+upstream contributions were computed as percentages 
+ofthereported daily mean discharge at theprimary sta­
+tion (table 4) and not as percentages ofthe sum ofall 
+tributaries andthe upstream lagged discharges. There­
+fore, if some ofthe water that passedanupstream tribu­
+tary gaging station was later stored on the flood plain 
+and didnot reachthe downstreamprimary station, then 
+the sum ofthepercentages could be greater than 100, 
+and theamount that is greater than 100percentrepre-
+sents stored water (figs. 9-13). 
+The error in this percentage computation is a 
+function ofthe error in estimating the lagtime, the 
+error in the rating curve for each stream-gaging station, 
+106 
+105 Mississippi River at Thebes, Illinois 
+w 
+WJ 
+104 
+0 a 103 
+W 
+102 z 
+J W 
+WJ 
+Q 
+100 
+99 
+July August September October 
+1993 
+Figure 8. Water levels for the Mississippi River near Thebes, Illi­
+nois (black line), and for the adjacent EastCape Girardeau and 
+ClearCreek Levee Districts (red line) fromJuly through October 
+1993. Thewater level in the Levee Districts probably peaked
+between September 25 andOctober 11 (dashed extension of red 
+line). Water levels inside the levee were supplied by B. G. Stout, 
+Jr., of the Illinois Departmentof Transportation. 
+12 Propagation andCompositionof the FloodWaveon the Upper Mississippi River, 1993
+
+=== page 20 ===
+The photograph of thetruckabovewastaken on August 16, 
+1993, andtheone belowwastakenonOctober11, 1993, within 
+the East CapeGirardeau Levee District. See figure 8 for water 
+levels inside the levee district. Photographs were supplied by
+R.H. Meade, U.S. Geological Surrey. 
+and the number oftributaries. The error in estimating 
+the lag time is proportional to the change in discharge 
+with time (for a specific tributary orupstreamgaging 
+station) and weighted by the fraction ofthe total dis­
+charge contributed by the tributary or upstream gaging 
+station. Atmost tributary andupstream gaging sta­
+tions, the discharge changed slowly with time. How­
+ever, for some tributary stations, the change in 
+discharge with time was large, although the fraction of 
+the total discharge contributed by these tributaries was 
+often small and compensated for the large change in 
+discharge with time. Assuming that the rating curve 
+error was 5 percent, a few estimates of the error in the 
+percentage computation were made for arange ofdis­
+charges ofthe upper Mississippi River at Prescott and 
+St. Louis. AtPrescott these errors were slightly larger 
+(7-15 percent) than those at St. Louis (7-10 percent). 
+Mississippi River at Prescott, Wisconsin 
+The daily meandischarge of two tributaries, the 
+Minnesota and the St. Croix Rivers, accounted for 50 
+to 90 percentofthe daily mean discharge at Prescott 
+during June and July ; the maximum daily mean dis­
+charge (3,680 m3/s, or 7.5 times the mean discharge) at 
+Prescott was measured on June 27 (fig. 9). The maxi­
+mumdaily mean discharge ofthe Minnesota River 
+near Jordan, Minnesota, was 24 times the mean dis­
+charge, but the maximum daily mean discharge ofthe 
+St. Croix River at St. Croix Falls, Wisconsin, was only 
+4.3 times the mean discharge. About 3 percent ofthe 
+unaccounteddischarge ofthe Mississippi River at Pres­
+cott is fromungaged tributaries (J.H. Hess, U.S. Geo­
+logical Survey, oral commun., 1994) . 
+Mississippi River at Winona, Minnesota 
+Many ofthe small tributaries of the upper Mis­
+sissippi River between Prescott and Winona are 
+ungaged; the percentageofthe discharge contributedby 
+these tributaries is unknown andprobably explains why 
+the total percentages at Winona usually are less than 95 
+percent(fig. 10). The Vermillion, theCannon, the Zum­
+bro, and the Whitewater Rivers, which have stream 
+gages on either their main stems or some oftheir tribu­
+taries, accounted for 1 to 7 percent ofthe waterthat 
+flowedpast Winona. The major tributary that entered 
+the upperMississippi Riverbetween Prescottand 
+Winona is the Chippewa River, which reached a maxi-
+mum daily mean discharge (2,400 m3/s, or 11 times the 
+mean discharge) onJune23. This discharge flood peak 
+arrived at Winona on June 24 and accountedfor56 per-
+centofthe water that passed Winonaonthat day. Dis-
+charge oftheMississippi Riverat Prescott accounted 
+for 43 to 79 percent ofthewaterthat passedWinona in 
+June and for 71 to 83 percent in July. 
+Mississippi River at Clinton, Iowa 
+The discharge frommany small tributaries must 
+be considered in an accounting of all the water that 
+flowed pastClinton. The Black andthe Wisconsin Riv 
+ers are the maintributaries between Winona andClin­
+ton, but the combineddischargefromthe Trempealeau, 
+the Root, theupperIowa, the Turkey,the Grant, the 
+Platte, and the MaquoketaRivers accounted for 6 to 20 
+percent ofthe waterthat flowedpast Clinton. Total dis-
+charge contributions were greater than 100 percent of 
+Flood-WaveComposition 1 3
+
+=== page 21 ===
+5
+10
+15
+20
+25
+30
+-- --- -- ---
+Table 4. Daily mean discharges for the Upper Mississippi River and some of its tributaries, June through August 1993 
+[Discharge values in cubic meters per second; station number is a unique U.S. Geological Survey identification number; some discharge values are 
+provisional and may differ from later data published in the U.S. Geological Survey's Water-Data Reports; - - -, no data; e, estimate] 
+Mississippi Rivernear 
+Anoka, Minnesota, 
+Day station number 
+05288500 
+June July August 
+1 564 750 518 
+2 600 753 493 
+3 623 759 484 
+4 623 790 450 
+606 801 442 
+6 583 833 419 
+7 558 872 408 
+8 535 929 394 
+9 507 946 419 
+479 966 396 
+11 450 974 374 
+12 425 952 362 
+13 422 920 348 
+14 405 920 354 
+394 898 377 
+16 385 878 365 
+17 445 861 343 
+18 445 835 365 
+19 459 793 399 
+470 750 388 
+21 493 716 382 
+22 515 685 391 
+23 544 663 402 
+24 620 649 399 
+694 640 396 
+26 739 612 399 
+27 762 586 422 
+28 770 572 436 
+29 762 549 433 
+762 530 433 
+31 521 436 
+Minnesota River near 
+Jordan, Minnesota, 
+station number 
+05330000 
+June July August 
+467 1,590 736 
+476 1,450 739 
+498 1,330 742 
+527 1,300 736 
+555 1,310 725 
+581 1,340 716 
+598 1,390 705 
+603 1,460 694 
+598 1,470 683 
+592 1,440 654 
+592 1,390 626 
+603 1,310 603 
+626 1,240 583 
+657 1,170 572 
+663 1,100 572 
+649 1,050 583 
+705 1,000 657 
+884 980 782 
+1,070 957 915 
+1,290 935 1,020 
+1,680 906 1,040 
+2,150 869 1,000 
+2,430 847 932 
+2,570 824 861 
+2,570 804 801 
+2,440 787 748 
+2,290 762 700 
+2,120 745 646 
+1,950 731 609 
+1,770 722 586 
+725 569 
+St. Croix River at Mississippi Riverat 
+St. Croix Falls, Wisconsin, Prescott, Wisconsin, 
+station number station number 
+05340500 05344500 
+June July August June July August 
+368 266 91 1,400 3,140 1,570 
+388 294 85 1,450 2,970 1,540 
+365 261 84 1,520 2,920 1,510 
+331 286 78 1,540 2,800 1,490 
+292 331 75 1,550 2,780 1,470 
+255 351 85 1,530 2,780 1,440 
+230 348 82 1,510 2,780 1,420 
+219 320 65 1,490 2,800 1,400 
+231 306 99 1,470 2,860 1,380 
+277 382 79 1,470 2,890 1,500 
+334 419 73 1,480 3,030 1,400 
+317 413 76 1,500 3,090 1,210 
+271 354 76 1,460 3,030 1,160 
+255 292 73 1,400 2,890 1,130 
+262 264 92 1,400 2,760 1,090 
+254 240 81 1,420 2,660 1,100 
+273 223 79 1,420 2,570 1,120 
+232 200 86 1,420 2,470 1,120 
+219 184 95 1,550 2,380 1,180 
+233 170 93 1,680 2,310 1,340 
+239 167 78 1,870 2,230 1,520 
+271 140 80 2,070 2,160 1,600 
+278 121 100 2,380 2,080 1,620 
+374 130 86 2,730 1,990 1,610 
+459 121 94 3,140 1,940 1,530 
+558 123 89 3,430 1,900 1,460 
+558 110 91 3,680 1,840 1,390 
+464 105 86 3,620 1,760 1,330 
+396 97 99 3,480 1,700 1,300 
+328 91 98 3,310 1,640 1,270 
+98 103 1,580 1,230 
+14 Propagation and Composition of the Flood Wave on the Upper Mississippi River, 1993
+
+=== page 22 ===
+�
+5
+10
+15
+20
+25
+30
+--- --- --- ---
+Table 4. Daily mean discharges for the Upper Mississippi River and some of its tributaries, June through August 1993-
+Continued 
+Chippewa River at Mississippi River at Black River near Wisconsin River at 
+Durand, Wisconsin, Winona, Minnesota, Galesville, Wisconsin, Muscoda, Wisconsin, 
+Day station number 
+05369500 
+station number 
+05378500 
+station number 
+05382000 
+station number 
+05407000 
+June July August June July August June July August June July August 
+1 467 374 158 1,990 4,500 2,060 166 94 52 309 600 289 
+2 589 365 197 2,010 4,470 2,040 311 128 87 354 555 279 
+3 552 348 252 2,070 4,390 1,940 245 154 112 530 473 270 
+4 385 402 211 2,140 4,250 1,840 150 197 104 623 433 270 
+328 371 174 2,160 4,130 1,820 96 203 80 629 450 279 
+6 274 374 143 2,140 4,020 1,830 68 196 67 566 518 276 
+7 245 354 163 2,110 3,940 1,830 62 152 59 445 580 264 
+8 311 328 116 2,060 3,790 1,860 63 119 54 456 597 245 
+9 289 345 186 2,040 3,710 1,900 79 106 54 436 634 218 
+382 337 368 2,020 3,650 1,890 162 99 61 425 682 235 
+11 436 345 365 2,040 3,620 1,930 408 96 101 538 660 246 
+12 413 343 309 2,050 3,650 2,000 462 88 107 677 597 240 
+13 385 326 232 2,060 3,710 2,020 340 84 90 773 547 237 
+14 345 273 189 2,070 3,710 1,950 215 80 72 827 532 238 
+323 283 138 2,080 3,710 1,890 134 78 64 850 481 289 
+16 314 262 176 2,050 3,620 1,790 108 75 63 827 439 323 
+17 328 231 184 2,040 3,540 1,720 106 68 62 759 436 340 
+18 558 226 179 2,130 3,460 1,740 145 66 61 716 442 311 
+19 847 184 163 2,360 3,310 1,770 331 64 58 682 510 283 
+1,040 232 161 2,800 3,200 1,820 801 64 54 722 462 273 
+21 1,350 187 135 3,140 3,060 1,870 1,540 58 50 838 430 261 
+22 2,150 176 120 3,460 2,920 1,880 1,350 56 47 971 411 246 
+23 2,400 160 126 3,770 2,800 1,880 869 54 44 1,190 382 249 
+24 1,800 159 136 4,250 2,680 1,910 572 51 43 1,420 354 220 
+1,190 117 148 4,640 2,590 1,990 422 51 40 1,600 351 225 
+26 833 110 140 4,760 2,480 2,030 300 56 39 1,670 354 236 
+27 733 185 132 4,760 2,410 2,050 208 57 38 1,650 334 237 
+28 586 154 126 4,700 2,340 2,050 146 72 38 1,410 348 227 
+29 541 140 96 4,640 2,280 2,020 116 57 38 943 343 227 
+530 148 117 4,590 2,190 2,000 104 51 45 665 320 229 
+31 167 190 2,110 1,990 48 53 289 220 
+Flood-WaveComposition 15
+
+=== page 23 ===
+5
+10
+15
+20
+25
+30
+--- --- -- --
+Table 4. Daily mean discharges for the Upper Mississippi River and some of its tributaries, June through August 1993-
+Continued 
+Day 
+Mississippi River at 
+McGregor, Iowa, 
+station number 
+05389500 
+Mississippi River at 
+Clinton, Iowa, 
+station number 
+05420500 
+Rock River near 
+Joslin, Illinois, 
+station number 
+05446500 
+Wapsipinicon River near 
+De Witt, Iowa, 
+station number 
+05422000 
+June July August June July August June July August June July August 
+1 2,300 5,300 2,700 2,890 6,570 3,770 337 685 464 78 253 196 
+2 2,320 5,210 2,620 2,920 6,630 3,710 331 776 456 75 250 177 
+3 2,350 5,070 2,530 2,920 6,630 3,620 331 858 445 72 236 159 
+4 2,420 4,960 2,460 2,920 6,570 3,430 326 901 428 72 237 136 
+2,530 4,900 2,390 2,940 6,430 3,260 343 886 411 90 269 124 
+6 2,610 4,810 2,340 3,000 6,540 3,170 377 799 399 91 348 118 
+7 2,650 4,700 2,280 3,200 6,740 2,890 382 705 385 95 422 111 
+8 2,660 4,560 2,220 3,480 6,710 2,920 436 657 385 165 541 105 
+9 2,670 4,450 2,190 3,820 6,480 2,940 668 637 374 214 586 112 
+2,630 4,330 2,170 3,880 6,370 3,000 923 643 388 214 467 188 
+11 2,580 4,220 2,170 3,820 6,310 2,970 986 646 374 182 391 190 
+12 2,550 4,130 2,210 3,740 6,230 2,920 929 640 377 168 365 194 
+13 2,560 4,110 2,250 3,620 6,170 2,920 821 637 385 168 391 199 
+14 2,690 4,110 2,280 3,620 6,090 2,860 733 643 360 168 513 195 
+2,710 4,080 2,390 3,710 5,920 2,890 683 666 351 157 609 208 
+16 2,640 4,050 2,500 3,710 5,690 2,890 680 677 346 162 575 233 
+17 2,630 4,050 2,570 3,740 5,520 2,970 651 677 348 162 510 266 
+18 2,620 4,020 2,590 3,910 5,440 3,260 612 677 337 159 532 264 
+19 2,680 3,990 2,550 4,020 5,350 3,510 615 716 329 177 538 274 
+2,830 3,940 2,480 4,130 5,350 3,740 680 753 317 200 544 314 
+21 3,090 3,820 2,430 4,190 5,240 3,680 773 762 314 207 572 323 
+22 3,430 3,710 2,400 4,220 5,130 3,540 793 750 314 203 507 314 
+23 3,940 3,600 2,410 4,220 5,010 3,370 753 742 306 209 464 300 
+24 4,280 3,450 2,400 4,300 4,900 3,230 719 700 303 217 433 289 
+4,450 3,370 2,370 4,670 4,760 3,260 685 643 286 212 394 320 
+26 4,640 3,260 2,340 5,010 4,640 3,260 649 595 292 198 337 371 
+27 4,810 3,110 2,330 5,350 4,530 3,170 612 564 286 227 289 377 
+28 4,980 3,030 2,350 5,660 4,390 3,090 600 535 276 286 274 365 
+29 5,130 2,920 2,370 5,920 4,220 3,000 634 518 273 273 241 354 
+5,270 2,830 2,400 6,290 4,080 3,140 649 498 292 281 225 354 
+31 2,760 2,430 3,940 3,200 481 303 219 374 
+16 Propagation and Composition of the FloodWave on the Upper Mississippi River, 1993
+
+=== page 24 ===
+�
+5
+10
+15
+20
+25
+30
+--- --- --- ---
+Table 4. Daily mean discharges for the Upper Mississippi River and some of its tributaries, June through August 1993-
+Continued 
+Iowa River at Skunk River at Mississippi River at Des Moines River at 
+Wapello, Iowa, Augusta, Iowa, Keokuk, Iowa, Keosauqua, Iowa, 
+Day station number 
+05465500 
+station number 
+05474000 
+station number 
+05474500 
+station number 
+05490500 
+June July August June July August June July August June July August 
+1 592 1,220 1,810 152 564 442 4,300 9,320 7,960 895 1,130 1,920 
+2 578 1,350 1,730 151 561 419 4,250 9,460 7,110 920 1,030 1,780 
+3 575 1,270 1,770 176 439 360 3,960 9,660 5,890 937 1,130 1,670 
+4 600 1,160 1,680 272 343 328 4,250 9,850 6,850 963 1,240 1,570 
+682 1,190 1,560 396 416 306 4,560 10,100 5,970 1,060 1,650 1,490 
+6 708 1,630 1,400 354 600 283 4,560 10,500 5,780 917 2,240 1,420 
+7 699 2,700 1,380 253 728 269 4,500 11,200 5,440 883 2,710 1,350 
+8 864 3,000 1,380 527 903 255 4,640 11,100 5,070 1,420 2,680 1,290 
+9 1,040 2,780 1,350 748 1,180 241 5,240 11,800 4,730 1,110 2,680 1,220 
+1,070 2,340 1,420 691 1,300 413 5,800 12,300 5,130 881 2,680 1,320 
+11 943 2,340 1,760 603 1,250 507 6,140 11,900 5,380 770 2,810 1,230 
+12 892 2,490 2,050 320 1,120 674 6,230 11,900 6,170 716 2,920 1,340 
+13 898 2,700 1,780 212 847 677 6,260 11,900 6,230 691 3,060 1,460 
+14 960 2,890 1,480 197 654 572 5,780 11,700 6,340 674 3,030 1,350 
+1,040 2,560 1,370 178 648 496 5,890 11,500 6,120 634 3,030 1,350 
+16 1,070 2,230 1,590 165 583 725 5,780 11,400 6,090 606 3,000 1,320 
+17 1,030 2,150 2,040 167 634 835 5,690 11,400 6,570 623 2,970 1,250 
+18 932 2,170 2,200 163 617 835 5,660 11,200 6,680 637 2,890 1,180 
+19 934 2,210 2,050 175 694 875 5,690 11,000 6,940 719 2,890 1,190 
+1,060 2,420 1,980 275 731 855 5,780 10,900 6,940 779 2,860 1,480 
+21 1,130 2,540 1,910 348 702 762 6,030 10,900 7,080 793 2,800 1,510 
+22 1,190 2,320 1,990 320 671 702 6,200 11,000 7,050 872 2,690 1,360 
+23 1,260 2,090 2,210 331 694 629 6,430 11,000 6,970 878 2,690 1,280 
+24 1,200 2,580 2,200 425 787 566 6,570 11,200 6,940 883 2,680 1,230 
+1,480 2,920 2,020 906 1,010 527 7,650 11,300 6,940 895 2,710 1,180 
+26 1,750 2,780 1,830 722 1,110 456 7,870 11,400 6,680 883 2,640 1,140 
+27 1,680 2,320 1,740 445 1,070 430 7,820 11,200 6,400 883 2,460 1,110 
+28 1,620 2,070 1,630 371 946 470 8,100 10,900 6,230 883 2,270 1,080 
+29 1,420 1,900 1,590 300 750 476 8,160 10,300 6,120 889 2,120 1,080 
+1,220 1,810 1,600 354 566 430 8,550 10,300 5,950 1,010 2,010 1,160 
+31 1,770 1,700 462 470 9,090 6,060 1,940 1,210 
+Flood-WaveComposition 17
+
+=== page 25 ===
+�
+5
+10
+15
+20
+25
+30
+--- --- --- ---
+Table 4. Daily mean discharges for the Upper Mississippi River and some of its tributaries, June through August 1993-
+Continued 
+Illinois River at Missouri River at Mississippi River at Mississippi River at 
+Day 
+Valley City, Illinois, 
+station number 
+05586100 
+Hermann, Missouri, 
+station number 
+06934500 
+St. Louis, Missouri, 
+station number 
+07010000 
+Thebes, Illinois, 
+station number 
+07022000 
+June July August June July August June July August June July August 
+1 646 1,470 2,250 4,360 5,300 20,300 10,800 14,000 29,700 11,400 14,200 25,100 
+2 612 1,640 1,880 4,280 6,660 18,500 10,600 14,600 29,200 11,200 14,300 25,500 
+3 600 1,700 1,530 4,390 7,650 16,500 10,500 16,000 28,600 11,100 14,400 25,900 
+4 657 1,710 1,510 4,360 8,210 14,500 10,200 17,100 28,000 10,900 14,900 26,000 
+677 1,760 1,420 4,420 8,270 12,900 10,200 17,900 27,400 10,700 15,800 26,500 
+6 711 1,800 1,520 4,810 8,330 11,800 10,300 18,600 26,400 10,600 16,700 27,400 
+7 708 1,730 1,590 6,630 11,400 10,800 11,200 19,300 25,100 10,700 17,600 27,700 
+8 660 1,720 1,580 6,740 11,800 10,300 12,400 20,600 23,700 11,100 18,700 27,300 
+9 663 1,690 1,540 6,680 11,600 9,910 12,900 21,600 22,300 12,000 19,900 26,900 
+694 1,610 1,530 6,320 10,300 9,540 13,000 22,200 21,600 12,800 21,000 26,200 
+11 750 1,590e 1,480 5,920 9,710 9,290 12,800 22,800 20,900 13,100 21,500 25,600 
+12 801 1,560e 1,460 5,580 9,370 9,290 12,700 22,800 20,800 13,200 22,100 24,900 
+13 847 1,590e 1,480 5,130 9,400 10,500 12,600 22,100 20,700 13,100 22,600 24,100 
+14 889 1,620 1,460 4,640 9,830 9,010 12,300 22,500 20,700 13,000 23,400 23,500 
+935 1,640e 1,420 4,450 12,300 8,500 12,100 22,900 19,900 12,900 24,500 22,900 
+16 986 1,670e 1,370 4,450 13,900 8,210 11,800 24,000 19,200 12,700 23,800 22,300 
+17 1,030 1,640e 1,350 4,620 11,800 7,790 11,700 26,200 18,500 12,500 23,300 21,800 
+18 1,070 1,590e 1,370 4,560 10,600 7,080 11,800 27,400 17,900 12,300 23,900 21,400 
+19 1,110 1,540 1,420 4,280 10,100 6,230 11,700 27,600 17,300 12,200 24,700 20,800 
+1,140 1,500e 1,460 4,250 9,830 5,580 11,500 27,500 16,600 12,100 25,300 20,000 
+21 1,180 1,470e 1,420 4,250 9,540 5,270 11,600 25,600 15,900 12,000 25,200 19,400 
+22 1,210 1,440e 1,380 4,360 9,290 5,130 11,500 25,700 15,300 11,900 25,200 18,700 
+23 1,250 1,490e 1,320 4,810 9,120 5,210 11,600 25,500 15,000 11,900 24,800 18,000 
+24 1,280 1,640 1,290 4,450 9,060 5,470 11,800 25,300 14,900 11,800 25,100 17,300 
+1,340 1,770 1,250 5,270 9,830 5,240 12,000 24,900 14,900 12,000 24,500 16,800 
+26 1,380 2,000 1,210 5,720 10,600 4,900 12,900 25,100 14,700 12,400 23,000 16,300 
+27 1,370 2,090 1,170 4,900 10,900 4,670 13,400 24,700 14,400 12,700 23,600 15,900 
+28 1,350 2,180 1,120 4,870 12,100 4,500 13,400 24,700 14,200 13,300 24,400 15,500 
+29 1,280 2,250 1,060 5,100 14,500 4,280 13,800 25,000 13,900 13,700 25,100 15,200 
+1,290 2,100 1,010 4,960 18,000 3,910 14,000 26,900 13,700 14,000 24,600 14,800 
+31 2,200 971 20,900 3,910 28,900 13,300 24,700 14,500 
+1 8 Propagation and Compositionof the Flood Waveon the Upper Mississippi River, 1993
+
+=== page 26 ===
+�����
+z Errorinflood-wave 5-percent error 
+z 
+0 
+U 
+3 
+0 
+0 
+W 
+a 
+a 
+W 
+s 
+W 
+a3 
+a0 
+W 
+0 
+W 
+0
+a 
+WW 
+U 
+W
+a 
+June 
+1993 
+Figure 9. Flood-wave composition of the Mississippi River at 
+Prescott, Wisconsin. The amount of water is proportional to 
+thevertical distance between successive curves. Pink repre­
+sents discharge from ungaged smaller tributaries and any 
+flood-wave routing errors of less than 100 percent. Red repre­
+sents any flood-wave routing errors of more than 100 percent. 
+the actual discharge at Clinton between June 26 and 
+July 2 (fig. 11). The sharp daily mean discharge peak of 
+the BlackRiverforJune 21 (1,540 m3/s, or 31 times the 
+mean discharge) was expected to reach Clinton about 
+June 27; however, much ofthepeak discharge may 
+have been stored on the flood-plain delta near the 
+mouthofthe BlackRiver (J.F. Sullivan, Wisconsin 
+DepartmentofNatural Resources, oral commun., 1993) 
+and did notreach Clinton until after July 2 (fig. 11). 
+The Wisconsin River had abroad daily mean discharge 
+peak(1,670 m3/s, or 6.8 times the mean discharge), 
+which accounted for 16to 28 percent ofthe daily mean 
+discharge at Clinton between June 16 and July 2. The 
+Mississippi Riverat Winona contributed from49 to 80 
+percent ofthe daily mean discharge at Clintonduring 
+June andJuly. 
+Mississippi River at Keokuk, Iowa 
+The Rock River reached a maximumearlier 
+(June 11) than did most tributaries ofthe upperMissis­
+sippi River. Themaximum daily mean discharge (986 
+m3/s,. or 5 .7 times the meandischarge) ofthe Rock 
+River represented 17 percent ofthe daily mean dis­
+charge at Keokuk (fig. 12). The combined discharge of 
+the Iowa, the Skunk, and the Wapsipinicon Rivers in 
+Iowa accounted for 17 to 48 percentofthe daily mean 
+discharge at Keokuk from June through August. The 
+individual maximum daily mean discharges ofthese 
+three tributaries arrived at Keokuk onor aboutJuly 10, 
+July 11, and July 19. The discharge ofthe Mississippi 
+River at Clinton accounted for less than 50 percent of 
+the discharge at Keokuk after July 19, and the com­
+bined discharges ofthe Iowa, the Skunk, andthe Wap­
+sipinicon Rivers accounted for slowly increasing 
+percentages ofthe discharge at Keokukthrough 
+August. 
+Mississippi River at St. Louis, Missouri 
+The discharges ofthe Des Moines and the Illi­
+nois Rivers each accounted for 5 to 12 percentofthe 
+daily mean discharge at St. Louis from June through 
+August. The Mississippi River at Keokuk accounted 
+for about 50 percent ofthe discharge at St. Louis with 
+a maximum of54 percent on July 13 and 14. In early 
+August, the Mississippi River at Keokuk accounted 
+120 
+0 Error in flood-wave 5-percent error 
+- routing in discharge
+10 .--__-___--->_4-------t--____--------_" z 
+Z 100 
+z Ungaged_,\ tributaries 
+0 
+W 
+a 
+0 60 Mississippi River 
+W 
+0 
+W 
+z W 
+U 
+a 
+1993 
+Figure 10. Flood-wavecompositionof the Mississippi Riverat 
+Winona, Minnesota. Theamount of water is proportional to 
+the vertical distance between successive curves. Pink repre­
+sents discharge from ungaged smaller tributaries and any 
+flood-wave routing errors of less than 100 percent. Redrepre-
+sents anyflood-wave routing errors of morethan 100 percent. 
+Thefour tributaries arethe Vermillion, theCannon, the Zum­
+bro, and the White Water. 
+Flood-WaveComposition 19
+
+=== page 27 ===
+��
+a
+140 
+3 
+z0 z 
+J 100 
+a w 
+a 
+U 80 
+s 
+wFa 60
+3
+J
+FOF 
+0 
+Fz w 
+20 
+w a 
+0 
+- Error in flood-wave 
+routing or water 
+- stored on flood plain 
+Ungagedtributaries 
+andreturn flow 
+Mississippi River 
+1993 
+Figure 11 . Flood-wave composition of the Mississippi River 
+at Clinton, Iowa. The amount of water is proportional to the 
+vertical distance between successive curves. Pink repre­
+sents discharge from ungaged smaller tributaries, any flood_ 
+wave routing errors of less than 100 percent, or return flow 
+to the upper Mississippi River. Red representsflood-wave 
+routing errors of morethan 100 percentor waterthat did not 
+arrive at Clinton because of flood-plain storage. The seven 
+tributaries arethe Trempealeau, the Grant, andthe Platte in 
+Wisconsin, the Rootin Minnesota, andthe upper Iowa, the 
+Turkey, and the Maquoketa in Iowa. 
+foronly about 21 percentofthe discharge at St. Louis 
+due to large contributions from the Missouri River. 
+However, in late August, this percentage again 
+increased to about 50 percent due to decreasing con­
+tributions (about 30percent) from the Missouri 
+River. The Missouri River contributed a maximum 
+percentage (70 percent) ofthe discharge at St. Louis 
+on August 1 and 2, which are the dates the flood peak 
+passed St. Louis. Significant amounts ofwater (10­
+20 percent of the discharge measured at St. Louis) 
+did not reach St. Louis as a result offlow through 
+majorlevee breaks onto the flood plain at upstream 
+sites (table 3) . The Meyer and the Indian Grave South 
+and North levees were breached on July 9 and July 
+13, respectively, and flow through these breaks proba­
+bly accounted for some ofthe water thatdid not 
+reach St. Louis between July 10 and July 17 (fig. 13). 
+The Sny levee was breached on July 25 after a long 
+battle to save it (Stewart, 1993). Flow through this 
+breach probably accountedfor the additional water 
+that was stored and did not reach St. Louis between 
+July 28 and August 4. Someof the water storedon 
+the flood plain drained back to theriver (fig. 13) and 
+represented the "missing" waterthat could notbe 
+accounted for by the Illinois, the Des Moines, and the 
+Missouri Rivers or by the Mississippi River at 
+Keokuk. 
+SUMMARY 
+The flood wave thatpropagated down the 
+upperMississippi River from June through August 
+1993 was a composite ofindividual tributary flood 
+waves. The average wave-propagation speed in the 
+river was about 0.58 m/s upstream from St. Louis and 
+about0.42 m/s downstream from St. Louis. 
+The wave-propagation speed was determined 
+primarily by hydrologic factors, such as tributary 
+inflow and flood-plain storage, rather than by hydrau 
+lic factors, such as water depth, channel width, and 
+channel roughness. Flow through levee breaks 
+accounted for most of the flood-plain storage on the 
+upperMississippi River, but levee seepage also was 
+significant, especially in its impact on human activi-
+Error in flood-wave 
+a routing or water 
+0 5-percent error stored on flood plain 
+in discharge 
+Y 
+O wY 
+Q 
+Uu)
+s 
+Q 
+J a 
+0F 
+0 
+w 
+aFZ 
+U 
+1993 
+Figure 12. Flood-wave composition of Mississippi River at 
+Keokuk, Iowa. The amount of wateris proportional to the 
+vertical distance between successive curves. Pink repre­
+sents dischargefrom ungaged smaller tributaries, anyflood­
+wave routing errors of less than 100 percent, or return flow 
+to the upper Mississippi River. Red representsflood-wave 
+routing errors of morethan 100 percentor waterthat did not 
+arrive at Keokuk because of flood-plain storage. 
+20 Propagation andCompositionof theFloodWaveon the Upper Mississippi River, 1993
+
+=== page 28 ===
+��
+O 
+s0 
+F a 
+W 
+a 
+0to 
+0 
+w 
+a3 
+a 0 
+0W 
+a 
+WWU 
+W a 
+routing or water 
+stored on flood plain 5-percent error 
+in discharge 
+June July August 
+1993 
+Figure 13. Flood-wave composition of Mississippi Riverat 
+St. Louis, Missouri. Theamount of wateris proportional to 
+the vertical distance between successive curves. Pink repre­
+sents discharge from ungaged smaller tributaries, any flood-
+wave routing errors of less than 100 percent, or return flow 
+to the upper Mississippi River. Red represents flood-wave 
+routing errors of morethan 100 percentor water that did not 
+arrive at Keokukbecause of flood-plain storage. 
+ties. Seepage through and under levees continued 
+long after the peak ofthe composite flood wave in 
+the riverhad passed, which caused extended periods 
+of inundation. 
+The flood wave peaked twice as it passed St. 
+Louis during July andAugust. The first discharge 
+peak of27,600 m3/s on July 19 comprised about 
+equal amounts (40 percent) ofupper Mississippi and 
+Missouri River water. Asecond and larger discharge 
+of 29,700 m3/s peaked on August 1 ; the Missouri 
+River accounted for about70 percent ofthe total dis­
+charge, or about twice the discharge contributed by 
+the Mississippi River at Keokuk. 
+SELECTED REFERENCES 
+Gilcrest, B.R., 1950, Flood routing, in Rouse, Hunter, ed., 
+Engineering hydraulics, chap. 10-Proceedings of 
+the 4th Hydraulics Conference, June 12-15, 1949, 
+IowaInstitute of Hydraulic Research: NewYork, 
+JohnWiley, p. 635-710. 
+Institute ofRiver Studies, 1983, Timeoftravel estimates 
+for selected streams in Missouri, Iowa, and Illinois: 
+U.S. Army Corps ofEngineers, St. Louis District, St. 
+Louis District potamology study (S-17), 237 p. 
+Lawler, E.A., 1964, Flood routing, pt. 2 ofHydrology of 
+flowcontrol, in Chow, V.T., ed., Handbook of 
+applied hydrology: New York, McGraw-Hill, p. 25-
+34-25-59. 
+Moody, J.A., and Meade, R.H., 1992, Hydrologic and sedi­
+mentologic data collected during three cruises at low 
+water on the Mississippi River and some of its tribu 
+taries, July 1987-June 1988: U.S. Geological Survey 
+Open-File Report 91-485, 143 p. 
+Parrett, Charles, Melcher, N.B ., andJames, R.W., Jr., 
+1993, Flood discharges in the upper Mississippi 
+River Basin, 1993, in Floodsin the upperMississippi 
+River Basin, 1993: U.S. Geological Survey Circular 
+1120-A, 14 p. 
+Seddon, J.A., 1900, River hydraulics: Transactions ofthe 
+American Society of Civil Engineers, v. 43, p. 179-
+243. 
+Stewart, J.B., 1993, Battle on the Sny: TheNewYorker, v. 
+69, no. 25, August 9, 1993, p. 30-40. 
+U.S. Army Corps ofEngineers, 1990, The upperMissis­
+sippi Rivernine-foot channel: Washington, D.C., 
+U.S. Government Printing Office, 2 p. 
+U.S. Geological Survey, 1989,Water-resources data for 
+Illinois, water years 1989-1990: U.S. Geological Sur­
+vey Water-Data Reports IL-89-1 and IL- 90-1, vol 
+umes 1 and 2 (published annually). 
+1989, Water-resources data for Iowa, water year 
+1989: U.S. Geological Survey Water-DataReport 
+IA-89-1 (published annually). 
+1988, Water-resources datafor Minnesota, water 
+year 1988: U.S. Geological Survey Water-Data 
+Reports MN-88-1 (published annually). 
+.1989, Water-resources datafor Missouri, wateryear 
+1989: U.S. Geological Survey Water-Data Report 
+MO-89-1 (published annually). 
+1989, Water-resources data for Wisconsin, water 
+year 1989: U.S. Geological SurveyWater-Data 
+Report WI-89-1 (published annually). 
+Wahl, K.L., Vining, K.C., and Wiche, G.J., 1993, Precipita­
+tion in the upperMississippi River Basin, January 1 
+through July 31, 1993, in Floods in the upper Missis 
+sippi River Basin, 1993: U.S. Geological Survey Cir-
+cular 1120-B, 10p.

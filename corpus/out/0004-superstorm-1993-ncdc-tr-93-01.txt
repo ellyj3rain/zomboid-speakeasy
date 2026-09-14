@@ -1,0 +1,1141 @@
+0004 - The Big One! A review of the March 12-14, 1993 "Storm of the Century" (NCDC Technical Report 93-01, May 14, 1993)
+Source: text/superstorm-1993-ncdc-tr-93-01.pdf
+Pages: 24
+
+This file is a derived extraction of the item above; the manifest record in corpus/manifest.md is the authority for
+what the item is and what it is FOR. Regenerate with tools/extract_corpus.py.
+
+=== page 1 ===
+MAY 14, 1993  
+                        NATIONAL CLIMATIC DATA CENTER
+                       RESEARCH CUSTOMER SERVICE GROUP
+                           TECHNICAL REPORT 93-01
+                               THE BIG ONE!             
+                      A REVIEW OF THE MARCH 12-14, 1993
+                          "STORM OF THE CENTURY"
+                                NEAL LOTT
+                           PHYSICAL SCIENTIST
+
+=== page 2 ===
+1
+        On March 12-15, a storm now called "The Storm of the Century"
+    struck the eastern seaboard.  Following are the highlights of
+    the information gathered about the storm thus far:
+    1)  The preliminary death toll for the U.S. is approximately 270,
+    and 48 people were reported as missing at sea (Gulf of Mexico and
+    Atlantic, including Canadian waters).  This is over 3 times the
+    combined death toll of 79 attributed to hurricanes Hugo and Andrew.
+    The death toll includes those caused by direct and indirect (e.g.,
+    shoveling snow) results of the storm.  Due to the widespread nature
+    of the storm, assessing its toll has been quite difficult for damage
+    survey teams--hurricanes are easier to assess due to their more
+    limited areal coverage.  The following breakdown by state (not including
+    lost at sea) is still preliminary (its summation does not reflect all
+    deaths from the storm):
+    Florida          44        New York   23
+    South Carolina    1        Alabama    16
+    Georgia          15        Tennessee  14
+    North Carolina   19        Kentucky    5
+    Virginia         13        Maryland    3
+    West Virginia     4        Maine       2
+    Pennsylvania     49
+    2)  Thousands of people were isolated by record snowfalls, especially
+    in the Georgia, North Carolina, and Virginia mountains.  Over 200
+    hikers were rescued from the North Carolina and Tennessee mountains.  
+    Curfews were enforced in many counties and cities as 'states of 
+    emergency' were declared.  The National Guard was deployed in many 
+    areas to protect lives and property.  Generally, all interstate highways 
+    from Atlanta northward were closed.
+    3)  For the first time, every major airport on the east coast was
+    closed at one time or another by the storm.  The Asheville, NC airport
+    was closed for 3 days.  Snowfall rates of 2-3 inches per hour were common
+    during the height of the storm.  Generally, New York's Catskill Mountains
+    along with most of the central and southern Appalachians received at 
+    least 2 feet of snow.  In areas to the east, wind-driven sleet occurred 
+    in some areas, with central New Jersey reporting 2.5 inches of sleet on 
+    top of 12 inches of snow--somewhat of an "ice-cream sandwich" affect.
+    4)  Hundreds of roof collapses occurred due to the weight of the
+    heavy wet snow.  Over 3 million customers were without electrical
+    power at one time due to fallen trees and high winds.  
+    5)  At least 18 homes fell into the sea on Long Island due to the
+    pounding surf.  About 200 homes along North Carolina's Outer
+    Banks were damaged and may be uninhabitable.  Over 160 people were 
+    rescued at sea by the Coast Guard in the Gulf of Mexico and Atlantic.
+    At least 1 freighter sank in the Gulf of Mexico.
+
+=== page 3 ===
+2
+    6)  Florida was struck by an estimated 15 tornadoes, and 44 deaths in
+    Florida were attributed either to the tornadoes or other severe weather.
+    A 12-foot storm surge occurred in Taylor County, FL resulting in at least
+    7 deaths.  Also, up to 6 inches of snow fell in the Florida panhandle.
+    7)  3 storm-related deaths were reported in Quebec and 1 in Ontario.
+    About 110 miles south of Cape Sable Island, Nova Scotia, a 177-meter ship     
+  sank in heavy seas, with all 33 of its crew lost at sea.  65-foot waves
+    were reported in the area.  Also, a wind gust of 131 MPH occurred at Grand
+    Etang, Nova Scotia.  Some parts of northern New Brunswick experienced
+    temperature drops of 45 degrees Fahrenheit in 18 hours.  3 deaths occurred
+    in Cuba (Havana was blacked out), and a tornado left 5000 people homeless
+    in Reynosa, Mexico (near Texas border).  
+    8)  Highest recorded wind gusts included:
+        144 MPH on Mount Washington, NH
+        109 MPH in the Dry Tortugas (west of Key West, FL)
+        101 MPH on Flattop Mountain, NC (by NCDC employee Grant
+    Goodge--due to ice accumulation on anemometer, he estimated 105-
+    107 MPH)
+        98 MPH in South Timbalier, LA
+        92 MPH on South Marsh Island, LA
+        90 MPH in Myrtle Beach, SC
+        89 MPH in Fire Island, NY
+        83 MPH in Vero Beach, FL
+        81 MPH in Boston, MA
+        71 MPH at La Guardia Arpt, NY
+    9)  Snowfall totals included:
+        56 inches on Mount LeConte, TN
+        50 inches on Mount Mitchell, NC (14-foot drifts)
+        44 inches in Snowshoe, WV
+        43 inches in Syracuse, NY
+        36 inches in Latrobe, PA (10-foot drifts)
+        35 inches in Lincoln, NH
+        30 inches in Beckley, WV
+        29 inches in Page County, VA
+        27 inches in Albany, NY
+        25 inches in Pittsburgh, PA
+        24 inches in Mountain City, GA
+        20 inches in Chattanooga, TN
+        19 inches in Portland, ME
+        19 inches in Asheville, NC
+        17 inches near Birmingham, AL (6-foot drifts)
+        16 inches in Roanoke, VA
+        13 inches in Washington, DC
+         9 inches in Boston, MA
+         4 inches in Atlanta, GA
+
+=== page 4 ===
+3
+    10)  Record low temperatures included (some records for March):
+         -12 degrees in Burlington, VT and Caribou, ME
+         -11 degrees in Syracuse, NY
+         -10 degrees on Mount LeConte, TN
+          -5 degrees in Elkins, WV
+          -4 degrees in Waynesville, NC and Rochester, NY
+           1 degree in Pittsburgh, PA
+           2 degrees in Asheville, NC and Birmingham, AL
+           6 degrees in Knoxville, TN
+           8 degrees in Greensboro, NC
+           1 degree in Beckley, WV
+          11 degrees in Chattanooga, TN and Philadelphia, PA
+          15 degrees in New York-JFK and Washington, DC
+          17 degrees in Montgomery, AL
+          18 degrees in Columbia, SC and Atlanta, GA
+          19 degrees in Augusta, GA
+          21 degrees in Mobile, AL
+          25 degrees in Savannah, GA and Pensacola, FL
+          31 degrees in Daytona Beach, FL
+    11)  Record low sea-level pressures included:
+         28.38 inches in White Plains, NY
+         28.43 inches in Philadelphia, PA
+         28.43 inches at JFK Arpt, NY
+         28.45 inches in Dover, DE
+         28.51 inches in Boston, MA
+         28.53 inches in Augusta, ME
+         28.54 inches in Norfolk, VA
+         28.54 inches in Washington, DC
+         28.61 inches in Raleigh-Durham, NC
+         28.63 inches in Columbia, SC
+         28.73 inches in Augusta, GA
+         28.74 inches in Greenville-Spartanburg, SC
+         28.89 inches in Asheville, NC
+    12)  The National Weather Service's Office of Hydrology estimated
+    the volume of water that fell as snow as 44 million acre-feet.  
+    This is comparable to 40 days' flow on the Mississippi River at New
+    Orleans.  For example, the NWS office at the Asheville, NC airport
+    reported a snow/water ratio of 4.2 to 1 from core samples of new snow.
+    Numerous core samples taken in a nearby area by an NCDC employee
+    showed similar results with a ratio of 5.3 to 1.  This equated to
+    4-5 inches of liquid equivalent precipitation (or even higher in some
+    areas) from the storm.  Areas north of Asheville which reported up to
+    4 feet of snow probably received 'dryer' snow with similar liquid
+    equivalent amounts.  Due to the weight of the heavy snow, damage
+    to trees and some buildings was extensive.  Polk County, NC
+    reported 99% of its electrical customers without power at one
+    point during the storm.  Some sleet also occurred during the storm, 
+    contributing to its 'heavy' nature.  Many of the power outages occurred
+
+=== page 5 ===
+4
+    before the high winds arrived (due to snow-induced tree damage).
+    13)  Overall damage figures are not yet complete, but the insured 
+    property damage estimates now exceed $1.6 billion.  Therefore, this
+    was the 4th costliest storm in U.S. history, and by far the most
+    costly extra-tropical storm.  Some estimates of total damages and 
+    costs from the storm now exceed $6 billion.
+    14)  Comparisons to the Blizzard of 1888 are quite interesting.  A
+    few facts from the '88 storm:
+         The storm began in earnest on March 12, the same date as this
+    year's storm.
+         Over 400 people died, including 200 in New York City alone.
+         Snowfall averaged 40-50 inches over southeastern New York state
+    and southern New England with drifts to 30-40 feet.
+         58 inches of snow in Saratoga Springs, NY.
+         48 inches of snow in Albany, NY.
+         45 inches of snow in New Haven, CT.
+         22 inches of snow in New York City.
+         Snow drifts over the tops of houses from New York to New
+    England, with reports of drifts covering 3-story houses.
+         Highest reported drift was 52 feet in Gravesend, NY.
+         80 MPH wind gusts were reported, although the highest official report
+    in New York City was 40 MPH, with 54 MPH at Block Island.  The winds in
+    the '88 storm, although severe, were not as severe as several other storms
+    which have struck the same area.
+         From Chesapeake Bay through the New England area, over 200 ships
+    were either grounded or wrecked resulting in the deaths of at least 100
+    seamen.
+         The NY Central Park Observatory reported a minimum temperature of 6
+    degrees, and a daytime average of 9 degrees on March 13, the coldest 
+    ever for March.
+         Severe flooding after the storm due to melting snow--especially in
+    the Brooklyn area, which was more susceptible to serious flooding due to
+    topography.
+         The '88 storm is sometimes compared to the 1717 snow event ("The
+    Great Snow of 1717"), which was the result of 4 snowstorms occurring
+    between February 27 and March 7.  Snowfall totals amounted to 5 feet or
+    more in some areas, with much higher drifts.
+         Although the '88 storm was more severe in the Northeast and
+    New England than the '93 storm, it did not affect the entire eastern
+    seaboard to the extent that the 1993 storm affected the area.  The '93
+    storm affected 26 states and about 50% of the nation's population.  In
+    fact, on the Saffir-Simpson scale for hurricane strength, it equated
+    to a category 3 hurricane based on storm surge and minimum pressure
+    attained.
+    OBSERVATIONAL DATA
+ 
+        The attached data lists were taken from decoded surface
+
+=== page 6 ===
+5
+    observations for the period March 12-15, 1993.  The most damaging
+    characteristics of the storm were the heavy snow, the high winds
+    (including tornadoes), and the storm surge/high waves.  The first list
+    focuses on some of the stations which reported the water equivalent of 
+    snow on the ground.  The second list shows all reports of wind speed
+    or wind gust of at least 70 MPH.  The third list shows all reports
+    from ships at sea of wave or swell heights of at least 20 feet.
+        
+        A complete file (in the same format as data list #1) of all
+    observations (56090 observations--4.6 megabytes) during March 12   
+    to 15 from latitude 20 N to 50 N and longitude 65 W to 95 W is
+    available as shown below.  Also, additional data (other elements  
+    such as wave heights) from these observations are available from 
+    NCDC upon request.
+    1)  4 diskettes (3.5 inch high density).
+    2)  Magnetic or cartridge tape.
+    3)  INTERNET via FTP:  
+        a) open ftp.ncdc.noaa.gov
+        b) Login is:  anonymous
+        c) Password is:  your email address
+        d) You are now logged onto a UNIX workstation.  Enter 'help'
+    if you'd like a list of available commands.
+        e) To move to the correct subdirectory, enter:  
+           cd /pub/data/blizzard
+        f) To get a copy of the data, enter: 
+           get storm.txt destination  (destination is your output
+           location and name)...e.g.--
+           get storm.txt c:storm.txt - copies to hard drive c:
+        g) If you need a copy of a call letter-station name cross
+    reference file, enter:  get stnlist.txt destination
+        h) For a copy of this report, enter: get blizz.txt destination
+    CONCLUSION
+        If you have any questions about this report or the data, please
+    contact either Neal Lott or Tom Ross:
+        704-271-4995 (Neal Lott)
+        704-271-4994 (Tom Ross)
+
+=== page 7 ===
+6
+        704-271-4876 (FAX)
+        nlott@ncdc.noaa.gov
+        tross@ncdc.noaa.gov
+        This report was prepared by the National Climatic Data Center's
+    Research Customer Service Group.  The decoded surface weather
+    observations were obtained from Operating Location 'A' of the USAF
+    Environmental Technical Applications Center in Asheville, NC.  Numerous
+    individuals and sources (too numerous to mention) provided information
+    for this report, and we thank all those who contributed.
+DATA LIST #1
+ CALL = CALL LETTERS
+ LAT = LATITUDE 
+ LON = LONGITUDE
+ YR--MODAHRMN = YEAR-MONTH-DAY-HOUR-MINUTE IN LST (CONVERTED FROM GMT USING 
+LONGITUDE OF THE STATION DUE TO LARGE NUMBER OF STATIONS IN DATASET)
+ DIR = WIND DIRECTION (990 = VARIABLE)  
+ SPD & GUS = WIND SPEED & GUST IN MPH   
+ VSBY = VISIBILITY IN STATUTE MILES--ROUNDED
+ WW = CURRENT WEATHER INDICATORS FROM 'AIRWAYS' TYPE OBSERVATIONS
+ TMP & DEW = TEMP & DEW POINT IN FAHRENHEIT 
+ SLP = SEA LEVEL PRESSURE IN INCHES & HUNDREDTHS
+ SNDP = SNOW DEPTH IN INCHES
+ WTEQ = WATER EQUIVALENT OF SNOW ON GROUND IN INCHES & TENTHS       
+ * INDICATES ELEMENT NOT REPORTED   
+ VALUES WERE CONVERTED FROM METRIC TO ENGLISH UNITS 
+ AVL = ASHEVILLE, NC
+ ILG = WILMINGTON, DE   
+ BKW = BECKLEY, WV  
+ JKL = JACKSON, KY  
+ LGA = LA GUARDIA ARPT, NY  
+ CON = CONCORD, NH  
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+AVL  3526 8255 199303120000 320   3 ***   20 **  **  **   30  19 30.15 *** **** 
+AVL  3526 8255 199303120100 330   4 ***   20 **  **  **   28  19 30.14 *** **** 
+AVL  3526 8255 199303120300 000   0 ***   20 **  **  **   28  22 30.14 *** **** 
+AVL  3526 8255 199303120400 000   0 ***   20 **  **  **   30  22 30.16 *** **** 
+AVL  3526 8255 199303120500 160   3 ***   20 **  **  **   30  22 30.18 *** **** 
+AVL  3526 8255 199303120600 160   4 ***   20 **  **  **   30  23 30.21 *** **** 
+AVL  3526 8255 199303120700 170   7 ***   15 **  **  **   31  23 30.21 *** **** 
+AVL  3526 8255 199303120800 170  11 ***   15 **  **  **   33  22 30.22 *** **** 
+AVL  3526 8255 199303120900 090   7 ***   20 **  **  **   35  22 30.22 *** **** 
+AVL  3526 8255 199303121000 150  11 ***   20 **  **  **   38  22 30.19 *** **** 
+AVL  3526 8255 199303121100 150   6 ***   20 **  **  **   39  22 30.18 *** ****
+
+=== page 8 ===
+7
+AVL  3526 8255 199303121200 180  10 ***   20 **  **  **   39  21 30.15 *** **** 
+AVL  3526 8255 199303121300 120   9 ***   15 **  **  **   39  20 30.14 *** **** 
+AVL  3526 8255 199303121500 340  11 ***   12 **  **  **   39  27 30.08 *** **** 
+AVL  3526 8255 199303121600 310   9 ***    1 S-  **  **   36  32 30.07 *** **** 
+AVL  3526 8255 199303121700 090   3 ***    2 S-  F   **   34  32 30.04 *** **** 
+AVL  3526 8255 199303121732 320   3 ***    4 F   **  **  *** *** ***** *** **** 
+AVL  3526 8255 199303121800 310   4 ***    1 S-  F   **   34  32 30.03 *** **** 
+AVL  3526 8255 199303122000 330   4 ***    1 S-  F   **   33  32 29.97 *** **** 
+AVL  3526 8255 199303122036 330   6 ***    1 S   F   **  *** *** ***** *** **** 
+AVL  3526 8255 199303122100 070   9 ***    1 S   F   **   32  32 29.95   2 **** 
+AVL  3526 8255 199303122200 020   9 ***    0 S   F   **   32  31 29.90 *** **** 
+AVL  3526 8255 199303122300 330   6 ***    0 S   F   **   32  31 29.83 *** **** 
+AVL  3526 8255 199303130000 010   8 ***    0 S   F   **   31  31 29.75   5 **** 
+AVL  3526 8255 199303130030 350   7 ***    1 S-  F   **  *** *** ***** *** **** 
+AVL  3526 8255 199303130100 030   8 ***    1 S-  F   **   31  30 29.65 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+AVL  3526 8255 199303130200 010  11 ***    0 S   F   **   31  30 29.57 *** **** 
+AVL  3526 8255 199303130300 030   9 ***    0 S   F   **   30  30 29.48   8 **** 
+AVL  3526 8255 199303130304 010   6 ***    0 S+  F   **  *** *** ***** *** **** 
+AVL  3526 8255 199303130400 330  11 ***    0 S+  F   **   30  30 29.35 *** **** 
+AVL  3526 8255 199303130439 350  11 ***    1 IP  S-  F   *** *** ***** *** **** 
+AVL  3526 8255 199303130500 340  14 ***    1 IP  S-  F    30  30 29.26 *** **** 
+AVL  3526 8255 199303130600 350  15 ***    0 S-  F   **   30  30 29.17  11 **** 
+AVL  3526 8255 199303130700 350  19 ***    0 S   F   **   29  28 29.13 *** **** 
+AVL  3526 8255 199303130824 330  29  37    0 T   S   F   *** *** ***** *** **** 
+AVL  3526 8255 199303130900 330  33  43    0 S   BS  **   27  26 28.99  14 **** 
+AVL  3526 8255 199303131000 340  46  54    0 S   BS  **   25  25 28.93 *** **** 
+AVL  3526 8255 199303131016 330  44  49    0 S-  BS  **  *** *** ***** *** **** 
+AVL  3526 8255 199303131100 340  47  56    0 S-  BS  **   24  23 28.89 *** **** 
+AVL  3526 8255 199303131200 330  48  64    0 S-  BS  **   23  22 28.89  16  3.8 
+AVL  3526 8255 199303131300 330  44  52    0 S-  BS  **   22  21 28.96 *** **** 
+AVL  3526 8255 199303131400 330  40  55    0 S-  BS  **   20  19 29.00 *** **** 
+AVL  3526 8255 199303131429 320  44  60    0 S-  BS  **  *** *** ***** *** **** 
+AVL  3526 8255 199303131500 320  40  59    0 S-  BS  **   20  17 29.05  16 **** 
+AVL  3526 8255 199303131600 320  41  54    0 S-  BS  **   20  16 29.13 *** **** 
+AVL  3526 8255 199303131700 320  40  59    0 S-  BS  **   20  17 29.19 *** **** 
+AVL  3526 8255 199303131800 310  29  46    1 S-  BS  **   20  15 29.28  17 **** 
+AVL  3526 8255 199303131900 320  29  37    1 S-  BS  **   19  15 29.39 *** **** 
+AVL  3526 8255 199303132000 310  23  36    0 S-  BS  **   19  15 29.49 *** **** 
+AVL  3526 8255 199303132100 320  19 ***    0 S-  BS  **   18  15 29.56  18 **** 
+AVL  3526 8255 199303132200 320  23  29    0 S-  BS  **   18  15 29.60 *** **** 
+AVL  3526 8255 199303132300 320  19  28    0 S-  BS  **   18  14 29.65 *** **** 
+AVL  3526 8255 199303140000 330  16 ***    2 S-  BS  **   18  14 29.71  19 **** 
+AVL  3526 8255 199303140100 310  16  24    1 S-  BS  **   17  13 29.77 *** **** 
+AVL  3526 8255 199303140118 280   8 ***    0 S   **  **  *** *** ***** *** **** 
+AVL  3526 8255 199303140136 320  10 ***    1 S-  **  **  *** *** ***** *** **** 
+AVL  3526 8255 199303140200 280  10 ***    1 S-  **  **   17  13 29.79 *** **** 
+AVL  3526 8255 199303140300 340  11 ***    2 S-  **  **   17  14 29.83  18 **** 
+AVL  3526 8255 199303140309 340   9 ***    1 S-  **  **  *** *** ***** *** ****
+
+=== page 9 ===
+8
+AVL  3526 8255 199303140332 300  18 ***    2 S-  BS  **  *** *** ***** *** **** 
+AVL  3526 8255 199303140400 310  17 ***    6 S-  BS  **   17   9 29.87 *** **** 
+AVL  3526 8255 199303140500 320  14 ***   10 SW- **  **   16   8 29.91 *** **** 
+AVL  3526 8255 199303140600 310  14 ***   30 **  **  **   15   5 29.96  18 **** 
+AVL  3526 8255 199303140700 330  15 ***   30 **  **  **   15   5 30.00 *** **** 
+AVL  3526 8255 199303140800 310  15 ***   30 **  **  **   16   5 30.04 *** **** 
+AVL  3526 8255 199303140900 320  13 ***   30 **  **  **   18   7 30.05 *** **** 
+AVL  3526 8255 199303141000 320  15 ***   30 **  **  **   20   4 30.07 *** **** 
+AVL  3526 8255 199303141100 340  17 ***   30 **  **  **   21   5 30.08 *** **** 
+AVL  3526 8255 199303141200 360  17 ***   30 **  **  **   22   5 30.09 ***  3.8 
+AVL  3526 8255 199303141300 010  16 ***   30 **  **  **   22   4 30.10 *** **** 
+AVL  3526 8255 199303141400 010  16  25   30 **  **  **   23   5 30.13 *** **** 
+AVL  3526 8255 199303141500 030  17  23   30 **  **  **   22   3 30.15 *** **** 
+AVL  3526 8255 199303141600 350  13 ***   25 **  **  **   22   4 30.16 *** **** 
+AVL  3526 8255 199303141700 350  11 ***   25 **  **  **   20   2 30.20 *** **** 
+AVL  3526 8255 199303141800 360  10 ***   25 **  **  **   18   2 30.24  15 **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+AVL  3526 8255 199303141900 350   6 ***   25 **  **  **   15   2 30.28 *** **** 
+AVL  3526 8255 199303142000 000   0 ***   25 **  **  **   12   3 30.32 *** **** 
+AVL  3526 8255 199303142100 000   0 ***   25 **  **  **   12   3 30.35 *** **** 
+AVL  3526 8255 199303142200 070   3 ***   25 **  **  **   11   2 30.36 *** **** 
+AVL  3526 8255 199303142300 000   0 ***   20 **  **  **    9   3 30.39 *** **** 
+AVL  3526 8255 199303150000 000   0 ***   20 **  **  **    8   2 30.41 *** **** 
+AVL  3526 8255 199303150100 000   0 ***   20 **  **  **    5   2 30.41 *** **** 
+AVL  3526 8255 199303150200 000   0 ***   20 **  **  **    6   2 30.42 *** **** 
+AVL  3526 8255 199303150300 260   3 ***   20 **  **  **   10   2 30.44 *** **** 
+AVL  3526 8255 199303150400 130   3 ***   20 **  **  **    3   0 30.49 *** **** 
+AVL  3526 8255 199303150500 000   0 ***   20 **  **  **    3  -1 30.52 *** **** 
+AVL  3526 8255 199303150600 000   0 ***   20 **  **  **    2  -1 30.54  15 **** 
+AVL  3526 8255 199303150700 180   3 ***   20 **  **  **    4   1 30.58 *** **** 
+AVL  3526 8255 199303150800 180   6 ***   20 **  **  **   10   4 30.60 *** **** 
+AVL  3526 8255 199303150900 150   3 ***   20 **  **  **   20   6 30.62 *** **** 
+AVL  3526 8255 199303151000 170   6 ***   20 **  **  **   28   7 30.59 *** **** 
+AVL  3526 8255 199303151200 170   9 ***   20 **  **  **   33  11 30.59 ***  3.2 
+AVL  3526 8255 199303151300 150   4 ***   20 **  **  **   37   8 30.55 *** **** 
+AVL  3526 8255 199303151400 160   7 ***   20 **  **  **   37  14 30.54 *** **** 
+ILG  3941 7560 199303120000 300   9 ***   15 **  **  **   29  17 30.18 *** **** 
+ILG  3941 7560 199303120100 320   9 ***   15 **  **  **   29  17 30.17 *** **** 
+ILG  3941 7560 199303120200 330   9 ***   15 **  **  **   26  16 30.17 *** **** 
+ILG  3941 7560 199303120400 220   6 ***   15 **  **  **   26  17 30.18 *** **** 
+ILG  3941 7560 199303120500 220   6 ***   15 **  **  **   26  17 30.20 *** **** 
+ILG  3941 7560 199303120600 210   4 ***   15 **  **  **   25  17 30.21 *** **** 
+ILG  3941 7560 199303120700 240   7 ***   15 **  **  **   27  19 30.24 *** **** 
+ILG  3941 7560 199303120800 270   7 ***   15 **  **  **   32  21 30.27 *** **** 
+ILG  3941 7560 199303120900 280   7 ***   15 **  **  **   35  21 30.28 *** **** 
+ILG  3941 7560 199303121000 300  10 ***   15 **  **  **   38  20 30.30 *** **** 
+ILG  3941 7560 199303121100 260   7 ***   15 **  **  **   40  20 30.29 *** **** 
+ILG  3941 7560 199303121200 280   4 ***   15 **  **  **   42  19 30.28 *** **** 
+ILG  3941 7560 199303121300 330   7 ***   15 **  **  **   43  18 30.25 *** ****
+
+=== page 10 ===
+9
+ILG  3941 7560 199303121400 000   0 ***   15 **  **  **   44  18 30.23 *** **** 
+ILG  3941 7560 199303121600 140   7 ***   15 **  **  **   42  20 30.21 *** **** 
+ILG  3941 7560 199303121700 180  10 ***   15 **  **  **   41  25 30.23 *** **** 
+ILG  3941 7560 199303121800 140   4 ***   15 **  **  **   40  25 30.22 *** **** 
+ILG  3941 7560 199303121900 170  10 ***   15 **  **  **   39  27 30.22 *** **** 
+ILG  3941 7560 199303122100 160   7 ***   15 **  **  **   38  27 30.24 *** **** 
+ILG  3941 7560 199303122200 140   9 ***   15 **  **  **   37  28 30.23 *** **** 
+ILG  3941 7560 199303122300 140   6 ***   15 **  **  **   37  28 30.20 *** **** 
+ILG  3941 7560 199303130000 150   6 ***   15 **  **  **   37  28 30.16 *** **** 
+ILG  3941 7560 199303130100 140   9 ***   12 **  **  **   37  28 30.15 *** **** 
+ILG  3941 7560 199303130125 150  11 ***    3 S-  **  **  *** *** ***** *** **** 
+ILG  3941 7560 199303130136 140  13 ***    2 S-  **  **  *** *** ***** *** **** 
+ILG  3941 7560 199303130200 140   9 ***    1 S-  **  **   33  31 30.15 *** **** 
+ILG  3941 7560 199303130300 110   8 ***    1 S-  F   **   33  31 30.10 *** **** 
+ILG  3941 7560 199303130312 070   8 ***    1 S-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303130400 070   7 ***    1 S-  F   **   32  31 30.04   1 **** 
+ILG  3941 7560 199303130500 080  10  16    1 S-  F   **   32  31 29.98 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+ILG  3941 7560 199303130505 070  11 ***    1 S-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303130520 060  10 ***    1 S-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303130535 070  11 ***    1 S   F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303130600 060  11 ***    1 S   F   **   32  31 29.92 *** **** 
+ILG  3941 7560 199303130603 060  13 ***    0 S   F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303130700 060  14  23    0 S   F   **   32  32 29.87   3 **** 
+ILG  3941 7560 199303130800 060  16  24    0 S   F   **   32  31 29.79 *** **** 
+ILG  3941 7560 199303130915 060  19  31    0 S   F   BS  *** *** ***** *** **** 
+ILG  3941 7560 199303130934 050  19  34    1 S   F   BS  *** *** ***** *** **** 
+ILG  3941 7560 199303131100 060  24  40    1 S   F   BS   32  31 29.47 *** **** 
+ILG  3941 7560 199303131104 060  26  40    1 IP  S   F   *** *** ***** *** **** 
+ILG  3941 7560 199303131128 050  26  43    1 IP  S-  F   *** *** ***** *** **** 
+ILG  3941 7560 199303131200 050  30  52    1 IP  S-  F    31  30 29.21 *** **** 
+ILG  3941 7560 199303131300 060  33  54    0 IP  S-  F    31  30 29.06 ***   .6 
+ILG  3941 7560 199303131400 040  16  25    0 IP  S-  F    31  31 29.05 *** **** 
+ILG  3941 7560 199303131423 050  30  43    0 IP  S   F   *** *** ***** *** **** 
+ILG  3941 7560 199303131500 030  22  38    0 IP  S   F    32  31 28.91 *** **** 
+ILG  3941 7560 199303131524 040  34  43    1 IP  S-  F   *** *** ***** *** **** 
+ILG  3941 7560 199303131537 050  29  44    1 S-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303131600 040  29  45    6 S-  F   **   33  31 28.68  10 **** 
+ILG  3941 7560 199303131700 050  23  40   15 **  **  **   34  31 28.65 *** **** 
+ILG  3941 7560 199303131800 040  22  40   12 **  **  **   34  31 28.52 *** **** 
+ILG  3941 7560 199303131900 060  29  31   12 **  **  **   35  32 28.51   8 **** 
+ILG  3941 7560 199303131933 030  14 ***    3 R-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303132000 030  14 ***    3 R-  F   **   34  33 28.45 *** **** 
+ILG  3941 7560 199303132019 360  13 ***    4 R-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303132100 350   9 ***    7 R-  **  **   34  33 28.44 *** **** 
+ILG  3941 7560 199303132131 340  18 ***    7 S-  **  **  *** *** ***** *** **** 
+ILG  3941 7560 199303132200 350  21 ***    7 AP  **  **   30  28 28.47   7 **** 
+ILG  3941 7560 199303132223 330  21 ***    1 S-  F   **  *** *** ***** *** **** 
+ILG  3941 7560 199303132232 320  19  26    1 S-  F   **  *** *** ***** *** ****
+
+=== page 11 ===
+10
+ILG  3941 7560 199303132300 310  23  26    1 S-  F   **   28  26 28.52 *** **** 
+ILG  3941 7560 199303132322 330  23  36    2 S-  BS  F   *** *** ***** *** **** 
+ILG  3941 7560 199303132335 320  30  38    3 S-  BS  F   *** *** ***** *** **** 
+ILG  3941 7560 199303140000 320  23  34    4 S-  BS  **   25  19 28.59 *** **** 
+ILG  3941 7560 199303140100 330  25  33    3 S-  BS  **   22  17 28.71   8 **** 
+ILG  3941 7560 199303140131 300  19  29    1 S-  BS  **  *** *** ***** *** **** 
+ILG  3941 7560 199303140200 300  18  28    4 S-  BS  **   22  18 28.82 *** **** 
+ILG  3941 7560 199303140300 300  25  37    2 S-  BS  **   23  18 ***** *** **** 
+ILG  3941 7560 199303140335 280  23  43    2 S-  BS  **  *** *** ***** *** **** 
+ILG  3941 7560 199303140400 290  23  37    2 S-  BS  **   22  15 29.00   9 **** 
+ILG  3941 7560 199303140500 300  25  40    6 BS  **  **   21  11 29.11 *** **** 
+ILG  3941 7560 199303140600 300  25  37    8 **  **  **   21   6 29.21 *** **** 
+ILG  3941 7560 199303140700 280  23  37   12 **  **  **   22   7 29.31   9 **** 
+ILG  3941 7560 199303140800 290  23  38   12 **  **  **   20   7 29.41 *** **** 
+ILG  3941 7560 199303140900 300  24  40   15 **  **  **   21   6 29.48 *** **** 
+ILG  3941 7560 199303141000 290  26  43   15 **  **  **   23   8 29.55 *** **** 
+ILG  3941 7560 199303141100 300  25  37   15 **  **  **   23   6 29.61 *** **** 
+ILG  3941 7560 199303141200 290  26  38   15 **  **  **   24   6 29.66 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+ILG  3941 7560 199303141300 300  26  38   15 **  **  **   24   5 29.69 ***  2.4 
+ILG  3941 7560 199303141400 300  24  37   15 **  **  **   25   1 29.73 *** **** 
+ILG  3941 7560 199303141500 280  25  34   15 **  **  **   25  -1 29.78 *** **** 
+ILG  3941 7560 199303141600 290  15  31   15 **  **  **   24   0 29.82 *** **** 
+ILG  3941 7560 199303141700 270  18  24   15 **  **  **   24   3 29.87 *** **** 
+ILG  3941 7560 199303141800 270  14  21   15 **  **  **   23   5 29.93 *** **** 
+ILG  3941 7560 199303141900 280  14  22   15 **  **  **   22   4 29.99   9 **** 
+ILG  3941 7560 199303142000 290  11 ***   15 **  **  **   21   3 30.05 *** **** 
+ILG  3941 7560 199303142100 290  13 ***   15 **  **  **   20   2 30.10 *** **** 
+ILG  3941 7560 199303142200 290  10 ***   15 **  **  **   19   2 30.15 *** **** 
+ILG  3941 7560 199303142300 270   8 ***   15 **  **  **   19   2 30.19 *** **** 
+ILG  3941 7560 199303150000 290   9 ***   15 **  **  **   17   2 30.22 *** **** 
+ILG  3941 7560 199303150100 300  11 ***   15 **  **  **   17  -3 30.26 *** **** 
+ILG  3941 7560 199303150200 300  11 ***   15 **  **  **   16  -2 30.29 *** **** 
+ILG  3941 7560 199303150300 300  11 ***   12 **  **  **   16  -2 30.31 *** **** 
+ILG  3941 7560 199303150400 270   7 ***   12 **  **  **   14  -1 30.36 *** **** 
+ILG  3941 7560 199303150500 280   9 ***   12 **  **  **   13  -2 30.39 *** **** 
+ILG  3941 7560 199303150600 250   7 ***   12 **  **  **   13  -2 30.43 *** **** 
+ILG  3941 7560 199303150700 260   7 ***   15 **  **  **   14  -1 30.47   9 **** 
+ILG  3941 7560 199303150800 260   9 ***   15 **  **  **   16  -1 30.51 *** **** 
+ILG  3941 7560 199303150900 280  11 ***   15 **  **  **   19   0 30.55 *** **** 
+ILG  3941 7560 199303151000 340  11 ***   15 **  **  **   22   2 30.56 *** **** 
+ILG  3941 7560 199303151100 290   9 ***   15 **  **  **   24   3 30.58 *** **** 
+ILG  3941 7560 199303151300 310   9  16   15 **  **  **   27   3 30.58 ***  1.9 
+ILG  3941 7560 199303151400 300   8 ***   15 **  **  **   29   7 30.58 *** **** 
+ILG  3941 7560 199303151500 290   9 ***   15 **  **  **   30   8 30.58 *** **** 
+BKW  3747 8112 199303120000 160   4 ***   10 **  **  **   22  21 30.24 *** **** 
+BKW  3747 8112 199303120100 160   4 ***    7 **  **  **   22  21 30.25 *** **** 
+BKW  3747 8112 199303120200 180   6 ***    7 **  **  **   22  21 30.26 *** **** 
+BKW  3747 8112 199303120400 140   4 ***    7 **  **  **   21  19 30.23 *** ****
+
+=== page 12 ===
+11
+BKW  3747 8112 199303120500 170   6 ***    7 **  **  **   19  17 30.24 *** **** 
+BKW  3747 8112 199303120600 160   4 ***    7 **  **  **   21  19 30.27 *** **** 
+BKW  3747 8112 199303120700 120   4 ***    7 **  **  **   21  19 30.29 *** **** 
+BKW  3747 8112 199303120800 000   0 ***    6 F   **  **   24  23 30.28 *** **** 
+BKW  3747 8112 199303120900 000   0 ***    6 F   **  **   29  25 30.29 *** **** 
+BKW  3747 8112 199303121000 140   6 ***   10 **  **  **   31  20 30.29 *** **** 
+BKW  3747 8112 199303121100 130   6 ***   12 **  **  **   33  20 30.27 *** **** 
+BKW  3747 8112 199303121200 160   6 ***   15 **  **  **   36  21 30.24 *** **** 
+BKW  3747 8112 199303121300 050   4 ***   20 **  **  **   37  20 30.21 *** **** 
+BKW  3747 8112 199303121400 200  45 *** **** **  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303121534 280   9  16   12 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303121600 250   8 ***   12 S-  **  **   36  21 30.19 *** **** 
+BKW  3747 8112 199303121638 310   4 ***   15 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303121700 240   6 ***   20 S-  **  **   34  24 30.18 *** **** 
+BKW  3747 8112 199303121800 250   6 ***    6 S-  **  **   33  25 30.19 *** **** 
+BKW  3747 8112 199303121840 280   3 ***    3 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303121900 290   4 ***    2 S-  **  **   31  27 30.18 *** **** 
+BKW  3747 8112 199303121938 010   4 ***    2 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303122028 010   7 ***    1 S-  **  **  *** *** ***** *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+BKW  3747 8112 199303122100 050   6 ***    2 S-  **  **   29  28 30.13 *** **** 
+BKW  3747 8112 199303122110 020   7 ***    2 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303122116 040   6 ***    1 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303122200 020   6 ***    1 S-  **  **   29  27 30.09   1 **** 
+BKW  3747 8112 199303122235 030   6 ***    1 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303122300 020   6 ***    1 S-  **  **   28  27 30.06 *** **** 
+BKW  3747 8112 199303122320 010   7 ***    1 S   **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303122339 010   7 ***    1 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303130000 010   8 ***    1 S-  **  **   28  27 29.99 *** **** 
+BKW  3747 8112 199303130100 040   8 ***    1 S-  **  **   28  27 29.96   1 **** 
+BKW  3747 8112 199303130107 050   6 ***    1 S   **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303130200 040   7 ***    1 S   **  **   28  27 29.88 *** **** 
+BKW  3747 8112 199303130300 030   8 ***    1 S   **  **   28  27 29.82 *** **** 
+BKW  3747 8112 199303130400 030   9 ***    1 S   **  **   27  27 29.75   4 **** 
+BKW  3747 8112 199303130500 020   8 ***    0 S   **  **   27  26 29.70 *** **** 
+BKW  3747 8112 199303130536 030  10 ***    0 S+  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303130600 030   9 ***    0 S+  **  **   26  25 29.63 *** **** 
+BKW  3747 8112 199303130700 030   8 ***    0 S+  **  **   26  25 29.55   7 **** 
+BKW  3747 8112 199303130800 020  14  19    0 S+  **  **   25  24 29.46 *** **** 
+BKW  3747 8112 199303131100 030  14 ***    0 S+  **  **   25  24 29.17 *** **** 
+BKW  3747 8112 199303131200 010  16 ***    0 S+  BS  **   24  23 29.11 *** **** 
+BKW  3747 8112 199303131300 010  15 ***    0 S+  BS  **   23  22 29.04  14  1.7 
+BKW  3747 8112 199303131400 340  18  28    0 S+  BS  **   23  21 29.01 *** **** 
+BKW  3747 8112 199303131500 010  22  29    0 S+  BS  **   21  20 29.02 *** **** 
+BKW  3747 8112 199303131600 340  28  39    0 S+  BS  **   20  20 29.05  19 **** 
+BKW  3747 8112 199303131700 350  21  28    0 S+  BS  **   19  17 29.10 *** **** 
+BKW  3747 8112 199303131800 320  16  30    0 S+  BS  **   18  16 29.14 *** **** 
+BKW  3747 8112 199303131900 340  24  36    0 S   BS  **   17  15 29.18  23 **** 
+BKW  3747 8112 199303132000 330  31  43    0 S+  BS  **   15  14 29.25 *** ****
+
+=== page 13 ===
+12
+BKW  3747 8112 199303132100 330  28  38    0 S+  BS  **   14  12 29.33 *** **** 
+BKW  3747 8112 199303132200 320  22  34    0 S+  BS  **   14  12 29.38  26 **** 
+BKW  3747 8112 199303132300 330  23  33    0 S   BS  **   13  11 29.45 *** **** 
+BKW  3747 8112 199303140000 320  24  45    0 S   BS  **   14  11 29.50 *** **** 
+BKW  3747 8112 199303140100 310  23  34    0 S   BS  **   13  11 29.57  29 **** 
+BKW  3747 8112 199303140200 300  21  31    0 S-  BS  **   12   9 29.63 *** **** 
+BKW  3747 8112 199303140300 320  21  29    0 S-  BS  **   12   8 29.68 *** **** 
+BKW  3747 8112 199303140315 300  15  33    1 S-  BS  **  *** *** ***** *** **** 
+BKW  3747 8112 199303140400 310  21  38    1 S-  BS  **   11   8 29.74  30 **** 
+BKW  3747 8112 199303140500 310  18  29    1 S-  BS  **   11   6 29.79 *** **** 
+BKW  3747 8112 199303140512 310  14 ***    1 S-  **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303140600 320  16  25    1 S-  F   **   10   6 29.85 *** **** 
+BKW  3747 8112 199303140700 330  13 ***    1 S-  F   **    9   5 29.88  30 **** 
+BKW  3747 8112 199303140710 320  13 ***    1 S-  F   **  *** *** ***** *** **** 
+BKW  3747 8112 199303140740 320  13 ***    1 SW- F   **  *** *** ***** *** **** 
+BKW  3747 8112 199303140800 320  14 ***    4 SW- F   **   10   6 29.92 *** **** 
+BKW  3747 8112 199303140818 320  19  29    1 SW- BS  F   *** *** ***** *** **** 
+BKW  3747 8112 199303140835 310  17  24    3 SW- BS  F   *** *** ***** *** **** 
+BKW  3747 8112 199303140900 310  15  23    6 SW- BS  **    9   3 29.98 *** **** 
+BKW  3747 8112 199303141000 310  19  29    7 SW- **  **   10   3 30.02 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+BKW  3747 8112 199303141041 290  17  26    1 SW- **  **  *** *** ***** *** **** 
+BKW  3747 8112 199303141100 300  18  25    3 SW- **  **   11   6 30.07 *** **** 
+BKW  3747 8112 199303141200 290  17  26   15 **  **  **   12   0 30.08 *** **** 
+BKW  3747 8112 199303141300 300  16 ***   20 **  **  **   13  -1 30.11 ***  3.7 
+BKW  3747 8112 199303141400 330  17  25   20 **  **  **   14  -2 30.12 *** **** 
+BKW  3747 8112 199303141500 320  15 ***   20 **  **  **   16  -2 30.15 *** **** 
+BKW  3747 8112 199303141600 310  19 ***   20 **  **  **   15  -3 30.18 *** **** 
+BKW  3747 8112 199303141700 310  11 ***   20 **  **  **   15  -3 30.20 *** **** 
+BKW  3747 8112 199303141800 300  10 ***   12 **  **  **   14  -1 30.23 *** **** 
+BKW  3747 8112 199303141900 320   9 ***   12 **  **  **   12   1 30.28  29 **** 
+BKW  3747 8112 199303142000 300   6 ***   12 **  **  **   10   4 30.32 *** **** 
+BKW  3747 8112 199303142100 310   4 ***   12 **  **  **    7   3 30.36 *** **** 
+BKW  3747 8112 199303142200 300   4 ***   12 **  **  **    5   2 30.39 *** **** 
+BKW  3747 8112 199303142300 270   6 ***   12 **  **  **    7   4 30.40 *** **** 
+BKW  3747 8112 199303150000 250   7 ***   12 **  **  **    3   0 30.42 *** **** 
+BKW  3747 8112 199303150100 260   4 ***   12 **  **  **    4  -2 30.44 *** **** 
+BKW  3747 8112 199303150200 250   6 ***   12 **  **  **    8  -2 30.44 *** **** 
+BKW  3747 8112 199303150300 250   4 ***   12 **  **  **    7  -2 30.45 *** **** 
+BKW  3747 8112 199303150400 240   4 ***   12 **  **  **    8  -2 30.48 *** **** 
+BKW  3747 8112 199303150500 260   4 ***   12 **  **  **    6  -3 30.52 *** **** 
+BKW  3747 8112 199303150600 230   4 ***   12 **  **  **    4  -4 30.54 *** **** 
+BKW  3747 8112 199303150700 220   4 ***   25 **  **  **    5  -4 30.57  28 **** 
+BKW  3747 8112 199303150800 220   7 ***   30 **  **  **    8  -2 30.59 *** **** 
+BKW  3747 8112 199303150900 230   6 ***   30 **  **  **   13   1 30.62 *** **** 
+BKW  3747 8112 199303151000 220   8 ***   30 **  **  **   17   4 30.63 *** **** 
+BKW  3747 8112 199303151100 260   6 ***   30 **  **  **   22   5 30.62 *** **** 
+BKW  3747 8112 199303151300 260   8 ***   30 **  **  **   30   9 30.60 ***  3.3 
+BKW  3747 8112 199303151400 210   8 ***   30 **  **  **   31   9 30.57 *** ****
+
+=== page 14 ===
+13
+BKW  3747 8112 199303151500 220  10 ***   30 **  **  **   33  11 30.55 *** **** 
+JKL  3736 8332 199303120000 360   4 ***   10 **  **  **   30  25 30.20 *** **** 
+JKL  3736 8332 199303120100 000   0 ***   10 **  **  **   30  25 30.21 *** **** 
+JKL  3736 8332 199303120300 330   6 ***   10 **  **  **   27  25 30.20 *** **** 
+JKL  3736 8332 199303120400 300   3 ***   10 **  **  **   26  25 30.21 *** **** 
+JKL  3736 8332 199303120500 330   3 ***   10 **  **  **   27  26 30.21 *** **** 
+JKL  3736 8332 199303120522 000   0 ***    7 **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303120538 010   6 ***    7 **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303120600 010   4 ***    4 F   **  **   27  25 30.22 *** **** 
+JKL  3736 8332 199303120700 000   0 ***    2 F   **  **   27  26 30.24 *** **** 
+JKL  3736 8332 199303120800 000   0 ***    2 F   **  **   30  26 30.26 *** **** 
+JKL  3736 8332 199303120900 110   4 ***    2 F   **  **   32  27 30.24 *** **** 
+JKL  3736 8332 199303120907 100   3 ***    4 F   **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303121000 100   4 ***    4 F   **  **   35  26 30.23 *** **** 
+JKL  3736 8332 199303121100 310   3 ***    6 F   **  **   36  25 30.21 *** **** 
+JKL  3736 8332 199303121200 350   6 ***    7 **  **  **   37  23 30.19 *** **** 
+JKL  3736 8332 199303121300 340   3 ***    7 **  **  **   38  22 30.18 *** **** 
+JKL  3736 8332 199303121403 300   4 ***    7 **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303121500 290   3 ***    7 **  **  **   39  21 30.12 *** **** 
+JKL  3736 8332 199303121600 300   4 ***    7 **  **  **   37  20 30.12 *** **** 
+JKL  3736 8332 199303121700 000   0 ***    7 S-  **  **   35  22 30.13 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+JKL  3736 8332 199303121743 000   0 ***    2 S-  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303121800 020   4 ***    2 S-  **  **   33  27 30.13 *** **** 
+JKL  3736 8332 199303121902 360   8 ***    2 S-  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303122000 020   9 ***    2 S-  **  **   30  28 30.08 *** **** 
+JKL  3736 8332 199303122100 350   8 ***    2 S-  F   **   30  28 30.07 *** **** 
+JKL  3736 8332 199303122137 010  10 ***    1 S-  F   **  *** *** ***** *** **** 
+JKL  3736 8332 199303122200 *** *** *** **** **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303122300 020  10 ***    1 S-  F   **   28  27 30.00 *** **** 
+JKL  3736 8332 199303130000 360  10 ***    1 S-  F   **   28  27 29.95   1 **** 
+JKL  3736 8332 199303130100 020  13  19    1 S-  F   **   27  26 29.89 *** **** 
+JKL  3736 8332 199303130200 020  13  23    0 S   F   **   26  25 29.82 *** **** 
+JKL  3736 8332 199303130300 020  17 ***    0 S   F   **   25  24 29.77   1 **** 
+JKL  3736 8332 199303130400 360  11  23    1 S   **  **   24  22 29.70 *** **** 
+JKL  3736 8332 199303130500 360  15  23    0 S   **  **   23  22 29.66 *** **** 
+JKL  3736 8332 199303130536 330  17  24    0 S+  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303130600 330  17  32    0 S+  **  **   22  21 29.60   4 **** 
+JKL  3736 8332 199303130700 350  16  31    0 S+  **  **   21  20 29.56 *** **** 
+JKL  3736 8332 199303131000 330  13  25    0 S+  **  **   20  18 29.41 *** **** 
+JKL  3736 8332 199303131100 330  17  31    0 S+  **  **   19  17 29.36 *** **** 
+JKL  3736 8332 199303131200 330  19  28    0 S+  **  **   19  18 29.33 ***  1.2 
+JKL  3736 8332 199303131300 340  16  34    0 S+  **  **   20  18 29.32 *** **** 
+JKL  3736 8332 199303131400 340  18  40    0 S+  BS  **   20  18 29.35 *** **** 
+JKL  3736 8332 199303131500 320  17  40    0 S   BS  **   19  18 29.41  18 **** 
+JKL  3736 8332 199303131600 320  17  36    0 S   BS  **   20  18 29.45 *** **** 
+JKL  3736 8332 199303131700 300  19  38    1 S   BS  **   19  17 29.51 *** **** 
+JKL  3736 8332 199303131800 310  19  36    1 S   BS  **   18  16 29.56  20 **** 
+JKL  3736 8332 199303131900 310  17  36    1 S   BS  **   19  15 29.61 *** ****
+
+=== page 15 ===
+14
+JKL  3736 8332 199303132000 290  13  21    1 S   BS  **   18  17 29.65 *** **** 
+JKL  3736 8332 199303132031 290  15  25    2 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303132100 270  13  33    2 S-  BS  **   19  17 29.68  20 **** 
+JKL  3736 8332 199303132107 290  16  32    1 S   BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303132200 320  16  36    1 S   BS  **   19  17 29.72 *** **** 
+JKL  3736 8332 199303132210 270  23 ***    2 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303132214 270  14  26    5 S-  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303132225 300  11  32    2 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303132300 310  11  32    2 S-  BS  **   18  15 29.77 *** **** 
+JKL  3736 8332 199303140000 300   9  19    2 S-  BS  **   17  13 29.80  20 **** 
+JKL  3736 8332 199303140033 260  11 ***    1 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140100 270  10  17    1 S-  BS  **   17  15 29.82 *** **** 
+JKL  3736 8332 199303140132 280  16  31    2 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140200 270  11  22    2 S-  BS  **   16  12 29.85 *** **** 
+JKL  3736 8332 199303140300 300  13  21    2 S-  BS  **   14   7 29.89 *** **** 
+JKL  3736 8332 199303140320 260  14 ***    2 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140326 270  14 ***    1 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140400 280  14  23    2 S-  BS  **   14  10 29.92 *** **** 
+JKL  3736 8332 199303140439 300  15  31    3 S-  BS  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140500 290  17  26    5 BS  **  **   14   6 29.97 *** **** 
+JKL  3736 8332 199303140533 280  11  18    7 **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303140600 310  10  21    7 **  **  **   11   4 30.00  20 **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+JKL  3736 8332 199303140700 280  11  21    7 **  **  **   13   5 30.04 *** **** 
+JKL  3736 8332 199303140800 240   9 ***    7 **  **  **   16   6 30.08 *** **** 
+JKL  3736 8332 199303140900 260  11  22   10 **  **  **   19   6 30.10 *** **** 
+JKL  3736 8332 199303140927 260   9 ***   10 **  **  **  *** *** ***** *** **** 
+JKL  3736 8332 199303141000 320   9 ***   10 **  **  **   20   6 30.13 *** **** 
+JKL  3736 8332 199303141100 260   9  17   10 **  **  **   20   6 30.15 *** **** 
+JKL  3736 8332 199303141200 290  10  19    7 **  **  **   25   7 30.16 ***  3.1 
+JKL  3736 8332 199303141300 250   9 ***    7 **  **  **   27   5 30.17 *** **** 
+JKL  3736 8332 199303141400 280  14  26    7 **  **  **   23   3 30.19 *** **** 
+JKL  3736 8332 199303141500 230  11 ***   10 **  **  **   26   1 30.20 *** **** 
+JKL  3736 8332 199303141600 260  11 ***   15 **  **  **   23  -4 30.21 *** **** 
+JKL  3736 8332 199303141700 290   8  19   20 **  **  **   20  -2 30.23 *** **** 
+JKL  3736 8332 199303141800 270   9  19   20 **  **  **   17  -3 30.27  20 **** 
+JKL  3736 8332 199303141900 260   4 ***   20 **  **  **   16  -3 30.30 *** **** 
+JKL  3736 8332 199303142000 220   6 ***   25 **  **  **   16  -2 30.32 *** **** 
+JKL  3736 8332 199303142100 210   9 ***   25 **  **  **   16  -2 30.34 *** **** 
+JKL  3736 8332 199303142200 210   9 ***   25 **  **  **   16  -2 30.35 *** **** 
+JKL  3736 8332 199303142300 220   7 ***   25 **  **  **   14  -1 30.37 *** **** 
+JKL  3736 8332 199303150000 230   8 ***   25 **  **  **   15   1 30.38 *** **** 
+JKL  3736 8332 199303150100 240   7 ***   25 **  **  **   14   2 30.39 *** **** 
+JKL  3736 8332 199303150200 210   6 ***   25 **  **  **   13   3 30.41 *** **** 
+JKL  3736 8332 199303150300 200   4 ***   25 **  **  **   11   2 30.43 *** **** 
+JKL  3736 8332 199303150400 190   8 ***   25 **  **  **   11   2 30.44 *** **** 
+JKL  3736 8332 199303150500 180  10 ***   25 **  **  **   12   2 30.47 *** **** 
+JKL  3736 8332 199303150600 170  13 ***   25 **  **  **   12   3 30.48  15 **** 
+JKL  3736 8332 199303150700 170  13 ***   25 **  **  **   15   3 30.50 *** ****
+
+=== page 16 ===
+15
+JKL  3736 8332 199303150800 170   9 ***   25 **  **  **   19   5 30.50 *** **** 
+JKL  3736 8332 199303150900 140   8 ***   25 **  **  **   24   6 30.50 *** **** 
+JKL  3736 8332 199303151000 130   8 ***   25 **  **  **   32   9 30.49 *** **** 
+JKL  3736 8332 199303151200 170   9 ***   25 **  **  **   41  12 30.46 ***  2.5 
+JKL  3736 8332 199303151300 170  15 ***   25 **  **  **   44  14 30.43 *** **** 
+JKL  3736 8332 199303151400 170  11  18   25 **  **  **   43  13 30.41 *** **** 
+LGA  4046 7390 199303120100 300  14 ***   25 **  **  **   30  14 30.16 *** **** 
+LGA  4046 7390 199303120200 270   8 ***   25 **  **  **   30  13 30.14 *** **** 
+LGA  4046 7390 199303120400 280  11 ***   25 **  **  **   30  13 30.14 *** **** 
+LGA  4046 7390 199303120500 280  14 ***   25 **  **  **   30  14 30.16 *** **** 
+LGA  4046 7390 199303120600 300  15 ***   25 **  **  **   29  15 30.19 *** **** 
+LGA  4046 7390 199303120700 290  11 ***   25 **  **  **   29  15 30.22 *** **** 
+LGA  4046 7390 199303120800 310  14 ***   20 **  **  **   29  15 30.24 *** **** 
+LGA  4046 7390 199303120900 300  16 ***   20 **  **  **   30  14 30.26 *** **** 
+LGA  4046 7390 199303121000 310  13 ***   20 **  **  **   31  14 30.27 *** **** 
+LGA  4046 7390 199303121100 310  17 ***   20 **  **  **   33  11 30.27 *** **** 
+LGA  4046 7390 199303121200 310  10  19   20 **  **  **   35  10 30.29 *** **** 
+LGA  4046 7390 199303121300 310   7 ***   19 **  **  **   36   6 30.27 *** **** 
+LGA  4046 7390 199303121400 310   6 ***   20 **  **  **   37   4 30.26 *** **** 
+LGA  4046 7390 199303121600 310   8 ***   20 **  **  **   38   8 30.22 *** **** 
+LGA  4046 7390 199303121700 340   7 ***   20 **  **  **   38   9 30.23 *** **** 
+LGA  4046 7390 199303121800 080  10 ***   20 **  **  **   38  12 30.26 *** **** 
+LGA  4046 7390 199303121900 110   9 ***   19 **  **  **   37  20 30.26 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+LGA  4046 7390 199303122100 170  11 ***   15 **  **  **   37  24 30.31 *** **** 
+LGA  4046 7390 199303122200 150   9 ***   15 **  **  **   36  26 30.31 *** **** 
+LGA  4046 7390 199303122300 160  11 ***   15 **  **  **   36  27 30.29 *** **** 
+LGA  4046 7390 199303130000 140  10 ***   15 **  **  **   36  28 30.24 *** **** 
+LGA  4046 7390 199303130100 130  10 ***   15 **  **  **   36  26 30.22 *** **** 
+LGA  4046 7390 199303130200 130  13 ***   12 **  **  **   35  26 30.21 *** **** 
+LGA  4046 7390 199303130300 110  13 ***    4 S-  **  **   33  29 30.19 *** **** 
+LGA  4046 7390 199303130320 130  13 ***    2 S-  **  **  *** *** ***** *** **** 
+LGA  4046 7390 199303130400 100  13 ***    2 S-  F   **   32  31 30.17 *** **** 
+LGA  4046 7390 199303130500 100  21 ***    2 S-  F   **   31  31 30.13 *** **** 
+LGA  4046 7390 199303130555 070  15 ***    2 S-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303130600 080  13 ***    2 S-  F   **   30  30 30.10 *** **** 
+LGA  4046 7390 199303130615 060  14 ***    1 S-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303130700 060  16 ***    1 S-  F   **   30  30 30.08   2 **** 
+LGA  4046 7390 199303130800 060  17 ***    1 S   F   **   29  29 30.03 *** **** 
+LGA  4046 7390 199303130900 050  25  33    0 S   F   **   30  30 29.92 *** **** 
+LGA  4046 7390 199303130915 050  31  38    0 S-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303130935 060  28  34    0 S   F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131009 060  30  38    0 S+  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131100 060  34  43    0 S+  F   BS   29  29 29.79 *** **** 
+LGA  4046 7390 199303131110 060  37  44    0 S   F   BS  *** *** ***** *** **** 
+LGA  4046 7390 199303131200 060  36  53    0 S   F   BS   29  29 29.68 *** **** 
+LGA  4046 7390 199303131300 060  44  59    0 S+  F   BS   28  28 29.52 ***  1.0 
+LGA  4046 7390 199303131320 060  46  59    0 S+  F   BS  *** *** ***** *** **** 
+LGA  4046 7390 199303131335 060  41  57    0 IP  S+  F   *** *** ***** *** ****
+
+=== page 17 ===
+16
+LGA  4046 7390 199303131400 060  52  71    0 IP  S   F    28  28 29.29 *** **** 
+LGA  4046 7390 199303131403 060  45  59    0 IP  S   F   *** *** ***** *** **** 
+LGA  4046 7390 199303131430 060  48  68    0 IP  F   BS  *** *** ***** *** **** 
+LGA  4046 7390 199303131440 060  46  63    1 IP  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131500 060  49  67    1 IP  F   **   29  29 29.09 *** **** 
+LGA  4046 7390 199303131600 060  46  57    1 IP  F   **   30  30 28.96  11 **** 
+LGA  4046 7390 199303131625 050  33  44    1 IP  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131700 050  34  46    1 IP  F   **   31  31 28.90 *** **** 
+LGA  4046 7390 199303131720 040  34  47    2 IP  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131730 040  37  47    2 R   F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131800 040  26  36    2 R-  F   **   33  33 28.82 *** **** 
+LGA  4046 7390 199303131805 040  31  43    4 R-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303131900 030  17  39    3 R-  F   **   33  33 28.76  10 **** 
+LGA  4046 7390 199303132000 030  24  37   10 **  **  **   32  32 28.69 *** **** 
+LGA  4046 7390 199303132100 040  33  46   10 **  **  **   33  33 28.60 *** **** 
+LGA  4046 7390 199303132155 120  13 ***    5 F   **  **  *** *** ***** *** **** 
+LGA  4046 7390 199303132200 060  17 ***    7 **  **  **   34  33 28.53  10 **** 
+LGA  4046 7390 199303132217 180  24  34    5 R-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303132300 180  30  39    4 R-  F   **   39  37 28.48 *** **** 
+LGA  4046 7390 199303140000 190  17  31    4 R-  F   **   38  37 28.46 *** **** 
+LGA  4046 7390 199303140100 170  24  34    6 R-  F   **   38  36 28.45   8 **** 
+LGA  4046 7390 199303140101 170  21  31    6 R-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303140135 300  15 ***    1 S-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303140200 300  22  30    1 S-  F   **   29  28 28.47 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+LGA  4046 7390 199303140300 300  29  36    2 S-  F   **   26  25 28.57 *** **** 
+LGA  4046 7390 199303140315 300  23  40    3 S-  F   **  *** *** ***** *** **** 
+LGA  4046 7390 199303140400 300  26  47    8 **  **  **   22  17 28.70   8 **** 
+LGA  4046 7390 199303140435 300  24  36    1 S-  **  **  *** *** ***** *** **** 
+LGA  4046 7390 199303140500 290  28  37    1 S-  F   **   21  17 28.81 *** **** 
+LGA  4046 7390 199303140540 300  26  33    4 S-  **  **  *** *** ***** *** **** 
+LGA  4046 7390 199303140600 300  26  46   10 S-  **  **   22  15 28.91 *** **** 
+LGA  4046 7390 199303140700 290  39  49   12 **  **  **   22  11 29.03   9 **** 
+LGA  4046 7390 199303140800 290  41  52   15 **  **  **   20   7 29.15 *** **** 
+LGA  4046 7390 199303140900 290  29  45   20 **  **  **   21   8 29.26 *** **** 
+LGA  4046 7390 199303141000 290  31  39   12 **  **  **   21   9 29.35 *** **** 
+LGA  4046 7390 199303141100 280  33  43   15 **  **  **   22   7 29.41 *** **** 
+LGA  4046 7390 199303141200 270  25  39   15 **  **  **   22   6 29.47 *** **** 
+LGA  4046 7390 199303141300 290  25  40   15 **  **  **   23   6 29.52   8  3.7 
+LGA  4046 7390 199303141400 290  26  38   15 **  **  **   24   6 29.55 *** **** 
+LGA  4046 7390 199303141500 280  26  38   15 **  **  **   24   5 29.62 *** **** 
+LGA  4046 7390 199303141600 300  26  36   15 **  **  **   24   5 29.68 *** **** 
+LGA  4046 7390 199303141700 300  21  33   15 **  **  **   24   7 29.74 *** **** 
+LGA  4046 7390 199303141800 300  24  32   15 **  **  **   24   6 29.80 *** **** 
+LGA  4046 7390 199303141900 310  24  38   19 **  **  **   23   4 29.86   8 **** 
+LGA  4046 7390 199303142000 310  23  37   20 **  **  **   22   0 29.93 *** **** 
+LGA  4046 7390 199303142100 300  30  39   20 **  **  **   20  -1 30.00 *** **** 
+LGA  4046 7390 199303142200 300  26  36   20 **  **  **   19  -1 30.05 *** **** 
+LGA  4046 7390 199303142300 310  22 ***   20 **  **  **   19  -1 30.08 *** ****
+
+=== page 18 ===
+17
+LGA  4046 7390 199303150000 290  21  36   20 **  **  **   18  -3 30.13 *** **** 
+LGA  4046 7390 199303150100 300  18  36   19 **  **  **   18  -3 30.18   8 **** 
+LGA  4046 7390 199303150200 300  22  31   20 **  **  **   17  -2 30.21 *** **** 
+LGA  4046 7390 199303150300 290  18  29   20 **  **  **   16  -3 30.24 *** **** 
+LGA  4046 7390 199303150400 310  19  26   20 **  **  **   16  -1 30.29 *** **** 
+LGA  4046 7390 199303150500 300  15 ***   20 **  **  **   15   0 30.34 *** **** 
+LGA  4046 7390 199303150600 300  17 ***   20 **  **  **   15   1 30.39 *** **** 
+LGA  4046 7390 199303150700 300  18  26   19 **  **  **   15   1 30.42   8 **** 
+LGA  4046 7390 199303150800 300  16 ***   20 **  **  **   17   1 30.47 *** **** 
+LGA  4046 7390 199303150900 300  16 ***   20 **  **  **   18   5 30.49 *** **** 
+LGA  4046 7390 199303151000 310  17 ***   20 **  **  **   19   5 30.51 *** **** 
+LGA  4046 7390 199303151100 300  17 ***   20 **  **  **   22   6 30.52 *** **** 
+LGA  4046 7390 199303151300 270  15 ***   19 **  **  **   26   7 30.52   7  3.4 
+LGA  4046 7390 199303151400 290  18 ***   20 **  **  **   27   5 30.52 *** **** 
+LGA  4046 7390 199303151500 260  16 ***   20 **  **  **   28   7 30.54 *** **** 
+CON  4312 7150 199303120000 310  21  31    7 **  **  **   22  -1 29.96 *** **** 
+CON  4312 7150 199303120100 300  16  24   10 **  **  **   21  -2 29.99 *** **** 
+CON  4312 7150 199303120200 310  15  25   10 **  **  **   19  -1 29.99 *** **** 
+CON  4312 7150 199303120400 330  11 ***   10 **  **  **   16  -1 30.02 *** **** 
+CON  4312 7150 199303120500 330  15 ***   10 **  **  **   14  -3 30.05 *** **** 
+CON  4312 7150 199303120600 310  13 ***   25 **  **  **   12  -5 30.08 *** **** 
+CON  4312 7150 199303120700 320  17  25   25 **  **  **   10 -11 30.13   7 **** 
+CON  4312 7150 199303120800 310  21  28   25 **  **  **    9 -11 30.17 *** **** 
+CON  4312 7150 199303120900 310  25  32   25 **  **  **   11 -11 30.19 *** **** 
+CON  4312 7150 199303121000 310  21  25   25 **  **  **   12 -10 30.20 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+CON  4312 7150 199303121100 320  17  23   30 **  **  **   14  -9 30.22 *** **** 
+CON  4312 7150 199303121200 330  16  24   30 **  **  **   18  -6 30.23 *** **** 
+CON  4312 7150 199303121300 300  15  22   30 **  **  **   20  -9 30.22 ***  2.2 
+CON  4312 7150 199303121400 340  15 ***   30 **  **  **   22  -8 30.22 *** **** 
+CON  4312 7150 199303121600 300  14 ***   30 **  **  **   24  -9 30.23 *** **** 
+CON  4312 7150 199303121700 330  13 ***   30 **  **  **   24  -9 30.23 *** **** 
+CON  4312 7150 199303121800 330   8 ***    7 **  **  **   22  -9 30.25 *** **** 
+CON  4312 7150 199303121900 340   4 ***    7 **  **  **   20 -10 30.29   7 **** 
+CON  4312 7150 199303122100 040   3 ***    7 **  **  **   12   0 30.33 *** **** 
+CON  4312 7150 199303122200 000   0 ***    7 **  **  **   14  -2 30.34 *** **** 
+CON  4312 7150 199303122300 000   0 ***    7 **  **  **   12   3 30.34 *** **** 
+CON  4312 7150 199303130000 060   3 ***    7 **  **  **   12   1 30.31 *** **** 
+CON  4312 7150 199303130100 230   4 ***   10 **  **  **   13   3 30.31 *** **** 
+CON  4312 7150 199303130200 000   0 ***   10 **  **  **   12   2 30.29 *** **** 
+CON  4312 7150 199303130300 030   3 ***   10 **  **  **   13   2 30.27 *** **** 
+CON  4312 7150 199303130400 060   4 ***   10 **  **  **   13   1 30.28 *** **** 
+CON  4312 7150 199303130500 000   0 ***   10 **  **  **   13  -1 30.27 *** **** 
+CON  4312 7150 199303130600 350   4 ***   15 **  **  **   13   2 30.26 *** **** 
+CON  4312 7150 199303130700 310   6 ***   20 **  **  **   13   2 30.26   6 **** 
+CON  4312 7150 199303130800 300   7 ***   20 **  **  **   14   3 30.24 *** **** 
+CON  4312 7150 199303131100 340   7 ***    5 S-  **  **   21  11 30.15 *** **** 
+CON  4312 7150 199303131120 040  13 ***    1 S-  **  **  *** *** ***** *** **** 
+CON  4312 7150 199303131200 040  11 ***    1 S-  F   **   22  17 30.05 *** ****
+
+=== page 19 ===
+18
+CON  4312 7150 199303131225 040  11 ***    1 S-  F   **  *** *** ***** *** **** 
+CON  4312 7150 199303131300 040  11 ***    1 S   F   **   21  18 30.00 ***  2.6 
+CON  4312 7150 199303131340 050  14 ***    0 S   F   **  *** *** ***** *** **** 
+CON  4312 7150 199303131400 040  14  22    1 S   F   **   20  18 29.90 *** **** 
+CON  4312 7150 199303131500 040  16  24    1 S   F   **   21  18 29.76 *** **** 
+CON  4312 7150 199303131600 040  16  23    0 S   F   **   21  19 29.61  11 **** 
+CON  4312 7150 199303131700 050  17  24    0 S+  F   **   22  20 29.46 *** **** 
+CON  4312 7150 199303131800 050  23  37    0 S   F   BS   24  23 29.31 *** **** 
+CON  4312 7150 199303131900 070  22  36    0 S   F   BS   24  24 29.22  19 **** 
+CON  4312 7150 199303132000 040  17  25    1 S   F   **   24  23 29.15 *** **** 
+CON  4312 7150 199303132100 030  17  28    1 S   F   **   22  21 29.04 *** **** 
+CON  4312 7150 199303132200 030  17  32    0 S   F   **   22  20 28.83  22 **** 
+CON  4312 7150 199303132211 030  18  29    1 S-  F   **  *** *** ***** *** **** 
+CON  4312 7150 199303132300 030  21  31    7 IP  S-  **   23  19 28.80 *** **** 
+CON  4312 7150 199303132306 040  17  26    2 AP- S-  **  *** *** ***** *** **** 
+CON  4312 7150 199303132324 030  23  37    1 AP- S-  F   *** *** ***** *** **** 
+CON  4312 7150 199303140000 040  18  30    3 AP- S-  F    23  19 28.68 *** **** 
+CON  4312 7150 199303140031 050  17  26    1 S-  F   **  *** *** ***** *** **** 
+CON  4312 7150 199303140100 060  21  25    2 S-  F   **   23  19 28.63  22 **** 
+CON  4312 7150 199303140129 040   7  17   10 S-  **  **  *** *** ***** *** **** 
+CON  4312 7150 199303140200 050   8 ***   10 S-  **  **   23  18 28.60 *** **** 
+CON  4312 7150 199303140300 360  10 ***    1 S-  **  **   23  20 28.56 *** **** 
+CON  4312 7150 199303140400 360   7 ***    1 S-  **  **   22  20 28.52  22 **** 
+CON  4312 7150 199303140420 010   7 ***    2 S-  F   **  *** *** ***** *** **** 
+CON  4312 7150 199303140500 310  11 ***    2 S-  F   **   22  21 28.53 *** **** 
+CON  4312 7150 199303140535 310  11 ***    1 S-  F   **  *** *** ***** *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+CON  4312 7150 199303140600 320  13 ***    1 S-  F   **   22  20 28.54 *** **** 
+CON  4312 7150 199303140700 310  18  24    2 S-  F   **   22  18 28.59  23 **** 
+CON  4312 7150 199303140724 310  23  36    3 S-  F   **  *** *** ***** *** **** 
+CON  4312 7150 199303140800 310  18  29   10 S-  **  **   21  14 28.65 *** **** 
+CON  4312 7150 199303140900 300  25  41   10 S-  **  **   20  11 28.74 *** **** 
+CON  4312 7150 199303141000 300  30  39   10 S-  **  **   20   8 28.84  17 **** 
+CON  4312 7150 199303141100 300  25  44    5 S-  **  **   20   8 28.94 *** **** 
+CON  4312 7150 199303141200 290  25  34   10 **  **  **   22   6 29.03 *** **** 
+CON  4312 7150 199303141300 300  30  41   10 **  **  **   19   3 29.11  17  4.5 
+CON  4312 7150 199303141400 290  23  34   10 **  **  **   20   3 29.19 *** **** 
+CON  4312 7150 199303141500 300  22  37   10 **  **  **   19   3 29.27 *** **** 
+CON  4312 7150 199303141600 290  19  37   10 **  **  **   17  -1 29.36 *** **** 
+CON  4312 7150 199303141700 290  23  41    6 BS  **  **   16  -2 29.44 *** **** 
+CON  4312 7150 199303141800 290  22  37   10 **  **  **   16  -2 29.52 *** **** 
+CON  4312 7150 199303141900 300  19  28    7 **  **  **   14  -2 29.61  15 **** 
+CON  4312 7150 199303142000 300  17  29    7 **  **  **   14  -3 29.68 *** **** 
+CON  4312 7150 199303142100 290  14 ***    7 **  **  **   13  -2 29.73 *** **** 
+CON  4312 7150 199303142200 300  18  28    7 **  **  **   13  -2 29.77 *** **** 
+CON  4312 7150 199303142300 320  13 ***    7 **  **  **   11  -3 29.81 *** **** 
+CON  4312 7150 199303150000 310  18  24    7 **  **  **   12  -6 29.86 *** **** 
+CON  4312 7150 199303150100 320  18  23    7 **  **  **   10 -11 29.92 *** **** 
+CON  4312 7150 199303150200 310  15 ***    7 **  **  **    9 -13 29.97 *** ****
+
+=== page 20 ===
+19
+CON  4312 7150 199303150300 300  13  23    7 **  **  **    7 -13 30.01 *** **** 
+CON  4312 7150 199303150400 310   9 ***    7 **  **  **    5 -14 30.07 *** **** 
+CON  4312 7150 199303150500 310   6 ***    7 **  **  **    2 -15 30.12 *** **** 
+CON  4312 7150 199303150600 300  14 ***   15 **  **  **    2 -17 30.17 *** **** 
+CON  4312 7150 199303150700 300  11 ***   20 **  **  **    2 -17 30.23  15 **** 
+CON  4312 7150 199303150800 300  11  21   25 **  **  **    5 -15 30.27 *** **** 
+CON  4312 7150 199303150900 300  18  25   25 **  **  **    8 -14 30.31 *** **** 
+CON  4312 7150 199303151000 310  17  25   25 **  **  **   11 -12 30.34 *** **** 
+CON  4312 7150 199303151100 300  14  25   25 **  **  **   14 -10 30.36 *** **** 
+CON  4312 7150 199303151300 300  11  19   25 **  **  **   19  -9 30.37 *** **** 
+CON  4312 7150 199303151400 280  13  19   25 **  **  **   21 -10 30.38 *** **** 
+CON  4312 7150 199303151500 290  14  22   25 **  **  **   22  -9 30.40 *** **** 
+DATA LIST #2
+ CALL = CALL LETTERS
+ LAT = LATITUDE 
+ LON = LONGITUDE
+ YR--MODAHRMN = YEAR-MONTH-DAY-HOUR-MINUTE IN LST (CONVERTED FROM GMT USING 
+LONGITUDE OF THE STATION DUE TO LARGE NUMBER OF STATIONS IN DATASET)
+ DIR = WIND DIRECTION (990 = VARIABLE)  
+ SPD & GUS = WIND SPEED & GUST IN MPH   
+ VSBY = VISIBILITY IN STATUTE MILES--ROUNDED
+ WW = CURRENT WEATHER INDICATORS FROM 'AIRWAYS' TYPE OBSERVATIONS
+ TMP & DEW = TEMP & DEW POINT IN FAHRENHEIT 
+ SLP = SEA LEVEL PRESSURE IN INCHES & HUNDREDTHS
+ SNDP = SNOW DEPTH IN INCHES
+ WTEQ = WATER EQUIVALENT OF SNOW ON GROUND IN INCHES & TENTHS       
+ * INDICATES ELEMENT NOT REPORTED   
+ VALUES WERE CONVERTED FROM METRIC TO ENGLISH UNITS 
+ WER =  ILE D'ORLEANS, CN   
+ WTG =  POINTE DES MONTS, CN
+ WSG =  CAP CHAT, CN
+ YID =  DIGBY ARPT, CN  
+ PBI =  WEST PALM BEACH, FL 
+ VRB =  VERO BEACH, FL  
+ BQK =  BRUNSWICK/GLYNCO, GA
+ S58 =  SOUTH TIMBALIER, LA 
+ 5R0 =  EAST ADDITION B323, TX  
+ 7R8 =  SOUTH MARSH ISLAND, LA  
+ GSB =  SEYMOUR-JOHNSON AFB, NC 
+ LGA =  NEW YORK/LA GUARDIA, NY 
+ PVC =  PROVINCETOWN, MA
+ BOS =  BOSTON/LOGAN INTL, MA   
+ LNS =  LANCASTER, PA   
+ MWN =  MOUNT WASHINGTON, NH
+ FPSN = FRYING PAN SHOALS, NC   
+ ALSN = AMBROSE, NY 
+ MISM = MATINICUS ISLE, ME
+
+=== page 21 ===
+20
+ ALL OTHERS = SHIPS AT SEA  
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+WER  4700 7082 199303140100 050  56  76 **** **  **  **   21  20 29.05 *** **** 
+WER  4700 7082 199303140200 050  61  77 **** **  **  **   21  14 28.90 *** **** 
+WER  4700 7082 199303140300 050  61  77 **** **  **  **   21  14 28.90 *** **** 
+WER  4700 7082 199303140400 050  60  72 **** **  **  **   21  18 28.76 *** **** 
+WER  4700 7082 199303140500 050  54  70 **** **  **  **   21  19 28.77 *** **** 
+WTG  4919 6738 199303140700 050  57  70    9 **  **  **   19  16 29.01 *** **** 
+WTG  4919 6738 199303140800 050  55  74    9 **  **  **   18  15 28.94 *** **** 
+WSG  4905 6673 199303140600 050  64  72 **** **  **  **   18  16 29.06 *** **** 
+WSG  4905 6673 199303140700 050  68  83 **** **  **  **   18  16 28.93 *** **** 
+WSG  4905 6673 199303140900 050  68  79 **** **  **  **   19  18 28.74 *** **** 
+WSG  4905 6673 199303141000 050  61  76    0 **  **  **   19  18 28.68 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+WSG  4905 6673 199303141100 040  57  70    1 **  **  **   18  16 28.65 *** **** 
+WSG  4905 6673 199303141300 030  60  70    1 **  **  **   18  16 28.66 *** **** 
+YID  4433 6578 199303132300 120  46  71    0 IP  S   ZR-  28  28 ***** *** **** 
+PBI  2641 8012 199303130439 200  32  71    1 T   RW  F   *** *** ***** *** **** 
+VRB  2739 8042 199303130427 270  57  83    0 T   RW  **  *** *** ***** *** **** 
+BQK  3115 8147 199303131300 230  46  75    7 S-  **  **   40  30 ***** *** **** 
+S58  2832 9058 199303121437 030  57  77    0 R+  F   **   60  60 ***** *** **** 
+S58  2832 9058 199303121600 020  81  98    0 R+  F   **   52  52 ***** *** **** 
+5R0  2813 9375 199303121200 020  72  86    0 R   F   **  *** *** ***** *** **** 
+5R0  2813 9375 199303121500 010  75  86    1 R   F   **  *** *** ***** *** **** 
+7R8  2818 9198 199303121507 360  81  92    0 R   F   **   51  49 ***** *** **** 
+7R8  2818 9198 199303130500 320  69  81    7 **  **  **   47  33 ***** *** **** 
+GSB  3520 7797 199303131742 210  37  71    6 R-  **  **  *** *** ***** *** **** 
+LGA  4046 7390 199303131400 060  52  71    0 IP  S   F    28  28 29.29 *** **** 
+PVC  4204 7022 199303140700 210  47  81    7 **  **  **   32  21 ***** *** **** 
+BOS  4222 7103 199303131613 060  53  70    0 S+  BS  **  *** *** ***** *** **** 
+BOS  4222 7103 199303131800 060  54  71    0 T   S+  BS   31  31 29.16 *** **** 
+LNS  4007 7630 199303131400 040  40  74    1 S-  ZR- **   26  26 ***** *** **** 
+MWN  4416 7130 199303120100 270  81 ***   31 **  **  **  -12 -20 *****   8 **** 
+MWN  4416 7130 199303120300 270  90 106   31 BS  **  **  -13 -25 ***** *** **** 
+MWN  4416 7130 199303120400 270  90 ***   31 **  **  **  -13 -25 ***** *** **** 
+MWN  4416 7130 199303120600 270  71  81   60 BS  **  **  -19 -22 ***** *** **** 
+MWN  4416 7130 199303120700 270  71 ***   47 **  **  **  -19 -22 *****   7 **** 
+MWN  4416 7130 199303120900 270  66  82   60 **  **  **  -10 -25 ***** *** **** 
+MWN  4416 7130 199303131800 090 110 144    0 S-  F   BS   -1  -1 ***** *** **** 
+MWN  4416 7130 199303131900 090 110 ***    0 **  **  **   -1  -1 *****   7 **** 
+MWN  4416 7130 199303132100 080  83 107    0 S-  F   BS    1   1 ***** *** **** 
+MWN  4416 7130 199303141200 270  70  78    0 F   BS  **  -10 -10 ***** *** **** 
+MWN  4416 7130 199303141300 270  70 ***    0 **  **  **  -10 -10 *****   7 **** 
+MWN  4416 7130 199303141500 250  87 101    0 F   BS  **  -15 -15 ***** *** **** 
+MWN  4416 7130 199303141800 260 101 110    0 F   **  **  -17 -17 ***** *** **** 
+MWN  4416 7130 199303141900 260 101 ***    0 **  **  **  -17 -17 *****   7 **** 
+MWN  4416 7130 199303142100 270  83  95    0 F   **  **  -17 -17 ***** *** ****
+
+=== page 22 ===
+21
+MWN  4416 7130 199303150000 270  81  95    0 F   **  **  -20 -20 ***** *** **** 
+MWN  4416 7130 199303150100 270  81 ***    0 **  **  **  -20 -20 *****   7 **** 
+MWN  4416 7130 199303150300 270  71  78    0 F   **  **  -24 -24 ***** *** **** 
+MWN  4416 7130 199303150400 270  71 ***    0 **  **  **  -24 -24 ***** *** **** 
+MWN  4416 7130 199303150600 270  82  89    1 F   **  **  -25 -25 ***** *** **** 
+MWN  4416 7130 199303150700 220  82 ***    0 **  **  **  -25 -25 *****   7 **** 
+MWN  4416 7130 199303150900 270  78  90    1 F   **  **  -19 -19 ***** *** **** 
+MWN  4416 7130 199303151200 270  64  78    0 F   **  **  -14 -14 ***** *** **** 
+FPSN 3329 7758 199303131500 220  70 *** **** **  **  **   49 *** 28.97 *** **** 
+FPSN 3329 7758 199303131700 230  70 *** **** **  **  **   45 *** 29.07 *** **** 
+ALSN 4028 7383 199303131600 070  71 *** **** **  **  **   34 *** 28.81 *** **** 
+MISM 4347 6885 199303132000 070  72 *** **** **  **  **   29 *** 29.08 *** **** 
+SHIP 3018 8060 199303130700 220  70 ***    6 **  **  **   65  62 29.09 *** **** 
+KPSB 2548 8440 199303130900 270  75 ***    6 **  **  **   78  70 29.83 *** **** 
+SHIP 3124 7980 199303131000 220  82 ***    1 **  **  **   63  48 29.03 *** **** 
+SHIP 3136 7950 199303131300 250  77 ***    1 **  **  **   49  41 29.13 *** **** 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP SNDP WTEQ 
+SHIP 3154 7900 199303131600 250  74 ***    1 **  **  **   41  39 29.26 *** **** 
+WMBQ 4742 6860 199303131600 150  71 ***    1 **  **  **   67  66 ***** *** **** 
+SHIP 3200 7850 199303131900 260  71 ***    1 **  **  **   40  37 29.36 *** **** 
+GCSW 3448 7520 199303131900 220  81 ***    2 **  **  **   50  48 28.81 *** **** 
+WMBQ 3742 6830 199303131900 150  71 ***    1 **  **  **   66  64 29.15 *** **** 
+ZCAN 4200 7010 199303131900 090  75 ***    1 **  **  **   36 *** ***** *** **** 
+VCRJ 4230 6990 199303131900 080  75 ***    0 **  **  **   36  36 29.03 *** **** 
+ELNB 2554 7540 199303132200 270  78 ***    6 **  **  **   72  70 29.90 *** **** 
+DQFT 2924 7850 199303140100 240  98 ***    6 **  **  **   49  34 29.90 *** **** 
+CGDX 4848 6760 199303140700 050  75 ***    0 **  **  **   19  16 28.84 *** **** 
+WCJY 3612 6690 199303140800 200  75 ***    2 **  **  **   57  52 29.44 *** **** 
+WCJY 3618 6720 199303141400 250  77 ***    2 **  **  **   54  43 29.59 *** **** 
+WMBQ 3706 6740 199303141400 250  74 ***    0 **  **  **   51  50 29.62 *** **** 
+WMBQ 3736 6750 199303151000 310  74 ***    1 **  **  **   41  32 30.33 *** **** 
+DATA LIST #3
+ CALL = CALL LETTERS  
+ LAT = LATITUDE 
+ LON = LONGITUDE
+ YR--MODAHRMN = YEAR-MONTH-DAY-HOUR-MINUTE IN LST (CONVERTED FROM GMT USING 
+LONGITUDE OF THE STATION DUE TO LARGE NUMBER OF STATIONS IN DATASET)
+ DIR = WIND DIRECTION (990 = VARIABLE)  
+ SPD & GUS = WIND SPEED & GUST IN MPH   
+ VSBY = VISIBILITY IN STATUTE MILES--ROUNDED
+ WW = CURRENT WEATHER INDICATORS FROM 'AIRWAYS' TYPE OBSERVATIONS
+ TMP & DEW = TEMP & DEW POINT IN FAHRENHEIT 
+ SLP = SEA LEVEL PRESSURE IN INCHES & HUNDREDTHS
+ WAVE = WAVE HEIGHT IN FEET 
+ SWL = SWELL HEIGHT IN FEET
+
+=== page 23 ===
+22
+ * INDICATES ELEMENT NOT REPORTED   
+ VALUES WERE CONVERTED FROM METRIC TO ENGLISH UNITS 
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP WAVE SWL  
+8PAO 4306 6560 199303151400 280  34 ***    6 **  **  **   19  10 30.21  16  20  
+C6KD 2618 7950 199303131900 270  40 ***    2 **  **  **   63  59 29.86  23  23  
+DQFT 2924 7850 199303140100 240  98 ***    6 **  **  **   49  34 29.90   7  20  
+ELEI 3300 7460 199303131300 180  62 ***    1 **  **  **   68  64 29.09  21  20  
+ELEI 3306 7460 199303131900 210  63 ***    1 **  **  **   68  63 29.18  23  25  
+ELEI 3248 7440 199303140100 240  67 ***    1 **  **  **   65  59 29.49  23  25  
+ELNB 2554 7540 199303132200 270  78 ***    6 **  **  **   72  70 29.90  21  16  
+ELNB 2706 7570 199303141000 300   6 ***    2 **  **  **   63  61 29.66  20  23  
+ELNB 2830 7650 199303142200 290  34 ***    2 **  **  **   59  41 30.31  20  23  
+FNEF 3900 7400 199303131900 120  39 ***    6 **  **  **   52  40 28.48  20 ***  
+GCSW 3512 7520 199303131300 150  69 ***    0 **  **  **   65  64 28.74  16  21  
+GCSW 3448 7520 199303131900 220  81 ***    2 **  **  **   50  48 28.81  52 ***  
+GCSW 3442 7520 199303140100 250  60 ***    2 **  **  **   39  35 29.28  41 ***  
+GCSW 3430 7550 199303140700 260  51 ***    6 **  **  **   38  35 29.74  26  20  
+NIKA 2548 8690 199303130900 340  46 ***    6 **  **  **   52  34 29.99  15  34  
+NIKA 2530 8660 199303131200 340  52 ***    6 **  **  **   55  46 30.07  20  38  
+NIKA 2512 8630 199303131500 310  52 ***    6 **  **  **   59  48 30.04  20  23  
+NIKA 2506 8630 199303132100 330  40 ***    6 **  **  **   59  48 30.12  18  20  
+NIKA 2518 8650 199303140000 330  34 ***    6 **  **  **   59  48 30.13  16  20  
+PEWF 3736 6520 199303151400 300  41 ***    6 **  **  **   41  27 30.26  10  26  
+PHUH 3230 7870 199303130700 170  52 ***    2 **  **  **   66  63 29.12  20  16  
+PITB 2436 8550 199303130600 310  63 ***    6 **  **  **   62  47 30.00  26 ***  
+PITB 2442 8640 199303131800 310  56 ***   12 **  **  **   61  48 30.09  26 ***  
+PJNG 2730 9150 199303121800 340  69 ***    2 **  **  **   53  53 29.60  20  20  
+PJNG 2736 9230 199303130900 330  43 ***   12 **  **  **   49  35 30.19  20 ***  
+PJNG 2742 9250 199303131200 310  51 ***   12 **  **  **   47  35 30.21  20 ***  
+PJNG 2742 9280 199303131500 320  38 ***   12 **  **  **   48  34 30.21  16  20  
+CALL  LAT  LON YR--MODAHRMN DIR SPD GUS VSBY WW  WW  WW  TMP DEW  SLP WAVE SWL  
+SHIP 3112 7550 199303130700 130  38 ***   12 **  **  **   72  65 *****  16  20  
+SHIP 2530 8660 199303131200 340  52 ***    6 **  **  **   55  46 30.07  20  38  
+SHIP 2824 7880 199303131200 250  60 ***    2 **  **  **   66 *** 29.44  20 ***  
+SHIP 3136 7950 199303131300 250  77 ***    1 **  **  **   49  41 29.13  20 ***  
+SHIP 3154 7900 199303131600 250  74 ***    1 **  **  **   41  39 29.26  26 ***  
+SHIP 3200 7850 199303131900 260  71 ***    1 **  **  **   40  37 29.36  31 ***  
+SHIP 3200 7800 199303132200 260  66 ***    1 **  **  **   44  34 29.53  31 ***  
+VCRJ 4230 6990 199303131900 080  75 ***    0 **  **  **   36  36 29.03 ***  30  
+VCRJ 4242 7020 199303141300 280  57 ***    6 **  **  **   27  21 29.09   5  25  
+VRKE 2512 8610 199303141800 310  29 ***    6 **  **  **   70  52 30.36  23 ***  
+VRKE 2230 8540 199303150600 050  21 ***   12 **  **  **   66  57 30.34  20 ***  
+VSBN 4100 6510 199303142000 240  69 ***    1 **  **  **   38  37 29.58  33 ***  
+VSBZ 3912 6760 199303151300 300  34 ***    6 **  **  **   29 *** 30.36   8  20  
+WCJY 3536 6540 199303132000 140  52 ***    6 **  **  **   68  59 29.65  16  23  
+WCJY 3612 6690 199303140800 200  75 ***    2 **  **  **   57  52 29.44  57  66  
+WCJY 3618 6720 199303141400 250  77 ***    2 **  **  **   54  43 29.59  56  62
+
+=== page 24 ===
+23
+WCJY 3730 6880 199303150700 320  40 ***   12 **  **  **   38 *** 30.27  33  33  
+WMBQ 4742 6860 199303131600 150  71 ***    1 **  **  **   67  66 *****  15  20  
+WMBQ 3742 6830 199303131900 150  71 ***    1 **  **  **   66  64 29.15  28  25  
+WMBQ 3706 6740 199303141400 250  74 ***    0 **  **  **   51  50 29.62  41  44  
+WMRU 3018 7140 199303140700 250  46 ***   12 **  **  **   61  50 29.92   8  36  
+WMRU 3130 7200 199303141900 230  40 ***   12 **  **  **   55  48 30.09   3  20  
+WRYX 3936 7250 199303131300 080  49 ***    0 **  **  **   36  30 29.24  13  20  
+WVDG 3512 6990 199303140100 220  69 ***    1 **  **  **   70  70 29.25   7  26  
+WVDG 3500 6810 199303141300 220  46 ***    2 **  **  **   60  52 29.74   5  20  
+WZJB 2942 7380 199303141300 270  40 ***   12 **  **  **   63  54 30.08  11  23  
+WZJE 2900 7940 199303130700 210  40 ***    6 **  **  **   69  66 29.28   8  20  
+WZJE 2642 7580 199303131900 270  39 ***    6 **  **  **   67  61 29.83  10  20  
+WZJF 2924 7760 199303131600 250  63 ***    2 **  **  **   68  57 29.49  20  25  
+XCBR 2624 9140 199303122100 330  56 ***    0 **  **  **   57  54 29.74  16  20  
+XCBR 2624 9140 199303130000 330  54 ***    0 **  **  **   53  48 29.93  16  20  
+XCBR 2624 9180 199303130600 340  51 ***    1 **  **  **   52  41 30.05 ***  20  
+XCBR 2636 9210 199303130900 330  44 ***    2 **  **  **   52  37 30.17  16  20  
+XWZJ 2800 7750 199303131300 230  41 ***    6 **  **  **   70  61 29.50  10  20

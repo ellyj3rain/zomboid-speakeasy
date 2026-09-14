@@ -20,3 +20,13 @@ approved (RECORD.md 43) and the operator ruled what the corpus is for
 carries no copyright (17 U.S.C. §105); the manifest is `manifest.md`,
 and the first two entries are the Monthly Labor Review's June and
 July 1993 issues.
+
+## Outputs
+
+`tools/extract_corpus.py` turns the curated items into the plain-text
+outputs the work consumes: one file per item under `out/`, plus an
+index of derived facts. The outputs are derived artifacts, never
+curation - everything an output says is in its PDF, the manifest
+remains the record, and an item reaches the outputs by being in the
+manifest and never otherwise. The tool is deterministic: two runs
+over the same corpus produce byte-identical outputs.
