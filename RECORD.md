@@ -1038,3 +1038,86 @@ named the same day - the current options are an absence of
 everything ruled configurable over 2026-09-11 to 13 - then
 readiness, then the training passes. The training README now
 carries this entry as its goal.
+
+## 46 - The readiness sweep (2026-09-13)
+
+The operator ordered the readiness step of the end-state order ("do
+the readiness sweep"), the step entry 45 named between the sandbox
+revision (done the same day, SAO `[C115]`) and the training passes.
+"Ready to play, in theory" is the bar: everything mechanically
+verifiable without the operator starting a world. The boundary is
+named plainly - SAO's `launch-dev.sh` boots the real game GUI, so a
+mod-load test IS starting a world IS playing, which is the operator's
+receipt boundary; the sweep verifies everything below that line, and
+the play receipts named in the records remain the operator's,
+unchanged.
+
+What the sweep verified, in the order it ran:
+
+- **SAO install coherence.** Local main = origin/main = `583ae94`,
+  tree clean. A whole-tree `diff -r` of the repo `mod/` against
+  `~/Zomboid/mods/SurvivorAwareness` found zero differences - every
+  file, not just the jar; the jar (`dd2d9414...`) is byte-identical
+  at dist, tree, and install; LICENSE and CREDITS.md are the deploy's
+  own copies, md5-equal to the repo root; `modversion` states
+  `4.5.1.0-pre-alpha` in both mod.info files and VERSION agrees.
+  Two stale agent worktree registrations were removed (a third left
+  as an inert directory - clean tree, every commit on main, nothing
+  at risk).
+- **ZAO gate and install.** The full gate at the tip was clean and
+  the install is content-equal to origin/main - the working tree
+  carries CRLF by autocrlf smudge, the shipped blobs and the install
+  do not differ beyond it.
+- **Cross-module coherence.** `cross_module_rows.py` regenerates both
+  shipped row files (work-words 112, trade-hinges 78) exactly from
+  their era dumps. CONTRACT.md v2 (ratified, entry 42) matches the
+  tool's shape. Every runtime seam symbol was checked at both tips:
+  SAO calls `ZAO.State.of`, `ZAO.Pathogen.begin/advance/expose`,
+  `ZAO.StateStore.read` - all present; ZAO calls `SAO.Body.active`,
+  `SAO.Identity.get`, `SAO.Places.at`, `SAO.Rand.unit`,
+  `SAO.History.countyHours`, `SAO.Controller.tick` - all present.
+  No stale cross-repo version claims exist in either sibling's docs.
+- **The readiness inventory, by the acceptance bar.** Every surface
+  the bar names is shipped, deployed (both installs equal their
+  origin tips), and border-covered, with both gates green at tip:
+  the living county (perceive, decide, work, group, claim, organize,
+  settle), the branching graph and its eight record dials, ZAO's
+  turned ecology (forms, performance, decay, recovery, settlement),
+  cross-module pressure feedback, inspect panels, sandbox controls
+  (SAO 31 options all read and explained, ZAO 25 dials), persistent
+  state, mutation knowledge and adaptation on later-world starts,
+  Day Zero, the streets, the driving, and the three `[C115]` dials.
+- **ML readiness, named not done.** The corpus holds three curated
+  items against a "full dataset" still to curate; five voice seeds
+  stand with expansion named as deterministic tooling, later; the
+  fence is built (SAO `[C47]`) and mechanically proved; inference
+  budgets have a ceiling (SAO `[C28]`: 256x8 about 387 microseconds,
+  two percent of a 60fps frame - a ceiling, sized in-session); the
+  export contract is deliberately empty, waiting on the first
+  approved data, as its README rules.
+
+The sweep found exactly one defect, and it is fixed and published:
+ZAO's gate rebuilt its own jar on every run with fresh zip
+timestamps, entry-identical to the committed jar and differing only
+in metadata - so every gate run, the pre-commit hook included, left
+a meaning-free jar diff in the tree. ZAO `[A31]` (PR #18, squash
+`b1e8dc9`) holds the jar stamp to a declared constant - the county's
+calendar anchor, July 9 1993, the day the Knox Event schedule starts,
+named on SAO's ratified sandbox surface - and two independent builds
+from clean state now produce byte-identical jars; the gate's own
+rebuild leaves a clean tree clean; the jar was redeployed and the
+install verified equal. ZAO's version machine moved to
+`0.2.0.2-pre-alpha`.
+
+The sibling finding, named and not fixed: SAO's `build-java.sh`
+carries the same timestamp nondeterminism, but SAO's gate never
+builds - it reads the shipped jar - so no gate run dirties her tree
+and nothing she does today produces the defect. It is one line if a
+future batch wants it.
+
+The honest limits: no play receipt exists (the operator's, named
+OPEN in the records); no mod-load boot test can exist below the
+play boundary; the corpus is three items against the full dataset
+the training passes will need. What stands between here and the
+training passes is curation and play, in that order named by entry
+45.
