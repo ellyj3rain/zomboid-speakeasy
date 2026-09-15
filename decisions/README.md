@@ -24,6 +24,13 @@ The first cross-module rows are in `cross-module/`. `work-words.jsonl` holds
 decision hour. A body with no assigned form is in the `none` form, its
 performance is zero, and its decay state follows the facts SAO already
 records.
+
+`trajectories.jsonl` is not intent. It is the county-line corpus from
+SAO `[C126]`: headless Knox runs (11 towns, 198 genesis) at 1, 7, 30,
+90, 180, 365, and 1096 days. Alive, dead, houses standing, in-house.
+Two 1096-day seeds. A later start is still lived; this file is what
+those years produced, for models that need a curve.
+
 When the pathogen roll takes a form, the row also carries that form, its
 normalized performance, and the visible-form fact Perception reads. A body
 carries a form only when the pathogen has already acted on it: infected,
