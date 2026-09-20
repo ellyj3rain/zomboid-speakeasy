@@ -1,9 +1,19 @@
 # Tools
 
-`cross_module_rows.py` merges an SAO decision dump with ZAO state rows keyed
-by the same person id. It keeps the SAO row unchanged, adds the `pathogen`
-block to the person half, adds the `visibleForms` block to the situation
-half, and writes one cross-module row per line.
+`cross_module_rows.py` joins version 3 SAO decisions to ZAO state on the exact
+run, county, person, event and hour namespace. It validates the complete inputs,
+executable-option evidence, conditioning time and protected artifact hashes
+before writing. A temporary sibling becomes visible through one atomic replace.
 
-ZAO's own `tools/state_dump.py` emits one state row per SAO decision moment,
-keyed by person id and decision hour.
+The historical version 2 rows are deliberately refused. Their approved intent
+remains in place; their `(person, hour)` join and future conditioning do not meet
+the version 3 evidence contract.
+
+`audit_conditioning.py` reproduces the eligibility counts in
+`decisions/ELIGIBILITY.md` from the protected version 2 bytes.
+
+Run the join controls with:
+
+```text
+python tools/test_cross_module_rows.py
+```

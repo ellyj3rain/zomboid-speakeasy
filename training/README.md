@@ -11,7 +11,13 @@ Rules:
 - The export contract (format, versioning, how a consumer loads a
   model) is designed here and recorded before the first export.
 
-Empty. Waits on the first approved data.
+No training run exists yet. Approved data does: 190 ratified choices and nine
+approved world documents. Training is blocked at their conditioning boundary,
+not at review. The historical decision rows contain future facts and bare
+options, and their version 2 cross-module key collapses distinct county events.
+They remain protected intent and audit evidence; they are not admitted to a
+training view. `../decisions/ELIGIBILITY.md` records the measured findings and
+the version 3 admission contract.
 
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and

@@ -2,86 +2,93 @@
 
 | Field | Contract |
 | --- | --- |
-| Version | 2 |
-| Status | RATIFIED 2026-09-12 by the operator (RECORD.md entry 42) - the runtime seam follows this contract |
+| Version | 3 for new joins; version 2 remains protected historical data |
+| Status | Corrective integrity revision, 2026-09-20; preserves the operator intent ratified for version 2 in RECORD entry 42 |
 | Owner | ellyj3rain |
 
-This contract extends the ratified row shape so one row can carry the full
-simulation across SAO, ZAO, and Speakeasy.
+One row carries the four ratified halves across SAO, ZAO and Speakeasy:
 
-The six integration rulings are recorded in ZAO as DR-022. This contract
-follows them and the event-driven pathogen state now shipped on both sides.
+1. `person`
+2. `situation`
+3. `options`
+4. `choice`
 
-## The four halves
+The version 3 contract tightens the evidence identity and action boundary. It
+does not alter an approved choice.
 
-A row still has four halves:
+## Full namespace
 
-1. person
-2. situation
-3. options
-4. choice
+Every SAO and ZAO input row carries the same `namespace` object:
 
-The cross-module extension adds one block to the person half and one block
-to the situation half. A ZAO state row is keyed by the same person id and
-decision hour as the SAO row it belongs to.
+| Field | Meaning |
+| --- | --- |
+| `runId` | The source simulation run, bound to its code, settings and seed |
+| `county` | The originating county inside that run |
+| `personId` | The person whose decision this is |
+| `eventId` | The particular decision event |
+| `hour` | The county hour at which the event opened |
 
-### Person
+All five fields form the join key. `person.id`, `situation.county`,
+`situation.hour`, any citation, and ZAO `asOfHour` must agree with it. Duplicate,
+missing and unmatched namespaces refuse the whole export.
 
-The person half keeps SAO's living record. It gains a `pathogen` block:
+## Input schemas
 
-- infection count
-- current course
-- mutation roll
-- current form
-- form performance
-- attribute mutations
-- decay state
-- terminal state, where crossed is terminal and afflicted is live state
-- the event that produced the state
+An SAO row declares `schema: "speakeasy-decision-row"` and
+`schemaVersion: 3`. A ZAO row declares `schema: "zao-decision-state"` and
+the same version.
 
-A body with no assigned form is in the `none` form, and its performance is
-zero.
-A body carries a form only when the pathogen has already acted on it:
-infected, dead, or turned.
+The SAO row owns the four halves. The ZAO row owns `pathogen` and
+`visibleForms` as of the namespace hour. The join adds `pathogen` to the person,
+adds `visibleForms` to the situation, and records both input hashes and the full
+namespace in `crossModule`.
 
-### Situation
+## Executable options
 
-The situation half keeps SAO's perceived facts. It gains a
-`visibleForms` block:
+`options` is a nonempty list of action objects. Every option carries:
 
-- the forms this person can see
-- the provenance of each sighting, when the runtime supplies it
-- the pressure each sighting creates inside the branching graph
+- a stable `id`;
+- the real action `owner`;
+- a `parameters` object;
+- `eligibility.status: "eligible"`;
+- one or more evidence objects proving current eligibility.
 
-### Options
+`choice.optionId` names one offered option. Execution revalidates that option
+because the world can change after inference.
 
-The options half stays consumer-owned. It lists the actions actually
-available to this person at this moment.
+## Conditioning time
 
-### Choice
+Each row has a `conditioning` object with `status`, `decisionHour`,
+`latestEvidenceHour` and `exclusions`. An eligible row has no exclusions and no
+evidence later than the decision hour. An ineligible row may preserve an
+approved choice for audit or reconstruction, but cannot enter a training view.
 
-The choice half records the chosen action and the form-pressure consequence
-written back into the living graph.
+The choice and its conditioning retain separate standing. The protected
+version 2 artifacts demonstrate why: future death, lesson and belief facts are
+present in most rows even though the choices themselves were ratified. The
+counts and hashes are in [`ELIGIBILITY.md`](ELIGIBILITY.md) and
+[`PROTECTED.json`](PROTECTED.json).
 
-## Rules carried from the rulings
+## Publication
+
+`tools/cross_module_rows.py` validates both complete inputs before it creates a
+temporary sibling. It writes the complete joined bytes, flushes them, then
+publishes with one atomic replace. The output may not equal either input or any
+path protected by `PROTECTED.json`. A failure leaves the previous output
+unchanged.
+
+## Pathogen and perception rules
 
 - The pathogen owns the mutation roll.
 - Form performance is a pathogen roll.
-- Crossed is terminal; it does not mutate further.
+- Crossed is terminal and does not mutate further.
 - Retained form traits are state, not new branches.
 - Forms and attribute mutations stack.
 - Forms enter Perception and change pressure inside the existing branching
   graph.
+- Pathogen state and mutation knowledge come from simulated infection, death,
+  turn, carrier exposure, encounter and testimony events. They are never
+  derived from a person id, clock or hash.
 
-## Event rule
-
-Pathogen state and mutation knowledge come from simulated events:
-infection, death, turn, carrier exposure, encounter, and testimony. A row
-never derives a form, a performance value, or knowledge from a person id,
-a clock, or a hash.
-
-## What this does not do
-
-- It does not collect rows yet.
-- It does not replace `work-words.jsonl` or `trade-hinges.jsonl`.
-- It does not author a form name, a strain name, or a player-facing word.
+Version 2 remains the exact ratified historical artifact. It is not rewritten
+in place and the version 3 tool refuses it as input.

@@ -11,25 +11,28 @@ where the person's own trade is the situation's hinge, authored from
 an engine dump of the county's elections. They are intent now, with
 the 112 work-words rows: 190 ratified rows in all.
 
-A cross-module row contract is ratified in
-[`CONTRACT.md`](CONTRACT.md) (the ruling is entry 42, 2026-09-12). It
-extends the four halves so one row can
-carry the living county, the pathogen, and the branching graph together.
-`../tools/cross_module_rows.py` emits that row shape from an SAO dump and a
-ZAO state dump keyed by the same person id.
+A cross-module row contract is in [`CONTRACT.md`](CONTRACT.md). Version 2
+carries the operator intent ratified in entry 42. Version 3 preserves that
+intent and corrects the evidence boundary: a join now requires run, county,
+person, event and hour together, plus executable options and explicit
+conditioning standing.
 
-The first cross-module rows are in `cross-module/`. `work-words.jsonl` holds
-112 rows, and `trade-hinges.jsonl` holds 78 rows. ZAO's own
-`tools/state_dump.py` supplies the pathogen block, keyed by person id and
-decision hour. A body with no assigned form is in the `none` form, its
-performance is zero, and its decay state follows the facts SAO already
-records.
+The historical cross-module rows are in `cross-module/`. They remain
+byte-identical protected artifacts. They are not training rows: their version 2
+key collapses decisions from different counties and their context contains
+later facts. [`ELIGIBILITY.md`](ELIGIBILITY.md) records the counts;
+[`PROTECTED.json`](PROTECTED.json) binds the approved and historical files to
+their hashes. `../tools/cross_module_rows.py` refuses version 2 rather than
+silently rewriting it.
+
+A body with no assigned form is in the `none` form, its performance is zero,
+and its decay state follows the facts SAO already records.
 When the pathogen roll takes a form, the row also carries that form, its
 normalized performance, and the visible-form fact Perception reads. A body
 carries a form only when the pathogen has already acted on it: infected,
 dead, or turned.
-The exporter matches a state row to an SAO row by that same person id and
-decision hour.
+The version 3 exporter matches same-moment state by the complete namespace and
+publishes only after every input row validates.
 
 ## Where a row comes from
 
