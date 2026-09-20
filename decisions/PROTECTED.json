@@ -1,0 +1,81 @@
+{
+  "schema": "speakeasy-protected-artifacts",
+  "schemaVersion": 1,
+  "artifacts": [
+    {
+      "path": "decisions/work-words.jsonl",
+      "sha256": "96eb92afd7314af6268a0152838a67b6fe953c5e2f4c6e7f761c73bcd246b9bf",
+      "standing": "ratified-intent"
+    },
+    {
+      "path": "decisions/trade-hinges.jsonl",
+      "sha256": "5462970ce356a3555c4918d1d995c50e160e7ade1b8fa6fc14e0d8a37c5faf0e",
+      "standing": "ratified-intent"
+    },
+    {
+      "path": "decisions/cross-module/work-words.jsonl",
+      "sha256": "53e15aeb45d99b3b71d242da3b9e09a72e671e8b3ef493bdd0fab1dff17db277",
+      "standing": "historical-conditioning-ineligible"
+    },
+    {
+      "path": "decisions/cross-module/trade-hinges.jsonl",
+      "sha256": "99bcb24f6e5a6289fa907a85910290efd8d6d998267765d1ac21aef520dd0e96",
+      "standing": "historical-conditioning-ineligible"
+    },
+    {
+      "path": "decisions/cross-module/work-words.zao-state.jsonl",
+      "sha256": "c11c390f4a431a4aa2a89a567369174edf515887a3cde0b24b08a690228282db",
+      "standing": "historical-conditioning-ineligible"
+    },
+    {
+      "path": "decisions/cross-module/trade-hinges.zao-state.jsonl",
+      "sha256": "41b73a4893e4a931f487096a4e2141e2b0c3c53908ec2698023e23381373d5ae",
+      "standing": "historical-conditioning-ineligible"
+    },
+    {
+      "path": "world/us-1993/daily-life.md",
+      "sha256": "577a378676b28822675624dd1c1bcb810be9e22e1cbf58129b72e2765ad532b8",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/institutions.md",
+      "sha256": "11fd27a90bd22d547cc6b45ebb18b227172d2014d8edbc43214ca0d76f3d83f8",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/knox-event.md",
+      "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/media.md",
+      "sha256": "badfe543b4a558cc756d44e8a5f6e07eb851eb8e2373daa8f087a37fa743bec3",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/military.md",
+      "sha256": "accc6b26ae90a2d9722d0a91c0d6e949fbc89e42dd0add014bdf0826daf1a28d",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/timeline.md",
+      "sha256": "f7ca7eb4b8fd67db050781d7cb0a680a35a7f0615b92126e7e950dfd78f3bfcb",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/who-knows-what.md",
+      "sha256": "216127bf3c145e7128ff6227b525ffa969466cf10987b489ec52424bf4eeed04",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/us-1993/work-and-money.md",
+      "sha256": "73f9773e3f9b44cf71c8a8bcbcd6e625dde85c0421f88c5e81860775ec773067",
+      "standing": "approved-knowledge"
+    },
+    {
+      "path": "world/people-mods.md",
+      "sha256": "e0029d3954f9303baabc3f2e13611a5866911e2b54549236e6d4b5e993e199a0",
+      "standing": "approved-knowledge"
+    }
+  ]
+}
