@@ -27,6 +27,12 @@ too.
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 
+Three [source excerpts](decisions/AUTHORING.md) now isolate the 1991 minimum-wage
+and postage changes and the February 1993 Family and Medical Leave Act signing
+from the approved world documents. They preserve exact source hashes and known
+dates. Extraction is unreviewed and person acquisition is unknown, so these are
+conditioning-ineligible source material for the next curation step (record 50).
+
 ## What this project is
 
 A person in the county decides. They decide with what they happen to
