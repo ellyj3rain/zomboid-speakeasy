@@ -64,9 +64,27 @@ material is excluded and cannot be promoted through a changed confidence field.
 Extraction is still unreviewed. A source line can contain several facts, dates
 and carrier qualifications: document approval alone does not approve a new
 claim boundary or prove its `knowableAt`. The compiler checks declared temporal
-availability and preserves that distinction in every view. The example in
-`world/claim-examples/minimum-wage.json` identifies a real approved excerpt with
-acquisition explicitly unknown; it is not a person-knowledge record.
+availability and preserves that distinction in every view. The three examples
+under `world/claim-examples/` identify real approved excerpts with acquisition
+explicitly unknown. They use the existing `speakeasy-claim-extraction-example`
+version 1 shape and are source material for a knowledge input, with person
+evidence supplied separately.
+
+| Excerpt | Protected source and line | Declared knowable time | Selected boundary |
+|---|---|---|---|
+| `minimum-wage.json` | `world/us-1993/timeline.md:28` | `1991-04-01T00:00:00` | The federal minimum wage rose to $4.25 an hour; omits the later-looking remainder of the line. |
+| `first-class-postage.json` | `world/us-1993/work-and-money.md:55` | `1991-02-03T00:00:00` | The first-class stamp cost 29 cents from February 3, 1991; omits the same line's earlier and 1995 rates. |
+| `family-medical-leave-act.json` | `world/us-1993/timeline.md:61` | `1993-02-05T09:22:00` | The Family and Medical Leave Act was signed at 9:22 a.m. in the Rose Garden. |
+
+The dates describe the selected change or signing, not when a person learned
+about it. Midnight represents the source's date-only boundary for the two rate
+changes; the signing preserves the source's stated time. The four listed
+acquisition paths are the existing read/heard/lived/told vocabulary, not records
+that any path occurred. All three retain `extractionStanding: unreviewed`,
+`acquisition: unknown` and the `claim-extraction-not-ratified` and
+`person-acquisition-unknown` conditioning exclusions. Their literal excerpts and
+source hashes validate through the production `source_claim` reader. Source
+approval does not adjudicate these extraction boundaries or their declared times.
 
 Each acquisition has exactly these fields:
 

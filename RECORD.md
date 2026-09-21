@@ -1236,3 +1236,43 @@ no approved source or ratification status changed.
 `decisions/AUTHORING.md` owns the input/output contract and CLI examples. Curated
 claim/acquisition evidence, ratification, wider option coverage, later consequences
 and training/export remain the next substantive producers.
+
+---
+
+## 50 - Three bounded world-source excerpts (2026-09-21)
+
+Timestamp: 2026-09-21 04:11 UTC / 21:11 PST.
+
+The operator authorized continuation of the source curation opened by record
+49. `world/claim-examples/` now holds three literal excerpts under the existing
+version 1 extraction-example schema. The existing minimum-wage excerpt is
+unchanged. Two new excerpts select the 29-cent first-class postage change of
+February 3, 1991, and the Family and Medical Leave Act signing at 9:22 a.m. on
+February 5, 1993. Each binds its protected document's full bytes and exact line
+with SHA-256, retaining the source's HIGH confidence and carrier tag.
+
+The boundaries matter: the wage excerpt leaves out its line's retrospective
+statement that the rate stayed through 1993; the postage excerpt leaves out
+the same line's future 1995 increase. The signing excerpt retains the precise
+time given in its source. The selected dates describe when these changes or
+events occurred; an acquisition record must establish when a person learned
+about them. The date-only rate changes use the existing midnight representation.
+
+All three remain unreviewed extractions with unknown person acquisition and
+conditioning status `ineligible`. Their four possible acquisition paths use
+the existing read/heard/lived/told vocabulary and establish no actual path.
+Approved source documents remain byte-identical; document approval does not
+review an extraction or ratify a choice. No decision event, calendar mapping,
+person history, acquisition reference or choice was authored by this curation.
+
+The production `source_claim` reader validated all three against protected
+source bytes and literal line hashes. All 18 existing authoring controls pass;
+the protected-corpus audit retains 190 approved choices with unchanged historical
+conditioning exclusions. Markdown documentation has four generated DOCX draft
+companions; those packages are structurally checked and remain drafts pending
+visual rendering.
+
+The next person-specific example still needs a preserved native event and
+county-calendar mapping plus actual acquisition, access and retention records
+for the same person at that decision. These excerpts supply the source side
+of that join while leaving those records absent.
