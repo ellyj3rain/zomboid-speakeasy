@@ -1204,3 +1204,35 @@ This is also the first step of the ML readiness path named in entry
 now the standing tool the passes will consume. What remains before
 those passes is unchanged: curation growth, and the in-session budget
 sizing that only play gives.
+
+
+---
+
+## 49 - Decision-time knowledge and proposal authoring (2026-09-21)
+
+The operator authorized continuation of the action substrate and its Speakeasy
+bridge. `tools/decision_authoring.py` now accepts exact v3 rows and native SAO
+consume/acquire/store events, constructs a versioned decision-time knowledge
+view, and records a separately authored choice proposal. Full event namespaces,
+option descriptors, protected sources and inputs are hash-bound. Later action
+results and runtime choices are excluded from authoring context.
+
+Knowledge views require explicit calendar mappings and person-specific
+acquisition, retention and access evidence. Future, LOW, stale, other-person and
+unsupported claims are excluded. Claim extraction remains unreviewed and supplied
+acquisition remains unadjudicated; proposals remain unratified and every output
+conditioning-ineligible. This implements preparation, not approval or a training
+corpus. The real approved-source example carries unknown acquisition.
+
+Independent reviews repaired incomplete v3 admission, native actor/source/revision
+and time coherence, equivalent numeric-hour identities, and enriched native inputs
+that could carry future pathogen state or unseen visible forms. Both adapters now
+share raw-context refusals with the join. An actual production SAO storage capture,
+extracted from installed Kahlua, passed the authoring adapter with its exclusions
+intact. Eighteen authoring tests and seven join controls pass. The protected audit
+retains all 190 approved choices and unchanged historical conditioning exclusions;
+no approved source or ratification status changed.
+
+`decisions/AUTHORING.md` owns the input/output contract and CLI examples. Curated
+claim/acquisition evidence, ratification, wider option coverage, later consequences
+and training/export remain the next substantive producers.

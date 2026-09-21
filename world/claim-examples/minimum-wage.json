@@ -1,0 +1,32 @@
+{
+  "schema": "speakeasy-claim-extraction-example",
+  "schemaVersion": 1,
+  "claim": {
+    "id": "us-minimum-wage-1991-04-01",
+    "text": "The federal minimum wage rose to $4.25 an hour",
+    "confidence": "HIGH",
+    "knowableAt": "1991-04-01T00:00:00",
+    "carrier": "everyone",
+    "acquisitionRules": [
+      "read",
+      "heard",
+      "lived",
+      "told"
+    ],
+    "source": {
+      "path": "world/us-1993/timeline.md",
+      "sha256": "f7ca7eb4b8fd67db050781d7cb0a680a35a7f0615b92126e7e950dfd78f3bfcb",
+      "line": 28,
+      "excerptSha256": "7817a686a7c34f38e0e56d739168cdfb057487e7e636693ebe8b99c3daf31195"
+    }
+  },
+  "extractionStanding": "unreviewed",
+  "acquisition": "unknown",
+  "conditioning": {
+    "status": "ineligible",
+    "exclusions": [
+      "claim-extraction-not-ratified",
+      "person-acquisition-unknown"
+    ]
+  }
+}

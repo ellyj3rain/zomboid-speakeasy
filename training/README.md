@@ -19,6 +19,14 @@ They remain protected intent and audit evidence; they are not admitted to a
 training view. `../decisions/ELIGIBILITY.md` records the measured findings and
 the version 3 admission contract.
 
+The version 1 [knowledge/authoring tool](../decisions/AUTHORING.md) now prepares
+content-hashed views and separately authored proposals over frozen events. It
+preserves all existing exclusions and adds the unresolved extraction,
+acquisition-adjudication and knowledge-coverage exclusions. It creates no
+training-eligible rows or approvals. Actual acquisition exports, claim-level
+temporal reconstruction review, ratification and broader producer coverage
+remain requirements for training admission.
+
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and
 then the ML work runs a few training passes over the full dataset
