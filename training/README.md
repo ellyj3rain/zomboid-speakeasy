@@ -11,6 +11,16 @@ Rules:
 - The export contract (format, versioning, how a consumer loads a
   model) is designed here and recorded before the first export.
 
+The ratified implementation shape is now recorded in
+[`ARCHITECTURE.md`](ARCHITECTURE.md). One shared base uses typed task adapters;
+knowledge arrives through learned retrieval; bounded per-person model cache is
+versioned and persisted without authorizing facts; understander and speaker use
+separate provenance-complete datasets; inference runs asynchronously from an
+immutable snapshot and is revalidated before any consequence; the pure-Java
+consumer loads a versioned native bundle. FP32 remains the reference and INT8 is
+a measured candidate. Mechanical contracts precede the selected final human
+review gate.
+
 No training run exists yet. Approved data does: 190 ratified choices and nine
 approved world documents. Training is blocked at their conditioning boundary,
 not at review. The historical decision rows contain future facts and bare
@@ -18,6 +28,10 @@ options, and their version 2 cross-module key collapses distinct county events.
 They remain protected intent and audit evidence; they are not admitted to a
 training view. `../decisions/ELIGIBILITY.md` records the measured findings and
 the version 3 admission contract.
+
+The architecture ruling does not change that standing. It determines how
+eligible data will train and ship; it does not manufacture acquisition,
+conditioning or ratification for an existing row.
 
 The version 1 [knowledge/authoring tool](../decisions/AUTHORING.md) now prepares
 content-hashed views and separately authored proposals over frozen events. It

@@ -1276,3 +1276,46 @@ The next person-specific example still needs a preserved native event and
 county-calendar mapping plus actual acquisition, access and retention records
 for the same person at that decision. These excerpts supply the source side
 of that join while leaving those records absent.
+
+---
+
+## 51 - The learned runtime and training architecture (2026-09-21)
+
+Timestamp: 2026-09-21 08:50 UTC / 01:50 PST.
+
+The operator resolved eleven implementation decisions through the Mousecat Mass
+Assault interaction `skill-e6acce0f301ef127`. The ratified two learned functions
+remain distinct tasks, but share one base model through task adapters. The
+understander emits a typed semantic frame. A learned retriever selects bounded
+claim identifiers from the person's own current knowledge. A bounded,
+versioned per-person model cache persists conversational continuity across
+decisions. Temperament, trust, situation and energy enter as typed conditioning,
+with the existing authored register floors applied outside learned output. The
+tokenizer is a frozen byte-level subword vocabulary.
+
+The understander and speaker use separate task datasets, each with its own full
+provenance, standing and evaluation. Shared event references are checked for
+identity, calendar, source and standing drift; approval does not transfer
+between datasets. Runtime inference operates asynchronously over an immutable
+decision snapshot and can affect the world only after exact current claims,
+options, permissions and owners revalidate.
+
+The first interchange is an SAO/Speakeasy versioned native bundle for the
+pure-Java consumer. Its manifest binds schemas, tokenizer, shared weights,
+adapters, retriever, precision, datasets and provenance. FP32 is the reference;
+INT8 is only a deployment candidate until parity, fence, stale-state and budget
+evidence pass. Mechanical integrity and safety contracts remain prerequisites.
+The operator selected human review as the final gate for the candidate that
+survives them.
+
+The deliberate costs are recorded rather than erased. Learned retrieval makes
+omission a separately measured failure. The cache is a second memory owner with
+save, load, invalidation and eviction obligations; it may guide continuity but
+cannot authorize a fact or action. Separate task datasets can drift, so shared
+references are compared rather than assumed. `training/ARCHITECTURE.md` holds
+the complete contract.
+
+This decision closes architecture choices; it does not admit training data.
+Record 50's next producer remains first: preserve one real decision event and
+county calendar, then join the same person's actual acquisition, access and
+retention. No existing row changes eligibility or approval through this record.
