@@ -33,6 +33,13 @@ from the approved world documents. They preserve exact source hashes and known
 dates. Extraction is unreviewed and person acquisition is unknown, so these are
 conditioning-ineligible source material for the next curation step (record 50).
 
+The learned runtime and training shape is now ratified in
+[`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared
+base with typed task adapters, learned claim retrieval, bounded versioned model
+cache, separate understander and speaker datasets, asynchronous snapshot and
+revalidation, a pure-Java native bundle, FP32 reference plus measured INT8
+candidate, and human review as the final gate after mechanical admission.
+
 ## What this project is
 
 A person in the county decides. They decide with what they happen to
