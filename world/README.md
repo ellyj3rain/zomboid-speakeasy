@@ -24,3 +24,10 @@ completed by the record and each document was reviewed claim-by-claim
 against its named primary sources (RECORD.md 43). LOW-confidence rows
 never teach, and the who-knows-what index scopes every claim per
 person.
+
+Version 1 [decision-time knowledge views](../decisions/AUTHORING.md) can now
+compile explicit approved-document excerpts with person-specific acquisition
+evidence. They preserve document approval separately from the unreviewed claim
+extraction and unadjudicated acquisition records. Missing evidence stays missing;
+the tool does not populate a person's history. The protected-source example in
+`claim-examples/minimum-wage.json` has no acquisition or training eligibility.

@@ -200,46 +200,57 @@ def validate_options(row: dict[str, Any], path: Path, line: int) -> None:
             f"{path}:{line}: choice optionId must name one executable option")
 
 
+def validate_unenriched_context(row: dict[str, Any], path: Path, line: int) -> None:
+    """Original capture context cannot carry cross-module additions."""
+    if "pathogen" in row["person"]:
+        raise ContractError(
+            f"{path}:{line}: SAO person is already cross-module enriched")
+    if "visibleForms" in row["situation"]:
+        raise ContractError(
+            f"{path}:{line}: SAO situation is already cross-module enriched")
+    if "crossModule" in row:
+        raise ContractError(
+            f"{path}:{line}: SAO row already carries join provenance")
+
+
+def validate_sao_row(row: dict[str, Any], path: Path, line: int) -> tuple[Any, ...]:
+    """The complete original-row admission shared by joins and authoring."""
+    validate_schema(row, path, line, SAO_SCHEMA)
+    missing = {"person", "situation", "options", "choice"} - row.keys()
+    if missing:
+        raise ContractError(
+            f"{path}:{line}: missing SAO half(s): {', '.join(sorted(missing))}")
+    key = namespace(row, path, line)
+    _, county, person_id, _, hour = key
+    person, situation = row["person"], row["situation"]
+    if not isinstance(person, dict) or person.get("id") != person_id:
+        raise ContractError(
+            f"{path}:{line}: person id differs from namespace")
+    if (not isinstance(situation, dict)
+            or situation.get("county") != county
+            or situation.get("hour") != hour):
+        raise ContractError(
+            f"{path}:{line}: situation county/hour differs from namespace")
+    validate_unenriched_context(row, path, line)
+    citation = row.get("citation")
+    if citation is not None and (not isinstance(citation, dict)
+            or citation.get("county") != county
+            or citation.get("person") != person_id
+            or citation.get("hour") != hour):
+        raise ContractError(
+            f"{path}:{line}: citation differs from namespace")
+    validate_conditioning(row, hour, path, line)
+    validate_options(row, path, line)
+    return key
+
+
 def validate_sao(path: Path) -> tuple[
         list[tuple[int, dict[str, Any], tuple[Any, ...]]],
         dict[tuple[Any, ...], tuple[int, dict[str, Any]]]]:
     ordered = []
     indexed = {}
     for line, row in read_jsonl(path):
-        validate_schema(row, path, line, SAO_SCHEMA)
-        missing = {"person", "situation", "options", "choice"} - row.keys()
-        if missing:
-            raise ContractError(
-                f"{path}:{line}: missing SAO half(s): {', '.join(sorted(missing))}")
-        key = namespace(row, path, line)
-        run_id, county, person_id, event_id, hour = key
-        person, situation = row["person"], row["situation"]
-        if not isinstance(person, dict) or person.get("id") != person_id:
-            raise ContractError(
-                f"{path}:{line}: person id differs from namespace")
-        if "pathogen" in person:
-            raise ContractError(
-                f"{path}:{line}: SAO person is already cross-module enriched")
-        if (not isinstance(situation, dict)
-                or situation.get("county") != county
-                or situation.get("hour") != hour):
-            raise ContractError(
-                f"{path}:{line}: situation county/hour differs from namespace")
-        if "visibleForms" in situation:
-            raise ContractError(
-                f"{path}:{line}: SAO situation is already cross-module enriched")
-        if "crossModule" in row:
-            raise ContractError(
-                f"{path}:{line}: SAO row already carries join provenance")
-        citation = row.get("citation")
-        if citation is not None and (not isinstance(citation, dict)
-                or citation.get("county") != county
-                or citation.get("person") != person_id
-                or citation.get("hour") != hour):
-            raise ContractError(
-                f"{path}:{line}: citation differs from namespace")
-        validate_conditioning(row, hour, path, line)
-        validate_options(row, path, line)
+        key = validate_sao_row(row, path, line)
         if key in indexed:
             raise ContractError(
                 f"{path}:{line}: duplicate full namespace first seen at line {indexed[key][0]}")

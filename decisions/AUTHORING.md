@@ -1,0 +1,139 @@
+# Decision-time knowledge and authored proposals
+
+`tools/decision_authoring.py` compiles a versioned knowledge view and a separate
+choice proposal over a frozen event. Version 1 is an evidence preparation
+surface. It preserves source approval, records supplied acquisition evidence,
+and leaves extraction, evidence adjudication and choice ratification explicit.
+Every output remains conditioning-ineligible.
+
+## Inputs and identity
+
+The capture input is a version 3 SAO decision row, JSONL containing those rows,
+a native C65 `sao-source-decision-event` version 1, or the containing
+`sao-source-decision-capture` version 1. A source capture must be observed,
+complete and free of capture failures. Unavailable county-sweep coverage
+supplies no event. Raw C65 events retain their runtime choice and result in the
+input; the authoring view exposes the frozen person, situation and offered
+options. Later results and the runtime choice do not become authoring context.
+
+The full `(runId, county, personId, eventId, hour)` namespace is preserved.
+Native C65 nested identities must agree. Options retain their owner, parameters
+and eligibility evidence, including acquisition/storage operations. Their IDs
+alone are insufficient: a proposal binds the complete selected descriptor hash.
+The original v3 row admission is shared with the cross-module join, including
+its citation and already-enriched-context refusals. Both adapters reject added
+pathogen state, visible-form lists and prior join provenance before copying
+context. Native option actors,
+private evidence actors/source revisions and current admission/inspection hours
+must agree with their event. Semantic namespace keys treat county hour `24` and
+`24.0` as the same moment; raw event hashes still preserve their different bytes.
+
+The compiler hashes the raw event, complete input files, protected manifest,
+individual claims and resulting content. JSON object keys are sorted and UTF-8
+is encoded without extra whitespace; `contentSha256` hashes the complete object
+before that field is added. Duplicate JSON keys and non-finite numbers refuse.
+Original bytes are also hashed separately, so formatting changes remain visible.
+
+## Knowledge input version 1
+
+A `speakeasy-knowledge-input` object has exactly these fields:
+
+| Field | Meaning |
+|---|---|
+| `schema`, `schemaVersion` | `speakeasy-knowledge-input`, `1` |
+| `namespace`, `eventSha256` | Exact frozen event identity and canonical-content hash |
+| `calendar` | `anchorHour`, `anchorAt`, `horizonHour`, `evidence` |
+| `claims` | Explicitly extracted approved-document claims |
+| `acquisitions` | Supplied person-specific acquisition and retention evidence |
+
+`anchorAt` is a complete `YYYY-MM-DDTHH:MM:SS` local game-calendar instant.
+`anchorHour` is the corresponding canonical county hour. The compiler applies
+that exact mapping to acquired hours and the person's supplied horizon hour.
+It never derives availability from a year alone. The horizon cannot exceed the
+event hour and researched knowledge stops at December 31, 1993. The mapping's
+evidence reference names the supplying owner, record ID and SHA-256.
+
+A claim has `id`, literal `text`, `confidence`, `knowableAt`, literal `carrier`,
+`acquisitionRules` and `source`. Rules name one or more of `read`, `heard`,
+`lived`, `told`. The source has its repository-relative `path`, full-byte
+`sha256`, one-based `line`, and `excerptSha256` of that line's UTF-8 text without
+its newline. The source must match a protected `approved-knowledge` document.
+The exact text, carrier and confidence must occur on the cited line. LOW
+material is excluded and cannot be promoted through a changed confidence field.
+
+Extraction is still unreviewed. A source line can contain several facts, dates
+and carrier qualifications: document approval alone does not approve a new
+claim boundary or prove its `knowableAt`. The compiler checks declared temporal
+availability and preserves that distinction in every view. The example in
+`world/claim-examples/minimum-wage.json` identifies a real approved excerpt with
+acquisition explicitly unknown; it is not a person-knowledge record.
+
+Each acquisition has exactly these fields:
+
+| Field | Required evidence |
+|---|---|
+| `claimId`, `claimSha256` | The exact extracted claim |
+| `namespace` | Full decision namespace for the person receiving this knowledge view |
+| `acquiredHour` | Actual acquisition time in the same county clock; may precede hour zero |
+| `asOfHour`, `retained` | Explicit retention observation at the decision hour |
+| `path` | A path admitted by the claim's acquisition rules |
+| `checks` | `age`, `carrier`, `access`, `retention`, each with `status` and `evidence` |
+| `evidence` | Nonempty acquisition references |
+
+Each reference has `owner`, `recordId`, `sha256`. A check's status is
+`supported`, `unsupported` or `unknown`; supported checks require references.
+An access check covers the actual modality and relevant literacy/hearing or
+testimony constraints. Carrier and age checks refer to this person's supported
+history at the event; retention covers later decay or loss. An acquisition
+producer owns those records. This tool does not generate them, infer them from
+occupation, or verify external reference bytes that were not supplied.
+
+Only exact-person/exact-event, nonfuture, retained acquisitions with all four
+checks supported enter `availableClaims`. The view labels their acquisition
+evidence unadjudicated. All others produce a claim ID/hash and exclusion reason,
+without including excluded claim text. Empty claims/acquisitions are valid and
+preserve the lack of evidence. Missing or unknown evidence does not become
+proof that the person lacks the knowledge in reality.
+
+## Choice request and proposal
+
+A `speakeasy-choice-request` version 1 has `namespace`, `eventSha256`,
+`knowledgeViewSha256`, `optionId`, `optionSha256`, `author` and `rationale`.
+`author` has `kind` (`human` or `model`), `id`, `version` and `promptSha256`.
+For a human author, the last two fields identify the authoring procedure and
+instructions. The rationale is authored text, not verified factual evidence.
+
+Proposal construction recompiles the view from its inputs and compares the
+whole result before accepting the request. A namespace change, stale input,
+changed option descriptor or altered view refuses publication. The output is a
+new `speakeasy-choice-proposal` with `approval.status: unratified`. The request
+cannot supply approval fields. A proposal never replaces the captured runtime
+choice or any protected approved choice.
+
+The tool prepares reviewable proposals. It has no ratification authority or
+training admission path. A separately authorized ratification mechanism and
+real acquisition exports are remaining work; this version supplies neither
+through a status toggle.
+
+## Operation and verification
+
+```text
+python tools/decision_authoring.py inspect --capture capture.json
+python tools/decision_authoring.py view --capture capture.json --knowledge knowledge.json --out view.json
+python tools/decision_authoring.py propose --capture capture.json --knowledge knowledge.json --view view.json --request request.json --out proposal.json
+python tools/test_decision_authoring.py
+python tools/test_cross_module_rows.py
+python tools/audit_conditioning.py
+```
+
+`inspect` prints the validated namespaces, event hashes and complete option
+hashes needed to prepare the two inputs. It creates no files. The view command
+prints its resulting content hash for the separate choice request.
+
+All inputs and protected hashes validate before output publication. Outputs
+cannot replace an input, protected artifact or protected manifest. Publication
+uses the existing atomic sibling-file replacement and preserves previous bytes
+when validation or replacement fails. Controls use explicitly synthetic
+acquisition records and real protected-document excerpts; they are not a new
+county corpus. Historical approved choices retain their existing hashes and
+conditioning exclusions.

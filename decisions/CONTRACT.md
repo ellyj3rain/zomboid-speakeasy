@@ -92,3 +92,12 @@ unchanged.
 
 Version 2 remains the exact ratified historical artifact. It is not rewritten
 in place and the version 3 tool refuses it as input.
+
+## Derived knowledge and authoring
+
+Version 1 [knowledge views and proposals](AUTHORING.md) bind to the full event
+namespace and immutable event/option hashes. They preserve the source capture's
+conditioning exclusions and retain the standing of extracted claims and
+acquisition evidence separately from document approval. Authored choices remain
+unratified proposals. Neither compilation nor authoring changes the version 3
+row or promotes it into a training view.

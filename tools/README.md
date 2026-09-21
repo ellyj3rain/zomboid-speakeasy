@@ -17,3 +17,16 @@ Run the join controls with:
 ```text
 python tools/test_cross_module_rows.py
 ```
+
+`decision_authoring.py` builds version 1 knowledge views and separately authored
+proposals from immutable version 3 SAO rows or native C65 source-action captures.
+It binds explicit actor acquisition evidence to approved-document excerpts and
+the full event namespace, excludes future/LOW/unavailable claims, preserves
+unreviewed evidence standing, and binds proposals to complete option hashes.
+Every proposal remains unratified and conditioning-ineligible. Input formats,
+commands and the remaining acquisition/ratification boundary are in
+[`decisions/AUTHORING.md`](../decisions/AUTHORING.md).
+
+```text
+python tools/test_decision_authoring.py
+```
