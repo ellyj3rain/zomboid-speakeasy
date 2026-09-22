@@ -27,6 +27,15 @@ Every proposal remains unratified and conditioning-ineligible. Input formats,
 commands and the remaining acquisition/ratification boundary are in
 [`decisions/AUTHORING.md`](../decisions/AUTHORING.md).
 
+`import_sao_world_knowledge.py` imports the Record 52 C74 evidence from an exact
+SAO commit and validates its manifest, source hashes, event/acquisition binding
+and protected source excerpt. `r12_acquisition_example.py` deterministically
+builds the reviewed person-knowledge reference. It records that the reference
+creates no training row, changes no model weights, and changes no runtime or
+player-visible behavior. The forced source choice cannot pass through as a
+choice example. No operator ruling is part of this mechanical review.
+
 ```text
 python tools/test_decision_authoring.py
+python tools/test_import_sao_world_knowledge.py
 ```

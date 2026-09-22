@@ -1,0 +1,71 @@
+{
+  "choice": {
+    "observedOptionId": "C:second:0",
+    "reason": "C74 forced the second source to exercise the same-person join; the outage claim neither caused nor justified that selection.",
+    "standing": "excluded-controlled-selection"
+  },
+  "claim": {
+    "carrier": "county",
+    "id": "knox-telecommunications-outage-1993-07-02",
+    "knowableAt": "1993-07-02T00:00:00",
+    "path": "lived",
+    "sha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+    "text": "Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours"
+  },
+  "contentSha256": "30f64ff8a53fe1a9f85c09cd38f1aedd17451cdc7a5ee59e59d76b2e3b56cd24",
+  "effects": {
+    "modelWeightsChanged": false,
+    "playerVisibleBehaviorChanged": false,
+    "runtimeBehaviorChanged": false,
+    "trainingRowsCreated": 0
+  },
+  "evidence": {
+    "acquisitionAdjudicationSha256": "869402d6ed817ce0318e8dc4b027d3ddb51b90968bf4f1bc56415239709603ef",
+    "claimReviewSha256": "966f54d7ceed08f1c96b731eca62846dcadc1e8bb89595c0304470125df6cb8c",
+    "importReceiptSha256": "7b1096e0e369de7a4c9622bd9d1119c69707ecaacbcb8ad07f051231ae33275c",
+    "knowledgeViewSha256": "d5980d4b1043958074cfba8f792b11ad16bcda9af6a463741f6f31dc2176e9d7"
+  },
+  "operatorDecisionRequired": false,
+  "personEvent": {
+    "acquiredHour": -168,
+    "acquisitionSha256": "9cff84e276c2809ed9edb86bdbbb9f9142b197db56a85e0c5bc1cd4ad16403f6",
+    "asOfHour": 48,
+    "namespace": {
+      "county": "CountyR12Controlled",
+      "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+      "hour": 48,
+      "personId": "actor",
+      "runId": "r12-knox-lived-source-example-v1"
+    },
+    "person": {
+      "age": 31,
+      "id": "actor",
+      "name": "Ada North"
+    }
+  },
+  "schema": "speakeasy-person-knowledge-reference",
+  "schemaVersion": 1,
+  "scope": "claim-and-person-acquisition",
+  "standing": {
+    "acquisition": "adjudicated",
+    "choice": "excluded-controlled-selection",
+    "claimExtraction": "reviewed",
+    "conditioning": "ineligible",
+    "conditioningExclusions": [
+      "controlled-choice-selection",
+      "knowledge-coverage-not-established",
+      "later-consequences-not-observed",
+      "runtime-choice-not-ratified"
+    ],
+    "knowledgeExample": "reviewed-reference"
+  },
+  "systemRole": {
+    "currentUse": "compiler-and-producer-reference",
+    "downstreamUses": [
+      "retriever-input-catalogue",
+      "speaker-claim-fence",
+      "understander-claim-reference-validation"
+    ],
+    "stage": "person-claim-catalogue"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "claimId": "knox-telecommunications-outage-1993-07-02",
+  "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+  "contentSha256": "966f54d7ceed08f1c96b731eca62846dcadc1e8bb89595c0304470125df6cb8c",
+  "findings": [
+    "The selected provider and area-wide outage text is literal and excludes the line's consequences and cause speculation.",
+    "The row supplies the July 2 date and county carrier; the approved scoping index supplies the lived path.",
+    "The source table has no literal confidence field; HIGH is separately assessed from the approved direct game record."
+  ],
+  "review": {
+    "acquisitionRules": [
+      "lived"
+    ],
+    "carrier": "county",
+    "confidence": {
+      "basis": "approved-direct-game-record",
+      "sourceLineHasLiteralConfidence": false,
+      "value": "HIGH"
+    },
+    "knowableAt": "1993-07-02T00:00:00",
+    "status": "reviewed",
+    "textBoundary": "literal-substring"
+  },
+  "reviewer": {
+    "id": "record-52-extraction-review",
+    "kind": "repository-review",
+    "procedureSha256": "e9044e7cbfbc7d544965e8a0ab9b7d0d4245d80c7b5b1c71dd55605ef944d9a4"
+  },
+  "ruleSources": [
+    {
+      "endLine": 107,
+      "excerptSha256": "92c651a43c48f4cfbff4fba2202caa93278891fa95c2f3e9505c8cba6d50bc9a",
+      "path": "world/us-1993/who-knows-what.md",
+      "role": "adult-detail",
+      "sha256": "216127bf3c145e7128ff6227b525ffa969466cf10987b489ec52424bf4eeed04",
+      "startLine": 107
+    },
+    {
+      "endLine": 123,
+      "excerptSha256": "aedd457510dab73db3f9251d78c3f404bc950ed19d04f93e1e4f8fa4e7f6d970",
+      "path": "world/us-1993/who-knows-what.md",
+      "role": "lived-local-claim-path",
+      "sha256": "216127bf3c145e7128ff6227b525ffa969466cf10987b489ec52424bf4eeed04",
+      "startLine": 122
+    }
+  ],
+  "schema": "speakeasy-claim-extraction-review",
+  "schemaVersion": 1,
+  "source": {
+    "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+    "line": 71,
+    "path": "world/us-1993/knox-event.md",
+    "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+  }
+}

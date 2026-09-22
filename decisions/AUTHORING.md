@@ -3,8 +3,10 @@
 `tools/decision_authoring.py` compiles a versioned knowledge view and a separate
 choice proposal over a frozen event. Version 1 is an evidence preparation
 surface. It preserves source approval, records supplied acquisition evidence,
-and leaves extraction, evidence adjudication and choice ratification explicit.
-Every output remains conditioning-ineligible.
+and accepts separately sealed extraction-review and acquisition-adjudication
+receipts. Those receipts change only the technical standing they prove. Choice
+and knowledge-example ratification remain separate, and every current output
+remains conditioning-ineligible.
 
 ## Inputs and identity
 
@@ -29,10 +31,11 @@ must agree with their event. Semantic namespace keys treat county hour `24` and
 `24.0` as the same moment; raw event hashes still preserve their different bytes.
 
 The compiler hashes the raw event, complete input files, protected manifest,
-individual claims and resulting content. JSON object keys are sorted and UTF-8
-is encoded without extra whitespace; `contentSha256` hashes the complete object
-before that field is added. Duplicate JSON keys and non-finite numbers refuse.
-Original bytes are also hashed separately, so formatting changes remain visible.
+review receipts, individual claims and resulting content. JSON object keys are
+sorted and UTF-8 is encoded without extra whitespace; `contentSha256` hashes the
+complete object before that field is added. Duplicate JSON keys and non-finite
+numbers refuse. Original bytes are also hashed separately, so formatting
+changes remain visible.
 
 ## Knowledge input version 1
 
@@ -58,13 +61,17 @@ A claim has `id`, literal `text`, `confidence`, `knowableAt`, literal `carrier`,
 `lived`, `told`. The source has its repository-relative `path`, full-byte
 `sha256`, one-based `line`, and `excerptSha256` of that line's UTF-8 text without
 its newline. The source must match a protected `approved-knowledge` document.
-The exact text, carrier and confidence must occur on the cited line. LOW
-material is excluded and cannot be promoted through a changed confidence field.
+The exact text and carrier must occur on the cited line. Confidence must also
+occur literally unless an exact sealed extraction review records its absence,
+the assessed value and its basis. The compiler checks that the review correctly
+states whether the token exists. LOW material is excluded and cannot be promoted
+through a changed confidence field or review.
 
-Extraction is still unreviewed. A source line can contain several facts, dates
-and carrier qualifications: document approval alone does not approve a new
-claim boundary or prove its `knowableAt`. The compiler checks declared temporal
-availability and preserves that distinction in every view. The three examples
+Without a receipt, extraction is still unreviewed. A source line can contain
+several facts, dates and carrier qualifications: document approval alone does
+not approve a new claim boundary or prove its `knowableAt`. The compiler checks
+declared temporal availability and preserves that distinction in every view.
+The three examples
 under `world/claim-examples/` identify real approved excerpts with acquisition
 explicitly unknown. They use the existing `speakeasy-claim-extraction-example`
 version 1 shape and are source material for a knowledge input, with person
@@ -108,10 +115,37 @@ occupation, or verify external reference bytes that were not supplied.
 
 Only exact-person/exact-event, nonfuture, retained acquisitions with all four
 checks supported enter `availableClaims`. The view labels their acquisition
-evidence unadjudicated. All others produce a claim ID/hash and exclusion reason,
-without including excluded claim text. Empty claims/acquisitions are valid and
-preserve the lack of evidence. Missing or unknown evidence does not become
-proof that the person lacks the knowledge in reality.
+evidence unadjudicated unless a sealed adjudication binds the exact acquisition,
+event, checks and import evidence. All others produce a claim ID/hash and
+exclusion reason, without including excluded claim text. Empty
+claims/acquisitions are valid and preserve the lack of evidence. Missing or
+unknown evidence does not become proof that the person lacks the knowledge in
+reality.
+
+## Review receipts and the Record 52 example
+
+`--receipt` is repeatable on `view` and `propose`. A claim-extraction review
+binds the exact claim and source plus protected rule excerpts, the selected
+boundary, time, carrier, paths and confidence assessment. An acquisition
+adjudication binds the exact person/event acquisition, its four checks and its
+import receipt. Duplicate, stale, changed or unsealed receipts refuse. Review
+produces `reviewed`; adjudication produces `adjudicated`. These standings
+describe evidence review. They do not ratify an authored behavior row.
+
+`examples/r12-knox-lived-source/` is the first production example. Its importer
+reads the C74 evidence from exact SAO commit
+`739ff0a026c2fc2c9450f71a5169b1e72b302c46`, validates the manifest, complete
+event namespace, frozen acquisition, presence, calendar, retention and protected
+source hashes, and records the C74 `VERSION` line-ending normalization rather
+than hiding it. The example extracts the July 2 Knox telecommunications outage,
+binds the `lived` and adult-detail rules to protected scoping excerpts, and joins
+Ada North's exact acquired and retained record.
+
+The imported source capture originally listed
+`person-knowledge-not-reconstructed`. The compiled view preserves that phrase in
+`sourceExclusions` as capture history and removes it from active conditioning
+because this compiler reconstructs the person's claim explicitly. The remaining
+active exclusions continue to block training.
 
 ## Choice request and proposal
 
@@ -128,18 +162,22 @@ new `speakeasy-choice-proposal` with `approval.status: unratified`. The request
 cannot supply approval fields. A proposal never replaces the captured runtime
 choice or any protected approved choice.
 
-The tool prepares reviewable proposals. It has no ratification authority or
-training admission path. A separately authorized ratification mechanism and
-real acquisition exports are remaining work; this version supplies neither
-through a status toggle.
+The tool prepares reviewable proposals and has no ratification authority. Record
+52 does not create a proposal from its controlled selection. Its reviewed
+reference binds only the claim/person/acquisition pairing and fixes the observed
+food choice at `excluded-controlled-selection`. The reference remains
+conditioning-ineligible because one claim is not complete knowledge coverage,
+the choice was forced, and no natural choice or later-consequence evidence
+exists.
 
 ## Operation and verification
 
 ```text
 python tools/decision_authoring.py inspect --capture capture.json
-python tools/decision_authoring.py view --capture capture.json --knowledge knowledge.json --out view.json
-python tools/decision_authoring.py propose --capture capture.json --knowledge knowledge.json --view view.json --request request.json --out proposal.json
+python tools/decision_authoring.py view --capture capture.json --knowledge knowledge.json --receipt review.json --out view.json
+python tools/decision_authoring.py propose --capture capture.json --knowledge knowledge.json --receipt review.json --view view.json --request request.json --out proposal.json
 python tools/test_decision_authoring.py
+python tools/test_import_sao_world_knowledge.py
 python tools/test_cross_module_rows.py
 python tools/audit_conditioning.py
 ```

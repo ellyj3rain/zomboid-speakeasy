@@ -1,0 +1,121 @@
+{
+  "acquisitions": [
+    {
+      "acquiredHour": -168,
+      "asOfHour": 48,
+      "checks": {
+        "access": {
+          "evidence": [
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/county-presence/1",
+              "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+            }
+          ],
+          "status": "supported"
+        },
+        "age": {
+          "evidence": [
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/world-claim/1",
+              "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+            }
+          ],
+          "status": "supported"
+        },
+        "carrier": {
+          "evidence": [
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/county-presence/1",
+              "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+            }
+          ],
+          "status": "supported"
+        },
+        "retention": {
+          "evidence": [
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/world-claim/1",
+              "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+            },
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/world-claim/1/retention/48",
+              "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+            }
+          ],
+          "status": "supported"
+        }
+      },
+      "claimId": "knox-telecommunications-outage-1993-07-02",
+      "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+      "evidence": [
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/world-claim/1",
+          "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+        },
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/county-presence/1",
+          "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+        },
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/world-claim/1/retention/48",
+          "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+        }
+      ],
+      "namespace": {
+        "county": "CountyR12Controlled",
+        "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+        "hour": 48,
+        "personId": "actor",
+        "runId": "r12-knox-lived-source-example-v1"
+      },
+      "path": "lived",
+      "retained": true
+    }
+  ],
+  "calendar": {
+    "anchorAt": "1993-07-09T00:00:00",
+    "anchorHour": 0,
+    "evidence": {
+      "owner": "Survivor Awareness C74",
+      "recordId": "county-calendar/shipped-1993-07-09",
+      "sha256": "6103c0a1e8e3ef759d7e663fb4bd83f6e129691d599e4c32092cb4a4f63f32f6"
+    },
+    "horizonHour": 48
+  },
+  "claims": [
+    {
+      "acquisitionRules": [
+        "lived"
+      ],
+      "carrier": "county",
+      "confidence": "HIGH",
+      "id": "knox-telecommunications-outage-1993-07-02",
+      "knowableAt": "1993-07-02T00:00:00",
+      "source": {
+        "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+        "line": 71,
+        "path": "world/us-1993/knox-event.md",
+        "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+      },
+      "text": "Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours"
+    }
+  ],
+  "eventSha256": "2d1e37ffaf0f44e9ddc93fef848a94d6daf778a6f4f3ef5e234005f8951ef339",
+  "namespace": {
+    "county": "CountyR12Controlled",
+    "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+    "hour": 48,
+    "personId": "actor",
+    "runId": "r12-knox-lived-source-example-v1"
+  },
+  "schema": "speakeasy-knowledge-input",
+  "schemaVersion": 1
+}

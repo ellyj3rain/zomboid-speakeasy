@@ -1,0 +1,79 @@
+{
+  "acquisitionSha256": "9cff84e276c2809ed9edb86bdbbb9f9142b197db56a85e0c5bc1cd4ad16403f6",
+  "checks": {
+    "access": {
+      "evidence": [
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/county-presence/1",
+          "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+        }
+      ],
+      "status": "supported"
+    },
+    "age": {
+      "evidence": [
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/world-claim/1",
+          "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+        }
+      ],
+      "status": "supported"
+    },
+    "carrier": {
+      "evidence": [
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/county-presence/1",
+          "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+        }
+      ],
+      "status": "supported"
+    },
+    "retention": {
+      "evidence": [
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/world-claim/1",
+          "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+        },
+        {
+          "owner": "Survivor Awareness C74",
+          "recordId": "actor/world-claim/1/retention/48",
+          "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+        }
+      ],
+      "status": "supported"
+    }
+  },
+  "claimId": "knox-telecommunications-outage-1993-07-02",
+  "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+  "contentSha256": "869402d6ed817ce0318e8dc4b027d3ddb51b90968bf4f1bc56415239709603ef",
+  "eventSha256": "2d1e37ffaf0f44e9ddc93fef848a94d6daf778a6f4f3ef5e234005f8951ef339",
+  "importEvidence": {
+    "owner": "Zomboid-Speakeasy SAO importer",
+    "recordId": "r12-knox-lived-source/import",
+    "sha256": "6b6665ef02551c6808c3923230214fb742daafa4de7ddb551812b87f160874c8"
+  },
+  "limitations": [
+    "The evidence supports this one frozen person and event; it is not a sampled natural county.",
+    "Installed Kahlua and production action modules were used, but no save was loaded.",
+    "The outage claim is contextual at the food-source decision and is not evidence that it caused the selection."
+  ],
+  "namespace": {
+    "county": "CountyR12Controlled",
+    "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+    "hour": 48,
+    "personId": "actor",
+    "runId": "r12-knox-lived-source-example-v1"
+  },
+  "reviewer": {
+    "id": "record-52-acquisition-adjudication",
+    "kind": "repository-review",
+    "procedureSha256": "e9044e7cbfbc7d544965e8a0ab9b7d0d4245d80c7b5b1c71dd55605ef944d9a4"
+  },
+  "schema": "speakeasy-acquisition-adjudication",
+  "schemaVersion": 1,
+  "status": "adjudicated"
+}

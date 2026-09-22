@@ -1,0 +1,62 @@
+{
+  "commitSourceHashes": {
+    "VERSION": "d8e43f707c469ea69013de0149818d41e2e599666006b95d94bea6ce142dded0",
+    "java/src/com/sao/bridge/SAOBridge.java": "be424ddc50563d5900863f09b933545d76526803229f99d1f1b65f61bac289cc",
+    "java/src/com/sao/engine/SAORecord.java": "029b6274a8eb674271a1bf18d0b9f45e0217a4a7bfc41e28faf66cd170176c7f",
+    "mod/42.20/media/java/SAO.jar": "f10746b1698d8321eda69f33f7c520abe6674080cf4a740f326d4eaddcdc23ca",
+    "mod/42.20/media/lua/client/SAO_Population.lua": "64c79da20baf6776ee75d5eaddc072fcd9f98db4accf2eeb2b54a221654b8b61",
+    "mod/42.20/media/lua/client/SAO_PopulationAdmissions.lua": "5916bc51a425859c287dcf801f6a05ef160aa93a2c5f96c7dc7f7dcd36d36a33",
+    "mod/42.20/media/lua/client/SAO_SourceUse.lua": "819c08b40b316e286ff9f0a11ca1596e7137a3d6229d770e140d9dc1293fece7",
+    "mod/42.20/media/lua/shared/SAO_History.lua": "38a15b6d7a0f2143e752d4aa7ccc86ee96f0a6fc39f597aefac041d18d7822f1",
+    "mod/42.20/media/lua/shared/SAO_WorldKnowledge.lua": "b5bccfc91cb1ce28b6d666cd729dc2e3d05429865b93350420d82863063a3c1a",
+    "mod/42.20/media/lua/shared/SAO_WorldSources.lua": "816c0265f8a6d02a0d53784098955abcb349166b0019d874aa9228fabeac8dd1",
+    "tools/sweep/decision_capture.lua": "1aa5dddb9893e3ab9e43fc02a6e89beb858cdf7a4af9ed34324bf4b50e2f6e02",
+    "tools/world_knowledge_evidence.py": "5e2302da15853e284bb0dc664e47f82c5cc99f390dfde4b5066fe05448052bad"
+  },
+  "contentSha256": "7b1096e0e369de7a4c9622bd9d1119c69707ecaacbcb8ad07f051231ae33275c",
+  "files": {
+    "decision-capture.json": "d3c8ae102a4d1cbc10773313698c7cd19035c91e19c52c9652e55802c841695c",
+    "manifest.json": "ad79cc7e8d2c46c6605461cbe5228b85473987e6b744ce3732b86332abde51a1",
+    "world-knowledge-evidence.json": "8d4229e78b5034b7cc8e0989f4238468773aa048fa771bbe7a883b7ec1c42822"
+  },
+  "schema": "speakeasy-sao-evidence-import",
+  "schemaVersion": 1,
+  "source": {
+    "commit": "739ff0a026c2fc2c9450f71a5169b1e72b302c46",
+    "manifestContentSha256": "00cb53ea833212672b5b4ea346e4d925d7e0963c3f8b6026480fe62262d0c497",
+    "manifestSha256": "ad79cc7e8d2c46c6605461cbe5228b85473987e6b744ce3732b86332abde51a1",
+    "path": "artifacts/audits/20260922-0204Z-1904PST-world-knowledge-evidence/example",
+    "repository": "https://github.com/ellyj3rain/sao"
+  },
+  "sourceNormalizations": [
+    {
+      "commitSha256": "d8e43f707c469ea69013de0149818d41e2e599666006b95d94bea6ce142dded0",
+      "manifestSha256": "f11dd1d0e84e48b350c9bb91228ed7fe6d690df0adbdca02f96b33300ce142a8",
+      "normalization": "git-lf-blob-to-generator-crlf-checkout",
+      "path": "VERSION"
+    }
+  ],
+  "upstreamSourceHashes": {
+    "VERSION": "f11dd1d0e84e48b350c9bb91228ed7fe6d690df0adbdca02f96b33300ce142a8",
+    "installed/projectzomboid.jar": "80e405a4bfc42f6072e75b3735f458a6514143da011d3226007ded305a442f44",
+    "installed/stdlib.lua": "583c294996ae65310fb1191b9a70584b59c163a0f2d257af53f06728ba3931eb",
+    "java/src/com/sao/bridge/SAOBridge.java": "be424ddc50563d5900863f09b933545d76526803229f99d1f1b65f61bac289cc",
+    "java/src/com/sao/engine/SAORecord.java": "029b6274a8eb674271a1bf18d0b9f45e0217a4a7bfc41e28faf66cd170176c7f",
+    "mod/42.20/media/java/SAO.jar": "f10746b1698d8321eda69f33f7c520abe6674080cf4a740f326d4eaddcdc23ca",
+    "mod/42.20/media/lua/client/SAO_Population.lua": "64c79da20baf6776ee75d5eaddc072fcd9f98db4accf2eeb2b54a221654b8b61",
+    "mod/42.20/media/lua/client/SAO_PopulationAdmissions.lua": "5916bc51a425859c287dcf801f6a05ef160aa93a2c5f96c7dc7f7dcd36d36a33",
+    "mod/42.20/media/lua/client/SAO_SourceUse.lua": "819c08b40b316e286ff9f0a11ca1596e7137a3d6229d770e140d9dc1293fece7",
+    "mod/42.20/media/lua/shared/SAO_History.lua": "38a15b6d7a0f2143e752d4aa7ccc86ee96f0a6fc39f597aefac041d18d7822f1",
+    "mod/42.20/media/lua/shared/SAO_WorldKnowledge.lua": "b5bccfc91cb1ce28b6d666cd729dc2e3d05429865b93350420d82863063a3c1a",
+    "mod/42.20/media/lua/shared/SAO_WorldSources.lua": "816c0265f8a6d02a0d53784098955abcb349166b0019d874aa9228fabeac8dd1",
+    "tools/sweep/decision_capture.lua": "1aa5dddb9893e3ab9e43fc02a6e89beb858cdf7a4af9ed34324bf4b50e2f6e02",
+    "tools/world_knowledge_evidence.py": "5e2302da15853e284bb0dc664e47f82c5cc99f390dfde4b5066fe05448052bad"
+  },
+  "verification": {
+    "commitFiles": "verified",
+    "eventAcquisitionBinding": "verified",
+    "installedRuntimeHashes": "recorded-upstream-not-reperformed",
+    "manifest": "verified",
+    "protectedSourceBinding": "verified"
+  }
+}

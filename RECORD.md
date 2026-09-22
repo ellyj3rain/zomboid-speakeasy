@@ -1319,3 +1319,51 @@ This decision closes architecture choices; it does not admit training data.
 Record 50's next producer remains first: preserve one real decision event and
 county calendar, then join the same person's actual acquisition, access and
 retention. No existing row changes eligibility or approval through this record.
+
+---
+
+## 52 - One person's world knowledge reaches the compiler (2026-09-22)
+
+Timestamp: 2026-09-22 05:23 UTC / 22:23 PST.
+
+The first R12 person-specific reference now follows one fact through its real
+owners. The protected Knox record says telephone and Internet service failed
+across the area on July 2. Survivor Awareness C74 records that Ada North was 31,
+present in the county, acquired that local claim through `lived`, and retained it
+through the July 11 source-use event. Speakeasy imports the exact C74 merge
+evidence, reviews the literal claim boundary and confidence basis, adjudicates
+the person-specific acquisition, and reconstructs Ada's decision-time claim
+catalogue with complete hashes and provenance.
+
+This reference sits upstream of learned behavior. A future retriever may select
+the claim from Ada's complete catalogue when a conversation makes it relevant;
+a future speaker may phrase the selected claim through SAO's fence; a future
+understander may map a player's reference to its claim identifier. Record 52
+supplies only the catalogue fixture. It creates zero training rows, changes no
+model weights, changes no runtime behavior, and changes nothing visible in play.
+
+The initial uncommitted implementation incorrectly turned this mechanical join
+into an operator ratification request. That Mousecat interaction was withdrawn
+without recording a decision. Record 24 reserves operator rulings for authored
+behavior rows, record 43 established repository review for sourced knowledge,
+and record 51's final human gate applies to a trained runtime candidate's
+usefulness, voice and conversational quality. The checked artifact therefore
+records `operatorDecisionRequired: false` and stands as a reviewed producer
+reference rather than ratified behavior.
+
+C74 forced the banana source solely to exercise the completed same-person join.
+The outage neither caused nor justified that selection, so it remains
+`excluded-controlled-selection`. Complete person knowledge, natural choice,
+later consequences and a ratified runtime choice remain absent; the reference
+is conditioning-ineligible and cannot enter a training view.
+
+Thirty-five authoring, import and cross-module tests pass. They include eight
+Record 52 mutation controls, exact import and source protection, review and
+adjudication binding, deterministic rebuilding, stale-context refusal, and a
+control proving that the reference cannot claim training, model, runtime or
+player-visible effects.
+
+The reference exposes the next actual ML design seam. Record 51 names a learned
+retriever but does not define where relevance targets come from or how they are
+reviewed. Record 52 supplies one valid catalogue input for that work; it does not
+choose the target-authoring policy.

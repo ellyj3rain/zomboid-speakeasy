@@ -35,11 +35,33 @@ conditioning or ratification for an existing row.
 
 The version 1 [knowledge/authoring tool](../decisions/AUTHORING.md) now prepares
 content-hashed views and separately authored proposals over frozen events. It
-preserves all existing exclusions and adds the unresolved extraction,
-acquisition-adjudication and knowledge-coverage exclusions. It creates no
-training-eligible rows or approvals. Actual acquisition exports, claim-level
-temporal reconstruction review, ratification and broader producer coverage
-remain requirements for training admission.
+now imports one C74 same-person acquisition, reviews the claim boundary,
+adjudicates the evidence and compiles an exact reviewed reference. This closes
+the absence of a concrete acquisition example; it does not create a training
+row. The source choice was forced, later consequences were not observed, and one
+retained claim does not establish the person's complete decision-time knowledge.
+Natural choice evidence, broader producer coverage and dataset-scale admission
+remain required before training.
+
+## From a world event to play
+
+Record 52 covers one early stage of a longer causal path. Its value is that the
+later model can receive Ada's knowledge without receiving every fact in the
+world. It does not yet teach the model what to retrieve, say or understand.
+
+| Stage | What exists | Effect now |
+|---|---|---|
+| World fact | The July 2 telecommunications outage in the approved Knox record | Establishes what happened |
+| Person acquisition | SAO C74 records that Ada North was present, acquired the local claim through `lived`, and retained it through the later event | Establishes that this claim may appear in Ada's catalogue |
+| Record 52 reference | Speakeasy reproduces that exact person/claim/time join and refuses the forced food choice | Tests the future catalogue producer; creates zero training rows |
+| Dataset production | Complete catalogues, natural decisions, authored targets and task-specific approvals across many people | Not built |
+| Learned runtime | The retriever selects relevant owned claims, the speaker expresses fenced claims, and the understander maps player text to typed intent | No trained model exists |
+| Player experience | Different people can remember, omit and phrase different things while remaining unable to state facts they do not own | No behavior changes in this record |
+
+The ratified architecture names a learned retriever but does not yet define the
+source or review contract for its relevance targets. That remains a real ML
+design decision. Record 52 supplies a valid input catalogue fixture for that
+work; it does not settle the target.
 
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and

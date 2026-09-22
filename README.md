@@ -33,6 +33,13 @@ from the approved world documents. They preserve exact source hashes and known
 dates. Extraction is unreviewed and person acquisition is unknown, so these are
 conditioning-ineligible source material for the next curation step (record 50).
 
+The first concrete acquisition bridge now imports one exact SAO C74 event,
+calendar and same-person retained `lived` claim. Record 52 reviews the July 2
+Knox telecommunications extraction and adjudicates Ada North's acquisition
+while permanently excluding the forced food-source selection. It is a
+repository-reviewed reference for the person-knowledge producer, not an
+operator decision or a training row. It changes no model or runtime behavior.
+
 The learned runtime and training shape is now ratified in
 [`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model
