@@ -1,7 +1,7 @@
 # Training
 
-The runs that produce the two models, and the contract SAO loads
-them by.
+The runs that produce the shared bundle's three learned functions, and the
+contract SAO loads them by.
 
 Rules:
 
@@ -14,12 +14,12 @@ Rules:
 The ratified implementation shape is now recorded in
 [`ARCHITECTURE.md`](ARCHITECTURE.md). One shared base uses typed task adapters;
 knowledge arrives through learned retrieval; bounded per-person model cache is
-versioned and persisted without authorizing facts; understander and speaker use
-separate provenance-complete datasets; inference runs asynchronously from an
-immutable snapshot and is revalidated before any consequence; the pure-Java
-consumer loads a versioned native bundle. FP32 remains the reference and INT8 is
-a measured candidate. Mechanical contracts precede the selected final human
-review gate.
+versioned and persisted without authorizing facts; understander, retriever and
+speaker use separate provenance-complete datasets; inference runs asynchronously
+from an immutable snapshot and is revalidated before any consequence; the
+pure-Java consumer loads a versioned native bundle. FP32 remains the reference
+and INT8 is a measured candidate. Mechanical contracts precede the selected final
+human review gate.
 
 No training run exists yet. Approved data does: 190 ratified choices and nine
 approved world documents. Training is blocked at their conditioning boundary,
@@ -41,7 +41,17 @@ the absence of a concrete acquisition example; it does not create a training
 row. The source choice was forced, later consequences were not observed, and one
 retained claim does not establish the person's complete decision-time knowledge.
 Natural choice evidence, broader producer coverage and dataset-scale admission
-remain required before training.
+remain required before training. SAO C75 now compiles one person's broad private
+knowledge into deterministic snapshot-local claim references and fences a
+selected subset. It supplies the runtime input shape without creating examples.
+
+The retriever's label meaning is now ratified and implemented in
+[`retriever/`](retriever/README.md). Required references come from a separately
+approved understander or speaker example, explicit reviewed hard negatives are
+negative, and all other owned claims remain unjudged. Every retriever row has its
+own approval standing. The compiler enforces that distinction and builds
+provenance-complete snapshots; no real row exists yet because no approved task
+example exists to anchor one.
 
 ## From a world event to play
 
@@ -54,14 +64,17 @@ world. It does not yet teach the model what to retrieve, say or understand.
 | World fact | The July 2 telecommunications outage in the approved Knox record | Establishes what happened |
 | Person acquisition | SAO C74 records that Ada North was present, acquired the local claim through `lived`, and retained it through the later event | Establishes that this claim may appear in Ada's catalogue |
 | Record 52 reference | Speakeasy reproduces that exact person/claim/time join and refuses the forced food choice | Tests the future catalogue producer; creates zero training rows |
-| Dataset production | Complete catalogues, natural decisions, authored targets and task-specific approvals across many people | Not built |
+| Typed catalogue and fence | SAO C75 gives current private facts stable references inside an immutable snapshot and admits only selected claims to the speaker fence | Runtime substrate built; current speech does not call it |
+| Retriever target contract | Record 53 binds required positives to approved task examples, preserves unmentioned claims as unjudged, and requires explicit reviewed hard negatives plus independent row approval | Compiler built; zero real rows |
+| Dataset production | Approved understander, retriever and speaker rows with independent snapshots, exclusions, splits and evaluation receipts across many people | Not built |
 | Learned runtime | The retriever selects relevant owned claims, the speaker expresses fenced claims, and the understander maps player text to typed intent | No trained model exists |
 | Player experience | Different people can remember, omit and phrase different things while remaining unable to state facts they do not own | No behavior changes in this record |
 
-The ratified architecture names a learned retriever but does not yet define the
-source or review contract for its relevance targets. That remains a real ML
-design decision. Record 52 supplies a valid input catalogue fixture for that
-work; it does not settle the target.
+Record 52 supplies the first reviewed person-claim reference. Record 53 settles
+how retrieval targets are authored and reviewed without promoting that reference
+into a row. The next real data step is an approved understander or speaker example
+over a complete C75 catalogue; its required claim references can then anchor a
+separately reviewed retriever target.
 
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and

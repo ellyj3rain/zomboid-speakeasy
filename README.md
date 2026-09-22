@@ -40,10 +40,19 @@ while permanently excluding the forced food-source selection. It is a
 repository-reviewed reference for the person-knowledge producer, not an
 operator decision or a training row. It changes no model or runtime behavior.
 
+SAO C75 now gives every fact in one current private knowledge snapshot a stable
+local reference and fences only the selected references. Record 53 defines the
+data that will teach that selection: required references come from an approved
+understander or speaker example, explicit reviewed hard negatives are negative,
+and all other owned claims stay unjudged. Retriever rows have independent
+approval and their own snapshots, exclusions, splits and evaluation receipts.
+The compiler exists under [`training/retriever/`](training/retriever/README.md);
+no real row or model exists yet.
+
 The learned runtime and training shape is now ratified in
 [`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model
-cache, separate understander and speaker datasets, asynchronous snapshot and
+cache, separate understander, retriever and speaker datasets, asynchronous snapshot and
 revalidation, a pure-Java native bundle, FP32 reference plus measured INT8
 candidate, and human review as the final gate after mechanical admission.
 
