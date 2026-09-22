@@ -1,0 +1,27 @@
+{
+  "schema": "speakeasy-retriever-target-policy",
+  "schemaVersion": 1,
+  "policy": "independent-anchored-targets",
+  "standing": "ratified",
+  "decision": {
+    "interactionId": "skill-87fa148534b7e880",
+    "itemId": "seam-e7ecdee5ab14822d",
+    "status": "answered",
+    "selectedOption": "independent-anchored-targets"
+  },
+  "labels": {
+    "required": "Exact claim references required by a separately approved understander or speaker example.",
+    "hardNegative": "An owned claim explicitly reviewed as tempting but wrong for this context.",
+    "unjudged": "Every other claim in the complete bound catalogue; omission supplies no negative label."
+  },
+  "approval": {
+    "taskExampleTransfers": false,
+    "retrieverRowRequiresIndependentOperatorRuling": true
+  },
+  "effects": {
+    "trainingRowsCreated": 0,
+    "modelWeightsChanged": false,
+    "runtimeBehaviorChanged": false,
+    "playerVisibleBehaviorChanged": false
+  }
+}

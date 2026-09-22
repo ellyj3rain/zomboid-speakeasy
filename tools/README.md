@@ -35,7 +35,17 @@ creates no training row, changes no model weights, and changes no runtime or
 player-visible behavior. The forced source choice cannot pass through as a
 choice example. No operator ruling is part of this mechanical review.
 
+`retriever_targets.py` implements Record 53's independently anchored target
+policy. It binds one complete SAO C75 claim catalogue to a separately approved
+understander or speaker example, copies that example's required claim references,
+accepts only explicit reasoned hard negatives, and records every other owned
+claim as unjudged. A matching independent operator review is required before a
+target can enter a dataset snapshot. Snapshot compilation requires complete,
+non-overlapping splits plus explicit exclusions and evaluation receipts. The
+tool creates no real row by itself.
+
 ```text
 python tools/test_decision_authoring.py
 python tools/test_import_sao_world_knowledge.py
+python tools/test_retriever_targets.py
 ```

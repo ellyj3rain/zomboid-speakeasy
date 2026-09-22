@@ -1367,3 +1367,44 @@ The reference exposes the next actual ML design seam. Record 51 names a learned
 retriever but does not define where relevance targets come from or how they are
 reviewed. Record 52 supplies one valid catalogue input for that work; it does not
 choose the target-authoring policy.
+
+---
+
+## 53 - Independent retriever targets (2026-09-22)
+
+Timestamp: 2026-09-22 07:18 UTC / 00:18 PST.
+
+The operator selected `independent-anchored-targets` through Mousecat Crucible
+interaction `skill-87fa148534b7e880`, item `seam-e7ecdee5ab14822d`. The learned
+retriever now has a precise third-dataset contract. A separately approved
+understander or speaker example supplies the exact claim references required for
+one utterance and situation. Other claims the person owns remain unjudged. A
+claim becomes a hard negative only when the retriever target names it and review
+establishes why it is a plausible wrong selection for that context.
+
+This changes the meaning of future training and evaluation. Missing a required
+claim is a retrieval omission, and selecting a reviewed hard negative is an
+error. An unjudged claim counts as neither. One valid short answer therefore does
+not teach that every omitted fact is irrelevant. Approval of the task example
+also does not approve the retriever row; every target receives its own operator
+ruling.
+
+`tools/retriever_targets.py` implements that boundary. It validates the complete
+C75 catalogue and snapshot identity, copies positives from the exact approved
+task anchor, requires reasoned explicit hard negatives, materializes the ordered
+unjudged complement and binds the proposal to an independent Mousecat review.
+The snapshot builder accepts only approved rows and requires exact,
+non-overlapping train/validation/test assignment plus exclusions and evaluation
+receipts. Unknown, duplicate, foreign, reordered, stale and hash-drifted
+references refuse the build.
+
+Nineteen controls cover the selected policy, catalogue and anchor identity,
+required-label drift, hard-negative boundaries, non-transferred approval,
+proposal-specific review, target admission, complete splits, duplicate rows,
+atomic output and source protection. All existing Speakeasy controls remain clean.
+
+The policy and compiler create zero real training rows, change no model weights,
+change no runtime behavior and change nothing visible in play. Record 52 has one
+reviewed person-claim reference, and SAO C75 has the typed catalogue and selected
+fence, but no approved understander or speaker example exists to anchor the first
+retriever target. That approved task example is the next data producer.

@@ -2,16 +2,17 @@
 
 | Field | Value |
 |---|---|
-| Status | RATIFIED 2026-09-21 through Mousecat Mass Assault |
-| Timestamp | 2026-09-21 08:50 UTC / 01:50 PST |
-| Interaction | `skill-e6acce0f301ef127` |
+| Status | RATIFIED 2026-09-21 through Mousecat Mass Assault; retriever target policy extended 2026-09-22 through Mousecat Crucible |
+| Timestamp | 2026-09-21 08:50 UTC / 01:50 PST; retriever policy 2026-09-22 07:18 UTC / 00:18 PST |
+| Interaction | `skill-e6acce0f301ef127`; retriever policy `skill-87fa148534b7e880` item `seam-e7ecdee5ab14822d` |
 | Owner | Speakeasy owns data, training, reference inference and export; SAO owns the in-game consumer, current-state revalidation and durable runtime state |
 | Scope | The learned retrieval, understanding and speaking path that follows the version 3 decision and knowledge contracts |
 
 This contract resolves the model shape that the earlier speech design left open.
-It does not make any existing row training-eligible. The first person-specific R12
-example still needs one preserved native event, its county calendar, and that
-same person's acquired, accessible and retained knowledge at the decision.
+It does not make any existing row training-eligible. Record 52 now supplies one
+reviewed person-claim reference, and SAO C75 supplies the typed snapshot-local
+catalogue and selected-claim fence. Neither artifact is an approved understander,
+retriever or speaker row.
 
 ## One base, typed tasks
 
@@ -97,9 +98,9 @@ must produce identical token sequences before a model is compared.
 
 ## Separate task datasets
 
-The understander and speaker train from separate datasets. Each dataset owns its
-schema, snapshot, provenance, splits, exclusions and evaluation receipts. Neither
-is a lossy projection whose standing is inherited from the other.
+The understander, retriever and speaker train from separate datasets. Each
+dataset owns its schema, snapshot, provenance, splits, exclusions and evaluation
+receipts. None inherits standing from another.
 
 When rows in the two datasets refer to the same county event, each retains the
 full version 3 namespace and immutable event, option and claim references. The
@@ -110,7 +111,20 @@ cite may not silently drift.
 The understander dataset maps utterances and current context to typed semantic
 frames. The speaker dataset maps admitted claims, semantic intent and typed voice
 conditioning to fenced expression. Approval in one dataset does not approve a
-row in the other.
+row in another.
+
+The retriever dataset uses independent anchored targets. A separately approved
+understander or speaker example supplies exact required claim references over a
+complete bound catalogue. Other owned claims remain unjudged. A claim becomes a
+hard negative only when the retriever target names it and review establishes why
+it is a plausible wrong selection for that context. The target then receives its
+own operator ruling; approval of the anchor does not transfer.
+
+Required-claim recall and reviewed-hard-negative selection are measured against
+their labels. Unjudged claims do not count as correct or incorrect. This prevents
+one valid omission from becoming a universal irrelevance label. The exact policy,
+artifact flow and current zero-row standing live in
+[`retriever/README.md`](retriever/README.md).
 
 ## Runtime scheduling
 
@@ -132,7 +146,7 @@ manifest binds:
 - shared base weights and every task adapter;
 - retriever artifact and index contract;
 - numerical precision and quantization parameters;
-- understander and speaker dataset snapshots;
+- understander, retriever and speaker dataset snapshots;
 - source, training and evaluation provenance;
 - compatibility requirements for the SAO consumer.
 
@@ -156,9 +170,11 @@ receipts are the artifact admitted for runtime evaluation.
 
 ## Work this contract unlocks
 
-The immediate producer remains the R12 person-specific example. After eligible
-examples exist, Speakeasy can build the two task datasets, frozen tokenizer,
-reference pipeline and native bundle writer. SAO can build a bundle reader and
+The next data producer is an independently approved understander or speaker
+example over a complete C75 catalogue. Its exact required references can then
+anchor a proposed retriever target for separate review. After eligible examples
+exist, Speakeasy can build the three task datasets, frozen tokenizer, reference
+pipeline and native bundle writer. SAO can build a bundle reader and
 snapshot/revalidation harness before a trained candidate exists. Model dimensions,
 cache bounds, worker concurrency, INT8 tolerances and the human-review rubric stay
 evidence-driven and are fixed only by their respective measurements.
