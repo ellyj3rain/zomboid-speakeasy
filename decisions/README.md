@@ -25,6 +25,15 @@ later facts. [`ELIGIBILITY.md`](ELIGIBILITY.md) records the counts;
 their hashes. `../tools/cross_module_rows.py` refuses version 2 rather than
 silently rewriting it.
 
+[`AUTHORING.md`](AUTHORING.md) owns the evidence-preparation path for new rows.
+Record 52's [`examples/r12-knox-lived-source/`](examples/r12-knox-lived-source/)
+imports one exact C74 event and same-person lived acquisition, attaches sealed
+extraction-review and acquisition-adjudication receipts, and compiles a reviewed
+person-knowledge reference. The forced food-source selection remains excluded
+from choice training. The reference exists to test the future catalogue producer;
+it creates no behavior row and remains outside every training view until its
+broader conditioning exclusions are closed.
+
 A body with no assigned form is in the `none` form, its performance is zero,
 and its decay state follows the facts SAO already records.
 When the pathogen roll takes a form, the row also carries that form, its

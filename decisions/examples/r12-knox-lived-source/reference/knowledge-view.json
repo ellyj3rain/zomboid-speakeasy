@@ -1,0 +1,512 @@
+{
+  "availableClaims": [
+    {
+      "acquisitionStanding": "adjudicated",
+      "acquisitions": [
+        {
+          "acquiredHour": -168,
+          "asOfHour": 48,
+          "checks": {
+            "access": {
+              "evidence": [
+                {
+                  "owner": "Survivor Awareness C74",
+                  "recordId": "actor/county-presence/1",
+                  "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+                }
+              ],
+              "status": "supported"
+            },
+            "age": {
+              "evidence": [
+                {
+                  "owner": "Survivor Awareness C74",
+                  "recordId": "actor/world-claim/1",
+                  "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+                }
+              ],
+              "status": "supported"
+            },
+            "carrier": {
+              "evidence": [
+                {
+                  "owner": "Survivor Awareness C74",
+                  "recordId": "actor/county-presence/1",
+                  "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+                }
+              ],
+              "status": "supported"
+            },
+            "retention": {
+              "evidence": [
+                {
+                  "owner": "Survivor Awareness C74",
+                  "recordId": "actor/world-claim/1",
+                  "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+                },
+                {
+                  "owner": "Survivor Awareness C74",
+                  "recordId": "actor/world-claim/1/retention/48",
+                  "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+                }
+              ],
+              "status": "supported"
+            }
+          },
+          "claimId": "knox-telecommunications-outage-1993-07-02",
+          "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+          "evidence": [
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/world-claim/1",
+              "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+            },
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/county-presence/1",
+              "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+            },
+            {
+              "owner": "Survivor Awareness C74",
+              "recordId": "actor/world-claim/1/retention/48",
+              "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+            }
+          ],
+          "namespace": {
+            "county": "CountyR12Controlled",
+            "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+            "hour": 48,
+            "personId": "actor",
+            "runId": "r12-knox-lived-source-example-v1"
+          },
+          "path": "lived",
+          "retained": true
+        }
+      ],
+      "claim": {
+        "acquisitionRules": [
+          "lived"
+        ],
+        "carrier": "county",
+        "confidence": "HIGH",
+        "id": "knox-telecommunications-outage-1993-07-02",
+        "knowableAt": "1993-07-02T00:00:00",
+        "source": {
+          "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+          "line": 71,
+          "path": "world/us-1993/knox-event.md",
+          "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+        },
+        "text": "Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours"
+      },
+      "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+      "extractionStanding": "reviewed",
+      "sourceStanding": "approved-knowledge"
+    }
+  ],
+  "calendar": {
+    "anchorAt": "1993-07-09T00:00:00",
+    "anchorHour": 0,
+    "evidence": {
+      "owner": "Survivor Awareness C74",
+      "recordId": "county-calendar/shipped-1993-07-09",
+      "sha256": "6103c0a1e8e3ef759d7e663fb4bd83f6e129691d599e4c32092cb4a4f63f32f6"
+    },
+    "horizonHour": 48
+  },
+  "conditioning": {
+    "exclusions": [
+      "knowledge-coverage-not-established",
+      "later-consequences-not-observed",
+      "runtime-choice-not-ratified"
+    ],
+    "status": "ineligible"
+  },
+  "contentSha256": "d5980d4b1043958074cfba8f792b11ad16bcda9af6a463741f6f31dc2176e9d7",
+  "eventSha256": "2d1e37ffaf0f44e9ddc93fef848a94d6daf778a6f4f3ef5e234005f8951ef339",
+  "excludedClaims": [],
+  "namespace": {
+    "county": "CountyR12Controlled",
+    "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+    "hour": 48,
+    "personId": "actor",
+    "runId": "r12-knox-lived-source-example-v1"
+  },
+  "options": [
+    {
+      "eligibility": {
+        "evidence": [
+          {
+            "actorId": "actor",
+            "beliefAtTick": 432000,
+            "kind": "private-source-revision",
+            "provenance": "observed",
+            "revision": "food-r1",
+            "sourceId": "C:food-token:0"
+          },
+          {
+            "admission": "standing",
+            "atHours": 48,
+            "kind": "attempt-admission",
+            "physicalAccess": "revalidate-on-arrival"
+          }
+        ],
+        "status": "eligible"
+      },
+      "id": "C:food-token:0",
+      "owner": "SAO.SourceUse",
+      "parameters": {
+        "action": "attempt-source-use",
+        "actorId": "actor",
+        "admission": "standing",
+        "category": "food",
+        "chunkX": 1,
+        "chunkY": 1,
+        "fingerprint": "food-fp",
+        "itemAmount": 0,
+        "itemId": 101,
+        "itemType": "Base.Apple",
+        "itemUses": 1,
+        "placeId": "42",
+        "quantity": 1,
+        "revision": "food-r1",
+        "sourceId": "C:food-token:0",
+        "sourceKind": "container",
+        "sourceX": 8,
+        "sourceY": 8,
+        "sourceZ": 0
+      }
+    },
+    {
+      "eligibility": {
+        "evidence": [
+          {
+            "actorId": "actor",
+            "beliefAtTick": 432000,
+            "kind": "private-source-revision",
+            "provenance": "observed",
+            "revision": "second-r1",
+            "sourceId": "C:second:0"
+          },
+          {
+            "admission": "standing",
+            "atHours": 48,
+            "kind": "attempt-admission",
+            "physicalAccess": "revalidate-on-arrival"
+          }
+        ],
+        "status": "eligible"
+      },
+      "id": "C:second:0",
+      "owner": "SAO.SourceUse",
+      "parameters": {
+        "action": "attempt-source-use",
+        "actorId": "actor",
+        "admission": "standing",
+        "category": "food",
+        "chunkX": 1,
+        "chunkY": 1,
+        "fingerprint": "second-fp",
+        "itemAmount": 0,
+        "itemId": 109,
+        "itemType": "Base.Banana",
+        "itemUses": 1,
+        "placeId": "42",
+        "quantity": 1,
+        "revision": "second-r1",
+        "sourceId": "C:second:0",
+        "sourceKind": "container",
+        "sourceX": 9,
+        "sourceY": 8,
+        "sourceZ": 0
+      }
+    }
+  ],
+  "person": {
+    "age": 31,
+    "beliefs": {
+      "42": {
+        "at": 432000,
+        "cx": 8,
+        "cy": 8,
+        "maxX": 10,
+        "maxY": 10,
+        "minX": 8,
+        "minY": 8,
+        "source": "observed",
+        "sourceAccess": {},
+        "sourceFacts": {
+          "C:food-token:0": {
+            "access": "unknown",
+            "buildingId": "42",
+            "candidates": {
+              "food": {
+                "amount": 0,
+                "categories": {
+                  "food": true
+                },
+                "fluid": "",
+                "id": 101,
+                "poison": false,
+                "rotten": false,
+                "type": "Base.Apple",
+                "uses": 1
+              }
+            },
+            "chunkX": 1,
+            "chunkY": 1,
+            "container": "counter",
+            "explored": true,
+            "fingerprint": "food-fp",
+            "id": "C:food-token:0",
+            "kind": "container",
+            "quantities": {
+              "food": 1
+            },
+            "revision": "food-r1",
+            "state": "available",
+            "x": 8,
+            "y": 8,
+            "z": 0
+          },
+          "C:second:0": {
+            "access": "unknown",
+            "buildingId": "42",
+            "candidates": {
+              "food": {
+                "amount": 0,
+                "categories": {
+                  "food": true
+                },
+                "fluid": "",
+                "id": 109,
+                "poison": false,
+                "rotten": false,
+                "type": "Base.Banana",
+                "uses": 1
+              }
+            },
+            "chunkX": 1,
+            "chunkY": 1,
+            "container": "counter",
+            "explored": true,
+            "fingerprint": "second-fp",
+            "id": "C:second:0",
+            "kind": "container",
+            "quantities": {
+              "food": 1
+            },
+            "revision": "second-r1",
+            "state": "available",
+            "x": 9,
+            "y": 8,
+            "z": 0
+          }
+        },
+        "sourceRevision": "C:food-token:0@food-r1,C:second:0@second-r1",
+        "sources": {
+          "food": true
+        }
+      }
+    },
+    "circle": "near",
+    "conditions": {},
+    "displayName": "Ada North",
+    "habits": {},
+    "id": "actor",
+    "lessons": {},
+    "name": "Ada North",
+    "occupationClass": "work",
+    "record": {
+      "forename": "Ada",
+      "id": "actor",
+      "occupation": "carpenter",
+      "originRegion": "Muldraugh, KY",
+      "profile": {
+        "note": "before"
+      },
+      "surname": "North",
+      "worldKnowledge": {
+        "acquisitions": [
+          {
+            "access": "area-wide-telephone-and-internet-outage",
+            "acquiredHour": -168,
+            "ageAtEvent": 31,
+            "carrier": "county",
+            "claimId": "knox-telecommunications-outage-1993-07-02",
+            "path": "lived",
+            "personId": "actor",
+            "presenceRecordId": "actor/county-presence/1",
+            "producer": "SAO.WorldKnowledge.advancePerson",
+            "recordId": "actor/world-claim/1",
+            "retained": true,
+            "retentionPolicy": "durable-until-explicit-supersession",
+            "schemaVersion": 1,
+            "source": {
+              "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+              "line": 71,
+              "owner": "Zomboid-Speakeasy",
+              "path": "world/us-1993/knox-event.md",
+              "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+            },
+            "sourceEvent": {
+              "atHours": -168,
+              "kind": "county-lived-day",
+              "recordDay": -7,
+              "resolution": "date"
+            }
+          }
+        ],
+        "presence": [
+          {
+            "fromHour": -192,
+            "fromRecordDay": -8,
+            "personId": "actor",
+            "producer": "SAO.PopulationAdmissions",
+            "recordId": "actor/county-presence/1",
+            "region": "Muldraugh, KY",
+            "schemaVersion": 1,
+            "source": "genesis-origin"
+          }
+        ],
+        "schemaVersion": 1
+      }
+    },
+    "skills": {},
+    "traits": {
+      "patience": 0.7
+    }
+  },
+  "provenance": {
+    "captureSha256": "d3c8ae102a4d1cbc10773313698c7cd19035c91e19c52c9652e55802c841695c",
+    "inputSha256": "3b00ea99f0436a120e45de0ea0e12a4a8dd11a7aedbbabd087b4b6f730df46e7",
+    "protectedManifestSha256": "8c204e401d53e62f1feec1f90fb353173ce0aab33b316963c77d2a8f5139d349",
+    "receiptSha256": [
+      "d974fad818e328c089b8103ae27b67e62ad83938031bc10c3610d1dc6fa542c4",
+      "fa31b5aef4cdf0cbac831e92a6645bea53f05ec1d6d7d72d82cf7a9ce2127013"
+    ]
+  },
+  "reconstructionVersion": "explicit-acquisition-1",
+  "schema": "speakeasy-knowledge-view",
+  "schemaVersion": 1,
+  "situation": {
+    "county": "CountyR12Controlled",
+    "hour": 48,
+    "sourceOffer": {
+      "actorId": "actor",
+      "admission": "standing",
+      "atHours": 48,
+      "candidateCount": 2,
+      "category": "food",
+      "limit": 128,
+      "options": [
+        {
+          "eligibility": {
+            "evidence": [
+              {
+                "actorId": "actor",
+                "beliefAtTick": 432000,
+                "kind": "private-source-revision",
+                "provenance": "observed",
+                "revision": "food-r1",
+                "sourceId": "C:food-token:0"
+              },
+              {
+                "admission": "standing",
+                "atHours": 48,
+                "kind": "attempt-admission",
+                "physicalAccess": "revalidate-on-arrival"
+              }
+            ],
+            "status": "eligible"
+          },
+          "id": "C:food-token:0",
+          "owner": "SAO.SourceUse",
+          "parameters": {
+            "action": "attempt-source-use",
+            "actorId": "actor",
+            "admission": "standing",
+            "category": "food",
+            "chunkX": 1,
+            "chunkY": 1,
+            "fingerprint": "food-fp",
+            "itemAmount": 0,
+            "itemId": 101,
+            "itemType": "Base.Apple",
+            "itemUses": 1,
+            "placeId": "42",
+            "quantity": 1,
+            "revision": "food-r1",
+            "sourceId": "C:food-token:0",
+            "sourceKind": "container",
+            "sourceX": 8,
+            "sourceY": 8,
+            "sourceZ": 0
+          }
+        },
+        {
+          "eligibility": {
+            "evidence": [
+              {
+                "actorId": "actor",
+                "beliefAtTick": 432000,
+                "kind": "private-source-revision",
+                "provenance": "observed",
+                "revision": "second-r1",
+                "sourceId": "C:second:0"
+              },
+              {
+                "admission": "standing",
+                "atHours": 48,
+                "kind": "attempt-admission",
+                "physicalAccess": "revalidate-on-arrival"
+              }
+            ],
+            "status": "eligible"
+          },
+          "id": "C:second:0",
+          "owner": "SAO.SourceUse",
+          "parameters": {
+            "action": "attempt-source-use",
+            "actorId": "actor",
+            "admission": "standing",
+            "category": "food",
+            "chunkX": 1,
+            "chunkY": 1,
+            "fingerprint": "second-fp",
+            "itemAmount": 0,
+            "itemId": 109,
+            "itemType": "Base.Banana",
+            "itemUses": 1,
+            "placeId": "42",
+            "quantity": 1,
+            "revision": "second-r1",
+            "sourceId": "C:second:0",
+            "sourceKind": "container",
+            "sourceX": 9,
+            "sourceY": 8,
+            "sourceZ": 0
+          }
+        }
+      ],
+      "place": {
+        "cx": 8,
+        "cy": 8,
+        "id": 42,
+        "maxX": 10,
+        "maxY": 10,
+        "minX": 8,
+        "minY": 8
+      },
+      "quantity": 1,
+      "schemaVersion": 1,
+      "scope": "selected-place-and-need",
+      "truncated": false
+    }
+  },
+  "sourceExclusions": [
+    "runtime-choice-not-ratified",
+    "person-knowledge-not-reconstructed",
+    "later-consequences-not-observed"
+  ]
+}

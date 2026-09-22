@@ -23,6 +23,9 @@ VERSION = 1
 RECONSTRUCTION = "explicit-acquisition-1"
 CHECKS = {"age", "carrier", "access", "retention"}
 PATHS = {"read", "heard", "lived", "told"}
+CLAIM_REVIEW_SCHEMA = "speakeasy-claim-extraction-review"
+ACQUISITION_REVIEW_SCHEMA = "speakeasy-acquisition-adjudication"
+RESOLVED_SOURCE_EXCLUSIONS = {"person-knowledge-not-reconstructed"}
 
 
 def require(condition: bool, message: str) -> None:
@@ -46,6 +49,15 @@ def seal(value: dict[str, Any]) -> dict[str, Any]:
     output = copy.deepcopy(value)
     output["contentSha256"] = digest(output)
     return output
+
+
+def unseal(value: Any, name: str) -> dict[str, Any]:
+    schema(value, name)
+    hash_value(value.get("contentSha256"), f"{name} contentSha256")
+    body = copy.deepcopy(value)
+    content_hash = body.pop("contentSha256")
+    require(digest(body) == content_hash, f"{name} content hash differs")
+    return value
 
 
 def strict_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
@@ -96,6 +108,40 @@ def reference(value: Any) -> None:
     identifier(value["owner"], "evidence owner")
     identifier(value["recordId"], "evidence recordId")
     hash_value(value["sha256"], "evidence sha256")
+
+
+def reviewer(value: Any) -> None:
+    fields(value, {"kind", "id", "procedureSha256"}, "reviewer")
+    require(value["kind"] in {"repository-review", "human"},
+            "reviewer kind must be repository-review or human")
+    identifier(value["id"], "reviewer id")
+    hash_value(value["procedureSha256"], "reviewer procedureSha256")
+
+
+def receipt_index(paths: list[Path] | None) -> dict[str, Any]:
+    result: dict[str, Any] = {"claim": {}, "acquisition": {}, "hashes": []}
+    seen_names: set[str] = set()
+    for path in paths or []:
+        require(path.name not in seen_names, "receipt filenames must be unique")
+        seen_names.add(path.name)
+        value = read(path)
+        name = value.get("schema") if isinstance(value, dict) else None
+        require(name in {CLAIM_REVIEW_SCHEMA, ACQUISITION_REVIEW_SCHEMA},
+                "unsupported knowledge receipt schema")
+        unseal(value, name)
+        result["hashes"].append(Join.sha256(path))
+        if name == CLAIM_REVIEW_SCHEMA:
+            key = value.get("claimSha256")
+            hash_value(key, "claim review claimSha256")
+            require(key not in result["claim"], "duplicate claim extraction review")
+            result["claim"][key] = value
+        else:
+            key = value.get("acquisitionSha256")
+            hash_value(key, "acquisition adjudication acquisitionSha256")
+            require(key not in result["acquisition"], "duplicate acquisition adjudication")
+            result["acquisition"][key] = value
+    result["hashes"].sort()
+    return result
 
 
 def instant(value: Any) -> datetime:
@@ -254,7 +300,97 @@ def events(path: Path) -> dict[tuple[Any, ...], dict[str, Any]]:
     return result
 
 
-def source_claim(claim: Any, protected: dict[str, Any]) -> None:
+def protected_excerpt(value: Any, protected: dict[str, Any]) -> None:
+    fields(value, {"role", "path", "sha256", "startLine", "endLine",
+                   "excerptSha256"}, "claim review rule source")
+    identifier(value["role"], "claim review rule source role")
+    identifier(value["path"], "claim review rule source path")
+    hash_value(value["sha256"], "claim review rule source sha256")
+    hash_value(value["excerptSha256"], "claim review rule source excerptSha256")
+    path = Join.ROOT / value["path"]
+    artifact = protected.get(Join.canonical(path))
+    require(artifact is not None and artifact["standing"] == "approved-knowledge"
+            and value["sha256"] == artifact["sha256"],
+            "claim review rule source must be a hash-matched protected approved document")
+    lines = path.read_text(encoding="utf-8").splitlines()
+    start, end = value["startLine"], value["endLine"]
+    require(type(start) is int and type(end) is int
+            and 1 <= start <= end <= len(lines),
+            "claim review rule source range is outside document")
+    excerpt = "\n".join(lines[start - 1:end])
+    require(hashlib.sha256(excerpt.encode("utf-8")).hexdigest()
+            == value["excerptSha256"],
+            "claim review rule source excerpt hash differs")
+
+
+def claim_review(receipt: Any, claim: dict[str, Any],
+                 protected: dict[str, Any]) -> None:
+    fields(receipt, {"schema", "schemaVersion", "claimId", "claimSha256",
+                     "source", "ruleSources", "review", "reviewer", "findings",
+                     "contentSha256"}, "claim extraction review")
+    require(receipt["claimId"] == claim["id"]
+            and receipt["claimSha256"] == digest(claim),
+            "claim extraction review binds a different claim")
+    require(receipt["source"] == claim["source"],
+            "claim extraction review source differs")
+    rule_sources = receipt["ruleSources"]
+    require(isinstance(rule_sources, list) and rule_sources,
+            "claim extraction review needs rule sources")
+    roles: set[str] = set()
+    for rule_source in rule_sources:
+        protected_excerpt(rule_source, protected)
+        require(rule_source["role"] not in roles,
+                "claim extraction review rule-source roles must be unique")
+        roles.add(rule_source["role"])
+    review = receipt["review"]
+    fields(review, {"status", "textBoundary", "knowableAt", "carrier",
+                    "acquisitionRules", "confidence"}, "claim extraction review body")
+    require(review["status"] == "reviewed"
+            and review["textBoundary"] == "literal-substring",
+            "claim extraction review standing differs")
+    require(review["knowableAt"] == claim["knowableAt"]
+            and review["carrier"] == claim["carrier"]
+            and review["acquisitionRules"] == claim["acquisitionRules"],
+            "claim extraction review boundary differs")
+    confidence = review["confidence"]
+    fields(confidence, {"value", "basis", "sourceLineHasLiteralConfidence"},
+           "claim confidence review")
+    require(confidence["value"] == claim["confidence"]
+            and isinstance(confidence["sourceLineHasLiteralConfidence"], bool),
+            "claim confidence review differs")
+    identifier(confidence["basis"], "claim confidence review basis")
+    reviewer(receipt["reviewer"])
+    require(isinstance(receipt["findings"], list) and receipt["findings"]
+            and all(Join.nonempty_string(item) for item in receipt["findings"]),
+            "claim extraction review needs findings")
+
+
+def acquisition_review(receipt: Any, record: dict[str, Any], claim: dict[str, Any],
+                       ns: dict[str, Any], event_sha256: str) -> None:
+    fields(receipt, {"schema", "schemaVersion", "claimId", "claimSha256",
+                     "acquisitionSha256", "namespace", "eventSha256",
+                     "importEvidence", "checks", "status", "reviewer",
+                     "limitations", "contentSha256"},
+           "acquisition adjudication")
+    require(receipt["claimId"] == claim["id"]
+            and receipt["claimSha256"] == digest(claim),
+            "acquisition adjudication binds a different claim")
+    require(receipt["acquisitionSha256"] == digest(record),
+            "acquisition adjudication binds different evidence")
+    require(receipt["namespace"] == ns and receipt["eventSha256"] == event_sha256,
+            "acquisition adjudication event differs")
+    reference(receipt["importEvidence"])
+    require(receipt["checks"] == record["checks"],
+            "acquisition adjudication checks differ")
+    require(receipt["status"] == "adjudicated", "acquisition standing differs")
+    reviewer(receipt["reviewer"])
+    require(isinstance(receipt["limitations"], list) and receipt["limitations"]
+            and all(Join.nonempty_string(item) for item in receipt["limitations"]),
+            "acquisition adjudication needs limitations")
+
+
+def source_claim(claim: Any, protected: dict[str, Any],
+                 review_receipt: dict[str, Any] | None = None) -> None:
     fields(claim, {"id", "text", "confidence", "knowableAt", "carrier",
                    "acquisitionRules", "source"}, "claim")
     for name in ("id", "text", "carrier"):
@@ -285,8 +421,16 @@ def source_claim(claim: Any, protected: dict[str, Any]) -> None:
             "claim source excerpt hash differs")
     require(claim["text"] in excerpt and claim["carrier"] in excerpt,
             "claim text/carrier must occur literally in the source line")
-    require(re.search(r"\|\s*" + claim["confidence"] + r"\b", excerpt) is not None,
-            "claim confidence is absent from source line")
+    literal_confidence = re.search(
+        r"\|\s*" + claim["confidence"] + r"\b", excerpt) is not None
+    if review_receipt is not None:
+        claim_review(review_receipt, claim, protected)
+        declared = review_receipt["review"]["confidence"][
+            "sourceLineHasLiteralConfidence"]
+        require(declared == literal_confidence,
+                "claim confidence review misstates the source line")
+    require(literal_confidence or review_receipt is not None,
+            "claim confidence is absent from source line and has no review")
     require(claim["confidence"] == "LOW" or not re.search(r"\bLOW\b", excerpt),
             "LOW source material cannot be promoted")
 
@@ -336,8 +480,10 @@ def evidence_reason(record: Any, claim: dict[str, Any], ns: dict[str, Any],
     return None
 
 
-def compile_view(capture_path: Path, bundle_path: Path) -> dict[str, Any]:
+def compile_view(capture_path: Path, bundle_path: Path,
+                 receipt_paths: list[Path] | None = None) -> dict[str, Any]:
     protected = Join.protected_artifacts()
+    receipts = receipt_index(receipt_paths)
     captured = events(capture_path)
     bundle = read(bundle_path)
     schema(bundle, "speakeasy-knowledge-input")
@@ -360,17 +506,26 @@ def compile_view(capture_path: Path, bundle_path: Path) -> dict[str, Any]:
     require(isinstance(bundle["claims"], list) and isinstance(bundle["acquisitions"], list),
             "claims/acquisitions must be lists")
     claims = {}
+    claim_reviewed: dict[str, bool] = {}
     for claim in bundle["claims"]:
-        source_claim(claim, protected)
+        claim_hash = digest(claim)
+        review_receipt = receipts["claim"].get(claim_hash)
+        source_claim(claim, protected, review_receipt)
         require(claim["id"] not in claims, "duplicate claim id")
         claims[claim["id"]] = claim
-    acquisitions: dict[str, list[tuple[Any, str | None]]] = {}
+        claim_reviewed[claim["id"]] = review_receipt is not None
+    acquisitions: dict[str, list[tuple[Any, str | None, bool]]] = {}
     for record in bundle["acquisitions"]:
         require(isinstance(record, dict) and isinstance(record.get("claimId"), str)
                 and record["claimId"] in claims,
                 "acquisition refers to an unknown claim")
         reason = evidence_reason(record, claims[record["claimId"]], ns, calendar)
-        acquisitions.setdefault(record["claimId"], []).append((record, reason))
+        adjudication = receipts["acquisition"].get(digest(record))
+        if adjudication is not None:
+            acquisition_review(adjudication, record, claims[record["claimId"]],
+                               ns, event["eventSha256"])
+        acquisitions.setdefault(record["claimId"], []).append(
+            (record, reason, adjudication is not None))
     available, excluded = [], []
     for identity, claim in sorted(claims.items()):
         reason = None
@@ -379,9 +534,12 @@ def compile_view(capture_path: Path, bundle_path: Path) -> dict[str, Any]:
         elif instant(claim["knowableAt"]) > horizon:
             reason = "future-to-person-horizon"
         candidates = acquisitions.get(identity, [])
-        valid = [record for record, why in candidates if why is None]
+        valid_entries = [(record, adjudicated)
+                         for record, why, adjudicated in candidates if why is None]
+        valid = [record for record, _ in valid_entries]
         if reason is None and not valid:
-            reason = "missing-acquisition" if not candidates else ";".join(sorted({why for _, why in candidates}))
+            reason = ("missing-acquisition" if not candidates else
+                      ";".join(sorted({why for _, why, _ in candidates})))
         if reason:
             # Excluded claim text is deliberately absent from the conditioning surface.
             excluded.append({"claimId": identity, "claimSha256": digest(claim), "reason": reason})
@@ -390,23 +548,38 @@ def compile_view(capture_path: Path, bundle_path: Path) -> dict[str, Any]:
                               "claimSha256": digest(claim),
                               "acquisitions": sorted(copy.deepcopy(valid), key=digest),
                               "sourceStanding": "approved-knowledge",
-                              "extractionStanding": "unreviewed",
-                              "acquisitionStanding": "unadjudicated"})
+                              "extractionStanding": ("reviewed"
+                                                     if claim_reviewed[identity]
+                                                     else "unreviewed"),
+                              "acquisitionStanding": ("adjudicated"
+                                                       if all(x for _, x in valid_entries)
+                                                       else "unadjudicated")})
+    # Source exclusions describe what the runtime capture itself did not yet
+    # contain. This compiler preserves those bytes under sourceExclusions, but
+    # removes limitations that the explicit reconstruction has now resolved
+    # from the active conditioning reasons.
+    exclusions = set(event["sourceExclusions"]) - RESOLVED_SOURCE_EXCLUSIONS
+    exclusions.add("knowledge-coverage-not-established")
+    if any(row["extractionStanding"] == "unreviewed" for row in available):
+        exclusions.add("claim-extraction-not-reviewed")
+    if any(row["acquisitionStanding"] == "unadjudicated" for row in available):
+        exclusions.add("acquisition-evidence-not-adjudicated")
     return seal({"schema": "speakeasy-knowledge-view", "schemaVersion": VERSION,
                  "reconstructionVersion": RECONSTRUCTION, **event,
                  "calendar": copy.deepcopy(calendar), "availableClaims": available,
                  "excludedClaims": excluded,
                  "provenance": {"captureSha256": Join.sha256(capture_path),
                                 "inputSha256": Join.sha256(bundle_path),
-                                "protectedManifestSha256": Join.sha256(Join.PROTECTED_MANIFEST)},
-                 "conditioning": {"status": "ineligible", "exclusions": sorted(set(
-                     event["sourceExclusions"] + ["claim-extraction-not-ratified",
-                     "acquisition-evidence-not-adjudicated", "knowledge-coverage-not-established"]))}})
+                                "protectedManifestSha256": Join.sha256(Join.PROTECTED_MANIFEST),
+                                "receiptSha256": receipts["hashes"]},
+                 "conditioning": {"status": "ineligible",
+                                  "exclusions": sorted(exclusions)}})
 
 
 def proposal(capture_path: Path, bundle_path: Path, view_path: Path,
-             request_path: Path) -> dict[str, Any]:
-    expected = compile_view(capture_path, bundle_path)
+             request_path: Path,
+             receipt_paths: list[Path] | None = None) -> dict[str, Any]:
+    expected = compile_view(capture_path, bundle_path, receipt_paths)
     view = read(view_path)
     require(view == expected, "knowledge view differs from reproducible source evidence")
     request = read(request_path)
@@ -459,6 +632,7 @@ def main(argv: list[str] | None = None) -> int:
         child = commands.add_parser(command)
         child.add_argument("--capture", type=Path, required=True)
         child.add_argument("--knowledge", type=Path, required=True)
+        child.add_argument("--receipt", type=Path, action="append", default=[])
         child.add_argument("--out", type=Path, required=True)
         if command == "propose":
             child.add_argument("--view", type=Path, required=True)
@@ -472,12 +646,13 @@ def main(argv: list[str] | None = None) -> int:
                                "options": [{"optionId": x["id"], "optionSha256": digest(x)}
                                            for x in event["options"]]}).decode("utf-8"))
             return 0
-        inputs = [args.capture, args.knowledge]
+        inputs = [args.capture, args.knowledge, *args.receipt]
         if args.command == "view":
-            value = compile_view(args.capture, args.knowledge)
+            value = compile_view(args.capture, args.knowledge, args.receipt)
         else:
             inputs += [args.view, args.request]
-            value = proposal(*inputs)
+            value = proposal(args.capture, args.knowledge, args.view,
+                             args.request, args.receipt)
         publish(args.out, value, inputs)
     except (Join.ContractError, OSError, OverflowError) as error:
         print(f"REFUSED: {error}", file=sys.stderr)

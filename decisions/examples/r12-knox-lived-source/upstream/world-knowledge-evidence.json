@@ -1,0 +1,144 @@
+{
+  "acquisition": {
+    "access": "area-wide-telephone-and-internet-outage",
+    "acquiredHour": -168,
+    "ageAtEvent": 31,
+    "carrier": "county",
+    "claimId": "knox-telecommunications-outage-1993-07-02",
+    "path": "lived",
+    "personId": "actor",
+    "presenceRecordId": "actor/county-presence/1",
+    "producer": "SAO.WorldKnowledge.advancePerson",
+    "recordId": "actor/world-claim/1",
+    "retained": true,
+    "retentionPolicy": "durable-until-explicit-supersession",
+    "schemaVersion": 1,
+    "source": {
+      "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+      "line": 71,
+      "owner": "Zomboid-Speakeasy",
+      "path": "world/us-1993/knox-event.md",
+      "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+    },
+    "sourceEvent": {
+      "atHours": -168,
+      "kind": "county-lived-day",
+      "recordDay": -7,
+      "resolution": "date"
+    }
+  },
+  "calendar": {
+    "anchorAt": "1993-07-09T00:00:00",
+    "anchorHour": 0,
+    "claimEventHour": -168.0,
+    "claimEventRecordDay": -7,
+    "horizonAt": "1993-07-11T00:00:00",
+    "horizonHour": 48,
+    "owner": "SAORecord",
+    "policy": "save-start-minus-history-offset",
+    "recordId": "county-calendar/shipped-1993-07-09",
+    "resolution": "second",
+    "schema": "sao-county-calendar-evidence",
+    "schemaVersion": 1
+  },
+  "eventSha256": "2d1e37ffaf0f44e9ddc93fef848a94d6daf778a6f4f3ef5e234005f8951ef339",
+  "limitations": [
+    "Controlled native source and holder; not a sampled natural county.",
+    "Installed Kahlua runtime and production action modules; not loaded-save acceptance.",
+    "SAO produces personal evidence and grants no extraction, choice, or training approval."
+  ],
+  "namespace": {
+    "county": "CountyR12Controlled",
+    "eventId": "r12-knox-lived-source-example-v1/source-use/1",
+    "hour": 48,
+    "personId": "actor",
+    "runId": "r12-knox-lived-source-example-v1"
+  },
+  "presence": {
+    "fromHour": -192,
+    "fromRecordDay": -8,
+    "personId": "actor",
+    "producer": "SAO.PopulationAdmissions",
+    "recordId": "actor/county-presence/1",
+    "region": "Muldraugh, KY",
+    "schemaVersion": 1,
+    "source": "genesis-origin"
+  },
+  "recordHashes": [
+    {
+      "recordId": "county-calendar/shipped-1993-07-09",
+      "sha256": "6103c0a1e8e3ef759d7e663fb4bd83f6e129691d599e4c32092cb4a4f63f32f6"
+    },
+    {
+      "recordId": "actor/county-presence/1",
+      "sha256": "ab7fa36701f11245858b769c7a44eb92c221a318292dc87bd3c8abec18a91df6"
+    },
+    {
+      "recordId": "actor/world-claim/1",
+      "sha256": "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22"
+    },
+    {
+      "recordId": "actor/world-claim/1/retention/48",
+      "sha256": "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+    }
+  ],
+  "retentionObservation": {
+    "acquiredHour": -168,
+    "acquisition": {
+      "access": "area-wide-telephone-and-internet-outage",
+      "acquiredHour": -168,
+      "ageAtEvent": 31,
+      "carrier": "county",
+      "claimId": "knox-telecommunications-outage-1993-07-02",
+      "path": "lived",
+      "personId": "actor",
+      "presenceRecordId": "actor/county-presence/1",
+      "producer": "SAO.WorldKnowledge.advancePerson",
+      "recordId": "actor/world-claim/1",
+      "retained": true,
+      "retentionPolicy": "durable-until-explicit-supersession",
+      "schemaVersion": 1,
+      "source": {
+        "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+        "line": 71,
+        "owner": "Zomboid-Speakeasy",
+        "path": "world/us-1993/knox-event.md",
+        "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+      },
+      "sourceEvent": {
+        "atHours": -168,
+        "kind": "county-lived-day",
+        "recordDay": -7,
+        "resolution": "date"
+      }
+    },
+    "asOfHour": 48,
+    "checks": {
+      "access": {
+        "recordId": "actor/county-presence/1",
+        "status": "supported"
+      },
+      "age": {
+        "recordId": "actor/world-claim/1",
+        "status": "supported"
+      },
+      "carrier": {
+        "recordId": "actor/county-presence/1",
+        "status": "supported"
+      },
+      "retention": {
+        "recordId": "actor/world-claim/1",
+        "status": "supported"
+      }
+    },
+    "claimId": "knox-telecommunications-outage-1993-07-02",
+    "path": "lived",
+    "personId": "actor",
+    "recordId": "actor/world-claim/1/retention/48",
+    "retained": true,
+    "schemaVersion": 1
+  },
+  "schema": "sao-world-knowledge-evidence",
+  "schemaVersion": 1,
+  "standing": "produced-not-adjudicated"
+}

@@ -319,6 +319,105 @@ class AuthoringTest(unittest.TestCase):
         with self.assertRaisesRegex(Join.ContractError, "hash-matched"):
             self.compile()
 
+    def test_review_and_adjudication_standing_comes_only_from_exact_receipts(self):
+        review_path = self.root / "claim-review.json"
+        adjudication_path = self.root / "acquisition-adjudication.json"
+        review = Author.seal({
+            "schema": Author.CLAIM_REVIEW_SCHEMA, "schemaVersion": 1,
+            "claimId": self.claim["id"], "claimSha256": Author.digest(self.claim),
+            "source": copy.deepcopy(self.claim["source"]),
+            "ruleSources": [{
+                "role": "claim-source",
+                "path": self.claim["source"]["path"],
+                "sha256": self.claim["source"]["sha256"],
+                "startLine": self.claim["source"]["line"],
+                "endLine": self.claim["source"]["line"],
+                "excerptSha256": self.claim["source"]["excerptSha256"],
+            }],
+            "review": {"status": "reviewed", "textBoundary": "literal-substring",
+                       "knowableAt": self.claim["knowableAt"],
+                       "carrier": self.claim["carrier"],
+                       "acquisitionRules": self.claim["acquisitionRules"],
+                       "confidence": {"value": "HIGH", "basis": "literal-source-field",
+                                      "sourceLineHasLiteralConfidence": True}},
+            "reviewer": {"kind": "repository-review", "id": "controlled-review",
+                         "procedureSha256": "c" * 64},
+            "findings": ["The literal boundary and declared time match the cited line."],
+        })
+        record = self.bundle["acquisitions"][0]
+        adjudication = Author.seal({
+            "schema": Author.ACQUISITION_REVIEW_SCHEMA, "schemaVersion": 1,
+            "claimId": self.claim["id"], "claimSha256": Author.digest(self.claim),
+            "acquisitionSha256": Author.digest(record),
+            "namespace": copy.deepcopy(self.event["namespace"]),
+            "eventSha256": Author.digest(self.event),
+            "importEvidence": self.reference,
+            "checks": copy.deepcopy(record["checks"]), "status": "adjudicated",
+            "reviewer": {"kind": "repository-review", "id": "controlled-review",
+                         "procedureSha256": "d" * 64},
+            "limitations": ["Controlled fixture; not a natural county sample."],
+        })
+        write(review_path, review)
+        write(adjudication_path, adjudication)
+        view = Author.compile_view(self.capture, self.knowledge,
+                                   [review_path, adjudication_path])
+        row = view["availableClaims"][0]
+        self.assertEqual(row["extractionStanding"], "reviewed")
+        self.assertEqual(row["acquisitionStanding"], "adjudicated")
+        self.assertNotIn("claim-extraction-not-reviewed",
+                         view["conditioning"]["exclusions"])
+        self.assertNotIn("acquisition-evidence-not-adjudicated",
+                         view["conditioning"]["exclusions"])
+        self.assertNotIn("claim-extraction-not-ratified",
+                         view["conditioning"]["exclusions"])
+        review["findings"][0] = "changed without a new receipt"
+        write(review_path, review)
+        with self.assertRaisesRegex(Join.ContractError, "content hash differs"):
+            Author.compile_view(self.capture, self.knowledge,
+                                [review_path, adjudication_path])
+
+    def test_nonliteral_confidence_requires_an_explicit_exact_review(self):
+        relative = "world/us-1993/knox-event.md"
+        path = Join.ROOT / relative
+        line = path.read_text(encoding="utf-8").splitlines()[70]
+        claim = {
+            "id": "knox-telecommunications-outage-1993-07-02",
+            "text": "Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours",
+            "confidence": "HIGH", "knowableAt": "1993-07-02T00:00:00",
+            "carrier": "county", "acquisitionRules": ["lived"],
+            "source": {"path": relative, "sha256": Join.sha256(path), "line": 71,
+                       "excerptSha256": hashlib.sha256(line.encode("utf-8")).hexdigest()},
+        }
+        with self.assertRaisesRegex(Join.ContractError, "has no review"):
+            Author.source_claim(claim, Join.protected_artifacts())
+        review = Author.seal({
+            "schema": Author.CLAIM_REVIEW_SCHEMA, "schemaVersion": 1,
+            "claimId": claim["id"], "claimSha256": Author.digest(claim),
+            "source": copy.deepcopy(claim["source"]),
+            "ruleSources": [{
+                "role": "claim-source", "path": relative,
+                "sha256": claim["source"]["sha256"], "startLine": 71,
+                "endLine": 71,
+                "excerptSha256": claim["source"]["excerptSha256"],
+            }],
+            "review": {"status": "reviewed", "textBoundary": "literal-substring",
+                       "knowableAt": claim["knowableAt"], "carrier": "county",
+                       "acquisitionRules": ["lived"],
+                       "confidence": {"value": "HIGH",
+                                      "basis": "approved-direct-game-record",
+                                      "sourceLineHasLiteralConfidence": False}},
+            "reviewer": {"kind": "repository-review", "id": "record-52",
+                         "procedureSha256": "e" * 64},
+            "findings": ["The line predates claim-level confidence fields; the approved direct game record supports HIGH."],
+        })
+        Author.source_claim(claim, Join.protected_artifacts(), review)
+        bad = copy.deepcopy(review)
+        bad["review"]["confidence"]["sourceLineHasLiteralConfidence"] = True
+        bad.pop("contentSha256")
+        bad = Author.seal(bad)
+        with self.assertRaisesRegex(Join.ContractError, "misstates"):
+            Author.source_claim(claim, Join.protected_artifacts(), bad)
+
     def test_namespace_event_and_option_tamper_refuse(self):
         self.bundle["namespace"]["county"] = "elsewhere"
         with self.assertRaisesRegex(Join.ContractError, "namespace/event hash"):

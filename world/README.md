@@ -38,3 +38,14 @@ excerpt ends before the source line's 1995 price change; the wage excerpt omits
 the retrospective statement that the rate stayed through 1993. Their extraction
 remains unreviewed. [`decisions/AUTHORING.md`](../decisions/AUTHORING.md) records
 the selected boundaries and times; RECORD entry 50 records this curation.
+
+Record 52 adds a fourth, different example:
+`claim-examples/knox-telecommunications-outage.json`. It binds a reviewed
+literal boundary from the July 2 Knox Event row to one adjudicated same-person
+`lived` acquisition imported from SAO C74. Its review explicitly records that
+the older event table has no literal confidence column and binds `HIGH` to the
+approved direct game record. Its controlled food-source choice remains excluded,
+and the single claim does not establish complete decision-time knowledge or
+training eligibility. The result is a reviewed producer reference rather than a
+behavior proposal: no operator ruling, training row, model or runtime behavior
+is created by it.

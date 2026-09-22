@@ -37,3 +37,13 @@ and a separately authored choice under the same full namespace. Future facts
 are excluded or named in `conditioning.exclusions`. ZAO state is captured as of
 that same decision hour. Only a row whose conditioning status is `eligible`
 can enter a training view.
+
+Record 52's Knox example reaches a narrower milestone. It has an immutable C74
+event, exact calendar, one reviewed claim extraction, and one adjudicated
+same-person acquisition retained through the event. Its source selection was
+forced to exercise the join and is permanently excluded from choice training.
+The repository review therefore establishes a reference fixture without making
+it a behavior row or asking the operator to approve a mechanical join.
+`knowledge-coverage-not-established`,
+`later-consequences-not-observed`, `runtime-choice-not-ratified`, and
+`controlled-choice-selection` keep its conditioning status `ineligible`.

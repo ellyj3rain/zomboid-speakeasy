@@ -1,0 +1,50 @@
+{
+  "acquisition": {
+    "receipt": {
+      "path": "decisions/examples/r12-knox-lived-source/reviews/acquisition-adjudication.json",
+      "sha256": "869402d6ed817ce0318e8dc4b027d3ddb51b90968bf4f1bc56415239709603ef"
+    },
+    "status": "adjudicated"
+  },
+  "choiceStanding": "excluded-controlled-selection",
+  "claim": {
+    "acquisitionRules": [
+      "lived"
+    ],
+    "carrier": "county",
+    "confidence": "HIGH",
+    "id": "knox-telecommunications-outage-1993-07-02",
+    "knowableAt": "1993-07-02T00:00:00",
+    "source": {
+      "excerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+      "line": 71,
+      "path": "world/us-1993/knox-event.md",
+      "sha256": "bc4b723d8ba8a35eca4a43e88e1457c4dc225d7213ead5c52364f966c6aa0676"
+    },
+    "text": "Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours"
+  },
+  "conditioning": {
+    "exclusions": [
+      "controlled-choice-selection",
+      "knowledge-coverage-not-established",
+      "later-consequences-not-observed",
+      "runtime-choice-not-ratified"
+    ],
+    "status": "ineligible"
+  },
+  "extractionStanding": "reviewed",
+  "knowledgeExample": {
+    "reference": {
+      "contentSha256": "30f64ff8a53fe1a9f85c09cd38f1aedd17451cdc7a5ee59e59d76b2e3b56cd24",
+      "path": "decisions/examples/r12-knox-lived-source/reference/knowledge-example.json",
+      "sha256": "61c7f0cbde8a12dfa9e9f677a4621f188a05d1ce0e161b08a70627cc23293bf9"
+    },
+    "standing": "reviewed-reference"
+  },
+  "reviewReceipt": {
+    "path": "decisions/examples/r12-knox-lived-source/reviews/claim-extraction.json",
+    "sha256": "966f54d7ceed08f1c96b731eca62846dcadc1e8bb89595c0304470125df6cb8c"
+  },
+  "schema": "speakeasy-claim-extraction-example",
+  "schemaVersion": 2
+}
