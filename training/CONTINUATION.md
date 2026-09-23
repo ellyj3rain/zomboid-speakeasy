@@ -3,19 +3,20 @@
 Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `seam-c01fbd07bd36b182`.
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
-Verified anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
+Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
+Current implementation: C78 source capture and Record 60 contextual comparisons; exact sources and review standing are in `behavior/c78/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
 
 | Area | Verified standing | Practical limit |
 |---|---|---|
-| SAO | C77 is published. Its closure receipt records 261 installed files matching, unchanged save metadata and responsive main-menu startup. | Receipt evidence, not a fresh installation inspection or loaded-world acceptance. Autonomous newspaper discovery/selection/reading remains absent. |
+| SAO | C78 is published with person-state capture. Its deployment verifies 262 installed files and unchanged metadata for 44,092 save files. | This is file/deployment evidence and controlled source capture, with no new loaded-world acceptance. Autonomous newspaper discovery/selection/reading remains absent. |
 | Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, and selected source/treatment/communication/rest mechanisms implemented. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, R13 training, R14 learned runtime and R15 acceleration remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
 | Data and models | Protected intent/source material and validated evidence tooling exist. | 190 historical choices are conditioning-ineligible. No training run, frozen tokenizer implementation, learned task bundle or live learned exchange exists. |
-| Verification | Record 58 has targeted expression/admission controls, reproducible outputs and a full repository test/conditioning audit. See the proof report and publication record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
+| Verification | Expression/admission controls and contextual comparison revalidation preserve exact source evidence and separate judgment standing. See each implementation record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
 
 ## What needs correction
 
@@ -112,12 +113,16 @@ inclusion; the revised task request remains excluded. The full 121-test suite an
 conditioning audit pass, and both saved proof and data preview reproduce.
 
 The [personality source audit and revised sequence](speaker/PERSONALITY_REVISION.md)
-map the existing producers and capture gaps. The next source work is in SAO:
-retain current strain, cognitive-state and goal/opportunity evidence from their
-existing owners, with time and availability. Speakeasy then builds whole-scene
-contrasts covering attention, judgment, selected communication acts and expression.
-Mara remains a factual regression case. Review future examples in their actual
-scenes; no further ruling on the unchanged answer is pending.
+map the existing producers and capture gaps. C78 and Record 60 now supply the
+[first person-state comparison family](behavior/c78/README.md), with current
+source-owned temperament, conditions, relationships, threat, cognitive
+projections and learning provenance. Four contextual preferences are presented
+with their literal alternatives and exact source evidence. Current standing is
+in `behavior/c78/review-standing.json`; it must be read before claiming a ruling.
+The loaded read API has controlled boundary tests, while this bodyless family
+explicitly lacks native needs, current work, movement goals and complete options.
+The next source expansion needs those states in independent situations. Mara
+remains a factual regression case; the unchanged answer is not up for review.
 
 Broader supported meanings, independent source scenes and the frozen shared
 tokenizer/reference pipeline remain dependencies. A trained run follows usable

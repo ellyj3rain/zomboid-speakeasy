@@ -88,6 +88,13 @@ map existing game mechanisms to capture gaps and whole-scene contrasts.
 The task remains excluded; explicit retrieval masks preserve unjudged claims.
 The C77 collection still lacks independent evaluation partitions.
 
+Record 60 connects C78's existing person-state capture to the first
+[contextual comparisons](training/behavior/c78/README.md): trust, perceived
+threat, a told lesson and recorded strain around the same acquired report.
+Source-bound model views and literal authored alternatives make the proposed
+communication effects reviewable. These comparisons remain training-ineligible;
+native needs/work/goals and independent source families still require coverage.
+
 That architecture uses one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model
 cache, separate understander, retriever and speaker datasets, asynchronous snapshot and

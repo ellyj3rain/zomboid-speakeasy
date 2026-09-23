@@ -1,0 +1,41 @@
+{
+  "standing": "unreviewed-authored-candidates",
+  "cases": [
+    {
+      "id": "trusted",
+      "question": "With Jon now trusted, which delivery feels plausible for this same person and question?",
+      "learningConsequence": "Record whether the relationship supports more direct personal address or a different conversational rhythm. Neither choice teaches trust as automatic friendliness or disclosure of new facts.",
+      "candidates": [
+        {"id": "a", "act": "answer", "emphasis": "Direct personal address with connected explanation", "text": "Jon, the July second paper said the phones were out across Knox for hours, still down at press time. Businesses had closed, and they hadn't announced a cause. There was talk of wires, lightning, sabotage—nothing settled."},
+        {"id": "b", "act": "answer", "emphasis": "A compact account without additional personal address", "text": "The July second paper said the phones were out across Knox for hours. Still down at press time. Businesses closed. No cause announced; wires, lightning and sabotage were only talk."}
+      ]
+    },
+    {
+      "id": "threat",
+      "question": "With a freshly seen zombie four tiles away, which brief warning-and-answer ordering reads naturally?",
+      "learningConsequence": "Record priority within a short utterance: the nearby perceived threat or the answer Jon requested. Both retain the report's date and press-time limit. This does not approve a movement command or infer that a controller has already fled.",
+      "candidates": [
+        {"id": "a", "act": "warn-and-answer", "emphasis": "Warn first", "text": "One close by—the July second paper said the phones were still down at press time."},
+        {"id": "b", "act": "answer-and-warn", "emphasis": "Answer first", "text": "The July second paper said the phones were still down at press time—one close by."}
+      ]
+    },
+    {
+      "id": "learned",
+      "question": "Should the recently told lesson affect emphasis here, or is the straightforward answer equally suitable?",
+      "learningConsequence": "Record whether this learned caution has a useful communicative effect in this particular scene. A told lesson has limited weight and supplies no new knowledge about the telephone network. A preference for unchanged delivery is a valid result.",
+      "candidates": [
+        {"id": "a", "act": "answer", "emphasis": "Straightforward report; no conspicuous lesson-driven change", "text": "The July second paper said the phones were out across Knox for hours and still down at press time. Businesses closed. No cause had been announced, though there was talk of downed wires, lightning or sabotage."},
+        {"id": "b", "act": "answer", "emphasis": "Bring the age and uncertainty of the information forward", "text": "That was the July second report, Jon. Phones out across Knox for hours, still down at press time. Businesses closed. They hadn't announced a cause. Wires, lightning, sabotage—that was talk."}
+      ]
+    },
+    {
+      "id": "strain",
+      "question": "For the recorded strain in this scene, is conversational repair believable, unnecessary, or overdone?",
+      "learningConsequence": "Judge the whole expression, not a diagnosis-to-filler rule. The existing code changes cognitive projections and decision latency; it has not established that this level should cause verbal repairs. Your response guides that proposed association and may reject it.",
+      "candidates": [
+        {"id": "a", "act": "answer", "emphasis": "Concise delivery without a verbal repair", "text": "The July second paper said the phones were out across Knox for hours and still down at press time. Businesses closed. They hadn't announced a cause—wires, lightning, sabotage were talk."},
+        {"id": "b", "act": "answer", "emphasis": "Fragmented delivery with one local repair", "text": "The July second paper said the phones were out across Knox. For hours. Still out at press time. Businesses closed. The cause—no, they hadn't announced one. Wires, lightning, sabotage... that was talk."}
+      ]
+    }
+  ]
+}

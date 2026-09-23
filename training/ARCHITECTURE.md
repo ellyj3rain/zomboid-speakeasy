@@ -248,3 +248,12 @@ revalidates the complete prepared artifact and requires independent partitions
 for each requested task before releasing data for tokenization. The C77 preview
 remains excluded as a dataset. Frozen subword tokenization, reference training,
 broader learned composition and native enforcement remain separate dependencies.
+
+Record 60 prepares contextual comparison evidence from source-reviewed SAO
+capture version 2. Identity/time-bound behavioral projections accompany private
+knowledge, with explicit unavailable channels. Effective traits enter the model
+view; their source contribution breakdown and latent medical cause records stay
+audit-only. Candidate replies remain authored preferences for human judgment.
+This comparison schema has no training admission path and does not replace task
+approvals, independent partitions or factual/voice evaluation. See the
+[first family](behavior/c78/README.md) for source coverage and remaining needs.

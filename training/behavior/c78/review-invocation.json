@@ -1,0 +1,439 @@
+{
+  "action": "invoke",
+  "skillRef": "mass-assault",
+  "frameworkRef": "recursive-deliberation",
+  "source": {
+    "host": "codex",
+    "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+    "invocationId": "c78-behavior-comparisons-002"
+  },
+  "title": "How existing person-state should affect communication",
+  "intake": {
+    "seams": [
+      {
+        "id": "c78-behavior-trusted",
+        "order": 1,
+        "shape": "decision",
+        "title": "Trust and conversational address",
+        "prompt": "With Jon now trusted, which delivery feels plausible for this same person and question?",
+        "description": "Compare the two authored replies in the scene below. You can prefer either, accept both, reject both, or add your own wording. Source references and History open the captured evidence and earlier direction.",
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/trusted/capture.json",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Both fit this scene",
+            "value": "both",
+            "description": "Keep both as plausible; this example does not establish a preference.",
+            "recommended": true
+          },
+          {
+            "label": "Prefer A: Direct personal address with connected explanation",
+            "value": "a",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": false
+          },
+          {
+            "label": "Prefer B: A compact account without additional personal address",
+            "value": "b",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": false
+          },
+          {
+            "label": "Neither fits; revise",
+            "value": "neither",
+            "description": "Reject these alternatives and explain the behavior or wording you want instead.",
+            "recommended": false
+          }
+        ],
+        "mlReview": {
+          "schema": "mousecat.ml-review/1",
+          "subject": "Trust and conversational address",
+          "scenario": "Mara read the July 2 newspaper on July 10. It is now July 11. Jon asks: \"What did the July 2 newspaper report about phone service?\" The report says phones were out across Knox for hours, still down at press time, and businesses closed. No cause had been announced; wires, lightning and sabotage were speculation. She has no current service update. Mara now trusts Jon more. Her temperament, remembered report and current cognitive projection are unchanged.",
+          "systemRole": "A contextual preference for the future speaker adapter: how the same known facts are expressed as existing person-state changes.",
+          "causalPath": [
+            {
+              "label": "Existing game state",
+              "value": "Mara now trusts Jon more. Her temperament, remembered report and current cognitive projection are unchanged."
+            },
+            {
+              "label": "Captured input",
+              "value": "Current changes: relationship. Private facts retain their owner, source and time."
+            },
+            {
+              "label": "Proposed target",
+              "value": "The alternatives are authored candidate replies. Your judgment guides later task authoring and evaluation."
+            }
+          ],
+          "playerImpact": "You are judging whether the relationship should influence address and rhythm in this exchange.",
+          "decisionPrecedent": "Record whether the relationship supports more direct personal address or a different conversational rhythm. Neither choice teaches trust as automatic friendliness or disclosure of new facts.",
+          "actualInput": [
+            {
+              "label": "Jon asks",
+              "value": "What did the July 2 newspaper report about phone service?"
+            },
+            {
+              "label": "Situation",
+              "value": "Mara now trusts Jon more. Her temperament, remembered report and current cognitive projection are unchanged."
+            },
+            {
+              "label": "Source availability",
+              "value": "Bodyless controlled scenario. Native needs, active work, movement goals and executable alternatives are unavailable."
+            }
+          ],
+          "proposedLearning": [
+            {
+              "label": "A: Direct personal address with connected explanation",
+              "value": "Jon, the July second paper said the phones were out across Knox for hours, still down at press time. Businesses had closed, and they hadn't announced a cause. There was talk of wires, lightning, sabotage—nothing settled."
+            },
+            {
+              "label": "B: A compact account without additional personal address",
+              "value": "The July second paper said the phones were out across Knox for hours. Still down at press time. Businesses closed. No cause announced; wires, lightning and sabotage were only talk."
+            }
+          ],
+          "approvalEffects": [
+            "Record a preference, equal plausibility, rejection or amendment for this exact scene and these candidate replies.",
+            "Use the recorded judgment when constructing later task targets and contextual evaluation."
+          ],
+          "remainingExclusions": [
+            "No model is trained and no candidate is automatically admitted to training.",
+            "The four variants share one report and cannot provide independent evaluation partitions.",
+            "Native needs/work/goals and actual conversation timing are not captured."
+          ],
+          "evidence": [
+            {
+              "label": "Exact source capture",
+              "value": "6a11b56a0869df2a3c4d8c5c9d9ce694308ee522490cf0daf4e0ae00dc0a12f2"
+            },
+            {
+              "label": "Producer manifest",
+              "value": "48752bd0760d5888731dccf953b141b5d5824ade568871f1340fa85b8fdfe023"
+            },
+            {
+              "label": "Prior revision receipt",
+              "value": "49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453"
+            }
+          ]
+        }
+      },
+      {
+        "id": "c78-behavior-threat",
+        "order": 2,
+        "shape": "decision",
+        "title": "A nearby threat and speaking priority",
+        "prompt": "With a freshly seen zombie four tiles away, which brief warning-and-answer ordering reads naturally?",
+        "description": "Compare the two authored replies in the scene below. You can prefer either, accept both, reject both, or add your own wording. Source references and History open the captured evidence and earlier direction.",
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/threat/capture.json",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Prefer A: Warn first",
+            "value": "a",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": true
+          },
+          {
+            "label": "Prefer B: Answer first",
+            "value": "b",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": false
+          },
+          {
+            "label": "Both fit this scene",
+            "value": "both",
+            "description": "Keep both as plausible; this example does not establish a preference.",
+            "recommended": false
+          },
+          {
+            "label": "Neither fits; revise",
+            "value": "neither",
+            "description": "Reject these alternatives and explain the behavior or wording you want instead.",
+            "recommended": false
+          }
+        ],
+        "mlReview": {
+          "schema": "mousecat.ml-review/1",
+          "subject": "A nearby threat and speaking priority",
+          "scenario": "Mara read the July 2 newspaper on July 10. It is now July 11. Jon asks: \"What did the July 2 newspaper report about phone service?\" The report says phones were out across Knox for hours, still down at press time, and businesses closed. No cause had been announced; wires, lightning and sabotage were speculation. She has no current service update. Mara has a fresh private sighting of a zombie four tiles away. Its placement is an authored input to the existing threat reader. Her knowledge of the old report is unchanged.",
+          "systemRole": "A contextual preference for the future speaker adapter: how the same known facts are expressed as existing person-state changes.",
+          "causalPath": [
+            {
+              "label": "Existing game state",
+              "value": "Mara has a fresh private sighting of a zombie four tiles away. Its placement is an authored input to the existing threat reader. Her knowledge of the old report is unchanged."
+            },
+            {
+              "label": "Captured input",
+              "value": "Current changes: threat. Private facts retain their owner, source and time."
+            },
+            {
+              "label": "Proposed target",
+              "value": "The alternatives are authored candidate replies. Your judgment guides later task authoring and evaluation."
+            }
+          ],
+          "playerImpact": "You are judging the ordering of a brief warning and answer. Neither candidate claims that she has moved or fought. Warning alone or another response may fit better.",
+          "decisionPrecedent": "Record priority within a short utterance: the nearby perceived threat or the answer Jon requested. Both retain the report's date and press-time limit. This does not approve a movement command or infer that a controller has already fled.",
+          "actualInput": [
+            {
+              "label": "Jon asks",
+              "value": "What did the July 2 newspaper report about phone service?"
+            },
+            {
+              "label": "Situation",
+              "value": "Mara has a fresh private sighting of a zombie four tiles away. Its placement is an authored input to the existing threat reader. Her knowledge of the old report is unchanged."
+            },
+            {
+              "label": "Source availability",
+              "value": "Bodyless controlled scenario. Native needs, active work, movement goals and executable alternatives are unavailable."
+            }
+          ],
+          "proposedLearning": [
+            {
+              "label": "A: Warn first",
+              "value": "One close by—the July second paper said the phones were still down at press time."
+            },
+            {
+              "label": "B: Answer first",
+              "value": "The July second paper said the phones were still down at press time—one close by."
+            }
+          ],
+          "approvalEffects": [
+            "Record a preference, equal plausibility, rejection or amendment for this exact scene and these candidate replies.",
+            "Use the recorded judgment when constructing later task targets and contextual evaluation."
+          ],
+          "remainingExclusions": [
+            "No model is trained and no candidate is automatically admitted to training.",
+            "The four variants share one report and cannot provide independent evaluation partitions.",
+            "Native needs/work/goals and actual conversation timing are not captured."
+          ],
+          "evidence": [
+            {
+              "label": "Exact source capture",
+              "value": "9e806e097166f80c85623e771c8ae261bbdff6a9c2667968aaa36ea7fad9a00b"
+            },
+            {
+              "label": "Producer manifest",
+              "value": "f0b0c910a4c156c7939d6418e2c1965ac3427e37ff61adc54681564284f63e07"
+            },
+            {
+              "label": "Prior revision receipt",
+              "value": "49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453"
+            }
+          ]
+        }
+      },
+      {
+        "id": "c78-behavior-learned",
+        "order": 3,
+        "shape": "decision",
+        "title": "A told lesson and cautious emphasis",
+        "prompt": "Should the recently told lesson affect emphasis here, or is the straightforward answer equally suitable?",
+        "description": "Compare the two authored replies in the scene below. You can prefer either, accept both, reject both, or add your own wording. Source references and History open the captured evidence and earlier direction.",
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/learned/capture.json",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Prefer A: Straightforward report; no conspicuous lesson-driven change",
+            "value": "a",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": true
+          },
+          {
+            "label": "Prefer B: Bring the age and uncertainty of the information forward",
+            "value": "b",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": false
+          },
+          {
+            "label": "Both fit this scene",
+            "value": "both",
+            "description": "Keep both as plausible; this example does not establish a preference.",
+            "recommended": false
+          },
+          {
+            "label": "Neither fits; revise",
+            "value": "neither",
+            "description": "Reject these alternatives and explain the behavior or wording you want instead.",
+            "recommended": false
+          }
+        ],
+        "mlReview": {
+          "schema": "mousecat.ml-review/1",
+          "subject": "A told lesson and cautious emphasis",
+          "scenario": "Mara read the July 2 newspaper on July 10. It is now July 11. Jon asks: \"What did the July 2 newspaper report about phone service?\" The report says phones were out across Knox for hours, still down at press time, and businesses closed. No cause had been announced; wires, lightning and sabotage were speculation. She has no current service update. One game hour ago Mara was told the existing lesson to measure the danger. It has weight 0.4 and changes her current effective traits. It adds no facts about the telephone outage.",
+          "systemRole": "A contextual preference for the future speaker adapter: how the same known facts are expressed as existing person-state changes.",
+          "causalPath": [
+            {
+              "label": "Existing game state",
+              "value": "One game hour ago Mara was told the existing lesson to measure the danger. It has weight 0.4 and changes her current effective traits. It adds no facts about the telephone outage."
+            },
+            {
+              "label": "Captured input",
+              "value": "Current changes: experience, temperament. Private facts retain their owner, source and time."
+            },
+            {
+              "label": "Proposed target",
+              "value": "The alternatives are authored candidate replies. Your judgment guides later task authoring and evaluation."
+            }
+          ],
+          "playerImpact": "You are judging whether that experience should visibly affect emphasis in this particular reply. An unchanged delivery is a valid outcome.",
+          "decisionPrecedent": "Record whether this learned caution has a useful communicative effect in this particular scene. A told lesson has limited weight and supplies no new knowledge about the telephone network. A preference for unchanged delivery is a valid result.",
+          "actualInput": [
+            {
+              "label": "Jon asks",
+              "value": "What did the July 2 newspaper report about phone service?"
+            },
+            {
+              "label": "Situation",
+              "value": "One game hour ago Mara was told the existing lesson to measure the danger. It has weight 0.4 and changes her current effective traits. It adds no facts about the telephone outage."
+            },
+            {
+              "label": "Source availability",
+              "value": "Bodyless controlled scenario. Native needs, active work, movement goals and executable alternatives are unavailable."
+            }
+          ],
+          "proposedLearning": [
+            {
+              "label": "A: Straightforward report; no conspicuous lesson-driven change",
+              "value": "The July second paper said the phones were out across Knox for hours and still down at press time. Businesses closed. No cause had been announced, though there was talk of downed wires, lightning or sabotage."
+            },
+            {
+              "label": "B: Bring the age and uncertainty of the information forward",
+              "value": "That was the July second report, Jon. Phones out across Knox for hours, still down at press time. Businesses closed. They hadn't announced a cause. Wires, lightning, sabotage—that was talk."
+            }
+          ],
+          "approvalEffects": [
+            "Record a preference, equal plausibility, rejection or amendment for this exact scene and these candidate replies.",
+            "Use the recorded judgment when constructing later task targets and contextual evaluation."
+          ],
+          "remainingExclusions": [
+            "No model is trained and no candidate is automatically admitted to training.",
+            "The four variants share one report and cannot provide independent evaluation partitions.",
+            "Native needs/work/goals and actual conversation timing are not captured."
+          ],
+          "evidence": [
+            {
+              "label": "Exact source capture",
+              "value": "bc309494c0825040c25d42e12d605e9af25914c865074569677251cc3409653f"
+            },
+            {
+              "label": "Producer manifest",
+              "value": "41f70743af61dd06cf7f1287a3b8221052e6e5608f066d0872bea8249841fdde"
+            },
+            {
+              "label": "Prior revision receipt",
+              "value": "49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453"
+            }
+          ]
+        }
+      },
+      {
+        "id": "c78-behavior-strain",
+        "order": 4,
+        "shape": "decision",
+        "title": "Recorded strain and verbal repair",
+        "prompt": "For the recorded strain in this scene, is conversational repair believable, unnecessary, or overdone?",
+        "description": "Compare the two authored replies in the scene below. You can prefer either, accept both, reject both, or add your own wording. Source references and History open the captured evidence and earlier direction.",
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/strain/capture.json",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Prefer A: Concise delivery without a verbal repair",
+            "value": "a",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": true
+          },
+          {
+            "label": "Prefer B: Fragmented delivery with one local repair",
+            "value": "b",
+            "description": "Prefer this authored delivery for the stated scene.",
+            "recommended": false
+          },
+          {
+            "label": "Both fit this scene",
+            "value": "both",
+            "description": "Keep both as plausible; this example does not establish a preference.",
+            "recommended": false
+          },
+          {
+            "label": "Neither fits; revise",
+            "value": "neither",
+            "description": "Reject these alternatives and explain the behavior or wording you want instead.",
+            "recommended": false
+          }
+        ],
+        "mlReview": {
+          "schema": "mousecat.ml-review/1",
+          "subject": "Recorded strain and verbal repair",
+          "scenario": "Mara read the July 2 newspaper on July 10. It is now July 11. Jon asks: \"What did the July 2 newspaper report about phone service?\" The report says phones were out across Knox for hours, still down at press time, and businesses closed. No cause had been announced; wires, lightning and sabotage were speculation. She has no current service update. An authored prior wound interval leaves Mara with modest residual cognitive load. The game projects a slightly longer decision interval, from 16 to 18 ticks. This does not establish a speech impairment.",
+          "systemRole": "A contextual preference for the future speaker adapter: how the same known facts are expressed as existing person-state changes.",
+          "causalPath": [
+            {
+              "label": "Existing game state",
+              "value": "An authored prior wound interval leaves Mara with modest residual cognitive load. The game projects a slightly longer decision interval, from 16 to 18 ticks. This does not establish a speech impairment."
+            },
+            {
+              "label": "Captured input",
+              "value": "Current changes: cognition. Private facts retain their owner, source and time."
+            },
+            {
+              "label": "Proposed target",
+              "value": "The alternatives are authored candidate replies. Your judgment guides later task authoring and evaluation."
+            }
+          ],
+          "playerImpact": "You are judging whether one local self-correction is plausible or overstates this scene. Clear speech can coexist with strain.",
+          "decisionPrecedent": "Judge the whole expression, not a diagnosis-to-filler rule. The existing code changes cognitive projections and decision latency; it has not established that this level should cause verbal repairs. Your response guides that proposed association and may reject it.",
+          "actualInput": [
+            {
+              "label": "Jon asks",
+              "value": "What did the July 2 newspaper report about phone service?"
+            },
+            {
+              "label": "Situation",
+              "value": "An authored prior wound interval leaves Mara with modest residual cognitive load. The game projects a slightly longer decision interval, from 16 to 18 ticks. This does not establish a speech impairment."
+            },
+            {
+              "label": "Source availability",
+              "value": "Bodyless controlled scenario. Native needs, active work, movement goals and executable alternatives are unavailable."
+            }
+          ],
+          "proposedLearning": [
+            {
+              "label": "A: Concise delivery without a verbal repair",
+              "value": "The July second paper said the phones were out across Knox for hours and still down at press time. Businesses closed. They hadn't announced a cause—wires, lightning, sabotage were talk."
+            },
+            {
+              "label": "B: Fragmented delivery with one local repair",
+              "value": "The July second paper said the phones were out across Knox. For hours. Still out at press time. Businesses closed. The cause—no, they hadn't announced one. Wires, lightning, sabotage... that was talk."
+            }
+          ],
+          "approvalEffects": [
+            "Record a preference, equal plausibility, rejection or amendment for this exact scene and these candidate replies.",
+            "Use the recorded judgment when constructing later task targets and contextual evaluation."
+          ],
+          "remainingExclusions": [
+            "No model is trained and no candidate is automatically admitted to training.",
+            "The four variants share one report and cannot provide independent evaluation partitions.",
+            "Native needs/work/goals and actual conversation timing are not captured."
+          ],
+          "evidence": [
+            {
+              "label": "Exact source capture",
+              "value": "e43f6d52d2654c798cb4bdc442111e1583b5546fc2a261f3e45c919e9cdc0034"
+            },
+            {
+              "label": "Producer manifest",
+              "value": "aad547fb09d731b46a2f88b52faee9ee82403fc7d480aafcdede713dab5fd0be"
+            },
+            {
+              "label": "Prior revision receipt",
+              "value": "49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

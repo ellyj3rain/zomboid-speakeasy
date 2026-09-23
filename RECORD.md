@@ -1874,3 +1874,67 @@ Mousecat history carry the revised direction with the implementation.
 The remaining behavioral work is explicit; this record closes the
 task-representation/data-preparation unit without claiming learned personality,
 speaker-task approval or game-runtime changes.
+
+## 60 - Person-state comparisons (2026-09-23)
+
+The operator authorized connecting the existing SAO person-state producers to
+contextual comparisons after Record 59's personality revision. SAO C78 exposes
+detached effective temperament and its contributions, carried conditions,
+listener-specific relationships, retained perceived threat, current cognitive
+projections and learning provenance. Its optional capture version 2 retains
+those channels with explicit person, listener, time, owner and availability.
+
+Five authored captures hold Mara, Jon, the incoming question and the acquired
+July 2 report constant. Existing owners process baseline, increased trust,
+private threat sighting, told lesson and prior strain scenarios. Installed
+Kahlua executes the source; these are not sampled gameplay. Each source profile
+pins the published C78 commit, capture seal and exact producer manifest.
+Imports verify repository blobs and the installed engine/reading inputs.
+
+The new comparison preparer produces bounded model inputs and measured channel
+differences from verified imports. Incoming utterance roles remain explicit:
+Jon asks and Mara receives. Effective traits and cognitive projections enter
+the view; raw owner bytes, contribution breakdown and latent medical causes
+remain audit evidence. Existing private lesson history carries the told lesson's
+wording and provenance. Report content retains its publication and press-time
+limits. Revalidation reconstructs the complete comparison, including candidate
+text and eligibility, rather than accepting a resealed altered result.
+
+Four independent contextual judgments are presented through Crucible/Mass
+Assault in Mousecat interaction `skill-62e946a5714cb8f8`. The cards show the
+scene, actual alternatives, proposed learning and precise consequences, with
+both-fitting, neither-fitting and freeform responses. Browser verification
+opened a card's exact source capture, its connected implementation summary and
+the prior personality revision, then returned to the questions. The initial
+presentation `skill-c15d718ecf628349` was withdrawn to remove duplicate narrative
+and literal unsupported Markdown links; it had no returned judgments. The
+current review binds the same capture and candidate bytes used by preparation.
+`training/behavior/c78/review-standing.json` records its actual standing;
+the private continuation capability stays outside the repository.
+
+Read-only source review found empty trait-axis acceptance, future/nonfinite
+private threat times and an allocating native metadata read. C78's exact-shape,
+time and metadata-availability checks repair them. Controls mutate actual
+source and distinguish the failures. Consumer review verifies the five
+projections, literal review candidates, source hashes and incoming roles.
+
+The comparison schema remains training-ineligible and has no automatic task
+admission path. Human preferences guide subsequent authoring and evaluation;
+they do not establish a general causal speech rule or approve the revised
+speaker task. The five variants share one report lineage. Native needs, active
+work, movement goals and complete options are unavailable in the bodyless
+family. SAO's loaded reader has controlled boundary tests, with loaded-world
+scenes still needed. Independent situations, supported communication acts,
+factual/task/continuity/voice evaluation and the reference-learning pipeline
+remain the continuation. The shared-base/typed-task architecture is unchanged.
+
+Final verification passes all 125 Python tests in 16.291 seconds, exact
+comparison reproduction and the protected conditioning audit. The actual
+admission API excludes the comparison as an unsupported task contract.
+The comparison seal is
+`a3c74d14645290301b45bcc3698d303b0026980ff0b11cb46679a78828c48bf3`;
+the five imports pin C78 commit `aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a`.
+SAO's complete local gate and required GitHub checks passed. Deployment checked
+262 installed files with no mismatches and unchanged metadata for 44,092 save
+files; this adds no loaded-play claim. At publication the four contextual
+judgments remain pending, with their exact continuation preserved.

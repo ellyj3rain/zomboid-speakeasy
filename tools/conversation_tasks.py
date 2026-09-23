@@ -52,7 +52,9 @@ def file_hash(path):
 
 
 def validate_capture(capture, manifest):
-    A.schema(capture, "sao-conversation-capture")
+    A.require(capture.get('schema') == 'sao-conversation-capture'
+              and type(capture.get('schemaVersion')) is int
+              and capture['schemaVersion'] in (1, 2), 'unsupported conversation capture')
     A.unseal(manifest, "sao-conversation-evidence")
     A.require(A.digest(capture) == manifest["captureSha256"], "capture hash differs")
     catalogue, refs = R.validate_catalogue(capture["catalogue"])
@@ -145,6 +147,9 @@ def validate_capture(capture, manifest):
                   == source["excerptSha256"], "protected source excerpt differs")
         A.require(A.acquisition_correction(acquisition, {"source": source}) is None,
                   "superseded acquisition")
+    if capture['schemaVersion'] == 2:
+        from behavior_comparisons import validate_behavior
+        validate_behavior(capture)
     return refs
 
 
