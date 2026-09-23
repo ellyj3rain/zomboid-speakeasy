@@ -60,7 +60,7 @@ of the task still does not approve its retrieval target.
 | Conversation capture | Exact source, calendar, people, context, eight-claim catalogue and coverage | Authored bodyless encounter; three native inputs explicitly unavailable |
 | Typed understanding | Record 56 validates the incoming question and intended listener against that capture | Exact interpretation approved through Mousecat |
 | Retrieval | Independent exact-task anchor and separate label review | Independently approved: required report, zero hard negatives, seven unjudged claims |
-| Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; operator requested personified dialogue, now in separate review; semantic admission and register floors unfinished |
+| Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; personified wording approved with game-rooted personality direction; semantic admission and register floors unfinished |
 | Dataset and evaluation | Separate task datasets, splits, exclusions and evaluator required | Not built; examples remain conditioning-ineligible |
 | Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 
