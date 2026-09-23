@@ -70,7 +70,16 @@ final NPC voice; those and the register floors remain explicit implementation
 work.
 
 The learned runtime and training shape is now ratified in
-[`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared
+[`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51). Record 58's
+[offline expression proof](training/experiments/expression-proof/README.md)
+now reproduces Mara's complete approved wording from bound source propositions,
+refuses the tested changes to person, date and attribution, and computes
+task-specific experimental admission. The approved understanding and retrieval
+examples qualify for offline evaluation; speaker task admission, independent
+dataset partitions and learned composition remain unfinished. The proof's
+finite grammar is a reference experiment, not the final NPC speaking system.
+
+That architecture uses one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model
 cache, separate understander, retriever and speaker datasets, asynchronous snapshot and
 revalidation, a pure-Java native bundle, FP32 reference plus measured INT8

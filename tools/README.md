@@ -84,3 +84,28 @@ shared resolver validates this task version before anchor admission, and its
 conditioning retains explicit free-composition and register-floor limitations.
 See [the speaker example](../training/speaker/README.md). Its exact wording needs
 independent Mousecat approval before a speaker evidence snapshot can be made.
+
+`experiments/speech_constraints.py` characterizes the actual external SAO Java
+fence and packaged jar alongside the production speaker renderer. It includes
+membership controls, synthetic cross-claim associations, explicitly out-of-contract
+prose probes and resealed speaker text mutations. The
+[Field Test record](../training/experiments/speech-constraints/README.md) states
+reproduction, observed results and limits; it is not a semantic admission gate.
+
+`expression_proof.py` implements the bounded source-bound expression experiment.
+`from_target` resolves the validated capture and participant names;
+`compile_source` recognizes the declared report grammar/entities and typed
+location fixtures; `produce` and `validate_output` enforce complete proposition
+and rendering bindings. It is a finite construction proof, not arbitrary prose
+validation. `experiments/expression_admission.py --check` reproduces the saved
+[comparison](../training/experiments/expression-proof/README.md), including
+actual validator defect controls and exact approved wording.
+
+`experimental_admission.py` implements the explicit
+`offline-authored-conversation-v1` scope. `inspect` reports exact source, input
+and label standing; `compile_dataset` requires complete partitions and keeps
+shared capture/document/catalogue sources together. Sample admission, dataset
+readiness, evaluation and runtime have distinct results. Conversation and speaker
+conditioning accept this scope explicitly; omitted scope preserves the legacy
+API. Wording approval cannot become task approval, and missing native inputs
+remain visible. The current dataset is excluded; no model is trained.

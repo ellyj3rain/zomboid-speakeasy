@@ -1,5 +1,16 @@
 # Training
 
+The [ratified continuation](CONTINUATION.md) makes admission and speech
+constraints the active unit toward a reproducible offline learned conversation
+experiment, with data preparation alongside it and native integration after.
+
+Record 58 completes the approved [bounded expression and admission
+proof](experiments/expression-proof/README.md). It reproduces Mara's full approved
+answer while preserving subject, source and time. The new experimental scope
+admits the approved understanding/retrieval samples for offline evaluation and
+reports why the speaker samples and combined dataset remain excluded. Broader
+learned expression, task-data readiness and runtime integration remain open.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 
@@ -61,7 +72,8 @@ of the task still does not approve its retrieval target.
 | Typed understanding | Record 56 validates the incoming question and intended listener against that capture | Exact interpretation approved through Mousecat |
 | Retrieval | Independent exact-task anchor and separate label review | Independently approved: required report, zero hard negatives, seven unjudged claims |
 | Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; personified wording approved with game-rooted personality direction; semantic admission and register floors unfinished |
-| Dataset and evaluation | Separate task datasets, splits, exclusions and evaluator required | Not built; examples remain conditioning-ineligible |
+| Expression proof | Record 58 binds individual propositions and supports personified clause composition | Exact Mara reply reproduced within a finite grammar; arbitrary prose and learned composition remain unfinished |
+| Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
 | Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 
 The current example's exact hashes and review standing live in
@@ -87,16 +99,13 @@ the in-game figures will be worse. The rule above stands: a size is
 chosen against the ladder fired from the debug menu in a real session,
 not against these.
 
-What does NOT wait, and is already built on the SAO side: the
-fence. Decision 4 ratified constrained decoding as the mechanism
-for no-invention, and SAO's `SAOFence` (batch C47) implements it -
-a model is handed the vocabulary its person can actually say,
-slot by slot, read off that person's own claim set, and can emit
-nothing else. Its correctness is proved mechanically over a
-corpus, near-misses included, as the ratification required.
+SAO's `SAOFence` implements exact membership checks for field/value slots
+drawn from the selected claims. That is a useful structural constraint.
+It does not, by itself, prove the meaning of freely composed text: attribution,
+negation, date scope and relationships between permitted values need their own
+enforced representation and checks.
 
-This matters here because it changes what a training run has to
-achieve. The model does not have to learn not to lie about facts:
-it cannot. What it has to learn is the language - how this person
-says the things they are permitted to say. A run that scores well
-on factual faithfulness has measured the fence, not the model.
+The active unit must demonstrate that missing constraint before claiming
+mechanically faithful personified speech. Source-summary rendering remains a
+bounded factual control. Authored wording approval and general semantic safety
+have separate standing; factual and voice evaluation must report both.

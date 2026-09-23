@@ -165,7 +165,10 @@ def validate_task(row, evidence=None):
     return row
 
 
-def conditioning(row, evidence=None):
+def conditioning(row, evidence=None, *, scope=None, approval=None):
+    if scope is not None:
+        import experimental_admission as X
+        return X.inspect(row, scope=scope, approval=approval, evidence=evidence)
     evidence = evidence or E.Store()
     validate_task(row, evidence)
     target = evidence.read(row["input"]["retrieverTargetSha256"])

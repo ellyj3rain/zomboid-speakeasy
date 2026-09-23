@@ -1,0 +1,93 @@
+{
+  "schema": "mousecat.skill-invocation/2",
+  "action": "await",
+  "skillRef": "field-test",
+  "interactionId": "skill-1269923d11820cf8",
+  "status": "answered",
+  "idempotentReplay": false,
+  "intake": {
+    "schema": "mousecat.skill-intake/2",
+    "skillRef": "field-test",
+    "source": {
+      "host": "codex",
+      "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+      "invocationId": "conversation-admission-proof-001-presentation-v2"
+    },
+    "sessionIds": [
+      "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3"
+    ],
+    "seamCount": 1,
+    "ordering": "input",
+    "fingerprint": "a19527907de115d9",
+    "rawTranscriptAccepted": false,
+    "returnExpectation": "typed-responses-with-lineage",
+    "frameworkRef": "recursive-deliberation",
+    "availableSkillRefs": [
+      "crucible",
+      "total-recall",
+      "mass-assault",
+      "field-test"
+    ]
+  },
+  "items": [
+    {
+      "id": "seam-3a600b7ad9f85bcc",
+      "shape": "ratification",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "conversation-admission-proof-001",
+        "parentThreadId": null,
+        "evidenceRef": "field-test:plan-sha256:502443c07b8d931bce277ee7a72ad8668c70a1e1efef53a1bbd451f5125be8ce",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": null,
+        "sourceIndex": 0,
+        "sequence": 1
+      }
+    }
+  ],
+  "responses": [
+    {
+      "itemId": "seam-3a600b7ad9f85bcc",
+      "shape": "ratification",
+      "status": "answered",
+      "value": "approved",
+      "selectedOption": "approved",
+      "selectedOptions": [
+        "approved"
+      ],
+      "ranking": null,
+      "checklist": null,
+      "notes": null,
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "conversation-admission-proof-001",
+        "parentThreadId": null,
+        "evidenceRef": "field-test:plan-sha256:502443c07b8d931bce277ee7a72ad8668c70a1e1efef53a1bbd451f5125be8ce",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": null,
+        "sourceIndex": 0,
+        "sequence": 1
+      }
+    }
+  ],
+  "progress": {
+    "total": 1,
+    "resolved": 1,
+    "open": 0,
+    "deferred": 0,
+    "held": 0,
+    "answered": 1,
+    "withdrawn": 0
+  },
+  "reason": null
+}

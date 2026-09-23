@@ -1703,3 +1703,79 @@ admission, register enforcement, then paired expression evaluation holding
 knowledge fixed. Existing dimensions are not claimed to be a validated
 psychometric instrument. Both wording interactions are answered; no replacement
 decision is opened. Training eligibility remains unchanged.
+
+
+Record 57 consolidated-direction ruling: interaction `skill-3647c923478ac89b`,
+item `seam-c01fbd07bd36b182`, returned `adopt-consolidated-plan` without
+qualifications. Proposal `865a34f376f86b9c34f8e52054efb07340651ae9c4466e7eb6133529f8a8d822` binds the
+complete reviewed plan. Raw result `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e` is preserved
+verbatim and passes exact-subject, lineage and selected-option validation.
+
+`training/CONTINUATION.md` is the ratified current direction. Admission and
+speech constraints lead toward a reproducible offline learned conversation
+experiment; compatible dataset/reference preparation proceeds alongside that
+work, followed by native integration. Broader simulation R obligations remain
+owned. The current training overview now describes SAOFence's actual field/value
+membership scope instead of claiming a general proof of sentence meaning.
+
+This ruling and its documentation stay with the coming coherent implementation
+unit. They create no approval-only PR, eligible training rows, trained model,
+speaker runtime or newly completed simulation contract.
+
+## 58 - Bound expression and experimental admission (2026-09-23)
+
+The consolidated direction above and Field Test plan
+`conversation-admission-proof-001` are implemented as one offline proof unit.
+Mousecat interaction `skill-1269923d11820cf8`, item `seam-3a600b7ad9f85bcc`,
+returned `approved` without qualifications for plan digest
+`502443c07b8d931bce277ee7a72ad8668c70a1e1efef53a1bbd451f5125be8ce`.
+The actual returned ruling is saved with the plan; only its private continuation
+capability is omitted. No plan approval is interpreted as voice/task approval.
+
+The preliminary speech-constraint diagnostic runs 18 cases against actual SAO
+fence source and its packaged jar, and eight against the old speaker renderer.
+It demonstrates the field-pooling association limit and the summary renderer's
+rejection of approved personified wording. Both instrument defect controls are
+detected. Its sealed result remains
+`691932beec45839a0751724cb2fd90e30d4bfaab4fbef3da296704a2a0efe063`.
+
+`tools/expression_proof.py` binds each selected proposition's owner, subject,
+relation/value, source, time and acquisition. Names resolve from the validated
+C77 capture. Supported clause composition now reproduces Mara's entire approved
+answer and 64 combinations within the finite grammar. Complete proposition
+bindings and generated text are checked together: a valid claim ID beside a
+changed person, time, attribution or extra sentence cannot pass. Hand-authored
+location and differently dated report fixtures provide independent expected
+outputs; their synthetic and unreviewed standing remains explicit.
+
+`tools/experimental_admission.py` computes sample admission for the declared
+offline authored-conversation scope. Exact source, required input and independent
+label checks admit the C77 understander and retriever to offline evaluation.
+The formal speaker still lacks its own approval; approved personified wording
+does not create a speaker task. The combined dataset is excluded and lacks
+independent evaluation partitions. Shared capture, document and catalogue
+sources cannot cross splits. Legacy conditioning and protected evidence are
+unchanged; runtime readiness remains a separate unsatisfied result.
+
+Read-only review found arbitrary prose in location time/reporter fields and in
+the report region capture. The proof now requires strict clock values, typed
+participant attribution and explicit supported provider/region entities.
+Regression controls and focused re-review close those findings. Split collections
+also require lists of exact hashes. None of these bounds changes the ratified
+learned-composition architecture.
+
+Final validation passed 111 tests, the protected conditioning audit and exact
+experiment reproduction. All 190 historical choices remain ineligible. Nine
+saved hostile meaning controls refuse, and two actual validator-source mutations
+are detected. Result seal:
+`6ccc3ba96092fb8d5b9d4203db5c57a6f13bd5c65c3deef12cbdaad8187e4dc0`.
+The human-readable comparison is
+`training/experiments/expression-proof/README.md`.
+
+This closes the approved bounded proof, not the broader admission/learned-speech
+unit. A concrete speaker task, broader meanings, independent reviewed scenes,
+lineage-separated datasets, learned expression, register floors and runtime
+consumption remain to be implemented. Current continuation and architecture
+documents name that sequence. No model was trained and no SAO/ZAO runtime,
+installed file, game save or Mousecat application source was changed by this
+approved implementation. The earlier Mousecat presentation work is separate.
