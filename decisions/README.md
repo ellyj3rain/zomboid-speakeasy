@@ -26,13 +26,15 @@ their hashes. `../tools/cross_module_rows.py` refuses version 2 rather than
 silently rewriting it.
 
 [`AUTHORING.md`](AUTHORING.md) owns the evidence-preparation path for new rows.
-Record 52's [`examples/r12-knox-lived-source/`](examples/r12-knox-lived-source/)
-imports one exact C74 event and same-person lived acquisition, attaches sealed
-extraction-review and acquisition-adjudication receipts, and compiles a reviewed
-person-knowledge reference. The forced food-source selection remains excluded
-from choice training. The reference exists to test the future catalogue producer;
-it creates no behavior row and remains outside every training view until its
-broader conditioning exclusions are closed.
+Record 55 supersedes the acquisition standing of the Record 52 Knox example.
+Its C74 import, source review, acquisition review and reference JSON remain
+byte-identical historical evidence. County presence and adulthood did not prove
+that Ada read the report, heard it, or personally used either service.
+[`acquisition-corrections.json`](acquisition-corrections.json) revokes the old
+acquisition/retention evidence for current views, including renamed claims and
+relabelled, resealed reviews. Import validation still proves historical integrity.
+The retired reference generator refuses both build and current validation.
+A new reading receipt has independent standing and receives no inherited approval.
 
 A body with no assigned form is in the `none` form, its performance is zero,
 and its decay state follows the facts SAO already records.

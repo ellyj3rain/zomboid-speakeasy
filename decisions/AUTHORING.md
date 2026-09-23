@@ -132,20 +132,20 @@ import receipt. Duplicate, stale, changed or unsealed receipts refuse. Review
 produces `reviewed`; adjudication produces `adjudicated`. These standings
 describe evidence review. They do not ratify an authored behavior row.
 
-`examples/r12-knox-lived-source/` is the first production example. Its importer
-reads the C74 evidence from exact SAO commit
-`739ff0a026c2fc2c9450f71a5169b1e72b302c46`, validates the manifest, complete
-event namespace, frozen acquisition, presence, calendar, retention and protected
-source hashes, and records the C74 `VERSION` line-ending normalization rather
-than hiding it. The example extracts the July 2 Knox telecommunications outage,
-binds the `lived` and adult-detail rules to protected scoping excerpts, and joins
-Ada North's exact acquired and retained record.
+Record 55 supersedes the acquisition standing of the Record 52 Knox example.
+Its C74 import, source review, acquisition review and reference JSON remain
+byte-identical historical evidence. County presence and adulthood did not prove
+that Ada read the report, heard it, or personally used either service.
+[`acquisition-corrections.json`](acquisition-corrections.json) revokes the old
+acquisition/retention evidence for current views, including renamed claims and
+relabelled, resealed reviews. Import validation still proves historical integrity.
+The retired reference generator refuses both build and current validation.
+A new reading receipt has independent standing and receives no inherited approval.
 
-The imported source capture originally listed
-`person-knowledge-not-reconstructed`. The compiled view preserves that phrase in
-`sourceExclusions` as capture history and removes it from active conditioning
-because this compiler reconstructs the person's claim explicitly. The remaining
-active exclusions continue to block training.
+Current view provenance includes the correction registry's byte hash. The registry
+is an input protected from compiler output replacement. Revoked evidence is
+excluded from `availableClaims` and reported in `excludedClaims`; unchanged
+review seals prove historical integrity without restoring current acceptance.
 
 ## Choice request and proposal
 
@@ -162,13 +162,10 @@ new `speakeasy-choice-proposal` with `approval.status: unratified`. The request
 cannot supply approval fields. A proposal never replaces the captured runtime
 choice or any protected approved choice.
 
-The tool prepares reviewable proposals and has no ratification authority. Record
-52 does not create a proposal from its controlled selection. Its reviewed
-reference binds only the claim/person/acquisition pairing and fixes the observed
-food choice at `excluded-controlled-selection`. The reference remains
-conditioning-ineligible because one claim is not complete knowledge coverage,
-the choice was forced, and no natural choice or later-consequence evidence
-exists.
+The tool prepares reviewable proposals and has no ratification authority.
+Record 52's controlled choice remains excluded. Record 55 also supersedes its
+acquisition approval. Current examples need independently supported acquisition,
+complete knowledge coverage and task-specific review before training admission.
 
 ## Operation and verification
 
@@ -187,7 +184,7 @@ hashes needed to prepare the two inputs. It creates no files. The view command
 prints its resulting content hash for the separate choice request.
 
 All inputs and protected hashes validate before output publication. Outputs
-cannot replace an input, protected artifact or protected manifest. Publication
+cannot replace an input, correction registry, protected artifact or protected manifest. Publication
 uses the existing atomic sibling-file replacement and preserves previous bytes
 when validation or replacement fails. Controls use explicitly synthetic
 acquisition records and real protected-document excerpts; they are not a new

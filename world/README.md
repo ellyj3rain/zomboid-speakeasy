@@ -39,13 +39,18 @@ the retrospective statement that the rate stayed through 1993. Their extraction
 remains unreviewed. [`decisions/AUTHORING.md`](../decisions/AUTHORING.md) records
 the selected boundaries and times; RECORD entry 50 records this curation.
 
-Record 52 adds a fourth, different example:
-`claim-examples/knox-telecommunications-outage.json`. It binds a reviewed
-literal boundary from the July 2 Knox Event row to one adjudicated same-person
-`lived` acquisition imported from SAO C74. Its review explicitly records that
-the older event table has no literal confidence column and binds `HIGH` to the
-approved direct game record. Its controlled food-source choice remains excluded,
-and the single claim does not establish complete decision-time knowledge or
-training eligibility. The result is a reviewed producer reference rather than a
-behavior proposal: no operator ruling, training row, model or runtime behavior
-is created by it.
+Record 52's fourth example, `claim-examples/knox-telecommunications-outage.json`,
+remains an immutable historical record. Record 55 supersedes its personal
+acquisition standing: adulthood and county presence establish neither report
+reception nor personal telephone/Internet use. The source's literal report and
+its exact bytes remain protected. The reviewed source is not a measurement of
+1993 household Internet prevalence, and an ongoing hours-long outage supplies
+no end time.
+
+The current correction is recorded in
+[`decisions/acquisition-corrections.json`](../decisions/acquisition-corrections.json).
+Current data generation excludes the old acquisition evidence despite intact
+review hashes. SAO C77 supplies a new exact-issue reading completion with
+`reported` knowledge and a distinct acquisition time. It needs its own import
+and task review. Computer content or service observations similarly need an
+actual person-bound result; owning a device or installing a mod establishes none.

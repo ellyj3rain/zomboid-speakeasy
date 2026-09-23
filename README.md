@@ -33,12 +33,14 @@ from the approved world documents. They preserve exact source hashes and known
 dates. Extraction is unreviewed and person acquisition is unknown, so these are
 conditioning-ineligible source material for the next curation step (record 50).
 
-The first concrete acquisition bridge now imports one exact SAO C74 event,
-calendar and same-person retained `lived` claim. Record 52 reviews the July 2
-Knox telecommunications extraction and adjudicates Ada North's acquisition
-while permanently excluding the forced food-source selection. It is a
-repository-reviewed reference for the person-knowledge producer, not an
-operator decision or a training row. It changes no model or runtime behavior.
+Record 55 corrects the first acquisition bridge. The July 2 newspaper report
+cannot establish personal Internet use or knowledge merely from county residence.
+Historical C74 imports and Record 52 reviews remain intact; current admission
+rejects their unsupported acquisition basis even after labels or review hashes
+change. SAO C77 instead records exact native reading completion and marks the
+claim as reported knowledge, acquired when that person reads it. Computer-source
+compatibility must provide actual person, endpoint, service/source and result
+evidence. Installing a mod or owning a device grants no awareness.
 
 SAO C75 now gives every fact in one current private knowledge snapshot a stable
 local reference and fences only the selected references. Record 53 defines the
@@ -50,7 +52,8 @@ Record 54 corrects the compiler's evidence binding: it now opens the task row,
 snapshot and saved Mousecat rulings, compares the whole conversation context,
 and keeps shared sources in one dataset split. Compiled labels remain explicitly
 ineligible for training until source coverage and task validity are implemented.
-The next producer is an immutable conversation capture from SAO. The exact
+The next producer imports the corrected C77 conversation capture and validates
+a typed understander proposal. The exact
 sequence and limits are in [retriever evidence](training/retriever/EVIDENCE.md);
 no real row or model exists yet.
 

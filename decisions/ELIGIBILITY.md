@@ -38,12 +38,17 @@ are excluded or named in `conditioning.exclusions`. ZAO state is captured as of
 that same decision hour. Only a row whose conditioning status is `eligible`
 can enter a training view.
 
-Record 52's Knox example reaches a narrower milestone. It has an immutable C74
-event, exact calendar, one reviewed claim extraction, and one adjudicated
-same-person acquisition retained through the event. Its source selection was
-forced to exercise the join and is permanently excluded from choice training.
-The repository review therefore establishes a reference fixture without making
-it a behavior row or asking the operator to approve a mechanical join.
-`knowledge-coverage-not-established`,
-`later-consequences-not-observed`, `runtime-choice-not-ratified`, and
-`controlled-choice-selection` keep its conditioning status `ineligible`.
+Record 55 supersedes the acquisition standing of the Record 52 Knox example.
+Its C74 import, source review, acquisition review and reference JSON remain
+byte-identical historical evidence. County presence and adulthood did not prove
+that Ada read the report, heard it, or personally used either service.
+[`acquisition-corrections.json`](acquisition-corrections.json) revokes the old
+acquisition/retention evidence for current views, including renamed claims and
+relabelled, resealed reviews. Import validation still proves historical integrity.
+The retired reference generator refuses both build and current validation.
+A new reading receipt has independent standing and receives no inherited approval.
+
+The literal game source remains protected and unchanged. An hours-long outage
+ongoing at publication supplies no recovery time. The old acquisition review is
+superseded; the forced choice remains excluded. C77's corrected authored reading
+capture creates zero training rows and carries no task or retrieval approval.

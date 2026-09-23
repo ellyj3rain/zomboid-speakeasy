@@ -102,36 +102,81 @@ class ImportedEvidenceTest(unittest.TestCase):
         write(capture_path, capture)
         self.refresh_envelopes()
 
-    def test_checked_in_import_and_reference_validate(self):
-        receipt = Import.validate_import(self.example)
-        self.assertEqual(receipt["source"]["commit"],
-                         "739ff0a026c2fc2c9450f71a5169b1e72b302c46")
-        claim_out = self.root / "claim.json"
-        Example.build(self.example, claim_out)
-        first = {
-            path.relative_to(self.example).as_posix(): path.read_bytes()
-            for path in self.example.rglob("*.json")
-        }
-        first["claim-out"] = claim_out.read_bytes()
-        Example.build(self.example, claim_out)
-        Example.validate(self.example, claim_out)
-        second = {
-            path.relative_to(self.example).as_posix(): path.read_bytes()
-            for path in self.example.rglob("*.json")
-        }
-        second["claim-out"] = claim_out.read_bytes()
-        self.assertEqual(first, second)
+    def test_historical_import_integrity_survives_current_correction(self):
+        receipt=Import.validate_import(self.example)
+        self.assertEqual(receipt["source"]["commit"],"739ff0a026c2fc2c9450f71a5169b1e72b302c46")
+        before={p.relative_to(self.example):p.read_bytes() for p in self.example.rglob("*") if p.is_file()}
+        output=self.root/"claim.json"
+        for operation in (Example.build,Example.validate):
+            with self.assertRaisesRegex(Join.ContractError,"superseded"):
+                operation(self.example,output)
+        self.assertFalse(output.exists())
+        self.assertEqual(before,{p.relative_to(self.example):p.read_bytes() for p in self.example.rglob("*") if p.is_file()})
 
-        view = read(self.example / "reference/knowledge-view.json")
-        reference = read(self.example / "reference/knowledge-example.json")
-        self.assertIn("person-knowledge-not-reconstructed",
-                      view["sourceExclusions"])
-        self.assertNotIn("person-knowledge-not-reconstructed",
-                         view["conditioning"]["exclusions"])
-        self.assertEqual(reference["standing"]["choice"],
-                          "excluded-controlled-selection")
-        self.assertEqual(reference["standing"]["conditioning"], "ineligible")
-        self.assertFalse(reference["operatorDecisionRequired"])
+    def current_view(self):
+        return Author.compile_view(self.example/"upstream/decision-capture.json",
+            self.example/"knowledge-input.json",list((self.example/"reviews").glob("*.json")))
+
+    def test_old_sealed_review_cannot_restore_current_admission(self):
+        view=self.current_view()
+        self.assertFalse(view["availableClaims"])
+        self.assertEqual(view["excludedClaims"][0]["reason"],"record-55:county-presence-does-not-prove-acquisition")
+
+    def test_resealed_person_or_time_changes_cannot_restore_rejected_basis(self):
+        bundle=read(self.example/"knowledge-input.json")
+        for field,value in (("acquiredHour",0),("asOfHour",49)):
+            changed=copy.deepcopy(bundle)
+            changed["acquisitions"][0][field]=value
+            write(self.example/"knowledge-input.json",changed)
+            self.assertFalse(self.current_view()["availableClaims"])
+        row=bundle["acquisitions"][0]
+        with self.assertRaisesRegex(Join.ContractError,"superseded"):
+            Author.acquisition_review(read(self.example/"reviews/acquisition-adjudication.json"),
+                row,bundle["claims"][0],bundle["namespace"],bundle["eventSha256"])
+
+    def test_relabelled_and_resealed_legacy_evidence_stays_excluded(self):
+        original=read(self.example/"knowledge-input.json")
+        old_claim_review=read(self.example/"reviews/claim-extraction.json")
+        old_acquisition_review=read(self.example/"reviews/acquisition-adjudication.json")
+        for mode in ("read", "new-id"):
+            bundle=copy.deepcopy(original)
+            claim,row=bundle["claims"][0],bundle["acquisitions"][0]
+            cr,ar=copy.deepcopy(old_claim_review),copy.deepcopy(old_acquisition_review)
+            if mode=="read":
+                row["path"]="read"
+                claim["acquisitionRules"]=["read"]
+                cr["review"]["acquisitionRules"]=["read"]
+            else:
+                claim["id"]=row["claimId"]="renamed-outage"
+            row["claimSha256"]=Author.digest(claim)
+            for review in (cr,ar):
+                review["claimId"]=claim["id"]
+                review["claimSha256"]=Author.digest(claim)
+            ar["acquisitionSha256"]=Author.digest(row)
+            write(self.example/"knowledge-input.json",bundle)
+            write(self.example/"reviews/claim-extraction.json",reseal(cr))
+            write(self.example/"reviews/acquisition-adjudication.json",reseal(ar))
+            self.assertFalse(self.current_view()["availableClaims"])
+
+    def test_fresh_read_evidence_is_not_revoked_or_implicitly_approved(self):
+        bundle=read(self.example/"knowledge-input.json")
+        row=bundle["acquisitions"][0]
+        row["path"]="read"
+        bundle["claims"][0]["acquisitionRules"]=["read"]
+        row["claimSha256"]=Author.digest(bundle["claims"][0])
+        for evidence in [row["evidence"]]+[c["evidence"] for c in row["checks"].values()]:
+            for ref in evidence:
+                ref.update(owner="controlled-new-read",recordId="new-read",sha256="a"*64)
+        write(self.example/"knowledge-input.json",bundle)
+        cr=read(self.example/"reviews/claim-extraction.json")
+        cr["claimSha256"]=Author.digest(bundle["claims"][0])
+        cr["review"]["acquisitionRules"]=["read"]
+        write(self.example/"reviews/claim-extraction.json",reseal(cr))
+        view=Author.compile_view(self.example/"upstream/decision-capture.json",
+            self.example/"knowledge-input.json",[self.example/"reviews/claim-extraction.json"])
+        self.assertEqual(len(view["availableClaims"]),1)
+        self.assertEqual(view["availableClaims"][0]["acquisitionStanding"],"unadjudicated")
+        self.assertEqual(view["conditioning"]["status"],"ineligible")
 
     def test_imported_file_bytes_are_bound(self):
         path = self.example / "upstream/decision-capture.json"
@@ -181,36 +226,6 @@ class ImportedEvidenceTest(unittest.TestCase):
                                     "source normalization differs"):
             Import.validate_import(self.example)
 
-    def test_reference_has_no_training_or_runtime_authority(self):
-        claim_out = self.root / "claim.json"
-        Example.build(self.example, claim_out)
-        Example.validate(self.example, claim_out)
-        reference_path = self.example / "reference/knowledge-example.json"
-        reference = read(reference_path)
-        claim = read(claim_out)
-        self.assertEqual(reference["standing"]["knowledgeExample"],
-                         "reviewed-reference")
-        self.assertEqual(reference["choice"]["standing"],
-                          "excluded-controlled-selection")
-        self.assertEqual(reference["standing"]["conditioning"], "ineligible")
-        self.assertEqual(reference["effects"], {
-            "trainingRowsCreated": 0,
-            "modelWeightsChanged": False,
-            "runtimeBehaviorChanged": False,
-            "playerVisibleBehaviorChanged": False,
-        })
-        self.assertNotIn("claim-extraction-not-ratified",
-                         reference["standing"]["conditioningExclusions"])
-        self.assertEqual(claim["extractionStanding"], "reviewed")
-        self.assertEqual(claim["knowledgeExample"]["standing"],
-                         "reviewed-reference")
-
-        changed = copy.deepcopy(reference)
-        changed["effects"]["runtimeBehaviorChanged"] = True
-        write(reference_path, reseal(changed))
-        with self.assertRaisesRegex(Join.ContractError,
-                                    "generated knowledge reference differs"):
-            Example.validate(self.example, claim_out)
 
 
 if __name__ == "__main__":
