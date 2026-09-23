@@ -1,0 +1,94 @@
+{
+  "schema": "mousecat.ml-review/1",
+  "subject": "Mara answers Jon using the dated report she read",
+  "scenario": "It is July 11, 1993. Mara Reed, a salesperson from Muldraugh, is talking with Jon Vale nearby. On July 10, Mara finished reading the July 2 Knox Knews issue. Jon asks: \"What did the July 2 newspaper report about phone service?\" Mara has a personal reading receipt for that issue. Jon has no such receipt. The encounter, people and dates are authored; the production knowledge owners and installed native reading completion ran over controlled objects.",
+  "systemRole": "This is the speaker example that follows the separately approved interpretation and retrieval. The prior decisions establish what Jon means and which owned claim is needed. This decision concerns the exact answer produced from that claim.",
+  "causalPath": [
+    {
+      "label": "Owned knowledge",
+      "value": "Mara read the July 2 issue on July 10. Her claim remains reported knowledge with a personal reading receipt."
+    },
+    {
+      "label": "Approved understanding and retrieval",
+      "value": "Jon asks what that paper reported about phone service. Those two approved tasks select the exact report from Mara's catalogue."
+    },
+    {
+      "label": "Speaker expression",
+      "value": "The answer names the publication date and attributes the complete protected summary to the paper. The compiler refuses edited factual content, missing attribution or a substituted date."
+    }
+  ],
+  "playerImpact": "A future NPC should distinguish a dated report from direct experience or present conditions when answering. This first speaker example demonstrates that distinction. It does not yet provide the free composition, natural voice variation or native runtime needed for gameplay.",
+  "decisionPrecedent": "Approve this exact, fairly formal source-recounting example as a speaker target. This does not choose a template-based model architecture, require NPCs to recite source summaries in general, or approve final conversational voice. Freely composed wording remains the ratified direction; its semantic decoder is separate unfinished work.",
+  "actualInput": [
+    {
+      "label": "Question",
+      "value": "What did the July 2 newspaper report about phone service?"
+    },
+    {
+      "label": "Who speaks and who understands",
+      "value": "Jon Vale asks; Mara Reed is addressed. The source catalogue calls Jon listenerRef because he is Mara's conversation partner. The task explicitly records Jon as utterance speaker and Mara as utterance listener."
+    },
+    {
+      "label": "Timeline",
+      "value": "Publication: July 2 (county hour -168). Mara's reading completion: July 10 (hour 24). Question: July 11 (hour 48)."
+    },
+    {
+      "label": "Source report",
+      "value": "The protected source records Knox Telecommunications' telephone and Internet networks failing across the Knox area for hours, still down at press time; businesses closed; cause unannounced, with speculation about downed wires, lightning or sabotage. The question concerns the phone-service part of this report."
+    },
+    {
+      "label": "Conditioning and limits",
+      "value": "The captured conditioning includes anxious, trust 0, no hostility or debt, plus exact traits in the source artifact. Native current needs, bite and loaded-controller pressure are unavailable in this bodyless capture."
+    },
+    {
+      "label": "What the speaker receives",
+      "value": "Only the selected report, its source and personal reading provenance, the approved semantic intent, Jon's question and the captured voice/situation channels. The complete catalogue is stored separately as audit evidence; its seven other claims are not supplied in modelInput."
+    }
+  ],
+  "proposedLearning": [
+    {
+      "label": "Exact proposed answer",
+      "value": "The July 2, 1993 paper reported that Knox Telecommunications' telephone and Internet networks failed across the Knox area for hours and were still down at press time; businesses closed; the cause unannounced, with talk of downed wires, lightning or sabotage."
+    },
+    {
+      "label": "Attribution and time",
+      "value": "July 2, 1993 is the publication date. July 10 is when Mara read it; July 11 is when Jon asks. The answer attributes the outage to what the paper reported, without claiming the report establishes service conditions today."
+    },
+    {
+      "label": "Source wording and uncertainty",
+      "value": "The source combines telephone and Internet networks. The answer retains that combined wording and preserves the unannounced cause and speculative character of the possible explanations. It does not imply personal Internet use or universal household access."
+    },
+    {
+      "label": "Why it sounds formal",
+      "value": "This first mechanically bounded expression uses the entire protected source-summary cell. It is an attributed summary, not a verbatim quotation from the native newspaper. More natural paraphrases need stronger semantic validation before they can carry the same mechanical guarantee."
+    }
+  ],
+  "approvalEffects": [
+    "Creates one independently approved speaker evidence example, tied to the already approved understander and retrieval target.",
+    "Accepts this exact wording and its limited teaching role: dated, attributed report expression. The current scope limitations remain attached."
+  ],
+  "remainingExclusions": [
+    "No trained model, dataset split, model evaluation or runtime behavior is produced by this review.",
+    "The general free-composition decoder and deterministic register-floor admission are not implemented. This answer is not evidence that Mara's final voice or behavior under work, threat, grief or exhaustion is correct.",
+    "The authored bodyless capture still lacks native current needs, bite and controller pressure.",
+    "Approval of earlier understanding or retrieval does not approve this wording; this is a separate exact-subject ruling."
+  ],
+  "evidence": [
+    {
+      "label": "Exact speaker task",
+      "value": "147a1c1be6452110629c5e29c97ee8e7faf2203421fe33bc26727c9792bf27c8"
+    },
+    {
+      "label": "Approved retrieval target",
+      "value": "02af1fc6d30b308d1d809140bc2972dfc563d825ef713c28fbc0d8071317fb73"
+    },
+    {
+      "label": "Underlying capture",
+      "value": "SAO C77 capture 41f24ea028bab23d320d47f3510c120d585bf30eb5724791a858e4bc8c258374; protected Knox source line 71; personally read claim 0005."
+    },
+    {
+      "label": "Mechanical verification scope",
+      "value": "The bounded renderer checks exact source content, attribution, publication date, selected references, roles and full upstream approvals. It does not verify arbitrary prose by merely checking a claim ID."
+    }
+  ]
+}

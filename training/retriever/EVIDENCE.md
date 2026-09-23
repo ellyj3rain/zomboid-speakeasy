@@ -122,6 +122,8 @@ and does not approve the independent retriever target.
 The original C74/C76 artifacts remain historical. Record 56 implements the
 corrected import, approved typed example and independently approved retrieval
 target. Their exact hashes and saved rulings are in
-`../understander/c77-example.json`. Both reviews are resolved. The next task is a
-typed speaker example that preserves report attribution and dates; dataset splits
-and evaluation remain unimplemented. No trained model exists.
+`../understander/c77-example.json`. Both reviews are resolved. Record 57 adds the
+[bounded speaker example](../speaker/README.md), with independent review and
+explicit free-composition/register exclusions. Task evidence version 3 resolves
+through the same anchor store; a target derived from it retains those exclusions.
+Dataset splits and evaluation remain unimplemented. No trained model exists.

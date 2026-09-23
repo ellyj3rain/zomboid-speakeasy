@@ -1598,3 +1598,52 @@ invented. The next producer is a typed speaker example over the admitted report,
 checking attribution and dates before expression review. This follow-through
 changes evidence and current documentation only; runtime code and source
 artifacts remain unchanged.
+
+
+---
+
+## 57 - Reported-source speaker example (2026-09-22)
+
+Timestamp: 2026-09-23 04:43 UTC / 21:43 PST.
+
+The first speaker example resolves the independently approved understander and
+retrieval target from Record 56. Mara answers Jon's question about the July 2
+paper from the report she read on July 10. Speaker task evidence version 3 binds
+the exact source import, full conversation context, approved retrieval and
+understander, and a separate model-input object containing only selected claims
+plus captured voice/situation channels. The complete catalogue stays outside
+model input as audit evidence. Mara is the answer's speaker; Jon is its listener.
+
+Inspection showed the current scalar claim fence cannot establish that arbitrary
+prose preserves a referenced claim's meaning. A valid reference alone would not
+refuse an invented present-day outage. This example therefore implements a
+bounded reported-source expression: resolve the entire protected source-summary
+cell, derive its publication date from the report hour and county calendar, and
+render it under explicit dated paper attribution. The source is a curated
+summary, so the answer makes no verbatim-quotation claim. The complete combined
+phone/Internet report and speculation about its cause remain intact.
+
+The compiler rejects clipped or altered summaries, substituted reading/question
+dates, appended prose, unknown/unselected/duplicate facts, role reversal,
+changed context/conditioning and missing upstream approvals. The shared evidence
+resolver validates speaker version 3 before admitting its anchor. Speaker
+conditioning retains upstream exclusions and explicitly adds missing general
+free-composition decoding and register-floor admission. This bounded data
+renderer does not replace the ratified learned runtime with sentence selection,
+establish final NPC voice, or prove appropriate speech under strain.
+
+The narrative panel shows the exact formal answer and its limited learning
+consequence. It is submitted as interaction `skill-4ce382d92d3da70d`, item
+`seam-743ad57c38f3212a`, bound to task
+`147a1c1be6452110629c5e29c97ee8e7faf2203421fe33bc26727c9792bf27c8`.
+At submission it remains proposed. Earlier task/retrieval approvals cannot
+approve its wording. The exact returned ruling must be consumed separately.
+
+All 97 tests pass, including 12 new speaker controls and resolver integration.
+Two read-only reviewers found no blocking defect. The protected 190-choice
+conditioning audit is unchanged. No trained model, dataset split, evaluator
+result, native speaker runtime or game behavior is produced. After expression
+review, task dataset construction and evaluation must preserve shared-source
+split independence and distinguish grounding from wording quality. The general
+semantic decoder and deterministic voice floors remain explicit implementation
+work before natural paraphrases can receive the same factual guarantee.
