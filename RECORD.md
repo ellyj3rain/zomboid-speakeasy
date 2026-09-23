@@ -1779,3 +1779,98 @@ consumption remain to be implemented. Current continuation and architecture
 documents name that sequence. No model was trained and no SAO/ZAO runtime,
 installed file, game save or Mousecat application source was changed by this
 approved implementation. The earlier Mousecat presentation work is separate.
+
+## 59 - Bound speaker tasks and task-data preparation (2026-09-23)
+
+The Record 58 reference construction now enters the existing speaker task
+contract as version 4. Captured participant names, bound propositions, question,
+semantic intent, situation and voice inputs are reconstructed from the exact
+approved source chain. The validator checks each expression witness and actual
+answer, with ordered one-time coverage of selected reports. Version 3 and all
+historical evidence retain their existing behavior. Approval snapshots and the
+shared retriever-anchor resolver support both versions.
+
+The exact new Mara task is
+`97388368bc3bf12051c4021cb8acd296ad3694bc30bbc1afb62f10c95d50e1a1`.
+It reproduces the previously approved wording without alteration. Mousecat
+interaction `skill-31ada9b3c5ba3c0c`, item `seam-31ada9b3c5ba3c0c`, presents
+the whole scene and the consequence of accepting this source/situation/answer
+pairing as one offline speaker task example. At this implementation checkpoint
+its return is pending; no acceptance is inferred from wording or plan approval.
+`training/speaker/c77-bound-example.json` holds current standing.
+
+`tools/task_data.py` prepares separate task inputs and targets, excludes rows
+without exact admission, explicitly masks unjudged retrieval claims and emits
+speaker text without making construction choices the model target. The preview
+is deterministic under request/split reordering. Revalidation rebuilds it from
+source evidence; resealed edits to targets, masks, roles, inputs or release
+standing refuse. Release requires nonempty independent partitions for each
+requested task, in addition to existing cross-task source-group checks.
+
+The current C77 preview contains one understanding example, one retrieval example
+and no admitted speaker example. Its retrieval target has one positive claim,
+seven masked unjudged claims and zero negatives. It is excluded from dataset
+release because speaker approval and independent evaluation partitions are
+missing. Preview seal:
+`6b42681c53cca7044b8c3eea715c28eacf419b7f6e3ae5d68e1ef2c0c1d16d75`.
+
+Read-only review found that preparation dropped explicit incoming utterance
+roles. The correction retains Jon as the question's speaker and Mara as its
+listener, distinct from the capture's knowledge owner/partner roles. Regression
+checks and focused re-review close the finding. Final verification passes 121
+tests, the protected conditioning audit and exact reproduction of both the old
+proof and new preview. The actual release command refuses the incomplete data
+without modifying either request or preview. All 190 historical choices retain
+their previous ineligibility.
+
+This supplies task representation and data preparation. Broader source meanings,
+independently reviewed scenes, frozen subword tokenization, reference training,
+learned realization, register floors and native consumption remain dependencies.
+No trained model, native game change or general semantic guarantee is claimed.
+The implementation and eventual task-review return belong to this coherent
+publication unit; the source work is verified while that exact return is pending.
+
+### Returned revision and source audit
+
+The actual Mousecat return is revision-requested. Receipt
+`49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453`
+preserves the response and exact task lineage, with only the private continuation
+capability removed. The operator wrote:
+
+> We should consider how we map or relate personality and emotional state to pacing, filler words, expletives, critical thinking, tension that emphasizes anxiousness and emotion and communication, thought- behavior itself, adaption and environmental modeling of goal-object orientation in the world relative to others. This is not necessarily suggesting create something new, maybe somewhat, but it is mostly asking to maximize what currently exists and how granularly we emphasize the presence of realistic distinction and adaptability that we train into small models per variable.
+
+The task remains mechanically valid and excluded. Original wording approval
+remains intact. A new request supplies this actual receipt to the admission
+check, which refuses it as task approval. Its deterministic preview seal is
+`25df630eadd4a356c405ee0a98e9b7566907da128dcb35e809d90ba759d11cb3`.
+It contains one understander example, one retriever example and no speaker
+example; release still refuses. The pre-return request and preview are retained.
+There is no unanswered ruling on this task.
+
+`training/speaker/PERSONALITY_REVISION.md` maps existing disposition,
+conditions, habits, relationships, neurological strain, history, lessons,
+goals and speech delivery to actual capture coverage. Its inventory pins 15
+SAO source files to C77 and preserves the exact capture inputs and operator
+direction. Independent read-only review verifies file hashes, capture fields,
+source descriptions and consistency with the ratified shared-base architecture.
+This is source inspection, not a new runtime experiment.
+
+The current expression proof does not select expression from personality.
+Its complete ordered report variants cannot demonstrate selective attention,
+purposeful disclosure, adaptation or the wider learned exchange. The revised
+sequence starts with existing-owner capture of missing current strain,
+cognitive-state and goal/opportunity evidence, then whole-scene contrasts,
+broader meaning/communication-act support and separate factual, task, continuity
+and voice evaluation. Single-variable and interaction experiments do not imply
+an independent model per trait. No new personality taxonomy or runtime topology
+is adopted.
+
+Exact response, source inventory and revised-preview integrity checks pass;
+the ten task-data tests pass after consuming the ruling. Final validation of
+the combined tree passes all 121 tests in 10.531 seconds and the protected
+conditioning audit. The current preview reproduces; its release refuses for
+excluded rows and missing independent partitions. Current documentation and
+Mousecat history carry the revised direction with the implementation.
+The remaining behavioral work is explicit; this record closes the
+task-representation/data-preparation unit without claiming learned personality,
+speaker-task approval or game-runtime changes.

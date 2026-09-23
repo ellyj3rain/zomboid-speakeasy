@@ -11,6 +11,16 @@ admits the approved understanding/retrieval samples for offline evaluation and
 reports why the speaker samples and combined dataset remain excluded. Broader
 learned expression, task-data readiness and runtime integration remain open.
 
+Record 59 carries that construction into a [version 4 speaker task](speaker/BOUND_EXAMPLE.md)
+and [deterministic task-data preparation](datasets/c77-preparation/README.md).
+The exact task returned revision-requested. The
+[personality source audit and continuation](speaker/PERSONALITY_REVISION.md)
+carry the operator's direction into state, relationship, goal and adaptation
+contrasts; the original wording approval remains intact. Data preparation preserves incoming
+utterance roles, masks unjudged retrieval claims and separates model targets
+from audit evidence. Independent per-task evaluation partitions remain missing;
+the prepared C77 preview is not released for training.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 

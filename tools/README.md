@@ -109,3 +109,16 @@ readiness, evaluation and runtime have distinct results. Conversation and speake
 conditioning accept this scope explicitly; omitted scope preserves the legacy
 API. Wording approval cannot become task approval, and missing native inputs
 remain visible. The current dataset is excluded; no model is trained.
+
+Speaker task version 4 carries the bound expression into the existing validator,
+exact-task approval snapshots and shared evidence resolver. Use `--bound-plans`
+with `--propose` for an explicit authored expression plan. Version 3 remains
+supported. The [bound speaker example](../training/speaker/BOUND_EXAMPLE.md)
+shows the actual scene, unchanged approved wording and new task-review consequence.
+
+`task_data.py` prepares deterministic separate task inputs and targets from the
+explicit offline admission scope. It preserves incoming utterance roles,
+excludes unapproved rows, masks unjudged retrieval labels and keeps speaker
+construction witnesses out of the text target. Whole-preview revalidation and
+per-task independent partitions precede dataset release. See the
+[C77 data preparation](../training/datasets/c77-preparation/README.md).

@@ -18,6 +18,7 @@ import retriever_targets as R
 import conversation_tasks as C
 
 VERSION = 3
+BOUND_VERSION = 4
 MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August",
           "September", "October", "November", "December")
 EXCLUSIONS = ["speaker-free-composition-decoder-not-implemented",
@@ -122,6 +123,51 @@ def render(parts, model_input):
     return " ".join(lines)
 
 
+def bound_input_for(target_hash, evidence):
+    """Use captured identities and selected propositions as the speaker input."""
+    import expression_proof as P
+    inputs = input_for(target_hash, evidence)
+    previous = inputs["modelInput"]
+    inputs["modelInput"] = {
+        "schema": "speakeasy-bound-answer-input", "schemaVersion": 1,
+        **{key: copy.deepcopy(previous[key]) for key in (
+            "speakerRef", "listenerRef", "utterance", "semanticIntent", "situation")},
+        "expressionInput": P.compile_source(P.from_target(target_hash, evidence))}
+    return inputs
+
+
+def render_bound(parts, source):
+    import expression_proof as P
+    A.require(isinstance(parts, list) and parts, "bound answer parts must be nonempty")
+    refs, lines = [], []
+    for part in parts:
+        P.validate_output(part, source)
+        A.require(part["plan"]["kind"] == "report", "speaker task requires selected reports")
+        refs.append(part["plan"]["reportRef"])
+        lines.append(part["text"])
+    A.require(refs == [report["claimRef"] for report in source["reports"]],
+              "bound answer must cover ordered selected reports once")
+    return " ".join(lines)
+
+
+def propose_bound(target_hash, row_id, plans, evidence=None):
+    """Plans are explicit authored targets; no voice is selected on the user's behalf."""
+    import expression_proof as P
+    evidence = evidence or E.Store()
+    inputs = bound_input_for(target_hash, evidence)
+    source = P.from_target(target_hash, evidence)
+    parts = [P.produce(source, plan) for plan in plans]
+    model = inputs["modelInput"]
+    row = A.seal({"schema": C.TASK_SCHEMA, "schemaVersion": BOUND_VERSION,
+        "rowId": row_id, "task": "speaker", "input": inputs,
+        "output": {"speechAct": "answer", "speakerRef": model["speakerRef"],
+                   "listenerRef": model["listenerRef"], "parts": parts,
+                   "text": render_bound(parts, source)},
+        "requiredClaimRefs": [report["claimRef"] for report in source["reports"]]})
+    validate_task(row, evidence)
+    return row
+
+
 def propose(target_hash, row_id, evidence=None):
     evidence = evidence or E.Store()
     inputs = input_for(target_hash, evidence)
@@ -144,8 +190,8 @@ def validate_task(row, evidence=None):
     A.fields(row, {"schema", "schemaVersion", "rowId", "task", "input", "output",
                    "requiredClaimRefs", "contentSha256"}, "speaker task")
     A.require(row["schema"] == C.TASK_SCHEMA and type(row["schemaVersion"]) is int
-              and row["schemaVersion"] == VERSION and row["task"] == "speaker",
-              "requires speaker task evidence version 3")
+              and row["schemaVersion"] in (VERSION, BOUND_VERSION) and row["task"] == "speaker",
+              "requires speaker task evidence version 3 or 4")
     body = dict(row)
     A.hash_value(body.pop("contentSha256"), "speaker task seal")
     A.require(A.digest(body) == row["contentSha256"], "speaker task content hash differs")
@@ -153,15 +199,24 @@ def validate_task(row, evidence=None):
     A.require(isinstance(row["input"], dict), "speaker input must be an object")
     target_hash = row["input"].get("retrieverTargetSha256")
     A.hash_value(target_hash, "speaker retriever target")
-    expected = input_for(target_hash, evidence)
+    bound = row["schemaVersion"] == BOUND_VERSION
+    expected = bound_input_for(target_hash, evidence) if bound else input_for(target_hash, evidence)
     A.require(A.digest(row["input"]) == A.digest(expected), "speaker input differs from approved source chain")
     output, model = row["output"], expected["modelInput"]
     A.fields(output, {"speechAct", "speakerRef", "listenerRef", "parts", "text"}, "speaker output")
     A.require(output["speechAct"] == "answer" and output["speakerRef"] == model["speakerRef"]
               and output["listenerRef"] == model["listenerRef"], "answer participants or act differ")
-    A.require(row["requiredClaimRefs"] == [r["claimRef"] for r in model["reports"]],
+    if bound:
+        import expression_proof as P
+        source = P.from_target(target_hash, evidence)
+        required = [r["claimRef"] for r in source["reports"]]
+        text = render_bound(output["parts"], source)
+    else:
+        required = [r["claimRef"] for r in model["reports"]]
+        text = render(output["parts"], model)
+    A.require(row["requiredClaimRefs"] == required,
               "speaker required claims differ")
-    A.require(output["text"] == render(output["parts"], model), "answer text differs from factual rendering")
+    A.require(output["text"] == text, "answer text differs from factual rendering")
     return row
 
 
@@ -193,6 +248,8 @@ def main():
     mode.add_argument("--validate", type=Path)
     mode.add_argument("--approve", type=Path)
     parser.add_argument("--row-id")
+    parser.add_argument("--bound-plans", type=Path,
+                        help="JSON list of explicit expression-proof plans; proposes version 4")
     parser.add_argument("--receipt-hash")
     parser.add_argument("--snapshot-id")
     parser.add_argument("--evidence-root", type=Path, default=E.ROOT)
@@ -200,7 +257,8 @@ def main():
     try:
         evidence = E.Store(args.evidence_root)
         if args.propose:
-            value = propose(args.propose, args.row_id, evidence)
+            value = (propose_bound(args.propose, args.row_id, A.read(args.bound_plans), evidence)
+                     if args.bound_plans else propose(args.propose, args.row_id, evidence))
             print("Proposed speaker: " + C.save_evidence(value, args.evidence_root))
             print(value["output"]["text"])
         elif args.approve:

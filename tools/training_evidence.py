@@ -93,7 +93,7 @@ class Store:
             key: binding[key] for key in ("rowId", "rowContentSha256", "approvalReceiptSha256")
         }, "task row is absent from the referenced snapshot")
         row = self.read(binding["rowContentSha256"])
-        if row.get("schemaVersion") == 3:
+        if row.get("schemaVersion") in (3, 4):
             import speaker_tasks as S
             S.validate_task(row, self)
         elif row.get("schemaVersion") == 2:
@@ -106,7 +106,7 @@ class Store:
         A.require(row["rowId"] == binding["rowId"] and row["task"] == anchor["task"],
                   "source task row identity differs")
         comparable = row["input"]
-        if row.get("schemaVersion") in (2, 3):
+        if row.get("schemaVersion") in (2, 3, 4):
             comparable = {key: comparable[key] for key in ("catalogue", "context")}
         A.require(A.digest(comparable) == A.digest({"catalogue": catalogue,
                                                  "context": anchor["context"]}),

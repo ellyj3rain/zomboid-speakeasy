@@ -25,3 +25,4 @@ training/experiments/** text eol=lf
 tools/experiments/** text eol=lf
 tools/expression_proof.py text eol=lf
 tools/experimental_admission.py text eol=lf
+training/datasets/** text eol=lf

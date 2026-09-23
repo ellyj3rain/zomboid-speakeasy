@@ -102,14 +102,28 @@ substitutions refuse, and experimental admission has executable checks. The
 finite proof grammar and synthetic contrasts do not complete learned speech or
 provide an independently partitioned approved dataset.
 
-The next implementation dependency is a speaker task carrying these bound
-propositions into learned-composition preparation, with broader source meanings
-and explicit refusals. Present new task/voice contrasts with their actual scenes
-for review; keep task correctness distinct from voice preference. Prepare
-independent source lineages, deterministic dataset views and the shared tokenizer
-alongside that work. A trained run follows usable task data and evaluation
-partitions; native integration follows reference evidence. No new architecture
-choice or replacement of learned expression has been recorded by this proof.
+Record 59 now carries the bound propositions into a version 4 speaker task and
+deterministic per-task data preparation. Its [task review](speaker/BOUND_EXAMPLE.md)
+preserves the already-approved wording. The exact source/situation/answer review
+returned **revision requested**, with direction to emphasize existing personality,
+emotion, thought, adaptation and purposeful communication. [Exact standing](speaker/c77-bound-example.json)
+and the [prepared data](datasets/c77-preparation/README.md) govern current
+inclusion; the revised task request remains excluded. The full 121-test suite and protected
+conditioning audit pass, and both saved proof and data preview reproduce.
+
+The [personality source audit and revised sequence](speaker/PERSONALITY_REVISION.md)
+map the existing producers and capture gaps. The next source work is in SAO:
+retain current strain, cognitive-state and goal/opportunity evidence from their
+existing owners, with time and availability. Speakeasy then builds whole-scene
+contrasts covering attention, judgment, selected communication acts and expression.
+Mara remains a factual regression case. Review future examples in their actual
+scenes; no further ruling on the unchanged answer is pending.
+
+Broader supported meanings, independent source scenes and the frozen shared
+tokenizer/reference pipeline remain dependencies. A trained run follows usable
+task data and evaluation partitions; native integration follows reference
+evidence. The source audit is read-only and does not establish loaded-world
+coverage. This revision does not change the ratified shared-base architecture.
 
 ### First experiment completed
 
