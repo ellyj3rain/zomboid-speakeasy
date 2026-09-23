@@ -39,7 +39,7 @@ Record 55 supersedes Record 52's unsupported county-presence acquisition. Those
 historical artifacts remain intact and have no current acquisition authority.
 
 Record 56 imports SAO C77's exact authored conversation capture and validates a
-typed understander proposal. Mara reads a July 2 newspaper on July 10; Jon asks
+typed understander example and its independently approved retrieval target. Mara reads a July 2 newspaper on July 10; Jon asks
 on July 11 what it reported about phone service. Personal reading completion,
 report publication and question time are independently bound. The narrative
 review explains the interpretation and learning consequence before approval.
@@ -58,8 +58,8 @@ of the task still does not approve its retrieval target.
 | Dated source | The July 2 Knox newspaper report | Records an outage ongoing at printing; present service requires separate evidence |
 | Personal acquisition | C77 native reading completion, exact issue and person-bound receipt | Mara owns reported knowledge acquired July 10; presence grants nothing |
 | Conversation capture | Exact source, calendar, people, context, eight-claim catalogue and coverage | Authored bodyless encounter; three native inputs explicitly unavailable |
-| Typed understanding | Record 56 validates the incoming question and intended listener against that capture | A concrete proposal for operator review; no automatic approval |
-| Retrieval | Independent exact-task anchor and separate label review | Required report reference, seven other claims unjudged; no inherited approval |
+| Typed understanding | Record 56 validates the incoming question and intended listener against that capture | Exact interpretation approved through Mousecat |
+| Retrieval | Independent exact-task anchor and separate label review | Independently approved: required report, zero hard negatives, seven unjudged claims |
 | Dataset and evaluation | Separate task datasets, splits, exclusions and evaluator required | Not built; examples remain conditioning-ineligible |
 | Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 

@@ -12,7 +12,7 @@ This contract resolves the model shape that the earlier speech design left open.
 It does not make any existing row training-eligible. Record 55 supersedes Record
 52's unsupported acquisition. SAO C77 supplies a corrected authored capture with
 personal reading evidence. Record 56 imports that exact capture and validates an
-understander proposal; task and retrieval approval remain separate. SAO C75 owns
+understander example and separately approved retrieval target. SAO C75 owns
 the typed snapshot-local catalogue and selected-claim fence.
 
 ## One base, typed tasks
@@ -180,11 +180,12 @@ receipts are the artifact admitted for runtime evaluation.
 
 ## Work this contract unlocks
 
-The next producer captures an immutable conversation snapshot in SAO: county
-and calendar identity, person and listener, current context and revisions, the
-C75 catalogue, and evidence of source coverage. Speakeasy then imports that
-capture and validates a typed understander or speaker example over it. Its
-approved required references can anchor a retriever target for separate review.
+SAO C77 captures the immutable authored conversation: county and calendar
+identity, person and partner, context and revisions, the C75 catalogue and source
+coverage. Speakeasy Record 56 imports it, validates the understander example and
+records separate approvals for that interpretation and its retrieval target.
+The next task-specific producer is a speaker example over the same admitted
+report, with attribution and date checks before expression review.
 
 Record 54's version 2 compiler resolves task evidence and saved approvals. Record
 56 adds exact C77 source import and typed understander admission. Its coverage is

@@ -1,11 +1,12 @@
 # Source-bound understanding
 
-Record 56 connects the corrected C77 capture to a typed understander proposal.
+Record 56 connects the corrected C77 capture to an approved understander example
+and an independently approved retrieval target.
 Mara reads the July 2 Knox Knews on July 10. On July 11, Jon asks her:
 
 > What did the July 2 newspaper report about phone service?
 
-The proposed meaning is a neutral question addressed to Mara, referring to her
+The approved meaning is a neutral question addressed to Mara, referring to her
 personally acquired report. It requests no executable action. The report was
 ongoing at publication. Nothing here establishes personal Internet use, household
 access, recovery after hours or service conditions on July 11.
@@ -24,8 +25,10 @@ player consequence, proposed meaning, approval effects and evidence.
 task hash as its evidence reference. The task is **approved** through interaction
 `skill-41b0c21490237499`, item `seam-3502bc9a6ecbd395`, with no qualifications.
 The exact saved response resolves into the task evidence snapshot in the index.
-The independent retrieval proposal is **proposed**, awaiting its own ruling in
-interaction `skill-49b957a427fb7f46`, item `seam-789dd79fd57f044e`. Its narrative
+The independent retrieval target is **approved** through interaction
+`skill-49b957a427fb7f46`, item `seam-789dd79fd57f044e`, without qualifications.
+The index names its saved response, validated review and admitted target. Both
+operator decisions for this example are resolved. Its narrative
 panel and submitted invocation are `c77-retriever-review.json` and
 `c77-retriever-invocation.json`.
 
@@ -76,10 +79,12 @@ evidence retains its older missing-source/task exclusions. No model is trained
 and no game behavior changes. C77 has no executable-option inventory; an
 action-bearing frame requires that source contract before admission.
 
-The approved task now anchors an independent retriever proposal with claim 0005
-required, no presumed hard negatives, and seven unjudged claims. Resolve its own
-Mousecat ruling before admitting the retrieval target. Dataset production,
-speaker fencing and evaluation remain distinct implementation work.
+The approved task anchors the independently approved retrieval target with claim
+0005 required, no hard negatives, and seven unjudged claims. The next production
+step is a typed speaker example over the same admitted report, with mechanical
+checks that preserve attribution and dates before human review of its expression.
+Dataset splits and task evaluation then need explicit implementation; the
+approved target has not been assigned a split or made training-eligible.
 
 ## Reproduction
 

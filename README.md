@@ -51,7 +51,8 @@ approval and their own snapshots, exclusions, splits and evaluation receipts.
 Record 54 corrects the compiler's evidence binding: it now opens the task row,
 snapshot and saved Mousecat rulings, compares the whole conversation context,
 and keeps shared sources in one dataset split. Record 56 imports the exact C77 capture, verifies its personal reading evidence,
-and validates the first typed understander proposal. Incoming speaker and listener
+and validates the first typed understander example. Its interpretation and
+retrieval target now have separate, recorded operator approvals. Incoming speaker and listener
 roles are explicit: Jon asks, Mara understands. The [narrative review](training/understander/README.md)
 shows the scene, source, proposed meaning and what approval teaches. Label approval
 and independent retrieval review remain separate. Native-input limitations and

@@ -52,7 +52,7 @@ the retriever that the fact is irrelevant everywhere.
 | `speakeasy-retriever-anchor` | approved task reference | Exact approved understander or speaker row, current context, catalogue hash and required claim references |
 | `speakeasy-retriever-target-proposal` | proposed | Required positives copied from the anchor, explicitly reasoned hard negatives and the exact unjudged catalogue complement |
 | `speakeasy-retriever-target-review` | operator ruling | Approval or rejection of this exact proposal through a bound interaction and item |
-| `speakeasy-retriever-target` | label approved, conditioning ineligible | Standalone input and labels bound to the matching saved review; source coverage and task validation remain unimplemented |
+| `speakeasy-retriever-target` | label approved, conditioning ineligible | Standalone input and labels bound to the matching saved review; conditioning exclusions follow the source task version |
 | `speakeasy-retriever-dataset-snapshot` | label collection, conditioning ineligible | Approved labels, exact train/validation/test assignment, resolved exclusions and evaluation evidence, and derived counts |
 
 Approval of the understander or speaker row does not transfer. The retriever
@@ -105,10 +105,11 @@ python tools/test_training_evidence.py
 
 Record 55 supersedes Record 52's unsupported acquisition. C77 supplies the
 corrected authored capture; Record 56 imports it and validates a typed
-understander proposal. Its [current review](../understander/README.md) binds
-Jon's question to Mara and her personally read July 2 report. A separate
-retriever proposal can follow the completed task approval. Required references
-come from that exact frame; other owned claims remain unjudged.
+understander example. Its [completed reviews](../understander/README.md) bind
+Jon's question to Mara and her personally read July 2 report. The first retrieval
+target now has its own exact-subject approval: one required report reference,
+zero hard negatives and seven unjudged claims. No dataset split or model
+evaluation has been assigned to this target.
 
 Version 2 typed-task anchors resolve the imported source and frame validation.
 Their conditioning remains ineligible with the explicit unavailable native-input

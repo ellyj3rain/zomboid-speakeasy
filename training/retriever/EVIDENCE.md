@@ -94,7 +94,7 @@ limits: unavailable native inputs in the authored bodyless capture, and absent
 task dataset splits/evaluation. Mixed snapshots retain the union of row
 exclusions. Approval cannot erase them. See [the current task](../understander/README.md).
 
-## Next concrete example
+## First approved example
 
 Record 55 supersedes Record 52's unsupported lived acquisition. The protected
 July 2 source is an hours-long telephone and Internet outage report, ongoing at
@@ -112,7 +112,7 @@ complete catalogue, exact question and proposed interpretation together. A task
 ruling teaches that interpretation; it establishes no current service condition
 and does not approve the independent retriever target.
 
-| Next producer | Owner and implementation | Completion evidence |
+| Producer | Owner and implementation | Completion evidence |
 |---|---|---|
 | Corrected conversation import | Speakeasy imports the exact C77 capture and person-bound native reading receipt | Reject changed person, time, calendar, coverage or source hashes; retain report versus experience |
 | Typed understander proposal | Validate frame fields, listener, claim and action references; preserve authored input standing | Human-readable scene and exact proposed meaning; no automatic approval |
@@ -120,6 +120,8 @@ and does not approve the independent retriever target.
 | Future computer sources | SAO integration binds actor, endpoint, service/application, content version or attempted operation, result and time | Installed mods or owned devices alone cannot grant knowledge; local failure cannot establish provider-wide outage |
 
 The original C74/C76 artifacts remain historical. Record 56 implements the
-corrected import and typed proposal. Its exact hashes and current ruling are in
-`../understander/c77-example.json`. No trained model exists; independent retrieval
-review follows approval of the task.
+corrected import, approved typed example and independently approved retrieval
+target. Their exact hashes and saved rulings are in
+`../understander/c77-example.json`. Both reviews are resolved. The next task is a
+typed speaker example that preserves report attribution and dates; dataset splits
+and evaluation remain unimplemented. No trained model exists.
