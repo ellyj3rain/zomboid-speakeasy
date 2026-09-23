@@ -9,6 +9,46 @@
       "path": "artifacts/audits/20260923-0227Z-1927PST-evidenced-world-knowledge/example",
       "captureSha256": "41f24ea028bab23d320d47f3510c120d585bf30eb5724791a858e4bc8c258374",
       "manifestSha256": "84efabd69a7fd59780873ed8d1414e892393eb29cad7e3bbbff6fed652c96c4e"
+    },
+    {
+      "id": "sao-c78-behavior-baseline",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a",
+      "path": "artifacts/audits/c78-person-state-comparisons/captures-v2/baseline",
+      "captureSha256": "68451e1b942ed8274f8903ab16260f0f25f2d9c1e780e2c9e255c44705c476cc",
+      "manifestSha256": "d6df9285a6e1a9fc5df353bcde517fecb0615b26c9c03eb958d2460f4bdee669"
+    },
+    {
+      "id": "sao-c78-behavior-trusted",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a",
+      "path": "artifacts/audits/c78-person-state-comparisons/captures-v2/trusted",
+      "captureSha256": "6a11b56a0869df2a3c4d8c5c9d9ce694308ee522490cf0daf4e0ae00dc0a12f2",
+      "manifestSha256": "48752bd0760d5888731dccf953b141b5d5824ade568871f1340fa85b8fdfe023"
+    },
+    {
+      "id": "sao-c78-behavior-threat",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a",
+      "path": "artifacts/audits/c78-person-state-comparisons/captures-v2/threat",
+      "captureSha256": "9e806e097166f80c85623e771c8ae261bbdff6a9c2667968aaa36ea7fad9a00b",
+      "manifestSha256": "f0b0c910a4c156c7939d6418e2c1965ac3427e37ff61adc54681564284f63e07"
+    },
+    {
+      "id": "sao-c78-behavior-learned",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a",
+      "path": "artifacts/audits/c78-person-state-comparisons/captures-v2/learned",
+      "captureSha256": "bc309494c0825040c25d42e12d605e9af25914c865074569677251cc3409653f",
+      "manifestSha256": "41f70743af61dd06cf7f1287a3b8221052e6e5608f066d0872bea8249841fdde"
+    },
+    {
+      "id": "sao-c78-behavior-strain",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "aaa5c8f9778f5633ae097b1fd2e183cefc4bc99a",
+      "path": "artifacts/audits/c78-person-state-comparisons/captures-v2/strain",
+      "captureSha256": "e43f6d52d2654c798cb4bdc442111e1583b5546fc2a261f3e45c919e9cdc0034",
+      "manifestSha256": "aad547fb09d731b46a2f88b52faee9ee82403fc7d480aafcdede713dab5fd0be"
     }
   ]
 }

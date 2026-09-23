@@ -122,3 +122,10 @@ excludes unapproved rows, masks unjudged retrieval labels and keeps speaker
 construction witnesses out of the text target. Whole-preview revalidation and
 per-task independent partitions precede dataset release. See the
 [C77 data preparation](../training/datasets/c77-preparation/README.md).
+
+`behavior_comparisons.py` validates typed SAO behavior channels and prepares
+whole-scene comparisons from exact registered imports. It separates the bounded
+model input from audit-only owner state, measures channel differences against a
+shared baseline and rebuilds the entire sealed result during validation. The
+candidate replies are unreviewed authored text, with no training admission path.
+See the [C78 family](../training/behavior/c78/README.md).
