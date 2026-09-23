@@ -50,12 +50,13 @@ and all other owned claims stay unjudged. Retriever rows have independent
 approval and their own snapshots, exclusions, splits and evaluation receipts.
 Record 54 corrects the compiler's evidence binding: it now opens the task row,
 snapshot and saved Mousecat rulings, compares the whole conversation context,
-and keeps shared sources in one dataset split. Compiled labels remain explicitly
-ineligible for training until source coverage and task validity are implemented.
-The next producer imports the corrected C77 conversation capture and validates
-a typed understander proposal. The exact
-sequence and limits are in [retriever evidence](training/retriever/EVIDENCE.md);
-no real row or model exists yet.
+and keeps shared sources in one dataset split. Record 56 imports the exact C77 capture, verifies its personal reading evidence,
+and validates the first typed understander proposal. Incoming speaker and listener
+roles are explicit: Jon asks, Mara understands. The [narrative review](training/understander/README.md)
+shows the scene, source, proposed meaning and what approval teaches. Label approval
+and independent retrieval review remain separate. Native-input limitations and
+missing task dataset splits/evaluation keep this controlled example ineligible
+for training; no model exists.
 
 The learned runtime and training shape is now ratified in
 [`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared

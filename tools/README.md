@@ -29,11 +29,9 @@ commands and the remaining acquisition/ratification boundary are in
 
 `import_sao_world_knowledge.py` imports the Record 52 C74 evidence from an exact
 SAO commit and validates its manifest, source hashes, event/acquisition binding
-and protected source excerpt. `r12_acquisition_example.py` deterministically
-builds the reviewed person-knowledge reference. It records that the reference
-creates no training row, changes no model weights, and changes no runtime or
-player-visible behavior. The forced source choice cannot pass through as a
-choice example. No operator ruling is part of this mechanical review.
+and protected source excerpt for historical integrity only. Record 55 supersedes
+that acquisition. `r12_acquisition_example.py` refuses current regeneration and
+validation; historical artifacts retain their original bytes.
 
 `retriever_targets.py` implements Record 53's independently anchored target
 policy. Record 54 upgrades its artifacts to version 2. It binds a supplied
@@ -44,8 +42,9 @@ claim as unjudged. A matching independent operator review is required before a
 target can enter a dataset snapshot. Snapshot compilation requires complete,
 non-overlapping splits plus explicit exclusions and evaluation receipts. The
 tool creates no real row by itself and records all compiled targets and
-snapshots as conditioning-ineligible while source coverage and task-specific
-validation remain unimplemented.
+snapshots as conditioning-ineligible. Version 1 task evidence retains its original
+missing source/task exclusions; Record 56 typed tasks resolve the exact import
+and carry the concrete native-input and dataset/evaluation limits.
 
 `training_evidence.py` resolves canonical content hashes into saved task rows,
 snapshot membership, exact-subject Mousecat results, exclusions and evaluation
@@ -64,3 +63,14 @@ python tools/test_import_sao_world_knowledge.py
 python tools/test_retriever_targets.py
 python tools/test_training_evidence.py
 ```
+
+
+`conversation_tasks.py` imports a registry-reviewed C77 capture from exact SAO
+Git blobs and verifies all installed sources against supplied local files. Its
+version 2 task evidence retains the source catalogue/context and explicitly binds
+incoming utterance roles. The frame validates speech act, owned claim references,
+listener, directed stance and finite uncertainty. Action-bearing frames require a
+future executable-option source contract. Immutable evidence publication verifies
+seals before atomically exposing a new content address. `approve` resolves an
+exact completed Mousecat ruling into a task evidence snapshot. It confers no
+retriever approval. See [the task contract](../training/understander/README.md).

@@ -307,6 +307,15 @@ def validate_review(value: Any, proposal: dict[str, Any], evidence=None) -> dict
     return value
 
 
+def task_conditioning(anchor, catalogue, evidence=None):
+    row = (evidence or Evidence.Store()).task_anchor(anchor, catalogue)
+    if row.get("schemaVersion") == 2:
+        import conversation_tasks as C
+        return C.task_conditioning(row, evidence)
+    return {"status": "ineligible", "exclusions": [
+        "source-catalogue-coverage-not-verified", "task-schema-admission-not-implemented"]}
+
+
 def admit(proposal: dict[str, Any], review: dict[str, Any], row_id: str,
           evidence=None) -> dict[str, Any]:
     proposal = validate_proposal(proposal, evidence)
@@ -330,11 +339,7 @@ def admit(proposal: dict[str, Any], review: dict[str, Any], row_id: str,
         },
         "review": copy.deepcopy(review),
         "standing": "approved",
-        "conditioning": {
-            "status": "ineligible",
-            "exclusions": ["source-catalogue-coverage-not-verified",
-                           "task-schema-admission-not-implemented"],
-        },
+        "conditioning": task_conditioning(proposal["anchor"], proposal["input"]["catalogue"], evidence),
     })
 
 
@@ -347,11 +352,9 @@ def validate_target(value: Any, evidence=None) -> dict[str, Any]:
     nonempty(value["rowId"], "rowId")
     require(value["policy"] == POLICY and value["standing"] == "approved",
             "retriever target is not independently approved")
-    require(value["conditioning"] == {
-        "status": "ineligible",
-        "exclusions": ["source-catalogue-coverage-not-verified",
-                       "task-schema-admission-not-implemented"],
-    }, "target cannot claim missing source/task admission")
+    require(value["conditioning"] == task_conditioning(
+        value["anchor"], value["input"]["catalogue"], evidence),
+        "target cannot claim missing source/task admission")
     fields(value["input"], {"catalogue", "context"}, "retriever target input")
     catalogue, refs = validate_catalogue(value["input"]["catalogue"])
     context = value["input"]["context"]
@@ -472,8 +475,8 @@ def compile_snapshot(snapshot_id: str, targets: list[dict[str, Any]],
         "evaluationReceipts": evaluation_rows,
         "conditioning": {
             "status": "ineligible",
-            "exclusions": ["source-catalogue-coverage-not-verified",
-                           "task-schema-admission-not-implemented"],
+            "exclusions": sorted({reason for row in ordered
+                                  for reason in row["conditioning"]["exclusions"]}),
         },
         "counts": {
             "rows": len(ordered),
@@ -507,7 +510,9 @@ def publish(path: Path, value: Any, inputs: list[Path], evidence=None) -> None:
     protected = Join.protected_artifacts()
     key = Join.canonical(path)
     forbidden = {Join.canonical(item) for item in
-                 inputs + [Join.PROTECTED_MANIFEST, POLICY_RECEIPT]}
+                 inputs + [Join.PROTECTED_MANIFEST, POLICY_RECEIPT,
+                           Author.ACQUISITION_CORRECTIONS,
+                           Join.ROOT / "training/understander/sources.json"]}
     require(path.suffix.lower() == ".json", "retriever output must be a JSON file")
     require(key not in forbidden and key not in protected,
             "output cannot replace an input, policy receipt, protected artifact, or protected manifest")

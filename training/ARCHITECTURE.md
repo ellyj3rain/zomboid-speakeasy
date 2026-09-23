@@ -9,10 +9,11 @@
 | Scope | The learned retrieval, understanding and speaking path that follows the version 3 decision and knowledge contracts |
 
 This contract resolves the model shape that the earlier speech design left open.
-It does not make any existing row training-eligible. Record 52 now supplies one
-reviewed person-claim reference, and SAO C75 supplies the typed snapshot-local
-catalogue and selected-claim fence. Neither artifact is an approved understander,
-retriever or speaker row.
+It does not make any existing row training-eligible. Record 55 supersedes Record
+52's unsupported acquisition. SAO C77 supplies a corrected authored capture with
+personal reading evidence. Record 56 imports that exact capture and validates an
+understander proposal; task and retrieval approval remain separate. SAO C75 owns
+the typed snapshot-local catalogue and selected-claim fence.
 
 ## One base, typed tasks
 
@@ -39,13 +40,22 @@ It emits a typed semantic frame:
 | `claimRefs` | claim identifiers the utterance refers to |
 | `requestedAction` | the requested executable action or `null` |
 | `stance` | the utterance's directed social stance |
-| `uncertainty` | the model's uncertainty for the frame |
+| `uncertainty` | uncertainty in the interpretation, finite from 0 to 1; an authored target labels ambiguity, while inference reports model uncertainty and requires calibration evaluation |
 | `listenerRef` | the intended listener identity |
 
 Every identifier is checked against the immutable input snapshot. Unknown claim,
 action or listener references refuse the frame. A semantic frame changes no
 belief, relationship or action by itself; the existing communication and action
 owners decide what an admitted frame does.
+
+The version 2 task evidence records incoming utterance roles explicitly. C77's
+catalogue `listenerRef` names the knowledge owner's conversation partner; the
+understander frame's `listenerRef` names the person addressed by the utterance.
+For the authored Jon-to-Mara question these are Jon and Mara respectively.
+Directed stance carries a nonempty `label` and an exact `targetRef`; semantic
+appropriateness is reviewed with the whole frame. C77 supplies no executable
+option inventory, so its task frames require `requestedAction: null`. Action
+frames need a source contract with executable references before admission.
 
 ## Learned knowledge retrieval
 
@@ -176,9 +186,12 @@ C75 catalogue, and evidence of source coverage. Speakeasy then imports that
 capture and validates a typed understander or speaker example over it. Its
 approved required references can anchor a retriever target for separate review.
 
-Record 54's version 2 compiler resolves task evidence and saved approvals, but
-source-catalogue coverage and task-specific schema admission remain unimplemented.
-It therefore records every compiled target and snapshot as conditioning-ineligible.
+Record 54's version 2 compiler resolves task evidence and saved approvals. Record
+56 adds exact C77 source import and typed understander admission. Its coverage is
+the captured bodyless Knowledge-topic surface; unavailable native inputs stay
+visible. Task evidence version 1 retains its previous source/task exclusions;
+version 2 carries the concrete native-input and absent dataset/evaluation limits.
+Compiled targets and snapshots remain conditioning-ineligible.
 This is an implementation boundary, not a new operator decision. The concrete
 sequence is in [retriever/EVIDENCE.md](retriever/EVIDENCE.md). After eligible examples
 exist, Speakeasy can build the three task datasets, frozen tokenizer, reference

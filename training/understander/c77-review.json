@@ -1,0 +1,89 @@
+{
+  "schema": "mousecat.ml-review/1",
+  "subject": "Mara understands a question about an older newspaper report",
+  "scenario": "It is July 11, 1993. Mara Reed, a salesperson from Muldraugh, is talking with Jon Vale nearby. On July 10, Mara finished reading the July 2 Knox Knews issue. Jon asks: \"What did the July 2 newspaper report about phone service?\" Mara has a personal reading receipt for that issue. Jon has no such receipt. The encounter, people and dates are authored; the production knowledge owners and installed native reading completion ran over controlled objects.",
+  "systemRole": "This is one understander example: a target interpretation of an incoming utterance. It connects a specific person's available knowledge to the question being asked. It is not the wording of Mara's eventual answer.",
+  "causalPath": [
+    {
+      "label": "Acquisition",
+      "value": "Mara completes reading the dated issue. Her private knowledge holds a reported claim with separate publication and reading times."
+    },
+    {
+      "label": "Understanding",
+      "value": "Jon's words are interpreted as a neutral question addressed to Mara, referring to the July 2 report; no executable action is requested."
+    },
+    {
+      "label": "Later retrieval and speaking",
+      "value": "A separately reviewed retriever target can teach selection of the report. A future speaker example can teach a properly dated, attributed answer. Neither later task is approved here."
+    }
+  ],
+  "playerImpact": "Eventually a player should be able to ask an NPC what they learned from an older source and receive an answer grounded in that person's actual access. This example supports that path. Approving it changes no game behavior or model weights today.",
+  "decisionPrecedent": "Your ruling establishes the meaning of this exact question in this exact scene. It teaches recognition of a question about a dated report and its intended recipient. It does not teach personal Internet use, present service conditions, or automatic knowledge from residence.",
+  "actualInput": [
+    {
+      "label": "Question",
+      "value": "What did the July 2 newspaper report about phone service?"
+    },
+    {
+      "label": "Who speaks and who understands",
+      "value": "Jon Vale asks; Mara Reed is addressed. The source catalogue calls Jon listenerRef because he is Mara's conversation partner. The task explicitly records Jon as utterance speaker and Mara as utterance listener."
+    },
+    {
+      "label": "Timeline",
+      "value": "Publication: July 2 (county hour -168). Mara's reading completion: July 10 (hour 24). Question: July 11 (hour 48)."
+    },
+    {
+      "label": "Source report",
+      "value": "The protected source records Knox Telecommunications' telephone and Internet networks failing across the Knox area for hours, still down at press time; businesses closed; cause unannounced, with speculation about downed wires, lightning or sabotage. The question concerns the phone-service part of this report."
+    },
+    {
+      "label": "Mara's complete eight-claim catalogue",
+      "value": "0001: was a salesperson in Muldraugh when it started. 0002: origin text \"a vacation that never ended\". 0003: observed Jon Vale just east, condition ok, just now. 0004: lesson entry withheld; no lesson content is disclosed. 0005: the dated world report, learned by reading. 0006: before entry tagged \"innocent\". 0007: born in 1962. 0008: from Muldraugh. The seven other entries receive no negative retrieval label."
+    },
+    {
+      "label": "Conditioning and limits",
+      "value": "The captured conditioning includes anxious, trust 0, no hostility or debt, plus exact traits in the source artifact. Native current needs, bite and loaded-controller pressure are unavailable in this bodyless capture."
+    }
+  ],
+  "proposedLearning": [
+    {
+      "label": "Speech act and social stance",
+      "value": "Question; neutral stance directed to Mara. This means a straightforward request for information, with no threat, offer or executable-action request."
+    },
+    {
+      "label": "Referenced knowledge",
+      "value": "The single required reference is claim 0005: the July 2 report personally read by Mara. Its combined source wording remains intact; this label does not require an answer about Internet access."
+    },
+    {
+      "label": "Interpretation certainty",
+      "value": "uncertainty = 0 is the proposed annotation that this authored question has an unambiguous reading. It is not measured model confidence, confidence that the newspaper was correct, or certainty about service today."
+    },
+    {
+      "label": "Exact typed frame",
+      "value": "speechAct=question; claimRefs=[0005 in this bound snapshot]; requestedAction=null; stance={label:neutral,targetRef:sao-1}; uncertainty=0; listenerRef=sao-1 (Mara)."
+    }
+  ],
+  "approvalEffects": [
+    "Records operator approval for this exact typed example and its source-bound input.",
+    "Allows its required claim reference to anchor a separate retriever proposal. All other claims remain unjudged unless independently reviewed."
+  ],
+  "remainingExclusions": [
+    "No speaker answer, retrieval label approval, training run, model weights or runtime deployment is authorized by this row ruling.",
+    "The example remains authored and bodyless, with unavailable native inputs. Task dataset splits and evaluation are not built.",
+    "The source establishes neither personal Internet use nor household ubiquity, recovery after hours, or continuing outage on July 11."
+  ],
+  "evidence": [
+    {
+      "label": "Published source",
+      "value": "SAO C77, commit 9d08d15de222e49e844b9b0e01e0981ce4009cfa. Capture 41f24ea028bab23d320d47f3510c120d585bf30eb5724791a858e4bc8c258374. All producer file hashes and installed reading/calendar sources verified."
+    },
+    {
+      "label": "Exact reviewed task",
+      "value": "6acc7ddbad5e25d201ce04e6c1cd54f65fc87fe619c8b794fbe860340f0fa5a7"
+    },
+    {
+      "label": "Import receipt",
+      "value": "f71389f06f52f44372a27850b9eddf9a43ccecdf14e826f6b5624b539bd1ed26"
+    }
+  ]
+}

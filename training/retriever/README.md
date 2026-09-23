@@ -103,12 +103,15 @@ python tools/test_training_evidence.py
 
 ## Current state
 
-No real retriever row or dataset snapshot exists yet. Record 52 supplies one
-reviewed person-claim reference, and SAO C75 supplies the typed catalogue and
-selected-claim fence, but no approved understander or speaker example exists to
-anchor a relevance target. Record 53 established the policy; Record 54 repairs
-the compiler's unresolved evidence references and incomplete context comparison.
-Both create zero training rows, change no model weights and change nothing in
-play. The next producer captures an actual immutable conversation snapshot in
-SAO, including coverage evidence for the person's available knowledge. A typed
-task example and its independent retrieval target then follow that capture.
+Record 55 supersedes Record 52's unsupported acquisition. C77 supplies the
+corrected authored capture; Record 56 imports it and validates a typed
+understander proposal. Its [current review](../understander/README.md) binds
+Jon's question to Mara and her personally read July 2 report. A separate
+retriever proposal can follow the completed task approval. Required references
+come from that exact frame; other owned claims remain unjudged.
+
+Version 2 typed-task anchors resolve the imported source and frame validation.
+Their conditioning remains ineligible with the explicit unavailable native-input
+and absent task-dataset/evaluation limits. Version 1 task anchors retain the
+original source/task exclusions. Mixed snapshots retain every row's exclusions.
+No model weights or player-visible behavior change.
