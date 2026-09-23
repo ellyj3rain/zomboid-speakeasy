@@ -91,27 +91,28 @@ model or runtime behavior.
 
 ## Next concrete example
 
-The protected source establishes a telephone and Internet outage **for hours on
-July 2**, and Record 52 establishes Ada's retained memory of it. It does not
-establish a continuing outage on July 11. The earlier question "Why can't we call
-for help?" is therefore unsuitable as a sole-positive example over this fact.
+Record 55 supersedes Record 52's unsupported lived acquisition. The protected
+July 2 source is an hours-long telephone and Internet outage report, ongoing at
+publication. It establishes neither an individual's service use nor recovery
+after hours. Historical approval hashes do not restore that acquisition.
 
-The proposed first understander example is an explicitly authored exchange:
-"Do you remember the telephone outage on July 2?" Its candidate frame would mark
-a question, refer to the retained historical claim, and request no executable
-action. The eventual panel must show the exact source claim, date, person,
-listener, complete input catalogue and proposed frame. Approval would teach that
-interpretation of this question; it would establish nothing about current phone
-service or the cause of either outage. This is a planned candidate, not an
-approved example or a transcript of play.
+SAO C77 supplies the corrected authored scene: Mara reads the July 2 newspaper
+on July 10; Jon asks on July 11, "What did the July 2 newspaper report about phone
+service?" Her fact remains `reported` and `read`, with separate publication and
+acquisition hours. Jon has no receipt. The native completion executes over
+controlled engine objects; it is not a transcript of play or autonomous reading.
+
+The panel must show the person, listener, circumstances, actual report evidence,
+complete catalogue, exact question and proposed interpretation together. A task
+ruling teaches that interpretation; it establishes no current service condition
+and does not approve the independent retriever target.
 
 | Next producer | Owner and implementation | Completion evidence |
 |---|---|---|
-| Immutable conversation capture | SAO: capture full run/county/person/event/time namespace, calendar, listener, current revisions and every requested knowledge topic; record source failure and coverage explicitly | Export from the production catalogue over frozen owner state; prove that a missing source cannot masquerade as an empty known set |
-| Person-specific import | Speakeasy: import exact snapshot bytes and source receipts; retain Record 52's reviewed historical claim and controlled-choice exclusions | Rebuild from the exact SAO revision; reject changed person, time, calendar, coverage or source hashes |
-| Typed understander proposal | Speakeasy: validate the ratified frame fields and each listener, claim and action reference; keep authored input distinguishable from play | Concrete candidate and readable Mousecat card; no automatic approval |
-| Independent retrieval review | Speakeasy: derive required references from the approved task, preserve unjudged facts and present any hard negatives with reasons | Separate exact-subject ruling, then v2 evidence validation |
+| Corrected conversation import | Speakeasy imports the exact C77 capture and person-bound native reading receipt | Reject changed person, time, calendar, coverage or source hashes; retain report versus experience |
+| Typed understander proposal | Validate frame fields, listener, claim and action references; preserve authored input standing | Human-readable scene and exact proposed meaning; no automatic approval |
+| Independent retrieval review | Derive required references from the approved task, preserve unjudged facts and explain negatives | Separate exact-subject ruling with resolved evidence |
+| Future computer sources | SAO integration binds actor, endpoint, service/application, content version or attempted operation, result and time | Installed mods or owned devices alone cannot grant knowledge; local failure cannot establish provider-wide outage |
 
-The first conversation capture is the next implementation step. The existing
-catalogue test's stub people and Record 52's forced food-source event cannot
-establish it by relabelling their fixtures.
+The original C74/C76 artifacts remain historical. The next implementation uses
+the corrected capture; no real task row, target or trained model exists yet.

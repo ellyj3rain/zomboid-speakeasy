@@ -456,7 +456,7 @@ class AuthoringTest(unittest.TestCase):
 
     def test_protected_paths_inputs_and_manifest_are_not_outputs(self):
         view = self.compile()
-        for output in (self.capture, self.knowledge, Join.PROTECTED_MANIFEST,
+        for output in (self.capture, self.knowledge, Join.PROTECTED_MANIFEST, Author.ACQUISITION_CORRECTIONS,
                        Join.ROOT / "world/us-1993/timeline.md"):
             with self.subTest(output=output):
                 before = output.read_bytes()

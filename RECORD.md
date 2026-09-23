@@ -1470,3 +1470,45 @@ source split leakage, evaluation scope, contradictory exclusions, false training
 eligibility, evidence overwrite and atomic failure. The original 190 choices and
 nine world documents still pass their protected-byte audit and retain their
 existing standing.
+
+---
+
+## 55 - Correct unsupported personal acquisition (2026-09-22)
+
+Timestamp: 2026-09-23 02:27 UTC / 19:27 PST.
+
+The operator questioned the 1993 Internet assumption and pointed out why source
+inclusion and future computer-mod compatibility require this distinction.
+Record 52 had reviewed a combined phone/Internet claim as Ada North's lived
+knowledge because C74 placed her in the county as an adult. Those facts prove
+neither report reception nor personal service use. The installed newspaper
+contains the literal combined report, with an outage still ongoing at printing.
+It does not establish household Internet ubiquity or recovery after hours.
+
+The source documents and every imported/reviewed Record 52 artifact retain
+their original bytes. The current correction registry revokes the old exact
+acquisition and its underlying acquisition/retention evidence. View compilation
+excludes that evidence, including claim-ID changes and relabelled read paths
+with consistently resealed reviews. The registry hash enters generated view
+provenance and the compiler cannot overwrite it. Independent new reading
+evidence is not revoked and inherits no adjudication. The old example generator
+refuses regeneration and current validation; historical import verification
+remains available as an integrity check.
+
+SAO C77 replaces automatic presence grants with an exact held-issue native
+reading completion and durable person-bound receipt. It withholds saved legacy
+grants and preserves them during migration. Its corrected authored scene has
+Mara read the July 2 report on July 10 and receive a July 11 question about what
+the paper reported. Publication and acquisition times remain separate. Computer
+integration must similarly bind person, endpoint, service/application, source
+version or operation, completion result and time. Device ownership and installed
+compatibility supply no knowledge; observed failure remains local to the attempt.
+
+The review reproduced an initial revocation bypass by resealing changed labels
+around the same evidence. Underlying evidence revocation and full replay controls
+repair it. Seventy-four tests pass, including preserved historical import,
+retired-generator refusal without output, old-review replay, renamed claim and
+relabelled path, independent fresh reading evidence and registry overwrite
+refusal. This correction creates no training rows, model weights or operator
+rulings. Exact C77 import and typed task validation precede concrete task review;
+retrieval retains the independent review required by Records 53-54.

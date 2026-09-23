@@ -1,0 +1,27 @@
+{
+  "schema": "speakeasy-acquisition-corrections",
+  "schemaVersion": 1,
+  "corrections": [
+    {
+      "id": "record-55",
+      "reason": "county-presence-does-not-prove-acquisition",
+      "claimId": "knox-telecommunications-outage-1993-07-02",
+      "sourceExcerptSha256": "f663ffcbaa873c8fb228e1fbdf8574861a0f149559d1fec20695c6be32e82c60",
+      "rejectedPath": "lived",
+      "revoked": {
+        "claimSha256": "91f6e6385bb340a5637910ad3a16944d0aed390997070b0f57e2a7eedd15f95f",
+        "acquisitionSha256": "9cff84e276c2809ed9edb86bdbbb9f9142b197db56a85e0c5bc1cd4ad16403f6",
+        "reviewContentSha256": "869402d6ed817ce0318e8dc4b027d3ddb51b90968bf4f1bc56415239709603ef",
+        "evidenceSha256": [
+          "db894925b5cee5ef00c855d1aaaa9cf63f412c0672d51b8a0ef43e2b7bb59c22",
+          "30ef59bc4a68532d6074557cf2d65aff05894ca55c021228089d18e2fc5e8c44"
+        ]
+      },
+      "sourceStanding": "Literal game report retained; household Internet ubiquity is not inferred.",
+      "acquisitionBoundary": "A person must acquire the report through evidenced reading or communication. Personal service use and locally observed failure are separate narrower knowledge.",
+      "temporalBoundary": "Hours-long and ongoing at publication does not establish recovery after hours.",
+      "computerIntegration": "An installed computer mod or owned device supplies no knowledge. A future adapter must identify the person, endpoint, service, access and actual result; reported content keeps its source and reception time.",
+      "sourcePath": "world/us-1993/knox-event.md"
+    }
+  ]
+}

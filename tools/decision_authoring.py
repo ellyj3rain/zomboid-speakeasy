@@ -26,11 +26,40 @@ PATHS = {"read", "heard", "lived", "told"}
 CLAIM_REVIEW_SCHEMA = "speakeasy-claim-extraction-review"
 ACQUISITION_REVIEW_SCHEMA = "speakeasy-acquisition-adjudication"
 RESOLVED_SOURCE_EXCLUSIONS = {"person-knowledge-not-reconstructed"}
+ACQUISITION_CORRECTIONS = Path(__file__).resolve().parents[1] / "decisions/acquisition-corrections.json"
 
 
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise Join.ContractError(message)
+
+
+def acquisition_correction(record: dict[str, Any], claim: dict[str, Any]) -> str | None:
+    """Current applicability is separate from the integrity of a sealed review."""
+    corrections = read(ACQUISITION_CORRECTIONS)
+    require(corrections.get("schema") == "speakeasy-acquisition-corrections"
+            and corrections.get("schemaVersion") == 1
+            and isinstance(corrections.get("corrections"), list)
+            and corrections["corrections"], "acquisition correction registry unavailable")
+    for correction in corrections["corrections"]:
+        require(isinstance(correction, dict) and correction.get("id")
+                and correction.get("reason") and correction.get("revoked"),
+                "invalid acquisition correction")
+        exact = digest(record) == correction["revoked"]["acquisitionSha256"]
+        basis = (claim["source"]["path"] == correction["sourcePath"]
+                 and claim["source"]["excerptSha256"] == correction["sourceExcerptSha256"]
+                 and record["path"] == correction["rejectedPath"])
+        revoked = correction["revoked"].get("evidenceSha256")
+        require(isinstance(revoked, list) and bool(revoked), "missing revoked evidence basis")
+        for value in revoked:
+            hash_value(value, "revoked acquisition evidence")
+        supporting = list(record.get("evidence", []))
+        for check in record.get("checks", {}).values():
+            supporting.extend(check.get("evidence", []))
+        revoked_basis = any(item.get("sha256") in revoked for item in supporting)
+        if exact or basis or revoked_basis:
+            return correction["id"] + ":" + correction["reason"]
+    return None
 
 
 def encoded(value: Any) -> bytes:
@@ -367,6 +396,8 @@ def claim_review(receipt: Any, claim: dict[str, Any],
 
 def acquisition_review(receipt: Any, record: dict[str, Any], claim: dict[str, Any],
                        ns: dict[str, Any], event_sha256: str) -> None:
+    require(acquisition_correction(record, claim) is None,
+            "acquisition adjudication superseded by current correction")
     fields(receipt, {"schema", "schemaVersion", "claimId", "claimSha256",
                      "acquisitionSha256", "namespace", "eventSha256",
                      "importEvidence", "checks", "status", "reviewer",
@@ -463,6 +494,9 @@ def evidence_reason(record: Any, claim: dict[str, Any], ns: dict[str, Any],
             require(bool(check["evidence"]), "supported checks need evidence")
         for item in check["evidence"]:
             reference(item)
+    correction = acquisition_correction(record, claim)
+    if correction:
+        return correction
     if record["namespace"] != ns:
         return "other-person-or-event"
     if record["acquiredHour"] > ns["hour"] or record["asOfHour"] != ns["hour"]:
@@ -521,7 +555,7 @@ def compile_view(capture_path: Path, bundle_path: Path,
                 "acquisition refers to an unknown claim")
         reason = evidence_reason(record, claims[record["claimId"]], ns, calendar)
         adjudication = receipts["acquisition"].get(digest(record))
-        if adjudication is not None:
+        if adjudication is not None and acquisition_correction(record, claims[record["claimId"]]) is None:
             acquisition_review(adjudication, record, claims[record["claimId"]],
                                ns, event["eventSha256"])
         acquisitions.setdefault(record["claimId"], []).append(
@@ -571,7 +605,8 @@ def compile_view(capture_path: Path, bundle_path: Path,
                  "provenance": {"captureSha256": Join.sha256(capture_path),
                                 "inputSha256": Join.sha256(bundle_path),
                                 "protectedManifestSha256": Join.sha256(Join.PROTECTED_MANIFEST),
-                                "receiptSha256": receipts["hashes"]},
+                                "receiptSha256": receipts["hashes"],
+                                "acquisitionCorrectionsSha256": Join.sha256(ACQUISITION_CORRECTIONS)},
                  "conditioning": {"status": "ineligible",
                                   "exclusions": sorted(exclusions)}})
 
@@ -617,7 +652,7 @@ def proposal(capture_path: Path, bundle_path: Path, view_path: Path,
 def publish(output: Path, value: dict[str, Any], inputs: list[Path]) -> None:
     protected = Join.protected_artifacts()
     key = Join.canonical(output)
-    forbidden = {Join.canonical(path) for path in inputs + [Join.PROTECTED_MANIFEST]}
+    forbidden = {Join.canonical(path) for path in inputs + [Join.PROTECTED_MANIFEST, ACQUISITION_CORRECTIONS]}
     require(key not in forbidden and key not in protected,
             "output cannot replace an input, protected artifact, or protected manifest")
     Join.atomic_write(output, [value])
