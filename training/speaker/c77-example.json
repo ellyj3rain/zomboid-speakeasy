@@ -7,7 +7,10 @@
   "itemId": "seam-743ad57c38f3212a",
   "reviewReceiptSha256": "27abbe3dca8737af8ebf5a5d35b953636724d73a67b5db1d198e388b91f470fc",
   "wordingProposalSha256": "5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b",
-  "wordingReview": "pending",
+  "wordingReview": "approved",
   "wordingInteractionId": "skill-d255b2e7c14ce745",
-  "wordingItemId": "seam-ba3f2749a58d5c23"
+  "wordingItemId": "seam-ba3f2749a58d5c23",
+  "wordingStanding": "approved-authored-wording",
+  "wordingReviewReceiptSha256": "4664e4a424891e9f82d95bca1ba31152d3d937a868db838c9f7e3dc310a85d7b",
+  "wordingReviewInterpretationSha256": "6555142d5f11f7c4afe0971c1cd858a539d02ef30ced1730094890f9863f970a"
 }

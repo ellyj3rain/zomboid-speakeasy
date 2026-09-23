@@ -28,7 +28,7 @@ it has no approval snapshot.
 
 Jon asks: "What did the July 2 newspaper report about phone service?"
 
-Mara's proposed answer:
+Mara's approved authored answer:
 
 > The July second paper said the phones were out all over Knox. For hours, Jon. Still down when it went to press, too. Businesses closed. They hadn't announced a cause—there was talk of wires down, lightning, sabotage... but that's all it was. Talk.
 
@@ -46,9 +46,22 @@ remain explicit. Its evidence object contains clause-by-clause source alignment.
 Exact wording proposal:
 `5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b`.
 `c77-personified-review.json` and `c77-personified-invocation.json` hold the
-actual new panel. Review is **pending**, interaction
+actual new panel. Review is **approved as one facet of personality or communicative style**, interaction
 `skill-d255b2e7c14ce745`, item `seam-ba3f2749a58d5c23`.
 `c77-example.json` tracks both subjects and their separate standing.
+
+The completed receipt is `4664e4a424891e9f82d95bca1ba31152d3d937a868db838c9f7e3dc310a85d7b`.
+The operator selected approval and wrote:
+
+> This is a good example of one facet of personality or communicative style. Approved. Ideally with the ML work we could establish some aspect of psychometric undercurrent rooted in the game. A concept already suggested at
+
+Interpretation `6555142d5f11f7c4afe0971c1cd858a539d02ef30ced1730094890f9863f970a`
+preserves the note and records explicit approval of the wording plus prospective
+direction for game-rooted psychometric work. The final phrase is incomplete;
+no missing citation is inferred. The generic automatic task-admission checker
+continues to refuse receipts with freeform notes. This interpreted wording
+approval creates no task snapshot and changes no validator.
+
 
 The revision is a `speakeasy-speaker-wording-proposal`, not an admitted version 3
 speaker task. Its seal identifies the exact input, output and review rationale.
@@ -116,6 +129,37 @@ The runtime's free-composition semantics and register floors need their own
 implementation before natural paraphrases can receive the same mechanical
 guarantee. No dataset split, evaluator result or runtime behavior is generated
 by approving this example.
+
+## Game-rooted personality continuation
+
+The operator's wording approval accepts one facet of expression and asks for
+a psychometric undercurrent rooted in the game. The existing contract already
+calls for learned voice from temperament, listener trust and circumstances
+(SAO `SPEECH_ML_DESIGN.md`, Decision 5), with the same person speaking
+differently under strain. This is the continuation basis.
+
+Source inspection at SAO commit
+`9d08d15de222e49e844b9b0e01e0981ce4009cfa` establishes:
+
+| Existing surface | What it supplies | Next evidence required |
+|---|---|---|
+| `mod/42.20/media/lua/shared/SAO_Disposition.lua`, `trait` and `D.traits` | Eight effective axes from stable identity, history echoes, lesson echoes and condition bends, bounded to 0.15–0.85; downstream decisions consume them | Preserve effective-value meaning and trace each input's provenance; condition labels and already-bent axes must not be mistaken for independent effects |
+| `mod/42.20/media/lua/shared/SAO_Knowledge.lua`, `K.conditioning` | Effective traits, conditions, habits, listener trust/debt/hostility, plus available pressure, needs and other moment inputs | Explicit availability, participant identity labels, and live input coverage before training admission |
+| `voice/README.md` and `voice/seeds.md` | Authored contrasts between people and between ordinary company, work and threat | Source-bound paired examples with reviewed wording and unchanged factual entitlement |
+| `training/ARCHITECTURE.md`, speaker conditioning | Learned composition with external limits on speech under hostility, guardedness, grief, threat, work and exhaustion | Semantic admission and register enforcement, then separate factual and expression evaluation |
+
+The next implementation sequence is to bind participant identity and conditioning
+provenance, establish semantic admission for personified wording, and enforce
+the ratified register limits. Dataset work then compares the same person across
+circumstances and different people given the same facts, while keeping related
+captures together across dataset splits. Evaluation must distinguish stable
+personality, listener-specific relationships and temporary strain; a change of
+voice must not create new knowledge.
+
+These are game-owned behavioral dimensions. Their presence does not establish
+a validated psychometric instrument or a calibrated numerical mapping into
+speech. No new psychological taxonomy or scoring model is chosen by this
+wording approval.
 
 ## Reproduction
 
