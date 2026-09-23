@@ -81,10 +81,11 @@ action-bearing frame requires that source contract before admission.
 
 The approved task anchors the independently approved retrieval target with claim
 0005 required, no hard negatives, and seven unjudged claims. The next production
-step is a typed speaker example over the same admitted report, with mechanical
-checks that preserve attribution and dates before human review of its expression.
-Dataset splits and task evaluation then need explicit implementation; the
-approved target has not been assigned a split or made training-eligible.
+step is implemented in Record 57 as a [bounded speaker example](../speaker/README.md)
+over the same admitted report, with mechanical attribution and date checks
+before its independent expression review. General free composition, register
+floors, dataset splits and task evaluation remain explicit implementation work.
+The approved target has not been assigned a split or made training-eligible.
 
 ## Reproduction
 

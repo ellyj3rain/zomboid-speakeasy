@@ -133,7 +133,7 @@ own operator ruling; approval of the anchor does not transfer.
 Required-claim recall and reviewed-hard-negative selection are measured against
 their labels. Unjudged claims do not count as correct or incorrect. This prevents
 one valid omission from becoming a universal irrelevance label. The exact policy,
-artifact flow and current zero-row standing live in
+artifact flow and current example standing live in
 [`retriever/README.md`](retriever/README.md).
 
 ## Runtime scheduling
@@ -184,8 +184,19 @@ SAO C77 captures the immutable authored conversation: county and calendar
 identity, person and partner, context and revisions, the C75 catalogue and source
 coverage. Speakeasy Record 56 imports it, validates the understander example and
 records separate approvals for that interpretation and its retrieval target.
-The next task-specific producer is a speaker example over the same admitted
-report, with attribution and date checks before expression review.
+Record 57 adds a typed speaker example over the same admitted report, with
+attribution and date checks before independent expression review. Speaker task
+evidence version 3 resolves both previous approvals, carries only selected
+claims in its explicit model input, and preserves full catalogue/context as
+audit evidence. Its currently supported reported-source parts reproduce the
+whole protected summary under dated attribution. The shared evidence resolver
+validates that bounded expression before admitting a speaker anchor.
+
+This data renderer does not implement the ratified learned free-composition
+decoder or deterministic register floors. It records both as conditioning
+exclusions, alongside the upstream unavailable-native-input and dataset/evaluation
+limits. The operator reviews the exact example, not a replacement runtime model
+architecture. [The speaker contract](speaker/README.md) defines this scope.
 
 Record 54's version 2 compiler resolves task evidence and saved approvals. Record
 56 adds exact C77 source import and typed understander admission. Its coverage is

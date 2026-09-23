@@ -309,6 +309,9 @@ def validate_review(value: Any, proposal: dict[str, Any], evidence=None) -> dict
 
 def task_conditioning(anchor, catalogue, evidence=None):
     row = (evidence or Evidence.Store()).task_anchor(anchor, catalogue)
+    if row.get("schemaVersion") == 3:
+        import speaker_tasks as S
+        return S.conditioning(row, evidence)
     if row.get("schemaVersion") == 2:
         import conversation_tasks as C
         return C.task_conditioning(row, evidence)

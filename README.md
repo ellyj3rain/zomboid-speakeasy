@@ -59,6 +59,13 @@ and independent retrieval review remain separate. Native-input limitations and
 missing task dataset splits/evaluation keep this controlled example ineligible
 for training; no model exists.
 
+Record 57 adds the [first speaker example](training/speaker/README.md) over that
+approved chain. It mechanically preserves a complete source summary with its
+publication date and report attribution. The exact answer has its own narrative
+review. This bounded expression is not the general free-composition decoder or
+final NPC voice; those and the register floors remain explicit implementation
+work.
+
 The learned runtime and training shape is now ratified in
 [`training/ARCHITECTURE.md`](training/ARCHITECTURE.md) (record 51): one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model

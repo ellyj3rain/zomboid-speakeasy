@@ -74,3 +74,13 @@ future executable-option source contract. Immutable evidence publication verifie
 seals before atomically exposing a new content address. `approve` resolves an
 exact completed Mousecat ruling into a task evidence snapshot. It confers no
 retriever approval. See [the task contract](../training/understander/README.md).
+
+
+`speaker_tasks.py` proposes and validates version 3 speaker evidence over an
+approved understander/retriever chain. Its bounded reported-source renderer
+preserves complete source-summary cells, publication dates and attribution;
+model input contains selected claims and exact voice/context channels. The
+shared resolver validates this task version before anchor admission, and its
+conditioning retains explicit free-composition and register-floor limitations.
+See [the speaker example](../training/speaker/README.md). Its exact wording needs
+independent Mousecat approval before a speaker evidence snapshot can be made.
