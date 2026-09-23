@@ -1,0 +1,14 @@
+{
+  "schema": "speakeasy-conversation-sources",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "sao-c77-authored-report",
+      "repository": "https://github.com/ellyj3rain/sao",
+      "commit": "9d08d15de222e49e844b9b0e01e0981ce4009cfa",
+      "path": "artifacts/audits/20260923-0227Z-1927PST-evidenced-world-knowledge/example",
+      "captureSha256": "41f24ea028bab23d320d47f3510c120d585bf30eb5724791a858e4bc8c258374",
+      "manifestSha256": "84efabd69a7fd59780873ed8d1414e892393eb29cad7e3bbbff6fed652c96c4e"
+    }
+  ]
+}

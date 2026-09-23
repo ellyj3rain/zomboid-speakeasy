@@ -17,3 +17,4 @@ world/us-1993/who-knows-what.md text eol=crlf
 world/us-1993/work-and-money.md text eol=crlf
 world/people-mods.md text eol=crlf
 decisions/acquisition-corrections.json text eol=lf
+training/understander/** text eol=lf

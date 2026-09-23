@@ -33,54 +33,39 @@ The architecture ruling does not change that standing. It determines how
 eligible data will train and ship; it does not manufacture acquisition,
 conditioning or ratification for an existing row.
 
-The version 1 [knowledge/authoring tool](../decisions/AUTHORING.md) now prepares
-content-hashed views and separately authored proposals over frozen events. It
-now imports one C74 same-person acquisition, reviews the claim boundary,
-adjudicates the evidence and compiles an exact reviewed reference. This closes
-the absence of a concrete acquisition example; it does not create a training
-row. The source choice was forced, later consequences were not observed, and one
-retained claim does not establish the person's complete decision-time knowledge.
-Natural choice evidence, broader producer coverage and dataset-scale admission
-remain required before training. SAO C75 now compiles one person's broad private
-knowledge into deterministic snapshot-local claim references and fences a
-selected subset. It supplies the runtime input shape without creating examples.
+The version 1 [knowledge/authoring tool](../decisions/AUTHORING.md) prepares
+content-hashed views and separately authored proposals over frozen events.
+Record 55 supersedes Record 52's unsupported county-presence acquisition. Those
+historical artifacts remain intact and have no current acquisition authority.
 
-The retriever's label meaning is now ratified and implemented in
-[`retriever/`](retriever/README.md). Required references come from a separately
-approved understander or speaker example, explicit reviewed hard negatives are
-negative, and all other owned claims remain unjudged. Every retriever row has its
-own approval standing. Record 54's compiler opens and verifies the referenced
-task artifacts and saved approvals, binds the entire context, and keeps shared
-sources in one dataset split. It explicitly records missing source-coverage and
-task-schema validation: compiled labels remain conditioning-ineligible. No real
-row exists yet. [Evidence and continuation](retriever/EVIDENCE.md) names the
-producer required before the first task example.
+Record 56 imports SAO C77's exact authored conversation capture and validates a
+typed understander proposal. Mara reads a July 2 newspaper on July 10; Jon asks
+on July 11 what it reported about phone service. Personal reading completion,
+report publication and question time are independently bound. The narrative
+review explains the interpretation and learning consequence before approval.
+
+The retriever's label meaning is ratified in [retriever/](retriever/README.md).
+Required references come from a separately approved understander or speaker
+example. Explicit reviewed hard negatives are negative; other owned claims
+remain unjudged. Record 54 resolves exact task artifacts and saved rulings.
+Record 56 extends that resolver to source-bound typed task evidence. Approval
+of the task still does not approve its retrieval target.
 
 ## From a world event to play
 
-Record 52 covers one early stage of a longer causal path. Its value is that the
-later model can receive Ada's knowledge without receiving every fact in the
-world. It does not yet teach the model what to retrieve, say or understand.
-
 | Stage | What exists | Effect now |
 |---|---|---|
-| World fact | The July 2 telecommunications outage in the approved Knox record | Establishes what happened |
-| Person acquisition | SAO C74 records that Ada North was present, acquired the local claim through `lived`, and retained it through the later event | Establishes that this claim may appear in Ada's catalogue |
-| Record 52 reference | Speakeasy reproduces that exact person/claim/time join and refuses the forced food choice | Tests the future catalogue producer; creates zero training rows |
-| Typed catalogue and fence | SAO C75 gives current private facts stable references inside an immutable snapshot and admits only selected claims to the speaker fence | Runtime substrate built; current speech does not call it |
-| Retriever target contract | Record 53 defines independently reviewed labels; Record 54 resolves source artifacts and saved rulings, binds the whole context, and checks split independence | Evidence binding built; source coverage and task validation remain absent; zero real rows |
-| Dataset production | Approved understander, retriever and speaker rows with independent snapshots, exclusions, splits and evaluation receipts across many people | Not built |
-| Learned runtime | The retriever selects relevant owned claims, the speaker expresses fenced claims, and the understander maps player text to typed intent | No trained model exists |
-| Player experience | Different people can remember, omit and phrase different things while remaining unable to state facts they do not own | No behavior changes in this record |
+| Dated source | The July 2 Knox newspaper report | Records an outage ongoing at printing; present service requires separate evidence |
+| Personal acquisition | C77 native reading completion, exact issue and person-bound receipt | Mara owns reported knowledge acquired July 10; presence grants nothing |
+| Conversation capture | Exact source, calendar, people, context, eight-claim catalogue and coverage | Authored bodyless encounter; three native inputs explicitly unavailable |
+| Typed understanding | Record 56 validates the incoming question and intended listener against that capture | A concrete proposal for operator review; no automatic approval |
+| Retrieval | Independent exact-task anchor and separate label review | Required report reference, seven other claims unjudged; no inherited approval |
+| Dataset and evaluation | Separate task datasets, splits, exclusions and evaluator required | Not built; examples remain conditioning-ineligible |
+| Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 
-Record 52 supplies the first reviewed person-claim reference. Record 53 settles
-how retrieval targets are authored and reviewed without promoting that reference
-into a row. Record 54 corrects evidence-verification gaps in that compiler. The
-next step is a full conversation capture from SAO with source-coverage evidence,
-followed by a validated task example and separately reviewed retrieval target.
-The July 2 outage lasted hours; a historical question about that event is a
-grounded candidate, while "Why can't we call for help?" on July 11 requires
-additional current evidence.
+The current example's exact hashes and review standing live in
+[understander/c77-example.json](understander/c77-example.json). Its human-readable
+explanation and continuation are in [understander/README.md](understander/README.md).
 
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and

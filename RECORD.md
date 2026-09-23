@@ -1517,3 +1517,69 @@ Record 55 publication follow-through pins the correction registry to LF checkout
 bytes, matching its use as hashed input. The policy's content is unchanged;
 Windows and Linux now derive the same correction-provenance hash. Fresh checkouts
 with both autocrlf settings pass all 74 tests and produce the same policy hash.
+
+
+---
+
+## 56 - Source-bound conversation interpretation (2026-09-22)
+
+Timestamp: 2026-09-23 03:36 UTC / 20:36 PST.
+
+The corrected C77 encounter now has an exact Speakeasy import and typed
+understander proposal. Mara reads the July 2 Knox newspaper on July 10. Jon asks
+on July 11 what it reported about phone service. The import reads the published
+SAO commit, verifies all 58 repository source blobs and three installed files,
+and checks the protected source excerpt, person-bound native completion,
+retention, calendar and full conversation context. The capture remains authored
+and bodyless, with native needs, bite and controller pressure unavailable.
+
+A repository-reviewed source registry pins the exact capture and manifest.
+Content seals prove integrity; repository review establishes source authenticity.
+The original capture is preserved inside the import. Changed source hashes,
+participants, positions, acquisition, publication time or coverage cannot be
+resealed into a current import. Historical C74/C76 artifacts remain unchanged.
+No GPL implementation code enters this MIT repository.
+
+Version 2 task evidence retains the source catalogue/context and explicitly
+records incoming utterance roles. The catalogue calls Jon the conversation
+partner; the understander listener is Mara. Validation binds the six-field frame,
+owned ordered claim references, directed stance, uncertainty and exact listener.
+C77 exports no executable options, so its frames require a null action. The
+proposed question references the personally read report. Its zero uncertainty
+labels the authored interpretation's ambiguity, not source truth or measured
+model confidence.
+
+The existing retriever resolver now opens and validates that typed task and its
+source. Task approval still requires exact-subject saved Mousecat lineage and
+does not approve retrieval. Other facts remain unjudged. Version 1 task evidence
+retains its original exclusions; version 2 carries the unavailable-native-input
+and absent-task-dataset/evaluation limits, propagated through targets and mixed
+snapshots. Neither hash integrity nor operator approval removes those limits.
+
+The narrative Mousecat panel explains the scene, source, complete eight-claim
+catalogue, proposed learning and player consequence. At implementation close,
+interaction `skill-41b0c21490237499`, item `seam-3502bc9a6ecbd395`, is pending.
+The example remains proposed. A completed task ruling must be resolved before
+its separate retrieval proposal can be reviewed; no approved task snapshot,
+retriever target, training run or model is created by this implementation.
+
+Code review found malformed sealed objects could occupy an otherwise valid
+immutable evidence address. Publication now verifies seals before creating
+anything and publishes atomically without replacement. Review also tightened
+native issue/event semantics and participant positions. Independent replays
+confirm these repairs. All 85 tests pass, including 11 conversation controls;
+the protected 190-choice audit is unchanged. Current documentation corrects the
+retired Record 52 acquisition claims and names the actual continuation. No game
+files, runtime behavior or saves change.
+
+
+Record 56 review follow-through: the operator approved the exact understander
+proposal through the submitted interaction, without qualifications. The saved
+response `3d2ef7be3bf2a1722483e1779d9621a0f9a2d80f7412d8a931026f4a6fc4ee1d`
+resolves into a task evidence snapshot and an independent retrieval proposal.
+That proposal requires the report, supplies no hard negatives and leaves seven
+claims unjudged. Its separate narrative review is submitted as interaction
+`skill-49b957a427fb7f46`, item `seam-789dd79fd57f044e`; it does not inherit task
+approval. No conditioning eligibility or model change follows from the ruling.
+The source reader also now handles the longer Windows worktree path and retains
+Git diagnostics on read failure.

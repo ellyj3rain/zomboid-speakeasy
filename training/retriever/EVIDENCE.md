@@ -42,8 +42,8 @@ JSON object. Both use sorted keys, compact separators, UTF-8 and finite numbers.
 Every read recomputes the digest. Merely renaming a file cannot change its
 identity. Duplicate JSON keys are refused by the existing strict reader.
 
-Two small evidence envelopes bind task artifacts without defining a new model
-output grammar:
+The original evidence envelopes bind task artifacts. Record 56 adds typed task
+evidence version 2 over an exact imported source:
 
 | Envelope | Required body fields |
 |---|---|
@@ -69,7 +69,7 @@ retrieval evaluator, loss masking and model training remain future work.
 
 ## Label approval and training eligibility
 
-A v2 target can establish independent label approval. It cannot establish that
+For legacy task evidence version 1, a v2 target can establish independent label approval. It cannot establish that
 SAO supplied every currently available fact, or that an understander/speaker
 output passed its task-specific mechanical contract. C75 has no export receipt
 for complete conversation-source coverage, and the task-specific builders are
@@ -85,9 +85,14 @@ not implemented. Targets and compiled snapshots therefore explicitly retain:
 }
 ```
 
-Those are measured missing mechanisms, not operator-imposed prerequisites.
-Approval does not erase them. This batch creates no real target, training row,
-model or runtime behavior.
+Record 56 implements bounded source coverage and understander validation for the
+exact C77 import. Typed task evidence version 2 adds `sourceImportSha256` and
+`utteranceRoles` to its input while preserving the catalogue/context bytes. The
+resolver validates the typed row and source before comparing the anchor. For
+these rows the original two exclusions are replaced by the actual remaining
+limits: unavailable native inputs in the authored bodyless capture, and absent
+task dataset splits/evaluation. Mixed snapshots retain the union of row
+exclusions. Approval cannot erase them. See [the current task](../understander/README.md).
 
 ## Next concrete example
 
@@ -114,5 +119,7 @@ and does not approve the independent retriever target.
 | Independent retrieval review | Derive required references from the approved task, preserve unjudged facts and explain negatives | Separate exact-subject ruling with resolved evidence |
 | Future computer sources | SAO integration binds actor, endpoint, service/application, content version or attempted operation, result and time | Installed mods or owned devices alone cannot grant knowledge; local failure cannot establish provider-wide outage |
 
-The original C74/C76 artifacts remain historical. The next implementation uses
-the corrected capture; no real task row, target or trained model exists yet.
+The original C74/C76 artifacts remain historical. Record 56 implements the
+corrected import and typed proposal. Its exact hashes and current ruling are in
+`../understander/c77-example.json`. No trained model exists; independent retrieval
+review follows approval of the task.

@@ -93,13 +93,20 @@ class Store:
             key: binding[key] for key in ("rowId", "rowContentSha256", "approvalReceiptSha256")
         }, "task row is absent from the referenced snapshot")
         row = self.read(binding["rowContentSha256"])
-        A.schema(row, "speakeasy-task-evidence")
+        if row.get("schemaVersion") == 2:
+            import conversation_tasks as C
+            C.validate_task(row, self)
+        else:
+            A.schema(row, "speakeasy-task-evidence")
         A.fields(row, {"schema", "schemaVersion", "rowId", "task", "input", "output",
                        "requiredClaimRefs", "contentSha256"}, "task evidence")
         A.require(row["rowId"] == binding["rowId"] and row["task"] == anchor["task"],
                   "source task row identity differs")
-        A.require(A.digest(row["input"]) == A.digest({"catalogue": catalogue,
-                                                   "context": anchor["context"]}),
+        comparable = row["input"]
+        if row.get("schemaVersion") == 2:
+            comparable = {key: comparable[key] for key in ("catalogue", "context")}
+        A.require(A.digest(comparable) == A.digest({"catalogue": catalogue,
+                                                 "context": anchor["context"]}),
                   "source task input differs from anchor")
         A.require(row["requiredClaimRefs"] == anchor["requiredClaimRefs"],
                   "source task required claims differ from anchor")
