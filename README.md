@@ -61,8 +61,9 @@ for training; no model exists.
 
 Record 57 adds the [first speaker example](training/speaker/README.md) over that
 approved chain. It mechanically preserves a complete source summary with its
-publication date and report attribution. The exact answer has its own narrative
-review. This bounded expression is not the general free-composition decoder or
+publication date and report attribution. The operator requested an actual personified answer; its
+[dialogue and separate review](training/speaker/README.md#personified-revision)
+are now recorded, with the original formal task unapproved. This bounded expression is not the general free-composition decoder or
 final NPC voice; those and the register floors remain explicit implementation
 work.
 

@@ -1,0 +1,117 @@
+{
+  "action": "invoke",
+  "skillRef": "crucible",
+  "title": "Mara's personified answer",
+  "source": {
+    "host": "codex",
+    "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+    "invocationId": "speakeasy-r57-personified-5be5bbde"
+  },
+  "intake": {
+    "seams": [
+      {
+        "id": "speakeasy-r57-c77-personified",
+        "shape": "decision",
+        "title": "Hear Mara answer Jon",
+        "prompt": "Does this actual answer fit Mara and the scene as a speaker wording example?",
+        "description": "Jon: \"What did the July 2 newspaper report about phone service?\"\n\nMara: \"The July second paper said the phones were out all over Knox. For hours, Jon. Still down when it went to press, too. Businesses closed. They hadn't announced a cause—there was talk of wires down, lightning, sabotage... but that's all it was. Talk.\"",
+        "evidenceRef": "speakeasy:content-sha256:5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "mlReview": {
+          "schema": "mousecat.ml-review/1",
+          "subject": "Mara's actual answer to Jon",
+          "scenario": "It is July 11, 1993. Mara Reed, a salesperson from Muldraugh, is talking with Jon Vale nearby. On July 10, Mara finished reading the July 2 Knox Knews issue. Jon asks: \"What did the July 2 newspaper report about phone service?\" Mara has a personal reading receipt for that issue. Jon has no such receipt. The encounter, people and dates are authored; the production knowledge owners and installed native reading completion ran over controlled objects.",
+          "systemRole": "Review the actual proposed dialogue after the operator asked for a personified answer. Understanding and retrieval stay approved. The earlier source-summary answer has no operator approval.",
+          "causalPath": [
+            {
+              "label": "Knowledge",
+              "value": "Her personal reading receipt establishes reported knowledge of the July 2 article."
+            },
+            {
+              "label": "Question",
+              "value": "Jon asks about phone service in that article, not today's service."
+            },
+            {
+              "label": "Person speaking",
+              "value": "Short fragments and emphasis make the reported duration uneasy; she gives several relevant details without friendly reassurance or personal disclosure. This is one proposed realization, not a calibrated mapping from numeric traits to style. Jon's name identifies the supplied listener."
+            }
+          ],
+          "playerImpact": "This is the line the player would read as Mara's answer in this authored scene. Approval makes it a reviewed wording candidate; mechanical admission and training remain unfinished.",
+          "decisionPrecedent": "Accept one situated answer: Mara recounts an old phone-outage report with uneasy emphasis and keeps rumored explanations uncertain. This does not prescribe one voice for all anxious people.",
+          "actualInput": [
+            {
+              "label": "Jon asks",
+              "value": "What did the July 2 newspaper report about phone service?"
+            },
+            {
+              "label": "Mara in this scene",
+              "value": "Mara Reed, formerly a salesperson in Muldraugh, is standing near Jon on July 11. She read the July 2 paper yesterday. Her captured condition is anxious; trust is 0 and trusted is false, with no hostility or debt. These are authored people and circumstances."
+            },
+            {
+              "label": "Voice evidence",
+              "value": "Talkativeness 0.6897, nerve 0.3272, discipline 0.2375, initiative 0.6001, aggression 0.5462, compassion 0.2431, self-preservation 0.4433, appetite 0.8486. These values condition the scene; they do not establish a tested numerical style mapping. Native current needs, bite and controller pressure are unavailable."
+            },
+            {
+              "label": "What she can draw on",
+              "value": "The protected source records Knox Telecommunications' telephone and Internet networks failing across the Knox area for hours, still down at press time; businesses closed; cause unannounced, with speculation about downed wires, lightning or sabotage. The question concerns the phone-service part of this report."
+            }
+          ],
+          "proposedLearning": [
+            {
+              "label": "Mara says",
+              "value": "The July second paper said the phones were out all over Knox. For hours, Jon. Still down when it went to press, too. Businesses closed. They hadn't announced a cause—there was talk of wires down, lightning, sabotage... but that's all it was. Talk."
+            },
+            {
+              "label": "Why this phrasing",
+              "value": "Short fragments and emphasis make the reported duration uneasy; she gives several relevant details without friendly reassurance or personal disclosure. This is one proposed realization, not a calibrated mapping from numeric traits to style. Jon's name identifies the supplied listener."
+            },
+            {
+              "label": "What is selected",
+              "value": "Jon asks about phone service. The candidate recounts that part of the combined report and omits the Internet-network clause; it neither denies it nor implies household adoption or personal use."
+            },
+            {
+              "label": "Factual meaning",
+              "value": "She attributes the outage and press-time status to the July 2 paper, mentions closed businesses, and keeps all three possible causes as unconfirmed talk."
+            }
+          ],
+          "approvalEffects": [
+            "Accepts this exact personified answer as an authored wording candidate for this input and scene.",
+            "Preserves a separate exact-subject ruling for later speaker dataset work; no approval transfers to the old formal summary or a different sentence."
+          ],
+          "remainingExclusions": [
+            "This is authored dialogue, not output from a trained Speakeasy model.",
+            "The current exact-summary validator refuses this paraphrase. Approval does not establish mechanical factual correctness or training eligibility.",
+            "General free composition, deterministic register floors, missing native inputs, dataset splits and model evaluation remain unfinished."
+          ],
+          "evidence": [
+            {
+              "label": "Exact wording proposal",
+              "value": "5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b"
+            },
+            {
+              "label": "Mechanically checked source task",
+              "value": "147a1c1be6452110629c5e29c97ee8e7faf2203421fe33bc26727c9792bf27c8"
+            },
+            {
+              "label": "Operator revision",
+              "value": "This information is valuable but I can't approve it without the actual personified answer"
+            }
+          ]
+        },
+        "options": [
+          {
+            "label": "Approve this wording (Recommended)",
+            "value": "approved",
+            "description": "Accept this situated, personified answer as an authored candidate; its mechanical admission remains unfinished."
+          },
+          {
+            "label": "Revise this wording",
+            "value": "rejected",
+            "description": "Describe what Mara should sound like or which part of her answer does not fit."
+          }
+        ]
+      }
+    ]
+  }
+}

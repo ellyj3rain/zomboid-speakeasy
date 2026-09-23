@@ -1,8 +1,13 @@
 {
   "taskSha256": "147a1c1be6452110629c5e29c97ee8e7faf2203421fe33bc26727c9792bf27c8",
   "retrieverTargetSha256": "02af1fc6d30b308d1d809140bc2972dfc563d825ef713c28fbc0d8071317fb73",
-  "standing": "proposed",
-  "review": "pending",
+  "standing": "revision-requested",
+  "review": "answered",
   "interactionId": "skill-4ce382d92d3da70d",
-  "itemId": "seam-743ad57c38f3212a"
+  "itemId": "seam-743ad57c38f3212a",
+  "reviewReceiptSha256": "27abbe3dca8737af8ebf5a5d35b953636724d73a67b5db1d198e388b91f470fc",
+  "wordingProposalSha256": "5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b",
+  "wordingReview": "pending",
+  "wordingInteractionId": "skill-d255b2e7c14ce745",
+  "wordingItemId": "seam-ba3f2749a58d5c23"
 }
