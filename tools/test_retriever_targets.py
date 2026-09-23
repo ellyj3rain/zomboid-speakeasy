@@ -8,10 +8,12 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import cross_module_rows as Join
 import decision_authoring as Author
 import retriever_targets as Target
+import training_evidence as Evidence
 
 
 HASH_A = "a" * 64
@@ -20,6 +22,33 @@ HASH_C = "c" * 64
 
 
 class RetrieverTargetTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.evidence_root = Path(self.temporary.name)
+        mock = patch.object(Evidence, "ROOT", self.evidence_root)
+        mock.start()
+        self.addCleanup(mock.stop)
+
+    def save_evidence(self, value):
+        digest = value.get("contentSha256") or Author.digest(value)
+        (self.evidence_root / (digest + ".json")).write_text(
+            json.dumps(value), encoding="utf-8")
+        return digest
+
+    def mousecat(self, subject, status="approved", interaction="skill-row-review",
+                 item_id="row-0001"):
+        lineage = {"host": "codex", "sessionId": "fixture-only",
+                   "evidenceRef": "speakeasy:content-sha256:" + subject}
+        return self.save_evidence({
+            "schema": "mousecat.skill-invocation/2", "skillRef": "crucible", "action": "await",
+            "interactionId": interaction, "status": "answered",
+            "items": [{"id": item_id, "shape": "decision", "lineage": lineage}],
+            "responses": [{"itemId": item_id, "shape": "decision", "status": "answered", "value": status,
+                           "selectedOption": status, "selectedOptions": [status],
+                           "lineage": lineage, "notes": None}],
+        })
+
     def catalogue(self) -> dict:
         snapshot = "snapshot/ada/0001"
         return {
@@ -52,9 +81,9 @@ class RetrieverTargetTests(unittest.TestCase):
 
     def anchor(self, catalogue: dict, required: list[str] | None = None) -> dict:
         refs = [row["ref"] for row in catalogue["claims"]]
-        return Author.seal({
+        anchor = {
             "schema": Target.ANCHOR_SCHEMA,
-            "schemaVersion": 1,
+            "schemaVersion": Target.VERSION,
             "anchorId": "speaker-example-0001/retrieval",
             "task": "speaker",
             "catalogue": {
@@ -77,12 +106,30 @@ class RetrieverTargetTests(unittest.TestCase):
                 "standing": "approved",
             },
             "requiredClaimRefs": required if required is not None else [refs[0]],
+        }
+        row = Author.seal({
+            "schema": "speakeasy-task-evidence", "schemaVersion": 1,
+            "rowId": "speaker-0001", "task": "speaker",
+            "input": {"catalogue": catalogue, "context": anchor["context"]},
+            "output": {"text": "I remember the outage."},
+            "requiredClaimRefs": anchor["requiredClaimRefs"],
         })
+        row_hash = self.save_evidence(row)
+        decision_hash = self.mousecat(row_hash, interaction="skill-task-review")
+        member = {"rowId": row["rowId"], "rowContentSha256": row_hash,
+                  "approvalReceiptSha256": decision_hash}
+        snapshot = Author.seal({
+            "schema": "speakeasy-task-evidence-snapshot", "schemaVersion": 1,
+            "snapshotId": "speaker-approved/0001", "task": "speaker", "rows": [member],
+        })
+        anchor["taskExample"].update(member)
+        anchor["taskExample"]["datasetSnapshotSha256"] = self.save_evidence(snapshot)
+        return Author.seal(anchor)
 
     def review(self, proposal: dict, status: str = "approved") -> dict:
         return Author.seal({
             "schema": Target.REVIEW_SCHEMA,
-            "schemaVersion": 1,
+            "schemaVersion": Target.VERSION,
             "proposalId": proposal["proposalId"],
             "proposalContentSha256": proposal["contentSha256"],
             "status": status,
@@ -92,6 +139,7 @@ class RetrieverTargetTests(unittest.TestCase):
                 "interactionId": "skill-row-review",
                 "itemId": "row-0001",
                 "value": status,
+                "resultSha256": self.mousecat(proposal["contentSha256"], status),
             },
         })
 
@@ -222,8 +270,8 @@ class RetrieverTargetTests(unittest.TestCase):
 
     def test_task_approval_does_not_admit_a_retriever_row(self):
         proposal = self.proposal()
-        self.assertEqual(proposal["anchor"]["taskExample"]["approvalReceiptSha256"],
-                         HASH_B)
+        self.assertTrue((self.evidence_root / (
+            proposal["anchor"]["taskExample"]["approvalReceiptSha256"] + ".json")).is_file())
         self.assertEqual(proposal["standing"], "proposed")
         with self.assertRaisesRegex(Join.ContractError, "not approved"):
             Target.admit(proposal, self.review(proposal, "rejected"), "row-0001")
@@ -253,7 +301,7 @@ class RetrieverTargetTests(unittest.TestCase):
         target["review"]["decision"]["interactionId"] = "another-interaction"
         target["review"] = self.reseal(target["review"])
         target = self.reseal(target)
-        with self.assertRaisesRegex(Join.ContractError, "approval provenance"):
+        with self.assertRaisesRegex(Join.ContractError, "Mousecat interaction differs"):
             Target.validate_target(target)
 
     def test_dataset_snapshot_requires_explicit_complete_splits(self):
@@ -268,6 +316,11 @@ class RetrieverTargetTests(unittest.TestCase):
             "reason": "The target compiler controls passed.",
             "evidenceSha256": HASH_B,
         }]
+        for entry in exclusions + evaluations:
+            body = {"id": entry["id"], "reason": entry["reason"]}
+            if entry in evaluations:
+                body["rowContentSha256s"] = [target["contentSha256"]]
+            entry["evidenceSha256"] = self.save_evidence(body)
         snapshot = Target.compile_snapshot(
             "retriever-snapshot-0001", [target],
             {"train": [target["rowId"]], "validation": [], "test": []},

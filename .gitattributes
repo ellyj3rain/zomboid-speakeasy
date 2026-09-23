@@ -1,0 +1,18 @@
+# Evidence hashes bind checkout bytes across operating systems.
+decisions/examples/r12-knox-lived-source/** text eol=lf
+training/evidence/** text eol=lf
+decisions/work-words.jsonl text eol=crlf
+decisions/trade-hinges.jsonl text eol=crlf
+decisions/cross-module/work-words.jsonl text eol=crlf
+decisions/cross-module/trade-hinges.jsonl text eol=crlf
+decisions/cross-module/work-words.zao-state.jsonl text eol=crlf
+decisions/cross-module/trade-hinges.zao-state.jsonl text eol=crlf
+world/us-1993/daily-life.md text eol=crlf
+world/us-1993/institutions.md text eol=crlf
+world/us-1993/knox-event.md text eol=crlf
+world/us-1993/media.md text eol=crlf
+world/us-1993/military.md text eol=crlf
+world/us-1993/timeline.md text eol=crlf
+world/us-1993/who-knows-what.md text eol=crlf
+world/us-1993/work-and-money.md text eol=crlf
+world/people-mods.md text eol=crlf

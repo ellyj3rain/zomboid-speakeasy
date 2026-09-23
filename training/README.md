@@ -49,9 +49,12 @@ The retriever's label meaning is now ratified and implemented in
 [`retriever/`](retriever/README.md). Required references come from a separately
 approved understander or speaker example, explicit reviewed hard negatives are
 negative, and all other owned claims remain unjudged. Every retriever row has its
-own approval standing. The compiler enforces that distinction and builds
-provenance-complete snapshots; no real row exists yet because no approved task
-example exists to anchor one.
+own approval standing. Record 54's compiler opens and verifies the referenced
+task artifacts and saved approvals, binds the entire context, and keeps shared
+sources in one dataset split. It explicitly records missing source-coverage and
+task-schema validation: compiled labels remain conditioning-ineligible. No real
+row exists yet. [Evidence and continuation](retriever/EVIDENCE.md) names the
+producer required before the first task example.
 
 ## From a world event to play
 
@@ -65,16 +68,19 @@ world. It does not yet teach the model what to retrieve, say or understand.
 | Person acquisition | SAO C74 records that Ada North was present, acquired the local claim through `lived`, and retained it through the later event | Establishes that this claim may appear in Ada's catalogue |
 | Record 52 reference | Speakeasy reproduces that exact person/claim/time join and refuses the forced food choice | Tests the future catalogue producer; creates zero training rows |
 | Typed catalogue and fence | SAO C75 gives current private facts stable references inside an immutable snapshot and admits only selected claims to the speaker fence | Runtime substrate built; current speech does not call it |
-| Retriever target contract | Record 53 binds required positives to approved task examples, preserves unmentioned claims as unjudged, and requires explicit reviewed hard negatives plus independent row approval | Compiler built; zero real rows |
+| Retriever target contract | Record 53 defines independently reviewed labels; Record 54 resolves source artifacts and saved rulings, binds the whole context, and checks split independence | Evidence binding built; source coverage and task validation remain absent; zero real rows |
 | Dataset production | Approved understander, retriever and speaker rows with independent snapshots, exclusions, splits and evaluation receipts across many people | Not built |
 | Learned runtime | The retriever selects relevant owned claims, the speaker expresses fenced claims, and the understander maps player text to typed intent | No trained model exists |
 | Player experience | Different people can remember, omit and phrase different things while remaining unable to state facts they do not own | No behavior changes in this record |
 
 Record 52 supplies the first reviewed person-claim reference. Record 53 settles
 how retrieval targets are authored and reviewed without promoting that reference
-into a row. The next real data step is an approved understander or speaker example
-over a complete C75 catalogue; its required claim references can then anchor a
-separately reviewed retriever target.
+into a row. Record 54 corrects evidence-verification gaps in that compiler. The
+next step is a full conversation capture from SAO with source-coverage evidence,
+followed by a validated task example and separately reviewed retrieval target.
+The July 2 outage lasted hours; a historical question about that event is a
+grounded candidate, while "Why can't we call for help?" on July 11 requires
+additional current evidence.
 
 The goal is named now (RECORD.md 45, the operator, 2026-09-13): the
 end state is everything works and is ready to play, in theory, and

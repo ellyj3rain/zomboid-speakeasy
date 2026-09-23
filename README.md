@@ -46,7 +46,12 @@ data that will teach that selection: required references come from an approved
 understander or speaker example, explicit reviewed hard negatives are negative,
 and all other owned claims stay unjudged. Retriever rows have independent
 approval and their own snapshots, exclusions, splits and evaluation receipts.
-The compiler exists under [`training/retriever/`](training/retriever/README.md);
+Record 54 corrects the compiler's evidence binding: it now opens the task row,
+snapshot and saved Mousecat rulings, compares the whole conversation context,
+and keeps shared sources in one dataset split. Compiled labels remain explicitly
+ineligible for training until source coverage and task validity are implemented.
+The next producer is an immutable conversation capture from SAO. The exact
+sequence and limits are in [retriever evidence](training/retriever/EVIDENCE.md);
 no real row or model exists yet.
 
 The learned runtime and training shape is now ratified in

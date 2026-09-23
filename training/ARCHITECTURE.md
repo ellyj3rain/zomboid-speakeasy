@@ -102,7 +102,7 @@ The understander, retriever and speaker train from separate datasets. Each
 dataset owns its schema, snapshot, provenance, splits, exclusions and evaluation
 receipts. None inherits standing from another.
 
-When rows in the two datasets refer to the same county event, each retains the
+When rows in the three datasets refer to the same county event, each retains the
 full version 3 namespace and immutable event, option and claim references. The
 build compares those shared references and refuses contradictory identity,
 calendar, source or standing. Task-specific fields may differ; the facts they
@@ -170,9 +170,17 @@ receipts are the artifact admitted for runtime evaluation.
 
 ## Work this contract unlocks
 
-The next data producer is an independently approved understander or speaker
-example over a complete C75 catalogue. Its exact required references can then
-anchor a proposed retriever target for separate review. After eligible examples
+The next producer captures an immutable conversation snapshot in SAO: county
+and calendar identity, person and listener, current context and revisions, the
+C75 catalogue, and evidence of source coverage. Speakeasy then imports that
+capture and validates a typed understander or speaker example over it. Its
+approved required references can anchor a retriever target for separate review.
+
+Record 54's version 2 compiler resolves task evidence and saved approvals, but
+source-catalogue coverage and task-specific schema admission remain unimplemented.
+It therefore records every compiled target and snapshot as conditioning-ineligible.
+This is an implementation boundary, not a new operator decision. The concrete
+sequence is in [retriever/EVIDENCE.md](retriever/EVIDENCE.md). After eligible examples
 exist, Speakeasy can build the three task datasets, frozen tokenizer, reference
 pipeline and native bundle writer. SAO can build a bundle reader and
 snapshot/revalidation harness before a trained candidate exists. Model dimensions,

@@ -1408,3 +1408,65 @@ change no runtime behavior and change nothing visible in play. Record 52 has one
 reviewed person-claim reference, and SAO C75 has the typed catalogue and selected
 fence, but no approved understander or speaker example exists to anchor the first
 retriever target. That approved task example is the next data producer.
+
+
+---
+
+## 54 - Resolve retriever evidence before admitting labels (2026-09-22)
+
+Timestamp: 2026-09-23 00:05 UTC / 17:05 PST.
+
+Continuing toward the first conversation example exposed defects in Record 53.
+The compiler accepted hash-shaped references without opening the task row,
+dataset snapshot or approval evidence. It compared person, listener and tick
+while allowing the utterance and situation to drift. A control replaced the
+telephone question with "Where is Dana?", recomputed the proposal seal, and
+reached approved standing with fixture-only references. The previous claim that
+the compiler verified exact approved task provenance was too strong.
+
+Version 2 now resolves content-addressed evidence. It reads the task row, checks
+its exact snapshot membership and complete input, and verifies saved Mousecat
+item/response lineage against the exact task or retriever proposal hash. A row
+review cannot be replaced by the earlier policy ruling. Pending, mismatched,
+duplicate and qualified answers do not admit a label. Qualification must be
+interpreted and carried into a revised exact proposal. Imported receipt
+authenticity remains a repository-review responsibility; hashes prove integrity.
+
+Snapshot compilation resolves exclusion and evaluation objects, requires the
+latter to name the exact row hashes, and keeps shared task/catalogue sources in
+one split. This removes a source of train/test leakage. Atomic output uses unique
+temporary files, preserves the destination on failure and cannot replace stored
+evidence. Checkout attributes pin protected and imported evidence to the line
+endings already bound by their recorded hashes; protected source content is
+unchanged.
+
+The operator's independent-target policy remains unchanged. Label approval is
+now explicitly distinct from conditioning eligibility. Complete source-catalogue
+coverage and task-specific schema admission are not implemented, so every
+compiled target and snapshot records those two exclusions. The evaluation
+reference check proves scope, not retrieval quality; the loss mask and learned
+evaluator still need implementation. There are zero real targets, training rows,
+trained models or runtime changes in this record.
+
+The example also needed correction. The protected Knox source describes a
+telephone and Internet outage for hours on July 2. It cannot alone explain why
+someone cannot call for help on July 11. An authored historical question, "Do
+you remember the telephone outage on July 2?", can instead refer to the retained
+claim. It remains a candidate, with no operator ruling implied.
+
+The next implementation is SAO's immutable conversation capture: full namespace,
+calendar, person and listener, current context and revisions, production C75
+catalogue, and explicit source coverage/failure evidence. Speakeasy then imports
+that capture, validates a typed understander proposal, presents the exact
+human-readable example for review, and derives its separately reviewed retrieval
+target. `training/retriever/EVIDENCE.md` records the owners and completion evidence.
+The C75 stub tests and Record 52 controlled food choice cannot substitute for the
+capture by relabelling their fixtures.
+
+Seventy-one tests pass, including seventeen new evidence and output controls.
+They cover changed context, absent or tampered source objects, snapshot
+membership, stale approval after resealing, exact Mousecat subject/lineage,
+source split leakage, evaluation scope, contradictory exclusions, false training
+eligibility, evidence overwrite and atomic failure. The original 190 choices and
+nine world documents still pass their protected-byte audit and retain their
+existing standing.

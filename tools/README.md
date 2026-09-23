@@ -36,16 +36,31 @@ player-visible behavior. The forced source choice cannot pass through as a
 choice example. No operator ruling is part of this mechanical review.
 
 `retriever_targets.py` implements Record 53's independently anchored target
-policy. It binds one complete SAO C75 claim catalogue to a separately approved
+policy. Record 54 upgrades its artifacts to version 2. It binds a supplied
+SAO C75 claim catalogue to a separately approved
 understander or speaker example, copies that example's required claim references,
 accepts only explicit reasoned hard negatives, and records every other owned
 claim as unjudged. A matching independent operator review is required before a
 target can enter a dataset snapshot. Snapshot compilation requires complete,
 non-overlapping splits plus explicit exclusions and evaluation receipts. The
-tool creates no real row by itself.
+tool creates no real row by itself and records all compiled targets and
+snapshots as conditioning-ineligible while source coverage and task-specific
+validation remain unimplemented.
+
+`training_evidence.py` resolves canonical content hashes into saved task rows,
+snapshot membership, exact-subject Mousecat results, exclusions and evaluation
+evidence. It compares the entire task input and required references. Evaluation
+evidence binds the exact row collection; this is not a model evaluator. The
+compiler also groups shared task/catalogue sources within one split and refuses
+to publish into its evidence store. See
+[`training/retriever/EVIDENCE.md`](../training/retriever/EVIDENCE.md).
+
+`.gitattributes` pins the checkout line endings of protected and imported evidence
+to their existing recorded bytes so user Git settings cannot invalidate hashes.
 
 ```text
 python tools/test_decision_authoring.py
 python tools/test_import_sao_world_knowledge.py
 python tools/test_retriever_targets.py
+python tools/test_training_evidence.py
 ```
