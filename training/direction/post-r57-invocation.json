@@ -1,0 +1,36 @@
+{
+  "action": "invoke",
+  "skillRef": "crucible",
+  "title": "Consolidate the next delivery direction",
+  "source": {
+    "host": "codex",
+    "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+    "invocationId": "post-r57-direction-865a34f376f8"
+  },
+  "intake": {
+    "seams": [
+      {
+        "id": "post-r57-delivery-direction",
+        "shape": "decision",
+        "title": "Choose the next delivery priority",
+        "prompt": "Adopt the proposed sequence toward an offline learned conversation experiment, or prioritize broader simulation readiness before that experiment?",
+        "description": "We have one authored conversation with approved understanding, retrieval and personified wording. We do not yet have a trainable conversation dataset, trained model or learned exchange in-game. The next unit should produce usable capability with less publication and review fragmentation.\n\nRECOMMENDED DIRECTION\nMake a reproducible offline learned conversation experiment the next milestone, across multiple independent scenes. Begin by making dataset admission and speaker factual constraints real, while preparing data and the reference learning pipeline alongside them. Follow with measured native export and game consumption.\n\nWhat the first unit delivers:\n• Explicit task-specific rules for admitting experimental examples, with exact exclusion reasons.\n• Participant identity and game-owned personality/relationship/situation inputs with known provenance and missing inputs stated.\n• A demonstrated speech constraint that distinguishes faithful personified wording from changed subjects, negation, dates, invented current knowledge and unsupported causes.\n• Correct current-state documents, including the overstatement that field/value membership already proves arbitrary sentence truth.\n\nWhat you will be able to judge:\nThe later reference run must provide actual dialogue from independent situations, held-out results and separately reported understanding, retrieval, factual and voice failures. A model that merely memorizes Mara's example does not establish generalization. Your psychometric direction is tested through continuity of the same person, different expression under different relationships/strain, and unchanged factual entitlement.\n\nBroader readiness:\nRemaining R7–R10 simulation mechanisms retain their own obligations. Repair producers that block the selected experiment; track other readiness work explicitly. Experimental success does not declare the county ready, establish autonomous newspaper reading or settle acceleration.\n\nExecution:\nKeep a coherent capability unit together through implementation, correction, verification and available review receipts, then publish through the existing PR process. Independent approvals remain distinct, but need not each cause another publication cycle. Show whole scenes and actual answers in review panels. Run required gates; avoid repeating unchanged verification. Measure usable data, learned results and game behavior.\n\nThis does not choose a new personality taxonomy, waive missing input evidence, approve model dimensions or replace free composition with sentence templates. If the intended factual guarantee cannot be achieved by a candidate construction, return with the demonstrated conflict and concrete choices.",
+        "evidenceRef": "speakeasy:content-sha256:865a34f376f86b9c34f8e52054efb07340651ae9c4466e7eb6133529f8a8d822",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Adopt the consolidated plan (Recommended)",
+            "value": "adopt-consolidated-plan",
+            "description": "Start admission and speech-constraint work, with data/reference-model preparation alongside it; demonstrate a reproducible offline learning experiment before native integration. Preserve the wider readiness obligations."
+          },
+          {
+            "label": "Prioritize simulation readiness first",
+            "value": "simulation-readiness-first",
+            "description": "Make the remaining action and life-producer audit/repairs the next delivery priority. Continue compatible data/format preparation, but schedule the learning experiment after the selected readiness blockers are repaired."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "speakeasy-continuation-standing",
+  "schemaVersion": 1,
+  "status": "ratified",
+  "selectedDirection": "adopt-consolidated-plan",
+  "proposalSha256": "865a34f376f86b9c34f8e52054efb07340651ae9c4466e7eb6133529f8a8d822",
+  "resultSha256": "8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e",
+  "interactionId": "skill-3647c923478ac89b",
+  "itemId": "seam-c01fbd07bd36b182",
+  "qualifications": null,
+  "currentPlan": "training/CONTINUATION.md",
+  "publication": "Retain with the coherent admission implementation unit; no approval-only PR."
+}

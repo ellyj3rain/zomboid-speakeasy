@@ -244,7 +244,10 @@ def validate_task(value, evidence=None, imported=None):
     return value
 
 
-def task_conditioning(row, evidence=None):
+def task_conditioning(row, evidence=None, *, scope=None, approval=None):
+    if scope is not None:
+        import experimental_admission as X
+        return X.inspect(row, scope=scope, approval=approval, evidence=evidence)
     validate_task(row, evidence)
     return {"status": "ineligible", "exclusions": [
         "authored-bodyless-capture-has-unavailable-native-inputs",

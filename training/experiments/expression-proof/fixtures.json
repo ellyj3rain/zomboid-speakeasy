@@ -1,0 +1,47 @@
+{
+  "schema": "speakeasy-authored-expression-fixtures",
+  "schemaVersion": 1,
+  "standing": "synthetic-authored-unreviewed",
+  "purpose": "Independent semantic contrast inputs; no training or voice approval is implied.",
+  "scenes": [
+    {
+      "id": "opposite-locations",
+      "origin": {"kind": "synthetic-authored", "id": "independent-location-scene"},
+      "speakerRef": "observer", "listenerRef": "jon",
+      "participants": {
+        "observer": {"givenName": "Ari", "surname": null, "source": "synthetic author"},
+        "jon": {"givenName": "Jon", "surname": null, "source": "synthetic author"},
+        "eve": {"givenName": "Eve", "surname": null, "source": "synthetic author"},
+        "leah": {"givenName": "Leah", "surname": null, "source": "synthetic author"}
+      },
+      "reports": [],
+      "locations": [
+        {"id": "jon-location", "subjectRef": "jon", "place": "east", "at": "09:00", "knowledgeKind": "observed", "source": {"kind": "sight", "receiptRef": "sight-1"}},
+        {"id": "eve-location", "subjectRef": "eve", "place": "west", "at": "09:05", "knowledgeKind": "reported", "source": {"kind": "testimony", "personRef": "leah"}}
+      ],
+      "voiceConditioning": {"conditions": [], "traits": {}, "trust": 0},
+      "unavailableInputs": [],
+      "expected": ["I saw Jon to the east at 09:00.", "Leah reported Eve to the west at 09:05."]
+    },
+    {
+      "id": "different-dated-report",
+      "origin": {"kind": "synthetic-authored", "id": "independent-report-scene"},
+      "speakerRef": "leah", "listenerRef": "eve",
+      "participants": {
+        "leah": {"givenName": "Leah", "surname": null, "source": "synthetic author"},
+        "eve": {"givenName": "Eve", "surname": null, "source": "synthetic author"}
+      },
+      "reports": [{
+        "claimRef": "synthetic-report-august", "claimId": "synthetic-report-2",
+        "source": {"label": "synthetic authored report", "id": "report-2"},
+        "publicationDate": "1993-08-14", "knowledgeKind": "reported",
+        "acquiredHour": 800, "receiptId": "synthetic-reading-receipt",
+        "summary": "Valley Telecommunications' telephone and Internet networks failed across the Valley area for hours and were still down at press time; businesses closed; the cause unannounced, with talk of downed wires, lightning or sabotage."
+      }],
+      "locations": [],
+      "voiceConditioning": {"conditions": ["tired"], "traits": {}, "trust": 0},
+      "unavailableInputs": [],
+      "expected": ["The August 14, 1993 paper reported that the phones were out across Valley. The report said the outage lasted for hours. It said they were still down at press time. It also reported that businesses closed. The cause had not been announced. Downed wires, lightning or sabotage were only speculation."]
+    }
+  ]
+}

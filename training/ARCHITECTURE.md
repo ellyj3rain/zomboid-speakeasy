@@ -205,9 +205,27 @@ visible. Task evidence version 1 retains its previous source/task exclusions;
 version 2 carries the concrete native-input and absent dataset/evaluation limits.
 Compiled targets and snapshots remain conditioning-ineligible.
 This is an implementation boundary, not a new operator decision. The concrete
-sequence is in [retriever/EVIDENCE.md](retriever/EVIDENCE.md). After eligible examples
-exist, Speakeasy can build the three task datasets, frozen tokenizer, reference
-pipeline and native bundle writer. SAO can build a bundle reader and
+sequence is in [retriever/EVIDENCE.md](retriever/EVIDENCE.md). The
+[ratified continuation](CONTINUATION.md) places task-specific admission and
+speech constraints in the active implementation unit. Dataset preparation,
+frozen-tokenizer and reference-pipeline scaffolding can proceed alongside that
+work. Actual training consumes only examples that pass the implemented rules
+for the declared experimental scope. Current compiled targets remain ineligible.
+SAO can build a bundle reader and
 snapshot/revalidation harness before a trained candidate exists. Model dimensions,
 cache bounds, worker concurrency, INT8 tolerances and the human-review rubric stay
 evidence-driven and are fixed only by their respective measurements.
+
+Record 58 adds a separate `offline-authored-conversation-v1` admission scope.
+It validates source capture, task inputs and exact task/retrieval rulings, then
+reports dataset partition and runtime standing separately. The C77 understander
+and retriever pass sample admission in that scope; the speaker examples and
+combined dataset do not. Legacy evidence and default conditioning results remain
+unchanged. This is not an admission override for absent producer evidence.
+
+The [bounded expression proof](experiments/expression-proof/README.md) binds
+subject, relation/value, owner, source and time before lexical realization. Its
+finite report/location grammar reproduces the approved Mara wording and rejects
+the tested proposition/text substitutions. It is an offline reference for the
+ratified learned-composition work. General source interpretation, learned
+realization, register floors and native enforcement remain implementation work.

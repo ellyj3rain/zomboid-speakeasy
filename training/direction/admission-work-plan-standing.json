@@ -1,0 +1,29 @@
+{
+  "schema": "field-test.plan-standing/1",
+  "planId": "conversation-admission-proof-001",
+  "interactionId": "skill-1269923d11820cf8",
+  "itemId": "seam-3a600b7ad9f85bcc",
+  "supersedesPresentation": "skill-3a600b7ad9f85bcc",
+  "presentationChange": "Same plan content and approval scope; structured document presentation replaces the flat paragraph.",
+  "evidenceRef": "field-test:plan-sha256:502443c07b8d931bce277ee7a72ad8668c70a1e1efef53a1bbd451f5125be8ce",
+  "status": "approved",
+  "livePresentationVerified": true,
+  "verification": {
+    "fullDescriptionMatches": true,
+    "evidenceRefMatches": true,
+    "desktopRendered": true,
+    "mobileRendered": true,
+    "supportingSectionsToggle": true
+  },
+  "continuationState": "~/.codex/skill-state/field-test/conversation-admission-proof-001-presentation-v2.json",
+  "executionAuthorized": true,
+  "execution": {
+    "status": "bounded-proof-complete",
+    "report": "../experiments/expression-proof/README.md",
+    "resultSha256": "6ccc3ba96092fb8d5b9d4203db5c57a6f13bd5c65c3deef12cbdaad8187e4dc0",
+    "broaderAdmissionUnitComplete": false
+  },
+  "qualifications": null,
+  "result": "admission-work-plan-result.json",
+  "resultHandling": "Original items, responses and lineage retained; continuation capability omitted from the portable receipt."
+}
