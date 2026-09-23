@@ -1571,3 +1571,15 @@ confirm these repairs. All 85 tests pass, including 11 conversation controls;
 the protected 190-choice audit is unchanged. Current documentation corrects the
 retired Record 52 acquisition claims and names the actual continuation. No game
 files, runtime behavior or saves change.
+
+
+Record 56 review follow-through: the operator approved the exact understander
+proposal through the submitted interaction, without qualifications. The saved
+response `3d2ef7be3bf2a1722483e1779d9621a0f9a2d80f7412d8a931026f4a6fc4ee1d`
+resolves into a task evidence snapshot and an independent retrieval proposal.
+That proposal requires the report, supplies no hard negatives and leaves seven
+claims unjudged. Its separate narrative review is submitted as interaction
+`skill-49b957a427fb7f46`, item `seam-789dd79fd57f044e`; it does not inherit task
+approval. No conditioning eligibility or model change follows from the ruling.
+The source reader also now handles the longer Windows worktree path and retains
+Git diagnostics on read failure.

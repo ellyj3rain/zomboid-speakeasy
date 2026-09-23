@@ -21,8 +21,13 @@ eight-claim catalogue; the other seven facts remain unjudged.
 `c77-review.json` contains the human-readable scene, system role, causal path,
 player consequence, proposed meaning, approval effects and evidence.
 `c77-invocation.json` sends that exact panel through Mousecat Crucible with the
-task hash as its evidence reference. The task is **proposed**, awaiting a ruling
-in interaction `skill-41b0c21490237499`, item `seam-3502bc9a6ecbd395`.
+task hash as its evidence reference. The task is **approved** through interaction
+`skill-41b0c21490237499`, item `seam-3502bc9a6ecbd395`, with no qualifications.
+The exact saved response resolves into the task evidence snapshot in the index.
+The independent retrieval proposal is **proposed**, awaiting its own ruling in
+interaction `skill-49b957a427fb7f46`, item `seam-789dd79fd57f044e`. Its narrative
+panel and submitted invocation are `c77-retriever-review.json` and
+`c77-retriever-invocation.json`.
 
 No approval is inferred from submission, opening the panel, or a passing test.
 The live result is checked through Mousecat's returned continuation. Pending,
@@ -71,11 +76,10 @@ evidence retains its older missing-source/task exclusions. No model is trained
 and no game behavior changes. C77 has no executable-option inventory; an
 action-bearing frame requires that source contract before admission.
 
-After the task ruling, resolve and save the exact Mousecat result, build its task
-evidence snapshot, and derive an independent retriever proposal with claim 0005
-required, no presumed hard negatives, and seven unjudged claims. Present that
-proposal's own learning consequence for separate review. Dataset production,
-speaker fencing and evaluation then remain distinct implementation work.
+The approved task now anchors an independent retriever proposal with claim 0005
+required, no presumed hard negatives, and seven unjudged claims. Resolve its own
+Mousecat ruling before admitting the retrieval target. Dataset production,
+speaker fencing and evaluation remain distinct implementation work.
 
 ## Reproduction
 

@@ -1,8 +1,15 @@
 {
-  "review": "pending",
+  "review": "approved",
   "sourceImportSha256": "f71389f06f52f44372a27850b9eddf9a43ccecdf14e826f6b5624b539bd1ed26",
-  "standing": "proposed",
+  "standing": "approved",
   "taskSha256": "6acc7ddbad5e25d201ce04e6c1cd54f65fc87fe619c8b794fbe860340f0fa5a7",
   "interactionId": "skill-41b0c21490237499",
-  "itemId": "seam-3502bc9a6ecbd395"
+  "itemId": "seam-3502bc9a6ecbd395",
+  "approvalReceiptSha256": "3d2ef7be3bf2a1722483e1779d9621a0f9a2d80f7412d8a931026f4a6fc4ee1d",
+  "taskSnapshotSha256": "db1e0db2873798cf9a3531443e0c68f3ffc33d324aee8ebc64e71950ba4b4201",
+  "retrieverAnchorSha256": "8bf501f83c4e49962bdd69138e786a8f751b74a2a25a8bf0b6cdabcd2e0fa973",
+  "retrieverProposalSha256": "62ea40c35e006e78c79c24109d9ed57a50397ef0f5da9f1656cc4727e57e2783",
+  "retrieverStanding": "proposed",
+  "retrieverInteractionId": "skill-49b957a427fb7f46",
+  "retrieverItemId": "seam-789dd79fd57f044e"
 }

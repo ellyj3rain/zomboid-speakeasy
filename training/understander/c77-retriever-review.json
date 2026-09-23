@@ -1,0 +1,89 @@
+{
+  "schema": "mousecat.ml-review/1",
+  "subject": "Select Mara's dated report for the approved question",
+  "scenario": "It is July 11, 1993. Mara Reed, a salesperson from Muldraugh, is talking with Jon Vale nearby. On July 10, Mara finished reading the July 2 Knox Knews issue. Jon asks: \"What did the July 2 newspaper report about phone service?\" Mara has a personal reading receipt for that issue. Jon has no such receipt. The encounter, people and dates are authored; the production knowledge owners and installed native reading completion ran over controlled objects.",
+  "systemRole": "This is the separate retriever example. You approved how Jon's question is understood. This review decides which of Mara's currently owned claims the retriever should learn to supply for that exact question.",
+  "causalPath": [
+    {
+      "label": "Approved interpretation",
+      "value": "Jon asks Mara what the July 2 newspaper reported about phone service. The question refers to her personally read report; no executable action is requested."
+    },
+    {
+      "label": "Claim selection",
+      "value": "The retriever should supply claim 0005 from Mara's eight-claim catalogue. It selects an existing reference; it does not compose an answer or add knowledge."
+    },
+    {
+      "label": "Future speaking",
+      "value": "A future speaker receives the selected report with its publication and reading dates and must keep its answer within the admitted facts."
+    }
+  ],
+  "playerImpact": "Eventually a player should be able to ask an NPC what they learned from an older source and receive an answer grounded in that person's actual access. This example supports that path. Approving it changes no game behavior or model weights today.",
+  "decisionPrecedent": "Approval labels the report as required for this exact question and scene. It does not teach that every other fact is irrelevant. The other seven claims remain unjudged, with no hard negatives in this example.",
+  "actualInput": [
+    {
+      "label": "Question",
+      "value": "What did the July 2 newspaper report about phone service?"
+    },
+    {
+      "label": "Who speaks and who understands",
+      "value": "Jon Vale asks; Mara Reed is addressed. The source catalogue calls Jon listenerRef because he is Mara's conversation partner. The task explicitly records Jon as utterance speaker and Mara as utterance listener."
+    },
+    {
+      "label": "Timeline",
+      "value": "Publication: July 2 (county hour -168). Mara's reading completion: July 10 (hour 24). Question: July 11 (hour 48)."
+    },
+    {
+      "label": "Source report",
+      "value": "The protected source records Knox Telecommunications' telephone and Internet networks failing across the Knox area for hours, still down at press time; businesses closed; cause unannounced, with speculation about downed wires, lightning or sabotage. The question concerns the phone-service part of this report."
+    },
+    {
+      "label": "Mara's complete eight-claim catalogue",
+      "value": "0001: was a salesperson in Muldraugh when it started. 0002: origin text \"a vacation that never ended\". 0003: observed Jon Vale just east, condition ok, just now. 0004: lesson entry withheld; no lesson content is disclosed. 0005: the dated world report, learned by reading. 0006: before entry tagged \"innocent\". 0007: born in 1962. 0008: from Muldraugh. The seven other entries receive no negative retrieval label."
+    },
+    {
+      "label": "Conditioning and limits",
+      "value": "The captured conditioning includes anxious, trust 0, no hostility or debt, plus exact traits in the source artifact. Native current needs, bite and loaded-controller pressure are unavailable in this bodyless capture."
+    }
+  ],
+  "proposedLearning": [
+    {
+      "label": "Required positive",
+      "value": "Claim 0005: the July 2 telecommunications report personally read by Mara on July 10. Omitting it would count as a required-claim retrieval miss for this question."
+    },
+    {
+      "label": "Unjudged facts",
+      "value": "Claims 0001-0004 and 0006-0008 remain unjudged. Selecting or omitting these claims is neither rewarded nor penalized by this example's labels."
+    },
+    {
+      "label": "Hard negatives",
+      "value": "None. The other facts do not automatically become negative examples merely because the current question needs only the report."
+    },
+    {
+      "label": "Independent task boundary",
+      "value": "The approved understander supplies the exact required reference. This ruling independently approves the selection target; it does not approve wording for Mara's answer."
+    }
+  ],
+  "approvalEffects": [
+    "Records independent approval of this exact retriever proposal, bound to the approved understander and unchanged C77 catalogue.",
+    "Creates one approved retrieval-label artifact with one required positive, no hard negatives and seven unjudged references. It remains outside a trainable dataset pending its recorded exclusions."
+  ],
+  "remainingExclusions": [
+    "No speaker answer, training run, model weights or runtime deployment is created by this ruling.",
+    "The source remains an authored bodyless capture with unavailable native needs, bite and controller pressure. Task dataset splits and evaluation are not built.",
+    "The report does not establish personal Internet use, household ubiquity, recovery after hours or current phone service on July 11."
+  ],
+  "evidence": [
+    {
+      "label": "Approved understander",
+      "value": "Task 6acc7ddbad5e25d201ce04e6c1cd54f65fc87fe619c8b794fbe860340f0fa5a7; exact completed Mousecat receipt 3d2ef7be3bf2a1722483e1779d9621a0f9a2d80f7412d8a931026f4a6fc4ee1d."
+    },
+    {
+      "label": "Exact retriever proposal",
+      "value": "62ea40c35e006e78c79c24109d9ed57a50397ef0f5da9f1656cc4727e57e2783"
+    },
+    {
+      "label": "Source standing",
+      "value": "Same exact C77 source import f71389f06f52f44372a27850b9eddf9a43ccecdf14e826f6b5624b539bd1ed26; all eight claims preserved."
+    }
+  ]
+}
