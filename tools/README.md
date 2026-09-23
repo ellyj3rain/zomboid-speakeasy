@@ -129,3 +129,10 @@ model input from audit-only owner state, measures channel differences against a
 shared baseline and rebuilds the entire sealed result during validation. The
 candidate replies are unreviewed authored text, with no training admission path.
 See the [C78 family](../training/behavior/c78/README.md).
+
+`byte_tokenizer.py` trains and loads a deterministic frozen byte-BPE vocabulary.
+`tokenized_data.py` fits only the training partition of revalidated task data,
+preserves byte-exact payloads and retrieval masks, and binds the vocabulary to
+the resulting task preview. Release checks retain source admission and partition
+requirements. The [reference artifacts](../training/datasets/c77-tokenization/README.md)
+include the exact format, commands, known byte vectors and Java-parity limit.

@@ -4,7 +4,7 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture and Record 60 contextual comparisons; exact sources and review standing are in `behavior/c78/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons and Record 61 shared tokenizer reference. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
@@ -15,7 +15,7 @@ Purpose: move from verified examples to a reproducible learned exchange while pr
 | Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, and selected source/treatment/communication/rest mechanisms implemented. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, R13 training, R14 learned runtime and R15 acceleration remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
-| Data and models | Protected intent/source material and validated evidence tooling exist. | 190 historical choices are conditioning-ineligible. No training run, frozen tokenizer implementation, learned task bundle or live learned exchange exists. |
+| Data and models | Protected intent/source material, validated task preparation and a frozen byte-BPE reference exist. | 190 historical choices remain conditioning-ineligible. The tokenized C77 preview remains excluded; no training run, Java tokenizer parity, learned task bundle or live learned exchange exists. |
 | Verification | Expression/admission controls and contextual comparison revalidation preserve exact source evidence and separate judgment standing. See each implementation record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
 
 ## What needs correction
@@ -124,8 +124,15 @@ explicitly lacks native needs, current work, movement goals and complete options
 The next source expansion needs those states in independent situations. Mara
 remains a factual regression case; the unchanged answer is not up for review.
 
-Broader supported meanings, independent source scenes and the frozen shared
-tokenizer/reference pipeline remain dependencies. A trained run follows usable
+Record 61 implements the shared byte-level tokenizer and reproduces a tokenized
+preview of the existing understanding/retrieval examples. It preserves exact
+text bytes, fits only the training partition and retains retrieval masks. The
+speaker task and combined dataset remain excluded. The four C78 behavior
+judgments remain independent and contribute no text to vocabulary fitting.
+See [the exact artifact contract and reproduction](datasets/c77-tokenization/README.md).
+
+Broader supported meanings, independent source scenes, Java token parity and the
+reference-learning pipeline remain dependencies. A trained run follows usable
 task data and evaluation partitions; native integration follows reference
 evidence. The source audit is read-only and does not establish loaded-world
 coverage. This revision does not change the ratified shared-base architecture.
