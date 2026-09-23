@@ -1647,3 +1647,33 @@ review, task dataset construction and evaluation must preserve shared-source
 split independence and distinguish grounding from wording quality. The general
 semantic decoder and deterministic voice floors remain explicit implementation
 work before natural paraphrases can receive the same factual guarantee.
+
+
+Record 57 wording follow-through: the original Mousecat interaction returned
+"This information is valuable but I can't approve it without the actual
+personified answer." Receipt
+`27abbe3dca8737af8ebf5a5d35b953636724d73a67b5db1d198e388b91f470fc`
+preserves that freeform response exactly. It requests revision and confers no
+approval. PR #24 had merged the validated compiler before this result arrived;
+the original example remains unapproved.
+
+The revised authored candidate supplies Mara's actual dialogue from the same
+selected report, exact model input and captured anxious/untrusting situation.
+It answers the phone-service question, keeps publication-time attribution and
+rumored causes, and omits the unrelated Internet-network clause. Proposed
+wording `5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b`
+includes clause-level factual alignment and voice rationale. Its separate panel
+is `skill-d255b2e7c14ce745`, item `seam-ba3f2749a58d5c23`, pending at submission.
+
+This is a sealed authored wording proposal, not a new task schema or a renderer
+exception. Existing code still refuses this paraphrase as a version 3 task.
+The candidate retains all four source-task exclusions and explicitly records
+the absent mechanical semantic admission. Even wording approval will not make
+it trainable. The next implementation requirement is semantic admission for
+personified composition, before dataset construction can consume this candidate.
+No runtime code or protected source material changes in this follow-through.
+
+The proposed vocative uses Jon's scene identity. The existing model input
+contains his participant ID but no display name; explicit participant-name
+conditioning is therefore another prerequisite to using this authored wording
+as a model target. Its current standing remains an ineligible review candidate.

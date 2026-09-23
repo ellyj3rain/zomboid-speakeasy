@@ -18,12 +18,50 @@ an attributed account, not a purported verbatim quotation of the native paper.
 
 ## Review and standing
 
-`c77-example.json` names the exact speaker task and approved retrieval target.
-`c77-review.json` holds the narrative review; `c77-invocation.json` is the exact
-submitted Crucible panel. The speaker remains **proposed**, pending interaction
-`skill-4ce382d92d3da70d`, item `seam-743ad57c38f3212a`. Neither earlier approval
-approves the answer. The speaker needs its own exact-subject completed ruling;
-freeform qualifications require interpretation and a revised proposal.
+The operator answered the original review: **"This information is valuable but
+I can't approve it without the actual personified answer."** The returned
+receipt is `27abbe3dca8737af8ebf5a5d35b953636724d73a67b5db1d198e388b91f470fc`.
+The formal task has **revision requested**; its interaction is answered and
+it has no approval snapshot.
+
+### Personified revision
+
+Jon asks: "What did the July 2 newspaper report about phone service?"
+
+Mara's proposed answer:
+
+> The July second paper said the phones were out all over Knox. For hours, Jon. Still down when it went to press, too. Businesses closed. They hadn't announced a cause—there was talk of wires down, lightning, sabotage... but that's all it was. Talk.
+
+Mara is anxious, fairly talkative and untrusting of Jon, without active hostility.
+The fragments and emphasis propose an uneasy delivery; the answer shares the
+requested report without personal disclosure or friendly reassurance. This is a
+reviewable authored interpretation of the captured channels, not a calibrated
+trait-to-style mapping. Native current needs, bite and pressure remain unavailable.
+
+The candidate answers the phone-service question from the selected report.
+It omits the combined report's Internet-network clause without denying it or
+implying household adoption. Publication-time attribution and uncertain causes
+remain explicit. Its evidence object contains clause-by-clause source alignment.
+
+Exact wording proposal:
+`5be5bbde154266fab5e75fef546b7ca7a920726c3b7d5143a4ad05ce8b07b77b`.
+`c77-personified-review.json` and `c77-personified-invocation.json` hold the
+actual new panel. Review is **pending**, interaction
+`skill-d255b2e7c14ce745`, item `seam-ba3f2749a58d5c23`.
+`c77-example.json` tracks both subjects and their separate standing.
+
+The revision is a `speakeasy-speaker-wording-proposal`, not an admitted version 3
+speaker task. Its seal identifies the exact input, output and review rationale.
+The source task retains the machine-checked provenance chain; the new prose has
+authored factual alignment for human review. The current exact-summary renderer
+refuses it. Wording approval cannot silently bypass that boundary or create a
+training-eligible task. Semantic admission of freely composed wording is the next
+implementation requirement, before this candidate enters a speaker dataset.
+
+The authored scene supplies Jon's name, but the current speaker model input
+supplies only his participant ID. The vocative "Jon" therefore also requires
+explicit participant-name conditioning before this wording could become a
+model target. The reviewed dialogue alone does not resolve that input gap.
 
 ## Mechanical contract
 

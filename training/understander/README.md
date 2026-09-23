@@ -83,7 +83,9 @@ The approved task anchors the independently approved retrieval target with claim
 0005 required, no hard negatives, and seven unjudged claims. The next production
 step is implemented in Record 57 as a [bounded speaker example](../speaker/README.md)
 over the same admitted report, with mechanical attribution and date checks
-before its independent expression review. General free composition, register
+before its independent expression review. The operator requested personified
+dialogue; that revised candidate has a separate review and awaits semantic
+admission. General free composition, register
 floors, dataset splits and task evaluation remain explicit implementation work.
 The approved target has not been assigned a split or made training-eligible.
 
