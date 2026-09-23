@@ -9,7 +9,10 @@
   "taskSnapshotSha256": "db1e0db2873798cf9a3531443e0c68f3ffc33d324aee8ebc64e71950ba4b4201",
   "retrieverAnchorSha256": "8bf501f83c4e49962bdd69138e786a8f751b74a2a25a8bf0b6cdabcd2e0fa973",
   "retrieverProposalSha256": "62ea40c35e006e78c79c24109d9ed57a50397ef0f5da9f1656cc4727e57e2783",
-  "retrieverStanding": "proposed",
+  "retrieverStanding": "approved",
   "retrieverInteractionId": "skill-49b957a427fb7f46",
-  "retrieverItemId": "seam-789dd79fd57f044e"
+  "retrieverItemId": "seam-789dd79fd57f044e",
+  "retrieverResultSha256": "ba9c15e07569d87a820dc48d7a0e620581dd2789d0d1add1131a501ded95f3bf",
+  "retrieverReviewSha256": "e1be128500c6db286b2d465ab15517ffb5faa763d4d040ab1f9d7fe64f31eaa3",
+  "retrieverTargetSha256": "02af1fc6d30b308d1d809140bc2972dfc563d825ef713c28fbc0d8071317fb73"
 }
