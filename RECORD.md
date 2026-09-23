@@ -1938,3 +1938,51 @@ SAO's complete local gate and required GitHub checks passed. Deployment checked
 262 installed files with no mismatches and unchanged metadata for 44,092 save
 files; this adds no loaded-play claim. At publication the four contextual
 judgments remain pending, with their exact continuation preserved.
+
+## 61 - Shared tokenizer reference (2026-09-23)
+
+The ratified continuation permits tokenizer and task-data preparation alongside
+behavior review. The four C78 comparisons remain independently pending; their
+candidate text and unknown judgments do not enter this work. No new operator
+decision is inferred from the instruction to continue.
+
+The shared byte-BPE implementation gives every byte an ID, reserves explicit
+structural IDs and fits ranked merges from training-partition payloads only.
+Text uses strict UTF-8 without normalization; unknown names, Unicode forms,
+whitespace and arbitrary raw bytes remain lossless. Ordinary text cannot create
+a structural token. Vocabulary identity binds rules, reserved IDs, merge ranks,
+merge budget and exact corpus-segment hashes. The small 64-merge reference is an
+experimental artifact, not a selected production vocabulary or model size.
+
+Task tokenization first revalidates the existing source-bound preparation. It
+preserves separate task partitions, incoming roles, source groups, missing
+inputs and release exclusions. Understanding/speaking sequence targets have
+explicit masks; retrieval retains structured claim labels with seven unjudged
+claims masked and one required claim active. It never converts unjudged claims
+to negative examples or serialized sequence targets. Validation refits the
+vocabulary from the exact train segments and reconstructs the complete tokenized
+result, so resealed changes to tokens, masks, identities or standing refuse.
+
+The C77 reference has three fitting segments totaling 5,822 bytes and 3,391 byte-
+payload tokens under 64 merges. Its 331 IDs include 256 bytes, 11 reserved IDs and
+64 merges. One understander example and one retrieval example are tokenized;
+the revised speaker task and whole dataset remain excluded. This small corpus
+does not establish useful compression, vocabulary size or model performance.
+The saved artifact contract, exact identities and reproduction commands live in
+`training/datasets/c77-tokenization/README.md`, with byte-level vectors for the
+later pure-Java implementation. No Java parity or learned behavior is claimed.
+
+Verification passes all 135 Python tests in 20.538 seconds, the protected
+conditioning audit and exact reproduction of all three saved artifacts. Ten
+new tests include hand-calculated merge/tie/overlap controls, all-byte and Unicode
+round trips, malformed/resealed artifacts, held-out leakage controls and release
+refusal before writes. Independent read-only correctness review found no defects
+and matched a separate minimum-rank/leftmost encoder over 5,000 generated strings
+across 100 fitted corpora. A separate full-suite validator passed all requested
+checks. Implementation, evidence, review and continuation remain one unit.
+
+Next dependencies are broader source-owned state and communication acts,
+independently sourced scenes, task approvals and held-out partitions. Reference
+training follows usable data; Java parity and game consumption follow that
+reference. The current vocabulary establishes the reproducible token contract
+without fixing those later decisions or promoting existing excluded data.

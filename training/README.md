@@ -21,6 +21,13 @@ utterance roles, masks unjudged retrieval claims and separates model targets
 from audit evidence. Independent per-task evaluation partitions remain missing;
 the prepared C77 preview is not released for training.
 
+Record 61 adds the [shared byte-level tokenizer](datasets/c77-tokenization/README.md)
+and an exactly reproducible tokenized preview. It preserves unfamiliar text,
+isolates structural markers, fits vocabulary only on training-partition data
+and retains the retriever's unjudged-claim masks. The preview remains excluded
+pending independent scenes and task approval; no model training or Java parity
+is claimed.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 

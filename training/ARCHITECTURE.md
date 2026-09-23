@@ -246,8 +246,9 @@ preserves incoming utterance roles for understanding, masks unjudged retrieval
 labels and prepares actual speaker text rather than construction choices. It
 revalidates the complete prepared artifact and requires independent partitions
 for each requested task before releasing data for tokenization. The C77 preview
-remains excluded as a dataset. Frozen subword tokenization, reference training,
-broader learned composition and native enforcement remain separate dependencies.
+remains excluded as a dataset. Record 61 implements frozen subword tokenization
+and its binding to that preparation. Reference training, broader learned
+composition and native enforcement remain separate dependencies.
 
 Record 60 prepares contextual comparison evidence from source-reviewed SAO
 capture version 2. Identity/time-bound behavioral projections accompany private
@@ -257,3 +258,13 @@ audit-only. Candidate replies remain authored preferences for human judgment.
 This comparison schema has no training admission path and does not replace task
 approvals, independent partitions or factual/voice evaluation. See the
 [first family](behavior/c78/README.md) for source coverage and remaining needs.
+
+Record 61 supplies the [shared byte-BPE reference](datasets/c77-tokenization/README.md).
+Every byte has an ID; reserved structural IDs are emitted only by the task
+serializer. Training-partition text alone determines merge ranks. Tokenized
+examples bind the exact preparation and vocabulary; reconstruction checks all
+tokens, masks, provenance and standing. Retrieval retains structured masked
+claim targets rather than a sequence of serialized label values. The current
+experimental vocabulary is frozen by content hash and remains attached to an
+excluded dataset. Pure-Java parity, representative vocabulary/model sizing and
+the learned decoder are subsequent evidence, not implied by tokenization.
