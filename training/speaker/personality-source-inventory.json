@@ -1,0 +1,253 @@
+{
+  "schema": "speakeasy-personality-source-inventory",
+  "schemaVersion": 1,
+  "standing": "source-inspection-only",
+  "sourceRepository": "survivor-awareness",
+  "sourceCommit": "9d08d15de222e49e844b9b0e01e0981ce4009cfa",
+  "files": [
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Disposition.lua",
+      "checkoutSha256": "7436d7f7dae3c3780bd80841a4c8479dd9aa5395950dffe065f8b347b94c926c",
+      "gitContentSha256": "7436d7f7dae3c3780bd80841a4c8479dd9aa5395950dffe065f8b347b94c926c"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Conditions.lua",
+      "checkoutSha256": "3b3027892a1144f1bef5a210ea5defa131d3adec654aa0c691f107d3bdccf6cc",
+      "gitContentSha256": "3b3027892a1144f1bef5a210ea5defa131d3adec654aa0c691f107d3bdccf6cc"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Habits.lua",
+      "checkoutSha256": "9a2342558c3c1b2a0138b6f7838923dd28cec2b849838104a096f08814ba66e1",
+      "gitContentSha256": "9a2342558c3c1b2a0138b6f7838923dd28cec2b849838104a096f08814ba66e1"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Neuro.lua",
+      "checkoutSha256": "f8400602d524792bb24527b624dca3b40aec9cc93538964b3e2f1caa9257ae00",
+      "gitContentSha256": "f8400602d524792bb24527b624dca3b40aec9cc93538964b3e2f1caa9257ae00"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Knowledge.lua",
+      "checkoutSha256": "9c29ffe5535e4b9a28865a72ab08a40eeab40beb61ebf1cd983759382f35ff07",
+      "gitContentSha256": "9c29ffe5535e4b9a28865a72ab08a40eeab40beb61ebf1cd983759382f35ff07"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Pressure.lua",
+      "checkoutSha256": "466ce7d7d39bfedbe44f797f76ce7c7c680a40f6830299fcbe417f93baf9da15",
+      "gitContentSha256": "466ce7d7d39bfedbe44f797f76ce7c7c680a40f6830299fcbe417f93baf9da15"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Standing.lua",
+      "checkoutSha256": "1bdd5c4ac721d191b8c54bae0457b065ec4c1c6bf603687b2671bfa7e70bcad2",
+      "gitContentSha256": "1bdd5c4ac721d191b8c54bae0457b065ec4c1c6bf603687b2671bfa7e70bcad2"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Lessons.lua",
+      "checkoutSha256": "99929c41e68c4242e570595487c66fee18fcdf39091ee15009c8cd6941860957",
+      "gitContentSha256": "99929c41e68c4242e570595487c66fee18fcdf39091ee15009c8cd6941860957"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_History.lua",
+      "checkoutSha256": "38a15b6d7a0f2143e752d4aa7ccc86ee96f0a6fc39f597aefac041d18d7822f1",
+      "gitContentSha256": "38a15b6d7a0f2143e752d4aa7ccc86ee96f0a6fc39f597aefac041d18d7822f1"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Branching.lua",
+      "checkoutSha256": "0706d325aa73e3800e6713983053abb36b01f24dfee7639b2bf23f880967f852",
+      "gitContentSha256": "0706d325aa73e3800e6713983053abb36b01f24dfee7639b2bf23f880967f852"
+    },
+    {
+      "path": "mod/42.20/media/lua/shared/SAO_Integration.lua",
+      "checkoutSha256": "3d1ce5dbaf3ee0c06c58d1d5be2c9288b397c28b0c30ac0ef386a6135352f7e4",
+      "gitContentSha256": "3d1ce5dbaf3ee0c06c58d1d5be2c9288b397c28b0c30ac0ef386a6135352f7e4"
+    },
+    {
+      "path": "mod/42.20/media/lua/client/SAO_Voice.lua",
+      "checkoutSha256": "19b6d3501e3343439a9ed7badafe60fd693fa5979599e9f156c042c1ab9af578",
+      "gitContentSha256": "19b6d3501e3343439a9ed7badafe60fd693fa5979599e9f156c042c1ab9af578"
+    },
+    {
+      "path": "mod/42.20/media/lua/client/SAO_Controller.lua",
+      "checkoutSha256": "ef18af9eb2023cdedc7fdbc92607e6b68bede82d78a79eee91f3365ce83dc219",
+      "gitContentSha256": "ef18af9eb2023cdedc7fdbc92607e6b68bede82d78a79eee91f3365ce83dc219"
+    },
+    {
+      "path": "mod/42.20/media/lua/client/SAO_Exchange.lua",
+      "checkoutSha256": "4ef45edf4fb6c9974d0c5bdcd436e4c999c56555b8dbd597212a57ee4e8ae289",
+      "gitContentSha256": "4ef45edf4fb6c9974d0c5bdcd436e4c999c56555b8dbd597212a57ee4e8ae289"
+    },
+    {
+      "path": "SPEECH_ML_DESIGN.md",
+      "checkoutSha256": "f0396edc2555856b615f6ff07e30853c996ce09e945252e3d254f59d1d5fcfc7",
+      "gitContentSha256": "f0396edc2555856b615f6ff07e30853c996ce09e945252e3d254f59d1d5fcfc7"
+    }
+  ],
+  "captureImportSha256": "f71389f06f52f44372a27850b9eddf9a43ccecdf14e826f6b5624b539bd1ed26",
+  "speakerTaskSha256": "97388368bc3bf12051c4021cb8acd296ad3694bc30bbc1afb62f10c95d50e1a1",
+  "revisionReceiptSha256": "49d632b28fd23986a841694901658f49a5cb61791122ab66c5dca1b7509f3453",
+  "operatorDirection": "We should consider how we map or relate personality and emotional state to pacing, filler words, expletives, critical thinking, tension that emphasizes anxiousness and emotion and communication, thought- behavior itself, adaption and environmental modeling of goal-object orientation in the world relative to others. This is not necessarily suggesting create something new, maybe somewhat, but it is mostly asking to maximize what currently exists and how granularly we emphasize the presence of realistic distinction and adaptability that we train into small models per variable.",
+  "observedCapture": {
+    "context": {
+      "atTick": 432000,
+      "listenerRef": "sao-2",
+      "personId": "sao-1",
+      "situation": {
+        "atHour": 48,
+        "kind": "authored-conversation",
+        "listenerPosition": {
+          "x": 10601,
+          "y": 9700,
+          "z": 0
+        },
+        "personPosition": {
+          "x": 10600,
+          "y": 9700,
+          "z": 0
+        }
+      },
+      "utterance": "What did the July 2 newspaper report about phone service?"
+    },
+    "conditioning": {
+      "conditions": [
+        "anxious"
+      ],
+      "habits": {},
+      "moment": {
+        "debt": false,
+        "hostile": false
+      },
+      "traits": {
+        "aggression": 0.5461999999999999,
+        "appetite": 0.8486,
+        "compassion": 0.24309999999999998,
+        "discipline": 0.2375,
+        "initiative": 0.6001,
+        "nerve": 0.32720000000000005,
+        "selfPreservation": 0.4432999999999999,
+        "talkativeness": 0.6897
+      },
+      "trust": 0,
+      "trusted": false
+    },
+    "coverage": {
+      "failures": {},
+      "readers": [
+        "Standing.state",
+        "WorldKnowledge.state",
+        "WorldSources.state",
+        "body.bite",
+        "body.needs",
+        "body.position",
+        "census.origin",
+        "census.trade",
+        "conditions.words",
+        "controller.pressure",
+        "disposition.traits",
+        "habits.words",
+        "history.birth",
+        "history.service",
+        "identity.before",
+        "identity.mutations",
+        "identity.position",
+        "identity.self",
+        "identity.started",
+        "lessons.first",
+        "lessons.grief",
+        "lessons.hardened",
+        "lessons.started",
+        "perception.beliefs",
+        "perception.direction",
+        "perception.radio",
+        "perception.transfers",
+        "standing.debt",
+        "standing.group",
+        "standing.hostility",
+        "standing.stock",
+        "standing.trust",
+        "standing.war",
+        "topic",
+        "worldKnowledge.claims",
+        "worldSources.nearest"
+      ],
+      "scope": "knowledge-topics-v1",
+      "status": "complete",
+      "topics": [
+        "self",
+        "person",
+        "zombies",
+        "dead",
+        "food",
+        "water",
+        "house",
+        "ground",
+        "lessons",
+        "mutations",
+        "world",
+        "before",
+        "started"
+      ],
+      "unavailableInputs": [
+        "loaded-controller-pressure",
+        "native-current-needs",
+        "native-current-bite"
+      ]
+    },
+    "sourcePersonFields": [
+      "contactMonths",
+      "createdAt",
+      "dormantEndurance",
+      "dormantFatigue",
+      "dormantPhysiologyOrigin",
+      "dormantSleepNeed",
+      "dormantSleeping",
+      "epistemicMonths",
+      "forename",
+      "id",
+      "monthsAlive",
+      "occupation",
+      "originRegion",
+      "speechAccessOrigin",
+      "surname",
+      "traitEchoes",
+      "updatedAt",
+      "worldKnowledge",
+      "x",
+      "y",
+      "z"
+    ]
+  },
+  "captureGaps": [
+    {
+      "channel": "current native strain",
+      "status": "declared-unavailable",
+      "existingOwner": "Knowledge / Controller / native Needs"
+    },
+    {
+      "channel": "cognitive strain and response latency",
+      "status": "not-explicit-in-conditioning",
+      "existingOwner": "Neuro / Conditions / Controller"
+    },
+    {
+      "channel": "effective trait contributions",
+      "status": "not-separated-in-model-input",
+      "existingOwner": "Disposition / History / Lessons / Conditions"
+    },
+    {
+      "channel": "active purpose and perceived alternatives",
+      "status": "not-carried-in-this-authored-scene",
+      "existingOwner": "Controller / Integration / Branching; exact active path requires next capture investigation"
+    },
+    {
+      "channel": "word timing and conversational repair",
+      "status": "no-targets-in-this-capture",
+      "existingOwner": "Voice currently supplies whole-line delivery and volunteered-line gates"
+    }
+  ],
+  "interpretation": "PERSONALITY_REVISION.md",
+  "limits": [
+    "No new runtime experiment.",
+    "Source availability is not evidence of captured values or learned effects.",
+    "Knowledge-topic coverage does not assert complete cognitive-state coverage.",
+    "Condition words do not measure momentary emotion intensity.",
+    "Source graph selections do not establish executable or completed actions."
+  ]
+}

@@ -79,6 +79,15 @@ examples qualify for offline evaluation; speaker task admission, independent
 dataset partitions and learned composition remain unfinished. The proof's
 finite grammar is a reference experiment, not the final NPC speaking system.
 
+Record 59 adds the [corresponding speaker task](training/speaker/BOUND_EXAMPLE.md)
+and [separate prepared task views](training/datasets/c77-preparation/README.md).
+The operator requested revision of that exact task to demonstrate richer
+personality, emotional state, thought, adaptation and purposeful communication.
+The [source audit and revised sequence](training/speaker/PERSONALITY_REVISION.md)
+map existing game mechanisms to capture gaps and whole-scene contrasts.
+The task remains excluded; explicit retrieval masks preserve unjudged claims.
+The C77 collection still lacks independent evaluation partitions.
+
 That architecture uses one shared
 base with typed task adapters, learned claim retrieval, bounded versioned model
 cache, separate understander, retriever and speaker datasets, asynchronous snapshot and

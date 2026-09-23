@@ -1,0 +1,43 @@
+{
+  "action": "invoke",
+  "skillRef": "crucible",
+  "frameworkRef": "recursive-deliberation",
+  "title": "Mara’s first source-bound speaker task",
+  "source": {
+    "host": "codex",
+    "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+    "invocationId": "c77-bound-speaker-task-001"
+  },
+  "intake": {
+    "seams": [
+      {
+        "id": "c77-bound-speaker-task-001",
+        "shape": "decision",
+        "title": "Accept Mara’s complete speaker example",
+        "prompt": "Accept this source, situation and answer as one offline speaker task example?",
+        "description": "## The scene\nOn July 11, Jon asks Mara: **“What did the July 2 newspaper report about phone service?”**\n\nMara read that issue on July 10. Jon has no recorded acquisition of it. Her captured state is anxious, and her relationship to Jon is not marked trusted.\n\n## Mara’s answer\n> The July second paper said the phones were out all over Knox. For hours, Jon. Still down when it went to press, too. Businesses closed. They hadn't announced a cause—there was talk of wires down, lightning, sabotage... but that's all it was. Talk.\n\n## What this decision changes\nYou already approved this wording as one facet of communicative style. It is unchanged. The new work supplies the previously missing mechanical representation, including Jon’s captured name and each fact’s owner, source and time.\n\n**Accepting this task example lets the offline speaker-data pipeline pair this exact source and situation with this answer.** It becomes one reviewed example for the learned-speaker work. It cannot establish how all anxious people talk, and it does not approve the other 63 clause combinations.\n\n| The example teaches | It does not establish |\n| --- | --- |\n| Answer a question about a dated report using Mara’s acquired knowledge | Whether phone service is still down on July 11 |\n| Address Jon by his captured name | An inferred or invented participant identity |\n| Preserve uncertainty about the cause | Sabotage as a confirmed cause |\n| Associate this actual situation with this particular answer | A universal personality rule or a trained model’s quality |\n\n<details>\n<summary>Mechanical checks and remaining work</summary>\n\nThe task reconstructs its complete input from the validated capture and separately approved understanding/retrieval chain. Altered identities, proposition owners, dates, added prose, omitted reports and repeated reports refuse. Prior wording approval is preserved but cannot automatically approve a different task record.\n\nThe construction witness remains audit evidence; the prepared speaker target is the actual answer text. This does not select fixed sentence menus as the final architecture. General learned composition, register floors and native deployment remain unfinished.\n\nThe source family still has only one real scene. Independent evaluation partitions are missing, so even accepting this example will not make the dataset ready for training. Native current pressure, needs and bite inputs remain explicitly unavailable.\n\n</details>\n\n<details>\n<summary>Trace the prior decisions and implementation</summary>\n\nOriginal wording approval: skill-d255b2e7c14ce745.\nConsolidated direction: skill-3647c923478ac89b.\nApproved proof plan: skill-1269923d11820cf8.\nProof result: 6ccc3ba96092fb8d5b9d4203db5c57a6f13bd5c65c3deef12cbdaad8187e4dc0.\nThis exact task: 97388368bc3bf12051c4021cb8acd296ad3694bc30bbc1afb62f10c95d50e1a1.\n\n</details>",
+        "evidenceRef": "speakeasy:content-sha256:97388368bc3bf12051c4021cb8acd296ad3694bc30bbc1afb62f10c95d50e1a1",
+        "selectionMode": "single",
+        "allowFreeform": true,
+        "options": [
+          {
+            "label": "Accept this task example (Recommended)",
+            "value": "approved",
+            "description": "Admit the exact source/situation/answer pairing to offline task evaluation; dataset and runtime requirements remain separate.",
+            "recommended": true
+          },
+          {
+            "label": "Revise this task example",
+            "value": "revision-requested",
+            "description": "Use your notes to revise the source-to-answer pairing before it enters the task data."
+          },
+          {
+            "label": "Exclude this task example",
+            "value": "rejected",
+            "description": "Keep the earlier wording approval, but exclude this task from the offline speaker dataset."
+          }
+        ]
+      }
+    ]
+  }
+}

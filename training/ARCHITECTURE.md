@@ -229,3 +229,22 @@ finite report/location grammar reproduces the approved Mara wording and rejects
 the tested proposition/text substitutions. It is an offline reference for the
 ratified learned-composition work. General source interpretation, learned
 realization, register floors and native enforcement remain implementation work.
+
+Record 59 adds speaker task evidence version 4 over those bound propositions.
+The existing task validator, snapshots and retriever-anchor resolver handle it
+alongside version 3. Version 4 reconstructs captured names, source facts and
+conditioning before validating the expression witness and actual answer.
+Its exact task approval remains independent of earlier wording approval.
+The actual return requests revision toward granular personality, emotional
+state, thought, adaptation and communication. The
+[source audit](speaker/PERSONALITY_REVISION.md) defines contextual evaluation and
+missing capture evidence under the existing architecture. No learned effect or
+independent model per trait is inferred from this task.
+
+Deterministic task-data preparation keeps full provenance outside model targets,
+preserves incoming utterance roles for understanding, masks unjudged retrieval
+labels and prepares actual speaker text rather than construction choices. It
+revalidates the complete prepared artifact and requires independent partitions
+for each requested task before releasing data for tokenization. The C77 preview
+remains excluded as a dataset. Frozen subword tokenization, reference training,
+broader learned composition and native enforcement remain separate dependencies.
