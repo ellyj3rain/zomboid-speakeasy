@@ -1512,3 +1512,8 @@ relabelled path, independent fresh reading evidence and registry overwrite
 refusal. This correction creates no training rows, model weights or operator
 rulings. Exact C77 import and typed task validation precede concrete task review;
 retrieval retains the independent review required by Records 53-54.
+
+Record 55 publication follow-through pins the correction registry to LF checkout
+bytes, matching its use as hashed input. The policy's content is unchanged;
+Windows and Linux now derive the same correction-provenance hash. Fresh checkouts
+with both autocrlf settings pass all 74 tests and produce the same policy hash.
