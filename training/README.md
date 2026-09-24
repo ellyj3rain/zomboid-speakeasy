@@ -28,6 +28,15 @@ and retains the retriever's unjudged-claim masks. The preview remains excluded
 pending independent scenes and task approval; no model training or Java parity
 is claimed.
 
+Record 63 adds the [enacted coordination task contract](coordination/README.md).
+It consumes SAO's recipient-private process evidence through the exact version 3
+event namespace, preserves executor/body ownership, and renders current work,
+source-owned competing priorities, feasible responses and later work receipts on
+separate horizons. Same-moment ZAO truth is audit context rather than an input;
+ZAO effects enter through the actor snapshot that actually supplied activity and
+capability. These are candidate observations only. The focused rows are controls,
+not captured gameplay or approved training examples.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 
@@ -91,6 +100,7 @@ of the task still does not approve its retrieval target.
 | Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; personified wording approved with game-rooted personality direction; semantic admission and register floors unfinished |
 | Expression proof | Record 58 binds individual propositions and supports personified clause composition | Exact Mara reply reproduced within a finite grammar; arbitrary prose and learned composition remain unfinished |
 | Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
+| Enacted coordination | Full-namespace recipient decision, current work/priorities, executable options and later native receipts | Candidate-observation compiler implemented; no captured scene, task review or training admission |
 | Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 
 The current example's exact hashes and review standing live in

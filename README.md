@@ -1,10 +1,14 @@
 # Zomboid-Speakeasy
 
-Current continuation: Record 62 records the [returned behavioral review](training/behavior/c78/REVIEW.md).
+Current continuation: Record 63 adds the [enacted coordination evidence
+contract](training/coordination/README.md) required by Record 62's returned
+behavioral review.
 Trust and threat comparisons require revision; both lesson alternatives were
 accepted with a stiffness caveat, and strain B was preferred with the same caveat.
-The next experiment must examine changing priorities and communication with
-source-owned state. Record 61's reproducible
+SAO can now export a recipient's source-owned current work, competing priorities,
+feasible responses and later physical result on separate horizons. Its controlled
+production border emitted 13 rows that survived ZAO projection and this compiler;
+no loaded gameplay scene or task has been reviewed or admitted. Record 61's reproducible
 [task tokenization](training/datasets/c77-tokenization/README.md) remains available.
 Task admission and independent evaluation scenes still precede model training.
 
