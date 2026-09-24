@@ -1,6 +1,6 @@
 {
   "interactionId": "skill-62e946a5714cb8f8",
-  "standing": "awaiting-behavior-review",
+  "standing": "behavior-feedback-returned-revision-required",
   "trainingEligible": false,
   "continuationState": "~/.codex/skill-state/mass-assault/c78-behavior-comparisons-002.json",
   "items": [
@@ -21,6 +21,34 @@
         "ordinal": 1,
         "sourceIndex": 0,
         "sequence": 1
+      },
+      "response": {
+        "itemId": "seam-0f922f2effbc69c2",
+        "shape": "decision",
+        "status": "answered",
+        "value": "Obviously variety matters and I believe these are supposed to be anxious but I find these examples both fine but hyperliteral and sabotage--nothing settled is rather a claudeism.",
+        "selectedOption": "neither",
+        "selectedOptions": [
+          "neither"
+        ],
+        "ranking": null,
+        "checklist": null,
+        "notes": "Obviously variety matters and I believe these are supposed to be anxious but I find these examples both fine but hyperliteral and sabotage--nothing settled is rather a claudeism.",
+        "lineage": {
+          "host": "codex",
+          "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+          "threadId": "c78-behavior-trusted",
+          "parentThreadId": null,
+          "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/trusted/capture.json",
+          "originInteractionId": null,
+          "originItemId": null,
+          "delegationId": null,
+          "delegationAttempt": null,
+          "occurredAt": null,
+          "ordinal": 1,
+          "sourceIndex": 0,
+          "sequence": 1
+        }
       }
     },
     {
@@ -40,6 +68,34 @@
         "ordinal": 2,
         "sourceIndex": 1,
         "sequence": 2
+      },
+      "response": {
+        "itemId": "seam-f778daaa99bcd4ea",
+        "shape": "decision",
+        "status": "answered",
+        "value": "Well, if there's something nearby they shouldn't necessarily maintain the same object orientation. There should be a gradient by which prioritization and instinct are mapped essentially and tested externally.",
+        "selectedOption": "neither",
+        "selectedOptions": [
+          "neither"
+        ],
+        "ranking": null,
+        "checklist": null,
+        "notes": "Well, if there's something nearby they shouldn't necessarily maintain the same object orientation. There should be a gradient by which prioritization and instinct are mapped essentially and tested externally.",
+        "lineage": {
+          "host": "codex",
+          "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+          "threadId": "c78-behavior-threat",
+          "parentThreadId": null,
+          "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/threat/capture.json",
+          "originInteractionId": null,
+          "originItemId": null,
+          "delegationId": null,
+          "delegationAttempt": null,
+          "occurredAt": null,
+          "ordinal": 2,
+          "sourceIndex": 1,
+          "sequence": 2
+        }
       }
     },
     {
@@ -59,6 +115,34 @@
         "ordinal": 3,
         "sourceIndex": 2,
         "sequence": 3
+      },
+      "response": {
+        "itemId": "seam-7b9e8e36b68f5963",
+        "shape": "decision",
+        "status": "answered",
+        "value": "I like these, but the same stiffness sort of applies. I guess it depends on how well they know each other, but I don't know if that is already in consideration.",
+        "selectedOption": "both",
+        "selectedOptions": [
+          "both"
+        ],
+        "ranking": null,
+        "checklist": null,
+        "notes": "I like these, but the same stiffness sort of applies. I guess it depends on how well they know each other, but I don't know if that is already in consideration.",
+        "lineage": {
+          "host": "codex",
+          "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+          "threadId": "c78-behavior-learned",
+          "parentThreadId": null,
+          "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/learned/capture.json",
+          "originInteractionId": null,
+          "originItemId": null,
+          "delegationId": null,
+          "delegationAttempt": null,
+          "occurredAt": null,
+          "ordinal": 3,
+          "sourceIndex": 2,
+          "sequence": 3
+        }
       }
     },
     {
@@ -78,6 +162,34 @@
         "ordinal": 4,
         "sourceIndex": 3,
         "sequence": 4
+      },
+      "response": {
+        "itemId": "seam-4852f5e4c7b4ae49",
+        "shape": "decision",
+        "status": "answered",
+        "value": "I prefer B but again maybe it's too stiff contextually.",
+        "selectedOption": "b",
+        "selectedOptions": [
+          "b"
+        ],
+        "ranking": null,
+        "checklist": null,
+        "notes": "I prefer B but again maybe it's too stiff contextually.",
+        "lineage": {
+          "host": "codex",
+          "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+          "threadId": "c78-behavior-strain",
+          "parentThreadId": null,
+          "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/strain/capture.json",
+          "originInteractionId": null,
+          "originItemId": null,
+          "delegationId": null,
+          "delegationAttempt": null,
+          "occurredAt": null,
+          "ordinal": 4,
+          "sourceIndex": 3,
+          "sequence": 4
+        }
       }
     }
   ],
@@ -85,5 +197,9 @@
     "interactionId": "skill-c15d718ecf628349",
     "standing": "withdrawn-presentation-correction"
   },
-  "comparisonSha256": "a3c74d14645290301b45bcc3698d303b0026980ff0b11cb46679a78828c48bf3"
+  "comparisonSha256": "a3c74d14645290301b45bcc3698d303b0026980ff0b11cb46679a78828c48bf3",
+  "resultFile": "review-result.json",
+  "resultFileSha256": "c41471cc6f1da456b0e8c5767cc6a1f09cfb1ac1e8587a442fd6f111a0706db0",
+  "interpretationFile": "REVIEW.md",
+  "taskApprovalGranted": false
 }

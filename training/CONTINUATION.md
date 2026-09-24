@@ -4,7 +4,7 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons and Record 61 shared tokenizer reference. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference and Record 62 returned behavioral review. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
@@ -76,6 +76,17 @@ A controlled authored reading completion cannot establish autonomous reading. A 
 - The R completion summary follows canonical records. This planning pass did not re-audit every simulation producer or repeat live-play acceptance.
 
 ## Active implementation unit
+
+Record 62 consumes all four C78 judgments. The trust and threat comparisons need
+revision, the lesson alternatives are both accepted with a stiffness caveat, and
+strain B is preferred with a similar caveat. The exact notes and their limits are
+preserved in [the returned review](behavior/c78/REVIEW.md). The next source/data
+experiment must vary evidenced priorities and competing activity, including
+attention and action where their actual owners can supply them. Warning-versus-
+answer ordering alone does not satisfy the requested gradient. Existing input
+contains listener trust/debt/hostility, but does not establish familiarity.
+The linked review defines the producer audit and completion checks; no new
+priority weights, automatic phrase mappings or training admission are inferred.
 
 Admission and speech constraints is the active unit. Source and label validity,
 experimental task admission, dataset partition/evaluation evidence and runtime

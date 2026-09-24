@@ -26,3 +26,4 @@ tools/experiments/** text eol=lf
 tools/expression_proof.py text eol=lf
 tools/experimental_admission.py text eol=lf
 training/datasets/** text eol=lf
+training/behavior/c78/review-result.json text eol=lf
