@@ -105,6 +105,14 @@ class CrossModuleRowsTest(unittest.TestCase):
         self.assertEqual(rows[0]["crossModule"]["saoSha256"],
                          hashlib.sha256(self.sao.read_bytes()).hexdigest())
 
+    def test_namespace_requires_exact_v3_fields(self):
+        invalid = sao_row()
+        invalid["namespace"]["actorId"] = invalid["namespace"]["personId"]
+        self.write_valid([invalid], [zao_row()])
+        with self.assertRaisesRegex(Join.ContractError,
+                                    "exactly the v3 fields.*unexpected actorId"):
+            Join.export_rows(self.sao, self.zao, self.out)
+
     def test_late_invalid_row_leaves_existing_output_unchanged(self):
         invalid = sao_row(namespace(event="event-2", person="person-2"))
         invalid["options"] = ["watch"]

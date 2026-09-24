@@ -4,7 +4,7 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference and Record 62 returned behavioral review. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review and Record 63 enacted coordination provenance. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; the new candidate-observation boundary is in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
@@ -87,6 +87,20 @@ answer ordering alone does not satisfy the requested gradient. Existing input
 contains listener trust/debt/hostility, but does not establish familiarity.
 The linked review defines the producer audit and completion checks; no new
 priority weights, automatic phrase mappings or training admission are inferred.
+
+Record 63 resolves the missing evidence shape for enacted social coordination,
+without retroactively enriching the bodyless C78 family. SAO decision evidence
+now freezes the recipient's response before its return channel and can address
+an earlier proposal revision after later revision. The version 3 reader requires
+exactly run, county, person, event and hour. The coordination task view requires
+source owners for current activity, capabilities, own need, relationship,
+interests and constraints, and keeps return-channel/work results in a later
+horizon. Same-moment ZAO pathogen truth is excluded from decision input; Crossed
+effects arrive through the registered ZAO executor. The compiler marks every row
+as a candidate observation with task-review and learned-runtime exclusions. SAO's
+controlled production border emitted 13 rows; ZAO preserved all full namespaces
+and this compiler accepted all 13, including every response kind and one completed
+work result. No loaded scene or approved dataset row was produced.
 
 Admission and speech constraints is the active unit. Source and label validity,
 experimental task admission, dataset partition/evaluation evidence and runtime

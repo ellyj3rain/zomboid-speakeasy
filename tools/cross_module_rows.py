@@ -118,10 +118,17 @@ def namespace(row: dict[str, Any], path: Path, line: int) -> tuple[Any, ...]:
     value = row.get("namespace")
     if not isinstance(value, dict):
         raise ContractError(f"{path}:{line}: namespace must be an object")
+    extras = [field for field in value if field not in NAMESPACE_FIELDS]
     missing = [field for field in NAMESPACE_FIELDS if field not in value]
-    if missing:
+    if missing or extras:
+        detail = []
+        if missing:
+            detail.append("missing " + ", ".join(missing))
+        if extras:
+            detail.append("unexpected " + ", ".join(extras))
         raise ContractError(
-            f"{path}:{line}: namespace missing {', '.join(missing)}")
+            f"{path}:{line}: namespace must contain exactly the v3 fields; "
+            + "; ".join(detail))
     for field in NAMESPACE_FIELDS[:-1]:
         if not nonempty_string(value[field]):
             raise ContractError(

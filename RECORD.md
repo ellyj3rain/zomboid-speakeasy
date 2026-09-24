@@ -2020,3 +2020,36 @@ in 13.323 seconds; comparison reproduction preserves its original seal and the
 protected conditioning audit passes. The 190 historical choices and this
 comparison family remain training-ineligible. No game runtime, trained model,
 Mousecat source or desktop state was changed in this review unit.
+
+## 63 - Enacted coordination provenance (2026-09-24)
+
+The approved SAO/ZAO social-work unit supplies the source mechanism requested by
+Record 62 without altering the returned C78 comparisons. SAO Organization now
+exports a recipient's process decision at the hour the response was formed and
+keeps delivery, commitment and physical-work facts in a later outcome horizon.
+The earlier revision remains addressable after a proposal changes. Current work,
+capability, need, relationship, interests and constraints carry explicit producer
+ownership; executor and body owner remain distinct.
+
+The version 3 cross-module namespace is now exact: run, county, person, event and
+hour, with neither missing nor additional identity fields. The enacted
+coordination compiler binds that namespace to one actor, process and revision,
+and binds every executable response option to `SAO.Organization.respond`.
+Its inspectable decision view contains the acquired proposal, actual activity,
+competing priorities, feasible responses and selected response. The later view
+contains return-channel standing and revision-bound native work receipts.
+
+Same-moment ZAO pathogen truth and visible forms remain join audit state and do
+not enter the person's decision input. Crossed work is attributed through the
+registered ZAO executor and its supplied capability snapshot; survivor and
+living Afflicted execution remains SAO-owned. Controls refuse wrong-person rows,
+stale revisions, impossible options, hidden diagnosis fields, absent producer
+ownership, foreign work ownership, and future delivery or outcome leakage.
+
+All 143 Speakeasy Python tests pass, including seven focused coordination tests
+and the tightened cross-module controls. SAO's installed Kahlua border separately
+executes decision/outcome separation and older-revision retrieval. The controlled
+task rows are defect fixtures, not sampled gameplay. No scene was captured, no
+task label was reviewed, no row was admitted for training, and no model or native
+learned consumer was produced. The compiler therefore records
+`candidate-observation` plus explicit task-review and runtime exclusions.

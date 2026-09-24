@@ -9,6 +9,15 @@ The historical version 2 rows are deliberately refused. Their approved intent
 remains in place; their `(person, hour)` join and future conditioning do not meet
 the version 3 evidence contract.
 
+`coordination_tasks.py` compiles version 3 enacted-process rows into separate
+actor-private decision and later-outcome horizons. It binds current work,
+competing priorities, feasible responses, executor/body ownership and process
+revision to their runtime producers. Same-moment ZAO pathogen state remains
+audit-only: only ZAO-supplied activity and capability effects acquired through
+the registered execution owner enter the decision input. The output is a
+candidate observation, never automatic training admission. See the
+[coordination contract](../training/coordination/README.md).
+
 `audit_conditioning.py` reproduces the eligibility counts in
 `decisions/ELIGIBILITY.md` from the protected version 2 bytes.
 
@@ -16,6 +25,7 @@ Run the join controls with:
 
 ```text
 python tools/test_cross_module_rows.py
+python tools/test_coordination_tasks.py
 ```
 
 `decision_authoring.py` builds version 1 knowledge views and separately authored
