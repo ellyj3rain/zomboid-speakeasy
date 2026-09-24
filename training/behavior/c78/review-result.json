@@ -1,0 +1,234 @@
+{
+  "schema": "mousecat.skill-invocation/2",
+  "action": "await",
+  "skillRef": "mass-assault",
+  "interactionId": "skill-62e946a5714cb8f8",
+  "status": "answered",
+  "idempotentReplay": false,
+  "intake": {
+    "schema": "mousecat.skill-intake/2",
+    "skillRef": "mass-assault",
+    "source": {
+      "host": "codex",
+      "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+      "invocationId": "c78-behavior-comparisons-002"
+    },
+    "sessionIds": [
+      "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3"
+    ],
+    "seamCount": 4,
+    "ordering": "ordinal",
+    "fingerprint": "a75952976627dd41",
+    "rawTranscriptAccepted": false,
+    "returnExpectation": "typed-responses-with-lineage",
+    "frameworkRef": "recursive-deliberation",
+    "availableSkillRefs": [
+      "crucible",
+      "total-recall",
+      "mass-assault",
+      "field-test"
+    ]
+  },
+  "items": [
+    {
+      "id": "seam-0f922f2effbc69c2",
+      "shape": "decision",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-trusted",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/trusted/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 1,
+        "sourceIndex": 0,
+        "sequence": 1
+      }
+    },
+    {
+      "id": "seam-f778daaa99bcd4ea",
+      "shape": "decision",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-threat",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/threat/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 2,
+        "sourceIndex": 1,
+        "sequence": 2
+      }
+    },
+    {
+      "id": "seam-7b9e8e36b68f5963",
+      "shape": "decision",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-learned",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/learned/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 3,
+        "sourceIndex": 2,
+        "sequence": 3
+      }
+    },
+    {
+      "id": "seam-4852f5e4c7b4ae49",
+      "shape": "decision",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-strain",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/strain/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 4,
+        "sourceIndex": 3,
+        "sequence": 4
+      }
+    }
+  ],
+  "responses": [
+    {
+      "itemId": "seam-0f922f2effbc69c2",
+      "shape": "decision",
+      "status": "answered",
+      "value": "Obviously variety matters and I believe these are supposed to be anxious but I find these examples both fine but hyperliteral and sabotage--nothing settled is rather a claudeism.",
+      "selectedOption": "neither",
+      "selectedOptions": [
+        "neither"
+      ],
+      "ranking": null,
+      "checklist": null,
+      "notes": "Obviously variety matters and I believe these are supposed to be anxious but I find these examples both fine but hyperliteral and sabotage--nothing settled is rather a claudeism.",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-trusted",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/trusted/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 1,
+        "sourceIndex": 0,
+        "sequence": 1
+      }
+    },
+    {
+      "itemId": "seam-f778daaa99bcd4ea",
+      "shape": "decision",
+      "status": "answered",
+      "value": "Well, if there's something nearby they shouldn't necessarily maintain the same object orientation. There should be a gradient by which prioritization and instinct are mapped essentially and tested externally.",
+      "selectedOption": "neither",
+      "selectedOptions": [
+        "neither"
+      ],
+      "ranking": null,
+      "checklist": null,
+      "notes": "Well, if there's something nearby they shouldn't necessarily maintain the same object orientation. There should be a gradient by which prioritization and instinct are mapped essentially and tested externally.",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-threat",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/threat/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 2,
+        "sourceIndex": 1,
+        "sequence": 2
+      }
+    },
+    {
+      "itemId": "seam-7b9e8e36b68f5963",
+      "shape": "decision",
+      "status": "answered",
+      "value": "I like these, but the same stiffness sort of applies. I guess it depends on how well they know each other, but I don't know if that is already in consideration.",
+      "selectedOption": "both",
+      "selectedOptions": [
+        "both"
+      ],
+      "ranking": null,
+      "checklist": null,
+      "notes": "I like these, but the same stiffness sort of applies. I guess it depends on how well they know each other, but I don't know if that is already in consideration.",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-learned",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/learned/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 3,
+        "sourceIndex": 2,
+        "sequence": 3
+      }
+    },
+    {
+      "itemId": "seam-4852f5e4c7b4ae49",
+      "shape": "decision",
+      "status": "answered",
+      "value": "I prefer B but again maybe it's too stiff contextually.",
+      "selectedOption": "b",
+      "selectedOptions": [
+        "b"
+      ],
+      "ranking": null,
+      "checklist": null,
+      "notes": "I prefer B but again maybe it's too stiff contextually.",
+      "lineage": {
+        "host": "codex",
+        "sessionId": "01a0b758-3c1e-7522-92f4-31ae4ea1ffe3",
+        "threadId": "c78-behavior-strain",
+        "parentThreadId": null,
+        "evidenceRef": "source:sao-person-state-evidence:artifacts/audits/c78-person-state-comparisons/captures-v2/strain/capture.json",
+        "originInteractionId": null,
+        "originItemId": null,
+        "delegationId": null,
+        "delegationAttempt": null,
+        "occurredAt": null,
+        "ordinal": 4,
+        "sourceIndex": 3,
+        "sequence": 4
+      }
+    }
+  ],
+  "progress": {
+    "total": 4,
+    "resolved": 4,
+    "open": 0,
+    "deferred": 0,
+    "held": 0,
+    "answered": 4,
+    "withdrawn": 0
+  },
+  "reason": null
+}

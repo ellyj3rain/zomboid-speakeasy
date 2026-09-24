@@ -5,6 +5,12 @@ about communication. The scenes and candidate replies are authored. The game
 code supplies their captured state; no learned model produced the replies.
 The exact review and its current standing are recorded alongside this document.
 
+All four judgments have now returned. [The review and continuation](REVIEW.md)
+preserve the exact notes and distinguish revision requests from qualified
+preferences. The comparison below remains the original material that was judged;
+its requested threat comparison is superseded by the broader priority-gradient
+direction in the returned review. The original comparison stays training-ineligible.
+
 Mara read a July 2 newspaper on July 10. On July 11, Jon asks: **“What did the
 July 2 newspaper report about phone service?”** The report describes an outage
 across Knox, businesses closing, service still down at press time and no

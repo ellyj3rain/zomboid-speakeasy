@@ -1,10 +1,12 @@
 # Zomboid-Speakeasy
 
-Current continuation: Record 61 implements the shared byte-level tokenizer and
-reproducible [task tokenization](training/datasets/c77-tokenization/README.md).
-The four Record 60 behavioral comparisons remain independently reviewable in
-Mousecat. Task admission and independent evaluation scenes still precede model
-training; the tokenized preview preserves the current exclusions.
+Current continuation: Record 62 records the [returned behavioral review](training/behavior/c78/REVIEW.md).
+Trust and threat comparisons require revision; both lesson alternatives were
+accepted with a stiffness caveat, and strain B was preferred with the same caveat.
+The next experiment must examine changing priorities and communication with
+source-owned state. Record 61's reproducible
+[task tokenization](training/datasets/c77-tokenization/README.md) remains available.
+Task admission and independent evaluation scenes still precede model training.
 
 Modeling the cognition of Project Zomboid NPCs: how a person decides
 in the game space with limited awareness, from their own attributes

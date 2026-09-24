@@ -1986,3 +1986,37 @@ independently sourced scenes, task approvals and held-out partitions. Reference
 training follows usable data; Java parity and game consumption follow that
 reference. The current vocabulary establishes the reproducible token contract
 without fixing those later decisions or promoting existing excluded data.
+
+## 62 - Returned behavioral review (2026-09-24)
+
+Mousecat interaction skill-62e946a5714cb8f8 returned all four contextual
+judgments. The exact response map, selected options, freeform values and
+lineage are preserved in training/behavior/c78/review-result.json, with private
+continuation capabilities omitted. Current standing binds its exact file hash
+to the original comparison. The source/candidate comparison remains immutable.
+
+Trust and nearby-threat comparisons were returned for revision. The trust note
+finds both examples broadly fine but hyperliteral, requests variety and rejects
+a particular model mannerism; this qualification accompanies the selected
+neither response. The threat note asks for graded changes in priorities and
+object orientation, tested externally. Both existing threat options continued
+the newspaper answer and cannot settle that requirement. Both lesson variants
+were accepted with a stiffness/familiarity caveat; strain B was preferred with a
+similar caveat. These are contextual judgments, not general speech rules or
+speaker-task approval.
+
+Source inspection establishes the next evidence boundary. Relationship input
+contains trust, debt and hostility, with no familiarity measure. The four-tile
+threat sits at the existing pressure ceiling; raw perceived distance is retained.
+Current controller decisions already consider disposition, perceived threat and
+Standing, but this bodyless family supplies no loaded activity, native needs,
+movement or complete action alternatives. The returned review maps a producer
+audit, graded competing-task scenarios and separate external behavior/voice
+checks. It does not prescribe priority weights or a new instinct taxonomy.
+
+Verification binds all four responses to the exact saved invocation, source
+references, item lineage and literal alternatives. All 135 Python tests pass
+in 13.323 seconds; comparison reproduction preserves its original seal and the
+protected conditioning audit passes. The 190 historical choices and this
+comparison family remain training-ineligible. No game runtime, trained model,
+Mousecat source or desktop state was changed in this review unit.
