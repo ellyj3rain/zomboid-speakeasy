@@ -1,9 +1,11 @@
 # Enacted coordination task evidence
 
-Status: implemented candidate-observation contract plus one approved bounded
-offline reference run. Record 66 approves the response kinds of 20 exact C81
-synthetic production rows; it does not demonstrate a loaded-world scene,
-population frequency, native model, or learned runtime.
+Status: implemented candidate-observation contract, one approved bounded
+offline reference run and one reproducible native shadow candidate. Record 66
+approves the response kinds of 20 exact C81 synthetic production rows. Record
+67 exports the exact FP32 model and tokenizer contract without authorizing it to
+choose or revise a response. Neither record demonstrates a loaded-world scene
+or population frequency.
 
 Records 64-65 correct Record 63's execution ownership and carry the resulting
 state-policy boundary while retaining its version 3 source namespace. A recipient's
@@ -123,3 +125,44 @@ this adapter, no native bundle consumes it, and no measured result describes how
 often any response or pressure dominates play. In particular, shared
 `ZAO.Driver` execution does not make Afflicted and Crossed physiology, motives,
 maintenance or action policy interchangeable.
+
+## Record 67 native shadow bundle
+
+`tools/coordination_native_bundle.py` first reproduces the complete sealed R66
+run, then writes a strict dependency-free interchange for SAO's pure-Java
+consumer. The binary contains the byte-BPE merge program and reserved IDs,
+ordered response labels and observed-label support, the 16 typed feature names,
+FP32 embedding/adapter weights and biases, and exact dataset/model/tokenizer/run
+identities. The format is `SAOCRD01` version 1 with compatibility identity
+`sao-coordination-consumer-v1`; missing, extra, malformed, non-finite or
+trailing data is refused.
+
+The exported bundle is 13,050 bytes and has SHA-256
+`02edcdc1caf7489f0871f63e35af2c2cc26966ec74c0cf30eb63d155b1acb33c`.
+The sealed manifest is
+`2354c652d0e5615df11149e2539bb08b8a6889d5ca4cd0b8eb66e73d9daf1c1e`.
+All 20 parity rows preserve the expected response; the maximum probability
+delta from the R66 FP32 reference is `1.2782958e-07` against a declared
+`1e-6` tolerance. Six byte-level vectors cover ASCII, UTF-8 and structural
+token behavior. Corruption, trailing bytes and unsupported-only feasible masks
+are discriminating controls.
+
+Precision is explicitly FP32 parameters, FP32 accumulation and
+strict-exp-FP32 softmax; no quantized candidate is claimed. The manifest marks
+the artifact `native-shadow-candidate`. Decline and withdraw remain masked, the
+twenty situations remain synthetic, and the generic input identifies current
+executor/activity/pressure ownership without exposing an Afflicted or Crossed
+condition label. Their shared registered ZAO driver therefore does not merge
+their state, maintenance, motives or action policy.
+
+Reproduce the exact bytes with:
+
+```text
+python tools/test_coordination_native_bundle.py
+python tools/coordination_native_bundle.py validate --bundle-dir training/coordination/r67-native
+```
+
+The SAO consumer must independently prove Java/tokenizer parity, bounded async
+execution, stale/foreign/malformed refusal and current-owner revalidation. Even
+after those mechanical checks, shadow output remains observational until a
+separate behavior-activation review and loaded-world acceptance occur.

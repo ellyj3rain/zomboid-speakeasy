@@ -4,18 +4,18 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, and Record 66's approved bounded coordination dataset/reference run. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence and run standing are in `coordination/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, Record 66's approved bounded coordination dataset/reference run, and Record 67's exact native shadow bundle. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence, run standing and native parity are in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
 
 | Area | Verified standing | Practical limit |
 |---|---|---|
-| SAO | C78 is published with person-state capture. Its deployment verifies 262 installed files and unchanged metadata for 44,092 save files. | This is file/deployment evidence and controlled source capture, with no new loaded-world acceptance. Autonomous newspaper discovery/selection/reading remains absent. |
+| SAO | C79-C81 implement enacted coordination, shared ZAO execution ownership and the reviewed 20-row production source. C82 adds the exact packaged Java evaluator and a non-authoritative shadow at the real appraisal path. | Mechanical/headless evidence proves parity and stale-state refusal; no C82 loaded-world session or learned behavior activation is claimed. Autonomous newspaper discovery/selection/reading remains absent. |
 | Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, and selected source/treatment/communication/rest mechanisms implemented. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, R13 training, R14 learned runtime and R15 acceleration remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
-| Data and models | Protected intent/source material, validated task preparation, a frozen byte-BPE reference and one bounded learned coordination adapter exist. | 190 historical choices and the C77 tokenized preview retain their exclusions. The Record 66 run is synthetic and offline; no Java tokenizer parity, learned native bundle or live learned exchange exists. |
+| Data and models | Protected intent/source material, validated task preparation, a frozen byte-BPE reference, one bounded learned coordination adapter and an exact FP32 native shadow bundle exist. | The 190 historical choices and C77 tokenized preview retain their exclusions. Record 67 proves export and consumer parity for the synthetic R66 family, not learned behavior authority or gameplay quality. |
 | Verification | Expression/admission controls and contextual comparison revalidation preserve exact source evidence and separate judgment standing. See each implementation record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
 
 ## What needs correction
@@ -36,6 +36,14 @@ Deliver a small, reproducible offline learned conversation experiment over multi
 | 1. Admission and truthful constraints | Reconcile current docs; bind participant identity and conditioning provenance; distinguish source validity, task-label approval, experimental data admission and deployment readiness. Demonstrate how the chosen speaker representation constrains meaning. | A compiler admits only examples whose declared task requirements are met and gives specific reasons for every exclusion. Good personified cases and adversarial changes to subject, negation, date, reported/direct knowledge and causal uncertainty discriminate the speech constraint. Shared claim IDs alone cannot pass a false sentence. |
 | 2. Task data and reference learning | Build task datasets, immutable manifests, deterministic preparation, the shared byte-level tokenizer, task adapters, reference training and separate evaluators. Use multiple independently sourced scenes; retain Mara as a regression case. | One reproducible experimental run with saved inputs/configuration/seed, trained weights, held-out results, factual/interpretation/retrieval/voice failures and inspectable dialogue. Cases from one event/source lineage stay in one split. An overfit smoke test is labeled as such. |
 | 3. Native export and game consumption | Export the agreed native bundle; establish Python/reference-to-Java parity; implement immutable asynchronous requests and current-owner/revision revalidation at the real conversation path. | A compatible learned artifact changes an actual exchange; stale/foreign/malformed outputs refuse; task outputs and numeric tolerances match the reference; memory and latency are measured on the actual path. Loaded-world acceptance is reported separately from offline/startup checks. |
+
+Record 67 and SAO C82 complete the mechanical shadow portion of Unit 3: the
+exact bundle loads in the packaged Java consumer, all task/tokenizer vectors
+match, immutable requests are bounded, and returned observations survive only
+current process, response, option and execution-owner revalidation. They do not
+complete Unit 3's behavior-activation clause. The authoritative production
+response is formed first and is never revised by this candidate; loaded-world
+acceptance and a separate consequential activation review remain open.
 
 Unit 1 must produce a bounded feasibility result before claiming general semantic safety. Free composition with arbitrary factual text is not solved by attaching a source reference or by adding a blacklist. If the ratified requirement cannot be realized by the candidate construction, surface the specific evidence and consequential design choice; do not quietly replace it with universal sentence templates.
 

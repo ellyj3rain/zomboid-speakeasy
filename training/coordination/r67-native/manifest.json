@@ -1,0 +1,41 @@
+{
+  "bundleId": "r67-r66-coordination-fp32-v1",
+  "compatibility": {
+    "consumer": "sao-coordination-consumer-v1",
+    "externalRuntimeRequired": false
+  },
+  "components": {
+    "coordination.bundle": "02edcdc1caf7489f0871f63e35af2c2cc26966ec74c0cf30eb63d155b1acb33c",
+    "parity.tsv": "67a0a68e9309a322b5e13c512264cef6296aeda726faf920902545bfab761bd8",
+    "tokenizer-vectors.tsv": "04c804432f02a97f30f2af93ec97ed8a81397debeaa5e31bb8b6a8556c7e678d"
+  },
+  "contentSha256": "2354c652d0e5615df11149e2539bb08b8a6889d5ca4cd0b8eb66e73d9daf1c1e",
+  "limits": [
+    "Coordination output remains shadow-only and cannot select or revise a game response.",
+    "The source family has no decline or withdraw target; both remain masked.",
+    "The twenty rows are synthetic production situations, not sampled gameplay prevalence.",
+    "Afflicted and Crossed share a registered ZAO execution owner but retain distinct state, maintenance and action policy outside this generic task input."
+  ],
+  "parity": {
+    "exactResponseParity": true,
+    "maxProbabilityDeltaFromR66": 1.2782958e-07,
+    "probabilityTolerance": 1e-06,
+    "rowCount": 20
+  },
+  "precision": {
+    "accumulation": "fp32",
+    "parameters": "fp32",
+    "quantization": "none",
+    "softmax": "strict-exp-fp32"
+  },
+  "schema": "speakeasy-native-bundle-manifest",
+  "schemaVersion": 1,
+  "source": {
+    "datasetSha256": "a910256c51a5ab2355348ef81100fb14fcaf675c594c0cad33278c43a67c560d",
+    "modelSha256": "e67f02f1143dffeafce02e095b5c9f34c030bfa41734ba5d7006b3c9e81265ad",
+    "referenceRunSha256": "eea4f4747bc2277a4a51178038272e428f770687308662b1f44ba46ffeaa5b62",
+    "tokenizerSha256": "de647099663341a23d8dd85f940770bc866f96b738545eaa42253229cdef1c6d"
+  },
+  "standing": "native-shadow-candidate",
+  "task": "coordination-response"
+}

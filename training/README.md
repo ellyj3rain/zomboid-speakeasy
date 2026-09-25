@@ -2,7 +2,8 @@
 
 The [ratified continuation](CONTINUATION.md) makes admission and speech
 constraints the active unit toward a reproducible offline learned conversation
-experiment, with data preparation alongside it and native integration after.
+experiment, with data preparation alongside it. Record 67 now supplies the
+first exact native shadow artifact; learned authority remains a later gate.
 
 Record 58 completes the approved [bounded expression and admission
 proof](experiments/expression-proof/README.md). It reproduces Mara's full approved
@@ -61,6 +62,14 @@ outcomes remain audit-only, while current source-owned effects remain in the
 decision view; feasible-option masking prevents an impossible response. Decline and
 withdraw have no examples and are explicitly unsupported. This run is a small
 headless reference, not a native model or gameplay-quality result.
+
+Record 67 exports that exact reference into the first
+[native coordination shadow bundle](coordination/README.md#record-67-native-shadow-bundle).
+The strict binary carries the frozen tokenizer and FP32 task tensors with all 20
+full-input parity rows and six tokenizer vectors. It is compatible with SAO's
+pure-Java consumer and needs no external inference runtime. Its standing is
+shadow-only: the production response remains authoritative, stale or owner-
+changed results are withheld, and no learned result can create work.
 
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
@@ -126,8 +135,9 @@ of the task still does not approve its retrieval target.
 | Expression proof | Record 58 binds individual propositions and supports personified clause composition | Exact Mara reply reproduced within a finite grammar; arbitrary prose and learned composition remain unfinished |
 | Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
 | Enacted coordination | Full-namespace recipient decision, current work/priorities, explicit pressure availability, executable options and later native receipts | Twenty C81 synthetic production rows received exact task-label review and bounded offline admission; they are not sampled gameplay |
-| Coordination reference | Frozen shared tokenizer, learned 8-dimensional byte-token base and typed feasible-response adapter | Deterministic 10/5/5 run is sealed and reproduces; decline/withdraw unsupported, no native export or runtime authority |
-| Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No game-loaded model or behavior change |
+| Coordination reference | Frozen shared tokenizer, learned 8-dimensional byte-token base and typed feasible-response adapter | Deterministic 10/5/5 run is sealed and reproduces; decline/withdraw unsupported |
+| Native coordination shadow | Content-hashed FP32 bundle, exact Python/Java vectors, bounded async request contract and current-state revalidation | Mechanically integrated as observation only; it cannot choose a response or create work, and loaded gameplay is unobserved |
+| Learned runtime authority | Later reviewed activation of a compatible artifact | No learned behavior change |
 
 The current example's exact hashes and review standing live in
 [understander/c77-example.json](understander/c77-example.json). Its human-readable
