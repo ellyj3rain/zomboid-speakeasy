@@ -2222,3 +2222,39 @@ scene or complete the broader shared conversation bundle.
 
 All 159 Python tests pass. The exact export validation retrains and compares the
 complete sealed R66 run before accepting the tracked R67 bytes.
+
+## 68 - Causal episode intake (2026-09-25)
+
+SAO C84 now supplies a bounded production county episode instead of isolated
+decision rows alone. One run advances to its maximum horizon and owns every
+checkpoint; a fresh Kahlua process must reproduce the complete canonical result
+before the episode is sealed and exclusively exported. The row retains source
+provenance, daily state, social events, terminal state and the complete
+production coordination capture.
+
+`coordination_episodes.py` validates that full unit. It requires the exact
+schema and content seal, an isolated two-run replay receipt, ordered start and
+finish checkpoints drawn from the recorded trajectory, consistent source and
+terminal identity, and a failure-free coordination capture. Decision rows, when
+present, must retain the complete version 3 namespace inside the episode
+horizon. The compiler then requires an explicit current ZAO projector, invokes
+its `states_for` owner and reuses the established cross-module join and task
+compiler. Decision-time and later-outcome horizons remain separate.
+
+An episode with no decision is not dropped. The tracked C84 file SHA-256 is
+`84008e521ebb29325632421e6956817329acdfd65e39391573103191232d2e2d`;
+its episode seal is
+`fc4ecb3b874bab9f5193908707bab3aee188ff01a676506530271ec93fe58b41`
+and complete replay seal is
+`4c96d2d0d6ceb7c2cce9fdd29d51394b0759b391fc44b072c060e5bed16dd09b`.
+The 30-day joint run ended with 29 alive and 22 dead but formed no organization
+or shared matter. The resulting manifest
+`4ab55f82386d2b4435d921748ff3fa76a13b3a67c6cff75555094258accacd2b`
+therefore records one episode, zero decisions and zero candidate tasks.
+
+Controls refuse a changed seal, false replay, future decision namespace,
+missing projector, projector namespace drift and output overwrite. Every output
+remains `candidate-observation`. Record 68 performs no task review, admission,
+training or learned activation and supplies no loaded-gameplay receipt. One
+empty seed establishes the episode loop and exposes producer density; it is not
+a sufficient corpus or accelerator comparison.

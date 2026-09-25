@@ -1,10 +1,12 @@
 # Enacted coordination task evidence
 
 Status: implemented candidate-observation contract, one approved bounded
-offline reference run and one reproducible native shadow candidate. Record 66
+offline reference run, one reproducible native shadow candidate and one causal
+episode intake. Record 66
 approves the response kinds of 20 exact C81 synthetic production rows. Record
 67 exports the exact FP32 model and tokenizer contract without authorizing it to
-choose or revise a response. Neither record demonstrates a loaded-world scene
+choose or revise a response. Record 68 retains complete replay-proven county
+episodes before extracting decisions. None demonstrates a loaded-world scene
 or population frequency.
 
 Records 64-65 correct Record 63's execution ownership and carry the resulting
@@ -166,3 +168,39 @@ The SAO consumer must independently prove Java/tokenizer parity, bounded async
 execution, stale/foreign/malformed refusal and current-owner revalidation. Even
 after those mechanical checks, shadow output remains observational until a
 separate behavior-activation review and loaded-world acceptance occur.
+
+## Record 68 causal episode intake
+
+`tools/coordination_episodes.py` consumes the complete C84 episode rather than
+treating a decision row as if it were an independent world. It verifies the
+episode seal, two-run isolated exact-replay receipt, ordered start/finish
+checkpoints from the recorded trajectory, source save/horizon identity, terminal
+population and a failure-free production decision capture. Every decision must
+retain the full version 3 run/county/person/event/hour namespace inside the
+episode horizon.
+
+When an episode has decisions, intake requires an explicitly supplied current
+ZAO projector and calls its `states_for` owner. It then uses the existing exact
+cross-module join and coordination task compiler. The decision-time and later-
+outcome hours remain separate, and the complete episode remains alongside the
+derived rows. An empty episode bypasses no validation and is retained with zero
+decisions and tasks. Thus low producer density cannot disappear from the corpus
+or be replaced with synthetic labels.
+
+The tracked `r68-episodes` bundle consumes SAO's 30-day joint file SHA-256
+`84008e521ebb29325632421e6956817329acdfd65e39391573103191232d2e2d`.
+Its episode seal is
+`fc4ecb3b874bab9f5193908707bab3aee188ff01a676506530271ec93fe58b41`
+and complete replay seal is
+`4c96d2d0d6ceb7c2cce9fdd29d51394b0759b391fc44b072c060e5bed16dd09b`.
+The intake manifest is
+`4ab55f82386d2b4435d921748ff3fa76a13b3a67c6cff75555094258accacd2b`:
+one episode, zero decisions, zero tasks. The run ended with 29 alive and 22
+dead, but formed no organization or matter.
+
+Changed episode seals, false replay standing, future decision namespaces,
+missing projectors, wrong projector namespaces and output overwrite all refuse.
+The bundle remains `candidate-observation`; it has no independent task review,
+training admission, learned authority or loaded-gameplay receipt. One empty
+seed is useful evidence of the remaining producer gap, not an adequate training
+corpus or accelerator comparison.

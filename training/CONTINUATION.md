@@ -4,18 +4,18 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, Record 66's approved bounded coordination dataset/reference run, and Record 67's exact native shadow bundle. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence, run standing and native parity are in `coordination/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, Record 66's approved bounded coordination dataset/reference run, Record 67's exact native shadow bundle, and Record 68's causal episode intake. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence, episode standing, run standing and native parity are in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
 
 | Area | Verified standing | Practical limit |
 |---|---|---|
-| SAO | C79-C81 implement enacted coordination, shared ZAO execution ownership and the reviewed 20-row production source. C82 adds the exact packaged Java evaluator and a non-authoritative shadow at the real appraisal path. | Mechanical/headless evidence proves parity and stale-state refusal; no C82 loaded-world session or learned behavior activation is claimed. Autonomous newspaper discovery/selection/reading remains absent. |
-| Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, and selected source/treatment/communication/rest mechanisms implemented. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, R13 training, R14 learned runtime and R15 acceleration remain unfinished. |
+| SAO | C79-C84 implement enacted coordination, shared ZAO execution ownership, the reviewed 20-row source, exact native shadow and a one-prefix exact-replay county episode boundary. ZAO A41 supplies the shared loaded/dormant owner. | Mechanical/headless evidence proves the named paths. The tracked 30-day episode formed no matter; no loaded-world session or learned behavior activation is claimed. Autonomous newspaper discovery/selection/reading remains absent. |
+| Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, selected source/treatment/communication/rest mechanisms, and C84's first exact R15 baseline episode. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, general R13 training, R14 learned runtime and accelerator equivalence remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
-| Data and models | Protected intent/source material, validated task preparation, a frozen byte-BPE reference, one bounded learned coordination adapter and an exact FP32 native shadow bundle exist. | The 190 historical choices and C77 tokenized preview retain their exclusions. Record 67 proves export and consumer parity for the synthetic R66 family, not learned behavior authority or gameplay quality. |
+| Data and models | Protected intent/source material, validated task preparation, a frozen byte-BPE reference, one bounded learned coordination adapter, an exact FP32 native shadow bundle and episode-level candidate intake exist. | The 190 historical choices and C77 tokenized preview retain their exclusions. Record 68 preserves one natural zero-decision episode but does not review, admit or train it. Record 67 proves export and consumer parity for the synthetic R66 family, not learned behavior authority or gameplay quality. |
 | Verification | Expression/admission controls and contextual comparison revalidation preserve exact source evidence and separate judgment standing. See each implementation record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
 
 ## What needs correction
@@ -44,6 +44,14 @@ current process, response, option and execution-owner revalidation. They do not
 complete Unit 3's behavior-activation clause. The authoritative production
 response is formed first and is never revised by this candidate; loaded-world
 acceptance and a separate consequential activation review remain open.
+
+Record 68 and SAO C84 establish the baseline data loop needed before any late-
+start accelerator can be evaluated. A maximum-horizon county run owns all of
+its checkpoints, a fresh process must reproduce the complete result and the
+whole episode survives intake even when it has no decision. The first tracked
+30-day joint episode produced zero coordination rows, so it contributes no task
+or label. Broader R9 producers, multiple seeds, independent review and matched
+accelerator comparisons remain required; absence is not repaired with fixtures.
 
 Unit 1 must produce a bounded feasibility result before claiming general semantic safety. Free composition with arbitrary factual text is not solved by attaching a source reference or by adding a blacklist. If the ratified requirement cannot be realized by the candidate construction, surface the specific evidence and consequential design choice; do not quietly replace it with universal sentence templates.
 
