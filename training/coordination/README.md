@@ -4,8 +4,9 @@ Status: implemented candidate-observation contract. It does not approve a task
 label, admit a training row, demonstrate a loaded-world scene, or integrate a
 learned runtime.
 
-Record 63 connects the version 3 decision namespace to SAO's enacted social
-process evidence. A recipient's decision row names one run, county, person,
+Records 64-65 correct Record 63's execution ownership and carry the resulting
+state-policy boundary while retaining its version 3 source namespace. A recipient's
+decision row names one run, county, person,
 event and decision hour. Its executable options bind the same actor, process and
 proposal revision to `SAO.Organization.respond`. Same-moment ZAO state remains
 join audit evidence; pathogen truth and other people's visible forms do not enter
@@ -13,23 +14,29 @@ the actor's decision input.
 
 | Horizon | Included evidence | Excluded evidence |
 |---|---|---|
-| Decision time | Acquired proposal and reception, current activity, source-owned needs/relationship/interests/constraints, executor/body owner, current capabilities, feasible responses and the response formed at that hour | Return-channel success, commitments, route/work receipts, later process state, hidden pathogen truth |
+| Decision time | Acquired proposal and reception, current activity, source-owned competing pressure/relationship/interests/constraints, executor/body owner, current capabilities, feasible responses and the response formed at that hour | Return-channel success, commitments, route/work receipts, later process state, hidden pathogen truth |
 | Later outcome | Return-channel receipt, process standing and that actor's revision-bound commitments with acquisition, route and handover results | Private inputs, proposal/reception payloads and other participants' responses |
 
-`tools/coordination_tasks.py` refuses a wrong person, incomplete or extended v3
+`tools/coordination_tasks.py` emits task schema version 2 and refuses a wrong person, incomplete or extended v3
 namespace, stale proposal/response/commitment revision, impossible response,
 missing input owner, unavailable executor advertised as capable, foreign work
-owner, future timestamp and any commitment or delivery fact in the decision
-horizon. An older decision revision remains addressable after the process is
-revised; the later horizon records the observed current revision separately.
+owner, missing pressure availability, hidden diagnosis/pathogen/form/diet fields,
+future timestamp and any commitment or delivery fact in the decision horizon.
+An older decision revision remains addressable after the process is revised;
+the later horizon records the observed current revision separately.
 
 The compiled view makes current work and competing priorities legible without
-creating new priority weights. `ownNeed`, relationship, interests and constraints
-are copied from their named runtime owners. Crossed execution is attributed to
-ZAO through the registered execution-owner snapshot; the task does not infer a
-diagnosis from that ownership. Survivor and living Afflicted execution remains
-SAO-owned, with ZAO effects entering only through values the execution owner
-actually supplied.
+creating new priority weights. Competing pressure carries separate value,
+availability and source owner; an unavailable value is null instead of a
+misleading zero.
+Relationship, interests and constraints remain source-owned. Survivors execute
+through SAO. Afflicted and Crossed living human shells both execute through the
+registered `ZAO.Driver`, while their distinct policy inputs remain behind their
+ZAO owners. Crossed ordinary physiology and human-origin preference remain
+distinct from Crossed predatory pressure; Afflicted water, food and protein
+maintenance remain distinct again. None is named by this generic pressure field.
+The task does not infer diagnosis, satisfier, diet, predation or behavior from shared
+execution ownership.
 
 Run the focused controls with:
 

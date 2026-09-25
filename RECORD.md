@@ -2053,3 +2053,64 @@ task rows are defect fixtures, not sampled gameplay. No scene was captured, no
 task label was reviewed, no row was admitted for training, and no model or native
 learned consumer was produced. The compiler therefore records
 `candidate-observation` plus explicit task-review and runtime exclusions.
+
+## 64 - Shared ZAO living execution correction (2026-09-24)
+
+Record 63 incorrectly stated that living Afflicted execution remained SAO-owned.
+The corrected boundary is one shared ZAO execution owner for Afflicted and
+Crossed living human shells. This does not make the two conditions similar or
+authorize a shared action policy. ZAO may expose generic current pressure while
+the applicable motives, satisfiers and actions remain state-owned. Survivors
+remain SAO-owned.
+
+The coordination task compiler now emits schema version 2. Competing pressure
+is an object with value, availability and source owner. When the source cannot
+supply it, the task value is null rather than the numeric placeholder used by
+the Lua transport. Private constraint trees containing terminal-state, current-form,
+pathogen, diagnosis or diet fields are refused. Same-moment ZAO state remains an
+audit join and cannot change the decision horizon.
+
+Focused controls compile both Afflicted and Crossed rows with `ZAO.Driver`, show
+loaded pressure provenance and unavailable-pressure handling, and show that
+changing only hidden ZAO audit state leaves decision input unchanged. Mutation
+cases refuse missing pressure availability and a nested terminal-state leak.
+SAO's installed Kahlua border also requires explicit pressure availability on
+every emitted controlled row and rejects diagnosis and diet labels in private
+coordination evidence.
+
+All 143 Speakeasy Python tests pass with the corrected schema and controls.
+
+These are controlled headless mechanisms. No loaded gameplay scene was observed,
+no task was approved or admitted for training, and no model was trained. The
+generic pressure field defines neither Crossed sustenance nor Afflicted
+maintenance, and no hidden state value is inferred from it.
+
+## 65 - Distinct ZAO maintenance behind shared execution (2026-09-24)
+
+ZAO now implements the consequence that Record 64 preserved only as an ownership
+boundary. Afflicted and Crossed living people still share `ZAO.Driver`; they do
+not share maintenance, motives, satisfiers or action policy. Afflicted
+maintenance keeps water, a strong meat/protein preference, feasible non-dairy
+alternatives with reduced relief and a temporary performance cost, and
+individual willingness around human-origin food. Crossed maintenance keeps
+ordinary food viable under substantially reduced caloric pressure and represents
+fear, pain and control as a separate predatory pressure rather than hunger.
+
+The runtime evidence for those mechanisms remains in ZAO, including acquisition
+through SAO SourceUse, exact native receipts, donor-conditioned Afflicted
+protection, and acute Crossed relief from heard threat plus public flight, actual
+health loss, or completed post-threat yielding. Death supplies no substitute
+relief, eating is a separate action, and an Afflicted human source is possible
+but dispreferred. These facts are not new Speakeasy labels or fixed narrative
+outcomes.
+
+The enacted-coordination compiler therefore remains deliberately generic. It
+admits only a source-owned competing-pressure value and explicit availability
+alongside current work. It refuses private condition, diet and predation fields
+and cannot infer a satisfier or action from the shared executor. This preserves
+the salient consequences for later learned choice without leaking the diagnosis
+or collapsing two different people into one policy.
+
+The evidence remains controlled and headless. No gameplay scene has established
+how frequently these pressures dominate actual choices, no coordination row has
+been approved for training, and no learned model has consumed them.

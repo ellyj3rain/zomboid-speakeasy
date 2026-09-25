@@ -22,7 +22,7 @@ import decision_authoring as A
 
 
 SCHEMA = "speakeasy-enacted-coordination-task"
-VERSION = 1
+VERSION = 2
 RESPONSES = {
     "accept", "qualify", "counter-propose", "decline", "defer", "contest",
     "withdraw",
@@ -36,6 +36,10 @@ PRIVATE_FIELDS = {
     "owner", "executor", "bodyOwner", "currentActivity", "capabilities",
     "constraints", "interests", "inputOwners", "relationship", "ownNeed",
     "destinationKnown", "feasibleOptions", "choice", "reconsider",
+}
+HIDDEN_PRIVATE_CONSTRAINT_FIELDS = {
+    "currentForm", "diagnosis", "diet", "dietKnown", "pathogen",
+    "pathogenDiagnosis", "terminalState", "visibleForms",
 }
 DECISION_FIELDS = {
     "id", "kind", "organizationId", "originatorId", "createdAt", "revisedAt",
@@ -81,6 +85,19 @@ def lua_sequence(value: Any, where: str) -> list[Any]:
     return value
 
 
+def nested_field_names(value: Any) -> set[str]:
+    result: set[str] = set()
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if isinstance(key, str):
+                result.add(key)
+            result.update(nested_field_names(item))
+    elif isinstance(value, list):
+        for item in value:
+            result.update(nested_field_names(item))
+    return result
+
+
 def joined_source(row: dict[str, Any]) -> None:
     """Revalidate a joined row without allowing its audit-only additions in input."""
     require(isinstance(row, dict), "joined coordination row must be an object")
@@ -122,14 +139,19 @@ def private_appraisal(value: Any, proposal: dict[str, Any], actor: str) -> dict[
     constraints = value["constraints"]
     require(isinstance(constraints, dict), "private constraints must be an object")
     required_constraints = {
-        "represented", "currentActivity", "executionOwnerAvailable"}
+        "represented", "currentActivity", "executionOwnerAvailable",
+        "ownNeedAvailable"}
     require(required_constraints <= set(constraints),
-            "private constraints lack representation/activity/owner availability")
+            "private constraints lack representation/activity/owner/need availability")
     require(all(isinstance(constraints[name], bool)
-                for name in ("represented", "executionOwnerAvailable")),
-            "representation and execution-owner availability must be booleans")
+                for name in ("represented", "executionOwnerAvailable",
+                             "ownNeedAvailable")),
+            "representation and owner/need availability must be booleans")
     require(constraints["currentActivity"] == value["currentActivity"],
             "constraint activity differs from private current work")
+    leaked = HIDDEN_PRIVATE_CONSTRAINT_FIELDS & nested_field_names(constraints)
+    require(not leaked,
+            f"private constraints contain hidden fields: {sorted(leaked)}")
 
     require(isinstance(value["interests"], dict),
             "private interests must be an object")
@@ -398,7 +420,12 @@ def compile_task(row: dict[str, Any]) -> dict[str, Any]:
             "currentWork": {"activity": private["currentActivity"],
                             "owner": owners["currentActivity"]},
             "competingPriorities": {
-                "ownNeed": private["ownNeed"],
+                "competingPressure": {
+                    "value": (private["ownNeed"] if private["constraints"]
+                              ["ownNeedAvailable"] else None),
+                    "available": private["constraints"]["ownNeedAvailable"],
+                    "owner": owners["ownNeed"],
+                },
                 "relationship": private["relationship"],
                 "interests": copy.deepcopy(private["interests"]),
                 "constraints": copy.deepcopy(private["constraints"]),

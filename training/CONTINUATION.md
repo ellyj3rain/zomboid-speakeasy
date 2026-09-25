@@ -4,7 +4,7 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review and Record 63 enacted coordination provenance. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; the new candidate-observation boundary is in `coordination/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Record 63 enacted coordination provenance and Record 64's corrected shared ZAO execution boundary. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; the candidate-observation boundary is in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
@@ -93,7 +93,7 @@ without retroactively enriching the bodyless C78 family. SAO decision evidence
 now freezes the recipient's response before its return channel and can address
 an earlier proposal revision after later revision. The version 3 reader requires
 exactly run, county, person, event and hour. The coordination task view requires
-source owners for current activity, capabilities, own need, relationship,
+source owners for current activity, capabilities, competing pressure, relationship,
 interests and constraints, and keeps return-channel/work results in a later
 horizon. Same-moment ZAO pathogen truth is excluded from decision input; Crossed
 effects arrive through the registered ZAO executor. The compiler marks every row
@@ -101,6 +101,26 @@ as a candidate observation with task-review and learned-runtime exclusions. SAO'
 controlled production border emitted 13 rows; ZAO preserved all full namespaces
 and this compiler accepted all 13, including every response kind and one completed
 work result. No loaded scene or approved dataset row was produced.
+
+Record 64 supersedes Record 63's statement that living Afflicted execution is
+SAO-owned. Survivors remain under SAO execution; both Afflicted and Crossed
+living human shells are ZAO-owned and report `ZAO.Driver` as executor. They do
+not gain shared action policy merely because they share that execution owner.
+ZAO may expose a generic, source-owned competing pressure without exposing its
+satisfier or the person's condition. Source evidence carries pressure
+availability independently from its numeric slot. The task compiler masks an
+unavailable value to null and refuses private terminal-state, form, pathogen,
+diagnosis and diet labels. Same-moment ZAO state remains audit-only, so
+ownership cannot be used to infer which condition a person has.
+
+Record 65 binds that privacy boundary to the mechanisms now implemented in ZAO.
+Afflicted people retain water and state-specific food/protein maintenance;
+Crossed people retain reduced caloric pressure plus a separate predatory
+pressure whose relief depends on observed fear, pain or control. Those mechanisms
+remain distinct behind their shared execution owner. Speakeasy may receive only
+the current source-owned pressure value and availability needed to represent a
+competing priority. It must not turn that generic evidence into a diagnosis,
+satisfier, diet category, predatory act or future outcome.
 
 Admission and speech constraints is the active unit. Source and label validity,
 experimental task admission, dataset partition/evaluation evidence and runtime

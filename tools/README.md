@@ -9,13 +9,19 @@ The historical version 2 rows are deliberately refused. Their approved intent
 remains in place; their `(person, hour)` join and future conditioning do not meet
 the version 3 evidence contract.
 
-`coordination_tasks.py` compiles version 3 enacted-process rows into separate
+`coordination_tasks.py` compiles version 3 enacted-process rows into version 2
+task views with separate
 actor-private decision and later-outcome horizons. It binds current work,
 competing priorities, feasible responses, executor/body ownership and process
 revision to their runtime producers. Same-moment ZAO pathogen state remains
 audit-only: only ZAO-supplied activity and capability effects acquired through
-the registered execution owner enter the decision input. The output is a
-candidate observation, never automatic training admission. See the
+the registered execution owner enter the decision input. Afflicted and Crossed
+both name `ZAO.Driver`, but no diagnosis or policy is inferred from that owner.
+Unavailable competing pressure is emitted as a source-owned null rather than
+zero. The generic slot records competition with current work; it does not define
+or merge the distinct Afflicted-maintenance and Crossed-predatory mechanisms, and
+private diagnosis/form/diet/predation fields are rejected. The output is a candidate
+observation, never automatic training admission. See the
 [coordination contract](../training/coordination/README.md).
 
 `audit_conditioning.py` reproduces the eligibility counts in
