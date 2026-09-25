@@ -18,7 +18,8 @@ OPTIONS = ["accept", "qualify", "counter-propose", "decline", "defer", "contest"
 
 
 def enacted(ns=None, *, choice="accept", body_owner="SAO",
-            executor="SAO.Controller", activity="forage", available=True):
+            executor="SAO.Controller", activity="forage", available=True,
+            need_available=True, need_owner="SAO.Needs", own_need=0.2):
     ns = ns or namespace()
     process_id, originator = "matter:7:requester", "requester"
     proposed = ns["hour"] - 1
@@ -29,16 +30,17 @@ def enacted(ns=None, *, choice="accept", body_owner="SAO",
         "currentActivity": activity,
         "capabilities": {name: available for name in Tasks.CAPABILITIES},
         "constraints": {"represented": True, "currentActivity": activity,
-                        "executionOwnerAvailable": available},
+                        "executionOwnerAvailable": available,
+                        "ownNeedAvailable": need_available},
         "interests": {"designation": "forager", "ownGroup": "group-1"},
         "inputOwners": {
             "currentActivity": executor, "capabilities": executor,
-            "ownNeed": "SAO.Needs", "relationship": "SAO.Standing",
+            "ownNeed": need_owner, "relationship": "SAO.Standing",
             "interests": "SAO.Identity+SAO.Standing",
             "constraints": "SAO.Controller",
         },
         "relationship": 0.55,
-        "ownNeed": 0.2,
+        "ownNeed": own_need,
         "destinationKnown": True,
         "feasibleOptions": OPTIONS if available else ["decline", "defer", "contest"],
         "choice": choice,
@@ -154,7 +156,11 @@ class CoordinationTasksTest(unittest.TestCase):
                                          "bodyOwner": "SAO"})
         self.assertEqual(task["decisionTime"]["currentWork"],
                          {"activity": "forage", "owner": "SAO.Controller"})
-        self.assertEqual(task["decisionTime"]["competingPriorities"]["ownNeed"], 0.2)
+        self.assertEqual(task["schemaVersion"], 2)
+        self.assertEqual(task["decisionTime"]["competingPriorities"]
+                         ["competingPressure"],
+                         {"value": 0.2, "available": True,
+                          "owner": "SAO.Needs"})
         self.assertEqual(task["choice"]["response"], "accept")
         self.assertEqual(task["laterOutcome"]["commitments"][0]["status"], "completed")
         self.assertEqual(task["admission"]["status"], "candidate-observation")
@@ -162,19 +168,48 @@ class CoordinationTasksTest(unittest.TestCase):
         self.assertNotIn('"pathogen"', encoded)
         self.assertNotIn('"visibleForms"', encoded)
 
-    def test_crossed_executor_is_attributed_without_exposing_diagnosis(self):
-        row = coordination_row(body_owner="ZAO", executor="ZAO.Controller",
-                               activity="coordination")
-        state = zao_row(terminal="crossed")
-        task = Tasks.compile_task(self.joined(row, state))
-        self.assertEqual(task["actor"]["bodyOwner"], "ZAO")
-        self.assertEqual(task["decisionTime"]["capabilities"]["owner"], "ZAO.Controller")
-        self.assertEqual(task["laterOutcome"]["commitments"][0]["work"]["owner"], "ZAO")
-        self.assertNotIn("crossed", json.dumps(task["decisionTime"], sort_keys=True))
+    def test_afflicted_and_crossed_share_zao_execution_without_shared_state(self):
+        crossed = Tasks.compile_task(self.joined(
+            coordination_row(body_owner="ZAO", executor="ZAO.Driver",
+                             activity="coordination",
+                             need_owner="SAO.Needs via ZAO.Mind"),
+            zao_row(terminal="crossed")))
+        self.assertEqual(crossed["actor"], {"id": "person-1",
+                                            "executor": "ZAO.Driver",
+                                            "bodyOwner": "ZAO"})
+        self.assertEqual(crossed["decisionTime"]["capabilities"]["owner"],
+                         "ZAO.Driver")
+        self.assertEqual(crossed["decisionTime"]["competingPriorities"]
+                         ["competingPressure"],
+                         {"value": 0.2, "available": True,
+                          "owner": "SAO.Needs via ZAO.Mind"})
+        self.assertEqual(crossed["laterOutcome"]["commitments"][0]["work"]["owner"],
+                         "ZAO")
+        self.assertNotIn("crossed", json.dumps(crossed["decisionTime"], sort_keys=True))
+
+        afflicted = Tasks.compile_task(self.joined(
+            coordination_row(choice="defer", body_owner="ZAO",
+                             executor="ZAO.Driver", activity="coordination",
+                             need_available=False, need_owner="unavailable"),
+            zao_row(terminal="afflicted")))
+        self.assertEqual(afflicted["actor"]["executor"], "ZAO.Driver")
+        self.assertEqual(afflicted["decisionTime"]["competingPriorities"]
+                         ["competingPressure"],
+                         {"value": None, "available": False,
+                          "owner": "unavailable"})
+        self.assertEqual(afflicted["choice"]["response"], "defer")
+        self.assertEqual(afflicted["laterOutcome"]["commitments"], [])
+        self.assertNotIn("afflicted",
+                         json.dumps(afflicted["decisionTime"], sort_keys=True))
 
     def test_joined_hidden_truth_cannot_change_decision_input(self):
-        first = Tasks.compile_task(self.joined(state=zao_row(terminal="alive")))
-        second = Tasks.compile_task(self.joined(state=zao_row(terminal="afflicted")))
+        private = {"choice": "defer", "body_owner": "ZAO",
+                   "executor": "ZAO.Driver", "activity": "coordination",
+                   "need_available": False, "need_owner": "unavailable"}
+        first = Tasks.compile_task(self.joined(
+            coordination_row(**private), zao_row(terminal="afflicted")))
+        second = Tasks.compile_task(self.joined(
+            coordination_row(**private), zao_row(terminal="crossed")))
         self.assertEqual(first["decisionTime"], second["decisionTime"])
         self.assertEqual(first["choice"], second["choice"])
         self.assertEqual(first["laterOutcome"], second["laterOutcome"])
@@ -220,6 +255,16 @@ class CoordinationTasksTest(unittest.TestCase):
         hidden["enactedProcess"]["decisionTime"]["privateInputs"][
             "pathogenDiagnosis"] = "afflicted"
         mutations.append((hidden, "privateInputs fields differ"))
+
+        nested_hidden = coordination_row()
+        nested_hidden["enactedProcess"]["decisionTime"]["privateInputs"][
+            "constraints"]["terminalState"] = "crossed"
+        mutations.append((nested_hidden, "private constraints contain hidden fields"))
+
+        missing_need_availability = coordination_row()
+        del missing_need_availability["enactedProcess"]["decisionTime"][
+            "privateInputs"]["constraints"]["ownNeedAvailable"]
+        mutations.append((missing_need_availability, "lack representation/activity/owner/need"))
 
         leaked_commitment = coordination_row()
         leaked_commitment["enactedProcess"]["decisionTime"]["commitments"] = {

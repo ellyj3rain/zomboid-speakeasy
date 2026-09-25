@@ -37,6 +37,20 @@ ZAO effects enter through the actor snapshot that actually supplied activity and
 capability. These are candidate observations only. The focused rows are controls,
 not captured gameplay or approved training examples.
 
+Record 64 corrects the living execution boundary in that contract. Survivors
+remain SAO-owned; Afflicted and Crossed people both execute through `ZAO.Driver`.
+That shared owner does not merge their state or policy. The version 2 task view
+represents generic competing pressure as value, availability and source owner,
+masks an unavailable value to null, and rejects private diagnosis, pathogen,
+form and diet fields.
+
+Record 65 records the implemented consequence of that boundary. Afflicted
+maintenance and Crossed maintenance/predatory pressure are separate ZAO-owned
+mechanisms even though they share an executor. Speakeasy consumes only the
+source-owned pressure magnitude and availability needed to reconstruct the
+person's competing priorities; it neither labels the private mechanism nor
+infers a satisfier or action from it.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 
@@ -100,7 +114,7 @@ of the task still does not approve its retrieval target.
 | Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; personified wording approved with game-rooted personality direction; semantic admission and register floors unfinished |
 | Expression proof | Record 58 binds individual propositions and supports personified clause composition | Exact Mara reply reproduced within a finite grammar; arbitrary prose and learned composition remain unfinished |
 | Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
-| Enacted coordination | Full-namespace recipient decision, current work/priorities, executable options and later native receipts | Candidate-observation compiler implemented; no captured scene, task review or training admission |
+| Enacted coordination | Full-namespace recipient decision, current work/priorities, explicit pressure availability, executable options and later native receipts | Version 2 candidate-observation compiler implemented for SAO and shared ZAO execution; no captured scene, task review or training admission |
 | Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
 
 The current example's exact hashes and review standing live in
