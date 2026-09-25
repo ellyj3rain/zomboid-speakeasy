@@ -1,0 +1,55 @@
+{
+  "compilerHashes": {
+    "coordinationData": "195ccace2ea91edb03caf12544f8dfe1477629ad0f056949aef034ecb60aa3dd",
+    "coordinationTasks": "caae65a0d8d6f3644fc1ffa779df17264b1ad1a43dd153435ba86f5e2639b03b",
+    "crossModuleRows": "69fad500c5cea3cdcc4d2164488c4d0d91163cab7604bf79703220af64a68518"
+  },
+  "contentSha256": "82940233a0f05ec6f97770a862ce1903fb7b06f8806f2c5cff7184eacde69e77",
+  "derived": {
+    "rowCount": 20,
+    "tasksSha256": "969c90be639638f902a067c7f242c275ddc306c802938ed45f5d42b73d57951e",
+    "zaoStateSha256": "c0e1e4d22560d19410fb22a7c59ba22c37efa34e3b9d393dda8ef2cb1cd5c17d"
+  },
+  "files": {
+    "README.md": "0183ded1d7d214acab6254e47d358dd02eeca1e5abcebfa50bdde33340aebcc9",
+    "catalogue.json": "fad376d14096b26eac850ef59234926f7b346651471dc0a5ba67618b99f2b741",
+    "decisions.jsonl": "9d310eea358c26de3dfd3ecbd6246c6af6066a36749958ce89cef6df9b70aa91",
+    "manifest.json": "ef2161bc05df61710c9cf49a8d83cb60f871b73a51b659afd7e373b7dfaa47bb"
+  },
+  "schema": "speakeasy-coordination-source-import",
+  "schemaVersion": 1,
+  "source": {
+    "sao": {
+      "commit": "6ce4b90c5a4b726063361b98c6214fded7d709ce",
+      "manifestContentSha256": "f3d61ad85d6bbbe04fee4cb858fb92c4e2ed0ece72b64ef554d3fc1767c7ef7b",
+      "path": "artifacts/audits/c81-coordination-reference-source",
+      "repository": "https://github.com/ellyj3rain/sao"
+    },
+    "zao": {
+      "commit": "7ffbcbadb31ae3dc4ac619bcf18806121e6e938c",
+      "repository": "https://github.com/ellyj3rain/zao",
+      "stateProjector": "tools/state_dump.py",
+      "stateProjectorSha256": "60ce70e2721b7b8d8e4413f5b7805105f0c6b521c04e640ca055414fda2906f6"
+    }
+  },
+  "upstreamSourceHashes": {
+    "sao/mod/42.20/media/lua/client/SAO_Controller.lua": "ec44386303e9e08645a4425551c9fec1153ab5e9c6cd612858ad753794b6f07c",
+    "sao/mod/42.20/media/lua/shared/SAO_Communication.lua": "e4b44e31009296411ebfb2a0a84976b17eae353ba3213c9574ec85810d507b60",
+    "sao/mod/42.20/media/lua/shared/SAO_GraphPersistence.lua": "8636000b1a782f0abe6b0557b12ad33cb9acf7178e798723186aaa96c873d6d3",
+    "sao/mod/42.20/media/lua/shared/SAO_Organization.lua": "2fdb85806041d201f9044f042b47dc856e399699442f47d4d7121bcb35aa5718",
+    "sao/mod/42.20/media/lua/shared/SAO_Perception.lua": "cae99c1c511f6285ffc32cb2354c88f9e8a6ebf643d689676b94f8b2544717d7",
+    "sao/mod/42.20/media/lua/shared/SAO_Standing.lua": "a4dbeb452ceb01d433a1d806e3ec56929f277b10d6329b7f41b3f998843592fb",
+    "sao/tools/coordination_scene_dump.py": "4c7d628dab10fccdb3ee48d5ef3d89f48d28de00763a52f198596d321c789745",
+    "sao/tools/sweep/decision_capture.lua": "3f313fe1c3ce6fe90fdab22a1d9fe47fc5fc72399546259b91663ce5ca2967e2",
+    "zao/mod/42.20/media/lua/client/ZAO_Controller.lua": "87867210514652f99d32aa23608143167ddb395690052c07d4bdfef2cbf2c0ac",
+    "zao/mod/42.20/media/lua/client/ZAO_Driver.lua": "d5c0279e8e2798c5c323b6aa7512c0a79744cfd9c05951bfd6dd70dce81eb2af",
+    "zao/mod/42.20/media/lua/shared/ZAO_Maintenance.lua": "73df95af8ecbe931cb94fa9ab3fa52db335cbd244ae44d25c11ef7bde80c0e79",
+    "zao/mod/42.20/media/lua/shared/ZAO_Mind.lua": "ce927d09eec5d2123a946d85d8a5e42627a3b9cfa996527d5baec8ca9bf28bca"
+  },
+  "verification": {
+    "committedSourceFiles": "verified",
+    "coordinationTaskCompilation": "verified",
+    "producerSourceHashes": "verified",
+    "zaoAuditProjection": "verified"
+  }
+}

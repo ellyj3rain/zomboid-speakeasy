@@ -1,0 +1,132 @@
+{
+  "action": "invoke",
+  "frameworkRef": "recursive-deliberation",
+  "intake": {
+    "seams": [
+      {
+        "allowFreeform": true,
+        "description": "The source situations were split before execution and contain no expected answer. SAO's production Controller formed each response; this review does not generalize their frequency or define Afflicted/Crossed maintenance.",
+        "evidenceRef": "speakeasy:content-sha256:f522fbda0dcb0beaf2fde9e780c954ec1e8c8b2d49bc491775189497f392c0e4",
+        "id": "r66-c81-production-response-labels",
+        "mlReview": {
+          "actualInput": [
+            {
+              "label": "accept (4 exact rows)",
+              "value": "train/train-survivor-trusted: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.12 available=True owner=SAO.Needs, relationship=0.62, return delivered=True | train/train-crossed-trusted: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.24 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=0.54, return delivered=True | validation/validation-afflicted-trusted: audit actor=afflicted, executor=ZAO.Driver, work=idle, pressure=0.27 available=True owner=SAO.Needs via ZAO.Mind, relationship=0.37, return delivered=True | test/test-crossed-trusted: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.29 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=0.33, return delivered=True"
+            },
+            {
+              "label": "qualify (4 exact rows)",
+              "value": "train/train-afflicted-pressured: audit actor=afflicted, executor=ZAO.Driver, work=idle, pressure=0.86 available=True owner=SAO.Needs via ZAO.Mind, relationship=0.48, return delivered=True | train/train-survivor-pressured: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.91 available=True owner=SAO.Needs, relationship=0.5, return delivered=True | validation/validation-crossed-pressured: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.83 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=0.46, return delivered=True | test/test-survivor-pressured: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.79 available=True owner=SAO.Needs, relationship=0.71, return delivered=True"
+            },
+            {
+              "label": "counter-propose (4 exact rows)",
+              "value": "train/train-afflicted-unfamiliar: audit actor=afflicted, executor=ZAO.Driver, work=idle, pressure=0.16 available=True owner=SAO.Needs via ZAO.Mind, relationship=0.04, return delivered=True | train/train-survivor-unfamiliar: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.09 available=True owner=SAO.Needs, relationship=0.08, return delivered=True | validation/validation-crossed-unfamiliar: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.19 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=0.02, return delivered=True | test/test-survivor-unfamiliar: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.17 available=True owner=SAO.Needs, relationship=0.11, return delivered=True"
+            },
+            {
+              "label": "defer (4 exact rows)",
+              "value": "train/train-crossed-occupied: audit actor=crossed, executor=ZAO.Driver, work=driving, pressure=0.18 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=0.41, return delivered=True | train/train-afflicted-occupied: audit actor=afflicted, executor=ZAO.Driver, work=acquiring-food, pressure=0.2 available=True owner=SAO.Needs via ZAO.Mind, relationship=0.58, return delivered=True | validation/validation-survivor-occupied: audit actor=survivor, executor=SAO.Controller, work=treat, pressure=0.14 available=True owner=SAO.Needs, relationship=0.55, return delivered=True | test/test-afflicted-occupied: audit actor=afflicted, executor=ZAO.Driver, work=feeding, pressure=0.22 available=True owner=SAO.Needs via ZAO.Mind, relationship=0.44, return delivered=True"
+            },
+            {
+              "label": "contest (4 exact rows)",
+              "value": "train/train-survivor-hostile: audit actor=survivor, executor=SAO.Controller, work=idle, pressure=0.21 available=True owner=SAO.Needs, relationship=-0.72, return delivered=True | train/train-crossed-hostile: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.32 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=-0.61, return delivered=True | validation/validation-afflicted-hostile: audit actor=afflicted, executor=ZAO.Driver, work=idle, pressure=0.35 available=True owner=SAO.Needs via ZAO.Mind, relationship=-0.43, return delivered=True | test/test-crossed-hostile: audit actor=crossed, executor=ZAO.Driver, work=idle, pressure=0.26 available=True owner=ZAO.Maintenance.predatoryPressure, relationship=-0.51, return delivered=True"
+            }
+          ],
+          "approvalEffects": [
+            "Admit these exact twenty production response kinds as targets for one bounded offline coordination reference experiment.",
+            "Keep source lineage, actor condition and later response delivery available for audit and evaluation but outside learned input."
+          ],
+          "causalPath": [
+            {
+              "label": "Private situation",
+              "value": "Acquired proposal, current work, generic source-owned pressure, relationship, interests, capabilities and constraints."
+            },
+            {
+              "label": "Production decision",
+              "value": "SAO.Controller forms an individual response through the durable Organization process. Afflicted and Crossed execution snapshots come through their shared registered ZAO.Driver without exposing condition identity to the model."
+            },
+            {
+              "label": "Separate consequence",
+              "value": "Return delivery and any later commitment/work remain outcome evidence, never decision input."
+            }
+          ],
+          "decisionPrecedent": "Approval is exact and bounded: it accepts the twenty observed response kinds as experimental targets. It does not establish population rates, approve response terms, or say Afflicted and Crossed share motives because they share an executor.",
+          "evidence": [
+            {
+              "label": "Exact review subject",
+              "value": "f522fbda0dcb0beaf2fde9e780c954ec1e8c8b2d49bc491775189497f392c0e4"
+            },
+            {
+              "label": "Exact source import",
+              "value": "82940233a0f05ec6f97770a862ce1903fb7b06f8806f2c5cff7184eacde69e77"
+            }
+          ],
+          "playerImpact": "This is the first executable-data reference for people accepting, qualifying, counter-proposing, deferring or contesting shared work from their own circumstances. It changes no game behavior yet.",
+          "proposedLearning": [
+            {
+              "label": "accept",
+              "value": "Four observed production targets; one is present in each train, validation and test partition."
+            },
+            {
+              "label": "qualify",
+              "value": "Four observed production targets; one is present in each train, validation and test partition."
+            },
+            {
+              "label": "counter-propose",
+              "value": "Four observed production targets; one is present in each train, validation and test partition."
+            },
+            {
+              "label": "defer",
+              "value": "Four observed production targets; one is present in each train, validation and test partition."
+            },
+            {
+              "label": "contest",
+              "value": "Four observed production targets; one is present in each train, validation and test partition."
+            }
+          ],
+          "remainingExclusions": [
+            "Synthetic starting conditions are not sampled gameplay or a frequency estimate.",
+            "Decline and withdrawal have no observed target in this family.",
+            "Approval does not approve response terms, define Afflicted or Crossed motives, or infer condition from the shared ZAO driver.",
+            "No trained artifact is approved for game runtime by this review."
+          ],
+          "scenario": "Twenty independent synthetic starting situations raise the same concrete food-delivery matter. Communication and Perception establish reception; the shipped Controller appraises each recipient; Organization freezes the response before its actual return channel. Splits were declared before execution and no expected response appears in the source catalogue.",
+          "schema": "mousecat.ml-review/1",
+          "subject": "C81 production coordination response kinds",
+          "systemRole": "A bounded coordination-response adapter learns which currently feasible response kind this person selected from their private decision-time evidence."
+        },
+        "occurredAt": "2026-09-25T04:08:12Z",
+        "options": [
+          {
+            "description": "Admit only these response-kind targets for offline reference training and held-out evaluation.",
+            "label": "Approve exact bounded labels (Recommended)",
+            "recommended": true,
+            "value": "approved"
+          },
+          {
+            "description": "Keep all rows ineligible and explain which labels or review framing must change.",
+            "label": "Request revision",
+            "recommended": false,
+            "value": "revision-requested"
+          },
+          {
+            "description": "Do not use these production responses as training targets.",
+            "label": "Reject labels",
+            "recommended": false,
+            "value": "rejected"
+          }
+        ],
+        "prompt": "Should these exact production response kinds be admitted as targets for the bounded offline coordination reference experiment?",
+        "selectionMode": "single",
+        "shape": "decision",
+        "title": "Twenty production responses as bounded targets"
+      }
+    ]
+  },
+  "skillRef": "crucible",
+  "source": {
+    "host": "codex",
+    "invocationId": "r66-c81-production-response-labels-003",
+    "sessionId": "01a0d224-efca-7f01-a4f5-113b2d7ce569"
+  },
+  "title": "Review exact production coordination targets"
+}

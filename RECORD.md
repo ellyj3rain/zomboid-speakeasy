@@ -2114,3 +2114,73 @@ or collapsing two different people into one policy.
 The evidence remains controlled and headless. No gameplay scene has established
 how frequently these pressures dominate actual choices, no coordination row has
 been approved for training, and no learned model has consumed them.
+
+## 66 - Bounded coordination reference learning (2026-09-24)
+
+SAO C81 now supplies a complete production coordination source family rather
+than a hand-authored Speakeasy fixture. The import reads exact Git objects at SAO
+commit `6ce4b90c5a4b726063361b98c6214fded7d709ce` and binds the ZAO projector at
+commit `7ffbcbadb31ae3dc4ac619bcf18806121e6e938c`. It verifies the upstream
+manifest, every evidence file and all twelve producer/compiler sources before
+rebuilding the ZAO audit projection and task view. The resulting 20-row import is
+`82940233a0f05ec6f97770a862ce1903fb7b06f8806f2c5cff7184eacde69e77`.
+
+The model boundary preserves the causal split established in Records 63-65.
+Decision-time input contains the acquired proposal, reception, current work,
+generic source-owned competing pressure, relationship, interests, constraints,
+capabilities and feasible responses. It omits full route identities, source
+split, explicit actor-kind/pathogen records, authored response, delivery standing
+and later work outcomes. Survivor execution remains `SAO.Controller`; Afflicted
+and Crossed execution remains `ZAO.Driver`. Current executor, activity and
+source-owned pressure provenance stay in the decision view, so real state effects
+are preserved without substituting a diagnostic label.
+
+The exact 20-row response-kind subject
+`f522fbda0dcb0beaf2fde9e780c954ec1e8c8b2d49bc491775189497f392c0e4`
+was approved without qualification in Mousecat interaction
+`skill-e7d7df5652dcc08e`, item `seam-ed76c930231378ee`. Its native receipt is
+`c3ed75dbd5215e9720095b3269f17a0d7aa95caecce04c5f4b4f6eaea2f7867c`.
+Admission resolves Mousecat's platform-generated item ID through the exact
+evidence reference and unique response. The earlier exact approval receipt
+`b62c494f0829e57bddd153ea75cd7147ed72e7acc66be8bf41aec873d1336a26`
+is preserved as superseded audit history because the corrected resolver changed
+the sealed compiler subject; it does not authorize the final dataset.
+
+The admitted dataset
+`a910256c51a5ab2355348ef81100fb14fcaf675c594c0cad33278c43a67c560d`
+has 10 train, 5 validation and 5 test lineages. Each partition contains every
+observed response kind; across the family, accept, qualify, counter-propose,
+defer and contest each have four targets. The audit population contains seven
+survivor, six Afflicted and seven Crossed rows. Decline and withdraw remain
+declared response kinds but have no target in this family and are masked rather
+than assigned unlearned behavior.
+
+The deterministic reference learns an 8-dimensional byte-token embedding and a
+typed softmax response adapter from the existing frozen tokenizer. Seed 66081,
+1,200 full-batch epochs and all model weights are saved. The sealed run is
+`eea4f4747bc2277a4a51178038272e428f770687308662b1f44ba46ffeaa5b62`.
+Train, validation and test accuracy are each 1.0 over 10, 5 and 5 examples, with
+negative log likelihood 0.085255833757, 0.317123748973 and 0.250889491458.
+The zero-epoch test scores 0.2 / 1.60361673193 NLL; permuted train targets score
+0.0 / 3.882001268702. Input-mutation controls show that decision-time changes
+can affect predictions while changes confined to actor-kind/pathogen audit or
+later outcomes cannot; the feasible-response mask prevents impossible output.
+
+Three defects were corrected before admission. Upstream evidence initially
+hashed checkout line endings instead of committed Git blobs; C81 republished
+the exact object hashes. The first review invocation exceeded Mousecat's fact
+limit; grouping preserved all 20 literal rows within five response-kind facts.
+The first admission resolver then assumed the logical seam ID would equal
+Mousecat's generated item ID; the final compiler binds the exact subject and
+unique response instead. Each compiler change produced a new sealed import and
+required a new exact review rather than reusing stale approval.
+
+All 155 Python tests pass, including source-hash, exact-review, leakage,
+determinism, impossible-option, zero-epoch and permuted-label controls. The
+protected 190-row conditioning audit is unchanged and every historical choice
+remains ineligible. Exact regeneration validates the admitted dataset and sealed
+run. This is controlled headless evidence over synthetic starting conditions.
+No loaded-world session sampled these choices, no native bundle consumes the
+model, and no game behavior changes. Perfect reproduction therefore establishes
+bounded learnability of this family, not response prevalence, broader social
+judgment, or similarity between Afflicted and Crossed.

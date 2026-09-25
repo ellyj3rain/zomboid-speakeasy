@@ -51,6 +51,17 @@ source-owned pressure magnitude and availability needed to reconstruct the
 person's competing priorities; it neither labels the private mechanism nor
 infers a satisfier or action from it.
 
+Record 66 completes one bounded offline learning path over that evidence. The
+[coordination data compiler and reference run](coordination/README.md#record-66-bounded-reference-learning)
+verify exact SAO and ZAO Git sources, preserve all 20 production rows, require an
+exact-subject Mousecat response-kind approval, and separate 10 train, 5 validation
+and 5 test lineages. A learned byte-token embedding plus typed response adapter
+reproduces all three partitions. Explicit actor-kind/pathogen records and later
+outcomes remain audit-only, while current source-owned effects remain in the
+decision view; feasible-option masking prevents an impossible response. Decline and
+withdraw have no examples and are explicitly unsupported. This run is a small
+headless reference, not a native model or gameplay-quality result.
+
 The runs that produce the shared bundle's three learned functions, and the
 contract SAO loads them by.
 
@@ -72,13 +83,13 @@ pure-Java consumer loads a versioned native bundle. FP32 remains the reference
 and INT8 is a measured candidate. Mechanical contracts precede the selected final
 human review gate.
 
-No training run exists yet. Approved data does: 190 ratified choices and nine
-approved world documents. Training is blocked at their conditioning boundary,
-not at review. The historical decision rows contain future facts and bare
-options, and their version 2 cross-module key collapses distinct county events.
-They remain protected intent and audit evidence; they are not admitted to a
-training view. `../decisions/ELIGIBILITY.md` records the measured findings and
-the version 3 admission contract.
+A bounded coordination-response training run now exists over 20 separately
+approved synthetic production rows. It does not promote the 190 ratified choices
+or nine approved world documents. Those historical decision rows contain future
+facts and bare options, and their version 2 cross-module key collapses distinct
+county events. They remain protected intent and audit evidence outside a training
+view. `../decisions/ELIGIBILITY.md` records the measured findings and the version
+3 admission contract.
 
 The architecture ruling does not change that standing. It determines how
 eligible data will train and ship; it does not manufacture acquisition,
@@ -114,8 +125,9 @@ of the task still does not approve its retrieval target.
 | Speaker example | Record 57 binds a dated, attributed source-summary answer to the approved interpretation and retrieval | Bounded factual rendering built; personified wording approved with game-rooted personality direction; semantic admission and register floors unfinished |
 | Expression proof | Record 58 binds individual propositions and supports personified clause composition | Exact Mara reply reproduced within a finite grammar; arbitrary prose and learned composition remain unfinished |
 | Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
-| Enacted coordination | Full-namespace recipient decision, current work/priorities, explicit pressure availability, executable options and later native receipts | Version 2 candidate-observation compiler implemented for SAO and shared ZAO execution; no captured scene, task review or training admission |
-| Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No trained model or game behavior change |
+| Enacted coordination | Full-namespace recipient decision, current work/priorities, explicit pressure availability, executable options and later native receipts | Twenty C81 synthetic production rows received exact task-label review and bounded offline admission; they are not sampled gameplay |
+| Coordination reference | Frozen shared tokenizer, learned 8-dimensional byte-token base and typed feasible-response adapter | Deterministic 10/5/5 run is sealed and reproduces; decline/withdraw unsupported, no native export or runtime authority |
+| Learned runtime | Future shared bundle, typed tasks and current-state revalidation | No game-loaded model or behavior change |
 
 The current example's exact hashes and review standing live in
 [understander/c77-example.json](understander/c77-example.json). Its human-readable
