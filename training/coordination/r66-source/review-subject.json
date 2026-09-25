@@ -1,0 +1,980 @@
+{
+  "approvalEffects": [
+    "Admit these exact twenty production response kinds as targets for one bounded offline coordination reference experiment.",
+    "Keep source lineage, actor condition and later response delivery available for audit and evaluation but outside learned input."
+  ],
+  "contentSha256": "f522fbda0dcb0beaf2fde9e780c954ec1e8c8b2d49bc491775189497f392c0e4",
+  "remainingExclusions": [
+    "Synthetic starting conditions are not sampled gameplay or a frequency estimate.",
+    "Decline and withdrawal have no observed target in this family.",
+    "Approval does not approve response terms, define Afflicted or Crossed motives, or infer condition from the shared ZAO driver.",
+    "No trained artifact is approved for game runtime by this review."
+  ],
+  "reviewId": "r66-c81-production-responses",
+  "rows": [
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.12
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "842393fac6fb1e424638e7504a12dabe2e72a95bc36008fde61a48805ab5c5ea",
+      "productionResponse": "accept",
+      "relationship": 0.62,
+      "responseDelivered": true,
+      "sceneId": "train-survivor-trusted",
+      "sourceLineage": "coordination-scene:train-survivor-trusted",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.86
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "4ad7e9b263f4996ca71f91fddec38cfc05eafa0261637bf858d3631894d74b7a",
+      "productionResponse": "qualify",
+      "relationship": 0.48,
+      "responseDelivered": true,
+      "sceneId": "train-afflicted-pressured",
+      "sourceLineage": "coordination-scene:train-afflicted-pressured",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.18
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "driving",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "driving",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "d0fda61d9f7fb7ea7435d4798c45989528fe4bc2c275dc1dd2e64a072af941da",
+      "productionResponse": "defer",
+      "relationship": 0.41,
+      "responseDelivered": true,
+      "sceneId": "train-crossed-occupied",
+      "sourceLineage": "coordination-scene:train-crossed-occupied",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.21
+      },
+      "constraints": {
+        "contest": true,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "a857850be8d18fba593e910782f6d4d1f1e02fdbf80b4e696d2a8965bba0421e",
+      "productionResponse": "contest",
+      "relationship": -0.72,
+      "responseDelivered": true,
+      "sceneId": "train-survivor-hostile",
+      "sourceLineage": "coordination-scene:train-survivor-hostile",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.16
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "6398a5dc1a3c01e6fcd42f3552e2e6ee712c0ce6ad5395b2593be662081f258f",
+      "productionResponse": "counter-propose",
+      "relationship": 0.04,
+      "responseDelivered": true,
+      "sceneId": "train-afflicted-unfamiliar",
+      "sourceLineage": "coordination-scene:train-afflicted-unfamiliar",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.24
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "b7a929dfa3aa58ec7fd33938c4d195b4b13d6ffe36b02281cf7ec50ce80d418f",
+      "productionResponse": "accept",
+      "relationship": 0.54,
+      "responseDelivered": true,
+      "sceneId": "train-crossed-trusted",
+      "sourceLineage": "coordination-scene:train-crossed-trusted",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.91
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "a8b472b6c1cc7e68ba004c1076c13b907bc3125c111a84c415f05054d163d566",
+      "productionResponse": "qualify",
+      "relationship": 0.5,
+      "responseDelivered": true,
+      "sceneId": "train-survivor-pressured",
+      "sourceLineage": "coordination-scene:train-survivor-pressured",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.2
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "acquiring-food",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "acquiring-food",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "2ee04aaf78ba7c8409f3147d2e55aa85b38ad4b9f98c82a98356b7d156024269",
+      "productionResponse": "defer",
+      "relationship": 0.58,
+      "responseDelivered": true,
+      "sceneId": "train-afflicted-occupied",
+      "sourceLineage": "coordination-scene:train-afflicted-occupied",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.32
+      },
+      "constraints": {
+        "contest": true,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "d01418be5b6f0bfcbc9ead5a0830609705021be1dcef44db79016b926360c476",
+      "productionResponse": "contest",
+      "relationship": -0.61,
+      "responseDelivered": true,
+      "sceneId": "train-crossed-hostile",
+      "sourceLineage": "coordination-scene:train-crossed-hostile",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.09
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "cd4a10453421b96d7dcd9b098b84389f2c3eb0782221422889727e2d7a61b4b5",
+      "productionResponse": "counter-propose",
+      "relationship": 0.08,
+      "responseDelivered": true,
+      "sceneId": "train-survivor-unfamiliar",
+      "sourceLineage": "coordination-scene:train-survivor-unfamiliar",
+      "split": "train"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.27
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "bfb1d9d889217eedc33978d2a911c2babda6aa6f9d28d450995a482fb6a1c8e3",
+      "productionResponse": "accept",
+      "relationship": 0.37,
+      "responseDelivered": true,
+      "sceneId": "validation-afflicted-trusted",
+      "sourceLineage": "coordination-scene:validation-afflicted-trusted",
+      "split": "validation"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.83
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "bb5c91dbb932fd3f389e8a61278d29afcff71f075bd531efc86e2b9f57f00ba4",
+      "productionResponse": "qualify",
+      "relationship": 0.46,
+      "responseDelivered": true,
+      "sceneId": "validation-crossed-pressured",
+      "sourceLineage": "coordination-scene:validation-crossed-pressured",
+      "split": "validation"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.14
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "treat",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "treat",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "3cb968291a6fab6a4bbe448a1c6953fc4c2ea2c21ea846064a9cbae48b1b3251",
+      "productionResponse": "defer",
+      "relationship": 0.55,
+      "responseDelivered": true,
+      "sceneId": "validation-survivor-occupied",
+      "sourceLineage": "coordination-scene:validation-survivor-occupied",
+      "split": "validation"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.35
+      },
+      "constraints": {
+        "contest": true,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "1144dd450bab5a6abc3d352c28714b1c8616f804da233e0e6d90f743cc264994",
+      "productionResponse": "contest",
+      "relationship": -0.43,
+      "responseDelivered": true,
+      "sceneId": "validation-afflicted-hostile",
+      "sourceLineage": "coordination-scene:validation-afflicted-hostile",
+      "split": "validation"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.19
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "a8290619dacd501434d2e93d11c00de025b17680c8573e0401a63592debfa543",
+      "productionResponse": "counter-propose",
+      "relationship": 0.02,
+      "responseDelivered": true,
+      "sceneId": "validation-crossed-unfamiliar",
+      "sourceLineage": "coordination-scene:validation-crossed-unfamiliar",
+      "split": "validation"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.29
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "0095aa9ed435c53d7aed71d6272e40f4af408eef99bbe36db93ca40df319f135",
+      "productionResponse": "accept",
+      "relationship": 0.33,
+      "responseDelivered": true,
+      "sceneId": "test-crossed-trusted",
+      "sourceLineage": "coordination-scene:test-crossed-trusted",
+      "split": "test"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.79
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "aeeb5489ab037798cf149d934578358ad9f6b9b20b58bdc8f6fb01402eb6b20b",
+      "productionResponse": "qualify",
+      "relationship": 0.71,
+      "responseDelivered": true,
+      "sceneId": "test-survivor-pressured",
+      "sourceLineage": "coordination-scene:test-survivor-pressured",
+      "split": "test"
+    },
+    {
+      "actorKindAuditOnly": "afflicted",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs via ZAO.Mind",
+        "value": 0.22
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "feeding",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "feeding",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "d6e8c21341cbbdb3c502e8a54d0fe8157bfb17574b0cec2fe6d93c7d85863a26",
+      "productionResponse": "defer",
+      "relationship": 0.44,
+      "responseDelivered": true,
+      "sceneId": "test-afflicted-occupied",
+      "sourceLineage": "coordination-scene:test-afflicted-occupied",
+      "split": "test"
+    },
+    {
+      "actorKindAuditOnly": "crossed",
+      "bodyOwner": "ZAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "ZAO.Driver",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "ZAO.Maintenance.predatoryPressure",
+        "value": 0.26
+      },
+      "constraints": {
+        "contest": true,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": false
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "ZAO.Driver"
+      },
+      "executor": "ZAO.Driver",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "344e26ec11e8f5953c2508ac933c855dfc6c0178aa460dc6771670b15dfe4f5c",
+      "productionResponse": "contest",
+      "relationship": -0.51,
+      "responseDelivered": true,
+      "sceneId": "test-crossed-hostile",
+      "sourceLineage": "coordination-scene:test-crossed-hostile",
+      "split": "test"
+    },
+    {
+      "actorKindAuditOnly": "survivor",
+      "bodyOwner": "SAO",
+      "capabilities": {
+        "availability": "available",
+        "owner": "SAO.Controller",
+        "values": {
+          "acquire": true,
+          "carry": true,
+          "deliver": true,
+          "execute": true
+        }
+      },
+      "competingPressure": {
+        "available": true,
+        "owner": "SAO.Needs",
+        "value": 0.17
+      },
+      "constraints": {
+        "contest": false,
+        "currentActivity": "idle",
+        "dead": false,
+        "executionOwnerAvailable": true,
+        "incapable": false,
+        "ownNeedAvailable": true,
+        "represented": true
+      },
+      "currentWork": {
+        "activity": "idle",
+        "owner": "SAO.Controller"
+      },
+      "executor": "SAO.Controller",
+      "feasibleOptions": [
+        "accept",
+        "qualify",
+        "counter-propose",
+        "decline",
+        "defer",
+        "contest"
+      ],
+      "modelInputSha256": "f9283fe0176a0a2c39e955624c602cb257844f33eea02a0a2e74d850c9da3f87",
+      "productionResponse": "counter-propose",
+      "relationship": 0.11,
+      "responseDelivered": true,
+      "sceneId": "test-survivor-unfamiliar",
+      "sourceLineage": "coordination-scene:test-survivor-unfamiliar",
+      "split": "test"
+    }
+  ],
+  "schema": "speakeasy-coordination-label-review",
+  "schemaVersion": 1,
+  "sourceImportSha256": "82940233a0f05ec6f97770a862ce1903fb7b06f8806f2c5cff7184eacde69e77",
+  "targetScope": "response-kind-only"
+}

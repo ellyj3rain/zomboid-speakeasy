@@ -1,19 +1,18 @@
 # Zomboid-Speakeasy
 
-Current continuation: Record 65 carries ZAO's distinct Afflicted maintenance and
-Crossed maintenance/predatory mechanisms into the [enacted coordination evidence
-contract](training/coordination/README.md) without exposing either condition.
-Both living states name `ZAO.Driver` as executor, but the shared executor and
-generic pressure slot do not merge or define their motives, satisfiers or actions.
-Trust and threat comparisons require revision; both lesson alternatives were
-accepted with a stiffness caveat, and strain B was preferred with the same caveat.
-SAO can now export a recipient's source-owned current work, competing priorities,
-feasible responses and later physical result on separate horizons. Unknown own
-pressure is explicit and hidden diagnosis, diet or predation labels are refused. The controlled
-production border emitted 13 rows that survived ZAO projection and this compiler;
-no loaded gameplay scene or task has been reviewed or admitted. Record 61's reproducible
-[task tokenization](training/datasets/c77-tokenization/README.md) remains available.
-Task admission and independent evaluation scenes still precede model training.
+Current continuation: Record 66 imports SAO C81's exact production coordination
+family, binds its ZAO projection, preserves the operator's exact response-kind
+review, and trains the first bounded [coordination reference
+model](training/coordination/README.md#record-66-bounded-reference-learning).
+The 20 synthetic rows retain separate decision-time and later-outcome horizons.
+Survivors execute through `SAO.Controller`; Afflicted and Crossed living people
+both execute through `ZAO.Driver`, while their state, pressure owner and policy
+remain distinct. Explicit actor-kind/pathogen records, routing identity and later
+receipts are audit evidence, not learned input; current source-owned effects do
+remain causal input. The deterministic adapter reaches 5/5 on each held-
+out partition; zero-epoch and permuted-target controls reach 1/5 and 0/5. This is
+bounded headless reproduction of one production-rule family, not sampled gameplay,
+a native runtime, or evidence that Afflicted and Crossed behave alike.
 
 Modeling the cognition of Project Zomboid NPCs: how a person decides
 in the game space with limited awareness, from their own attributes
@@ -38,7 +37,7 @@ too.
 
 | | |
 |---|---|
-| Status | The 190 choices remain ratified intent (records 29 and 41), and the nine world documents are approved knowledge (record 43). Their historical conditioning is not training-eligible: most rows contain later facts, all options are bare labels, and the version 2 `(person, hour)` join collapses events across counties. Version 3 now requires an immutable full namespace, executable-option evidence, same-hour ZAO state, whole-input validation and atomic publication. No model has been trained; [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md) records the measured boundary. |
+| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run. That run is not the shared conversation bundle, is not runtime-approved, and changes no game behavior. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 

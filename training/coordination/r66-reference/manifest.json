@@ -1,0 +1,14 @@
+{
+  "contentSha256": "eea4f4747bc2277a4a51178038272e428f770687308662b1f44ba46ffeaa5b62",
+  "datasetSha256": "a910256c51a5ab2355348ef81100fb14fcaf675c594c0cad33278c43a67c560d",
+  "files": {
+    "evaluation.json": "e836717549f430fbebac90fc6bcdd45314749fe69a08bf72af9705fb704978ba",
+    "model.json": "b715a75f5e265cbaea1956b4a6699a3412fa0d6c6743f670666da7dfbc228374",
+    "predictions.jsonl": "425078a1be4b6df173832e4224253b3afdd88c48d5c5caf958fdd97045fc7038"
+  },
+  "runId": "r66-c81-coordination-reference-v1",
+  "schema": "speakeasy-coordination-reference-run",
+  "schemaVersion": 1,
+  "standing": "offline-reference-only",
+  "tokenizerSha256": "de647099663341a23d8dd85f940770bc866f96b738545eaa42253229cdef1c6d"
+}

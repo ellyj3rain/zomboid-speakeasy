@@ -24,6 +24,29 @@ private diagnosis/form/diet/predation fields are rejected. The output is a candi
 observation, never automatic training admission. See the
 [coordination contract](../training/coordination/README.md).
 
+`coordination_data.py` completes the bounded Record 66 admission path. It reads
+the C81 evidence from exact SAO Git blobs, verifies the pinned ZAO projector and
+producer sources, recompiles every task, and removes route identity, actor
+condition, choice, split and later outcome from model input. Its review compiler
+shows every production target to Mousecat within the platform fact limit. Dataset
+admission requires one completed, unqualified response whose exact evidence
+reference matches the current sealed subject; Mousecat-generated item IDs are
+not assumed to equal caller seam names.
+
+`coordination_reference.py` trains and validates the deterministic offline
+coordination adapter. It learns an 8-dimensional mean byte-token embedding and
+typed softmax head over decision-time channels, masks infeasible responses and
+labels absent from the approved family, and saves weights, predictions,
+partition metrics, actor-kind audits and zero-epoch/permuted-target controls.
+It is a Python reference only and emits no game-consumable bundle.
+
+```text
+python tools/test_coordination_data.py
+python tools/test_coordination_reference.py
+python tools/coordination_data.py validate --import-dir training/coordination/r66-source
+python tools/coordination_reference.py validate --dataset training/coordination/r66-source/dataset.json --run-dir training/coordination/r66-reference
+```
+
 `audit_conditioning.py` reproduces the eligibility counts in
 `decisions/ELIGIBILITY.md` from the protected version 2 bytes.
 

@@ -1,0 +1,261 @@
+{
+  "auditBreakdown": {
+    "afflicted": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 1
+        },
+        "contest": {
+          "contest": 1
+        },
+        "counter-propose": {
+          "counter-propose": 1
+        },
+        "defer": {
+          "defer": 2
+        },
+        "qualify": {
+          "qualify": 1
+        }
+      },
+      "count": 6,
+      "negativeLogLikelihood": 0.172517195798,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 1,
+        "defer": 2,
+        "qualify": 1
+      }
+    },
+    "crossed": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 2
+        },
+        "contest": {
+          "contest": 2
+        },
+        "counter-propose": {
+          "counter-propose": 1
+        },
+        "defer": {
+          "defer": 1
+        },
+        "qualify": {
+          "qualify": 1
+        }
+      },
+      "count": 7,
+      "negativeLogLikelihood": 0.201239549849,
+      "support": {
+        "accept": 2,
+        "contest": 2,
+        "counter-propose": 1,
+        "defer": 1,
+        "qualify": 1
+      }
+    },
+    "survivor": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 1
+        },
+        "contest": {
+          "contest": 1
+        },
+        "counter-propose": {
+          "counter-propose": 2
+        },
+        "defer": {
+          "defer": 1
+        },
+        "qualify": {
+          "qualify": 2
+        }
+      },
+      "count": 7,
+      "negativeLogLikelihood": 0.178406359428,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 2,
+        "defer": 1,
+        "qualify": 2
+      }
+    }
+  },
+  "contentSha256": "020e211dd90aa63e31ac1c872fe36aeec8c093fb1bcf69baf4bb129a4f0ee1c4",
+  "controls": {
+    "conditionAuditExcludedFromInput": true,
+    "laterOutcomeExcludedFromInput": true,
+    "lineagePartitionsDisjoint": true,
+    "permutedTrainTargetsTest": {
+      "accuracy": 0.0,
+      "confusion": {
+        "accept": {
+          "qualify": 1
+        },
+        "contest": {
+          "accept": 1
+        },
+        "counter-propose": {
+          "defer": 1
+        },
+        "defer": {
+          "contest": 1
+        },
+        "qualify": {
+          "counter-propose": 1
+        }
+      },
+      "count": 5,
+      "negativeLogLikelihood": 3.882001268702,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 1,
+        "defer": 1,
+        "qualify": 1
+      }
+    },
+    "unsupportedLabelsMasked": [
+      "decline",
+      "withdraw"
+    ],
+    "zeroEpochTest": {
+      "accuracy": 0.2,
+      "confusion": {
+        "accept": {
+          "defer": 1
+        },
+        "contest": {
+          "defer": 1
+        },
+        "counter-propose": {
+          "defer": 1
+        },
+        "defer": {
+          "defer": 1
+        },
+        "qualify": {
+          "defer": 1
+        }
+      },
+      "count": 5,
+      "negativeLogLikelihood": 1.60361673193,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 1,
+        "defer": 1,
+        "qualify": 1
+      }
+    }
+  },
+  "datasetSha256": "a910256c51a5ab2355348ef81100fb14fcaf675c594c0cad33278c43a67c560d",
+  "exclusions": [
+    "Synthetic starting conditions are not sampled gameplay or a frequency estimate.",
+    "Decline and withdrawal have no observed target in this family.",
+    "Approval does not approve response terms, define Afflicted or Crossed motives, or infer condition from the shared ZAO driver.",
+    "No trained artifact is approved for game runtime by this review.",
+    "This evaluation measures reproduction of one synthetic production-rule family, not general gameplay quality.",
+    "The artifact is not a native runtime candidate."
+  ],
+  "modelSha256": "e67f02f1143dffeafce02e095b5c9f34c030bfa41734ba5d7006b3c9e81265ad",
+  "partitions": {
+    "test": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 1
+        },
+        "contest": {
+          "contest": 1
+        },
+        "counter-propose": {
+          "counter-propose": 1
+        },
+        "defer": {
+          "defer": 1
+        },
+        "qualify": {
+          "qualify": 1
+        }
+      },
+      "count": 5,
+      "negativeLogLikelihood": 0.250889491458,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 1,
+        "defer": 1,
+        "qualify": 1
+      }
+    },
+    "train": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 2
+        },
+        "contest": {
+          "contest": 2
+        },
+        "counter-propose": {
+          "counter-propose": 2
+        },
+        "defer": {
+          "defer": 2
+        },
+        "qualify": {
+          "qualify": 2
+        }
+      },
+      "count": 10,
+      "negativeLogLikelihood": 0.085255833757,
+      "support": {
+        "accept": 2,
+        "contest": 2,
+        "counter-propose": 2,
+        "defer": 2,
+        "qualify": 2
+      }
+    },
+    "validation": {
+      "accuracy": 1.0,
+      "confusion": {
+        "accept": {
+          "accept": 1
+        },
+        "contest": {
+          "contest": 1
+        },
+        "counter-propose": {
+          "counter-propose": 1
+        },
+        "defer": {
+          "defer": 1
+        },
+        "qualify": {
+          "qualify": 1
+        }
+      },
+      "count": 5,
+      "negativeLogLikelihood": 0.317123748973,
+      "support": {
+        "accept": 1,
+        "contest": 1,
+        "counter-propose": 1,
+        "defer": 1,
+        "qualify": 1
+      }
+    }
+  },
+  "schema": "speakeasy-coordination-reference-evaluation",
+  "schemaVersion": 1,
+  "standing": "bounded-headless-reference"
+}

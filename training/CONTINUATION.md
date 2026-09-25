@@ -4,7 +4,7 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Record 63 enacted coordination provenance and Record 64's corrected shared ZAO execution boundary. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; the candidate-observation boundary is in `coordination/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, and Record 66's approved bounded coordination dataset/reference run. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence and run standing are in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
@@ -15,7 +15,7 @@ Purpose: move from verified examples to a reproducible learned exchange while pr
 | Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, and selected source/treatment/communication/rest mechanisms implemented. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, R13 training, R14 learned runtime and R15 acceleration remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
-| Data and models | Protected intent/source material, validated task preparation and a frozen byte-BPE reference exist. | 190 historical choices remain conditioning-ineligible. The tokenized C77 preview remains excluded; no training run, Java tokenizer parity, learned task bundle or live learned exchange exists. |
+| Data and models | Protected intent/source material, validated task preparation, a frozen byte-BPE reference and one bounded learned coordination adapter exist. | 190 historical choices and the C77 tokenized preview retain their exclusions. The Record 66 run is synthetic and offline; no Java tokenizer parity, learned native bundle or live learned exchange exists. |
 | Verification | Expression/admission controls and contextual comparison revalidation preserve exact source evidence and separate judgment standing. See each implementation record. | Tests cover implemented contracts, not overall game readiness or learned quality. |
 
 ## What needs correction
@@ -122,10 +122,24 @@ the current source-owned pressure value and availability needed to represent a
 competing priority. It must not turn that generic evidence into a diagnosis,
 satisfier, diet category, predatory act or future outcome.
 
-Admission and speech constraints is the active unit. Source and label validity,
-experimental task admission, dataset partition/evaluation evidence and runtime
-readiness need explicit separate checks. Existing ineligible examples retain
-their standing until the appropriate implemented checks pass.
+Record 66 completes the first approved learning slice over the coordination
+path. Exact Git-object import binds SAO C81 and the current ZAO projector; 20
+synthetic production rows received one exact Mousecat response-kind review and
+divide into disjoint 10/5/5 source lineages. The trained reference consumes only
+decision-time proposal, reception, current work, generic source-owned pressure,
+relationships, interests, constraints, capabilities and feasible options.
+Explicit actor-kind/pathogen records, route names, authored choice and later
+outcomes remain outside input; current execution and pressure provenance remain
+inside it. The sealed run reproduces all five observed response kinds on all three
+partitions; initialization and permuted-label controls do not. Decline and
+withdraw remain unsupported because the family contains neither. This closes a
+bounded offline learnability question, not native consumption or gameplay quality.
+
+Admission and speech constraints remains the broader active unit. Coordination
+source validity, exact response-kind approval, bounded task admission and a
+reference evaluation now have separate implemented checks. Existing ineligible
+examples retain their standing; speaker semantic breadth, independent natural
+scenes, native export and runtime readiness remain open.
 
 | Work | Owner and boundary | Completion test |
 |---|---|---|
