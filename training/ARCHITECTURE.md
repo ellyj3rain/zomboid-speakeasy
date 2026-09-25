@@ -178,6 +178,17 @@ Human review is the final gate for usefulness, voice and conversational quality.
 It cannot waive a failed mechanical contract. The reviewed artifact and its exact
 receipts are the artifact admitted for runtime evaluation.
 
+Record 67 instantiates this contract for the bounded coordination task. Its
+`SAOCRD01` version 1 artifact contains the frozen byte-BPE program, task schema
+and FP32 tensors and binds the exact R66 dataset, model, tokenizer and run. The
+manifest carries all component hashes, 20 full-input parity vectors and six
+tokenizer vectors. SAO consumes the artifact with a one-thread bounded worker,
+then revalidates the process, response revision, feasible options and registered
+execution-owner state on the calling thread. The retained output is explicitly
+non-authoritative; it neither selects the response nor creates work. Thus this
+is the first native shadow implementation of the architecture, not admission
+of learned behavior.
+
 ## Work this contract unlocks
 
 SAO C77 captures the immutable authored conversation: county and calendar

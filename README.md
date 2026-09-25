@@ -1,18 +1,22 @@
 # Zomboid-Speakeasy
 
-Current continuation: Record 66 imports SAO C81's exact production coordination
-family, binds its ZAO projection, preserves the operator's exact response-kind
-review, and trains the first bounded [coordination reference
-model](training/coordination/README.md#record-66-bounded-reference-learning).
+Current continuation: Records 66-67 import SAO C81's exact production
+coordination family, preserve the operator's exact response-kind review, train
+the first bounded [coordination reference
+model](training/coordination/README.md#record-66-bounded-reference-learning),
+and export its [content-hashed native shadow
+bundle](training/coordination/README.md#record-67-native-shadow-bundle).
 The 20 synthetic rows retain separate decision-time and later-outcome horizons.
 Survivors execute through `SAO.Controller`; Afflicted and Crossed living people
 both execute through `ZAO.Driver`, while their state, pressure owner and policy
 remain distinct. Explicit actor-kind/pathogen records, routing identity and later
 receipts are audit evidence, not learned input; current source-owned effects do
 remain causal input. The deterministic adapter reaches 5/5 on each held-
-out partition; zero-epoch and permuted-target controls reach 1/5 and 0/5. This is
-bounded headless reproduction of one production-rule family, not sampled gameplay,
-a native runtime, or evidence that Afflicted and Crossed behave alike.
+out partition; zero-epoch and permuted-target controls reach 1/5 and 0/5. The
+strict FP32 bundle reproduces all 20 outputs in SAO's pure-Java consumer, but its
+result is shadow-only and cannot alter an exchange. This is bounded headless
+reproduction of one production-rule family, not sampled gameplay or evidence
+that Afflicted and Crossed behave alike.
 
 Modeling the cognition of Project Zomboid NPCs: how a person decides
 in the game space with limited awareness, from their own attributes
@@ -37,7 +41,7 @@ too.
 
 | | |
 |---|---|
-| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run. That run is not the shared conversation bundle, is not runtime-approved, and changes no game behavior. |
+| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run; Record 67 exports its exact FP32 native shadow candidate. The candidate is not runtime-authoritative and changes no game behavior. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 

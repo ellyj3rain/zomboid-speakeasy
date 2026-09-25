@@ -2184,3 +2184,41 @@ No loaded-world session sampled these choices, no native bundle consumes the
 model, and no game behavior changes. Perfect reproduction therefore establishes
 bounded learnability of this family, not response prevalence, broader social
 judgment, or similarity between Afflicted and Crossed.
+
+## 67 - Native coordination shadow bundle (2026-09-25)
+
+The bounded Record 66 reference now has an exact pure-Java interchange rather
+than a Python-only model. `coordination_native_bundle.py` reproduces the sealed
+dataset and run before exporting the frozen byte-BPE merge program and reserved
+IDs, ordered labels and observed support, 16 typed feature names, FP32 embedding
+and adapter tensors, biases, compatibility identity and complete upstream
+content identities. The reader contract refuses corrupt, truncated, trailing,
+non-finite or incompatible data.
+
+The binary is 13,050 bytes with SHA-256
+`02edcdc1caf7489f0871f63e35af2c2cc26966ec74c0cf30eb63d155b1acb33c`.
+Its manifest is
+`2354c652d0e5615df11149e2539bb08b8a6889d5ca4cd0b8eb66e73d9daf1c1e`.
+All 20 full-input parity vectors preserve the reference response, with maximum
+probability delta `1.2782958e-07` against tolerance `1e-6`; six tokenizer
+vectors preserve ASCII, UTF-8 and structural-token behavior. FP32 parameters,
+FP32 accumulation and strict-exp-FP32 softmax are explicit. No INT8 result is
+claimed.
+
+The artifact is deliberately `native-shadow-candidate`. Decline and withdrawal
+remain masked because the reviewed family has no examples. The model input
+carries current execution owner, activity and source-owned pressure effects but
+no actor-kind or pathogen label. Afflicted and Crossed therefore reach the same
+registered ZAO driver without being assigned the same physiology, maintenance,
+motives or action policy.
+
+The associated SAO consumer loads this exact artifact without an external
+runtime, submits immutable snapshots only after the production response exists,
+and retains returned output only after current revision, feasible-option and
+execution-owner revalidation. That integration is separately governed by SAO
+C82. This record supplies the exporter, sealed artifacts and reference vectors;
+it does not authorize learned choice, create work, observe a loaded gameplay
+scene or complete the broader shared conversation bundle.
+
+All 159 Python tests pass. The exact export validation retrains and compares the
+complete sealed R66 run before accepting the tracked R67 bytes.

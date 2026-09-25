@@ -38,13 +38,24 @@ coordination adapter. It learns an 8-dimensional mean byte-token embedding and
 typed softmax head over decision-time channels, masks infeasible responses and
 labels absent from the approved family, and saves weights, predictions,
 partition metrics, actor-kind audits and zero-epoch/permuted-target controls.
-It is a Python reference only and emits no game-consumable bundle.
+It remains the authoritative Python reference.
+
+`coordination_native_bundle.py` reproduces that sealed run before exporting its
+frozen byte-BPE program, reserved IDs, response/feature schema and FP32 tensors
+into a dependency-free binary consumed by SAO's pure-Java evaluator. It emits
+all 20 full-input parity vectors plus six byte-tokenizer vectors and seals every
+component hash. Strict readers reject corrupt, truncated, trailing or
+incompatible data. Export conveys shadow-candidate standing only; it cannot
+authorize a game response, and decline/withdraw remain masked because the
+approved family contains no targets for them.
 
 ```text
 python tools/test_coordination_data.py
 python tools/test_coordination_reference.py
+python tools/test_coordination_native_bundle.py
 python tools/coordination_data.py validate --import-dir training/coordination/r66-source
 python tools/coordination_reference.py validate --dataset training/coordination/r66-source/dataset.json --run-dir training/coordination/r66-reference
+python tools/coordination_native_bundle.py validate --bundle-dir training/coordination/r67-native
 ```
 
 `audit_conditioning.py` reproduces the eligibility counts in
