@@ -1,11 +1,13 @@
 # Zomboid-Speakeasy
 
-Current continuation: Records 66-67 import SAO C81's exact production
+Current continuation: Records 66-68 import SAO C81's exact production
 coordination family, preserve the operator's exact response-kind review, train
 the first bounded [coordination reference
 model](training/coordination/README.md#record-66-bounded-reference-learning),
 and export its [content-hashed native shadow
-bundle](training/coordination/README.md#record-67-native-shadow-bundle).
+bundle](training/coordination/README.md#record-67-native-shadow-bundle), then
+add the [causal episode intake](training/coordination/README.md#record-68-causal-episode-intake)
+needed for repeated start-to-horizon simulation evidence.
 The 20 synthetic rows retain separate decision-time and later-outcome horizons.
 Survivors execute through `SAO.Controller`; Afflicted and Crossed living people
 both execute through `ZAO.Driver`, while their state, pressure owner and policy
@@ -41,7 +43,7 @@ too.
 
 | | |
 |---|---|
-| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run; Record 67 exports its exact FP32 native shadow candidate. The candidate is not runtime-authoritative and changes no game behavior. |
+| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run; Record 67 exports its exact FP32 native shadow candidate; Record 68 retains exact causal episodes as candidate observations before decision extraction. The tracked 30-day episode contains no decision and creates no task. Nothing here makes the model runtime-authoritative. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 

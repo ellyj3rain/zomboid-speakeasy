@@ -1,5 +1,20 @@
 # Tools
 
+`coordination_episodes.py` is the episode-level intake for SAO C84 causal runs.
+It validates the complete sealed `sao-causal-episode` row, isolated exact-replay
+receipt, ordered start/finish checkpoints from one recorded prefix, source
+identity, terminal agreement and a failure-free production decision capture.
+The episode remains an output even when it contains no decision. If decisions
+exist, the caller must provide the current ZAO projector; the intake invokes
+that owner, joins the full version 3 namespace through `cross_module_rows.py`
+and compiles through `coordination_tasks.py`. Output is an exclusively published
+candidate bundle, never review, admission, training or runtime activation.
+
+```text
+python tools/test_coordination_episodes.py
+python tools/coordination_episodes.py --episodes <sao-episodes.jsonl> --zao-projector <current-projector.py> --out <new-directory>
+```
+
 `cross_module_rows.py` joins version 3 SAO decisions to ZAO state on the exact
 run, county, person, event and hour namespace. It validates the complete inputs,
 executable-option evidence, conditioning time and protected artifact hashes
