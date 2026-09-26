@@ -1,5 +1,11 @@
 # Zomboid-Speakeasy
 
+Record 70 adds [visual scenario teaching](training/coordination/r70-teaching/README.md).
+Speakeasy supplies authored scene frames and exact teaching proposals; Mousecat
+renders the map, timeline and personal information for operator evaluation.
+Every new scenario requires that evaluation before dataset ratification. The
+first example remains unratified, with no new training or gameplay effect.
+
 Current continuation: Records 66-69 import SAO C81's exact production
 coordination family, preserve the operator's exact response-kind review, train
 the first bounded [coordination reference

@@ -2302,3 +2302,41 @@ All 170 Python tests pass. The six tracked intake files reproduce byte-for-byte
 from their retained episode; legacy R68 evidence remains unchanged and accepted.
 The R69 manifest seal is
 `7d4ec92b3b211ab74261b7224b4c309a0c7dc3305b327ae365d2cbb91041e169`.
+
+
+## Record 70 - Visual authored-scenario review
+
+The operator requires evaluation of scenarios before dataset ratification and
+selected Mousecat as the visual preview host. Speakeasy now owns a bounded
+authored-scenario contract, schematic chronological scene frames, explicit
+coordination input and a separate response-kind teaching proposal. Authored
+hypotheticals can start the teaching loop without a sampled base dataset.
+
+The scene ends at the decision. Its people, locations, personal-information
+text, elapsed time and communication are declared illustrations. The shared
+coordination projection and appraisal constraints validate typed model input;
+scene text and rationale stay outside that input. Authored reception cannot
+claim native observation provenance.
+
+The complete scenario and target are sealed together. Mousecat's shared
+scene-preview contract renders a map, timeline, personal inspection and heard
+status inside the existing ML review. The operator explicitly authorized that
+platform extension. A genuine exact, unqualified completed Mousecat receipt is
+required through the existing evidence store before any offline teaching row
+can be emitted. Corrections invalidate the earlier subject binding. A response
+kind approval establishes neither wording, evaluation quality nor runtime use.
+
+The first example, Rhea's water-collector repair interrupted by a food request,
+proposes defer and remains unratified. Its exact subject is
+0f69e61166266ab5123275d73969f18d89486f87d2e1e40831427151d26795a5.
+It is open in Mousecat interaction skill-f4573a122353e77a, item
+seam-6fe087017bc2d162. No approval receipt, admitted row, dataset or training run
+is created for this example. Existing R66 approval and artifacts are unchanged.
+
+Verification: 178 Python tests pass, including eight scenario/admission controls.
+Mousecat's 229 tests, 16 GitHub classifier tests, runtime smokes and complete
+repository readiness gate pass. Headless checks verify desktop and mobile
+layout, keyboard frame selection, person information and zero answer writes.
+The updated shared service renders the exact packet and retains all 34 previous
+interaction records. Mousecat remains a separately modified local checkout;
+its earlier unpublished work is preserved.

@@ -1,0 +1,215 @@
+{
+  "approvalEffects": [
+    "Admit this exact authored situation and proposed response kind as one offline teaching example.",
+    "Keep the scene, rationale and authorship available for audit and outside the learned input."
+  ],
+  "contentSha256": "0f69e61166266ab5123275d73969f18d89486f87d2e1e40831427151d26795a5",
+  "modelInputSha256": "cb61ef97c0297474463cb17da80a160d54cf79fc6ba023134684c097c4f28155",
+  "remainingExclusions": [
+    "This is an authored hypothetical, not a recorded simulation or a population frequency estimate.",
+    "The response is a teaching proposal; no later action, delivery or outcome is asserted.",
+    "Approval does not approve response wording, execution terms, evaluation quality or a game runtime model."
+  ],
+  "scenario": {
+    "authorship": "Assistant-authored hypothetical for operator evaluation; no sampled gameplay or recorded movement.",
+    "contentSha256": "46b9ab7c063eec3b6334b3efad8aa1a491eefff69dbda9923c26596f0b5d8dd9",
+    "decision": {
+      "actorId": "rhea",
+      "communicationId": "food-request",
+      "frameId": "request-heard",
+      "input": {
+        "actor": {
+          "bodyOwner": "SAO",
+          "executor": "SAO.Controller"
+        },
+        "decisionTime": {
+          "capabilities": {
+            "availability": "available",
+            "owner": "SAO.Controller",
+            "values": {
+              "acquire": true,
+              "carry": true,
+              "deliver": true,
+              "execute": true
+            }
+          },
+          "competingPriorities": {
+            "competingPressure": {
+              "available": true,
+              "owner": "SAO.Needs",
+              "value": 0.2
+            },
+            "constraints": {
+              "contest": false,
+              "currentActivity": "repairing-water-collector",
+              "executionOwnerAvailable": true,
+              "ownNeedAvailable": true,
+              "represented": true
+            },
+            "interests": {
+              "currentWork": "keep-the-collector-usable"
+            },
+            "owners": {
+              "constraints": "SAO.Controller",
+              "interests": "SAO.Identity+SAO.Standing",
+              "ownNeed": "SAO.Needs",
+              "relationship": "SAO.Standing"
+            },
+            "relationship": 0.7
+          },
+          "currentWork": {
+            "activity": "repairing-water-collector",
+            "owner": "SAO.Controller"
+          },
+          "feasibleOptions": [
+            "accept",
+            "qualify",
+            "counter-propose",
+            "decline",
+            "defer",
+            "contest"
+          ],
+          "proposal": {
+            "destination": {
+              "maxX": 12,
+              "maxY": 12,
+              "minX": 8,
+              "minY": 8,
+              "z": 0
+            },
+            "purpose": "carry-food-to-kitchen",
+            "requiredCapabilities": {
+              "acquire": true,
+              "carry": true,
+              "deliver": true
+            },
+            "scope": {
+              "category": "food",
+              "quantity": 1
+            }
+          },
+          "reception": {
+            "channel": "spoken",
+            "evidence": {
+              "kind": "authored-hypothesis"
+            }
+          }
+        },
+        "process": {
+          "kind": "food-delivery"
+        },
+        "route": "coordination-response",
+        "schema": "speakeasy-coordination-response-input",
+        "schemaVersion": 1
+      }
+    },
+    "id": "water-repair-and-food-request",
+    "lineageId": "authored-water-repair-001",
+    "revision": 1,
+    "scene": {
+      "actors": [
+        {
+          "id": "rhea",
+          "label": "Rhea"
+        },
+        {
+          "id": "jon",
+          "label": "Jon"
+        }
+      ],
+      "coordinateSystem": "schematic",
+      "frames": [
+        {
+          "communications": [],
+          "elapsedSeconds": 0,
+          "id": "before-contact",
+          "label": "Before contact",
+          "states": [
+            {
+              "activity": "repairing-water-collector",
+              "actorId": "rhea",
+              "knowledge": [
+                "The collector is leaking; Rhea is working on its seal."
+              ],
+              "locationId": "collector"
+            },
+            {
+              "activity": "walking",
+              "actorId": "jon",
+              "knowledge": [
+                "There is a can of food in the pantry.",
+                "The food is wanted at the kitchen."
+              ],
+              "locationId": "pantry"
+            }
+          ]
+        },
+        {
+          "communications": [
+            {
+              "fromId": "jon",
+              "id": "food-request",
+              "status": "heard",
+              "summary": "Carry one can of food from the pantry to the kitchen.",
+              "toId": "rhea"
+            }
+          ],
+          "elapsedSeconds": 20,
+          "id": "request-heard",
+          "label": "The request reaches Rhea",
+          "states": [
+            {
+              "activity": "repairing-water-collector",
+              "actorId": "rhea",
+              "knowledge": [
+                "The collector is leaking; Rhea is working on its seal.",
+                "Jon has asked her to carry one can of food to the kitchen."
+              ],
+              "locationId": "collector"
+            },
+            {
+              "activity": "asking-for-help",
+              "actorId": "jon",
+              "knowledge": [
+                "There is a can of food in the pantry.",
+                "The food is wanted at the kitchen."
+              ],
+              "locationId": "collector"
+            }
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "collector",
+          "label": "Water collector",
+          "x": 65,
+          "y": 30
+        },
+        {
+          "id": "pantry",
+          "label": "Pantry",
+          "x": 20,
+          "y": 70
+        },
+        {
+          "id": "kitchen",
+          "label": "Kitchen",
+          "x": 80,
+          "y": 75
+        }
+      ]
+    },
+    "schema": "speakeasy-authored-coordination-scenario",
+    "schemaVersion": 1,
+    "summary": "Rhea is repairing a leaking water collector. Jon comes over and asks her to carry a can of food from the pantry to the kitchen. She can carry it, trusts Jon, and has little immediate personal pressure. Her current work still matters to her.",
+    "teaching": {
+      "rationale": "Rhea can acknowledge the request while giving her ongoing repair priority. This proposes deferral in this particular situation; it does not establish that busy people always defer or that she later completes either task.",
+      "response": "defer"
+    },
+    "title": "A request during a water-collector repair"
+  },
+  "schema": "speakeasy-scenario-teaching-review",
+  "schemaVersion": 1,
+  "targetScope": "offline-coordination-response-kind"
+}

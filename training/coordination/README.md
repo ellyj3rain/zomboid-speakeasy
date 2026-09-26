@@ -59,6 +59,14 @@ controlled headless mechanism run, not a sampled game session. Independent task
 review and admission were required before this path could contribute training
 data. Record 66 supplies that review for one exact source family only.
 
+## Record 70 visual scenario teaching
+
+[The authored teaching preview](r70-teaching/README.md) carries schematic places,
+people, personal information and chronological frames into Mousecat's existing
+ML review. The scene stops at the response decision. The complete scenario and
+proposed response require exact operator evaluation before an offline teaching
+row can be admitted. The first example is unratified; it requires no base capture.
+
 ## Record 66 bounded reference learning
 
 `tools/coordination_data.py` imports the committed C81 evidence from exact Git
