@@ -1,10 +1,16 @@
 # Zomboid-Speakeasy
 
-Record 71 adds [native simulation observation](world/autonomous-observer.md).
+Record 72 extends [native simulation observation](world/autonomous-observer.md)
+with bounded person inspection, recorded behavior reasons, native game panels
+and engine camera zoom in the installed Mousecat Desktop. All 204 Python tests
+pass. Inspection remains independently timed; unavailable detail does not stop
+the native image feed or camera controls.
+
+Record 71 introduced the native observation bridge.
 Speakeasy verifies saved study evidence, bridges live engine images to Mousecat,
 and rotates the camera among people and nearby groups using observed activity.
 Manual camera and time controls are available. These observations remain
-unreviewed. All 196 Python tests pass; native27 completed a stop, save and
+unreviewed. Its 196-test suite passed; native27 completed a stop, save and
 continuation of the same 32-person world with zero saved players. Fresh intake
 verified ten resumed observation frames and admitted zero training rows.
 Measured delivery is about 8–11 new engine images per second; Mousecat's

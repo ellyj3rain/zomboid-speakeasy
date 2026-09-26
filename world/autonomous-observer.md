@@ -17,10 +17,27 @@ python tools/world_watch.py --run <native-run-directory> `
   --package <native-package-directory> --out <new-feed-directory>
 ```
 
-Launch Mousecat's native application with
-`-MousecatNativeView="<absolute-feed-directory>"`. Each fresh feed is bound to
-one native attempt. One bridge owns that attempt's control writer; it can be
-reattached after a process exit without reusing native command numbers.
+For Mousecat Desktop, configure `nativeViews.registryPath` in the service's
+configuration to name a local JSON registry. Each registry entry binds one
+session to its explicit feed directory:
+
+```json
+[
+  {
+    "id": "survival-observatory",
+    "label": "Survival simulation",
+    "projectRef": "project:survivor-awareness",
+    "sessionId": "<sessionId from run.json>",
+    "directory": "<absolute-feed-directory>"
+  }
+]
+```
+
+Open the installed Desktop's Simulation view. Replace the registry entry when
+starting a fresh attempt. The compatibility Unreal viewer accepts
+`-MousecatNativeView="<absolute-feed-directory>"`. One bridge owns each attempt's
+control writer; it can be reattached after a process exit without reusing native
+command numbers.
 
 The camera defaults to automatic activity viewing. It holds a scene for about
 22 seconds, tracks it at most once a second, and frames one person with up to
@@ -32,13 +49,25 @@ loads; the inspector identifies native-body and durable-record positions.
 
 | Control | Effect |
 |---|---|
-| WASD, arrows, drag image | Move the camera and take manual control |
-| R | Resume automatic activity viewing |
-| Tab / Shift+Tab | Inspect another person |
-| F | Focus the selected person's observed location; manual control |
-| Space | Pause or resume native time |
-| 1 / 2 / 3 | Choose native simulation speed |
-| Esc | Request native stop and save |
+| Arrows or direction buttons | Move the camera and take manual control |
+| Follow activity | Resume automatic activity viewing |
+| People search and selection | Inspect a person's recorded state |
+| Show in world | Focus the selected person's observed location; manual control |
+| Open / Close game panel | Control the native inspector for the selected person |
+| Pause and speed buttons | Control native simulation time |
+| Zoom buttons, wheel, or + / - with the view focused | Change native projection within the engine's reported range |
+| End run | Request native stop and save |
+
+These are the Desktop controls. The compatibility viewer retains its existing
+keyboard mapping. Zoom preserves activity-camera ownership and simulation speed.
+The reported zoom waits for the engine image acknowledging the exact command.
+
+Person detail comes from SAO's cached scalar inspection producer. It retains its
+own sample time, source and availability, including native action receipts,
+reception and accepted work. The prominent recorded reason copies an available
+Controller pressure detail; the bridge does not infer a motive from a person's
+position. The selected person receives the bounded detail budget first. Invalid
+optional inspection becomes an explicit failure while the core feed continues.
 
 Automatic subject labels wait for a native image carrying the applied camera
 command. During a move, the view shows a transition without claiming new
@@ -69,7 +98,14 @@ receipt and package, validator and projector provenance. Both commands require
 fresh output directories. Observation manifests and projected positions do not
 establish successful native save/reopen durability.
 
-The final Record 71 suite passes all 196 Python tests. Its retained receipt
+The Record 72 suite passes all 204 Python tests, including exact image/command
+binding for zoom, inspection validation and budget, panel commands, and recorded
+reason fidelity. Direct installed Desktop checks verified native pixels, a game
+panel, and a 1.0 to 1.25 native zoom change in SAO C87's residential studies.
+The Desktop source remains in its separately modified local checkout; this
+record publishes the bridge and its contract.
+
+The final Record 71 suite passed all 196 Python tests. Its retained receipt
 matches all 44 current Python source hashes and covers intake, partial and stale
 frames, exclusive control ownership, command sequencing and activity viewing.
 
