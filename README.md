@@ -1,5 +1,15 @@
 # Zomboid-Speakeasy
 
+Record 71 adds [native simulation observation](world/autonomous-observer.md).
+Speakeasy verifies saved study evidence, bridges live engine images to Mousecat,
+and rotates the camera among people and nearby groups using observed activity.
+Manual camera and time controls are available. These observations remain
+unreviewed. All 196 Python tests pass; native27 completed a stop, save and
+continuation of the same 32-person world with zero saved players. Fresh intake
+verified ten resumed observation frames and admitted zero training rows.
+Measured delivery is about 8–11 new engine images per second; Mousecat's
+60 FPS display refresh and the 20-image-per-second capture target are distinct.
+
 Record 70 adds [visual scenario teaching](training/coordination/r70-teaching/README.md).
 Speakeasy supplies authored scene frames and exact teaching proposals; Mousecat
 renders the map, timeline and personal information for operator evaluation.
@@ -55,7 +65,7 @@ too.
 
 | | |
 |---|---|
-| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run; Record 67 exports its exact FP32 native shadow candidate; Record 68 retains exact causal episodes as candidate observations before decision extraction. The tracked 30-day episode contains no decision and creates no task. Nothing here makes the model runtime-authoritative. |
+| Status | The 190 historical choices remain conditioning-ineligible for the measured reasons in [`decisions/ELIGIBILITY.md`](decisions/ELIGIBILITY.md). Separately, Record 66 admits 20 exact reviewed synthetic production rows and saves one deterministic offline coordination reference run; Record 67 exports its exact FP32 native shadow candidate; Record 68 retains exact causal episodes as candidate observations before decision extraction. The tracked 30-day episode contains no decision and creates no task. Record 71 adds unreviewed native observation and camera controls, with zero new training rows or teaching targets. Nothing here makes the model runtime-authoritative. |
 | License | MIT. SAO is GPL-3.0; no code is shared between the repositories; the dataset produced here ports into SAO. |
 | Record | `RECORD.md`, append-only. |
 

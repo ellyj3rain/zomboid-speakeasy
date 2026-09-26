@@ -2340,3 +2340,96 @@ layout, keyboard frame selection, person information and zero answer writes.
 The updated shared service renders the exact packet and retains all 34 previous
 interaction records. Mousecat remains a separately modified local checkout;
 its earlier unpublished work is preserved.
+
+
+## Record 71 - Native world observation and activity camera
+
+Verified: 2026-09-26 08:19 UTC / 01:19 PST.
+
+The operator selected Mousecat to observe the simulation and requires scenario
+review before dataset ratification. Speakeasy now bridges SAO-owned native
+study evidence and actual engine images into Mousecat. The native observer
+operates without a participating player. The guide and launch commands live in
+`world/autonomous-observer.md`; native engine execution remains SAO-owned.
+
+`tools/world_study.py` invokes an explicitly supplied SAO validator before
+importing a completed run. It preserves exact observation bytes, source hashes,
+the validation receipt and package, validator and projector provenance. Its
+geometry/position replay projects recorded fields for inspection. Unobserved
+areas remain absent, and the replay does not claim to reproduce native pixels.
+
+`tools/world_watch.py` validates live image identity, size, bounds and hash,
+binds each fresh feed to one native attempt, and publishes native pixels plus
+person inspection data. Partial inspection writes retain the last complete
+observation and its time. An exclusive per-attempt writer lease and distinct UI
+and native command sequences keep control ownership explicit. A rejected
+request has an explicit result and cannot strand the next request. Automatic
+subject labels wait for the native frame acknowledging their camera command.
+
+`tools/world_camera.py` defaults to activity viewing. It rotates among people
+and nearby groups using observed movement and changes in activity or awareness,
+with dwell and recent-scene/person cooldowns. Nearby framing asserts no social
+relationship. Manual pan or focus takes control until R resumes automatic
+viewing. Camera requests change view and, when visiting a person, the engine's
+loaded region; they do not set person coordinates, goals, beliefs or outcomes.
+The camera log retains requested framing as unreviewed observation evidence.
+
+The independent God-view uses native fullbright rendering and canopy cutaway
+for legible inspection while NPCs retain their private awareness. Rendering is
+independent of the selected inspector subject.
+
+The final suite, `python -m unittest discover -s tools -p test_*.py`, passes
+all 196 tests in 49.121 seconds. `_scratch/r71-watch-final/receipt.json` records
+exit 0 and unchanged before/after inputs; all 44 recorded Python source hashes
+still match. Intake, projection coverage, partial and stale frames, writer
+ownership, command sequencing and activity-camera controls are covered.
+
+SAO's `native-run-27` completed two native attempts against
+`starter-terrain-package-02`, preserving save `73517772808093796831` and the same
+32 person identities. Both returned from native save, exited normally, recorded
+no runtime errors and saved zero player rows. The resumed world's first frame
+contains the same identity, creation, occupation and name fields as the prior
+run's last captured population.
+
+| Native27 receipt | World hours | Observation sequence |
+|---|---|---|
+| Attempt 1 | Start `2.0`; stop `2.389998435974121` | 1–2 |
+| Attempt 2 | Reopen `2.3903684616088867`; stop `4.684725761413574` | 3–12 |
+
+The first resumed observation is sequence 3 at `2.3907384872436523` hours.
+Definition, package, engine, loading agent and copied mod inventory seals match
+across attempts. The initial and resumed receipts are retained independently
+under SAO's `_scratch/c86-study/native-run-27/attempts/0001` and `0002`.
+
+Fresh `world_study.py` intake invoked the actual SAO `tools/world_lab_run.py`
+validator after attempt 2 completed. The ignored local output
+`runs/r71-native27-attempt2-intake` retains ten exact observation frames,
+definition and completed run receipt, plus the diagnostic replay. Every source
+and replay hash was checked. Its manifest is
+`Study-0b0ea20cde64c0f0.preview.json` and records `trainingRows: 0`,
+`teachingTargets: 0`, `datasetAdmission: unreviewed`.
+
+| Evidence | SHA-256 |
+|---|---|
+| Final 196-test log | `28de36608677f23f37ee31126b98a69cdc2f93cee6cf75f5375aae10bf4380dd` |
+| Native package | `4bc5af9d7e0bed6e9bded85b89677cc7ff05b2abae214e13edca20bca353a415` |
+| Attempt 1 completed receipt | `52e40220136ace032bbbf225e7ec624b0f09c467b6ef8dd157a5c428d9f25c91` |
+| Attempt 2 completed receipt | `7bc6491f0558a458d2c5713ab4e600ca53cd298556cb21bfdd08816f34c075de` |
+| SAO intake validator | `96cdf42c81e853f24ae7e1c279fc01cce2cd1d0657e6cb073d0025949ade6ac8` |
+| Speakeasy projector | `f5ec8eed20b4b6008f0cf9ee879a7166d74574e587fe2d6d9aa10d0bb6f049b7` |
+| Intake preview manifest | `56891931e0e4a8c47b00f914af0784ea8a614cefff3f4e0b0ed20edbb4abfc46` |
+
+One-minute delivery measurements were 10.98 new images per second in native24
+and 8.04 in native27, retained as SAO's `native-run-24/delivery-early-60s.json`
+and `native-run-27/delivery-60s.json`. These are distinct from Mousecat's 60 FPS
+display refresh, which can repeat a frame, and the native producer's 20-image-
+per-second target, which was not sustained. Region transitions and loaded-world
+coverage remain limits. These receipts establish bounded observation and native
+save continuation; they do not establish long-horizon social consistency or
+general gameplay acceptance.
+
+All new outputs remain unreviewed. This record creates zero training rows,
+teaching targets or approval receipts and changes no existing admission.
+Operator evaluation and explicit ratification remain required before a scenario
+enters the teaching dataset. Watching, controlling time, stopping, saving and
+passing tests do not perform that ratification.
