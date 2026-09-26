@@ -2433,3 +2433,48 @@ teaching targets or approval receipts and changes no existing admission.
 Operator evaluation and explicit ratification remain required before a scenario
 enters the teaching dataset. Watching, controlling time, stopping, saving and
 passing tests do not perform that ratification.
+
+
+## Record 72 - Native person inspection and camera zoom
+
+Verified: 2026-09-26 22:41 UTC / 15:41 PST.
+
+The live observer bridge now carries independently timed, source-owned person
+inspection into Mousecat Desktop. Needs, inventory, actions, reception and work
+retain their producer and availability. The selected person receives the bounded
+detail budget first. Malformed optional detail is marked failed while native
+images and controls continue. The prominent recorded reason copies the
+Controller's available pressure detail; it does not infer motives from position.
+Stored threat memories are labelled as memories rather than current perception.
+
+Selection and native panel commands bind to an observed person. Java properties
+escaping preserves exact Unicode IDs and prevents property injection. Native
+zoom requests use one configured engine step and retain camera ownership, speed
+and person state. The reported zoom binds to the exact acknowledged image; a
+command acknowledgement alone cannot label older pixels with the new zoom.
+
+The current guide documents the installed Desktop's local registry and controls,
+including native zoom and game panels. The compatibility Unreal viewer remains
+a separate client. SAO owns engine execution and its action effects. Mousecat's
+Desktop integration was checked locally and remains within its separately
+modified checkout; this record publishes the Speakeasy bridge.
+
+Verification: `python -m unittest discover -s tools -p test_*.py` passes all
+204 tests in 78.078 seconds. The changed bridge and tests remained unchanged
+after that run. The retained `_scratch/r72-verification.json` records the exact
+current source hashes and the completed log; its source inventory was captured
+after testing. Native zoom and bridge controls reject the recorded defect
+mutations. SAO C87's residential study directly verified the installed Desktop
+with native pixels, person details, the game panel and a 1.0 to 1.25 zoom change.
+Those observations establish those controls, not general survivor competence.
+
+| Evidence | SHA-256 |
+|---|---|
+| Full 204-test log | `1b30606245b82cd79a598d1f752692774beee4e2cb75d41c2cd823ffd43afb4b` |
+| Bridge source | `00b7a27265bd4228dc0edd48f1073a518d7124b93aadf46802a3f1cd8d677972` |
+| Bridge tests | `868af3cb5d7a583b1837d58dd727de2d14bc769fe397246e96cdeaf522f534b1` |
+| Verification receipt | `cb1e910a701eeefa33a00a7fb6d49709ec34a19e0db5479680cf8cba09eba5c2` |
+
+These changes create zero training rows or teaching targets. Observations
+remain unreviewed; scenario admission retains its existing operator evaluation
+and ratification contract.

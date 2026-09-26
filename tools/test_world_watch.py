@@ -1,4 +1,5 @@
 import hashlib
+import copy
 import os
 import struct
 import tempfile
@@ -28,11 +29,158 @@ class ObserverCommands(unittest.TestCase):
         self.assertNotIn("residency", result)
         self.assertEqual(self.people[0]["x"], 200)
 
+    def test_native_zoom_changes_only_native_projection(self):
+        self.state["viewport"] = dict(zoom=1.0, targetZoom=1.0, zoomLevels=[0.5, 1, 1.5, 2.5])
+        before = copy.deepcopy((self.state, self.people))
+        for step in (-1, 1):
+            self.assertEqual(self.translate(self.command("zoom", value=step)).decode(),
+                             f"sequence=1\nzoomStep={step}\n")
+        self.assertEqual((self.state, self.people), before)
+        for invalid in (0, 2, -2, True, 1.5, "1", None):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                self.translate(self.command("zoom", value=invalid))
+        with self.assertRaises(ValueError):
+            self.translate(self.command("zoom", value=1, speed=3))
+        del self.state["viewport"]
+        with self.assertRaises(ValueError):
+            self.translate(self.command("zoom", value=1))
+
+    def test_native_viewport_is_bound_to_exact_captured_command(self):
+        value = dict(zoom=1.5, targetZoom=1.5, zoomLevels=[0.5, 1, 1.5, 2.5])
+        state = dict(sequence=12, viewport=value)
+        self.assertEqual(W.viewport_view(state, dict(observerSequence=12)), value)
+        for frame in ({}, dict(observerSequence=11), dict(observerSequence=13), dict(observerSequence=True)):
+            self.assertIsNone(W.viewport_view(state, frame))
+        for change in (dict(zoom=float("nan")), dict(zoom=True), dict(targetZoom=3), dict(targetZoom=1.2),
+                       dict(zoomLevels=[]), dict(zoomLevels=[1, 0.5]), dict(zoomLevels=[1, 1]),
+                       dict(zoomLevels=[0, 1]), dict(zoomLevels=[0.5, 1, 17]), dict(extra="untrusted")):
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                W.viewport_view(dict(sequence=12, viewport=value | change), dict(observerSequence=12))
+        copy_value = W.viewport_view(state)
+        copy_value["zoomLevels"].append(4)
+        self.assertEqual(state["viewport"], value)
+
+    def test_watch_acknowledges_native_zoom_and_waits_for_its_image(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            run, package, out = root / "run", root / "package", root / "feed"
+            (run / "native-view").mkdir(parents=True)
+            package.mkdir()
+            receipt = dict(host="observer", datasetAdmission="unreviewed", sessionId=self.session,
+                           definitionSha256="fixture", status="running")
+            W.atomic(run / "run.json", W.encoded(receipt))
+            W.atomic(package / "package.json", W.encoded({"definitionSha256": "fixture"}))
+            W.atomic(package / "definition.json", W.encoded({"extent": {
+                "minCellX": 0, "minCellY": 0, "cellsX": 2, "cellsY": 2}}))
+            state = dict(detached=True, sequence=0, rejectedSequence=-1, hours=2, paused=True,
+                         speed=3, viewX=128, viewY=128, viewZ=0,
+                         viewport=dict(zoom=1, targetZoom=1, zoomLevels=[0.5, 1, 1.5, 2.5]))
+            W.atomic(run / "observer-state.json", W.encoded(state))
+            filename = "study-live-0000000000000001.png"
+            data = b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + struct.pack(">II", 960, 540)
+            (run / "native-view" / filename).write_bytes(data)
+            frame = dict(sequence=1, observerSequence=0, capturedAtUnixMs=1,
+                         image=dict(file=filename, sha256=hashlib.sha256(data).hexdigest(), width=960, height=540))
+            W.atomic(run / "native-view/native.json", W.encoded(frame))
+            ticks = []
+            def tick(_):
+                ticks.append(len(ticks))
+                if len(ticks) == 1:
+                    self.assertEqual(W.read(out / "latest.json")["viewport"]["zoom"], 1)
+                    W.atomic(out / "commands/0000000000000001.json", W.encoded(self.command("zoom", value=1)))
+                elif len(ticks) == 2:
+                    self.assertEqual((run / "observer-control.properties").read_text(), "sequence=1\nzoomStep=1\n")
+                    self.assertEqual(W.read(out / "latest.json")["lastCommandSequence"], 0)
+                    state["sequence"] = 1
+                    state["viewport"].update(zoom=1.5, targetZoom=1.5)
+                    W.atomic(run / "observer-state.json", W.encoded(state))
+                elif len(ticks) == 3:
+                    view = W.read(out / "latest.json")
+                    self.assertEqual(view["commandResult"]["status"], "applied")
+                    self.assertNotIn("viewport", view)  # Native acknowledgement alone is not an image.
+                    frame.update(sequence=2, observerSequence=1)
+                    W.atomic(run / "native-view/native.json", W.encoded(frame))
+                    receipt["status"] = "completed"
+                    W.atomic(run / "run.json", W.encoded(receipt))
+                else:
+                    self.fail("native zoom bridge stalled")
+            with patch.object(W.time, "sleep", side_effect=tick):
+                self.assertEqual(W.watch(run, package, out), 0)
+            view = W.read(out / "latest.json")
+            self.assertEqual(view["viewport"]["zoom"], 1.5)
+            self.assertEqual(view["camera"]["mode"], "automatic")
+            self.assertEqual((state["paused"], state["speed"], state["viewX"]), (True, 3, 128))
+
     def test_focus_changes_observer_region_and_view_only(self):
         result = self.translate(self.command("focus", personId="person-1")).decode()
         self.assertIn("viewX=200", result)
         self.assertIn("residencyX=200", result)
         self.assertNotIn("person-1", result)
+
+    def test_selection_and_panels_preserve_camera_and_clock(self):
+        selected = self.translate(self.command("select", personId="person-1")).decode()
+        self.assertEqual(selected, "selectedPersonId=person-1\nsequence=1\n")
+        panel = self.translate(self.command("panel", personId="person-1", panelId="person-inspection", visible=True)).decode()
+        self.assertEqual(panel, "panelId=person-inspection\npanelPersonId=person-1\npanelVisible=true\nsequence=1\n")
+        for value in (self.command("select", personId="missing"),
+                      self.command("select", personId="person-1", speed=3),
+                      self.command("panel", personId="person-1", panelId="arbitrary", visible=True),
+                      self.command("panel", personId="person-1", panelId="person-inspection", visible=1)):
+            with self.subTest(value=value), self.assertRaises(ValueError): self.translate(value)
+
+    def test_person_id_is_one_literal_java_property(self):
+        self.people = [{"id": "a=é\\b"}]
+        value = self.translate(self.command("select", personId=self.people[0]["id"])).decode()
+        self.assertIn("selectedPersonId=a\\u003d\\u00e9\\u005cb\n", value)
+
+    def test_independently_timed_inspection_and_stage_fields(self):
+        value = dict(sequence=3, capturedAtUnixMs=1000, worldHours=2, status="available", message="",
+                     omittedPeople=0, omittedEvents=0, selectedPersonId="person-1", people={"person-1": {
+                     "sections": [dict(id="needs", label="Needs", source="native", perspective="physical",
+                                       status="available", message="", rows=[dict(label="Hunger", value="0.5")])],
+                     "events": [dict(id="line-1", capturedAtUnixMs=900, worldHours=1.9, source="Voice",
+                                     stage="emitted", summary="Exact line", actorId="person-1")]}})
+        before = copy.deepcopy(value)
+        header, detail = W.inspection_view(value, self.people)
+        self.assertEqual(value, before)
+        self.assertEqual(header["capturedAtUnixMs"], 1000)
+        self.assertEqual(detail["person-1"]["events"][0]["stage"], "emitted")
+        value["status"] = "failed"; value["message"] = "native read failed"
+        failed, _ = W.inspection_view(value, self.people)
+        self.assertEqual(failed["capturedAtUnixMs"], 1000)
+        for mutate in (lambda v: v["people"]["person-1"]["events"][0].update(inferredHearers=["unknown"]),
+                       lambda v: v["people"]["person-1"]["events"][0].update(capturedAtUnixMs=1001),
+                       lambda v: v.update(selectedPersonId="missing"),
+                       lambda v: v["people"]["person-1"]["sections"][0].update(rows=[{"label":"x","value":0.5}])):
+            bad = copy.deepcopy(value); mutate(bad)
+            with self.assertRaises(ValueError): W.inspection_view(bad, self.people)
+        self.assertEqual(W.inspection_view(None, self.people), (None, {}))
+        initial = dict(sequence=0, capturedAtUnixMs=0, worldHours=0, status="failed", message="first read failed",
+                       omittedPeople=0, omittedEvents=0, people={})
+        self.assertEqual(W.inspection_view(initial, self.people)[0]["status"], "failed")
+        initial["status"] = "available"
+        with self.assertRaises(ValueError): W.inspection_view(initial, self.people)
+
+    def test_lua_empty_arrays_and_stored_memory_label(self):
+        value = dict(sequence=1, capturedAtUnixMs=1, worldHours=2, status="available", message="",
+                     omittedPeople=0, omittedEvents=0, people={"person-1": {"sections": {}, "events": {}}})
+        _, detail = W.inspection_view(value, self.people)
+        self.assertEqual(detail["person-1"], {"sections": [], "events": []})
+        view = W.people_view([self.people[0] | {"context": {"perceptionAvailable": True, "beliefCounts": {"zombies": 3}}}], detail)
+        self.assertIn("Stored threat memories: 3", view[0]["summary"])
+        self.assertEqual(view[0]["events"], [])
+
+    def test_recorded_reason_is_visible_without_inferred_intent(self):
+        section = dict(id="pressure", label="Pressure", source="Controller", perspective="Recorded decision",
+                       status="available", message="", rows=[dict(label="detail", value="waits for daylight")])
+        details = {self.people[0]["id"]: {"sections": [section], "events": []}}
+        before = copy.deepcopy(details)
+        view = W.people_view(self.people, details)
+        self.assertIn("Recorded reason: waits for daylight", view[0]["summary"])
+        self.assertEqual(details, before)
+        section["status"] = "failed"
+        self.assertNotIn("Recorded reason:", W.people_view(self.people, details)[0]["summary"])
+        self.assertNotIn("Recorded reason:", W.people_view(self.people)[0]["summary"])
 
     def test_forged_or_out_of_order_commands_are_refused(self):
         invalid = [self.command("teleport", personId="person-1"),

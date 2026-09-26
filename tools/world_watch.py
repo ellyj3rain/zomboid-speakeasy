@@ -86,6 +86,27 @@ def number(value, low, high):
     return value
 
 
+def viewport_view(state, frame=None):
+    """Native projection metadata belongs only to its captured command epoch."""
+    value = state.get("viewport")
+    if value is None:
+        return None
+    A.require(isinstance(value, dict) and set(value) == {"zoom", "targetZoom", "zoomLevels"},
+              "invalid native viewport fields")
+    levels = value["zoomLevels"]
+    A.require(isinstance(levels, list) and 0 < len(levels) <= 64, "invalid native zoom levels")
+    for index, level in enumerate(levels):
+        number(level, math.nextafter(0, math.inf), 16)
+        A.require(index == 0 or level > levels[index - 1], "native zoom levels must increase")
+    zoom = number(value["zoom"], levels[0], levels[-1])
+    target = number(value["targetZoom"], levels[0], levels[-1])
+    A.require(any(abs(target - level) < 0.0001 for level in levels), "native zoom target is not a configured level")
+    if frame is not None and (type(frame.get("observerSequence")) is not int
+                             or frame["observerSequence"] != state.get("sequence")):
+        return None
+    return {"zoom": zoom, "targetZoom": target, "zoomLevels": list(levels)}
+
+
 def translate(command, session, sequence, state, people, bounds, native_sequence=None):
     """An allowlisted camera/time command, independent of character actions."""
     fields = {"schema", "sessionId", "sequence", "action"}
@@ -95,7 +116,8 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
               and command["sequence"] == sequence, "command session or sequence differs")
     action = command["action"]
     optional = {"pause": set(), "resume": set(), "speed": {"value"}, "pan": {"dx", "dy"},
-                "focus": {"personId"}, "stop": set(), "auto": set()}
+                "focus": {"personId"}, "stop": set(), "auto": set(), "select": {"personId"},
+                "panel": {"panelId", "personId", "visible"}, "zoom": {"value"}}
     A.require(isinstance(action, str) and action in optional
               and set(command) == fields | optional[action], "unsupported observer command")
     result = {"sequence": sequence if native_sequence is None else native_sequence}
@@ -104,6 +126,10 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
     elif action == "speed":
         A.require(type(command["value"]) is int and command["value"] in (1, 2, 3), "unsupported speed")
         result["speed"] = command["value"]
+    elif action == "zoom":
+        A.require(type(command["value"]) is int and command["value"] in (-1, 1), "invalid native zoom step")
+        A.require(viewport_view(state) is not None, "native zoom unavailable")
+        result["zoomStep"] = command["value"]
     elif action == "pan":
         dx, dy = command["dx"], command["dy"]
         A.require(type(dx) is int and type(dy) is int and abs(dx) <= 8 and abs(dy) <= 8
@@ -118,7 +144,25 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
         result.update(viewX=x, viewY=y, viewZ=z, residencyX=x, residencyY=y, residencyZ=z)
     elif action == "stop":
         result["stop"] = "true"
-    return ("".join(f"{key}={value}\n" for key, value in sorted(result.items()))).encode("ascii")
+    elif action in ("select", "panel"):
+        person = command["personId"]
+        A.require(isinstance(person, str) and 0 < len(person) <= 128
+                  and not any(ord(c) < 32 or ord(c) == 127 for c in person)
+                  and any(p["id"] == person for p in people), "person unavailable for inspection")
+        if action == "select":
+            result["selectedPersonId"] = person
+        else:
+            A.require(command["panelId"] == "person-inspection" and type(command["visible"]) is bool,
+                      "unsupported person inspection panel")
+            result.update(panelId="person-inspection", panelPersonId=person,
+                          panelVisible=str(command["visible"]).lower())
+    # Java Properties.load(InputStream) is Latin-1 with Unicode escapes. Encode
+    # literal separators/backslashes too, so source-owned IDs remain one value.
+    def property_value(value):
+        raw = str(value).encode("utf-16-be")
+        return "".join(chr(n) if 33 <= n < 127 and chr(n) not in "\\=:#!" else f"\\u{n:04x}"
+                       for n in (int.from_bytes(raw[i:i+2], "big") for i in range(0, len(raw), 2)))
+    return ("".join(f"{key}={property_value(value)}\n" for key, value in sorted(result.items()))).encode("ascii")
 
 
 def image_data(root, frame):
@@ -137,27 +181,105 @@ def image_data(root, frame):
     return data
 
 
-def people_view(people):
+def inspection_view(value, people):
+    """Source-owned scalar facts, independently timed and bounded for the viewer."""
+    if value is None:
+        return None, {}
+    A.require(isinstance(value, dict), "invalid inspection")
+    header_keys = {"sequence", "capturedAtUnixMs", "worldHours", "status", "message", "omittedPeople", "omittedEvents"}
+    A.require(header_keys <= value.keys() and set(value) <= header_keys | {"people", "selectedPersonId"}, "unknown inspection fields")
+    def text_field(obj, key, limit, empty=True):
+        text = obj.get(key)
+        A.require(isinstance(text, str) and len(text) <= limit and (empty or text)
+                  and not any((ord(c) < 32 and c not in "\n\t") or ord(c) == 127 for c in text), "invalid inspection text: " + key)
+        return text
+    def status(obj):
+        A.require(obj.get("status") in ("available", "unavailable", "failed"), "invalid inspection status")
+    for key, minimum in (("sequence", 0), ("capturedAtUnixMs", 0), ("omittedPeople", 0), ("omittedEvents", 0)):
+        A.require(type(value[key]) is int and minimum <= value[key] <= 2**53-1, "invalid inspection counter")
+    number(value["worldHours"], 0, 2**53-1)
+    status(value); text_field(value, "message", 1024)
+    A.require(value["sequence"] > 0 or (value["capturedAtUnixMs"] == 0 and value["status"] != "available"),
+              "unsampled inspection claimed current data")
+    header = {key: value[key] for key in header_keys}
+    ids = {p["id"] for p in people}
+    selected = value.get("selectedPersonId")
+    if selected is not None:
+        A.require(selected in ids, "selected inspection person missing")
+        header["selectedPersonId"] = selected
+    raw = value.get("people", {})
+    A.require(isinstance(raw, dict) and len(raw) <= 16 and set(raw) <= ids, "inspection detail person differs")
+    def array(raw, limit):
+        if raw == {}: raw = []  # Empty Lua tables have no implicit JSON array type.
+        A.require(isinstance(raw, list) and len(raw) <= limit, "inspection collection limit")
+        return raw
+    details, budget = {}, 256 * 1024
+    for person in sorted(raw, key=lambda key: (key != selected, key)):
+        detail = raw[person]
+        A.require(isinstance(detail, dict) and set(detail) == {"sections", "events"}, "inspection detail fields")
+        sections, events, seen = [], [], set()
+        for section in array(detail["sections"], 10):
+            A.require(isinstance(section, dict) and set(section) == {"id", "label", "source", "perspective", "status", "message", "rows"}, "inspection section fields")
+            for key, limit in (("id", 128), ("label", 160), ("source", 160), ("perspective", 160), ("message", 1024)):
+                text_field(section, key, limit, key == "message")
+            A.require(section["id"] not in seen, "duplicate inspection section"); seen.add(section["id"])
+            status(section)
+            rows = []
+            for row in array(section["rows"], 48):
+                A.require(isinstance(row, dict) and set(row) == {"label", "value"}, "inspection row fields")
+                text_field(row, "label", 160); text_field(row, "value", 384)
+                rows.append(dict(row))
+            sections.append(section | {"rows": rows})
+        seen = set()
+        for event in array(detail["events"], 24):
+            required = {"id", "capturedAtUnixMs", "worldHours", "source", "stage", "summary"}
+            A.require(isinstance(event, dict) and required <= event.keys()
+                      and set(event) <= required | {"actorId", "recipientId", "correlationId"}, "inspection event fields")
+            for key, limit in (("id", 128), ("source", 160), ("stage", 128), ("summary", 1024)):
+                text_field(event, key, limit)
+            A.require(event["id"] not in seen, "duplicate inspection event"); seen.add(event["id"])
+            A.require(type(event["capturedAtUnixMs"]) is int and 0 <= event["capturedAtUnixMs"] <= value["capturedAtUnixMs"], "inspection event time")
+            number(event["worldHours"], 0, value["worldHours"])
+            for key in ("actorId", "recipientId", "correlationId"):
+                if key in event: text_field(event, key, 128, False)
+            events.append(dict(event))
+        normalized = {"sections": sections, "events": events}
+        cost = len(encoded(normalized))
+        if cost <= budget:
+            details[person] = normalized; budget -= cost
+        else:
+            header["omittedPeople"] += 1; header["omittedEvents"] += len(events)
+    return header, details
+
+
+def people_view(people, inspection=None, selected_id=None):
     result = []
-    for p in sorted(people, key=lambda v: (v.get("positionSource") != "native-body", v["id"]))[:2048]:
+    for p in sorted(people, key=lambda v: (v["id"] != selected_id, v.get("positionSource") != "native-body", v["id"]))[:2048]:
         record, context = p.get("record", {}), p.get("context", {})
         label = " ".join(str(record.get(k, "")) for k in ("forename", "surname")).strip() or p["id"]
         controller = context.get("controller", {})
         beliefs = context.get("beliefs", {})
         details = [str(record.get("occupation", "Occupation unavailable")),
-                   "Activity: " + str(controller.get("state", "unrepresented")),
-                   "Position from " + p.get("positionSource", "unavailable"),
-                   "Deceased" if record.get("dead") else "Recorded alive"]
+                   "Activity: " + str(controller.get("state", "unrepresented"))]
+        for section in (inspection or {}).get(p["id"], {}).get("sections", []):
+            if section["id"] == "pressure" and section["source"] == "Controller" and section["status"] == "available":
+                reason = next((row["value"] for row in section["rows"] if row["label"] == "detail"), None)
+                if reason:
+                    details.append("Recorded reason: " + reason)
+                break
+        details += ["Position from " + p.get("positionSource", "unavailable"),
+                    "Deceased" if record.get("dead") else "Recorded alive"]
         if all(k in p for k in ("x", "y", "z")):
             details.append(f"Location {p['x']:.1f}, {p['y']:.1f}; floor {p['z']}")
         if context.get("perceptionAvailable"):
             counts = context.get("beliefCounts", {})
             details += [f"Known people: {counts.get('people', len(beliefs.get('people', {})))}",
-                        f"Perceived threats: {counts.get('zombies', len(beliefs.get('zombies', {})))}",
+                        f"Stored threat memories: {counts.get('zombies', len(beliefs.get('zombies', {})))}",
                         f"Unclassified sounds: {counts.get('sounds', len(beliefs.get('sounds', {})))}"]
         else:
             details.append("Personal awareness unavailable")
-        result.append({"id": p["id"], "label": label[:160], "summary": "\n".join(details)[:4096]})
+        result.append({"id": p["id"], "label": label[:160], "summary": "\n".join(details)[:4096]}
+                      | (inspection or {}).get(p["id"], {}))
     return result
 
 
@@ -239,6 +361,7 @@ def watch_locked(run, package, destination):
     last_observation = None
     people, observation_hours, population = [], None, {}
     displayed_people, available_ids = [], set()
+    inspection_header = None
     images = {}
     receipt_cache, state_cache, frame_cache, observation_cache = (JsonSnapshot() for _ in range(4))
     archive_path, next_archive_scan = None, 0.0
@@ -295,7 +418,15 @@ def watch_locked(run, package, destination):
                         A.require(observation["datasetAdmission"] == "unreviewed"
                                   and observation["definitionSha256"] == receipt["definitionSha256"], "observation binding differs")
                         people, observation_hours, population = observation["people"], observation["hours"], observation["population"]
-                        displayed_people = people_view(people)
+                        try:
+                            inspection_header, inspection_details = inspection_view(observation.get("inspection"), people)
+                        except (ValueError, KeyError, TypeError) as error:
+                            inspection_header = (inspection_header or dict(sequence=0, capturedAtUnixMs=0,
+                                worldHours=0, omittedPeople=0, omittedEvents=0)) | {
+                                "status": "failed", "message": str(error)[:1024]}
+                            inspection_details = {}
+                        displayed_people = people_view(people, inspection_details,
+                                                       (inspection_header or {}).get("selectedPersonId"))
                         available_ids = {p["id"] for p in displayed_people}
                         last_observation = observation_cache.revision
                 except (FileNotFoundError, TransientRead, PermissionError):
@@ -343,7 +474,9 @@ def watch_locked(run, package, destination):
                             journal.write(encoded({"nativeSequence": native_cursor, "shot": camera.shot,
                                 "observedHours": observation_hours, "personIds": camera.subjects,
                                 "view": plan, "datasetAdmission": "unreviewed"}))
+            viewport = viewport_view(state, frame)
             publication = (frame["sequence"], acknowledged, json.dumps(displayed_camera, sort_keys=True),
+                           json.dumps(viewport, sort_keys=True),
                            state["paused"], state.get("failure"), observation_ready, last_observation)
             if publication != last_publication or ended:
                 name = frame["image"]["file"]
@@ -366,6 +499,8 @@ def watch_locked(run, package, destination):
                     summary += " Run " + receipt["status"] + "."
                 if state.get("failure"):
                     summary = "Observer failure: " + str(state["failure"])[:512] + ". " + summary
+                if state.get("inspectionError"):
+                    summary += " Native inspector rendering failed: " + str(state["inspectionError"])[:512]
                 if not observation_ready:
                     summary += " People inspection awaiting a complete observation."
                 snapshot = {"schema": "mousecat.native-view/1",
@@ -376,6 +511,11 @@ def watch_locked(run, package, destination):
                     "camera": displayed_camera | {"personIds": [key for key in displayed_camera["personIds"] if key in available_ids]}}
                 if command_result:
                     snapshot["commandResult"] = command_result
+                if viewport is not None:
+                    snapshot["viewport"] = viewport
+                if inspection_header:
+                    snapshot["inspection"] = inspection_header
+                    snapshot["panels"] = [{"id": "person-inspection", "label": "Native person inspector"}]
                 atomic(destination / "latest.json", encoded(snapshot))
                 last_publication = publication
                 while len(images) > 8:
