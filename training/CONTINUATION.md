@@ -9,6 +9,14 @@ Purpose: move from verified examples to a reproducible learned exchange while pr
 
 ## Current position
 
+The operator's current rule is scenario evaluation before dataset ratification.
+Record 70 implements authored hypothetical scenes and exact-subject admission
+through the existing Mousecat evidence owner. Mousecat hosts the visual preview;
+Speakeasy supplies its scene and teaching data. The first water-repair example
+remains unratified. Teaching can begin with authored scenarios while independent
+simulation collection continues. Existing exact approvals retain their original
+scope; no new example inherits them.
+
 | Area | Verified standing | Practical limit |
 |---|---|---|
 | SAO | C79-C85 implement enacted coordination, shared ZAO execution ownership, the reviewed 20-row source, exact native shadow, causal episodes and person-private origins with durable contact attempts. ZAO A42 extends the distinct policies behind the shared driver. | Mechanical/headless evidence proves the named paths. The fresh ten-day population-12 episode formed 27 matters and 46 arrivals but no receptions or decisions; loaded-world behavior and autonomous reading remain unobserved or absent. |

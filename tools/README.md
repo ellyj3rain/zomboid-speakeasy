@@ -1,5 +1,12 @@
 # Tools
 
+`scenario_teaching.py` validates authored coordination scenes, seals complete
+scenario/target review subjects, and emits Mousecat scene-preview invocations.
+Its `admit` command requires the exact unqualified operator result through the
+existing evidence store before emitting an offline teaching row. Scene frames,
+names and rationale stay outside model input. See the
+[unratified first preview](../training/coordination/r70-teaching/README.md).
+
 `coordination_episodes.py` is the episode-level intake for SAO C84/C85 causal runs.
 It validates the complete sealed `sao-causal-episode` row, isolated exact-replay
 receipt, ordered start/finish checkpoints from one recorded prefix, source

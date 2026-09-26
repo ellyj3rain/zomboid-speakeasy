@@ -1,0 +1,227 @@
+{
+  "action": "invoke",
+  "frameworkRef": "recursive-deliberation",
+  "intake": {
+    "seams": [
+      {
+        "allowFreeform": true,
+        "evidenceRef": "speakeasy:content-sha256:0f69e61166266ab5123275d73969f18d89486f87d2e1e40831427151d26795a5",
+        "id": "water-repair-and-food-request-r1",
+        "mlReview": {
+          "actualInput": [
+            {
+              "label": "Process",
+              "value": "{\"kind\": \"food-delivery\"}"
+            },
+            {
+              "label": "Execution ownership",
+              "value": "{\"bodyOwner\": \"SAO\", \"executor\": \"SAO.Controller\"}"
+            },
+            {
+              "label": "proposal",
+              "value": "{\"destination\": {\"maxX\": 12, \"maxY\": 12, \"minX\": 8, \"minY\": 8, \"z\": 0}, \"purpose\": \"carry-food-to-kitchen\", \"requiredCapabilities\": {\"acquire\": true, \"carry\": true, \"deliver\": true}, \"scope\": {\"category\": \"food\", \"quantity\": 1}}"
+            },
+            {
+              "label": "reception",
+              "value": "{\"channel\": \"spoken\", \"evidence\": {\"kind\": \"authored-hypothesis\"}}"
+            },
+            {
+              "label": "currentWork",
+              "value": "{\"activity\": \"repairing-water-collector\", \"owner\": \"SAO.Controller\"}"
+            },
+            {
+              "label": "competingPriorities",
+              "value": "{\"competingPressure\": {\"available\": true, \"owner\": \"SAO.Needs\", \"value\": 0.2}, \"constraints\": {\"contest\": false, \"currentActivity\": \"repairing-water-collector\", \"executionOwnerAvailable\": true, \"ownNeedAvailable\": true, \"represented\": true}, \"interests\": {\"currentWork\": \"keep-the-collector-usable\"}, \"owners\": {\"constraints\": \"SAO.Controller\", \"interests\": \"SAO.Identity+SAO.Standing\", \"ownNeed\": \"SAO.Needs\", \"relationship\": \"SAO.Standing\"}, \"relationship\": 0.7}"
+            },
+            {
+              "label": "capabilities",
+              "value": "{\"availability\": \"available\", \"owner\": \"SAO.Controller\", \"values\": {\"acquire\": true, \"carry\": true, \"deliver\": true, \"execute\": true}}"
+            },
+            {
+              "label": "feasibleOptions",
+              "value": "[\"accept\", \"qualify\", \"counter-propose\", \"decline\", \"defer\", \"contest\"]"
+            }
+          ],
+          "approvalEffects": [
+            "Admit this exact authored situation and proposed response kind as one offline teaching example.",
+            "Keep the scene, rationale and authorship available for audit and outside the learned input."
+          ],
+          "causalPath": [
+            {
+              "label": "Authored situation",
+              "value": "Inspect the people, their activities and their available information before and at contact."
+            },
+            {
+              "label": "Your evaluation",
+              "value": "Evaluate the situation together with the proposed response. Corrections create a new exact review."
+            },
+            {
+              "label": "Offline teaching",
+              "value": "An unqualified approval allows one input/response example. Later training and runtime evaluation remain separate work."
+            }
+          ],
+          "decisionPrecedent": "Your answer governs this exact scenario revision and proposed response. A change to the scene, input or target requires your evaluation again.",
+          "evidence": [
+            {
+              "label": "Exact scenario and target",
+              "value": "0f69e61166266ab5123275d73969f18d89486f87d2e1e40831427151d26795a5"
+            },
+            {
+              "label": "Exact model input",
+              "value": "cb61ef97c0297474463cb17da80a160d54cf79fc6ba023134684c097c4f28155"
+            }
+          ],
+          "playerImpact": "This teaches individual responses to requests from current circumstances. The preview stops at the decision and establishes no completed work or successful cooperation.",
+          "proposedLearning": [
+            {
+              "label": "Proposed response: defer",
+              "value": "Rhea can acknowledge the request while giving her ongoing repair priority. This proposes deferral in this particular situation; it does not establish that busy people always defer or that she later completes either task."
+            }
+          ],
+          "remainingExclusions": [
+            "This is an authored hypothetical, not a recorded simulation or a population frequency estimate.",
+            "The response is a teaching proposal; no later action, delivery or outcome is asserted.",
+            "Approval does not approve response wording, execution terms, evaluation quality or a game runtime model."
+          ],
+          "scenario": "Rhea is repairing a leaking water collector. Jon comes over and asks her to carry a can of food from the pantry to the kitchen. She can carry it, trusts Jon, and has little immediate personal pressure. Her current work still matters to her.",
+          "scenePreview": {
+            "actors": [
+              {
+                "id": "rhea",
+                "label": "Rhea"
+              },
+              {
+                "id": "jon",
+                "label": "Jon"
+              }
+            ],
+            "coordinateSystem": "schematic",
+            "decision": {
+              "actorId": "rhea",
+              "frameId": "request-heard"
+            },
+            "frames": [
+              {
+                "communications": [],
+                "elapsedSeconds": 0,
+                "id": "before-contact",
+                "label": "Before contact",
+                "states": [
+                  {
+                    "activity": "repairing-water-collector",
+                    "actorId": "rhea",
+                    "knowledge": [
+                      "The collector is leaking; Rhea is working on its seal."
+                    ],
+                    "locationId": "collector"
+                  },
+                  {
+                    "activity": "walking",
+                    "actorId": "jon",
+                    "knowledge": [
+                      "There is a can of food in the pantry.",
+                      "The food is wanted at the kitchen."
+                    ],
+                    "locationId": "pantry"
+                  }
+                ]
+              },
+              {
+                "communications": [
+                  {
+                    "fromId": "jon",
+                    "id": "food-request",
+                    "status": "heard",
+                    "summary": "Carry one can of food from the pantry to the kitchen.",
+                    "toId": "rhea"
+                  }
+                ],
+                "elapsedSeconds": 20,
+                "id": "request-heard",
+                "label": "The request reaches Rhea",
+                "states": [
+                  {
+                    "activity": "repairing-water-collector",
+                    "actorId": "rhea",
+                    "knowledge": [
+                      "The collector is leaking; Rhea is working on its seal.",
+                      "Jon has asked her to carry one can of food to the kitchen."
+                    ],
+                    "locationId": "collector"
+                  },
+                  {
+                    "activity": "asking-for-help",
+                    "actorId": "jon",
+                    "knowledge": [
+                      "There is a can of food in the pantry.",
+                      "The food is wanted at the kitchen."
+                    ],
+                    "locationId": "collector"
+                  }
+                ]
+              }
+            ],
+            "locations": [
+              {
+                "id": "collector",
+                "label": "Water collector",
+                "x": 65,
+                "y": 30
+              },
+              {
+                "id": "pantry",
+                "label": "Pantry",
+                "x": 20,
+                "y": 70
+              },
+              {
+                "id": "kitchen",
+                "label": "Kitchen",
+                "x": 80,
+                "y": 75
+              }
+            ],
+            "provenance": {
+              "kind": "authored",
+              "label": "Assistant-authored hypothetical for operator evaluation; no sampled gameplay or recorded movement."
+            },
+            "schema": "mousecat.scene-preview/1"
+          },
+          "schema": "mousecat.ml-review/1",
+          "subject": "A request during a water-collector repair",
+          "systemRole": "Speakeasy supplies explicit decision-time inputs and a proposed response kind. The scene is review context; its animation, names and narrative are not learned input."
+        },
+        "occurredAt": "2026-09-26T01:03:50Z",
+        "options": [
+          {
+            "description": "Admit only this exact authored situation and response kind for offline teaching.",
+            "label": "Approve this example",
+            "value": "approved"
+          },
+          {
+            "description": "Keep it out of the dataset and describe the situation or response you want corrected.",
+            "label": "Revise this example",
+            "value": "revision-requested"
+          },
+          {
+            "description": "Keep this example out of the dataset.",
+            "label": "Reject this example",
+            "value": "rejected"
+          }
+        ],
+        "prompt": "Does this situation and proposed response make a useful teaching example?",
+        "selectionMode": "single",
+        "shape": "decision",
+        "title": "A request during a water-collector repair"
+      }
+    ]
+  },
+  "projectRef": "project:zomboid-speakeasy",
+  "skillRef": "crucible",
+  "source": {
+    "host": "codex",
+    "invocationId": "r70-water-repair-review-v1",
+    "sessionId": "01a0dadb-104c-7202-ab3d-25ff19ce8190"
+  },
+  "title": "Evaluate a teaching scenario"
+}

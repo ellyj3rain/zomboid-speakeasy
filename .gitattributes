@@ -30,3 +30,4 @@ training/behavior/c78/review-result.json text eol=lf
 training/coordination/r68-episodes/** text eol=lf
 training/coordination/r69-episodes/** text eol=lf
 training/coordination/r69-source-verification.json text eol=lf
+training/coordination/r70-teaching/** text eol=lf
