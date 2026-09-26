@@ -1,6 +1,6 @@
 # Tools
 
-`coordination_episodes.py` is the episode-level intake for SAO C84 causal runs.
+`coordination_episodes.py` is the episode-level intake for SAO C84/C85 causal runs.
 It validates the complete sealed `sao-causal-episode` row, isolated exact-replay
 receipt, ordered start/finish checkpoints from one recorded prefix, source
 identity, terminal agreement and a failure-free production decision capture.
@@ -9,6 +9,16 @@ exist, the caller must provide the current ZAO projector; the intake invokes
 that owner, joins the full version 3 namespace through `cross_module_rows.py`
 and compiles through `coordination_tasks.py`. Output is an exclusively published
 candidate bundle, never review, admission, training or runtime activation.
+
+Intake version 2 also validates C85's two identical process observations,
+reconciles aggregate counts with each retained process and writes
+`progression.jsonl`. It reports the first absent stage after observed progress;
+an entirely empty observed run reports `matter`, while a legacy episode remains
+explicitly unobserved. Channels such as separate contact travel can be bypassed
+when later reception is observed. This is a description of the recorded stages,
+not a diagnosis or a requirement that every matter end in accepted work.
+Process observations never enter actor-private task inputs. Evidence file hashes
+bind exact bytes; version 2 compiler hashes bind UTF-8 source with LF newlines.
 
 ```text
 python tools/test_coordination_episodes.py

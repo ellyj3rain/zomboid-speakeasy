@@ -4,7 +4,10 @@
 The episode remains the unit of provenance even when it contains no decision.
 Decision rows are projected through the explicitly supplied ZAO owner, joined
 on the complete v3 namespace, and compiled by the existing coordination task
-contract.  Every output remains a candidate observation; this tool performs no
+contract.  C85 process observations retain the public path from a raised matter
+through contact, reception, response and enacted work, so a zero-decision run
+still identifies the first unobserved stage without exposing actor-private
+inputs.  Every output remains a candidate observation; this tool performs no
 review, dataset admission, training, or runtime activation.
 """
 
@@ -29,16 +32,61 @@ import cross_module_rows as Join
 
 
 SCHEMA = "speakeasy-causal-episode-intake"
-VERSION = 1
+VERSION = 2
 EPISODE_FIELDS = {
     "schema", "schemaVersion", "episodeId", "horizonDays", "seed",
     "drawCount", "checkpoints", "trajectory", "terminal", "source",
     "standing", "exclusions", "replay", "episodeSha256",
 }
-TRAJECTORY_FIELDS = {
+LEGACY_TRAJECTORY_FIELDS = {
     "dailySnapshots", "socialEvents", "companies", "deathCauses",
     "decisionCapture",
 }
+TRAJECTORY_FIELDS = LEGACY_TRAJECTORY_FIELDS | {"processObservation"}
+CAPTURE_FIELDS = {
+    "schema", "schemaVersion", "status", "attemptedEvents", "eventCount",
+    "captureFailureCount", "failures", "events",
+}
+PROCESS_OBSERVATION_FIELDS = {
+    "schema", "schemaVersion", "processCount", "kindCounts", "statusCounts",
+    "addressedCount", "receptionCount", "responseCount",
+    "returnedResponseCount", "currentUnheardCount", "currentUnansweredCount",
+    "contactAttemptCount", "contactArrivalCount", "activeContactAttemptCount",
+    "contactOutcomeCounts", "contactOwnerCounts", "responseCounts", "processes",
+}
+PROCESS_REQUIRED_FIELDS = {
+    "processId", "kind", "originatorId", "originatorBodyOwner", "status",
+    "revision", "revisionCount", "addressedCount", "currentReceivedCount",
+    "currentRespondedCount", "currentUnheardCount", "currentUnansweredCount",
+    "receptionCount", "responseCount", "returnedResponseCount", "responses",
+    "commitments", "workOutcomes", "contactAttemptCount",
+    "contactArrivalCount", "activeContactAttemptCount", "contactOutcomes",
+    "contactOwners", "eventCount",
+}
+PROCESS_OPTIONAL_FIELDS = {
+    "organizationId", "createdAt", "revisedAt", "closedAt", "closureReason",
+}
+PROCESS_COUNT_FIELDS = (
+    "addressedCount", "currentReceivedCount", "currentRespondedCount",
+    "currentUnheardCount", "currentUnansweredCount", "receptionCount",
+    "responseCount", "returnedResponseCount", "contactAttemptCount",
+    "contactArrivalCount", "activeContactAttemptCount", "eventCount",
+)
+PROCESS_MAP_FIELDS = (
+    "responses", "commitments", "workOutcomes", "contactOutcomes",
+    "contactOwners",
+)
+PUBLIC_PROGRESSION = (
+    ("matter", "processCount"),
+    ("addressing", "addressedCount"),
+    ("contact-attempt", "contactAttemptCount"),
+    ("address-arrival", "contactArrivalCount"),
+    ("reception", "receptionCount"),
+    ("response", "responseCount"),
+    ("returned-response", "returnedResponseCount"),
+    ("commitment", "commitmentCount"),
+    ("work-outcome", "workOutcomeCount"),
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -66,10 +114,182 @@ def file_sha256(path: Path) -> str:
     return value.hexdigest()
 
 
+def compiler_sha256(path: Path) -> str:
+    """Bind compiler text independently of Git's checkout newline policy."""
+    return hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+
+
 def finite(value: Any, where: str) -> float:
     require(isinstance(value, (int, float)) and not isinstance(value, bool)
             and math.isfinite(value), f"{where} must be finite")
     return float(value)
+
+
+def nonnegative_integer(value: Any, where: str) -> int:
+    require(type(value) is int and value >= 0,
+            f"{where} must be a nonnegative integer")
+    return value
+
+
+def count_map(value: Any, where: str) -> dict[str, int]:
+    require(isinstance(value, dict), f"{where} must be an object")
+    output: dict[str, int] = {}
+    for key, count in value.items():
+        require(Join.nonempty_string(key), f"{where} has an unnamed key")
+        require(key not in Tasks.HIDDEN_PRIVATE_CONSTRAINT_FIELDS,
+                f"{where} contains a private field: {key}")
+        output[key] = nonnegative_integer(count, f"{where}.{key}")
+    return output
+
+
+def add_counts(target: dict[str, int], source: dict[str, int]) -> None:
+    for key, value in source.items():
+        target[key] = target.get(key, 0) + value
+
+
+def first_unobserved_stage(counts: dict[str, int]) -> str | None:
+    """Return the start of the terminal zero suffix after observed progress.
+
+    Some process kinds can bypass physical contact, so an internal zero followed
+    by a later nonzero value is not called a break.  This reports only the first
+    stage after which this episode observed nothing further.
+    """
+    values = [counts[field] for _, field in PUBLIC_PROGRESSION]
+    if not any(values):
+        return "matter"
+    for index, (name, _) in enumerate(PUBLIC_PROGRESSION):
+        if values[index] == 0 and any(values[:index]) and not any(values[index:]):
+            return name
+    return None
+
+
+def validate_process_observation(value: Any, where: str) -> dict[str, Any]:
+    require(isinstance(value, dict) and set(value) == PROCESS_OBSERVATION_FIELDS,
+            f"{where}: process observation fields differ")
+    require(value["schema"] == "sao-shared-process-observation"
+            and type(value["schemaVersion"]) is int
+            and value["schemaVersion"] == 1,
+            f"{where}: requires sao-shared-process-observation version 1")
+    # The producer's Lua encoder writes an empty table as an object. Preserve
+    # the sealed source bytes and normalize only this local iteration view.
+    processes = Tasks.lua_sequence(value["processes"], f"{where}: processes")
+    nonnegative_integer(value["processCount"], f"{where}.processCount")
+    require(value["processCount"] == len(processes),
+            f"{where}: processCount differs from processes")
+
+    aggregate = {field: 0 for field in PROCESS_COUNT_FIELDS}
+    aggregate_maps = {field: {} for field in PROCESS_MAP_FIELDS}
+    kinds: dict[str, int] = {}
+    statuses: dict[str, int] = {}
+    originator_owners: dict[str, int] = {}
+    process_ids: set[str] = set()
+    for index, process in enumerate(processes):
+        item_where = f"{where}.processes[{index}]"
+        require(isinstance(process, dict)
+                and PROCESS_REQUIRED_FIELDS <= set(process)
+                and set(process) <= PROCESS_REQUIRED_FIELDS | PROCESS_OPTIONAL_FIELDS,
+                f"{item_where}: process fields differ")
+        for field in ("processId", "kind", "originatorId",
+                      "originatorBodyOwner", "status"):
+            require(Join.nonempty_string(process[field]),
+                    f"{item_where}.{field} must be nonempty")
+        require(process["processId"] not in process_ids,
+                f"{item_where}: duplicate processId {process['processId']}")
+        process_ids.add(process["processId"])
+        require(type(process["revision"]) is int and process["revision"] >= 1
+                and type(process["revisionCount"]) is int
+                and process["revisionCount"] >= process["revision"],
+                f"{item_where}: revision standing differs")
+        for field in PROCESS_COUNT_FIELDS:
+            aggregate[field] += nonnegative_integer(
+                process[field], f"{item_where}.{field}")
+        for field in PROCESS_MAP_FIELDS:
+            counts = count_map(process[field], f"{item_where}.{field}")
+            add_counts(aggregate_maps[field], counts)
+        for field in PROCESS_OPTIONAL_FIELDS & set(process):
+            if field.endswith("At"):
+                finite(process[field], f"{item_where}.{field}")
+            else:
+                require(Join.nonempty_string(process[field]),
+                        f"{item_where}.{field} must be nonempty")
+
+        require(process["currentReceivedCount"] + process["currentUnheardCount"]
+                == process["addressedCount"],
+                f"{item_where}: current heard/unheard counts differ")
+        require(process["currentRespondedCount"]
+                + process["currentUnansweredCount"]
+                == process["currentReceivedCount"],
+                f"{item_where}: current response/unanswered counts differ")
+        require(process["returnedResponseCount"] <= process["responseCount"],
+                f"{item_where}: returned responses exceed responses")
+        require(process["currentReceivedCount"] <= process["receptionCount"]
+                and process["currentRespondedCount"] <= process["responseCount"]
+                and process["responseCount"] <= process["receptionCount"],
+                f"{item_where}: current and retained response counts differ")
+        require(process["contactArrivalCount"] <= process["contactAttemptCount"]
+                and process["activeContactAttemptCount"]
+                <= process["contactAttemptCount"],
+                f"{item_where}: contact progression counts differ")
+        require(sum(process["responses"].values()) == process["responseCount"],
+                f"{item_where}: response map differs")
+        require(sum(process["contactOutcomes"].values())
+                == process["contactAttemptCount"],
+                f"{item_where}: contact outcome map differs")
+        require(sum(process["contactOwners"].values())
+                == process["contactAttemptCount"],
+                f"{item_where}: contact owner map differs")
+        require(process["activeContactAttemptCount"]
+                == sum(process["contactOutcomes"].get(status, 0)
+                       for status in ("travelling", "waiting")),
+                f"{item_where}: active contact count differs from outcomes")
+        kinds[process["kind"]] = kinds.get(process["kind"], 0) + 1
+        statuses[process["status"]] = statuses.get(process["status"], 0) + 1
+        owner = process["originatorBodyOwner"]
+        originator_owners[owner] = originator_owners.get(owner, 0) + 1
+
+    top_counts = {
+        field: nonnegative_integer(value[field], f"{where}.{field}")
+        for field in (
+            "addressedCount", "receptionCount", "responseCount",
+            "returnedResponseCount", "currentUnheardCount",
+            "currentUnansweredCount", "contactAttemptCount",
+            "contactArrivalCount", "activeContactAttemptCount",
+        )
+    }
+    for field, count in top_counts.items():
+        require(count == aggregate[field], f"{where}: {field} aggregate differs")
+    require(count_map(value["kindCounts"], f"{where}.kindCounts") == kinds,
+            f"{where}: kindCounts aggregate differs")
+    require(count_map(value["statusCounts"], f"{where}.statusCounts") == statuses,
+            f"{where}: statusCounts aggregate differs")
+    for top, child in (("responseCounts", "responses"),
+                       ("contactOutcomeCounts", "contactOutcomes"),
+                       ("contactOwnerCounts", "contactOwners")):
+        require(count_map(value[top], f"{where}.{top}") == aggregate_maps[child],
+                f"{where}: {top} aggregate differs")
+
+    counts = {
+        "processCount": len(processes),
+        **top_counts,
+        "currentReceivedCount": aggregate["currentReceivedCount"],
+        "currentRespondedCount": aggregate["currentRespondedCount"],
+        "commitmentCount": sum(aggregate_maps["commitments"].values()),
+        "workOutcomeCount": sum(aggregate_maps["workOutcomes"].values()),
+    }
+    return {
+        "available": True,
+        "counts": counts,
+        "firstUnobservedStage": first_unobserved_stage(counts),
+        "kindCounts": kinds,
+        "statusCounts": statuses,
+        "originatorOwnerCounts": originator_owners,
+        "responseCounts": aggregate_maps["responses"],
+        "commitmentCounts": aggregate_maps["commitments"],
+        "workOutcomeCounts": aggregate_maps["workOutcomes"],
+        "contactOutcomeCounts": aggregate_maps["contactOutcomes"],
+        "contactOwnerCounts": aggregate_maps["contactOwners"],
+        "processIds": sorted(process_ids),
+    }
 
 
 def read_episodes(path: Path) -> list[dict[str, Any]]:
@@ -135,7 +355,8 @@ def validate_episode(row: dict[str, Any], path: Path, line: int) -> tuple[
             f"{where}: isolated exact replay evidence is incomplete")
 
     trajectory = row["trajectory"]
-    require(isinstance(trajectory, dict) and set(trajectory) == TRAJECTORY_FIELDS,
+    require(isinstance(trajectory, dict)
+            and set(trajectory) in (LEGACY_TRAJECTORY_FIELDS, TRAJECTORY_FIELDS),
             f"{where}: trajectory fields differ")
     snapshots = trajectory["dailySnapshots"]
     require(isinstance(snapshots, dict), f"{where}: dailySnapshots must be an object")
@@ -176,6 +397,8 @@ def validate_episode(row: dict[str, Any], path: Path, line: int) -> tuple[
 
     capture = trajectory["decisionCapture"]
     require(isinstance(capture, dict)
+            and set(capture) in (CAPTURE_FIELDS,
+                                 CAPTURE_FIELDS | {"processObservation"})
             and capture.get("schema") == "sao-coordination-decision-capture"
             and capture.get("schemaVersion") == 1
             and capture.get("status") == "observed",
@@ -189,6 +412,21 @@ def validate_episode(row: dict[str, Any], path: Path, line: int) -> tuple[
             and capture.get("failures") in ([], {}),
             f"{where}: decision capture counts or failures differ")
     namespaces: set[tuple[Any, ...]] = set()
+    process_summary = ({"available": False, "reason": "legacy-source-omitted"}
+                       if "processObservation" not in trajectory else
+                       validate_process_observation(
+                           trajectory["processObservation"],
+                           f"{where}.trajectory.processObservation"))
+    if process_summary["available"]:
+        require(capture.get("processObservation")
+                == trajectory["processObservation"],
+                f"{where}: process observation copies differ")
+    else:
+        require("processObservation" not in capture,
+                f"{where}: capture-only process observation is unsupported")
+    observed_processes = set(process_summary.get("processIds", []))
+    captured_responses: set[tuple[Any, ...]] = set()
+    captured_by_process: dict[str, int] = {}
     for event_index, event in enumerate(events, 1):
         key = Join.validate_sao_row(event, path, line)
         require(key[0] == episode_id and key[1] == episode_id,
@@ -198,7 +436,26 @@ def validate_episode(row: dict[str, Any], path: Path, line: int) -> tuple[
                 f"{where}: decision {event_index} lies outside the episode horizon")
         require(key not in namespaces,
                 f"{where}: duplicate decision namespace {key!r}")
+        if process_summary["available"]:
+            enacted = event.get("enactedProcess", {})
+            process_id = enacted.get("processId")
+            require(process_id in observed_processes,
+                    f"{where}: decision {event_index} process is not observed")
+            # SAO replaces a captured appraisal for this actor/proposal pair
+            # when the person reconsiders; distinct namespace IDs cannot turn
+            # that same response into multiple independent observations.
+            response_key = (process_id, enacted.get("processRevision"), key[2])
+            require(response_key not in captured_responses,
+                    f"{where}: duplicate captured process/actor/revision")
+            captured_responses.add(response_key)
+            captured_by_process[process_id] = captured_by_process.get(process_id, 0) + 1
         namespaces.add(key)
+
+    if process_summary["available"]:
+        for process in trajectory["processObservation"]["processes"]:
+            require(captured_by_process.get(process["processId"], 0)
+                    <= process["responseCount"],
+                    f"{where}: decisions exceed responses for {process['processId']}")
 
     summary = {
         "episodeId": episode_id,
@@ -211,6 +468,7 @@ def validate_episode(row: dict[str, Any], path: Path, line: int) -> tuple[
         "decisionHours": [event["namespace"]["hour"] for event in events],
         "laterOutcomeHours": [event["enactedProcess"]["laterOutcome"]["asOfHour"]
                               for event in events],
+        "processObservation": process_summary,
         "terminal": {"alive": terminal["alive"], "dead": terminal["dead"]},
         "replaySimulationSha256": replay["simulationSha256"],
     }
@@ -281,6 +539,22 @@ def compile_bundle(episode_path: Path, projector_path: Path | None) -> tuple[
 
     decision_hours = [hour for item in summaries for hour in item["decisionHours"]]
     outcome_hours = [hour for item in summaries for hour in item["laterOutcomeHours"]]
+    observed = [item["processObservation"] for item in summaries
+                if item["processObservation"]["available"]]
+    process_totals = {field: sum(item["counts"][field] for item in observed)
+                      for _, field in PUBLIC_PROGRESSION}
+    for field in ("currentReceivedCount", "currentRespondedCount",
+                  "currentUnheardCount", "currentUnansweredCount",
+                  "activeContactAttemptCount"):
+        process_totals[field] = sum(item["counts"][field] for item in observed)
+    first_unobserved: dict[str, int] = {}
+    originator_owners: dict[str, int] = {}
+    contact_owners: dict[str, int] = {}
+    for item in observed:
+        stage = item["firstUnobservedStage"] or "none"
+        first_unobserved[stage] = first_unobserved.get(stage, 0) + 1
+        add_counts(originator_owners, item["originatorOwnerCounts"])
+        add_counts(contact_owners, item["contactOwnerCounts"])
     manifest = {
         "schema": SCHEMA,
         "schemaVersion": VERSION,
@@ -296,12 +570,23 @@ def compile_bundle(episode_path: Path, projector_path: Path | None) -> tuple[
             "separate": all(later >= decision for decision, later in
                             zip(decision_hours, outcome_hours, strict=True)),
         },
+        "processObservation": {
+            "availableEpisodeCount": len(observed),
+            "legacyEpisodeCount": len(summaries) - len(observed),
+            "totals": process_totals,
+            "firstUnobservedStageCounts": first_unobserved,
+            "originatorOwnerCounts": originator_owners,
+            "contactOwnerCounts": contact_owners,
+            "privacy": "public-causal-topology-only",
+            "use": "episode-audit-only",
+        },
         "source": {
             "episodeFileSha256": file_sha256(episode_path),
             "zaoProjectorSha256": projector_hash,
-            "coordinationEpisodeCompilerSha256": file_sha256(Path(__file__)),
-            "coordinationTaskCompilerSha256": file_sha256(Path(Tasks.__file__)),
-            "crossModuleCompilerSha256": file_sha256(Path(Join.__file__)),
+            "compilerHashEncoding": "utf-8-lf",
+            "coordinationEpisodeCompilerSha256": compiler_sha256(Path(__file__)),
+            "coordinationTaskCompilerSha256": compiler_sha256(Path(Tasks.__file__)),
+            "crossModuleCompilerSha256": compiler_sha256(Path(Join.__file__)),
         },
         "exclusions": [
             "independent-task-review-not-recorded",
@@ -324,6 +609,11 @@ def publish(output: Path, episodes: list[dict[str, Any]],
     try:
         files = {
             "episodes.jsonl": jsonl_bytes(episodes),
+            "progression.jsonl": jsonl_bytes([
+                {"episodeId": summary["episodeId"],
+                 "processObservation": summary["processObservation"]}
+                for summary in manifest["episodes"]
+            ]),
             "decisions.jsonl": jsonl_bytes(decisions),
             "zao-state.jsonl": jsonl_bytes(states),
             "tasks.jsonl": jsonl_bytes(tasks),
