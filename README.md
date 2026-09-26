@@ -1,6 +1,6 @@
 # Zomboid-Speakeasy
 
-Current continuation: Records 66-68 import SAO C81's exact production
+Current continuation: Records 66-69 import SAO C81's exact production
 coordination family, preserve the operator's exact response-kind review, train
 the first bounded [coordination reference
 model](training/coordination/README.md#record-66-bounded-reference-learning),
@@ -8,6 +8,12 @@ and export its [content-hashed native shadow
 bundle](training/coordination/README.md#record-67-native-shadow-bundle), then
 add the [causal episode intake](training/coordination/README.md#record-68-causal-episode-intake)
 needed for repeated start-to-horizon simulation evidence.
+Record 69 extends intake to C85's
+[process progression](training/coordination/README.md#record-69-process-observation-intake):
+matters, contact attempts, arrivals, reception, responses and work remain
+separately observable even when no decision occurs. Its fresh ten-day C85/A42
+replay records 27 matters and 46 arrivals, with reception as the first unobserved
+stage. These episode summaries remain audit-only.
 The 20 synthetic rows retain separate decision-time and later-outcome horizons.
 Survivors execute through `SAO.Controller`; Afflicted and Crossed living people
 both execute through `ZAO.Driver`, while their state, pressure owner and policy

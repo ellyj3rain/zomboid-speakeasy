@@ -4,14 +4,14 @@ Status: RATIFIED through Mousecat interaction `skill-3647c923478ac89b`, item `se
 The operator selected `adopt-consolidated-plan` without qualifications. Existing architecture and R contracts retain their authority.
 Decision receipt: `8c6de117789d0367f7b1a020ec1b9e60c97ddd4681be0ad50512474126c9ae3e`. The exact reviewed proposal remains in `direction/post-r57-proposal.json` and `CONTINUATION.proposed.md`.
 Direction-time anchors: SAO C77 / 9d08d15; Speakeasy Record 57 / d147224.
-Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, Record 66's approved bounded coordination dataset/reference run, Record 67's exact native shadow bundle, and Record 68's causal episode intake. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence, episode standing, run standing and native parity are in `coordination/`.
+Current implementation: C78 source capture, Record 60 contextual comparisons, Record 61 shared tokenizer reference, Record 62 returned behavioral review, Records 63-65 enacted coordination and distinct ZAO state behind shared execution, Record 66's approved bounded coordination dataset/reference run, Record 67's exact native shadow bundle, Record 68's causal episode intake and Record 69's process observation intake over published SAO C85 / ZAO A42. Exact behavior review standing is in `behavior/c78/`; tokenization evidence is in `datasets/c77-tokenization/`; coordination evidence, episode standing, run standing and native parity are in `coordination/`.
 Purpose: move from verified examples to a reproducible learned exchange while preserving the broader simulation-readiness work.
 
 ## Current position
 
 | Area | Verified standing | Practical limit |
 |---|---|---|
-| SAO | C79-C84 implement enacted coordination, shared ZAO execution ownership, the reviewed 20-row source, exact native shadow and a one-prefix exact-replay county episode boundary. ZAO A41 supplies the shared loaded/dormant owner. | Mechanical/headless evidence proves the named paths. The tracked 30-day episode formed no matter; no loaded-world session or learned behavior activation is claimed. Autonomous newspaper discovery/selection/reading remains absent. |
+| SAO | C79-C85 implement enacted coordination, shared ZAO execution ownership, the reviewed 20-row source, exact native shadow, causal episodes and person-private origins with durable contact attempts. ZAO A42 extends the distinct policies behind the shared driver. | Mechanical/headless evidence proves the named paths. The fresh ten-day population-12 episode formed 27 matters and 46 arrivals but no receptions or decisions; loaded-world behavior and autonomous reading remain unobserved or absent. |
 | Simulation readiness | ROADMAP records R1-R5 closed, selected R6/source-access work closed, selected source/treatment/communication/rest mechanisms, and C84's first exact R15 baseline episode. | Remaining R7-R9 actions and life producers, R10b historical integration, broad R11-R12 data coverage, general R13 training, R14 learned runtime and accelerator equivalence remain unfinished. |
 | Understanding and retrieval | One exact C77 authored conversation has independent approvals for its typed interpretation and retrieval target. | Retrieval has one required report, no reviewed hard negatives and seven unjudged claims. This is not evidence of general retrieval quality. |
 | Personified wording | Mara's exact authored reply is approved as one facet of personality/communicative style; Record 58 now reproduces it with bound proposition construction. Full psychometric-direction note is retained. | Finite grammar only; no trained output, admitted personified speaker task or general paraphrase proof. The earlier formal summary remains unapproved. |
@@ -52,6 +52,22 @@ whole episode survives intake even when it has no decision. The first tracked
 30-day joint episode produced zero coordination rows, so it contributes no task
 or label. Broader R9 producers, multiple seeds, independent review and matched
 accelerator comparisons remain required; absence is not repaired with fixtures.
+
+Record 69 completes the interrupted C85 process-observation intake. Its sealed
+ten-day joint episode uses the published C85/A42 source, population 12 and the
+bodyless `--no-engine` source setting. Both fresh Kahlua runs match. The intake
+retains 27 matters, 36 addressed participant entries and 46 contact arrivals,
+with no reception or decision; it creates no task. The summary stays outside
+decision-time inputs and distinguishes unobserved legacy fields from observed
+absence. The next source dependency is grounded communication after an actual
+contact encounter, including bodyless hearing evidence, followed by independently
+reviewable decisions. Arrival alone cannot supply that evidence. Broader life
+producers and loaded-world acceptance remain open.
+
+ZAO A42 also supersedes the reduced-calorie description retained in Record 65:
+Crossed now use ordinary human caloric passage behind the ZAO owner. This source
+correction changes neither Speakeasy's generic pressure boundary nor the private
+status of diagnosis, diet, motive and pathogen state.
 
 Unit 1 must produce a bounded feasibility result before claiming general semantic safety. Free composition with arbitrary factual text is not solved by attaching a source reference or by adding a blacklist. If the ratified requirement cannot be realized by the candidate construction, surface the specific evidence and consequential design choice; do not quietly replace it with universal sentence templates.
 

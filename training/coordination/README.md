@@ -204,3 +204,61 @@ The bundle remains `candidate-observation`; it has no independent task review,
 training admission, learned authority or loaded-gameplay receipt. One empty
 seed is useful evidence of the remaining producer gap, not an adequate training
 corpus or accelerator comparison.
+
+## Record 69 process observation intake
+
+Intake version 2 accepts C85's retained process observations alongside unchanged
+C84 episodes. For C85, both observation copies must agree; every aggregate must
+reconcile with the individual process rows. Current heard/unheard and
+answered/unanswered participants, retained responses, returned responses,
+contacts, active contacts and work outcomes remain distinct. Each captured
+decision names an observed process and a unique actor/proposal revision; another
+process's response count cannot stand in for its own. Private fields and
+malformed counts refuse. Lua's empty object encoding is accepted only at the
+known empty-list boundary, preserving the sealed episode content.
+
+`progression.jsonl` records each episode's totals and first unobserved stage.
+This means the start of its terminal zero suffix; a direct exchange can bypass
+separate contact travel. An all-zero observed run reports `matter`. Legacy
+episodes report `legacy-source-omitted`. Neither an unobserved stage nor a
+declined proposal is automatically an implementation defect. The summary is
+episode audit evidence and never enters a person's model input. Task generation
+still uses only actual captured decisions and separate later-outcome horizons.
+
+The tracked `r69-episodes` bundle comes from a fresh ten-day joint run against
+SAO `b3ae6a1` (C85) and ZAO `f280860` (A42). It uses population 12,
+checkpoints 0/7/10 and `--no-engine`: no native body actions or engine source
+hydration are claimed. Both fresh Kahlua processes reproduce the complete result
+with seal `f3f65118615d3d2cb5d375317576360051b0dc3d2de586498e2d98a0cee63f6b`.
+The 67 loaded modules and 14 source files match the recorded hashes; the
+[source verification](r69-source-verification.json) binds the clean published
+repository anchors. Source JSON formatting is canonicalized without changing
+the sealed episode. Compiler fingerprints normalize checkout newlines to LF;
+evidence file fingerprints retain exact bytes.
+
+| Observation | Count |
+|---|---:|
+| Matters | 27 |
+| Addressed participant entries | 36 |
+| Contact attempts / address arrivals | 46 / 46 |
+| Receptions / responses / work outcomes | 0 / 0 / 0 |
+| Decisions / candidate tasks | 0 / 0 |
+
+The first unobserved stage is `reception`. The 27 originators are SAO-owned and
+all contact attempts use `SAO.DormantPopulation`; this episode does not establish
+ZAO-originated social behavior. Its population differs from the earlier local
+C85 population-32 diagnostic, so the counts do not measure a before/after
+improvement. Natural reception, loaded behavior, broader seeds, independent
+review, training admission and learned activation remain open.
+
+Reproduce the six intake files in a new directory:
+
+```text
+python tools/coordination_episodes.py --episodes training/coordination/r69-episodes/episodes.jsonl --out <new-directory>
+python -m unittest discover -s tools -p test_coordination_episodes.py
+```
+
+The episode seal is
+`daf999359d8437b7cf78d65fbe180c1f019e7607a4a19a995bdbee289872eaef`;
+the intake manifest seal is
+`7d4ec92b3b211ab74261b7224b4c309a0c7dc3305b327ae365d2cbb91041e169`.

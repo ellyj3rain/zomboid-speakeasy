@@ -2258,3 +2258,47 @@ remains `candidate-observation`. Record 68 performs no task review, admission,
 training or learned activation and supplies no loaded-gameplay receipt. One
 empty seed establishes the episode loop and exposes producer density; it is not
 a sufficient corpus or accelerator comparison.
+
+## 69 - Process observation intake (2026-09-25)
+
+Intake version 2 consumes SAO C85's durable process observation without requiring
+a decision to exist. It verifies the two source copies and reconciles every
+aggregate against retained process rows. Addressing, arrival, reception,
+response, return delivery, commitment and work outcomes remain separately
+observable. Decision events require their own observed process and unique
+actor/proposal revision; another process's response count cannot admit them.
+
+The six-file bundle adds `progression.jsonl`. Each episode reports its first
+unobserved stage after recorded progress; an entirely empty observed run reports
+`matter`, and older C84 episodes explicitly lack this observation. Channels can
+be bypassed when later progress is observed. The report is audit-only and does
+not require acceptance or completed work. Actor-private task inputs and later
+outcomes retain the existing separate contracts and candidate standing.
+
+The recovered implementation rejected SAO's empty Lua table encoding. This
+record admits `{}` only at the known empty-list boundary while retaining the
+sealed source. It also refuses malformed counts, inconsistent active contacts,
+duplicate process identities, private fields and aggregate drift. Compiler
+fingerprints normalize checkout newlines; evidence hashes bind exact bytes.
+
+The retained local population-32 diagnostic predates final C85/A42 repairs.
+Fresh source evidence therefore comes from published SAO `b3ae6a1` and ZAO
+`f280860`, with population 12, a ten-day horizon, checkpoints 0/7/10 and
+`--no-engine`. Both fresh Kahlua runs reproduce the complete result with seal
+`f3f65118615d3d2cb5d375317576360051b0dc3d2de586498e2d98a0cee63f6b`.
+All 67 loaded modules and 14 source files match the captured hashes. The source
+receipt preserves repository anchors, raw-export and canonical-file hashes;
+only JSON formatting changes during intake.
+
+The run forms 27 matters with 36 addressed participant entries, 46 contact
+attempts and 46 arrivals. It observes no reception, response or work outcome,
+so the first unobserved stage is `reception` and there are zero decisions and
+tasks. All observed origins and contact attempts are SAO-owned. Different
+population settings preclude a before/after performance claim. Bodyless hearing,
+ZAO-originated matters, loaded-world behavior, independent task review, training
+admission and learned activation remain outstanding.
+
+All 170 Python tests pass. The six tracked intake files reproduce byte-for-byte
+from their retained episode; legacy R68 evidence remains unchanged and accepted.
+The R69 manifest seal is
+`7d4ec92b3b211ab74261b7224b4c309a0c7dc3305b327ae365d2cbb91041e169`.
