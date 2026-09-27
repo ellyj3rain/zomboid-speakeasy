@@ -1,5 +1,14 @@
 # Zomboid-Speakeasy
 
+Record 76 makes the native observer a continuous multi-view observatory.
+One stable Mousecat session rebinds only after a successor produces a complete
+frame. The current camera and up to four recent activity views retain distinct
+native pixels, frame ages and source sample times. Mousecat presents them as
+equal, adjustable, individually toggleable screens with Activity, Attention,
+Memory and Needs overlays. All 231 Python tests pass with one expected
+environment skip. The verified native session remains unreviewed and produced
+zero training rows or teaching targets.
+
 Record 75 labels the native observer count as "Remembered person locations".
 It counts retained private location entries; a zero does not imply that the
 person has no acquaintances. All 227 Python tests pass.

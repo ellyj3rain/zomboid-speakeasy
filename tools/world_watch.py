@@ -23,8 +23,11 @@ import cognition_contract as Cognition
 from world_camera import ActivityCamera
 
 
-POLL_SECONDS = 0.025
+# Local manifests are immutable/atomic and cheap to stat. Ten milliseconds keeps
+# bridge scheduling below one native capture interval without busy-spinning.
+POLL_SECONDS = 0.010
 ARCHIVE_SCAN_SECONDS = 0.5
+MAX_FEEDS = 4
 
 
 class TransientRead(Exception):
@@ -79,6 +82,98 @@ def atomic(path, data):
     temporary = path.with_name(path.name + ".tmp")
     temporary.write_bytes(data)
     os.replace(temporary, path)
+
+
+def register_feed(registry, view_id, label, project_ref, destination, session):
+    """Atomically rebind one stable Mousecat view to this producer session."""
+    A.require(re.fullmatch(r"[a-z0-9][a-z0-9-]{0,79}", view_id) is not None,
+              "invalid Mousecat view id")
+    A.require(isinstance(label, str) and 0 < len(label) <= 160, "invalid Mousecat view label")
+    A.require(project_ref is None or isinstance(project_ref, str) and 0 < len(project_ref) <= 160,
+              "invalid Mousecat project reference")
+    registry.parent.mkdir(parents=True, exist_ok=True)
+    lock = registry.with_name(registry.name + ".lock")
+    with lock.open("a+b") as lease:
+        if lease.seek(0, 2) == 0:
+            lease.write(b"0"); lease.flush()
+        lease.seek(0)
+        if os.name == "nt":
+            import msvcrt
+            msvcrt.locking(lease.fileno(), msvcrt.LK_LOCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(lease, fcntl.LOCK_EX)
+        try:
+            rows = read(registry) if registry.exists() else []
+            A.require(isinstance(rows, list) and len(rows) <= 32, "invalid Mousecat registry")
+            row = {"id": view_id, "label": label, "directory": str(destination), "sessionId": session}
+            if project_ref is not None:
+                row["projectRef"] = project_ref
+            rows = [row, *(value for value in rows if isinstance(value, dict) and value.get("id") != view_id)]
+            A.require(len(rows) <= 32, "Mousecat registry is full")
+            atomic(registry, encoded(rows))
+        finally:
+            lease.seek(0)
+            if os.name == "nt":
+                msvcrt.locking(lease.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(lease, fcntl.LOCK_UN)
+
+
+def panel_overlay(person, captured_at_unix_ms):
+    """Project only frame-aligned, source-reported facts into the observatory."""
+    sections = {section["id"]: section for section in person.get("sections", [])}
+    groups = []
+
+    def add(group_id, label, rows):
+        rows = [{"label": str(row["label"])[:160], "value": str(row["value"])[:384]}
+                for row in rows[:4]]
+        if rows:
+            groups.append({"id": group_id, "label": label, "rows": rows})
+
+    add("activity", "Activity", sections.get("actions", {}).get("rows", []))
+    add("attention", "Attention", sections.get("attention", {}).get("rows", []))
+    memory = []
+    for line in str(person.get("summary", "")).splitlines():
+        for prefix, label in (("Remembered person locations: ", "People"),
+                              ("Stored threat memories: ", "Threats"),
+                              ("Unclassified sounds: ", "Sounds")):
+            if line.startswith(prefix):
+                memory.append({"label": label, "value": line[len(prefix):]})
+                break
+    add("memory", "Memory", memory)
+    needs = sections.get("needs", {}).get("rows", [])
+    selected_needs = [row for row in needs
+                      if row.get("label") in ("Hunger", "Thirst", "Fatigue", "Health (%)")]
+    add("needs", "Needs", selected_needs)
+    return {"personId": person["id"], "capturedAtUnixMs": captured_at_unix_ms, "groups": groups}
+
+
+def remember_feed(feeds, camera, frame, people, overlay_captured_at=None, limit=MAX_FEEDS):
+    """Retain recent engine-rendered activity views without claiming simultaneity."""
+    ids = list(camera.get("personIds", []))
+    if not ids:
+        return
+    primary = ids[0]
+    labels = {person["id"]: person["label"] for person in people}
+    label = labels.get(primary, primary)
+    if len(ids) > 1:
+        label += f" + {len(ids) - 1} nearby"
+    person = next((person for person in people if person["id"] == primary), None)
+    value = {"id": primary, "label": label[:160], "capturedAtUnixMs": frame["capturedAtUnixMs"],
+             "image": dict(frame["image"]), "camera": {"mode": camera["mode"],
+             "personIds": ids[:5], "summary": str(camera.get("summary", ""))[:512]}}
+    # A newly published inspection can briefly lead the latest renderer frame.
+    # Never paint that later state over earlier pixels; the next frame can carry it.
+    if (person is not None and type(overlay_captured_at) is int
+            and overlay_captured_at <= frame["capturedAtUnixMs"]):
+        overlay = panel_overlay(person, overlay_captured_at)
+        if overlay["groups"]:
+            value["overlay"] = overlay
+    feeds.pop(primary, None)
+    feeds[primary] = value
+    while len(feeds) > limit:
+        feeds.pop(next(iter(feeds)))
 
 
 def number(value, low, high):
@@ -334,15 +429,17 @@ def control_cursor(root, state):
     return cursor
 
 
-def watch(run, package, destination):
+def watch(run, package, destination, registry=None, view_id="survival-observatory",
+          label="Survival simulation", project_ref=None):
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     relative = receipt.get("observerDirectory", "")
     A.require(relative == "" or re.fullmatch(r"attempts/\d{4}", relative), "unsafe observer attempt directory")
     with native_writer(run / relative):
-        return watch_locked(run, package, destination)
+        return watch_locked(run, package, destination, registry, view_id, label, project_ref)
 
 
-def watch_locked(run, package, destination):
+def watch_locked(run, package, destination, registry=None, view_id="survival-observatory",
+                 label="Survival simulation", project_ref=None):
     A.require(not destination.exists(), "select a fresh Mousecat feed directory")
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     A.require(receipt.get("host") == "observer" and receipt["datasetAdmission"] == "unreviewed",
@@ -360,6 +457,7 @@ def watch_locked(run, package, destination):
     atomic(destination / "session.json", encoded({"schema": "speakeasy-world-watch/1", "sessionId": session,
         "definitionSha256": receipt["definitionSha256"], "datasetAdmission": "unreviewed",
         "trainingRows": 0, "teachingTargets": 0}))
+    registered = registry is None
     relative = receipt.get("observerDirectory", "")
     A.require(relative == "" or re.fullmatch(r"attempts/\d{4}", relative), "unsafe observer attempt directory")
     observer_root = run / relative
@@ -375,6 +473,7 @@ def watch_locked(run, package, destination):
     displayed_people, available_ids = [], set()
     inspection_header = None
     images = {}
+    feed_slots = {}
     receipt_cache, state_cache, frame_cache, observation_cache = (JsonSnapshot() for _ in range(4))
     archive_path, next_archive_scan = None, 0.0
     last_publication = None
@@ -497,6 +596,16 @@ def watch_locked(run, package, destination):
                     images[name] = dict(frame["image"])
                 else:
                     A.require(images[name] == frame["image"], "native image filename reused with different metadata")
+                published_camera = displayed_camera | {
+                    "personIds": [key for key in displayed_camera["personIds"] if key in available_ids]}
+                for key, feed in list(feed_slots.items()):
+                    visible = [person for person in feed["camera"]["personIds"] if person in available_ids]
+                    if key not in visible:
+                        del feed_slots[key]
+                    else:
+                        feed["camera"]["personIds"] = visible
+                remember_feed(feed_slots, published_camera, frame, displayed_people,
+                              (inspection_header or {}).get("capturedAtUnixMs"))
                 sequence += 1
                 display = "Native engine image"
                 if state.get("displayMode") == "native-god-view":
@@ -520,7 +629,9 @@ def watch_locked(run, package, destination):
                     "image": frame["image"], "state": "ended" if ended else ("paused" if state["paused"] else "running"),
                     "title": "Simulation observatory", "summary": summary,
                     "people": displayed_people, "lastCommandSequence": acknowledged,
-                    "camera": displayed_camera | {"personIds": [key for key in displayed_camera["personIds"] if key in available_ids]}}
+                    "camera": published_camera}
+                if feed_slots:
+                    snapshot["feeds"] = list(reversed(feed_slots.values()))
                 if command_result:
                     snapshot["commandResult"] = command_result
                 if viewport is not None:
@@ -529,9 +640,18 @@ def watch_locked(run, package, destination):
                     snapshot["inspection"] = inspection_header
                     snapshot["panels"] = [{"id": "person-inspection", "label": "Native person inspector"}]
                 atomic(destination / "latest.json", encoded(snapshot))
+                # Keep the completed predecessor bound until this successor has
+                # a complete, validated frame.  The registry replacement then
+                # becomes a displayable handoff rather than an unavailable gap.
+                if not registered:
+                    register_feed(registry, view_id, label, project_ref, destination, session)
+                    registered = True
                 last_publication = publication
-                while len(images) > 8:
-                    oldest = next(iter(images))
+                protected = {feed["image"]["file"] for feed in feed_slots.values()}
+                while len(images) > 8 + len(protected):
+                    oldest = next((key for key in images if key not in protected), None)
+                    if oldest is None:
+                        break
                     del images[oldest]
                     (destination / oldest).unlink(missing_ok=True)
         except (FileNotFoundError, TransientRead, PermissionError):
@@ -548,8 +668,14 @@ def main():
     parser.add_argument("--run", required=True, type=Path)
     parser.add_argument("--package", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
+    parser.add_argument("--registry", type=Path)
+    parser.add_argument("--view-id", default="survival-observatory")
+    parser.add_argument("--label", default="Survival simulation")
+    parser.add_argument("--project-ref")
     args = parser.parse_args()
-    return watch(args.run.resolve(), args.package.resolve(), args.out.resolve())
+    return watch(args.run.resolve(), args.package.resolve(), args.out.resolve(),
+                 args.registry.resolve() if args.registry else None,
+                 args.view_id, args.label, args.project_ref)
 
 
 if __name__ == "__main__":
