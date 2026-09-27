@@ -2478,3 +2478,65 @@ Those observations establish those controls, not general survivor competence.
 These changes create zero training rows or teaching targets. Observations
 remain unreviewed; scenario admission retains its existing operator evaluation
 and ratification contract.
+
+
+## Record 73 - Competing cognition in native simulation
+
+Verified: 2026-09-27 02:47 UTC / 19:47 PST.
+
+SAO C88 supplies independent ordinary and associative cognitive contestants.
+Speakeasy carries their separate interpretations, pre-outcome predictions,
+beliefs, associations and actual revisions into Mousecat's native person
+inspector. Ordinary cognition is a contestant and has no adjudication authority
+over the associative model. Existing native execution owners determine actual
+object use and world effects.
+
+The bridge validates actor identity, model versions, candidate actions, native
+county time and bounded projections. Controls atomically request associative
+selection share, opportunities per world hour and association depth. A command
+acknowledgement and a later source-applied setting are distinct. Exact compact
+JSON byte limits match the Lua producer, including the 65,536-byte boundary.
+
+`tools/cognition_episodes.py` invokes the actual SAO run validator, streams
+source-bound model snapshots and joins immutable episode identities under
+explicit disk and memory limits. Both frozen predictions are compared with the
+same performed action. Unexecuted alternatives have no outcome target. Censored
+episodes, first-observed status, source omissions and deterministic allocation
+weights remain explicit; weights are not random policy propensities.
+
+Native run `6b4e4090-596e-4faa-a0a4-a57d9ad3cea2` saved normally after
+603.381 wall seconds, advancing from hour 2.0 to 22.414. Both people remained
+alive and represented; the run reported zero runtime errors and no saved player
+row. Fresh intake verified 82 native frames and retained 162 cognitive
+snapshots, 1,363 unique deliberations, 230 disagreements and 15 observed targets.
+The 1,348 remaining episodes are censored. There were 681 ordinary selections
+and 682 associative selections; all 15 observed episodes selected associative.
+This is execution evidence, not comparative policy superiority. Fourteen
+observed episodes first appear after completion in the sampled archive.
+
+Nineteen actor-private experiences include ten actual inspections, five native
+consumptions, three performed acquisitions and one captured transfer witness.
+Both contestants revised. Each associative model retained eight associations,
+including refined and falsified relations and depth-two analogies with missing
+mechanisms. The installed Mousecat Desktop displayed them beside native pixels
+and confirmed a control change from 12 to 48 opportunities per world hour.
+These observations establish the competition and evidence path; they do not
+establish new technological realization or a trained aggregate.
+
+The complete Python suite passes 214 tests in 41.835 seconds.
+`_scratch/r73-verification.json` records current source hashes and the completed
+log; its inventory was captured after testing. The ignored output
+`runs/r73-c88-native01-cognition` retains all validated episodes and streamed
+snapshots. SAO's portable C88 audit retains the native receipt, selected
+outcomes, intake manifest and installed Desktop capture.
+
+| Evidence | SHA-256 |
+|---|---|
+| Full 214-test log | `1fd81de44425bc09cf70c6d88f736914d6cb4b469c2a8940223b51fa41602766` |
+| Native run receipt | `b808a4287815c4f6af18e4ccee80b62695320534be89192fabebe0ae3391fa32` |
+| Intake manifest | `3e04c4320385409a4e0876a204b301af5b27be90a7805a77946fa2826073e4d7` |
+| Verification receipt | `fe9ba5e566d89120f1e4a23d8ab696744c36a9009e4b1b599a8ca9a586f706dc` |
+
+The output records `trainingRows: 0`, `teachingTargets: 0` and
+`datasetAdmission: unreviewed`. Testing does not admit a scenario or create a
+preferred-behavior label. Existing operator evaluation governs dataset admission.

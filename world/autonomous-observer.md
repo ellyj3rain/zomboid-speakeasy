@@ -136,3 +136,36 @@ The bridge and viewer emit zero training rows, teaching targets or approval
 receipts. Every scenario requires operator evaluation and explicit ratification
 before admission under the existing teaching contract. Watching, stopping,
 saving or passing a mechanical check does not perform that ratification.
+
+
+## Competing cognition
+
+The selected person's inspection includes ordinary and associative model
+beliefs, hypotheses, proposals and recorded outcomes. Each model predicts the
+same candidate actions before deterministic balanced selection. The display
+compares both predictions against the performed action; an unexecuted alternative
+remains unobserved. Ordinary cognition has no veto over its competitor. Native
+Standing, route and timed-action owners retain physical authority.
+
+The competition controls set the opposing model's allocation share, bounded
+deliberation opportunities per county hour and association depth. A complete
+three-value command applies atomically, including while time is paused. Mousecat
+distinguishes the draft request, native acknowledgement and newer source-observed
+settings. Accelerating deliberation supplies opportunities, not knowledge or
+success. Associations retain provenance and missing mechanisms; they grant no
+recipes, skills or native effects.
+
+Completed native runs can be preserved as aggregate-training candidates:
+
+```powershell
+python tools/cognition_episodes.py --run <native-run> --package <native-package> --sao-validator <absolute-path-to-SAO/tools/world_lab_run.py> --out <new-output-directory>
+```
+
+SAO's validator first verifies the native package and completed run. Intake
+retains source frame hashes, private evidence snapshots, immutable predictions,
+selected-action results, disagreements and model revisions. County time remains
+distinct from engine world age. Allocation weights describe deterministic
+selection and are not random policy propensities. Censored and missing results
+never become negative labels. The result includes `episodes.jsonl`,
+`snapshots.jsonl` and a hashed manifest with zero training rows and teaching
+targets. Existing scenario evaluation governs later dataset admission.

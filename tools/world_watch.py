@@ -19,6 +19,7 @@ import time
 import uuid
 
 import decision_authoring as A
+import cognition_contract as Cognition
 from world_camera import ActivityCamera
 
 
@@ -117,7 +118,8 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
     action = command["action"]
     optional = {"pause": set(), "resume": set(), "speed": {"value"}, "pan": {"dx", "dy"},
                 "focus": {"personId"}, "stop": set(), "auto": set(), "select": {"personId"},
-                "panel": {"panelId", "personId", "visible"}, "zoom": {"value"}}
+                "panel": {"panelId", "personId", "visible"}, "zoom": {"value"},
+                "cognition": {"opponentShare", "opportunitiesPerHour", "maxDepth"}}
     A.require(isinstance(action, str) and action in optional
               and set(command) == fields | optional[action], "unsupported observer command")
     result = {"sequence": sequence if native_sequence is None else native_sequence}
@@ -130,6 +132,12 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
         A.require(type(command["value"]) is int and command["value"] in (-1, 1), "invalid native zoom step")
         A.require(viewport_view(state) is not None, "native zoom unavailable")
         result["zoomStep"] = command["value"]
+    elif action == "cognition":
+        number(command["opponentShare"], 0, 1)
+        A.require(type(command["opportunitiesPerHour"]) is int and 1 <= command["opportunitiesPerHour"] <= 60
+                  and type(command["maxDepth"]) is int and 1 <= command["maxDepth"] <= 4,
+                  "invalid cognitive opportunity budget")
+        result.update({key: command[key] for key in ("opponentShare", "opportunitiesPerHour", "maxDepth")})
     elif action == "pan":
         dx, dy = command["dx"], command["dy"]
         A.require(type(dx) is int and type(dy) is int and abs(dx) <= 8 and abs(dy) <= 8
@@ -216,7 +224,8 @@ def inspection_view(value, people):
     details, budget = {}, 256 * 1024
     for person in sorted(raw, key=lambda key: (key != selected, key)):
         detail = raw[person]
-        A.require(isinstance(detail, dict) and set(detail) == {"sections", "events"}, "inspection detail fields")
+        A.require(isinstance(detail, dict) and {"sections", "events"} <= detail.keys()
+                  and set(detail) <= {"sections", "events", "cognition"}, "inspection detail fields")
         sections, events, seen = [], [], set()
         for section in array(detail["sections"], 10):
             A.require(isinstance(section, dict) and set(section) == {"id", "label", "source", "perspective", "status", "message", "rows"}, "inspection section fields")
@@ -244,6 +253,9 @@ def inspection_view(value, people):
                 if key in event: text_field(event, key, 128, False)
             events.append(dict(event))
         normalized = {"sections": sections, "events": events}
+        if "cognition" in detail:
+            Cognition.require("worldHours" in header, "cognition lacks source observation clock")
+            normalized["cognition"] = Cognition.projection(detail["cognition"], person, max_hours=header["worldHours"])
         cost = len(encoded(normalized))
         if cost <= budget:
             details[person] = normalized; budget -= cost
