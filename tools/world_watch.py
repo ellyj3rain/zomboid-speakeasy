@@ -285,7 +285,7 @@ def people_view(people, inspection=None, selected_id=None):
             details.append(f"Location {p['x']:.1f}, {p['y']:.1f}; floor {p['z']}")
         if context.get("perceptionAvailable"):
             counts = context.get("beliefCounts", {})
-            details += [f"Known people: {counts.get('people', len(beliefs.get('people', {})))}",
+            details += [f"Remembered person locations: {counts.get('people', len(beliefs.get('people', {})))}",
                         f"Stored threat memories: {counts.get('zombies', len(beliefs.get('zombies', {})))}",
                         f"Unclassified sounds: {counts.get('sounds', len(beliefs.get('sounds', {})))}"]
         else:

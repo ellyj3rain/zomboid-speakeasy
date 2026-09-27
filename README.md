@@ -1,5 +1,9 @@
 # Zomboid-Speakeasy
 
+Record 75 labels the native observer count as "Remembered person locations".
+It counts retained private location entries; a zero does not imply that the
+person has no acquaintances. All 227 Python tests pass.
+
 Record 74 extends [competing cognition](world/autonomous-observer.md#competing-cognition)
 intake with private medication use, separately felt physical changes and native
 thermal preparation. It preserves acquisition time, concrete item/source
