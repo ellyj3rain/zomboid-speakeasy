@@ -1,5 +1,12 @@
 # Zomboid-Speakeasy
 
+Record 73 adds independent competing-model observation and controls to
+[native simulation observation](world/autonomous-observer.md). Both models
+retain their predictions before the selected action. The native engine owns
+action admission and effects; reviewed trajectories can later inform a downstream
+aggregate. The exporter preserves disagreement and missing outcomes and creates
+zero training rows.
+
 Record 72 extends [native simulation observation](world/autonomous-observer.md)
 with bounded person inspection, recorded behavior reasons, native game panels
 and engine camera zoom in the installed Mousecat Desktop. All 204 Python tests
