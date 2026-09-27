@@ -2599,3 +2599,29 @@ All recorded Python inputs remained unchanged during the suite.
 No training run, approved scenario, preferred model or treatment-effect label
 is created by this record. Existing dataset evaluation and ratification remain
 in force.
+
+
+## Record 75 - Remembered person locations
+
+Verified: 2026-09-27 06:40 UTC / 23:40 PST.
+
+The live native observer labels its retained private person-location count
+"Remembered person locations". The former "Known people" label implied a
+durable acquaintance count. The bridge still reports the same source value;
+perception, location-memory expiry and simulation behavior are unchanged.
+
+The existing summary test checks the corrected label and count. Restoring the
+old label in a private source copy fails that exact assertion. All 23 focused
+observer tests and the complete 227-test Python suite pass, with no skips. The
+full suite includes the configured installed-Kahlua projection test. All Python
+inputs remained unchanged during the suite.
+
+The local evidence is retained under ignored
+`runs/r75-20260927-0638Z-2338PST`. This wording correction makes no new gameplay
+or cooperation claim and creates no training rows.
+
+| Evidence | SHA-256 |
+|---|---|
+| Full 227-test log | `1cc3f9634185a6b39cbe91243cc89dec00aa04d623d0087e00c8cbed769134c6` |
+| Suite receipt | `199a2ef1995294b2b8d1739b52143c770cf31fd8fd7a5d697665ae2c4dc94cdf` |
+| Restored-label control log | `0fae09efbc5608ee50c6a1552b84d4f9d5a860d6486b9f3743eb50e92df99859` |

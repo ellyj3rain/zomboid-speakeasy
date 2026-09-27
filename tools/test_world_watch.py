@@ -166,7 +166,8 @@ class ObserverCommands(unittest.TestCase):
                      omittedPeople=0, omittedEvents=0, people={"person-1": {"sections": {}, "events": {}}})
         _, detail = W.inspection_view(value, self.people)
         self.assertEqual(detail["person-1"], {"sections": [], "events": []})
-        view = W.people_view([self.people[0] | {"context": {"perceptionAvailable": True, "beliefCounts": {"zombies": 3}}}], detail)
+        view = W.people_view([self.people[0] | {"context": {"perceptionAvailable": True, "beliefCounts": {"people": 2, "zombies": 3}}}], detail)
+        self.assertIn("Remembered person locations: 2", view[0]["summary"])
         self.assertIn("Stored threat memories: 3", view[0]["summary"])
         self.assertEqual(view[0]["events"], [])
 
