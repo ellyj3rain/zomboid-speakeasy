@@ -169,3 +169,27 @@ selection and are not random policy propensities. Censored and missing results
 never become negative labels. The result includes `episodes.jsonl`,
 `snapshots.jsonl` and a hashed manifest with zero training rows and teaching
 targets. Existing scenario evaluation governs later dataset admission.
+
+Record 74 extends the same `simulation.cognition/1` envelope for native model
+variants `/2`. Archived `/1` proposals retain their original versions and
+predictions. Full snapshots can include three further private experiences:
+
+| Experience | Preserved evidence |
+|---|---|
+| `medication-use` | The person's completed use of a concrete native item, including its signed item ID and type. |
+| `physical-change` | Named, finite before/after Stats measurements personally felt by that person. |
+| `preparation` | The concrete food item and appliance/source, observed heat and increasing native cooking time. |
+
+The private acquisition clock is `worldHours`; `occurredAtHours` preserves the
+earlier occurrence time. Both use county hours, which can include prior years.
+Neither can exceed the source observation clock. Source-owned capability
+context remains attached to the acquired experience. Medication family,
+pharmacological profiles, hidden exposure attribution and efficacy labels are
+rejected. Item use and later physical change remain distinct facts. Prepared
+food establishes no consumption or hunger relief.
+
+These experiences cannot settle a `food`, `water`, `inspect` or `continue`
+episode, create an unexecuted outcome, or grant recipes or skills. Their producer
+owns authentic native action completion; Speakeasy validates and preserves the
+bounded projection. This extension adds no native model or gameplay code to
+Speakeasy and creates no training admission.

@@ -2540,3 +2540,62 @@ outcomes, intake manifest and installed Desktop capture.
 The output records `trainingRows: 0`, `teachingTargets: 0` and
 `datasetAdmission: unreviewed`. Testing does not admit a scenario or create a
 preferred-behavior label. Existing operator evaluation governs dataset admission.
+
+
+## Record 74 - Private native capability experiences
+
+Verified: 2026-09-27 05:42 UTC / 22:42 PST.
+
+Speakeasy now accepts the bounded private experience projections produced by
+SAO's `/2` ordinary and associative model variants. The existing
+`simulation.cognition/1` envelope remains; archived `/1` proposals retain their
+original version and pre-outcome predictions. The model implementations and
+native action owners remain in SAO.
+
+Medication use identifies the concrete native item used by the person. Felt
+physical changes preserve named Stats before/after measurements separately,
+without importing a medication family, profile, exposure attribution or an
+efficacy label. Thermal preparation binds an exact food item and source to
+observed heat and increasing native cooking time. It confers no consumption,
+hunger relief, recipe or skill knowledge. These experiences cannot settle any
+existing executable cognitive episode or provide an unexecuted outcome.
+
+The acquisition clock remains the person's county `worldHours`; the original
+occurrence is retained as `occurredAtHours`. Validation rejects future evidence,
+including when county time contains prior years and differs from engine world
+age. Source-projected personal capability context is retained as typed Boolean
+fields. The contract preserves that context; source ownership and authentic
+action completion remain producer responsibilities.
+
+The full suite passes all 227 Python tests in 66.050 seconds, with no skips.
+Its native integration case runs the actual current SAO CognitiveModels,
+Cognition and Labor Lua in installed Kahlua, with controlled Census skills and
+completion receipts. It verifies that the three callbacks emit accepted private
+projections, strip raw attribution, obtain capability context from the existing
+Labor reader, and leave executable episode outcomes absent. This is producer
+projection evidence; it does not execute medication or cooking actions in a
+loaded game. The source is loaded externally, so no GPL model implementation is
+copied into this MIT repository.
+
+Seven restored-defect controls fail their named checks: omitted capability
+validation, omitted per-kind validation, future occurrence admission, raw family
+leakage, false episode settlement, numeric heat flags and unsigned-only item
+IDs. Export remains `datasetAdmission: unreviewed`, with zero training rows,
+teaching targets and observed targets in the new contract fixture.
+
+The full log and before/after source inventory live under ignored local
+`runs/r74-final-verification`; control logs are in `runs/r74-final-controls`.
+All recorded Python inputs remained unchanged during the suite.
+
+| Evidence | SHA-256 |
+|---|---|
+| Full 227-test log | `a48cc8e2d503243e00932af1ac07a920800320178d1a76d0b6e1952076ba1bfe` |
+| Suite receipt | `a91844d9246c6c48f8cc6c292407173a80d84e29f6ce75b8012b7153a403b50b` |
+| Installed-Kahlua projection receipt | `7e7bfb9f647f6a8707c4a103a5bc84e1fa07abd079b94245c8458adf7904e595` |
+| Seven-control receipt | `190f31d93df5c006190b49da63130a3687afb4f5665ebe9fd422e22a1aa03dfb` |
+| Contract source | `c6fe81cc1343d21f8b3be1285dec285cf15e8297f82c873e38ee50af10a87af5` |
+| New validation tests | `93cc76197b7c14109c3ccc38ff20666ae2e1e62dc22dd8ad7620e2f05bd28f08` |
+
+No training run, approved scenario, preferred model or treatment-effect label
+is created by this record. Existing dataset evaluation and ratification remain
+in force.

@@ -12,6 +12,10 @@ import math
 ACTIONS = {"food", "water", "inspect", "continue"}
 MODELS = {"ordinary", "associative"}
 HYPOTHESIS_STATES = {"hypothesis", "supported", "refined", "falsified"}
+PRIVATE_EXPERIENCES = {"medication-use": "medicine", "physical-change": "body", "preparation": "food"}
+PRIVATE_FIELDS = {"itemId", "occurredAtHours", "stats", "beforeCookingTime", "afterCookingTime", "heatObserved"}
+FELT_STATS = {"HUNGER", "THIRST", "FATIGUE", "ENDURANCE", "PANIC", "STRESS", "NICOTINE_WITHDRAWAL",
+              "BOREDOM", "UNHAPPINESS", "DISCOMFORT", "INTOXICATION", "ANGER", "PAIN"}
 
 
 def require(condition, message):
@@ -139,6 +143,36 @@ def episode(value, actor):
     require(value["status"] != "observed" or outcome is not None, "observed episode lacks its native outcome")
 
 
+def private_experience(value):
+    """Validate acquired personal facts, without assigning treatment efficacy."""
+    common = {"id", "actorId", "observerId", "worldHours", "kind", "category", "perspective", "status",
+              "occurredAtHours"}
+    kind = value["kind"]
+    require(value["category"] == PRIVATE_EXPERIENCES[kind] and value["perspective"] == "performed"
+            and value["actorId"] == value["observerId"], "capability experience must be privately performed")
+    number(value.get("occurredAtHours"), 0, value["worldHours"])
+    if kind == "physical-change":
+        fields(value, common | {"stats"}, {"detail", "capabilities"})
+        stats = value["stats"]
+        require(isinstance(stats, dict) and 0 < len(stats) <= len(FELT_STATS)
+                and set(stats) <= FELT_STATS, "unknown or absent felt measurements")
+        for measured in stats.values():
+            fields(measured, {"before", "after"})
+            number(measured["before"], -1e6, 1e6); number(measured["after"], -1e6, 1e6)
+            require(measured["before"] != measured["after"], "unchanged measurement is not a physical change")
+        return
+    required = common | {"itemId", "itemType"}
+    if kind == "preparation":
+        required |= {"sourceId", "beforeCookingTime", "afterCookingTime", "heatObserved"}
+    fields(value, required, {"detail", "capabilities"})
+    number(value["itemId"], -(2**31), 2**31 - 1, True)
+    if kind == "preparation":
+        number(value["beforeCookingTime"], 0, 1e9)
+        number(value["afterCookingTime"], 0, 1e9)
+        require(value["afterCookingTime"] > value["beforeCookingTime"] and value["heatObserved"] is True,
+                "preparation lacks measured native heating")
+
+
 def projection(value, actor, full=False, max_hours=None):
     """Return a detached, validated projection with normalized empty arrays."""
     if max_hours is not None: number(max_hours, 0, 1e9)
@@ -151,22 +185,32 @@ def projection(value, actor, full=False, max_hours=None):
         number(value[key], integer=True)
     if "rejectedExperiences" in value:
         number(value["rejectedExperiences"], integer=True)
+    private_event_ids = set()
     if "experiences" in value:
         value["experiences"] = array(value["experiences"], 256)
         seen_experiences = set()
         for experience in value["experiences"]:
             fields(experience, {"id", "actorId", "observerId", "worldHours", "kind", "category", "perspective", "status"},
                    {"sourceId", "itemType", "episodeId", "detail", "foodPresent", "waterPresent",
-                    "hungerDelta", "thirstDelta", "capabilities"})
+                    "hungerDelta", "thirstDelta", "capabilities"} | PRIVATE_FIELDS)
             text(experience["id"]); text(experience["actorId"])
+            for key in ("kind", "category", "perspective", "status"):
+                text(experience[key], 32)
             require(experience["observerId"] == actor, "experience belongs to another observer")
             require(experience["id"] not in seen_experiences, "duplicate experience")
             seen_experiences.add(experience["id"]); number(experience["worldHours"], 0, 1e9)
             if max_hours is not None: require(experience["worldHours"] <= max_hours, "future experience")
-            require(experience["kind"] in {"inspection", "acquire", "store", "consume"}
-                    and experience["category"] in {"food", "water", "container"}
+            kind = experience["kind"]
+            require(((kind in {"inspection", "acquire", "store", "consume"}
+                      and experience["category"] in {"food", "water", "container"})
+                     or kind in PRIVATE_EXPERIENCES and experience["category"] == PRIVATE_EXPERIENCES[kind])
                     and experience["status"] in {"completed", "no-effect", "interrupted", "unavailable"},
                     "experience kind/category/status differs")
+            if kind in PRIVATE_EXPERIENCES:
+                private_experience(experience)
+                private_event_ids.add(experience["id"])
+            else:
+                require(not PRIVATE_FIELDS & experience.keys(), "private fields on legacy experience")
             for key in ("foodPresent", "waterPresent"):
                 if key in experience:
                     require(type(experience[key]) is bool and experience["kind"] == "inspection", "uninspected contents")
@@ -191,6 +235,8 @@ def projection(value, actor, full=False, max_hours=None):
     seen = set()
     for item in value["episodes"]:
         episode(item, actor)
+        require((item.get("outcome") or {}).get("eventId") not in private_event_ids,
+                "private capability experience cannot settle an executable goal")
         if max_hours is not None:
             require(item["worldHours"] <= max_hours and item["frame"]["worldHours"] <= max_hours,
                     "future cognitive decision")
