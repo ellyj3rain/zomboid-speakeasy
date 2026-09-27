@@ -1,5 +1,13 @@
 # Zomboid-Speakeasy
 
+Record 74 extends [competing cognition](world/autonomous-observer.md#competing-cognition)
+intake with private medication use, separately felt physical changes and native
+thermal preparation. It preserves acquisition time, concrete item/source
+identity and source-owned capability context while rejecting hidden attribution
+and unsupported goal credit. All 227 Python tests pass, including the configured
+installed-Kahlua producer projection. These observations remain unreviewed and
+create no training rows.
+
 Record 73 adds independent competing-model observation and controls to
 [native simulation observation](world/autonomous-observer.md). Both models
 retain their predictions before the selected action. The native engine owns
