@@ -330,6 +330,7 @@ class ObserverCommands(unittest.TestCase):
             native = run / "native-view"
             original_read, original_atomic = W.read, W.atomic
             clock_us, next_capture_us = 0, 50_000
+            command_written = state_changed = False
             observed = set()
 
             def publish_frame(index, captured_ms):
@@ -343,25 +344,29 @@ class ObserverCommands(unittest.TestCase):
             publish_frame(1, 0)
 
             def tick(seconds):
-                nonlocal clock_us, next_capture_us
+                nonlocal clock_us, next_capture_us, command_written, state_changed
                 snapshot = original_read(out / "latest.json")
                 observed.add(snapshot["image"]["file"])
-                self.assertLessEqual(clock_us / 1000 - snapshot["capturedAtUnixMs"], 25)
+                # Faster bridge polls may legitimately re-read the current
+                # 20 Hz frame; it must never lag a full producer interval.
+                self.assertLessEqual(clock_us / 1000 - snapshot["capturedAtUnixMs"], 50)
                 clock_us += round(seconds * 1_000_000)
                 # A native publisher advances independently at 20 Hz. A slow
                 # bridge only sees its latest frame, making missed frames real.
                 while next_capture_us <= clock_us and next_capture_us < 1_000_000:
                     publish_frame(next_capture_us // 50_000 + 1, next_capture_us // 1000)
                     next_capture_us += 50_000
-                if clock_us == 25_000:
+                if not command_written and clock_us >= 25_000:
                     original_atomic(out / "commands/0000000000000001.json", W.encoded(self.command("pause")))
-                if clock_us == 75_000:
+                    command_written = True
+                if not state_changed and clock_us >= 75_000:
                     self.assertIn("sequence=1", (run / "observer-control.properties").read_text())
                     state["sequence"] = 1
                     original_atomic(run / "observer-state.json", W.encoded(state))
                     observation["people"] = [self.people[0] | {"record": {"forename": "Ada"}}]
                     observation["hours"] = 2.1
                     original_atomic(live, W.encoded(observation))
+                    state_changed = True
                 if clock_us >= 1_000_000:
                     receipt["status"] = "completed"
                     original_atomic(run / "run.json", W.encoded(receipt))
@@ -412,6 +417,93 @@ class ObserverCommands(unittest.TestCase):
                         self.fail("second writer admitted")
             with W.native_writer(root):
                 pass
+
+    def test_registry_rebinds_one_stable_view_without_removing_other_views(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            registry, first, second = root / "registry.json", root / "first", root / "second"
+            W.atomic(registry, W.encoded([{"id": "other", "label": "Other", "directory": str(root / "other"),
+                                           "sessionId": self.session}]))
+            W.register_feed(registry, "survival-observatory", "Survival simulation",
+                            "project:survivor-awareness", first, self.session)
+            rows = W.read(registry)
+            self.assertEqual([row["id"] for row in rows], ["survival-observatory", "other"])
+            self.assertEqual(rows[0]["directory"], str(first))
+            successor = "95d05f2c-9d8b-4f3e-a867-d4744073d7be"
+            W.register_feed(registry, "survival-observatory", "Survival simulation",
+                            "project:survivor-awareness", second, successor)
+            rows = W.read(registry)
+            self.assertEqual(len(rows), 2)
+            self.assertEqual((rows[0]["sessionId"], rows[0]["directory"]), (successor, str(second)))
+
+    def test_successor_rebind_waits_for_its_first_complete_snapshot(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            run, package, out, receipt, _, _, _ = self.watch_fixture(root)
+            registry = root / "registry.json"
+            predecessor = "95d05f2c-9d8b-4f3e-a867-d4744073d7be"
+            W.atomic(registry, W.encoded([{"id": "survival-observatory", "label": "Survival simulation",
+                "directory": str(root / "predecessor"), "sessionId": predecessor}]))
+            filename = "study-live-0000000000000001.png"
+            data = b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + struct.pack(">II", 960, 540)
+            (run / "native-view" / filename).write_bytes(data)
+            W.atomic(run / "native-view/native.json", W.encoded(dict(sequence=1, observerSequence=0,
+                capturedAtUnixMs=1, image=dict(file=filename, sha256=hashlib.sha256(data).hexdigest(),
+                                                width=960, height=540))))
+            receipt["status"] = "completed"
+            W.atomic(run / "run.json", W.encoded(receipt))
+            original = W.register_feed
+
+            def checked(*args):
+                self.assertEqual(W.read(registry)[0]["sessionId"], predecessor)
+                first = W.read(out / "latest.json")
+                self.assertEqual((first["sessionId"], first["image"]["file"]), (self.session, filename))
+                return original(*args)
+
+            with patch.object(W, "register_feed", side_effect=checked) as register:
+                self.assertEqual(W.watch(run, package, out, registry), 0)
+            register.assert_called_once()
+            self.assertEqual(W.read(registry)[0]["sessionId"], self.session)
+
+    def test_recent_activity_feeds_are_distinct_bounded_native_frames(self):
+        feeds = {}
+        for index in range(6):
+            person = {"id": f"person-{index}", "label": f"Person {index}",
+                      "summary": "Remembered person locations: 2\nStored threat memories: 3\nUnclassified sounds: 4",
+                      "sections": [
+                          {"id": "actions", "rows": [{"label": "Controller state", "value": "ROAM"}]},
+                          {"id": "attention", "rows": [{"label": "Phase", "value": "orienting"}]},
+                          {"id": "needs", "rows": [{"label": "Hunger", "value": "0.120"},
+                                                       {"label": "Endurance", "value": "0.900"},
+                                                       {"label": "Health (%)", "value": "100.00"}]},
+                      ]}
+            frame = {"capturedAtUnixMs": 1000 + index, "image": {
+                "file": f"study-live-{index + 1:016d}.png", "sha256": f"{index:064x}", "width": 960, "height": 540}}
+            camera = {"mode": "automatic", "personIds": [person["id"]], "summary": f"Watching Person {index}"}
+            W.remember_feed(feeds, camera, frame, [person], 900 + index)
+        self.assertEqual(list(feeds), ["person-2", "person-3", "person-4", "person-5"])
+        self.assertEqual([value["capturedAtUnixMs"] for value in feeds.values()], [1002, 1003, 1004, 1005])
+        self.assertEqual([group["id"] for group in feeds["person-5"]["overlay"]["groups"]],
+                         ["activity", "attention", "memory", "needs"])
+        self.assertEqual(feeds["person-5"]["overlay"]["capturedAtUnixMs"], 905)
+        self.assertEqual(feeds["person-5"]["overlay"]["groups"][2]["rows"], [
+            {"label": "People", "value": "2"}, {"label": "Threats", "value": "3"},
+            {"label": "Sounds", "value": "4"}])
+        self.assertEqual(feeds["person-5"]["overlay"]["groups"][3]["rows"], [
+            {"label": "Hunger", "value": "0.120"}, {"label": "Health (%)", "value": "100.00"}])
+        before = copy.deepcopy(feeds)
+        W.remember_feed(feeds, {"mode": "manual", "personIds": [], "summary": "Manual"}, frame, [person], 905)
+        self.assertEqual(feeds, before)
+
+    def test_activity_feed_never_overlays_state_sampled_after_its_pixels(self):
+        feeds = {}
+        person = {"id": "person-1", "label": "Person 1", "summary": "",
+                  "sections": [{"id": "attention", "rows": [{"label": "Phase", "value": "turn"}]}]}
+        frame = {"capturedAtUnixMs": 1000, "image": {
+            "file": "study-live-0000000000000001.png", "sha256": "0" * 64, "width": 960, "height": 540}}
+        camera = {"mode": "automatic", "personIds": [person["id"]], "summary": "Watching Person 1"}
+        W.remember_feed(feeds, camera, frame, [person], 1001)
+        self.assertNotIn("overlay", feeds[person["id"]])
 
     def test_dense_quiet_group_gives_each_person_a_turn(self):
         camera = W.ActivityCamera()

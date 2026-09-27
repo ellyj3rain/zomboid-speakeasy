@@ -2625,3 +2625,62 @@ or cooperation claim and creates no training rows.
 | Full 227-test log | `1cc3f9634185a6b39cbe91243cc89dec00aa04d623d0087e00c8cbed769134c6` |
 | Suite receipt | `199a2ef1995294b2b8d1739b52143c770cf31fd8fd7a5d697665ae2c4dc94cdf` |
 | Restored-label control log | `0fae09efbc5608ee50c6a1552b84d4f9d5a860d6486b9f3743eb50e92df99859` |
+
+
+## Record 76 - Native observatory continuity
+
+Verified: 2026-09-27 10:08 UTC / 03:08 PDT.
+
+The native observer now retains up to four recent automatic activity-camera
+frames alongside the current frame. Each retained view preserves its native PNG
+identity, capture time, pictured people and a bounded projection of the primary
+person's source-reported Activity, Attention, Memory and Needs. A projection is
+omitted whenever its source sample occurred after the pixels; a later eligible
+frame may carry it. The views are time-multiplexed outputs from one native
+renderer and do not claim simultaneous cameras or complete private experience.
+
+One stable Mousecat view ID now moves to a successor session only after that
+session publishes its first complete validated snapshot. The registry update is
+atomic, preserves unrelated views and prevents a completed predecessor from
+remaining selected after its successor becomes inspectable. Bridge polling is
+10 milliseconds; this reduces delivery latency without changing the native
+capture cadence or inventing intermediate engine frames.
+
+Mousecat displays the resulting current and retained frames as equal-size
+screens. Their shared size, individual visibility and Activity, Attention,
+Memory and Needs overlays are adjustable in the client. Every frame reports its
+own age, and each visible overlay reports the lag between its source sample and
+the pictured frame. These presentation changes do not issue a simulation
+command. Existing camera, time, person inspection, game-panel and competing-
+cognition controls keep their prior source-owned command path.
+
+Native session `29f03411-6001-4467-8efd-6530b6c30372` resumed the same saved
+six-person world and advanced from hour 2.772038 to 2.890353. All six people
+remained alive. The run ended normally at its 180-second wall limit, returned a
+native save, reported zero runtime errors and persisted no observer player. Its
+active snapshot exposed all six people and three retained activity views. The
+installed Mousecat Desktop displayed the live equal-panel observatory with
+Attention visible by default. Browser checks enlarged every screen from 320 to
+640 pixels, hid and restored one screen, toggled Memory, restored an overlay-free
+view, and kept a 760-pixel viewport free of horizontal overflow. They observed
+no page errors or failed HTTP responses.
+
+All 231 Python tests pass in 62.720 seconds with one expected environment skip.
+The suite includes registry succession, bounded retained images, exact overlay
+projection and the regression that forbids later state over earlier pixels. The
+ignored local evidence lives under `_scratch/r76-observatory`; the native run
+and feed remain under SAO's ignored `_scratch/c89-orienting` evidence.
+
+| Evidence | SHA-256 |
+|---|---|
+| Full 231-test log | `5fc7912bc3c49b32fe95f4cd3b1abcaf26ffa7af50bf8d43f2f8da67ecd9517c` |
+| Live browser receipt | `b957a0259ad4d752aeecfcde428d770637112f31a6da21b4d17c4287e11729e9` |
+| Installed Desktop active capture | `b108c6b443806b0e3a625b4f054e93c645e5f251c235d3ebf75d71bc7f651fbf` |
+| Active Mousecat snapshot | `9e9f475f9998d3158b1a393c9934ed7293d2f39667d896490f2cad3f71afd589` |
+| Native run receipt | `e8a72529141ad8c8b70c5d93990585c5d2f5552e634814c1f94f7a3e6c3d519f` |
+| Verification receipt | `dec5b02e4e10117e6cfd244f5737d73764016207fc8373219dcb8d712115e24f` |
+
+The feed session records `datasetAdmission: unreviewed`, `trainingRows: 0` and
+`teachingTargets: 0`; the native run records `behavioralVerdict: null`. Watching,
+resizing, toggling or inspecting these screens cannot ratify a scenario or teach
+a preferred behavior. Existing operator evaluation remains the dataset boundary.

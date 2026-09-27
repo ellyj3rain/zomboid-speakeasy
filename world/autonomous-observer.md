@@ -14,7 +14,10 @@ Start the SAO observer, then run this from Speakeasy:
 
 ```powershell
 python tools/world_watch.py --run <native-run-directory> `
-  --package <native-package-directory> --out <new-feed-directory>
+  --package <native-package-directory> --out <new-feed-directory> `
+  --registry <mousecat-native-view-registry> `
+  --view-id survival-observatory --label "Survival simulation" `
+  --project-ref project:survivor-awareness
 ```
 
 For Mousecat Desktop, configure `nativeViews.registryPath` in the service's
@@ -33,8 +36,12 @@ session to its explicit feed directory:
 ]
 ```
 
-Open the installed Desktop's Simulation view. Replace the registry entry when
-starting a fresh attempt. The compatibility Unreal viewer accepts
+The watcher publishes the successor's first complete frame, then atomically
+rebinds that stable view ID to the new session. Mousecat refreshes the registry
+and follows the displayable replacement, so a completed or disconnected attempt
+cannot remain the propagated view after its successor is ready. Open the
+installed Desktop's Simulation view. The
+compatibility Unreal viewer accepts
 `-MousecatNativeView="<absolute-feed-directory>"`. One bridge owns each attempt's
 control writer; it can be reattached after a process exit without reusing native
 command numbers.
@@ -47,8 +54,24 @@ quieter people and different groups. Nearby framing does not assert a social
 relationship. A recorded location can lead to a visit whose native region then
 loads; the inspector identifies native-body and durable-record positions.
 
+The bridge also retains up to four recent activity-camera frames with their
+capture times and exact native image identities. Each retained frame carries a
+bounded projection of that pictured person's source-reported activity,
+attention, memory counts and survival needs, including the source sample time
+available when that frame was published.
+Mousecat presents the current frame and retained views as an equal-panel
+observatory. Panel size, visible screens and the four overlay groups remain
+independently adjustable while every panel keeps its exact age visible. These
+views are time-multiplexed samples from the one native renderer; they are not
+simultaneous cameras. Manual camera frames do not invent an activity subject or
+reuse a later person's state, and people absent from the current source
+projection are removed from the observatory.
+
 | Control | Effect |
 |---|---|
+| Panel size | Changes every observatory screen together while preserving equal dimensions |
+| View toggles | Hide or restore individual current and retained screens without changing the simulation |
+| Activity / Attention / Memory / Needs | Show or hide the corresponding frame-aligned source facts on every screen |
 | Arrows or direction buttons | Move the camera and take manual control |
 | Follow activity | Resume automatic activity viewing |
 | People search and selection | Inspect a person's recorded state |
