@@ -216,3 +216,17 @@ episode, create an unexecuted outcome, or grant recipes or skills. Their produce
 owns authentic native action completion; Speakeasy validates and preserves the
 bounded projection. This extension adds no native model or gameplay code to
 Speakeasy and creates no training admission.
+
+## Durable study sessions
+
+An optional SAO session supervisor can place several finite native attempts over
+one verified save. The observer bridge projects only its session identifier,
+attempt, bounded duration, simulated clocks, status, stop reason and currently
+valid save/continue operations. Local paths, executables and arbitrary commands
+never enter the native-view contract.
+
+`checkpoint` uses the existing native stop and normal save route. `configure`
+writes bounded duration and automatic-continuation settings for the supervisor.
+`continue` is admitted only from a saved session. These lifecycle requests use
+immutable exact-sequence files and cannot supply a behavior verdict, dataset
+admission, teaching target or training row.

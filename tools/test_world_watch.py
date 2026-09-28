@@ -4,6 +4,7 @@ import os
 import struct
 import tempfile
 import unittest
+import uuid
 from pathlib import Path
 from unittest.mock import patch
 
@@ -192,6 +193,41 @@ class ObserverCommands(unittest.TestCase):
         for value in invalid:
             with self.subTest(value=value), self.assertRaises(ValueError):
                 self.translate(value)
+
+    def test_durable_session_projection_and_lifecycle_requests_remain_review_only(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name); state_path = root / "study-session.json"; commands = root / "commands"
+            commands.mkdir()
+            study_id = "95d05f2c-9d8b-4f3e-a867-d4744073d7be"
+            state = dict(schema="sao-study-session/1", id=study_id, label="Survival simulation",
+                         status="saved", attempt=3, attemptDurationSeconds=7200, autoContinue=False,
+                         worldHours=38.25, accumulatedWorldHours=36.25, canCheckpoint=False,
+                         canContinue=True, updatedAtUnixMs=1000, datasetAdmission="unreviewed",
+                         behavioralVerdict=None, lastStopReason="wall-time-limit", feedGeneration=4,
+                         processedCommands=[])
+            W.atomic(state_path, W.encoded(state))
+            view = W.study_view(state_path)
+            self.assertEqual(view["attemptDurationSeconds"], 7200)
+            self.assertTrue(view["canContinue"])
+            self.assertNotIn("datasetAdmission", view)
+            configure = self.command("configure", attemptDurationSeconds=10800, autoContinue=True)
+            event = W.publish_session_command(commands, configure, self.session, 1)
+            self.assertEqual(event["schema"], "sao-study-session-command/1")
+            self.assertEqual(event["attemptDurationSeconds"], 10800)
+            self.assertEqual(len(list(commands.glob("*.json"))), 1)
+            self.assertEqual(W.publish_session_command(commands, configure, self.session, 1), event)
+            continuation = self.command("continue") | {"sequence": 2}
+            W.publish_session_command(commands, continuation, self.session, 2)
+            self.assertEqual(len(list(commands.glob("*.json"))), 2)
+            for invalid in (self.command("continue", path="run"),
+                            self.command("configure", attemptDurationSeconds=29, autoContinue=False),
+                            self.command("configure", attemptDurationSeconds=3600, autoContinue=1)):
+                with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                    W.publish_session_command(commands, invalid, self.session, invalid["sequence"])
+            state["datasetAdmission"] = "approved"
+            W.atomic(state_path, W.encoded(state))
+            with self.assertRaises(ValueError):
+                W.study_view(state_path)
 
     def test_bounds_are_enforced_at_translation(self):
         self.state["viewX"] = 511
@@ -464,6 +500,52 @@ class ObserverCommands(unittest.TestCase):
                 self.assertEqual(W.watch(run, package, out, registry), 0)
             register.assert_called_once()
             self.assertEqual(W.read(registry)[0]["sessionId"], self.session)
+
+    def test_saved_feed_applies_settings_then_requests_continuation(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            run, package, out, receipt, _, _, _ = self.watch_fixture(root)
+            native = run / "native-view"
+            filename = "study-live-0000000000000001.png"
+            data = b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + struct.pack(">II", 960, 540)
+            (native / filename).write_bytes(data)
+            W.atomic(native / "native.json", W.encoded(dict(sequence=1, observerSequence=0,
+                capturedAtUnixMs=1, image=dict(file=filename, sha256=hashlib.sha256(data).hexdigest(),
+                                                width=960, height=540))))
+            receipt["status"] = "completed"
+            W.atomic(run / "run.json", W.encoded(receipt))
+            state_path, session_commands = root / "study-session.json", root / "session-commands"
+            session_commands.mkdir()
+            W.atomic(state_path, W.encoded(dict(schema="sao-study-session/1", id=str(uuid.uuid4()),
+                label="Survival simulation", status="saved", attempt=1, attemptDurationSeconds=3600,
+                autoContinue=False, worldHours=4, accumulatedWorldHours=2, canCheckpoint=False,
+                canContinue=True, updatedAtUnixMs=1000, datasetAdmission="unreviewed",
+                behavioralVerdict=None, lastStopReason="wall-time-limit", feedGeneration=1,
+                processedCommands=[])))
+            sleeps = 0
+
+            def request_next(_):
+                nonlocal sleeps
+                sleeps += 1
+                if sleeps == 1:
+                    self.assertEqual(W.read(out / "latest.json")["study"]["status"], "saved")
+                    W.atomic(out / "commands/0000000000000001.json", W.encoded(
+                        self.command("configure", attemptDurationSeconds=7200, autoContinue=True)))
+                elif sleeps == 2:
+                    self.assertEqual(W.read(out / "latest.json")["commandResult"]["sequence"], 1)
+                    W.atomic(out / "commands/0000000000000002.json", W.encoded(
+                        self.command("continue") | {"sequence": 2}))
+                self.assertLessEqual(sleeps, 3)
+
+            with patch.object(W.time, "sleep", side_effect=request_next):
+                self.assertEqual(W.watch(run, package, out, session_state=state_path,
+                                         session_commands=session_commands), 0)
+            final = W.read(out / "latest.json")
+            self.assertEqual(final["commandResult"], {"sequence": 2, "status": "applied",
+                                                       "message": "Session continuation requested"})
+            events = [W.read(path) for path in sorted(session_commands.glob("*.json"))]
+            self.assertEqual([event["action"] for event in events], ["configure", "continue"])
+            self.assertEqual(W.read(out / "session.json")["trainingRows"], 0)
 
     def test_recent_activity_feeds_are_distinct_bounded_native_frames(self):
         feeds = {}

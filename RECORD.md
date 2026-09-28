@@ -2684,3 +2684,26 @@ The feed session records `datasetAdmission: unreviewed`, `trainingRows: 0` and
 `teachingTargets: 0`; the native run records `behavioralVerdict: null`. Watching,
 resizing, toggling or inspecting these screens cannot ratify a scenario or teach
 a preferred behavior. Existing operator evaluation remains the dataset boundary.
+
+## Record 77 - Durable study-session bridge
+
+Verified: 2026-09-28.
+
+The native observer now accepts optional durable session state from SAO's study
+supervisor. It projects only bounded path-free fields into Mousecat and adds
+three allowlisted lifecycle requests: checkpoint the running native attempt,
+configure the next attempt's finite duration and automatic continuation, or
+continue a normally saved session. A lifecycle request cannot name a path,
+executable, simulation action or dataset effect.
+
+The bridge stays on a saved final frame without repeatedly republishing it. A
+continuation request is acknowledged before the bridge yields to the supervisor;
+the stable Mousecat view then rebinds only after the resumed attempt publishes a
+complete successor frame. Failed and forced attempts expose no continuation
+authority.
+
+The focused observer suite passes all 29 tests. The complete suite passes all
+233 tests in 68.311 seconds with one expected environment skip, including a
+saved-feed round trip that applies settings, acknowledges continuation, retains
+the final frame and writes zero training rows. The feed and session retain
+unreviewed standing with zero training rows and teaching targets.
