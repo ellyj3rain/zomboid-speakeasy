@@ -11,7 +11,11 @@ class ActivityCamera:
     scenes receive a cooldown, so quiet people also get visits. Nearby people
     form a framing group, not an inferred relationship or a simulation target.
     """
-    DWELL = 22.0
+    # One native renderer supplies every observatory tile. Rotate quickly
+    # enough that four retained views behave as a near-live contact sheet while
+    # still leaving several complete frames at each location.
+    DWELL = 3.0
+    FOLLOW = 0.5
     RADIUS = 10.0
 
     def __init__(self):
@@ -100,8 +104,13 @@ class ActivityCamera:
                 recent = max((max(0, 14-(now-when)/5) for point, when in self.history
                               if self.distance(person, point) < 24), default=0)
                 represented = person.get("positionSource") == "native-body"
-                person_recent = max(0, 8-(now-self.person_history.get(person["id"], -1e9))/20)
-                return (self.activity.get(person["id"], 0) + int(represented) - recent - person_recent, person["id"])
+                last_primary = self.person_history.get(person["id"], -1e9)
+                # Oldest primary wins before activity. In a close group every
+                # frame may contain the same neighbours; counting that as a
+                # visit starves individual feed identities indefinitely.
+                return (-last_primary,
+                        self.activity.get(person["id"], 0) + int(represented) - recent,
+                        person["id"])
 
             primary = max(candidates, key=score)
             nearby = sorted((p for p in candidates if p["id"] != primary["id"]
@@ -109,7 +118,7 @@ class ActivityCamera:
                             key=lambda p: (self.distance(p, primary), p["id"]))[:4]
             current = [primary, *nearby]
             self.subjects = [p["id"] for p in current]
-            self.person_history.update({p["id"]: now for p in current})
+            self.person_history[primary["id"]] = now
             self.history.append(({k: primary[k] for k in ("x", "y", "z")}, now))
             self.next_cut = now + self.DWELL
             self.shot += 1
@@ -125,7 +134,7 @@ class ActivityCamera:
         self.description += "; " + (str(activity).lower() if activity else "visiting recorded location")
         x, y = (sum(p[k] for p in current)/len(current) for k in ("x", "y"))
         z = primary["z"]
-        self.next_follow = now + 1.0
+        self.next_follow = now + self.FOLLOW
         if not cut and math.hypot(x-state["viewX"], y-state["viewY"]) < 0.75 and z == state["viewZ"]:
             return None
         return dict(viewX=x, viewY=y, viewZ=z, residencyX=x, residencyY=y, residencyZ=z)
