@@ -592,7 +592,8 @@ class ObserverCommands(unittest.TestCase):
         people = [{"id": str(i), "x": 40, "y": 40, "z": 0} for i in range(8)]
         seen = set()
         for i in range(20):
-            camera.plan(people, 2+i*.1, dict(paused=False, viewX=40, viewY=40, viewZ=0), (0,0,511,511), i*23)
+            camera.plan(people, 2+i*.1, dict(paused=False, viewX=40, viewY=40, viewZ=0),
+                        (0,0,511,511), i * (camera.DWELL + 1))
             seen.update(camera.subjects)
         self.assertEqual(seen, {p["id"] for p in people})
 
@@ -676,8 +677,8 @@ class ObserverCommands(unittest.TestCase):
         first = camera.plan(people, 2, state, bounds, 0)
         subjects = tuple(camera.subjects)
         state.update({k: first[k] for k in ("viewX", "viewY", "viewZ")})
-        self.assertIsNone(camera.plan(people, 2, state, bounds, 10))
-        second = camera.plan(people, 2.1, state, bounds, 23)
+        self.assertIsNone(camera.plan(people, 2, state, bounds, camera.DWELL / 2))
+        second = camera.plan(people, 2.1, state, bounds, camera.DWELL + 1)
         self.assertNotEqual(tuple(camera.subjects), subjects)
         self.assertGreater(abs(first["viewX"] - second["viewX"]), 100)
         self.assertLessEqual(len(camera.subjects), 5)
@@ -688,6 +689,20 @@ class ObserverCommands(unittest.TestCase):
         camera.resume()
         self.assertIsNone(camera.plan(people, 3, state | {"paused": True}, bounds, 101))
         self.assertIsNotNone(camera.plan(people, 3, state, bounds, 102))
+
+    def test_close_group_rotates_every_person_as_primary(self):
+        camera = W.ActivityCamera()
+        people = [{"id": str(i), "x": 40 + i * .1, "y": 40, "z": 0,
+                   "positionSource": "native-body"} for i in range(6)]
+        state = dict(paused=False, viewX=40, viewY=40, viewZ=0)
+        primaries = []
+        for index in range(6):
+            plan = camera.plan(people, 2 + index * .1, state, (0, 0, 511, 511),
+                               index * (camera.DWELL + 1))
+            self.assertIsNotNone(plan)
+            state.update({key: plan[key] for key in ("viewX", "viewY", "viewZ")})
+            primaries.append(camera.subjects[0])
+        self.assertEqual(set(primaries), {person["id"] for person in people})
 
     def test_activity_camera_uses_changes_and_does_not_focus_dead_or_invalid_people(self):
         camera = W.ActivityCamera()

@@ -1,5 +1,11 @@
 # Zomboid-Speakeasy
 
+Record 78 makes the four-screen native observatory a near-live contact sheet.
+The one native renderer rotates every three seconds, follows a selected scene
+twice per second and gives the least-recently-primary person first claim on the
+next frame. Nearby people no longer count as if each had received a primary
+view. The complete 234-test suite passes with one expected environment skip.
+
 Record 77 adds durable study-session lifecycle projection to the native observer.
 Mousecat can request a normal save, continue a verified completed save, and
 configure later attempt duration and clean wall-time continuation. The bridge

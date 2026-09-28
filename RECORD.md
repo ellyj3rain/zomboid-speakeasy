@@ -2707,3 +2707,26 @@ The focused observer suite passes all 29 tests. The complete suite passes all
 saved-feed round trip that applies settings, acknowledges continuation, retains
 the final frame and writes zero training rows. The feed and session retain
 unreviewed standing with zero training rows and teaching targets.
+
+## Record 78 - Near-live fair activity views
+
+Verified: 2026-09-28 09:10 UTC / 02:10 PDT.
+
+The activity camera now dwells for three seconds and follows its selected scene
+at half-second cadence. With four retained frames, the observatory acts as a
+near-live contact sheet over one native renderer rather than presenting old
+views as simultaneous cameras.
+
+Primary selection is fair by person before activity breaks a tie. A clustered
+survivor appearing as somebody else's nearby context no longer has their own
+primary-view clock refreshed. This closes the starvation observed in the loaded
+six-person house, where one retained person frame had aged past a minute despite
+three-second cuts. A six-person close-group regression proves that every person
+becomes primary within six cuts.
+
+All 30 focused observer tests pass. The complete suite passes all 234 tests in
+47.373 seconds with one expected environment skip. The sealed R66 reference
+directory is now explicitly LF-bound in `.gitattributes`; this preserves its
+byte-reproducibility check on Windows instead of allowing checkout conversion
+to alter committed evidence bytes. Camera and rendering changes create no
+training rows, teaching targets or dataset admission.
