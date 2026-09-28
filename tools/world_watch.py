@@ -28,6 +28,8 @@ from world_camera import ActivityCamera
 POLL_SECONDS = 0.010
 ARCHIVE_SCAN_SECONDS = 0.5
 MAX_FEEDS = 4
+SESSION_SCHEMA = "sao-study-session/1"
+SESSION_COMMAND_SCHEMA = "sao-study-session-command/1"
 
 
 class TransientRead(Exception):
@@ -49,6 +51,72 @@ def read(path, limit=1024 * 1024):
         if isinstance(error.__cause__, json.JSONDecodeError):
             raise TransientRead(str(path)) from error
         raise
+
+
+def study_view(path):
+    """Read the public, path-free state of one durable native study session."""
+    if path is None:
+        return None
+    value = read(path)
+    required = {"schema", "id", "label", "status", "attempt", "attemptDurationSeconds",
+                "autoContinue", "worldHours", "accumulatedWorldHours", "canCheckpoint",
+                "canContinue", "updatedAtUnixMs", "datasetAdmission", "behavioralVerdict",
+                "lastStopReason", "feedGeneration", "processedCommands"}
+    A.require(isinstance(value, dict) and set(value) == required and value["schema"] == SESSION_SCHEMA,
+              "study session fields differ")
+    session_id = str(uuid.UUID(value["id"]))
+    A.require(session_id == value["id"] and isinstance(value["label"], str)
+              and 0 < len(value["label"]) <= 160, "study session identity differs")
+    A.require(value["status"] in ("starting", "running", "saved", "continuing", "failed")
+              and type(value["attempt"]) is int and value["attempt"] >= 0,
+              "study session status differs")
+    duration = value["attemptDurationSeconds"]
+    A.require(type(duration) is int and 30 <= duration <= 604800
+              and type(value["autoContinue"]) is bool
+              and type(value["canCheckpoint"]) is bool
+              and type(value["canContinue"]) is bool, "study session settings differ")
+    number(value["worldHours"], 0, 2**53 - 1)
+    number(value["accumulatedWorldHours"], 0, 2**53 - 1)
+    A.require(type(value["updatedAtUnixMs"]) is int and 0 <= value["updatedAtUnixMs"] <= 2**53 - 1
+              and value["datasetAdmission"] == "unreviewed" and value["behavioralVerdict"] is None,
+              "study session review state differs")
+    A.require(value["lastStopReason"] is None or isinstance(value["lastStopReason"], str)
+              and len(value["lastStopReason"]) <= 80, "study stop reason differs")
+    A.require(value["canCheckpoint"] == (value["status"] == "running")
+              and value["canContinue"] == (value["status"] == "saved"),
+              "study session controls differ")
+    return {key: value[key] for key in ("id", "label", "status", "attempt",
+        "attemptDurationSeconds", "autoContinue", "worldHours", "accumulatedWorldHours",
+        "canCheckpoint", "canContinue", "updatedAtUnixMs", "lastStopReason")}
+
+
+def publish_session_command(root, command, session, sequence):
+    """Publish one allowlisted lifecycle request for the study supervisor."""
+    A.require(root is not None and root.is_dir() and not root.is_symlink(),
+              "study session command path unavailable")
+    required = {"schema", "sessionId", "sequence", "action"}
+    action = command.get("action")
+    if action == "configure":
+        A.require(set(command) == required | {"attemptDurationSeconds", "autoContinue"}
+                  and type(command["attemptDurationSeconds"]) is int
+                  and 30 <= command["attemptDurationSeconds"] <= 604800
+                  and type(command["autoContinue"]) is bool,
+                  "invalid study session settings")
+    else:
+        A.require(action == "continue" and set(command) == required,
+                  "unsupported study session request")
+    event = {"schema": SESSION_COMMAND_SCHEMA, "sessionId": session,
+             "sequence": sequence, "action": action}
+    if action == "configure":
+        event.update(attemptDurationSeconds=command["attemptDurationSeconds"],
+                     autoContinue=command["autoContinue"])
+    name = f"{session}-{sequence:016d}.json"
+    target = root / name
+    if target.exists():
+        A.require(read(target, 8192) == event, "study session command identity reused")
+    else:
+        atomic(target, encoded(event))
+    return event
 
 
 class JsonSnapshot:
@@ -212,7 +280,7 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
               and command["sequence"] == sequence, "command session or sequence differs")
     action = command["action"]
     optional = {"pause": set(), "resume": set(), "speed": {"value"}, "pan": {"dx", "dy"},
-                "focus": {"personId"}, "stop": set(), "auto": set(), "select": {"personId"},
+                "focus": {"personId"}, "stop": set(), "checkpoint": set(), "auto": set(), "select": {"personId"},
                 "panel": {"panelId", "personId", "visible"}, "zoom": {"value"},
                 "cognition": {"opponentShare", "opportunitiesPerHour", "maxDepth"}}
     A.require(isinstance(action, str) and action in optional
@@ -245,7 +313,7 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
         x, y, z = (number(person[k], low, high) for k, low, high in
                    (("x", bounds[0], bounds[2]), ("y", bounds[1], bounds[3]), ("z", -32, math.nextafter(32, -math.inf))))
         result.update(viewX=x, viewY=y, viewZ=z, residencyX=x, residencyY=y, residencyZ=z)
-    elif action == "stop":
+    elif action in ("stop", "checkpoint"):
         result["stop"] = "true"
     elif action in ("select", "panel"):
         person = command["personId"]
@@ -430,20 +498,30 @@ def control_cursor(root, state):
 
 
 def watch(run, package, destination, registry=None, view_id="survival-observatory",
-          label="Survival simulation", project_ref=None):
+          label="Survival simulation", project_ref=None, session_state=None,
+          session_commands=None):
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     relative = receipt.get("observerDirectory", "")
     A.require(relative == "" or re.fullmatch(r"attempts/\d{4}", relative), "unsafe observer attempt directory")
     with native_writer(run / relative):
-        return watch_locked(run, package, destination, registry, view_id, label, project_ref)
+        return watch_locked(run, package, destination, registry, view_id, label, project_ref,
+                            session_state, session_commands)
 
 
 def watch_locked(run, package, destination, registry=None, view_id="survival-observatory",
-                 label="Survival simulation", project_ref=None):
+                 label="Survival simulation", project_ref=None, session_state=None,
+                 session_commands=None):
     A.require(not destination.exists(), "select a fresh Mousecat feed directory")
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     A.require(receipt.get("host") == "observer" and receipt["datasetAdmission"] == "unreviewed",
               "an explicit native observer run is required")
+    A.require((session_state is None) == (session_commands is None),
+              "study session state and commands must be supplied together")
+    if session_state is not None:
+        A.require(session_state.is_file() and not session_state.is_symlink(),
+                  "study session state unavailable")
+        A.require(session_commands.is_dir() and not session_commands.is_symlink(),
+                  "study session command directory unavailable")
     session = str(uuid.UUID(receipt["sessionId"]))
     definition = read(package / "definition.json")
     package_manifest = read(package / "package.json")
@@ -477,6 +555,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     receipt_cache, state_cache, frame_cache, observation_cache = (JsonSnapshot() for _ in range(4))
     archive_path, next_archive_scan = None, 0.0
     last_publication = None
+    exit_after_publication = False
     while True:
         try:
             receipt = receipt_cache.read(run / "run.json", 8 * 1024 * 1024)
@@ -485,6 +564,13 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             continue
         A.require(receipt["sessionId"] == session, "run session changed")
         ended = receipt["status"] in ("completed", "incomplete", "timed-out")
+        study = study_view(session_state)
+        if ended and study is not None and study["status"] == "running":
+            # The runner receipt and supervisor state use separate atomic
+            # files. Do not expose their brief transition as an impossible
+            # ended view with a live checkpoint control.
+            time.sleep(POLL_SECONDS)
+            continue
         try:
             state = state_cache.read(observer_root / "observer-state.json")
             frame = frame_cache.read(native_root / "native.json")
@@ -546,32 +632,51 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             if requested_camera and frame.get("observerSequence", -1) >= requested_camera["native"]:
                 displayed_camera = requested_camera["value"]
                 requested_camera = None
-            if pending is None and not ended:
+            if pending is None:
                 command_path = destination / "commands" / f"{acknowledged+1:016d}.json"
                 if command_path.exists():
                     try:
                         command = read(command_path, 16384)
-                        control = translate(command, session, acknowledged + 1, state, people, bounds, native_cursor + 1)
+                        action = command.get("action")
+                        if action in ("configure", "continue"):
+                            A.require(study is not None, "durable study session controls unavailable")
+                            if action == "continue":
+                                A.require(ended and study["canContinue"], "study session is not saved")
+                            publish_session_command(session_commands, command, session, acknowledged + 1)
+                            control = None
+                        else:
+                            A.require(not ended, "native attempt has ended")
+                            if action == "checkpoint":
+                                A.require(study is not None and study["canCheckpoint"],
+                                          "study session cannot save now")
+                            control = translate(command, session, acknowledged + 1, state, people,
+                                                bounds, native_cursor + 1)
                     except (ValueError, KeyError, TypeError, TransientRead) as error:
                         # Commands are immutable atomic files. Reject one bad
                         # request explicitly and keep later pause/stop usable.
                         acknowledged += 1
                         command_result = {"sequence": acknowledged, "status": "rejected", "message": str(error)[:512]}
                     else:
-                        if command["action"] == "auto":
+                        if command["action"] in ("configure", "continue"):
+                            acknowledged += 1
+                            command_result = {"sequence": acknowledged, "status": "applied",
+                                "message": "Session settings saved" if command["action"] == "configure"
+                                else "Session continuation requested"}
+                            exit_after_publication = command["action"] == "continue"
+                        elif command["action"] == "auto":
                             camera.resume()
                             displayed_camera = camera.view(people)
                             acknowledged += 1
                             command_result = {"sequence": acknowledged, "status": "applied", "message": "Activity camera resumed"}
                         else:
-                            if command["action"] in ("pan", "focus", "stop"):
+                            if command["action"] in ("pan", "focus", "stop", "checkpoint"):
                                 camera.manual()
                                 displayed_camera = camera.view(people)
                                 requested_camera = None
                             atomic(observer_root / "observer-control.properties", control)
                             native_cursor += 1
                             pending = {"native": native_cursor, "ui": acknowledged + 1}
-                elif observation_ready and observation_hours is not None and time.time() - observation_path.stat().st_mtime <= 5:
+                elif not ended and observation_ready and observation_hours is not None and time.time() - observation_path.stat().st_mtime <= 5:
                     plan = camera.plan(people, observation_hours, state, bounds, time.monotonic())
                     if plan is not None:
                         native_cursor += 1
@@ -588,8 +693,9 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             viewport = viewport_view(state, frame)
             publication = (frame["sequence"], acknowledged, json.dumps(displayed_camera, sort_keys=True),
                            json.dumps(viewport, sort_keys=True),
-                           state["paused"], state.get("failure"), observation_ready, last_observation)
-            if publication != last_publication or ended:
+                           state["paused"], state.get("failure"), observation_ready, last_observation,
+                           json.dumps(study, sort_keys=True), ended, receipt["status"])
+            if publication != last_publication:
                 name = frame["image"]["file"]
                 if name not in images:
                     atomic(destination / name, image_data(native_root, frame))
@@ -639,6 +745,8 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                 if inspection_header:
                     snapshot["inspection"] = inspection_header
                     snapshot["panels"] = [{"id": "person-inspection", "label": "Native person inspector"}]
+                if study is not None:
+                    snapshot["study"] = study
                 atomic(destination / "latest.json", encoded(snapshot))
                 # Keep the completed predecessor bound until this successor has
                 # a complete, validated frame.  The registry replacement then
@@ -658,9 +766,13 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             # A native observation file can be mid-write. The last complete,
             # hash-validated frame remains on screen with its original age.
             pass
-        if ended:
+        if exit_after_publication:
+            return 0
+        if ended and session_state is None:
             return 0 if receipt["status"] == "completed" else 1
-        time.sleep(POLL_SECONDS)
+        # A saved session has no advancing frame clock. Keep lifecycle controls
+        # responsive without retaining the live bridge's 100 Hz idle poll.
+        time.sleep(0.25 if ended and session_state is not None else POLL_SECONDS)
 
 
 def main():
@@ -672,10 +784,16 @@ def main():
     parser.add_argument("--view-id", default="survival-observatory")
     parser.add_argument("--label", default="Survival simulation")
     parser.add_argument("--project-ref")
+    parser.add_argument("--session-state", type=Path,
+                        help="durable SAO study-session state exposed without local paths")
+    parser.add_argument("--session-commands", type=Path,
+                        help="durable SAO study-session lifecycle request directory")
     args = parser.parse_args()
     return watch(args.run.resolve(), args.package.resolve(), args.out.resolve(),
                  args.registry.resolve() if args.registry else None,
-                 args.view_id, args.label, args.project_ref)
+                 args.view_id, args.label, args.project_ref,
+                 args.session_state.resolve() if args.session_state else None,
+                 args.session_commands.resolve() if args.session_commands else None)
 
 
 if __name__ == "__main__":

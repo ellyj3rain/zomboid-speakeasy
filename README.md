@@ -1,5 +1,11 @@
 # Zomboid-Speakeasy
 
+Record 77 adds durable study-session lifecycle projection to the native observer.
+Mousecat can request a normal save, continue a verified completed save, and
+configure later attempt duration and clean wall-time continuation. The bridge
+exposes only bounded path-free state and allowlisted immutable requests. Session
+operation remains unreviewed and creates no training rows or teaching targets.
+
 Record 76 makes the native observer a continuous multi-view observatory.
 One stable Mousecat session rebinds only after a successor produces a complete
 frame. The current camera and up to four recent activity views retain distinct
