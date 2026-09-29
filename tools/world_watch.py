@@ -15,11 +15,14 @@ import os
 from pathlib import Path
 import re
 import struct
+import sys
 import time
 import uuid
 
 import decision_authoring as A
 import cognition_contract as Cognition
+import cognition_episodes as CognitionEpisodes
+import cognition_review as CognitionReview
 from world_camera import ActivityCamera
 
 
@@ -499,24 +502,29 @@ def control_cursor(root, state):
 
 def watch(run, package, destination, registry=None, view_id="survival-observatory",
           label="Survival simulation", project_ref=None, session_state=None,
-          session_commands=None):
+          session_commands=None, sao_validator=None, review_outbox=None,
+          review_endpoint="http://127.0.0.1:4317/mcp"):
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     relative = receipt.get("observerDirectory", "")
     A.require(relative == "" or re.fullmatch(r"attempts/\d{4}", relative), "unsafe observer attempt directory")
     with native_writer(run / relative):
         return watch_locked(run, package, destination, registry, view_id, label, project_ref,
-                            session_state, session_commands)
+                            session_state, session_commands, sao_validator, review_outbox,
+                            review_endpoint)
 
 
 def watch_locked(run, package, destination, registry=None, view_id="survival-observatory",
                  label="Survival simulation", project_ref=None, session_state=None,
-                 session_commands=None):
+                 session_commands=None, sao_validator=None, review_outbox=None,
+                 review_endpoint="http://127.0.0.1:4317/mcp"):
     A.require(not destination.exists(), "select a fresh Mousecat feed directory")
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     A.require(receipt.get("host") == "observer" and receipt["datasetAdmission"] == "unreviewed",
               "an explicit native observer run is required")
     A.require((session_state is None) == (session_commands is None),
               "study session state and commands must be supplied together")
+    A.require((sao_validator is None) == (review_outbox is None),
+              "review outbox requires the native validator")
     if session_state is not None:
         A.require(session_state.is_file() and not session_state.is_symlink(),
                   "study session state unavailable")
@@ -556,6 +564,8 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     archive_path, next_archive_scan = None, 0.0
     last_publication = None
     exit_after_publication = False
+    review_status = review_message = review_interaction = None
+    next_review_attempt = 0.0
     while True:
         try:
             receipt = receipt_cache.read(run / "run.json", 8 * 1024 * 1024)
@@ -571,6 +581,11 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             # ended view with a live checkpoint control.
             time.sleep(POLL_SECONDS)
             continue
+        if ended and review_outbox is not None and review_status is None:
+            if receipt["status"] != "completed":
+                review_status, review_message = "not-eligible", "Run did not close as verified evidence."
+            else:
+                review_status, review_message = "pending", "Preparing completed outcomes for human review."
         try:
             state = state_cache.read(observer_root / "observer-state.json")
             frame = frame_cache.read(native_root / "native.json")
@@ -694,7 +709,8 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             publication = (frame["sequence"], acknowledged, json.dumps(displayed_camera, sort_keys=True),
                            json.dumps(viewport, sort_keys=True),
                            state["paused"], state.get("failure"), observation_ready, last_observation,
-                           json.dumps(study, sort_keys=True), ended, receipt["status"])
+                           json.dumps(study, sort_keys=True), ended, receipt["status"],
+                           review_status, review_message, review_interaction)
             if publication != last_publication:
                 name = frame["image"]["file"]
                 if name not in images:
@@ -746,7 +762,12 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     snapshot["inspection"] = inspection_header
                     snapshot["panels"] = [{"id": "person-inspection", "label": "Native person inspector"}]
                 if study is not None:
-                    snapshot["study"] = study
+                    snapshot["study"] = dict(study)
+                    if review_status is not None:
+                        snapshot["study"].update(reviewStatus=review_status,
+                            reviewMessage=review_message or "")
+                        if review_interaction:
+                            snapshot["study"]["reviewInteractionId"] = review_interaction
                 atomic(destination / "latest.json", encoded(snapshot))
                 # Keep the completed predecessor bound until this successor has
                 # a complete, validated frame.  The registry replacement then
@@ -762,6 +783,25 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         break
                     del images[oldest]
                     (destination / oldest).unlink(missing_ok=True)
+            if (ended and receipt["status"] == "completed" and study is not None
+                    and study["status"] == "saved" and review_outbox is not None
+                    and review_status in ("pending", "delayed")
+                    and time.monotonic() >= next_review_attempt):
+                try:
+                    evidence_root = review_outbox / "evidence"
+                    if not evidence_root.exists():
+                        CognitionEpisodes.export(run, package, sao_validator, evidence_root)
+                    queued = CognitionReview.queue(evidence_root, review_outbox, review_endpoint, session)
+                    review_status = queued["status"]
+                    review_interaction = queued.get("interactionId")
+                    review_message = (f"{queued['observedDisagreements']} completed disagreements await human disposition."
+                                      if review_status in ("queued", "already-queued")
+                                      else "No completed model disagreements require disposition in this attempt.")
+                except (OSError, ValueError, KeyError, TypeError, CognitionReview.Mousecat.MousecatError) as error:
+                    print(f"world_watch: review handoff delayed ({type(error).__name__})", file=sys.stderr)
+                    review_status = "delayed"
+                    review_message = "Human review delivery is delayed; durable evidence remains available for retry."
+                    next_review_attempt = time.monotonic() + 1.0
         except (FileNotFoundError, TransientRead, PermissionError):
             # A native observation file can be mid-write. The last complete,
             # hash-validated frame remains on screen with its original age.
@@ -788,12 +828,20 @@ def main():
                         help="durable SAO study-session state exposed without local paths")
     parser.add_argument("--session-commands", type=Path,
                         help="durable SAO study-session lifecycle request directory")
+    parser.add_argument("--sao-validator", type=Path,
+                        help="SAO world_lab_run.py used before review extraction")
+    parser.add_argument("--review-outbox", type=Path,
+                        help="durable cognition-review evidence and queue receipts")
+    parser.add_argument("--review-endpoint", default="http://127.0.0.1:4317/mcp")
     args = parser.parse_args()
     return watch(args.run.resolve(), args.package.resolve(), args.out.resolve(),
                  args.registry.resolve() if args.registry else None,
                  args.view_id, args.label, args.project_ref,
                  args.session_state.resolve() if args.session_state else None,
-                 args.session_commands.resolve() if args.session_commands else None)
+                 args.session_commands.resolve() if args.session_commands else None,
+                 args.sao_validator.resolve() if args.sao_validator else None,
+                 args.review_outbox.resolve() if args.review_outbox else None,
+                 args.review_endpoint)
 
 
 if __name__ == "__main__":
