@@ -717,6 +717,38 @@ class ObserverCommands(unittest.TestCase):
         self.assertEqual(camera.subjects, ["moving"])
         self.assertEqual(camera.view(people)["mode"], "automatic")
 
+    def test_activity_camera_prioritizes_observed_harm_and_critical_needs(self):
+        state = dict(paused=False, viewX=0, viewY=0, viewZ=0)
+        bounds = (0, 0, 511, 511)
+        for expected, people, reason in [
+            ("injured", [
+                {"id": "quiet", "x": 20, "y": 20, "z": 0, "record": {"lastLivingHealth": 1}},
+                {"id": "injured", "x": 220, "y": 20, "z": 0,
+                 "record": {"lastLivingHealth": .42, "woundCarried": 2}}], "severe injury"),
+            ("thirsty", [
+                {"id": "quiet", "x": 20, "y": 20, "z": 0},
+                {"id": "thirsty", "x": 220, "y": 20, "z": 0,
+                 "record": {"pharmacology": {"observed": {"stats": {
+                     "THIRST": .88, "HUNGER": .2, "FATIGUE": .1, "ENDURANCE": .7}}}}}],
+             "critical survival need")]:
+            with self.subTest(expected=expected):
+                camera = W.ActivityCamera()
+                self.assertIsNotNone(camera.plan(people, 2, state, bounds, 0))
+                self.assertEqual(camera.subjects, [expected])
+                self.assertIn(reason, camera.view(people)["summary"])
+
+    def test_activity_camera_prioritizes_rapid_movement_relative_to_known_danger(self):
+        camera = W.ActivityCamera(); bounds = (0, 0, 511, 511)
+        people = [{"id": "quiet", "x": 200, "y": 200, "z": 0},
+                  {"id": "moving", "x": 20, "y": 40, "z": 0,
+                   "context": {"beliefs": {"zombies": {"z1": {"x": 50, "y": 40, "z": 0}}}}}]
+        camera.update(people, 2, bounds)
+        people[1]["x"] = 24
+        plan = camera.plan(people, 2.1, dict(paused=False, viewX=0, viewY=0, viewZ=0), bounds, 0)
+        self.assertIsNotNone(plan)
+        self.assertEqual(camera.subjects, ["moving"])
+        self.assertIn("rapid movement relative to danger", camera.view(people)["summary"])
+
 
 if __name__ == "__main__":
     unittest.main()

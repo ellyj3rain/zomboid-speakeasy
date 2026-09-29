@@ -1,5 +1,17 @@
 # Zomboid-Speakeasy
 
+Record 79 closes the native study-to-review handoff. A verified saved attempt
+exports competing-cognition evidence immediately, reduces completed
+disagreements to bounded actor trajectories and queues them in Mousecat for
+human disposition. Each review keeps the ordinary cognition model and opposing
+associative discovery model separately attributable. Review state remains
+visible beside the terminal session. Automatic observation now ranks active
+harm, immediate known danger, critical needs and danger-relative movement ahead
+of ordinary activity while retaining fair rotation within the same urgency.
+The first retained corpus contains 15 reviewable outcomes in two trajectories;
+1,348 episodes without an observed outcome remain sequestered and no option
+creates a training row, teaching target or dataset admission.
+
 Record 78 makes the four-screen native observatory a near-live contact sheet.
 The one native renderer rotates every three seconds, follows a selected scene
 twice per second and gives the least-recently-primary person first claim on the

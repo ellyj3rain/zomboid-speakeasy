@@ -2730,3 +2730,54 @@ directory is now explicitly LF-bound in `.gitattributes`; this preserves its
 byte-reproducibility check on Windows instead of allowing checkout conversion
 to alter committed evidence bytes. Camera and rendering changes create no
 training rows, teaching targets or dataset admission.
+
+## Record 79 - Terminal cognition review handoff
+
+Verified: 2026-09-29 19:41 UTC / 12:41 PDT.
+
+A verified saved native attempt now exports its competing-cognition evidence at
+the terminal boundary and immediately hands completed disagreements to
+Mousecat. The bridge reports preparation, queued review, delayed delivery, no
+reviewable outcome or ineligible evidence beside the durable study state. A
+transport failure leaves the terminal evidence and outbox intact and retries;
+it cannot silently consume or admit data.
+
+The review compiler admits only a disagreement with a later Boolean native
+outcome. It groups those episodes by actor into bounded trajectories and shows
+the exact selected-action sequence and observed outcomes. Ordinary cognition
+and associative discovery receive separate proposal, selection and calibration
+rows, preserving their inherent opposition instead of blending them into one
+model history. Repeated actions provide a diagnostic recommendation, not a
+behavioral verdict. The available dispositions retain, investigate, sequester
+or exclude the exact trajectory. None chooses a winning cognitive model,
+supplies an unexecuted counterfactual or creates a desired behavior.
+
+The automatic camera now treats observed survival urgency as its first ranking
+axis. Active health loss, severe injury or pain and immediate known danger lead;
+critical hunger, thirst, fatigue, depleted endurance and rapid movement relative
+to a known threat follow. Consequential survival actions and ordinary movement
+remain visible below those pressures. People at the same urgency retain the
+existing least-recently-primary rotation, so urgency does not collapse every
+screen onto one actor indefinitely. This changes observer selection only and
+does not alter an NPC's knowledge, needs, actions or outcomes.
+
+The retained R73 corpus contains 1,363 episodes. Fifteen completed disagreement
+outcomes merit human review and compile into two actor trajectories. The other
+1,348 lack the required observed outcome and remain sequestered rather than
+being deleted or presented as review spam. Mousecat accepted the two decisions
+as interaction `skill-fece5238db9f8b62`. Its evidence rows name ordinary
+cognition and associative discovery separately. The earlier combined-row
+presentation was withdrawn with no operator response. The outbox is
+content-bound and idempotent, so retrying the same evidence cannot create
+another review.
+
+The repaired current study closes as saved and exposes
+`no-reviewable-outcomes`; its evidence remains available without manufacturing
+a decision. The full suite passes all 239 Python tests with one expected
+environment skip. Focused review tests cover observed trajectory reduction,
+unobserved sequestration and durable exact-once queueing. Camera tests cover
+harm, critical needs and danger-relative movement alongside ordinary rotation.
+
+Both the aggregate review packet and every queue receipt state zero training
+rows and zero teaching targets. Human disposition is required before any later
+candidate construction, and dataset ratification remains outside this handoff.
