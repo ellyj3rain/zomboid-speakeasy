@@ -17,6 +17,31 @@ class ObserverCommands(unittest.TestCase):
         self.state = {"viewX": 128, "viewY": 128, "viewZ": 0}
         self.people = [{"id": "person-1", "x": 200, "y": 190, "z": 0}]
 
+    def test_regional_pixels_are_bound_to_distinct_native_rectangles_and_sites(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            filename = "study-live-0000000000000001.png"
+            frame = dict(image=dict(file=filename, width=1920, height=1080), views=[])
+            sites = []
+            for index, (left, top) in enumerate(((0, 0), (960, 0), (0, 540))):
+                data = b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + struct.pack(">II", 960, 540) + bytes([index])
+                image_name = filename.replace(".png", f"-site{index}.png")
+                (root / image_name).write_bytes(data)
+                image = dict(file=image_name, sha256=hashlib.sha256(data).hexdigest(), width=960, height=540)
+                site = dict(id=f"area-{index}", label=f"Area {index}", x=64 + 128 * index, y=64, z=0)
+                sites.append(site)
+                frame["views"].append(site | dict(slot=index, left=left, top=top, image=image))
+            definition = dict(observation=dict(sites=sites))
+            self.assertEqual(len(W.native_views(root, frame, definition, (0, 0, 511, 511))), 3)
+            for change in (dict(id="area-0"), dict(left=0, top=0), dict(slot=0), dict(x=999)):
+                corrupt = copy.deepcopy(frame); corrupt["views"][1].update(change)
+                with self.subTest(change=change), self.assertRaises(ValueError):
+                    W.native_views(root, corrupt, definition, (0, 0, 511, 511))
+            corrupt = copy.deepcopy(frame); corrupt["views"][2]["image"]["sha256"] = "0" * 64
+            with self.assertRaises(ValueError): W.native_views(root, corrupt, definition, (0, 0, 511, 511))
+            with self.assertRaises(ValueError): W.native_views(root, dict(image=frame["image"]), definition, (0, 0, 511, 511))
+            self.assertEqual(W.native_views(root, dict(image=frame["image"]), {}, (0, 0, 511, 511)), [])
+
     def command(self, action, **value):
         return dict(schema="mousecat.native-view-command/1", sessionId=self.session,
                     sequence=1, action=action, **value)
@@ -29,6 +54,19 @@ class ObserverCommands(unittest.TestCase):
         self.assertIn("viewX=136", result)
         self.assertNotIn("residency", result)
         self.assertEqual(self.people[0]["x"], 200)
+
+    def test_regional_commands_target_declared_native_slot_only(self):
+        self.state["sites"] = [dict(id="farm", viewX=300, viewY=310, viewZ=0,
+                                   viewport=dict(zoom=1, targetZoom=1, zoomLevels=[0.5, 1, 2]))]
+        before = copy.deepcopy(self.state)
+        result = self.translate(self.command("pan", siteId="farm", dx=8, dy=0)).decode()
+        self.assertIn("siteId=farm", result); self.assertIn("viewX=308", result)
+        self.assertNotIn("residency", result)
+        self.assertIn("siteId=farm", self.translate(self.command("zoom", siteId="farm", value=1)).decode())
+        self.assertEqual(self.state, before)
+        for action, values in (("pan", dict(siteId="missing", dx=1, dy=0)),
+                               ("pause", dict(siteId="farm")), ("zoom", dict(siteId="../farm", value=1))):
+            with self.assertRaises(ValueError): self.translate(self.command(action, **values))
 
     def test_native_zoom_changes_only_native_projection(self):
         self.state["viewport"] = dict(zoom=1.0, targetZoom=1.0, zoomLevels=[0.5, 1, 1.5, 2.5])
@@ -171,6 +209,29 @@ class ObserverCommands(unittest.TestCase):
         self.assertIn("Remembered person locations: 2", view[0]["summary"])
         self.assertIn("Stored threat memories: 3", view[0]["summary"])
         self.assertEqual(view[0]["events"], [])
+
+    def test_existing_thirteen_section_native_inspection_preserves_bounds(self):
+        section_ids = ("needs", "life", "attention", "medication", "preparation", "horse", "mobile",
+                       "planning", "inventory", "pressure", "currentAction", "sourceWork", "processes")
+        sections = [dict(id=key, label=key, source="native", perspective="observed",
+                         status="available", message="", rows=[dict(label="State", value="Recorded")])
+                    for key in section_ids]
+        value = dict(sequence=1, capturedAtUnixMs=1000, worldHours=2, status="available", message="",
+                     omittedPeople=0, omittedEvents=0, people={"person-1": dict(sections=sections, events=[])})
+        header, details = W.inspection_view(value, self.people)
+        projected = W.people_view(self.people, details)
+        self.assertEqual(header["status"], "available")
+        self.assertEqual([s["id"] for s in projected[0]["sections"]], list(section_ids))
+        for count in (14, 15, 16):
+            value["people"]["person-1"]["sections"].append(sections[0] | dict(id=f"additional-{count}"))
+        W.inspection_view(value, self.people)
+        value["people"]["person-1"]["sections"].append(sections[0] | dict(id="additional-17"))
+        with self.assertRaisesRegex(ValueError, "collection limit"):
+            W.inspection_view(value, self.people)
+        value["people"]["person-1"]["sections"] = sections[:13]
+        value["people"]["person-1"]["sections"][0]["rows"] *= 49
+        with self.assertRaisesRegex(ValueError, "collection limit"):
+            W.inspection_view(value, self.people)
 
     def test_recorded_reason_is_visible_without_inferred_intent(self):
         section = dict(id="pressure", label="Pressure", source="Controller", perspective="Recorded decision",
@@ -635,6 +696,8 @@ class ObserverCommands(unittest.TestCase):
                         W.atomic(run / "observer-state.json", W.encoded(state))
                     elif len(ticks) == 2:
                         self.assertEqual(snap["camera"]["personIds"], [])
+                        if not reject:
+                            self.assertIn("sequence=1\n", (run / "observer-control.properties").read_text())
                         frame.update(sequence=2, observerSequence=1)
                         W.atomic(native / "native.json", W.encoded(frame))
                     elif len(ticks) == 3:

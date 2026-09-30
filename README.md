@@ -1,5 +1,14 @@
 # Zomboid-Speakeasy
 
+Record 80 bridges simultaneous native regional viewports in one shared world.
+Each view retains its declared region, actual native pixels, frame clock and
+local camera subject. Automatic cameras rank survival urgency within their own
+area and wait for the requested image before moving again. Compatible viewers
+can enable per-site camera controls; the existing single-view path remains
+unchanged. Native person inspection accepts the source's thirteen sections
+within a sixteen-section ceiling. This observation work creates no training
+rows, teaching targets or dataset admission.
+
 Record 79 closes the native study-to-review handoff. A verified saved attempt
 exports competing-cognition evidence immediately, reduces completed
 disagreements to bounded actor trajectories and queues them in Mousecat for
