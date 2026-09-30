@@ -2781,3 +2781,41 @@ harm, critical needs and danger-relative movement alongside ordinary rotation.
 Both the aggregate review packet and every queue receipt state zero training
 rows and zero teaching targets. Human disposition is required before any later
 candidate construction, and dataset ratification remains outside this handoff.
+
+## Record 80 - Simultaneous native regional observation
+
+Verified: 2026-09-30 06:01 UTC / 23:01 PDT.
+
+The native bridge accepts two to four sealed viewport descriptors from one
+renderer. Each region must match its authored declaration, native slot and
+world bounds. Rectangles remain disjoint within the original framebuffer;
+every cropped native image retains its exact dimensions, hash and frame
+sequence. The bridge registers a fresh regional feed only after the shared
+world clock advances and all areas provide distinct pixels.
+
+Automatic observation uses an independent camera for each declared area.
+Survival urgency and rotation retain their existing source-owned ranking,
+limited to that area's local population. The next automatic request waits for
+the corresponding rendered frame, preventing acknowledged movement from
+continually invalidating pending image captures. This repairs the native
+capture starvation observed in an isolated twelve-person regional study.
+The failed attempt remains incomplete; its replacement uses a new save and
+session identity with the same bounded supervision and content cohort.
+
+The optional `--site-controls` projection supplies a declared site identity and
+image-bound native zoom state for compatible Mousecat viewers. Bounded pan,
+zoom, focus and automatic requests select only an existing native site. Global
+time, native selection and lifecycle actions preserve their original scope.
+The default feed contract remains compatible with the existing viewer.
+
+The source already emits thirteen person-inspection sections. The consumer now
+accepts those facts with a sixteen-section ceiling while retaining the existing
+forty-eight-row, twenty-four-event, sixteen-person and byte limits. Regressions
+retain all thirteen sections, reject a seventeenth, validate regional pixel
+identity and command scope, and keep the single-camera path covered.
+
+The shared native study produced distinct residential, service-district and
+farm scenes with twelve actual represented people and one advancing clock.
+Those observations establish renderer and residency operation, not behavioral
+success or model acceptance. Every feed and review retains zero training rows,
+zero teaching targets and unreviewed dataset admission.

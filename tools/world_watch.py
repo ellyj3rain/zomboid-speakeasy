@@ -282,6 +282,13 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
               and command["sessionId"] == session and type(command["sequence"]) is int
               and command["sequence"] == sequence, "command session or sequence differs")
     action = command["action"]
+    site_id = command.get("siteId")
+    if site_id is not None:
+        A.require(action in ("pan", "focus", "zoom", "auto"), "site target requires a camera action")
+        site = next((site for site in state.get("sites", []) if site.get("id") == site_id), None)
+        A.require(site is not None, "native site unavailable")
+        state = state | site
+        fields = fields | {"siteId"}
     optional = {"pause": set(), "resume": set(), "speed": {"value"}, "pan": {"dx", "dy"},
                 "focus": {"personId"}, "stop": set(), "checkpoint": set(), "auto": set(), "select": {"personId"},
                 "panel": {"panelId", "personId", "visible"}, "zoom": {"value"},
@@ -289,6 +296,8 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
     A.require(isinstance(action, str) and action in optional
               and set(command) == fields | optional[action], "unsupported observer command")
     result = {"sequence": sequence if native_sequence is None else native_sequence}
+    if site_id is not None:
+        result["siteId"] = site_id
     if action in ("pause", "resume"):
         result["paused"] = str(action == "pause").lower()
     elif action == "speed":
@@ -342,7 +351,7 @@ def translate(command, session, sequence, state, people, bounds, native_sequence
 def image_data(root, frame):
     image = frame["image"]
     name = image["file"]
-    A.require(isinstance(name, str) and re.fullmatch(r"study-live-\d{16}\.png", name), "unsafe image filename")
+    A.require(isinstance(name, str) and re.fullmatch(r"study-live-\d{16}(?:-site[0-3])?\.png", name), "unsafe image filename")
     path = root / name
     A.require(path.resolve().parent == root.resolve() and not path.is_symlink(), "image leaves native directory")
     A.require(24 <= path.stat().st_size <= 16 * 1024 * 1024, "image byte limit")
@@ -353,6 +362,41 @@ def image_data(root, frame):
     A.require(0 < width <= 4096 and 0 < height <= 2160
               and width == image["width"] and height == image["height"], "native image dimensions differ")
     return data
+
+
+def native_views(root, frame, definition, bounds):
+    """Validate separate native split-screen pixels against authored site identities."""
+    declared = definition.get("observation", {}).get("sites", [])
+    if "views" not in frame:
+        A.require(len(declared) <= 1, "native regional viewports missing")
+        return []
+    raw = frame["views"]
+    A.require(isinstance(raw, list) and 2 <= len(raw) <= 4 and len(raw) == len(declared),
+              "native regional viewport count differs")
+    result, rectangles = [], []
+    width, height = frame["image"]["width"], frame["image"]["height"]
+    for index, (value, site) in enumerate(zip(raw, declared)):
+        A.require(isinstance(value, dict) and set(value) == {"id", "label", "slot", "x", "y", "z", "left", "top", "image"},
+                  "native regional viewport fields differ")
+        A.require(value["id"] == site["id"] and value["label"] == site["label"]
+                  and type(value["slot"]) is int and value["slot"] == index, "native regional identity differs")
+        number(value["x"], bounds[0], bounds[2]); number(value["y"], bounds[1], bounds[3]); number(value["z"], -32, math.nextafter(32, -math.inf))
+        image = value["image"]
+        A.require(isinstance(image, dict) and set(image) == {"file", "sha256", "width", "height"}, "regional image fields differ")
+        expected_name = frame["image"]["file"].removesuffix(".png") + f"-site{index}.png"
+        A.require(image["file"] == expected_name, "regional image sequence differs")
+        left, top = value["left"], value["top"]
+        A.require(type(left) is int and type(top) is int and left >= 0 and top >= 0
+                  and type(image["width"]) is int and type(image["height"]) is int
+                  and left + image["width"] <= width and top + image["height"] <= height,
+                  "regional rectangle leaves native framebuffer")
+        rect = (left, top, left + image["width"], top + image["height"])
+        A.require(all(rect[2] <= old[0] or old[2] <= rect[0] or rect[3] <= old[1] or old[3] <= rect[1]
+                      for old in rectangles), "native regional rectangles overlap")
+        rectangles.append(rect)
+        image_data(root, {"image": image})
+        result.append(value)
+    return result
 
 
 def inspection_view(value, people):
@@ -393,7 +437,7 @@ def inspection_view(value, people):
         A.require(isinstance(detail, dict) and {"sections", "events"} <= detail.keys()
                   and set(detail) <= {"sections", "events", "cognition"}, "inspection detail fields")
         sections, events, seen = [], [], set()
-        for section in array(detail["sections"], 10):
+        for section in array(detail["sections"], 16):
             A.require(isinstance(section, dict) and set(section) == {"id", "label", "source", "perspective", "status", "message", "rows"}, "inspection section fields")
             for key, limit in (("id", 128), ("label", 160), ("source", 160), ("perspective", 160), ("message", 1024)):
                 text_field(section, key, limit, key == "message")
@@ -503,20 +547,20 @@ def control_cursor(root, state):
 def watch(run, package, destination, registry=None, view_id="survival-observatory",
           label="Survival simulation", project_ref=None, session_state=None,
           session_commands=None, sao_validator=None, review_outbox=None,
-          review_endpoint="http://127.0.0.1:4317/mcp"):
+          review_endpoint="http://127.0.0.1:4317/mcp", site_controls=False):
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     relative = receipt.get("observerDirectory", "")
     A.require(relative == "" or re.fullmatch(r"attempts/\d{4}", relative), "unsafe observer attempt directory")
     with native_writer(run / relative):
         return watch_locked(run, package, destination, registry, view_id, label, project_ref,
                             session_state, session_commands, sao_validator, review_outbox,
-                            review_endpoint)
+                            review_endpoint, site_controls)
 
 
 def watch_locked(run, package, destination, registry=None, view_id="survival-observatory",
                  label="Survival simulation", project_ref=None, session_state=None,
                  session_commands=None, sao_validator=None, review_outbox=None,
-                 review_endpoint="http://127.0.0.1:4317/mcp"):
+                 review_endpoint="http://127.0.0.1:4317/mcp", site_controls=False):
     A.require(not destination.exists(), "select a fresh Mousecat feed directory")
     receipt = read(run / "run.json", 8 * 1024 * 1024)
     A.require(receipt.get("host") == "observer" and receipt["datasetAdmission"] == "unreviewed",
@@ -552,6 +596,10 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     native_cursor = None
     camera = ActivityCamera()
     displayed_camera = camera.view([])
+    declared_sites = definition.get("observation", {}).get("sites", [])
+    area_cameras = {site["id"]: ActivityCamera() for site in declared_sites} if len(declared_sites) > 1 else {}
+    area_views = {key: value.view([]) for key, value in area_cameras.items()}
+    area_cursor = 0
     requested_camera = None
     command_result = None
     last_observation = None
@@ -563,6 +611,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     receipt_cache, state_cache, frame_cache, observation_cache = (JsonSnapshot() for _ in range(4))
     archive_path, next_archive_scan = None, 0.0
     last_publication = None
+    regional_views, regional_revision = [], None
     exit_after_publication = False
     review_status = review_message = review_interaction = None
     next_review_attempt = 0.0
@@ -645,7 +694,10 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     # Inspection may fail while pixels and controls remain live.
                     observation_ready = False
             if requested_camera and frame.get("observerSequence", -1) >= requested_camera["native"]:
-                displayed_camera = requested_camera["value"]
+                if requested_camera.get("site"):
+                    area_views[requested_camera["site"]] = requested_camera["value"]
+                else:
+                    displayed_camera = requested_camera["value"]
                 requested_camera = None
             if pending is None:
                 command_path = destination / "commands" / f"{acknowledged+1:016d}.json"
@@ -679,34 +731,68 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                                 else "Session continuation requested"}
                             exit_after_publication = command["action"] == "continue"
                         elif command["action"] == "auto":
-                            camera.resume()
-                            displayed_camera = camera.view(people)
+                            selected = command.get("siteId")
+                            if area_cameras:
+                                for key, value in area_cameras.items():
+                                    if selected is None or selected == key:
+                                        value.resume(); area_views[key] = value.view(people)
+                            else:
+                                camera.resume()
+                                displayed_camera = camera.view(people)
                             acknowledged += 1
                             command_result = {"sequence": acknowledged, "status": "applied", "message": "Activity camera resumed"}
                         else:
                             if command["action"] in ("pan", "focus", "stop", "checkpoint"):
-                                camera.manual()
-                                displayed_camera = camera.view(people)
+                                selected = command.get("siteId") or (declared_sites[0]["id"] if area_cameras else None)
+                                if selected in area_cameras:
+                                    area_cameras[selected].manual(); area_views[selected] = area_cameras[selected].view(people)
+                                else:
+                                    camera.manual(); displayed_camera = camera.view(people)
                                 requested_camera = None
                             atomic(observer_root / "observer-control.properties", control)
                             native_cursor += 1
                             pending = {"native": native_cursor, "ui": acknowledged + 1}
-                elif not ended and observation_ready and observation_hours is not None and time.time() - observation_path.stat().st_mtime <= 5:
-                    plan = camera.plan(people, observation_hours, state, bounds, time.monotonic())
+                elif not ended and requested_camera is None and observation_ready and observation_hours is not None and time.time() - observation_path.stat().st_mtime <= 5:
+                    active_camera, camera_state, camera_bounds, site_id = camera, state, bounds, None
+                    if area_cameras:
+                        site = declared_sites[area_cursor % len(declared_sites)]
+                        area_cursor += 1
+                        site_id = site["id"]
+                        active_camera = area_cameras[site_id]
+                        camera_state = state | next((value for value in state.get("sites", []) if value["id"] == site_id), {})
+                        camera_bounds = (max(bounds[0], site["x"] - 32), max(bounds[1], site["y"] - 32),
+                                         min(bounds[2], site["x"] + 32), min(bounds[3], site["y"] + 32))
+                    plan = active_camera.plan(people, observation_hours, camera_state, camera_bounds, time.monotonic())
                     if plan is not None:
+                        if site_id: plan["siteId"] = site_id
                         native_cursor += 1
                         plan["sequence"] = native_cursor
                         atomic(observer_root / "observer-control.properties", "".join(
                             f"{key}={value}\n" for key, value in sorted(plan.items())).encode("ascii"))
                         pending = {"native": native_cursor, "ui": None}
-                        requested_camera = {"native": native_cursor, "value": camera.view(people)}
-                        displayed_camera = {"mode": "automatic", "personIds": [], "summary": "Moving to the next observed view"}
+                        requested_camera = {"native": native_cursor, "value": active_camera.view(people), "site": site_id}
+                        if site_id:
+                            area_views[site_id] = {"mode": "automatic", "personIds": [], "summary": "Moving to the next local observed view"}
+                        else:
+                            displayed_camera = {"mode": "automatic", "personIds": [], "summary": "Moving to the next observed view"}
                         with (destination / "camera.jsonl").open("ab") as journal:
                             journal.write(encoded({"nativeSequence": native_cursor, "shot": camera.shot,
-                                "observedHours": observation_hours, "personIds": camera.subjects,
+                                "observedHours": observation_hours, "personIds": active_camera.subjects,
                                 "view": plan, "datasetAdmission": "unreviewed"}))
             viewport = viewport_view(state, frame)
+            if frame_cache.revision != regional_revision:
+                regional_views = native_views(native_root, frame, definition, bounds)
+                regional_revision = frame_cache.revision
+            if regional_views and not registered and not ended:
+                # Loading screens can already contain viewport-shaped black
+                # rectangles. Bind a new regional study only after its real
+                # world clock advances and each native area has distinct pixels.
+                if (state.get("worldAdvanced") is not True or frame.get("hours", 0) <= state.get("startHours", 0)
+                        or len({region["image"]["sha256"] for region in regional_views}) != len(regional_views)):
+                    time.sleep(POLL_SECONDS)
+                    continue
             publication = (frame["sequence"], acknowledged, json.dumps(displayed_camera, sort_keys=True),
+                           json.dumps(area_views, sort_keys=True),
                            json.dumps(viewport, sort_keys=True),
                            state["paused"], state.get("failure"), observation_ready, last_observation,
                            json.dumps(study, sort_keys=True), ended, receipt["status"],
@@ -720,14 +806,42 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     A.require(images[name] == frame["image"], "native image filename reused with different metadata")
                 published_camera = displayed_camera | {
                     "personIds": [key for key in displayed_camera["personIds"] if key in available_ids]}
-                for key, feed in list(feed_slots.items()):
+                for key, feed in list(feed_slots.items()) if not regional_views else []:
                     visible = [person for person in feed["camera"]["personIds"] if person in available_ids]
                     if key not in visible:
                         del feed_slots[key]
                     else:
                         feed["camera"]["personIds"] = visible
-                remember_feed(feed_slots, published_camera, frame, displayed_people,
-                              (inspection_header or {}).get("capturedAtUnixMs"))
+                if regional_views:
+                    feed_slots.clear()
+                    for region in regional_views:
+                        region_image = region["image"]
+                        filename = region_image["file"]
+                        if filename not in images:
+                            atomic(destination / filename, image_data(native_root, {"image": region_image}))
+                            images[filename] = dict(region_image)
+                        else:
+                            A.require(images[filename] == region_image, "regional image filename reused")
+                        region_camera = area_views[region["id"]] | {"personIds": [key for key in area_views[region["id"]]["personIds"] if key in available_ids]}
+                        feed = {"id": "site:" + region["id"], "label": region["label"],
+                                "capturedAtUnixMs": frame["capturedAtUnixMs"], "image": region_image,
+                                "camera": region_camera | {"summary": region["label"] + "; " + region_camera["summary"]}}
+                        if site_controls:
+                            feed["siteId"] = region["id"]
+                            site = next((value for value in state.get("sites", []) if value["id"] == region["id"]), None)
+                            A.require(site is not None, "regional viewport state unavailable")
+                            region_viewport = viewport_view(state | site, frame)
+                            if region_viewport is not None: feed["viewport"] = region_viewport
+                        if inspection_header and inspection_header["capturedAtUnixMs"] <= frame["capturedAtUnixMs"]:
+                            person = next((value for value in displayed_people if value["id"] in region_camera["personIds"]), None)
+                            if person:
+                                overlay = panel_overlay(person, inspection_header["capturedAtUnixMs"])
+                                if overlay["groups"]: feed["overlay"] = overlay
+                        feed_slots[feed["id"]] = feed
+                    published_camera = {"mode": "automatic", "personIds": [], "summary": "Three native areas; one world clock and save"}
+                else:
+                    remember_feed(feed_slots, published_camera, frame, displayed_people,
+                                  (inspection_header or {}).get("capturedAtUnixMs"))
                 sequence += 1
                 display = "Native engine image"
                 if state.get("displayMode") == "native-god-view":
@@ -833,6 +947,8 @@ def main():
     parser.add_argument("--review-outbox", type=Path,
                         help="durable cognition-review evidence and queue receipts")
     parser.add_argument("--review-endpoint", default="http://127.0.0.1:4317/mcp")
+    parser.add_argument("--site-controls", action="store_true",
+                        help="publish optional per-site controls for a compatible Mousecat viewer")
     args = parser.parse_args()
     return watch(args.run.resolve(), args.package.resolve(), args.out.resolve(),
                  args.registry.resolve() if args.registry else None,
@@ -841,7 +957,7 @@ def main():
                  args.session_commands.resolve() if args.session_commands else None,
                  args.sao_validator.resolve() if args.sao_validator else None,
                  args.review_outbox.resolve() if args.review_outbox else None,
-                 args.review_endpoint)
+                 args.review_endpoint, args.site_controls)
 
 
 if __name__ == "__main__":
