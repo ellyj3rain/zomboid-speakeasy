@@ -9,7 +9,16 @@ Purpose: move from verified examples to a reproducible learned exchange while pr
 
 ## Current position
 
-The operator's current rule is scenario evaluation before dataset ratification.
+The operator's 2026-09-30 continuation establishes academic and cultural sources
+as prerequisite pre-training material with automated provenance, rights,
+reconstruction and downstream learner assessment. Record 81 implements this
+source route, the K-through-college curriculum, regional/personal schooling
+producer, source-derived grader, learning-state replay and shared FP32 reference.
+Its source/data admission and learner grades have separate owners. Native prior
+consumption, grounded task adapters and loaded acceptance retain their executable
+dependencies. See [the foundation](../corpus/pretraining/README.md).
+
+Behavioral scenarios retain evaluation before dataset ratification.
 Record 70 implements authored hypothetical scenes and exact-subject admission
 through the existing Mousecat evidence owner. Mousecat hosts the visual preview;
 Speakeasy supplies its scene and teaching data. The first water-repair example

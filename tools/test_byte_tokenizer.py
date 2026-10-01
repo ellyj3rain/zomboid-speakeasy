@@ -47,6 +47,19 @@ class ByteTokenizerTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             tokenizer.encode_text("\ud800")
 
+    def test_compiled_replacement_matches_ranked_reference_merges(self):
+        artifact = A.read(ROOT/'training/datasets/c77-tokenization/tokenizer.json')
+        tokenizer = B.Tokenizer(artifact)
+        rng = random.Random(81)
+        samples = [bytes(range(256)), b'aaaaaabababab\x00\xff' * 20,
+                   'Zoë 李 🙂 <bos> e\u0301 x²'.encode('utf-8')]
+        samples += [rng.randbytes(size) for size in (0, 1, 13, 255, 4096)]
+        for raw in samples:
+            expected = list(raw)
+            for index, pair in enumerate(tokenizer.merges):
+                expected = B._replace(expected, pair, B.FIRST_MERGE + index)
+            self.assertEqual(tokenizer.encode_bytes(raw), expected)
+
     def test_text_cannot_inject_structure_and_invalid_ids_refuse(self):
         tokenizer = B.Tokenizer(B.train([b"<bos><claim-ref>"], 8))
         tokens = tokenizer.encode_text("<bos><claim-ref><fenced-slot>")

@@ -1,0 +1,60 @@
+{
+  "schema": "speakeasy-foundation-published-validation/1",
+  "status": "passed",
+  "gate": [
+    {
+      "command": [
+        "C:\\Users\\jleyv\\Peanut Butter\\Marshmallow Meta Commons\\codex\\worktrees\\730a\\zomboid-speakeasy\\runs\\r81-pretraining-env\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "integrated.log",
+      "summary": [
+        "Ran 437 tests in 130.790s",
+        "OK (skipped=2)"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "CUDA_VISIBLE_DEVICES": "",
+        "TMP": "C:\\Users\\jleyv\\Peanut Butter\\Marshmallow Meta Commons\\codex\\worktrees\\730a\\zomboid-speakeasy\\runs\\r81-validation\\integrated-question-review\\temp"
+      }
+    }
+  ],
+  "startedAtUtc": "2026-10-01T04:22:17.785179+00:00",
+  "endedAtUtc": "2026-10-01T04:24:42.538593+00:00",
+  "staticFilesChecked": 3036,
+  "changedStaticFiles": [],
+  "sourceSha256": {
+    "corpus/education/catalogue.json": "d6f74b5e0572e95723ddb8f8847e752138e9c062b279cfaa65eea0636cf03d8a",
+    "corpus/education/curriculum.json": "32a58ec8dd750478e95b3faecab7523c68d1ecb9fbfacbce86015108150bf070",
+    "corpus/pretraining/catalogue.json": "e8911a6c1a6706c993a34bf8603a665df4e1ec80d76f982a1a54eb5e8132e2b2",
+    "tools/byte_tokenizer.py": "7a15fa2ddaed342c266a41ebf9d86918ec98bb7b69f3d0ee4f048cfe16158668",
+    "tools/education_assessment.py": "c367ee6d90059305e27459f1a04cac91a4abb9e701c81d087dd82571aa24965b",
+    "tools/education_backgrounds.py": "f8af95b491fe10ae2940d1e1f00e8e952052792a0fc27ceb1aa182f8fb3e34fc",
+    "tools/education_corpus.py": "74b9d14b149b01ed60f770d94c9c1d5dec124c207dc9c3c32a72c4c120f316ff",
+    "tools/education_curriculum.py": "541fb2c6c8859b012390ca37f56846eed0bddcc4f04938cabb80c1656288439a",
+    "tools/education_learning.py": "623c22031f252347c38be56b9185bbf76a055ecc1b828ca8db6f56bb48503a87",
+    "tools/education_training_data.py": "a1091cce09e397ae699bcc4ae1f1c374e65a7fd189c6c3a5437c90488091a98b",
+    "tools/foundation_assessment.py": "e0a251b3415fe227a94dfa16d595a9a6a813e574bb10feec6ad9dc76752ccb84",
+    "tools/foundation_pretraining.py": "d3232d1cea402650196620a1daad2483bfc5d621cbe000be201563718dba103d",
+    "tools/test_byte_tokenizer.py": "4cb89321396927df0be9b9da8b035b67325d164b6bca68076bd8c9f6541c9fd8",
+    "tools/test_education_assessment.py": "5ef83055ff29047ffd3f6dcf9ccce6098e953307897992f09bbd50058f1d1275",
+    "tools/test_education_backgrounds.py": "e28460aacbd7bcb7da4075bd02d853e75b4aa648d8e93937dcf7a63a3c81bc1f",
+    "tools/test_education_corpus.py": "1b6cff057d441fa2f5d89f4777f716f29cf177af1e441e273dd680dacf6f6d44",
+    "tools/test_education_curriculum.py": "e4d2e2b6a35f8da048224abb6e563d1e45bd982a1bec65a053014e183a789f34",
+    "tools/test_education_learning.py": "e79f779324f6f1ed0663e2931cf22b7fb6fe2753934047625af78fcd8b8421ec",
+    "tools/test_education_training_data.py": "f542a77512fe20c579b5c3ac34c497bf9d31cda79b13189527ff19d4ddb01723",
+    "tools/test_foundation_assessment.py": "6dfe52e2ee64dd4d9d174ef27762caec7624aa249edb05bedcb400b19f5857c4",
+    "tools/test_foundation_pretraining.py": "d93ac76978714b90e60c97ba4554164669c7b1f3931d366fd962bd8ffe83e397"
+  },
+  "actualQuestionEvaluationSha256": "43d24b29307d613a99f5c0e4e9e6717c6cb207552233672647e84e86d8520c74",
+  "nativeRuntimeIntegration": false,
+  "gameplay": false
+}
