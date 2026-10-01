@@ -98,10 +98,13 @@ class Tokenizer:
 
     def encode_bytes(self, value):
         A.require(type(value) is bytes, "encode_bytes requires bytes")
-        tokens = list(value)
+        # Latin-1 preserves each raw byte as one character. Each merged token
+        # likewise occupies one character, so str.replace implements the same
+        # ranked left-to-right, nonoverlapping merge in compiled code.
+        tokens = value.decode('latin-1')
         for index, pair in enumerate(self.merges):
-            tokens = _replace(tokens, pair, FIRST_MERGE + index)
-        return tokens
+            tokens = tokens.replace(chr(pair[0]) + chr(pair[1]), chr(FIRST_MERGE + index))
+        return [ord(token) for token in tokens]
 
     def decode_bytes(self, tokens):
         A.require(isinstance(tokens, list) and

@@ -32,3 +32,14 @@ training/coordination/r69-episodes/** text eol=lf
 training/coordination/r69-source-verification.json text eol=lf
 training/coordination/r70-teaching/** text eol=lf
 training/coordination/r66-reference/** text eol=lf
+# The published FP32 reference retains the exact measured export and receipts.
+training/foundation/r81-reference/** -text
+training/foundation/**/*.md text eol=lf
+corpus/education/** -text
+corpus/pretraining/** -text
+tools/education_*.py -text
+tools/test_education_*.py -text
+tools/foundation_*.py -text
+tools/test_foundation_*.py -text
+tools/byte_tokenizer.py -text
+tools/test_byte_tokenizer.py -text

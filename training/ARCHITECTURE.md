@@ -279,3 +279,33 @@ claim targets rather than a sequence of serialized label values. The current
 experimental vocabulary is frozen by content hash and remains attached to an
 excluded dataset. Pure-Java parity, representative vocabulary/model sizing and
 the learned decoder are subsequent evidence, not implied by tokenization.
+
+## Academic and cultural foundation
+
+The operator's 2026-09-30 continuation establishes academic and cultural text as
+prerequisite pre-training material. Automated publisher provenance, rights,
+byte-integrity and complete extraction reconstruction govern source admission.
+Downstream automatic assessments and held-out model measurements govern learning
+evidence. Individual source-book evaluation is outside this admission route.
+Existing task/example and native-outcome review receipts retain their exact scope.
+
+Record 81 implements this route in `corpus/education/` and `corpus/pretraining/`.
+Actual curriculum selections retain source/version/file/span identity. Shared
+regional cores propagate through dated cohorts and institutions; outsiders retain
+their prior registered curricula. Explicit background inputs generate variable
+attendance, interruption and completion receipts. Person-history reconstruction
+precedes exposure compilation.
+
+The foundation trainer fits a shared FP32 causal base on source-derived next-token
+targets using the frozen byte tokenizer. Whole-book lineages, duplicate modules,
+passages and question/solution content remain within one source-family partition.
+Held-out language measurements compare saved learned weights with the same initial
+seed and cover each evaluation family. Original textbook assessments additionally
+grade actual model or person responses and retain unsupported coverage separately.
+
+Person learning replays source-reconstructed grades with explicit learning modes,
+usage, age and time. Transfer requires retained source evidence; tutoring requires
+retained teacher evidence and exact reception; historical passive exposure requires
+an attended dated unit. The bounded prior export awaits its SAO runtime owner.
+Reference training, exported tensors, native parity and activated task adapters
+retain separate completion evidence under the shared-base architecture above.

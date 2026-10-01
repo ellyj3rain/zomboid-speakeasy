@@ -2819,3 +2819,68 @@ farm scenes with twelve actual represented people and one advancing clock.
 Those observations establish renderer and residency operation, not behavioral
 success or model acceptance. Every feed and review retains zero training rows,
 zero teaching targets and unreviewed dataset admission.
+
+
+## Record 81 - Academic and cultural pre-training
+
+Verified: 2026-10-01 04:51 UTC / 21:51 PST.
+
+Actual publisher acquisition supplies 47 academic books and 16 cultural books.
+Automated rights, provenance, extraction and reconstruction checks admit the
+necessary pre-training text. The archive retains original source bodies and
+rights evidence. Prepared material contains 36,897 passages and 145,791,891
+characters. Fifty titles have publisher public-domain-in-US standing and thirteen
+have pinned OpenStax CC BY 4.0 evidence. Individual book approval is outside this
+source route; downstream learner performance has its own automatic evaluation.
+
+The sourced kindergarten-through-college curriculum contains 130 courses and
+4,484 exact units, with dated source selections and prerequisites. Shared regional
+cores propagate through cohorts and institutions. Explicit background histories
+vary attendance, interruption and completion; migration preserves the person's
+prior schooling. Eighteen unsourced breadth slots and 284 coverage/evaluation
+needs remain visible. A modern edition cannot become literal historical exposure
+without a dated source/concept mapping.
+
+Original publisher exercises supply 6,240 supported numeric or choice targets,
+with 4,958 exact course-unit links. Answers remain evaluator-owned. Unsupported
+prose, multipart questions, absent media and missing answers retain coverage
+status. Split reconstruction groups publisher lineages, duplicate modules,
+passages and normalized question/solution content together, including copied
+questions with changed XML identifiers. The final partition has 45 training
+families and eight families in each evaluation partition, covering 47/8/8 books.
+
+The shared 3,309,824-parameter FP32 transformer completed 8,192 updates over
+130,585,586 sampled training targets with replacement. The frozen C77 byte
+tokenizer retains its fitting provenance. Saved held-out next-token loss fell
+from 5.801981 to 1.592964 on validation and from 5.806144 to 1.616554 on test.
+Each evaluation covers 4,096 spread blocks and every held-out family. All 52
+exported tensors equal the actual checkpoint bytes. The measured export,
+configuration, loss trace, source credits, isolation proof and receipts live in
+`training/foundation/r81-reference/`.
+
+Actual question evaluation reveals a competence gap. Saved weights answer six
+of eighteen scored validation responses correctly, against three for the seed.
+On test they answer thirty-five of 187 scored responses correctly (18.72%),
+against forty-three for the seed (22.99%). Of 683 supported held-out targets,
+254 fit complete input; 415 exceed context and fourteen require missing media.
+Forty-nine attempted validation answers remain unrecognized and unscored.
+No held-out answer enters an inference prompt. Language prediction improved;
+test-question performance worsened. Curriculum mastery remains unestablished.
+
+Person learning reconstructs grades against the exact source, person, session,
+learning mode and time. Independent retrieval, assisted response and passive
+exposure remain distinct. Retained prerequisite evidence supplies bounded
+transfer. Tutoring requires retained teacher evidence at reception and exact
+recipient/session/source/concept receipts. Usage, elapsed time and age drive
+declared decay policies; these candidate rates remain uncalibrated. The bounded
+personal prior awaits its SAO consumer and supplies no native skill or unseen
+county fact. Ordinary cognition and opposing associative discovery keep separate
+prediction and outcome ownership.
+
+The full integrated suite passes 437 tests in 130.790 seconds with two declared
+environment skips. Before/after hashes preserve all 3,036 checked static files.
+Independent reviews repaired duplicate-source isolation and confirmed the
+source, curriculum, schooling, assessment, learning and reference interfaces.
+Actual-source reconstruction, checkpoint/export equality and same-seed question
+evaluation have separate receipts. These are offline/headless results; native
+personal-learning integration, task adapters and loaded acceptance remain open.

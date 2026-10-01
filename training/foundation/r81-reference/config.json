@@ -1,0 +1,1 @@
+{"batch":64,"cpuThreads":1,"device":"cuda","evaluationBatches":64,"heads":4,"hidden":256,"layers":4,"learningRate":0.0003,"seed":81,"steps":8192}

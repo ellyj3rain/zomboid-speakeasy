@@ -1,5 +1,18 @@
 # Zomboid-Speakeasy
 
+Record 81 supplies the [educational and cultural foundation](corpus/education/README.md).
+Actual publisher books supply a sourced kindergarten-through-college curriculum
+and shared pre-training text. Academic and cultural sources use automated
+provenance and reconstruction checks. Regional school histories preserve the
+curricula people encountered before migration. Source-derived assessments feed
+the learning-state path for retention, transfer, tutoring, passive exposure and
+decay. The [saved FP32 reference](training/foundation/r81-reference/README.md)
+was fitted on 47 training books from a 63-book archive. Held-out text loss fell
+from 5.81 to 1.62; automatically scored test-question accuracy fell from 23.0%
+for the untrained seed to 18.7% after fitting. These measured limitations keep
+task adaptation and native personal-learning integration on the readiness path.
+Curriculum exposure supplies no native skill or unseen county fact.
+
 Record 80 bridges simultaneous native regional viewports in one shared world.
 Each view retains its declared region, actual native pixels, frame clock and
 local camera subject. Automatic cameras rank survival urgency within their own
@@ -260,18 +273,19 @@ point in it.
   is; the first 112 rows are in `work-words.jsonl`, ratified by
   the operator (records 28 and 29).
 - `world/` - the 1993 world model as researched documents: what a
-  person can know, scoped by who they were. Every claim carries its
-  confidence, and nothing teaches a model until it has been reviewed
-  and approved.
-- `corpus/` - curated public-domain period text, with source and
-  license recorded per item.
+  person can know, scoped by who they were. World evidence retains
+  its source, confidence and exact review standing.
+- `corpus/` - period text and academic/cultural prerequisite material,
+  with source and rights evidence recorded per item. Academic and
+  cultural admission uses automatic source/data evaluation.
 - `voice/` - authored voice material demonstrating will, choice, and
   mood; machine-expanded at build time. Speech is one thing a cognition
   produces (record 21), so this is a part of the project rather than
   the whole of it.
-- `training/` - the runs that produce the models, sized against
-  measured in-game inference budgets, and the export contract
-  consumers load them by.
+- `training/` - the shared-base and typed-task architecture, retained
+  model experiments and export contracts. Reference pre-training
+  additionally records source partitions, learned weights and automatic
+  held-out measurements under immutable local `runs/` artifacts.
 
 The list is open. A stratum is added when the work needs one, not
 because the structure was drawn in advance.

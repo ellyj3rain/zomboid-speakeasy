@@ -1,0 +1,814 @@
+{
+  "schema": "speakeasy-education-source-catalogue/1",
+  "purpose": "Educational source texts, worked examples and exercises for the shared cognitive substrate",
+  "standing": "candidate-sources",
+  "sources": [
+    {
+      "id": "mcguffey-primer",
+      "provider": "gutenberg",
+      "bookId": 14642,
+      "stages": [
+        "kindergarten"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-first",
+      "provider": "gutenberg",
+      "bookId": 14640,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-second",
+      "provider": "gutenberg",
+      "bookId": 14668,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-third",
+      "provider": "gutenberg",
+      "bookId": 14766,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-fourth",
+      "provider": "gutenberg",
+      "bookId": 14880,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-fifth",
+      "provider": "gutenberg",
+      "bookId": 15040,
+      "stages": [
+        "middle-school"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-sixth",
+      "provider": "gutenberg",
+      "bookId": 16751,
+      "stages": [
+        "secondary"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "mcguffey-spelling",
+      "provider": "gutenberg",
+      "bookId": 15456,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "elements-arithmetic",
+      "provider": "gutenberg",
+      "bookId": 68662,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "first-algebra",
+      "provider": "gutenberg",
+      "bookId": 13309,
+      "stages": [
+        "secondary"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "review-algebra",
+      "provider": "gutenberg",
+      "bookId": 38536,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "way-to-geometry",
+      "provider": "gutenberg",
+      "bookId": 26752,
+      "stages": [
+        "secondary"
+      ],
+      "subjects": [
+        "mathematics"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "grammar-exercises",
+      "provider": "gutenberg",
+      "bookId": 45814,
+      "stages": [
+        "secondary"
+      ],
+      "subjects": [
+        "literacy"
+      ]
+    },
+    {
+      "id": "pure-mathematics",
+      "provider": "gutenberg",
+      "bookId": 38769,
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "calculus-made-easy",
+      "provider": "gutenberg",
+      "bookId": 33283,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "openstax-prealgebra",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-prealgebra-bundle",
+      "revision": "77a933c672e9c48c746eb802d588a9a7ddfd6e0d",
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "openstax-physics",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-physics",
+      "revision": "dfdfd7a5356ecdd42e504de3df50d9153e33ea49",
+      "stages": [
+        "secondary"
+      ],
+      "subjects": [
+        "physics"
+      ]
+    },
+    {
+      "id": "openstax-college-algebra",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-college-algebra-bundle",
+      "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "mathematics"
+      ]
+    },
+    {
+      "id": "openstax-biology",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-biology-bundle",
+      "revision": "d2779c2edfb435e75047325434fe2fe93d5aa120",
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "biology"
+      ]
+    },
+    {
+      "id": "openstax-chemistry",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-chemistry-bundle",
+      "revision": "32c719622fbb7a0ca729cd645c1df4cf4e7d5b3a",
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "chemistry"
+      ]
+    },
+    {
+      "id": "openstax-anatomy",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-anatomy-physiology",
+      "revision": "b0058a743bdd2cc08196abaaa7d5469970c0d80c",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "biology",
+        "health"
+      ]
+    },
+    {
+      "id": "openstax-government",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-american-government",
+      "revision": "5c90dd7907dbf25f42266417e63ca3bb0012f031",
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "civics"
+      ]
+    },
+    {
+      "id": "openstax-us-history",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-us-history",
+      "revision": "046331cfcea0ac1b1a8fd461b3e6aae638845af3",
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "history"
+      ]
+    },
+    {
+      "id": "openstax-world-history",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-world-history",
+      "revision": "3e17beda9130380d24be881e6d1942dfcc1be845",
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "history"
+      ]
+    },
+    {
+      "id": "openstax-psychology",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-psychology",
+      "revision": "e061043bf2f9e86ace51c4e8dc9555160f60a99d",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "social-science"
+      ]
+    },
+    {
+      "id": "openstax-sociology",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-introduction-sociology",
+      "revision": "d35d5f3bdac40f93607d600134865d4f13ce1f9b",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "social-science"
+      ]
+    },
+    {
+      "id": "openstax-college-physics",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-college-physics",
+      "revision": "f98d7a792138a6133fe7267d17e70aa04e9ccbed",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "physics"
+      ]
+    },
+    {
+      "id": "openstax-business",
+      "provider": "openstax-github",
+      "repository": "openstax/osbooks-introduction-business",
+      "revision": "2a839877ab89a207c9b9e501df438173013fa45c",
+      "stages": [
+        "college"
+      ],
+      "subjects": [
+        "economics"
+      ]
+    },
+    {
+      "id": "chambers-science",
+      "provider": "gutenberg",
+      "bookId": 18217,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "biology",
+        "practical-skills"
+      ]
+    },
+    {
+      "id": "general-science",
+      "provider": "gutenberg",
+      "bookId": 16593,
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "physics",
+        "chemistry",
+        "practical-skills"
+      ]
+    },
+    {
+      "id": "home-geography",
+      "provider": "gutenberg",
+      "bookId": 12228,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "geography"
+      ]
+    },
+    {
+      "id": "school-us-history",
+      "provider": "gutenberg",
+      "bookId": 11313,
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "history"
+      ]
+    },
+    {
+      "id": "civil-government",
+      "provider": "gutenberg",
+      "bookId": 15018,
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "civics"
+      ]
+    },
+    {
+      "id": "primary-physiology",
+      "provider": "gutenberg",
+      "bookId": 52775,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "health",
+        "biology"
+      ]
+    },
+    {
+      "id": "elementary-music",
+      "provider": "gutenberg",
+      "bookId": 65500,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "arts"
+      ]
+    },
+    {
+      "id": "writing-and-drawing",
+      "provider": "gutenberg",
+      "bookId": 44815,
+      "stages": [
+        "primary"
+      ],
+      "subjects": [
+        "arts",
+        "literacy"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "agriculture-beginners",
+      "provider": "gutenberg",
+      "bookId": 20772,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "practical-skills",
+        "biology"
+      ]
+    },
+    {
+      "id": "household-science",
+      "provider": "gutenberg",
+      "bookId": 20557,
+      "stages": [
+        "primary",
+        "middle-school"
+      ],
+      "subjects": [
+        "practical-skills",
+        "health"
+      ]
+    },
+    {
+      "id": "practical-mechanics",
+      "provider": "gutenberg",
+      "bookId": 22298,
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "practical-skills",
+        "physics"
+      ]
+    },
+    {
+      "id": "montessori-handbook",
+      "provider": "gutenberg",
+      "bookId": 29635,
+      "stages": [
+        "kindergarten",
+        "primary"
+      ],
+      "subjects": [
+        "mathematics",
+        "practical-skills",
+        "arts"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "froebel-gifts",
+      "provider": "gutenberg",
+      "bookId": 31097,
+      "stages": [
+        "kindergarten",
+        "primary"
+      ],
+      "subjects": [
+        "mathematics",
+        "arts",
+        "practical-skills"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "first-spanish-reader",
+      "provider": "gutenberg",
+      "bookId": 15353,
+      "stages": [
+        "middle-school",
+        "secondary"
+      ],
+      "subjects": [
+        "languages"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "cumulative-french-reader",
+      "provider": "gutenberg",
+      "bookId": 29398,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "languages"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "latin-beginners",
+      "provider": "gutenberg",
+      "bookId": 18251,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "languages"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "composition-rhetoric",
+      "provider": "gutenberg",
+      "bookId": 12088,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literacy",
+        "literature"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "composition-literature",
+      "provider": "gutenberg",
+      "bookId": 28097,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literacy",
+        "literature"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "kindergarten-finger-plays",
+      "provider": "gutenberg",
+      "bookId": 24912,
+      "stages": [
+        "kindergarten",
+        "primary"
+      ],
+      "subjects": [
+        "arts",
+        "mathematics",
+        "literacy"
+      ],
+      "format": "html-archive"
+    },
+    {
+      "id": "pride-and-prejudice",
+      "provider": "gutenberg",
+      "bookId": 1342,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "tale-of-two-cities",
+      "provider": "gutenberg",
+      "bookId": 98,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "huckleberry-finn",
+      "provider": "gutenberg",
+      "bookId": 76,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "leaves-of-grass",
+      "provider": "gutenberg",
+      "bookId": 1322,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "souls-of-black-folk",
+      "provider": "gutenberg",
+      "bookId": 408,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "frankenstein",
+      "provider": "gutenberg",
+      "bookId": 84,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "dubliners",
+      "provider": "gutenberg",
+      "bookId": 2814,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "sherlock-holmes",
+      "provider": "gutenberg",
+      "bookId": 1661,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "art-of-war",
+      "provider": "gutenberg",
+      "bookId": 132,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "analects",
+      "provider": "gutenberg",
+      "bookId": 3330,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "republic",
+      "provider": "gutenberg",
+      "bookId": 1497,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "federalist-papers",
+      "provider": "gutenberg",
+      "bookId": 1404,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "wealth-of-nations",
+      "provider": "gutenberg",
+      "bookId": 3300,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "on-liberty",
+      "provider": "gutenberg",
+      "bookId": 34901,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "alice-wonderland",
+      "provider": "gutenberg",
+      "bookId": 11,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    },
+    {
+      "id": "aesop-fables",
+      "provider": "gutenberg",
+      "bookId": 21,
+      "stages": [
+        "secondary",
+        "college"
+      ],
+      "subjects": [
+        "literature",
+        "literacy"
+      ],
+      "materialKind": "cultural-language-foundation"
+    }
+  ]
+}
