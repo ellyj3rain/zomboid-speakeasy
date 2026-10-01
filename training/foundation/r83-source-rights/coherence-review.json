@@ -1,0 +1,186 @@
+{
+  "actualSourceBundles": [
+    {
+      "archiveSha256": "4df3c5f045e12c1719670c0b26972942acda371102f0fc5309749684006e13f7",
+      "collectionMemberNodes": 153,
+      "collections": 1,
+      "explicitModuleGrants": 0,
+      "id": "openstax-business",
+      "modules": 153,
+      "revision": "d1032e8c1ab064ea9b8027b8e8de1c88c21991e9",
+      "rightsSha256": "e34f36c053f21dbad195309f560d57007b2a79ec4a9ffeeeb5d79cf73cf6f000"
+    },
+    {
+      "archiveSha256": "e6020026741481802d1c09925b4d734f7b6f499f2d6a41316f491792376ba977",
+      "collectionMemberNodes": 179,
+      "collections": 2,
+      "explicitModuleGrants": 0,
+      "id": "openstax-introductory-statistics-2e-eval",
+      "modules": 179,
+      "revision": "50ec91749080bb040b57bb40c34337cacc994cba",
+      "rightsSha256": "83c36a2c1cb4b8f09f0942b072683717d283bc4a117b0220da7f0eb99011f6ab"
+    },
+    {
+      "archiveSha256": "e6020026741481802d1c09925b4d734f7b6f499f2d6a41316f491792376ba977",
+      "collectionMemberNodes": 199,
+      "collections": 1,
+      "explicitModuleGrants": 0,
+      "id": "openstax-astronomy-original-eval",
+      "modules": 199,
+      "revision": "59cb0306b41afb9585511101a8bc4e00e2450078",
+      "rightsSha256": "0f5faa65418b35788e8c44c1d3e961f60057f01aec3931582dd3c42900eb9ecc"
+    },
+    {
+      "archiveSha256": "68853d5b5645e60229455c2c824e18d84731fff0f4368785a424c3ab818322e0",
+      "collectionMemberNodes": 159,
+      "collections": 1,
+      "explicitModuleGrants": 0,
+      "id": "openstax-microbiology-final-candidate",
+      "modules": 159,
+      "revision": "195e304d43b988de2b33bd798e59c030a3d84902",
+      "rightsSha256": "20150675215a5bbc9a488a5bae5c2aa08fc9aae3369a74ff53c1ce2700602c56"
+    }
+  ],
+  "catalogues": [
+    {
+      "businessNewRevision": "d1032e8c1ab064ea9b8027b8e8de1c88c21991e9",
+      "businessOldRevision": "2a839877ab89a207c9b9e501df438173013fa45c",
+      "path": "corpus/education/catalogue.json",
+      "sources": 47
+    },
+    {
+      "businessNewRevision": "d1032e8c1ab064ea9b8027b8e8de1c88c21991e9",
+      "businessOldRevision": "2a839877ab89a207c9b9e501df438173013fa45c",
+      "path": "corpus/pretraining/catalogue.json",
+      "sources": 63
+    }
+  ],
+  "currentProofPath": "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\speakeasy-r83-publisher-rights\\runs\\r83-publisher-rights-validation\\license-text-unicode\\source-proof\\frozen-source-proof.json",
+  "executingMutants": [
+    {
+      "failedAssertions": 1,
+      "logHash": "df60d649ff3d4cd58dd832c5fc54015156682ce7decb5e6ebd9bc4733c432d46",
+      "name": "acquisition-rights-bypass",
+      "sourceHash": "504e1863309e6cec46a34579dd826224c8e1c8f77472b96d0b38fbe789973ad0"
+    },
+    {
+      "failedAssertions": 6,
+      "logHash": "dd78fa6cb761657995f9001fb173db6438780e724fd05c08e6026fc8f75c152a",
+      "name": "verification-rights-bypass",
+      "sourceHash": "aceb423fe4ba98342f6f8a2fa71516957e1487ae864b8deb8e2b91a51a31df47"
+    },
+    {
+      "failedAssertions": 1,
+      "logHash": "f2bc62685d994943b25e35e337648df78e2c94482a4b662d47e5be87ddd1dad8",
+      "name": "orphan-inheritance-bypass",
+      "sourceHash": "7b36dbb94dbc3b61d01d81652ac33e9b81e9d3bdebf9d545d2e02345b155dd76"
+    },
+    {
+      "failedAssertions": 1,
+      "logHash": "fe626073508d77855be88ab9e0710af8a56fa20e71856569c7f8a493c3cfb689",
+      "name": "collection-declaration-text-bypass",
+      "sourceHash": "387817693a8b2e3f35cf1068850e7ca7f6a715928e6ff0c819f2749818aaf124"
+    },
+    {
+      "failedAssertions": 1,
+      "logHash": "f4ec0eb55605f87ae14203933c69f51d686a2042a0b174179e497ca79933034d",
+      "name": "module-declaration-text-bypass",
+      "sourceHash": "387817693a8b2e3f35cf1068850e7ca7f6a715928e6ff0c819f2749818aaf124"
+    },
+    {
+      "failedAssertions": 10,
+      "logHash": "7b8a227bba44ebd94069dca1d6a0c21e96cbdf1ddc9c0012f9d7a59cb94a0f33",
+      "name": "unicode-declaration-normalization-bypass",
+      "sourceHash": "b8ba00b2727f0145064a491eaa0981b21d17e9eff370c3b0a6a3a5d18f915859"
+    },
+    {
+      "failedAssertions": 6,
+      "logHash": "90b75316a4fdc4223368af2c10de116af53ede1b50c64139e94b68405a383b8c",
+      "name": "unicode-collection-revalidation-bypass",
+      "sourceHash": "b8ba00b2727f0145064a491eaa0981b21d17e9eff370c3b0a6a3a5d18f915859"
+    },
+    {
+      "failedAssertions": 6,
+      "logHash": "3419b53cdd731faebcb6cb43903c4731c71e9acf0867b0b72b1b6d2a8395af28",
+      "name": "unicode-module-revalidation-bypass",
+      "sourceHash": "b8ba00b2727f0145064a491eaa0981b21d17e9eff370c3b0a6a3a5d18f915859"
+    }
+  ],
+  "findings": [],
+  "historicalCompletionRawSha256": "f3387e665ca7aba7940777a6df2eddf95e184c4645a56cc49f8f7c5b206825a6",
+  "independentControls": [
+    {
+      "control": "actual-original-Business-verification-bypass",
+      "failure": "original Business collection accepted"
+    },
+    {
+      "control": "actual-prior-byte-proof",
+      "failure": "source freeze differs: tools/education_corpus.py"
+    },
+    {
+      "control": "declared-log-digest-changed-in-memory",
+      "failure": "suite log identity differs: focused-final-v2-suite.log"
+    }
+  ],
+  "limitations": [
+    "completed current 487/48-test suite receipts verified, not rerun; prior completion.json remains historical",
+    "corrected complete63-source archive/bank/curriculum/data follow-up remains root-owned",
+    "fresh assessment grades/task fits absent",
+    "no reviewed source/output changes"
+  ],
+  "originalBusinessRefusal": "publisher member license is not the expected CC BY 4.0: openstax-business/source/collections/introduction-business-2e.collection.xml",
+  "originalValidPublishers": [
+    "openstax-prealgebra",
+    "openstax-physics",
+    "openstax-college-algebra",
+    "openstax-biology",
+    "openstax-chemistry",
+    "openstax-anatomy",
+    "openstax-government",
+    "openstax-us-history",
+    "openstax-world-history",
+    "openstax-psychology",
+    "openstax-sociology",
+    "openstax-college-physics"
+  ],
+  "pinnedReferenceFiles": 56,
+  "proofRawSha256": "a45629f5330134d8316a43502e82ea23bd1ec14a5e625ac364f28f192c0e9491",
+  "protectedChanged": [],
+  "protectedOriginalFiles": 7344,
+  "reviewSourceSha256": "1b4272489ae566ab82c531a7d1508ef2be2c2d9b9537d6fcbb1347ff801c9eb2",
+  "schema": "sao-independent-publisher-rights-coherence/1",
+  "scope": "read-only seven frozen owners, real source bundles, references and proof closure; no model grading/fit or full-suite repeat",
+  "sharedCatalogueSources": 47,
+  "sourceHashes": {
+    "corpus/education/catalogue.json": "3b9da845870e6bcd3cf1428d30022df0a87cf532fb918eb348b2721511ba647e",
+    "corpus/pretraining/catalogue.json": "f3fa63ebf1deacb8521807cc0e88d02108664adf963d5143c2f147b7cd27db39",
+    "tools/education_corpus.py": "0af721f524fb3f82d65241a0fdc0e6871d69144461a15a9fa7fc6078b587c9d6",
+    "tools/test_education_adapter.py": "5b0c90e40b1eb18bcc7845b3e36e2d24ac76aaf7439de008c5ac237ebf9f9a22",
+    "tools/test_education_assessment.py": "b17b1d510e38d0f4d4f1300dfb7a9da0b811de14fe2c3fef66a12cd37b4da178",
+    "tools/test_education_corpus.py": "6543aa3f5d2dada48ec0503521f1c959eb42febc026391d744d3b475ef45a673",
+    "tools/test_foundation_assessment.py": "514513f2ff1d54972f00c6a0567f6285de527212481b5f318ce6ff5744b5cca9"
+  },
+  "status": "PASS",
+  "suiteReceiptClosure": [
+    {
+      "declaredSkips": 1,
+      "logRawSha256": "7403a9171f7796d6fd8990e4365a920bdb1727fc6e903fcba29082ba1569b444",
+      "mode": "full-text-unicode",
+      "receiptLogicalSha256": "70b3e6f42ea5a387f9306c848649e076fcdf0f627e0876bc98c0cd74642c7d85",
+      "receiptRawSha256": "206177cfc67f0de7e6a0e2bf3fab5d8c8b6b95ad3f3a13f68e33103dc505352b",
+      "skipLines": [
+        "test_installed_kahlua_source_bound_projection (test_cognition_capability_experience.CapabilityExperience.test_installed_kahlua_source_bound_projection) ... skipped 'explicit installed native candidate is not configured'"
+      ],
+      "tests": 487
+    },
+    {
+      "declaredSkips": 0,
+      "logRawSha256": "3ea9fbdfdb13f66086b3da77c961a8799e639269f63c6ca2be4fa0166cad5c0c",
+      "mode": "focused-text-unicode",
+      "receiptLogicalSha256": "9212f4cfdff13debae3f2b819aa227db95a214eae4f0f3e6411c7228bdc1a71a",
+      "receiptRawSha256": "1f3b8966d6f3a7a1c70e23d9767d90cf992100b42c13a897ed92211630424e01",
+      "skipLines": [],
+      "tests": 48
+    }
+  ]
+}

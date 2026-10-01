@@ -33,8 +33,19 @@ raw export and extracted book body have separate hashes.
 
 Every acquired source retains its actual publisher rights evidence. This route
 accepts publisher-established United States public-domain standing or an exact
-CC BY 4.0 edition. Several current OpenStax repositories now carry NC-SA terms;
-the selected CC BY versions retain their own pinned revision and license.
+CC BY 4.0 edition. The checker reconstructs every collection's formal license,
+its complete membership and any module declaration. Present declaration names
+must agree with the supported license; absent module declarations inherit only
+their containing verified collections. Acquisition, preparation, admission,
+saved-dataset validation and archive reuse enforce the same complete-bundle check.
+Several current OpenStax repositories now carry NC-SA terms; compatible editions
+retain their own pinned revision and license.
+
+The [Record 83 correction](../../training/foundation/r83-source-rights/README.md)
+identifies the original held-out Business rights mismatch and the current
+verified predecessor pin. Existing source-bound curriculum and assessment
+artifacts keep their original editions. New archives require reconstructed
+source selections, assessment families and data bindings before training.
 The repository's MIT license covers code and does not replace book terms or
 attribution requirements.
 

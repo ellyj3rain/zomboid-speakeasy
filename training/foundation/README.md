@@ -11,3 +11,8 @@ cultural pre-training. The [Record 82 answer adapter](r82-reference/README.md) h
 question performance and a source-bound personal prior export. Native personal
 attachment and consequential task activation retain separate SAO evidence. The independent associative model
 keeps its own prediction and outcome history.
+
+The [Record 83 source-rights correction](r83-source-rights/README.md) qualifies
+the original held-out Business edition and replaces its current acquisition pin.
+Existing reference bytes and reported grades remain historical. Successor
+references bind a complete reconstructed archive and assessment family closure.

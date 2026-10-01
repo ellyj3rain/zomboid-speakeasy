@@ -45,3 +45,5 @@ tools/byte_tokenizer.py -text
 tools/test_byte_tokenizer.py -text
 
 training/foundation/r82-reference/** -text
+
+training/foundation/r83-source-rights/** -text

@@ -40,6 +40,12 @@ MODULE = '''<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.o
 </section></content></document>'''.encode()
 
 
+COLLECTION = b'''<collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml">
+<metadata><md:title>Controlled source fixture</md:title>
+<md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</md:license></metadata>
+<content><module document="module-one"/></content></collection>'''
+
+
 class EducationAssessmentTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -51,7 +57,8 @@ class EducationAssessmentTests(unittest.TestCase):
              'repository': 'openstax/controlled-' + name, 'revision': name * 40,
              'stages': ['primary'], 'subjects': ['mathematics']} for name in ('a', 'b')]}
         files = {'LICENSE': b'Attribution 4.0 International\nControlled source license.',
-                 'modules/module-one/index.cnxml': MODULE}
+                 'modules/module-one/index.cnxml': MODULE,
+                 'collections/controlled.collection.xml': COLLECTION}
         self.files = files
         trees = {}
         for source in self.catalogue['sources']:
@@ -297,7 +304,8 @@ class EducationAssessmentTests(unittest.TestCase):
                 source['repository'] = 'openstax/same-book'
         responses = {}
         for source in catalogue['sources']:
-            files = {'LICENSE': self.files['LICENSE'], 'modules/module-one/index.cnxml': modules[source['id']]}
+            files = {'LICENSE': self.files['LICENSE'], 'modules/module-one/index.cnxml': modules[source['id']],
+                     'collections/controlled.collection.xml': COLLECTION}
             tree = {'sha': source['revision'], 'truncated': False, 'tree': [
                 {'path': path, 'type': 'blob', 'size': len(data),
                  'sha': hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()}

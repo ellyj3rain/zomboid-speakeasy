@@ -133,7 +133,8 @@ class SavedModelControls(unittest.TestCase):
                        'repository': 'openstax/controlled-' + name, 'revision': name * 40,
                        'stages': ['primary'], 'subjects': ['mathematics']} for name in ('a', 'b')]}
         files = {'LICENSE': b'Attribution 4.0 International\nControlled fixture license.',
-                 'modules/module-one/index.cnxml': Q.MODULE}
+                 'modules/module-one/index.cnxml': Q.MODULE,
+                 'collections/controlled.collection.xml': Q.COLLECTION}
         entries = [{'path': path, 'type': 'blob', 'size': len(raw),
                     'sha': hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()}
                    for path, raw in files.items()]

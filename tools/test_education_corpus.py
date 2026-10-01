@@ -1,5 +1,6 @@
 """Educational acquisition and training admission refuse missing source authority."""
 import json
+import hashlib
 import io
 import os
 from pathlib import Path
@@ -240,6 +241,244 @@ class EducationCorpusTests(unittest.TestCase):
         C.write_json(self.root/'html/controlled-arithmetic/source.json',record['sources'][0])
         with self.assertRaisesRegex(ValueError,'derived HTML differs'):
             C.verified_sources(self.root/'html')
+
+class PublisherRightsTests(unittest.TestCase):
+    """Publisher-shaped controls run the real acquisition and archive owners."""
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
+        self.archive=self.root/'archive'
+        self.source={'id':'controlled-publisher','provider':'openstax-github',
+                     'repository':'openstax/controlled-publisher','revision':'a'*40,
+                     'stages':['college'],'subjects':['economics']}
+        self.catalogue={'schema':'speakeasy-education-source-catalogue/1',
+                        'standing':'candidate-sources','sources':[self.source]}
+        self.files={'LICENSE':b'Attribution 4.0 International\nControlled publisher terms.',
+                    'modules/m1/index.cnxml':self.module(),
+                    'collections/book.collection.xml':self.collection()}
+    def tearDown(self):self.tmp.cleanup()
+    @staticmethod
+    def module(identity='m1',declaration=''):
+        return ('<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">'
+                '<metadata><md:content-id>'+identity+'</md:content-id>'+declaration+'</metadata>'
+                '<content><para>Controlled publisher instruction.</para></content></document>').encode()
+    @staticmethod
+    def collection(members=('m1',),url='http://creativecommons.org/licenses/by/4.0/',declaration=None):
+        # The NC-SA URL and wording reproduce the original Introduction to
+        # Business 2e collection's declaration, independently of generic LICENSE.
+        declaration=('<md:license url="'+url+'">Creative Commons '+
+                     ('Attribution-NonCommercial-ShareAlike' if 'by-nc-sa' in url else 'Attribution')+
+                     ' 4.0 International</md:license>') if declaration is None else declaration
+        return ('<collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml">'
+                '<metadata><md:title>Controlled source</md:title>'+declaration+'</metadata>'
+                '<content>'+''.join('<module document="'+v+'"/>' for v in members)+
+                '</content></collection>').encode()
+    @staticmethod
+    def blob(data):return hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+    def acquire(self):
+        tree=A.encoded({'sha':self.source['revision'],'truncated':False,'tree':[
+            {'path':p,'type':'blob','size':len(raw),'sha':self.blob(raw)} for p,raw in self.files.items()]})
+        def fetch(url):
+            if '/git/trees/' in url:return tree,url
+            return self.files[url.split('/'+self.source['revision']+'/',1)[1]],url
+        with patch.object(C,'fetch',side_effect=fetch):return C.acquire(self.catalogue,self.archive)
+    def refused(self,reason):
+        with self.assertRaisesRegex(ValueError,'no actual educational content acquired'):self.acquire()
+        record=A.read(self.archive/'acquisition.json')
+        self.assertEqual(record['sources'],[]);self.assertEqual(record['trainingRows'],0)
+        self.assertRegex(record['failures'][0]['reason'],reason)
+        self.assertFalse((self.archive/'controlled-publisher/source.json').exists())
+        # Preserve the entire failed bundle as evidence; never drop offending members.
+        for p,raw in self.files.items():
+            self.assertEqual((self.archive/'controlled-publisher/source'/p).read_bytes(),raw)
+    def reseal_raw(self,path,raw):
+        record=A.read(self.archive/'acquisition.json');source=record['sources'][0]
+        full='controlled-publisher/source/'+path
+        (self.archive/full).write_bytes(raw)
+        entry=next(v for v in source['files'] if v['path']==full)
+        entry.update(sha256=C.sha(raw),bytes=len(raw))
+        treepath='controlled-publisher/publisher-tree.json';tree=A.read(self.archive/treepath)
+        member=next(v for v in tree['tree'] if v['path']==path)
+        member.update(sha=self.blob(raw),size=len(raw))
+        C.write_json(self.archive/treepath,tree);data=(self.archive/treepath).read_bytes()
+        next(v for v in source['files'] if v['path']==treepath).update(sha256=C.sha(data),bytes=len(data))
+        C.write_json(self.archive/'controlled-publisher/source.json',source)
+        C.write_json(self.archive/'acquisition.json',record)
+    def test_matching_collection_inheritance_and_module_override(self):
+        self.files['modules/m2/index.cnxml']=self.module('m2',
+            '<md:license url="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</md:license>')
+        self.files['collections/book.collection.xml']=self.collection(('m1','m2'))
+        self.files['collections/second.collection.xml']=self.collection(('m1',))
+        self.assertTrue(self.acquire());source=C.verified_sources(self.archive)[0]
+        rights=C.publisher_rights(source,self.archive)
+        self.assertEqual(len(rights['collections']),2);self.assertEqual(len(rights['modules']),2)
+        self.assertEqual(rights['modules']['m1']['declaredLicenseUrls'],[])
+        self.assertEqual(len(rights['modules']['m1']['collectionPaths']),2)
+        self.assertEqual(rights['modules']['m2']['declaredLicenseUrls'],
+                         ['https://creativecommons.org/licenses/by/4.0'])
+        prepared=self.root/'prepared';dataset=self.root/'dataset'
+        C.prepare(self.archive,prepared,256);C.admit(self.archive,prepared,dataset)
+        C.validate_admitted(self.archive,prepared,dataset)
+        self.assertEqual(len(list(C.texts(source,self.archive))),2)
+    def test_generic_by4_cannot_override_actual_nc_collection_declaration(self):
+        self.files['collections/book.collection.xml']=self.collection(url='http://creativecommons.org/licenses/by-nc-sa/4.0/')
+        self.refused('member license is not the expected CC BY 4.0')
+    def test_mixed_bundle_refuses_whole_source(self):
+        self.files['collections/second.collection.xml']=self.collection(url='https://creativecommons.org/licenses/by-nc-sa/4.0/')
+        self.refused('member license is not the expected CC BY 4.0')
+    def test_explicit_incompatible_module_override_refuses(self):
+        self.files['modules/m1/index.cnxml']=self.module(declaration=
+            '<md:license url="http://creativecommons.org/licenses/by-nc-sa/4.0/">NC-SA</md:license>')
+        self.refused('member license is not the expected CC BY 4.0')
+    def test_unknown_module_rights_refuse(self):
+        self.files['modules/m1/index.cnxml']=self.module(declaration='<md:license>Unknown terms</md:license>')
+        self.refused('member license is not the expected CC BY 4.0')
+    def test_missing_collection_declaration_refuses(self):
+        self.files['collections/book.collection.xml']=self.collection(declaration='')
+        self.refused('collection license absent')
+    def test_absent_collection_membership_refuses(self):
+        del self.files['collections/book.collection.xml']
+        self.refused('collection membership absent')
+    def test_orphan_module_cannot_inherit_generic_license(self):
+        self.files['modules/m2/index.cnxml']=self.module('m2')
+        self.refused('orphan publisher module rights')
+    def test_missing_collection_member_refuses(self):
+        self.files['collections/book.collection.xml']=self.collection(('m1','missing'))
+        self.refused('collection member missing')
+    def test_module_identity_mismatch_refuses(self):
+        self.files['modules/m1/index.cnxml']=self.module('other')
+        self.refused('module identity differs')
+    def test_collection_members_outside_content_are_not_silently_ignored(self):
+        self.files['collections/book.collection.xml']=self.collection().replace(
+            b'</collection>',b'<module document="unknown"/></collection>')
+        self.refused('unsupported publisher collection membership')
+    def test_supported_license_url_spellings(self):
+        for i,url in enumerate(['http://creativecommons.org/licenses/by/4.0/',
+                                'https://creativecommons.org/licenses/by/4.0/',
+                                'http://creativecommons.org/licenses/by/4.0',
+                                'https://creativecommons.org/licenses/by/4.0']):
+            with self.subTest(url=url):
+                self.archive=self.root/str(i)
+                self.files['collections/book.collection.xml']=self.collection(url=url)
+                self.assertTrue(self.acquire());C.verified_sources(self.archive)
+    def test_unknown_or_lookalike_license_urls_refuse(self):
+        for i,url in enumerate(['https://creativecommons.org/licenses/by/3.0/',
+                                'https://creativecommons.org.evil/licenses/by/4.0/',
+                                'https://creativecommons.org/licenses/by/4.0/?new=terms']):
+            with self.subTest(url=url):
+                self.archive=self.root/str(i)
+                self.files['collections/book.collection.xml']=self.collection(url=url)
+                self.refused('member license is not the expected CC BY 4.0')
+    def test_license_outside_metadata_cannot_supply_or_override_rights(self):
+        self.files['modules/m1/index.cnxml']=self.module().replace(b'<para>',
+            b'<license url="http://creativecommons.org/licenses/by-nc-sa/4.0/"/><para>')
+        self.refused('unsupported publisher rights declaration')
+    def test_resealed_indexes_cannot_authorize_raw_nc_collection_at_any_consumer(self):
+        self.acquire();prepared=self.root/'prepared';dataset=self.root/'dataset'
+        C.prepare(self.archive,prepared,256);C.admit(self.archive,prepared,dataset)
+        self.reseal_raw('collections/book.collection.xml',
+                        self.collection(url='http://creativecommons.org/licenses/by-nc-sa/4.0/'))
+        target=self.root/'new-prepared';new_dataset=self.root/'new-dataset'
+        operations=[lambda:C.verified_sources(self.archive),lambda:C.prepare(self.archive,target,256),
+                    lambda:C.admit(self.archive,prepared,new_dataset),
+                    lambda:C.validate_admitted(self.archive,prepared,dataset),
+                    lambda:C.acquire(self.catalogue,self.root/'reused',reuse=self.archive)]
+        for operation in operations:
+            with self.subTest(operation=operation):
+                with self.assertRaisesRegex(ValueError,'member license is not the expected CC BY 4.0'):operation()
+        self.assertFalse(target.exists());self.assertFalse(new_dataset.exists())
+    def test_metadata_only_license_reseal_cannot_replace_raw_grant(self):
+        self.acquire();record=A.read(self.archive/'acquisition.json');source=record['sources'][0]
+        source['license']['evidencePaths']=['controlled-publisher/source/collections/book.collection.xml']
+        C.write_json(self.archive/'controlled-publisher/source.json',source)
+        C.write_json(self.archive/'acquisition.json',record)
+        with self.assertRaisesRegex(ValueError,'publisher license metadata differs'):C.verified_sources(self.archive)
+
+    def test_by_uri_cannot_override_restrictive_collection_text(self):
+        declaration='<md:license url="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</md:license>'
+        self.files['collections/book.collection.xml']=self.collection(declaration=declaration)
+        self.refused('declaration text is incompatible or ambiguous')
+
+    def test_by_uri_cannot_override_restrictive_module_text(self):
+        declaration='<md:license url="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</md:license>'
+        self.files['modules/m1/index.cnxml']=self.module(declaration=declaration)
+        self.refused('declaration text is incompatible or ambiguous')
+
+    def test_restrictive_unknown_and_conflicting_version_text_variants_refuse(self):
+        variants=['CC BY-NC 4.0','CC BY-SA 4.0','CC BY-ND 4.0','Noncommercial use only',
+                  'All rights reserved','Creative Commons Attribution License 3.0',
+                  'Unknown licensing terms','CC BY 4.0 except commercial use',
+                  'Creative Commons Attribution <md:em>NonCommercial</md:em> License']
+        for i,text in enumerate(variants):
+            for kind in ['collection','module']:
+                with self.subTest(text=text,kind=kind):
+                    self.archive=self.root/(str(i)+'-'+kind)
+                    declaration='<md:license url="http://creativecommons.org/licenses/by/4.0/">'+text+'</md:license>'
+                    self.files['collections/book.collection.xml']=self.collection()
+                    self.files['modules/m1/index.cnxml']=self.module()
+                    if kind=='collection':self.files['collections/book.collection.xml']=self.collection(declaration=declaration)
+                    else:self.files['modules/m1/index.cnxml']=self.module(declaration=declaration)
+                    self.refused('declaration text is incompatible or ambiguous')
+
+    def test_actual_publisher_by_name_aliases_and_uri_only_declarations_are_preserved(self):
+        aliases=['Creative Commons Attribution License','Creative Commons Attribution License 4.0',
+                 'Creative Commons Attribution 4.0 International','CC BY 4.0','CC-BY-4.0','']
+        for i,text in enumerate(aliases):
+            with self.subTest(text=text):
+                self.archive=self.root/str(i)
+                declaration='<md:license url="http://creativecommons.org/licenses/by/4.0/">'+text+'</md:license>'
+                self.files['collections/book.collection.xml']=self.collection(declaration=declaration)
+                self.files['modules/m1/index.cnxml']=self.module(declaration=declaration)
+                self.assertTrue(self.acquire());source=C.verified_sources(self.archive)[0]
+                rights=C.publisher_rights(source,self.archive)
+                self.assertEqual(rights['collections'][0]['declaredLicenseTexts'],[text])
+                self.assertEqual(rights['modules']['m1']['declaredLicenseTexts'],[text])
+
+    def resealed_text_refuses_all_consumers(self,kind,text='Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International'):
+        self.acquire();prepared=self.root/'prepared';dataset=self.root/'dataset'
+        C.prepare(self.archive,prepared,256);C.admit(self.archive,prepared,dataset)
+        declaration='<md:license url="https://creativecommons.org/licenses/by/4.0/">'+text+'</md:license>'
+        path='collections/book.collection.xml' if kind=='collection' else 'modules/m1/index.cnxml'
+        raw=self.collection(declaration=declaration) if kind=='collection' else self.module(declaration=declaration)
+        self.reseal_raw(path,raw)
+        target=self.root/'new-prepared';new_dataset=self.root/'new-dataset'
+        for operation in [lambda:C.verified_sources(self.archive),lambda:C.prepare(self.archive,target,256),
+                          lambda:C.admit(self.archive,prepared,new_dataset),
+                          lambda:C.validate_admitted(self.archive,prepared,dataset),
+                          lambda:C.acquire(self.catalogue,self.root/'reused',reuse=self.archive)]:
+            with self.subTest(operation=operation):
+                with self.assertRaisesRegex(ValueError,'declaration text is incompatible or ambiguous'):operation()
+        self.assertFalse(target.exists());self.assertFalse(new_dataset.exists())
+
+    def test_resealed_contradictory_collection_text_refuses_all_consumers(self):
+        self.resealed_text_refuses_all_consumers('collection')
+
+    def test_resealed_contradictory_module_text_refuses_all_consumers(self):
+        self.resealed_text_refuses_all_consumers('module')
+
+    def test_unknown_unicode_clauses_symbols_and_invisible_text_are_not_discarded(self):
+        variants=['Creative Commons Attribution License 非商業利用のみ',
+                  'Creative Commons Attribution License केवल गैर-वाणिज्यिक',
+                  'Creative Commons Attribution License 🚫',
+                  'Creative Commons Attribution License\u200b',
+                  'Creative Commons Attribution License / restricted',
+                  'Creative Commons Attribution License ©']
+        for i,text in enumerate(variants):
+            for kind in ['collection','module']:
+                with self.subTest(text=text,kind=kind):
+                    self.archive=self.root/(str(i)+'-'+kind)
+                    declaration='<md:license url="http://creativecommons.org/licenses/by/4.0/">'+text+'</md:license>'
+                    self.files['collections/book.collection.xml']=self.collection()
+                    self.files['modules/m1/index.cnxml']=self.module()
+                    if kind=='collection':self.files['collections/book.collection.xml']=self.collection(declaration=declaration)
+                    else:self.files['modules/m1/index.cnxml']=self.module(declaration=declaration)
+                    self.refused('declaration text is incompatible or ambiguous')
+
+    def test_resealed_unicode_collection_clause_refuses_all_consumers(self):
+        self.resealed_text_refuses_all_consumers('collection','Creative Commons Attribution License 非商業利用のみ')
+
+    def test_resealed_unicode_module_clause_refuses_all_consumers(self):
+        self.resealed_text_refuses_all_consumers('module','Creative Commons Attribution License 非商業利用のみ')
+
 
 if __name__=='__main__':
     unittest.main()

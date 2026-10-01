@@ -142,7 +142,8 @@ class SourceFixture:
                 '<solution id="solution"><para>'+('B' if i==0 else 'A')+'</para></solution></exercise>'
                 '</section></content></document>').encode()
             files = {'LICENSE': b'Attribution 4.0 International\nPrivate controlled source fixture.',
-                     'modules/module-one/index.cnxml': module}
+                     'modules/module-one/index.cnxml': module,
+                     'collections/controlled.collection.xml': Q.COLLECTION}
             revision = source['revision']; by_revision[revision] = files
             entries = [{'path': p, 'type': 'blob', 'size': len(raw),
                         'sha': hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()}

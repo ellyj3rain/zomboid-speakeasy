@@ -329,7 +329,7 @@
       "id": "openstax-business",
       "provider": "openstax-github",
       "repository": "openstax/osbooks-introduction-business",
-      "revision": "2a839877ab89a207c9b9e501df438173013fa45c",
+      "revision": "d1032e8c1ab064ea9b8027b8e8de1c88c21991e9",
       "stages": [
         "college"
       ],
