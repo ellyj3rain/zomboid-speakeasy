@@ -2884,3 +2884,61 @@ source, curriculum, schooling, assessment, learning and reference interfaces.
 Actual-source reconstruction, checkpoint/export equality and same-seed question
 evaluation have separate receipts. These are offline/headless results; native
 personal-learning integration, task adapters and loaded acceptance remain open.
+
+
+## Record 82 - Educational answer adapter and source-owned personal prior
+
+Verified: 2026-10-01 06:46 UTC / 23:46 PST.
+
+The shared base remains byte-frozen while a 16,672-parameter residual answer
+adapter learns from complete original publisher questions. Training admits
+1,992 of 5,557 supported targets; 3,422 exceed the 256-token context and 143
+require absent media. Original source families, duplicate closures and the
+frozen tokenizer govern all partitions. Answer and EOS positions alone carry
+loss. Hidden evaluation answers remain outside inference prompts.
+
+The configuration was fixed before held-out grading: seed 82, bottleneck 32,
+2,048 updates, batch 64 and learning rate 0.001. Actual fitting consumed 319,436
+answer/EOS targets in 49.05 seconds. A reporting repair separated complete-input
+attempts, pre-inference refusal and invalid or unfinished outputs. The refit
+preserves identical adapter tensor values and the original attempt survives as
+history. All four exported tensors equal the saved checkpoint; little-endian
+FP32 export occupies 66,688 bytes.
+
+Actual test grades are 38/187 correct (20.32%), against 35/187 for the frozen
+base and 43/187 for the untrained seed. Validation choice grades are six of
+eighteen for both fitted candidates and three for the seed. Numeric validation
+has zero of 49 correct: 46 incorrect and three unrecognized. The base attempted
+those 49 complete inputs but produced unfinished outputs. The format gain and
+three test answers over the base establish no curriculum competence. The saved
+candidate remains below the untrained test control and was not tuned on these
+held-out grades.
+
+Runtime export version 2 carries original personal learning states, policy,
+source exercise/course selectors, independent person/context bindings and county
+clock conversion. Querying those states projects decay without crediting use.
+Newer and empty export controls preserve source custody and monotonic state.
+The explicit runtime registry reconstructs each source profile, schooling,
+exposure and ledger before packaging, validates all rows, and retains birth
+region and migration history apart from residence. World identity follows SAO's
+existing ASCII/sorted/compact canonical definition hash. LF, pretty printing
+and Unicode spellings preserve identity; a changed definition refuses.
+
+The retained actual-source registry has one Ontario-born person who moved to
+Kentucky. Its source-owned response is an explicit gold retrieval control dated
+in 2026. It establishes publisher reconstruction and importer parity, not a
+native person, model-produced learning, or historical reading in 1993. Separate
+two-person mechanism tests cover all-row validation and outsider separation.
+The older raw-definition-identity attempt retains historical standing. Source
+materials dated after a person's school years still require dated concept
+mapping before historical exposure.
+
+The full integrated suite passes 462 tests in 229.003 seconds with two declared
+environment skips and all 3,108 pinned static files unchanged. Independent
+correctness review confirms repaired coverage denominators and the weak actual
+results. Measured adapter artifacts and controlled personal exports live in
+`training/foundation/r82-reference/`. SAO separately owns native attachment,
+durable state, asynchronous inference and current-state revalidation. The
+concept-to-game-domain translation, native learning-receipt feedback and trained
+consequential task consumer remain open; no export grants native skills,
+operating recipes, unseen county knowledge or peer assent.

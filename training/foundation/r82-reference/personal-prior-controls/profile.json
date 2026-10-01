@@ -1,0 +1,1 @@
+{"asOfYear":1993,"birthRegionId":"ontario","birthYear":1960,"collegeYears":0,"currentRegionId":"kentucky","electiveCourseIds":[],"id":"offline-source-reconstruction-person","migrations":[{"fromRegionId":"ontario","toRegionId":"kentucky","year":1980}],"schema":"speakeasy-simulated-education-profile/1"}

@@ -7,6 +7,7 @@ results. SAO owns native inference, asynchronous scheduling, current-state
 revalidation and durable personal learning.
 
 The first [measured reference](r81-reference/README.md) contains academic and
-cultural pre-training. Typed task adapters and the personal-learning consumer
-remain the next integration dependencies. The independent associative model
+cultural pre-training. The [Record 82 answer adapter](r82-reference/README.md) has measured weak
+question performance and a source-bound personal prior export. Native personal
+attachment and consequential task activation retain separate SAO evidence. The independent associative model
 keeps its own prediction and outcome history.

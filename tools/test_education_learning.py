@@ -425,6 +425,56 @@ class EducationLearningTests(unittest.TestCase):
         self.assertIn('calibration', prior['concepts'][0])
         self.assertNotIn('solutionXml', A.encoded(prior).decode())
 
+    def test_runtime_export_preserves_original_event_states_for_pure_native_decay(self):
+        ledger = self.apply(self.event())
+        original = copy.deepcopy(ledger)
+        at = {'clock': 'county-day', 'value': 90}
+        prior = L.export_runtime(ledger, at, self.context, self.policy, self.bank)
+        self.assertEqual(prior['schema'], 'speakeasy-person-educational-runtime-prior/2')
+        self.assertEqual(prior['policy'], self.policy)
+        self.assertEqual(prior['policySha256'], A.digest(self.policy))
+        self.assertEqual(prior['startedAt'], ledger['startedAt'])
+        self.assertEqual(prior['ageAtEpoch'], ledger['ageAtEpoch'])
+        state = copy.deepcopy(prior['concepts'][0])
+        self.assertEqual(state, self.state(ledger))
+        L.decay(state, L.moment(at, prior['policy']), L.moment(prior['startedAt'], prior['policy']),
+                prior['ageAtEpoch'], prior['policy'])
+        view = L.observe(ledger, at, self.context, self.policy, self.bank)
+        self.assertEqual(state, next(iter(view['concepts'].values())))
+        self.assertNotEqual(state['retention'], prior['concepts'][0]['retention'])
+        self.assertEqual(ledger, original)
+        for key in L.AUTHORITY:
+            self.assertFalse(prior[key])
+        prior['policy']['interests']['caller-change'] = 1
+        self.assertEqual(self.policy['interests'], {})
+
+    def test_runtime_export_selects_by_decayed_view_and_retains_v1_bytes(self):
+        ledger = self.apply(self.event(self.response(day=1)))
+        ledger = self.apply(self.event(self.response(day=2)), ledger)
+        ledger = self.apply(self.event(self.response('decimal', '0.4', day=400)), ledger)
+        at = {'clock': 'county-day', 'value': 401}
+        old = L.export_prior(ledger, at, self.context, self.policy, self.bank)
+        self.assertGreater(self.state(ledger)['retention'], self.state(ledger, 'decimal')['retention'])
+        prior = L.export_runtime(ledger, at, self.context, self.policy, self.bank, maximum_concepts=1)
+        self.assertEqual(prior['concepts'], [self.state(ledger, 'decimal')])
+        self.assertEqual(prior['omittedConcepts'], 1)
+        self.assertEqual(old, L.export_prior(ledger, at, self.context, self.policy, self.bank))
+        for maximum in (0, 129, True):
+            with self.assertRaises(ValueError):
+                L.export_runtime(ledger, at, self.context, self.policy, self.bank, maximum_concepts=maximum)
+
+    def test_runtime_export_reconstructs_context_policy_events_and_cutoff(self):
+        ledger = self.apply(self.event())
+        at = {'clock': 'county-day', 'value': 2}
+        changed = copy.deepcopy(self.policy); changed['baseHalfLifeDays'] *= 2
+        with self.assertRaises(ValueError):
+            L.export_runtime(ledger, at, self.context, changed, self.bank)
+        with self.assertRaises(ValueError):
+            L.export_runtime(ledger, self.start, self.context, self.policy, self.bank)
+        changed = B.checked(ledger, 'ledger'); changed['concepts'][self.item()['conceptRef']['id']]['retention'] = 0.99
+        with self.assertRaises(ValueError):
+            L.export_runtime(B.seal(changed), at, self.context, self.policy, self.bank)
+
     def test_source_bank_corruption_refuses_actual_grade_application(self):
         event = self.event()
         private = self.bank / 'assessments.jsonl'

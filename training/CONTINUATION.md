@@ -255,3 +255,25 @@ refusal of the approved personified wording by the exact-summary renderer.
 Both deliberately corrupted reporting controls fail, and two runs reproduce
 identical sealed results. This establishes current coverage; it does not close
 the decoder or admission work and requires no operator approval of the facts.
+
+
+## Educational task and personal export: Record 82
+
+The measured answer adapter freezes the shared base and fits only its residual
+answer parameters on complete source-family training inputs. Source answers and
+EOS supply training masks; held-out solutions remain evaluator-owned. The fixed
+candidate scores 38/187 on test against 43/187 for the untrained seed and zero
+of 49 numeric validation questions. Larger context and capacity require a new
+training-only sizing measurement and a fixed new candidate. Previously observed
+question families retain exploratory status for later comparisons.
+
+Runtime prior version 2 preserves original source learning states and exact
+policy/time/context custody. The bounded registry reconstructs each explicit
+profile, schooling history and ledger before packaging. Existing game canonical
+world-definition hashes bind source rows; formatting changes do not change that
+identity. Independent current-world pins govern later native restoration.
+Ordinary cognition and opposing associative discovery receive detached personal
+views while retaining independent prediction and outcome ownership. Conceptual
+school knowledge, observed county facts, native skills and operating recipes
+have their existing source owners. Game-object/action mapping and demonstrated
+educated behavior remain open.
