@@ -1,5 +1,14 @@
 # Zomboid-Speakeasy
 
+Record 83 reconstructs publisher rights from every collection and module.
+The [source-rights correction](training/foundation/r83-source-rights/README.md)
+replaces the current Business edition pin with its verified CC BY predecessor.
+The original Record 81/82 archive mislabeled that held-out Business edition;
+their saved measurements and references retain historical bytes and that
+qualification. Its modules and byte-identical copies were absent from the
+actual training targets. Complete corrected archive and curriculum reconstruction
+precedes the next qualified reference run.
+
 Record 82 adds the [measured educational answer adapter and personal prior](training/foundation/r82-reference/README.md).
 The frozen-base adapter answers 38/187 test questions correctly, below the
 untrained seed's 43/187, and answers none of 49 numeric questions correctly.

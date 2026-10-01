@@ -277,3 +277,24 @@ views while retaining independent prediction and outcome ownership. Conceptual
 school knowledge, observed county facts, native skills and operating recipes
 have their existing source owners. Game-object/action mapping and demonstrated
 educated behavior remain open.
+
+
+## Publisher source rights: Record 83
+
+Publisher rights are reconstructed from archived declarations and complete
+collection membership. Each collection declares the supported formal grant;
+present display names agree with it, and every included module has a verified
+containing collection. An explicit module declaration receives the same check.
+Whole-bundle reconstruction applies at acquisition, preparation, automatic
+admission, saved-dataset validation and archive reuse.
+
+The original Record 81/82 Business edition has NC-SA collection terms despite
+a generic CC BY repository license. It belongs to test; its source, modules
+and byte-identical module copies are absent from actual training targets.
+Saved archives, references and their measurements remain historical and carry
+the source-rights correction. Current acquisition selects the verified earlier
+Business edition. A successor archive re-derives curriculum source selections,
+assessment duplicate closure and training data under its new identity.
+Fresh development and final source questions retain separate pre-grade seals.
+Native concept mapping, completed-action feedback and trained task consumption
+remain separate implementation and evaluation work.

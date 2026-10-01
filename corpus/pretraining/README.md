@@ -13,6 +13,14 @@ philosophy and historical cultural texts supply additional language and conceptu
 material. This collection supplies prerequisite training material. Source
 integrity checks and learner performance are separate measurements.
 
+The [Record 83 source correction](../../training/foundation/r83-source-rights/README.md)
+reconstructs collection and module rights throughout this route. The original
+Business test edition disagreed with the generic repository license and its
+saved CC BY label. Historical references retain that qualification; the current
+catalogue selects a verified compatible predecessor. A new complete archive,
+curriculum, assessment isolation and training-data reconstruction establishes
+the source identity for a successor model.
+
 | Owner | Produced state |
 |---|---|
 | `education_corpus.py` | Immutable publisher archive, exact passages and automatic source/data admission. |

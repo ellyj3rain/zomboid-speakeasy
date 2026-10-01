@@ -2942,3 +2942,47 @@ durable state, asynchronous inference and current-state revalidation. The
 concept-to-game-domain translation, native learning-receipt feedback and trained
 consequential task consumer remain open; no export grants native skills,
 operating recipes, unseen county knowledge or peer assent.
+
+
+## Record 83 - Publisher collection and module rights reconstruction
+
+Verified: 2026-10-01 08:49 UTC / 01:49 PST.
+
+Source acquisition and every revalidation consumer reconstruct the complete
+publisher bundle's rights. Each collection supplies a supported formal grant
+and exact module membership. Present declaration text must agree with that grant;
+unknown Unicode and nested clauses survive comparison and refuse. Modules
+inherit their verified containing collections or validate their own declaration.
+Whole-bundle refusal preserves every member's custody and coverage.
+
+The original Record 81 archive has 23 publisher collections, with one incompatible
+Business second-edition collection hidden by its generic CC BY repository
+license. All 2,537 included modules lack explicit license declarations. Business
+belongs to test. Actual saved training provenance contains zero Business source
+blocks, zero referenced Business modules and zero byte-identical module copies,
+across 104,985,405 training targets. Original admission metadata and Business
+evaluation retain this correction; historical archives and measured reference
+bytes remain unchanged.
+
+Both current catalogues select the earlier Business revision d1032e8c1ab064ea9b8027b8e8de1c88c21991e9.
+Its original collection, repository license and complete 153-module archive pass.
+The other twelve original publisher bundles pass the member reconstruction.
+Existing source-bound curriculum and bank identities retain their original
+edition. A new complete archive reconstructs curriculum, assessment isolation
+and token-data bindings before a qualified successor fit.
+
+Independent review found and repaired conflicting ASCII declaration text and
+Unicode clauses erased by normalization. Ten acquisition and fifty resealed
+consumer controls now refuse; six exact aliases and URI-only declarations pass.
+Eight executing source mutants fail. The final integrated suite passes 487
+tests, with one explicitly unconfigured native projection skip; all 48 focused
+source tests pass. All seven reviewed source/catalogue files stay byte-frozen
+through the checks, and all 7,344 protected historical inputs remain unchanged.
+Independent coherence verifies actual publisher bundles and receipt closure.
+Audit, correction and validation artifacts live in training/foundation/r83-source-rights/.
+
+The completed larger exploratory candidate remains rights-withheld under its
+original complete-archive identity. Fresh question banks remain sealed and
+ungraded. This source repair changes no model policy, native skill, recipe or
+gameplay behavior. Game concept mapping, completed-action learning feedback and
+trained consequential task consumption remain implementation work.

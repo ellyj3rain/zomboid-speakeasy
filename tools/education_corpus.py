@@ -14,7 +14,7 @@ import shutil
 import subprocess
 import urllib.error
 import urllib.request
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -98,6 +98,95 @@ def validate_catalogue(value):
                       'unsupported publisher or unpinned source revision')
     return sources
 
+def publisher_rights(source,archive,files=None):
+    """Reconstruct the existing CC BY edition grant from every archived member.
+
+    A module can inherit its containing collection's grant, never the generic
+    repository LICENSE alone. The full bundle must pass; no text is dropped.
+    Returned membership evidence is derived from bytes, not index assertions.
+    """
+    files=source['files'] if files is None else files
+    license_paths=[v['path'] for v in files if Path(v['path']).name.lower()
+                   in {'license','license.txt','license.md'}]
+    A.require(license_paths,'publisher license absent')
+    for path in license_paths:
+        terms=local_path(archive,path).read_text(encoding='utf-8')
+        A.require(terms.splitlines() and terms.splitlines()[0].strip()=='Attribution 4.0 International',
+                  'publisher license is not the expected CC BY 4.0')
+    cn='{http://cnx.rice.edu/cnxml}';col='{http://cnx.rice.edu/collxml}'
+    md='{http://cnx.rice.edu/mdml}'
+    def grant(root,namespace,path,required):
+        metadata=root.findall(namespace+'metadata')
+        A.require(len(metadata)<=1,'ambiguous publisher metadata: '+path)
+        declarations=metadata[0].findall('.//'+md+'license') if metadata else []
+        # Other namespaces/locations cannot silently override a scoped grant.
+        all_declarations=[v for v in root.iter() if v.tag.rsplit('}',1)[-1]=='license']
+        A.require(all_declarations==declarations,'unsupported publisher rights declaration: '+path)
+        A.require(declarations or not required,'publisher collection license absent: '+path)
+        urls=[];texts=[]
+        for declaration in declarations:
+            url=declaration.get('url','');parts=urlsplit(url)
+            A.require(parts.scheme in {'http','https'} and parts.netloc=='creativecommons.org'
+                      and parts.path.rstrip('/')=='/licenses/by/4.0' and not parts.query and not parts.fragment,
+                      'publisher member license is not the expected CC BY 4.0: '+path)
+            text=''.join(declaration.itertext())
+            # Strip only the actual supported name separators. Unknown letters,
+            # symbols and clauses must survive whole-name comparison.
+            label=re.sub(r'[ \t\r\n.\-]','',text.casefold())
+            # Some actual publisher collections declare only the formal URI.
+            # Preserve that empty display text; every present name must agree.
+            A.require(not text.strip() or label in {
+                'creativecommonsattributionlicense','creativecommonsattributionlicense40',
+                'creativecommonsattribution40international','ccby40'},
+                'publisher license declaration text is incompatible or ambiguous: '+path)
+            urls.append(url)
+            texts.append(text)
+        return urls,texts
+    modules={};collections=[]
+    prefix=source['id']+'/source/modules/'
+    for entry in files:
+        path=entry['path']
+        if not path.endswith('.cnxml'):continue
+        A.require(path.startswith(prefix) and path.endswith('/index.cnxml'),
+                  'unsupported publisher module membership: '+path)
+        identity=path[len(prefix):-len('/index.cnxml')]
+        A.require(re.fullmatch(r'[A-Za-z0-9_-]+',identity) and identity not in modules,
+                  'ambiguous publisher module membership: '+path)
+        root=ET.fromstring(local_path(archive,path).read_bytes())
+        A.require(root.tag==cn+'document','unsupported publisher module: '+path)
+        content_ids=root.findall(cn+'metadata/'+md+'content-id')
+        A.require(len(content_ids)<=1 and (not content_ids or content_ids[0].text==identity),
+                  'publisher module identity differs: '+path)
+        urls,texts=grant(root,cn,path,False)
+        modules[identity]={'path':path,'sha256':entry['sha256'],
+                           'declaredLicenseUrls':urls,'declaredLicenseTexts':texts,'collectionPaths':[]}
+    A.require(modules,'publisher has no educational modules')
+    for entry in files:
+        path=entry['path']
+        if not path.endswith('.collection.xml'):continue
+        root=ET.fromstring(local_path(archive,path).read_bytes())
+        A.require(root.tag==col+'collection','unsupported publisher collection: '+path)
+        urls,texts=grant(root,col,path,True)
+        contents=root.findall(col+'content')
+        A.require(len(contents)==1,'publisher collection membership absent or ambiguous: '+path)
+        member_nodes=list(contents[0].iter(col+'module'))
+        A.require([v for v in root.iter() if v.tag.rsplit('}',1)[-1]=='module']==member_nodes,
+                  'unsupported publisher collection membership: '+path)
+        members=[v.get('document') for v in member_nodes]
+        A.require(members,'publisher collection membership absent: '+path)
+        for identity in members:
+            A.require(identity in modules,'publisher collection member missing: '+path)
+            if path not in modules[identity]['collectionPaths']:
+                modules[identity]['collectionPaths'].append(path)
+        collections.append({'path':path,'sha256':entry['sha256'],
+                            'declaredLicenseUrls':urls,'declaredLicenseTexts':texts,'moduleIds':members})
+    A.require(collections,'publisher collection membership absent')
+    for module in modules.values():
+        A.require(module['collectionPaths'],'orphan publisher module rights: '+module['path'])
+    return {'license':{'id':'CC-BY-4.0','evidencePaths':license_paths,
+                      'attributionRequired':True,'publisher':source['repository']},
+            'collections':collections,'modules':modules}
+
 def acquire_one(source,root):
     directory=local_path(root,source_id(source['id']));directory.mkdir()
     files=[]
@@ -164,13 +253,7 @@ def acquire_one(source,root):
         with ThreadPoolExecutor(max_workers=4) as pool:
             for entry,data,url in pool.map(download,entries):
                 preserve('source/'+entry['path'],data,url)
-        license_files=[v for v in files if Path(v['path']).name.lower() in {'license','license.txt','license.md'}]
-        A.require(license_files,'publisher license is absent')
-        license_text='\n'.join(local_path(root,v['path']).read_text(encoding='utf-8') for v in license_files)
-        A.require(license_text.splitlines()[0].strip()=='Attribution 4.0 International',
-                  'publisher license is not the expected CC BY 4.0')
-        result['license']={'id':'CC-BY-4.0','evidencePaths':[v['path'] for v in license_files],
-                           'attributionRequired':True,'publisher':repo}
+        result['license']=publisher_rights(source,root,files)['license']
         result['title']=repo.split('/')[1]
         result['sourceVersion']=revision
     result['files']=files
@@ -290,14 +373,8 @@ def verified_sources(archive,*,allow_legacy=False):
                 data=local_path(archive,identity+'/source/'+entry['path']).read_bytes()
                 digest=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
                 A.require(len(data)==entry['size'] and digest==entry['sha'],'publisher Git source identity differs')
-            license_paths=[entry['path'] for entry in files if Path(entry['path']).name.lower()
-                           in {'license','license.txt','license.md'}]
-            A.require(license_paths,'publisher license absent')
-            terms='\n'.join(local_path(archive,name).read_text(encoding='utf-8') for name in license_paths)
-            A.require(terms.splitlines()[0].strip()=='Attribution 4.0 International',
-                      'publisher license is not the expected CC BY 4.0')
-            A.require(source['license']=={'id':'CC-BY-4.0','evidencePaths':license_paths,
-                       'attributionRequired':True,'publisher':source['repository']},'publisher license metadata differs')
+            A.require(source['license']==publisher_rights(source,archive)['license'],
+                      'publisher license metadata differs')
     return sources
 
 class BookHTML(HTMLParser):
