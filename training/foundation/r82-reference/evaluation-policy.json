@@ -1,0 +1,1 @@
+{"choiceScoring":"public-option-key-loglikelihood","contextOverflow":"withhold","evaluationSplits":["validation","test"],"generation":"greedy-argmax-no-sampling","maximumItemsPerSplit":1024,"maximumNewTokens":32,"schema":"speakeasy-foundation-question-policy/1"}

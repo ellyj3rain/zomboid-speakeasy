@@ -43,3 +43,5 @@ tools/foundation_*.py -text
 tools/test_foundation_*.py -text
 tools/byte_tokenizer.py -text
 tools/test_byte_tokenizer.py -text
+
+training/foundation/r82-reference/** -text

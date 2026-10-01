@@ -1,5 +1,12 @@
 # Zomboid-Speakeasy
 
+Record 82 adds the [measured educational answer adapter and personal prior](training/foundation/r82-reference/README.md).
+The frozen-base adapter answers 38/187 test questions correctly, below the
+untrained seed's 43/187, and answers none of 49 numeric questions correctly.
+Its source-bound prior export and explicit world/person registry preserve
+schooling, grades, usage and decay for SAO consumption. These implemented
+contracts establish no curriculum mastery or activated game behavior.
+
 Record 81 supplies the [educational and cultural foundation](corpus/education/README.md).
 Actual publisher books supply a sourced kindergarten-through-college curriculum
 and shared pre-training text. Academic and cultural sources use automated

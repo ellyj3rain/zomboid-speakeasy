@@ -378,6 +378,27 @@ def export_prior(ledger, as_of, context, policy, bank, teachers=None, maximum_co
                    'contextRefs': ledger['contextRefs'], 'standing': 'future-sao-person-prior', **AUTHORITY})
 
 
+def export_runtime(ledger, as_of, context, policy, bank, teachers=None, maximum_concepts=128):
+    """Export original event states and bound decay inputs; select by present retention."""
+    A.require(type(maximum_concepts) is int and 1 <= maximum_concepts <= 128, 'invalid bounded prior size')
+    verified = verify(ledger, context, policy, bank, teachers)
+    at, epoch = moment(as_of, policy), moment(verified['startedAt'], policy)
+    A.require(at >= verified['lastDay'], 'observation precedes recorded learning')
+    projected = copy.deepcopy(verified['concepts'])
+    for state in projected.values():
+        decay(state, at, epoch, verified['ageAtEpoch'], policy)
+    selected = sorted(projected, key=lambda identity: (-projected[identity]['retention'], identity))[:maximum_concepts]
+    return B.seal({'schema': 'speakeasy-person-educational-runtime-prior/2',
+                   'owner': verified['owner'], 'ledgerSha256': verified['contentSha256'],
+                   'asOfTime': copy.deepcopy(as_of), 'sourceBankSha256': verified['assessmentBankSha256'],
+                   'contextRefs': verified['contextRefs'], 'policy': copy.deepcopy(policy),
+                   'policySha256': verified['policySha256'], 'startedAt': verified['startedAt'],
+                   'ageAtEpoch': verified['ageAtEpoch'],
+                   'concepts': [verified['concepts'][identity] for identity in selected],
+                   'omittedConcepts': len(projected) - len(selected),
+                   'standing': 'source-reconstructed-person-prior', **AUTHORITY})
+
+
 def read_context(path):
     paths = A.read(path)
     K.fields(paths, {'archive', 'curriculum', 'sourceCurricula', 'plan', 'backgrounds', 'profile', 'person', 'education'}, 'context paths')

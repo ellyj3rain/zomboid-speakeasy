@@ -1,0 +1,54 @@
+{
+  "schema": "speakeasy-education-answer-published-validation/1",
+  "status": "passed",
+  "startedAtUtc": "2026-10-01T06:39:38.774583+00:00",
+  "endedAtUtc": "2026-10-01T06:43:45.033933+00:00",
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\jleyv\\Peanut Butter\\Marshmallow Meta Commons\\codex\\worktrees\\730a\\zomboid-speakeasy\\runs\\r81-pretraining-env\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "integrated.log",
+      "summary": [
+        "Ran 462 tests in 229.003s",
+        "OK (skipped=2)"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "CUDA_VISIBLE_DEVICES": "",
+        "TMP": "C:\\Users\\jleyv\\Peanut Butter\\Marshmallow Meta Commons\\codex\\worktrees\\730a\\zomboid-speakeasy\\runs\\r82-validation\\integrated\\temp"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "tools/education_adapter.py": "401948386efb2a93718fff6c03ea6e47afb4bb129ef7b617d86790ae4fa84c18",
+    "tools/education_adapter_data.py": "19cad3f0a5fcaaf5cfd0788dda3a8fc60e9115c89fd1d35d79c8b57b543b2048",
+    "tools/education_learning.py": "989d55d1bcc5cc1e9f7c65b476b3a174b1806eaf0b808c89c464af6f5fc745a3",
+    "tools/education_runtime_registry.py": "45ea82c2d8c301d168896f2e92129a9237123f506cd5249b72e6966c9f21332c",
+    "tools/test_education_adapter.py": "8d634e212b068a21796caa438d75331c326f9388a0f0d0abf17d485e01fb7f35",
+    "tools/test_education_learning.py": "c9e60050ad553e3a71fd5020219bc3aaeb71ca5187c91ae5da1db5dad4298d31",
+    "tools/test_education_runtime_registry.py": "b47cc6811ac0d1986b179192d7b61520d8608411472b7ae9892f185bd8f1e9a9"
+  },
+  "staticFilesChecked": 3108,
+  "changedStaticFiles": [],
+  "automaticSourceRegistryReference": {
+    "rows": 1,
+    "registryRawSha256": "e3ba044530d209fbcc3cede04ee6f2bb3b1558d819662c978e8487e82f5ef66b",
+    "registryContentSha256": "e5fdbfdf08a86193d8ebf2de111b5d38319622620e4de5b66e3f57b2b27a459d",
+    "worldDefinitionSha256": "e87be4c78b7da149fcf1d9ce70bedd2ac78874d6750fe24d5c5902bc5d16aacf",
+    "worldDefinitionRawSha256": "73eb9d68ff90756c13b31a4dee17b02fafa08723134d18430918c080c909e2a9",
+    "standing": "actual-publisher-source-reconstruction-with-controlled-gold-response-not-actor-or-model-competence"
+  },
+  "gameLaunched": false,
+  "nativeActorCompetence": false,
+  "activatedTaskBehavior": false
+}
