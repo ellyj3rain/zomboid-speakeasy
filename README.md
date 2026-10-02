@@ -1,5 +1,9 @@
 # Zomboid-Speakeasy
 
+Record 86 shortens the active native-view bridge polling yield to one
+millisecond. Native frame identity, publication checks and terminal backoff
+remain intact. Throughput still depends on producer and bridge work.
+
 Record 85 separates native camera areas from the saved world definition.
 The bridge validates the runner's sealed observer layout and publishes distinct
 simultaneous native images for its areas. Original world/archive identity and
