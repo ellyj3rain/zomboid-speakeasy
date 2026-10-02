@@ -1,5 +1,12 @@
 # Zomboid-Speakeasy
 
+Record 85 separates native camera areas from the saved world definition.
+The bridge validates the runner's sealed observer layout and publishes distinct
+simultaneous native images for its areas. Original world/archive identity and
+legacy definition-owned sites remain supported. The corrected live continuation
+retains its original native save. Its final corrected pass advances 1.6333 game
+hours with distinct simultaneous native images and a normal error-free save.
+
 Record 83 reconstructs publisher rights from every collection and module.
 The [source-rights correction](training/foundation/r83-source-rights/README.md)
 replaces the current Business edition pin with its verified CC BY predecessor.
@@ -103,7 +110,7 @@ Manual camera and time controls are available. These observations remain
 unreviewed. Its 196-test suite passed; native27 completed a stop, save and
 continuation of the same 32-person world with zero saved players. Fresh intake
 verified ten resumed observation frames and admitted zero training rows.
-Measured delivery is about 8–11 new engine images per second; Mousecat's
+Measured delivery is about 8â€“11 new engine images per second; Mousecat's
 60 FPS display refresh and the 20-image-per-second capture target are distinct.
 
 Record 70 adds [visual scenario teaching](training/coordination/r70-teaching/README.md).

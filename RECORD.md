@@ -985,7 +985,7 @@ reaches them by proximity or testimony and no other way.
 
 What the ruling opened, the same day. Corpus curation began: the
 first vein is United States Government work, which carries no
-copyright (17 U.S.C. §105) - the Monthly Labor Review's June and
+copyright (17 U.S.C. Â§105) - the Monthly Labor Review's June and
 July 1993 issues (manifest 0001 and 0002), the register of labor
 being priced, and the month the shipped save starts. The first
 voice seeds are written (voice/seeds.md): a man who paid wages
@@ -1129,7 +1129,7 @@ training passes is curation and play, in that order named by entry
 The operator ordered more corpus down the government vein, and the
 named suggestion was the registers of the Great Flood of '93 - the
 summer the shipped save starts in. Four items enter, all United
-States Government work, not subject to copyright (17 U.S.C. §105),
+States Government work, not subject to copyright (17 U.S.C. Â§105),
 and all of them official publications rather than the personal
 speech of a living person, so the consent question settles the same
 way entry 44 settled it for the Monthly Labor Review: no identifiable
@@ -2393,8 +2393,8 @@ run's last captured population.
 
 | Native27 receipt | World hours | Observation sequence |
 |---|---|---|
-| Attempt 1 | Start `2.0`; stop `2.389998435974121` | 1–2 |
-| Attempt 2 | Reopen `2.3903684616088867`; stop `4.684725761413574` | 3–12 |
+| Attempt 1 | Start `2.0`; stop `2.389998435974121` | 1â€“2 |
+| Attempt 2 | Reopen `2.3903684616088867`; stop `4.684725761413574` | 3â€“12 |
 
 The first resumed observation is sequence 3 at `2.3907384872436523` hours.
 Definition, package, engine, loading agent and copied mod inventory seals match
@@ -2986,3 +2986,25 @@ original complete-archive identity. Fresh question banks remain sealed and
 ungraded. This source repair changes no model policy, native skill, recipe or
 gameplay behavior. Game concept mapping, completed-action learning feedback and
 trained consequential task consumption remain implementation work.
+
+
+## Record 85 - Independent native observation layouts
+
+The bridge accepts the optional sealed `sao-study-observer-layout/1` document
+from the native run receipt. Canonical hashing, fields, one-to-four site bounds,
+native binary32 coordinates and distinct identities are independently checked.
+The display definition selects the camera areas; the original definition still
+owns archive interpretation. Missing layouts preserve the existing path.
+
+The motivating two-person study used one rotating native area. The corrected
+continuation supplies independent native areas and distinct same-frame pixels
+without changing its saved people, world or copied gameplay modules. The
+current area count is derived from actual regional descriptors.
+
+The full Python suite passes 488 tests with 27 environment/model skips; the
+focused watcher suite passes 36. Native-precision collision and boundary
+controls were added after review. The SAO C113 corrected native pass advances
+1.6333 game hours, records seven archive frames, supplies distinct images from
+one native frame and saves normally with exit zero and no runtime errors.
+Failed observer-startup candidates remain separate retained evidence.
+No training rows, teaching targets or dataset admission are created.
