@@ -3008,3 +3008,17 @@ controls were added after review. The SAO C113 corrected native pass advances
 one native frame and saves normally with exit zero and no runtime errors.
 Failed observer-startup candidates remain separate retained evidence.
 No training rows, teaching targets or dataset admission are created.
+
+## Record 86 - Native feed polling cadence
+
+The operator requested removal of artificial frame ceilings. The active native
+view bridge yields one millisecond between checks instead of ten. Existing
+atomic manifest handling, exact frame identity, image verification and terminal
+session backoff retain their authority. This removes the scheduling floor below
+120 Hz; it supplies no achieved-frame-rate or behavioral claim. Complete Python
+verification and the native observer benchmark have separate receipts.
+
+
+Verification passes the complete 488-test Python suite with 27 environment/model
+skips. Independent review found no blocking defect. The source change preserves
+all image and session contracts; no training or gameplay behavior is changed.

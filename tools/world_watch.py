@@ -26,9 +26,8 @@ import cognition_review as CognitionReview
 from world_camera import ActivityCamera
 
 
-# Local manifests are immutable/atomic and cheap to stat. Ten milliseconds keeps
-# bridge scheduling below one native capture interval without busy-spinning.
-POLL_SECONDS = 0.010
+# Yield between atomic manifest checks without imposing a sub-120 Hz ceiling.
+POLL_SECONDS = 0.001
 ARCHIVE_SCAN_SECONDS = 0.5
 MAX_FEEDS = 4
 SESSION_SCHEMA = "sao-study-session/1"
@@ -963,7 +962,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
         if ended and session_state is None:
             return 0 if receipt["status"] == "completed" else 1
         # A saved session has no advancing frame clock. Keep lifecycle controls
-        # responsive without retaining the live bridge's 100 Hz idle poll.
+        # responsive without retaining the live bridge's active polling cadence.
         time.sleep(0.25 if ended and session_state is not None else POLL_SECONDS)
 
 
