@@ -364,6 +364,43 @@ def image_data(root, frame):
     return data
 
 
+def observer_definition(receipt, definition):
+    """Use a sealed viewing layout without changing simulation/archive identity."""
+    present = {key for key in ("observerLayout", "observerLayoutSha256") if key in receipt}
+    A.require(len(present) in (0, 2), "observer layout receipt is incomplete")
+    if not present:
+        return definition
+    value = receipt["observerLayout"]
+    A.require(isinstance(value, dict) and set(value) == {"schema", "sites"}
+              and value["schema"] == "sao-study-observer-layout/1", "observer layout schema differs")
+    sealed = json.dumps(value, ensure_ascii=True, allow_nan=False, sort_keys=True,
+                        separators=(",", ":")).encode("utf-8")
+    A.require(hashlib.sha256(sealed).hexdigest() == receipt["observerLayoutSha256"],
+              "observer layout seal differs")
+    sites = value["sites"]
+    A.require(isinstance(sites, list) and 1 <= len(sites) <= 4, "expected 1..4 observer areas")
+    extent = definition["extent"]
+    left, top = extent["minCellX"] * 256, extent["minCellY"] * 256
+    right, bottom = left + extent["cellsX"] * 256, top + extent["cellsY"] * 256
+    identities, positions = set(), set()
+    for site in sites:
+        A.require(isinstance(site, dict) and set(site) == {"id", "label", "x", "y", "z"},
+                  "observer area fields differ")
+        A.require(isinstance(site["id"], str) and re.fullmatch(r"[a-z][a-z0-9-]{0,47}", site["id"])
+                  and site["id"] not in identities, "invalid or duplicate observer area id")
+        A.require(isinstance(site["label"], str) and 0 < len(site["label"]) <= 160
+                  and all(32 <= ord(char) < 127 for char in site["label"]), "invalid observer area label")
+        number(site["x"], left, math.nextafter(right, -math.inf))
+        number(site["y"], top, math.nextafter(bottom, -math.inf))
+        number(site["z"], -32, math.nextafter(32, -math.inf))
+        position = tuple(struct.unpack(">f", struct.pack(">f", site[key]))[0] for key in ("x", "y", "z"))
+        A.require(left <= position[0] < right and top <= position[1] < bottom and -32 <= position[2] < 32,
+                  "native observer coordinates leave world bounds")
+        A.require(position not in positions, "observer areas share a native position")
+        identities.add(site["id"]); positions.add(position)
+    return definition | {"observation": definition["observation"] | {"sites": sites}}
+
+
 def native_views(root, frame, definition, bounds):
     """Validate separate native split-screen pixels against authored site identities."""
     declared = definition.get("observation", {}).get("sites", [])
@@ -576,6 +613,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                   "study session command directory unavailable")
     session = str(uuid.UUID(receipt["sessionId"]))
     definition = read(package / "definition.json")
+    view_definition = observer_definition(receipt, definition)
     package_manifest = read(package / "package.json")
     A.require(package_manifest["definitionSha256"] == receipt["definitionSha256"], "run definition differs")
     extent = definition["extent"]
@@ -596,7 +634,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     native_cursor = None
     camera = ActivityCamera()
     displayed_camera = camera.view([])
-    declared_sites = definition.get("observation", {}).get("sites", [])
+    declared_sites = view_definition.get("observation", {}).get("sites", [])
     area_cameras = {site["id"]: ActivityCamera() for site in declared_sites} if len(declared_sites) > 1 else {}
     area_views = {key: value.view([]) for key, value in area_cameras.items()}
     area_cursor = 0
@@ -781,7 +819,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                                 "view": plan, "datasetAdmission": "unreviewed"}))
             viewport = viewport_view(state, frame)
             if frame_cache.revision != regional_revision:
-                regional_views = native_views(native_root, frame, definition, bounds)
+                regional_views = native_views(native_root, frame, view_definition, bounds)
                 regional_revision = frame_cache.revision
             if regional_views and not registered and not ended:
                 # Loading screens can already contain viewport-shaped black
@@ -838,7 +876,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                                 overlay = panel_overlay(person, inspection_header["capturedAtUnixMs"])
                                 if overlay["groups"]: feed["overlay"] = overlay
                         feed_slots[feed["id"]] = feed
-                    published_camera = {"mode": "automatic", "personIds": [], "summary": "Three native areas; one world clock and save"}
+                    published_camera = {"mode": "automatic", "personIds": [], "summary": f"{len(regional_views)} native areas; one world clock and save"}
                 else:
                     remember_feed(feed_slots, published_camera, frame, displayed_people,
                                   (inspection_header or {}).get("capturedAtUnixMs"))

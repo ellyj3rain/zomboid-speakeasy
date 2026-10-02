@@ -1,4 +1,5 @@
 import hashlib
+import json
 import copy
 import os
 import struct
@@ -12,6 +13,29 @@ import world_watch as W
 
 
 class ObserverCommands(unittest.TestCase):
+    def test_independent_observer_layout_preserves_world_definition(self):
+        definition = dict(extent=dict(minCellX=0,minCellY=0,cellsX=2,cellsY=2),
+                          observation=dict(sites=[dict(id='original',label='Original',x=64,y=64,z=0)]))
+        original = copy.deepcopy(definition)
+        layout = dict(schema='sao-study-observer-layout/1',sites=[
+            dict(id='west',label='West',x=64,y=64,z=0),dict(id='east',label='East',x=256,y=64,z=0)])
+        def receipt(value):
+            return dict(observerLayout=value,observerLayoutSha256=hashlib.sha256(json.dumps(value,
+                ensure_ascii=True,allow_nan=False,sort_keys=True,separators=(',',':')).encode()).hexdigest())
+        result = W.observer_definition(receipt(layout),definition)
+        self.assertEqual(result['observation']['sites'],layout['sites'])
+        self.assertEqual(definition,original)
+        self.assertIs(W.observer_definition({},definition),definition)
+        bad=receipt(copy.deepcopy(layout));bad['observerLayout']['sites'][0]['x']+=1
+        with self.assertRaises(ValueError): W.observer_definition(bad,definition)
+        for change in (dict(x=True),dict(x=512),dict(x=511.999999),dict(z=32),dict(id='east'),
+                       dict(x=256.000001,y=64,z=0),dict(label='bad\nlabel')):
+            bad=copy.deepcopy(layout);bad['sites'][0].update(change)
+            with self.subTest(change=change),self.assertRaises(ValueError): W.observer_definition(receipt(bad),definition)
+        for key in ('observerLayout','observerLayoutSha256'):
+            bad=receipt(layout);del bad[key]
+            with self.assertRaises(ValueError): W.observer_definition(bad,definition)
+
     def setUp(self):
         self.session = "b3c4b15c-9564-4424-83b1-30ca3e3aab8c"
         self.state = {"viewX": 128, "viewY": 128, "viewZ": 0}
