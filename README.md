@@ -1,5 +1,11 @@
 # Zomboid-Speakeasy
 
+Record 90 preserves SAO C120 personal entry and recovery outcomes in validated
+cognition snapshots and archive export. Actor-qualified event identities,
+performed experience, observation clocks and exact measurements retain their
+source meaning. These private results supply no executable policy target or
+automatic training admission.
+
 Record 89 separates verified video crop geometry from captured camera pose.
 Moving cameras can retain their independently qualified rectangles while their
 pose remains unknown. The bridge checks both receipts and their agreement;

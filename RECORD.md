@@ -3117,3 +3117,56 @@ environment/model skips. Nine video cases preserve actual encoded bytes and
 clock/cached-file checks while adding first-fragment crop-only admission,
 authoritative empty geometry, conflicting pose, extra claims and pixel bounds.
 The existing graph source controls and native watcher cases remain green.
+
+
+## Record 90 - Personal entry and recovery observation
+
+SAO C120 adds authentic private outcomes for attempted entrances and measured
+recovery to its existing cognition projection. The observer validates and
+archives those same outcomes under `simulation.cognition/1`. Performed body
+experience requires matching actor and observer identities, an actor-qualified
+producer event sequence, completed observation, and occurrence no later than
+acquisition. Entry records retain their exact source, door/window action,
+observed aperture condition and outcome. Recovery records retain sleep/rest,
+finite before/after values in the unit interval and a positive duration up to
+twelve county hours; the success flag must agree with the measured direction.
+
+Exact field sets prevent either event from carrying inferred stock, an item,
+medical attribution, policy credit or arbitrary additional data. Private result
+identities cannot settle the existing food/water/inspection/continue episodes.
+Archive export preserves the source experiences in hashed snapshots and retains
+unreviewed admission with zero new training rows, teaching targets or observed
+policy targets. This completes C120's observation compatibility alongside its
+native behavior and learning owners; observer validation authenticates the data
+contract, while native producer evidence establishes the underlying action.
+
+The focused cognition contract, archive and review group runs 34 tests: 33 pass;
+the existing opt-in Record 74 installed adapter case is explicitly skipped in
+this environment. Eight new tests exercise entry success and failure, actor and
+sequence boundaries, clocks, exact fields, recovery measurement direction,
+archive preservation and forbidden outcome credit. Three executing source
+mutations remove owner matching, measured-direction consistency and completed
+status admission; each changes its stated rejection into acceptance. Existing
+video and camera inputs remain unchanged, so their applicable Record 89 evidence
+is retained without repeating those suites. No new simulation run is claimed.
+
+
+The installed Kahlua counter formatter uses decimal integers below 1e14 and
+canonical scientific notation above that boundary. The final new eight-test
+group passes both representations and refuses ambiguous aliases through the
+maximum exact integer counter. The unchanged 25 other cognition checks retain
+their passing evidence; the opt-in Record 74 case remains explicitly skipped.
+
+The source-produced C120 snapshots also pass the complete contract/archive
+join: failed and successful entry plus measured successful and no-progress
+recovery produce twelve preserved experiences in two hashed snapshots. Their
+ordinary/3 and associative/3 projections retain the actual source values.
+Six tampered observer, occurrence-clock and policy-credit variants refuse.
+The resulting archive has zero executable episodes, observed policy targets,
+training rows and teaching targets. Snapshot and producer-receipt hashes are
+retained with the join receipt. Its study envelope and external validation
+response are controlled; it establishes compatibility of actual native source
+projections with archive export, rather than another loaded gameplay run.
+The final join uses C120's repeated measured counterexamples as well as its
+positive outcomes; the earlier four-experience join remains independently
+valid. Final receipts are retained in `artifacts/audits/r90-c120-observation/`.

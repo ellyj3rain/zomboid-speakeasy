@@ -1,0 +1,27 @@
+{
+  "schema": "speakeasy-scoped-verification/1",
+  "boundary": "Recorded results from completed commands; this file is a result summary, not their full console transcript.",
+  "commands": [
+    {
+      "command": "C:/Python314/python.exe -m unittest discover -s tools -p test_cognition_*.py -v",
+      "exitCode": 0,
+      "tests": 34,
+      "passed": 33,
+      "skipped": 1,
+      "seconds": 0.161,
+      "skip": "Existing opt-in R74 test_installed_kahlua_source_bound_projection: native candidate not configured",
+      "retainedConsoleChunk": "ec613f"
+    },
+    {
+      "command": "C:/Python314/python.exe -m unittest discover -s tools -p test_cognition_behavior_experience.py -v",
+      "exitCode": 0,
+      "tests": 8,
+      "passed": 8,
+      "seconds": 0.053,
+      "sourceMutationControls": 3,
+      "retainedConsoleChunk": "24e2a2"
+    }
+  ],
+  "reuse": "The counter-format repair affects the new eight-test behavior contract module. Its final run replaces that coverage; 25 other passing checks remain applicable, and the opt-in skipped case remains unverified. Video and camera source inputs are unchanged from R89.",
+  "sourceProjectionJoin": "native-join.json records a separate final join using twelve actual C120 source experiences; six tampered variants refuse and no training or policy targets are admitted."
+}

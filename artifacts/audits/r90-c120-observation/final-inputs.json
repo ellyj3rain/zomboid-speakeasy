@@ -1,0 +1,10 @@
+{
+  "tools/cognition_contract.py": "258400fad8d028ac4e4dbcb765d1a7989705702c0173a4a21d18049c5bb57d42",
+  "tools/cognition_episodes.py": "9fb592132fb669607c6e43b30175276a31ee990afe4d95ba9ba66a6228969c9d",
+  "tools/test_cognition_behavior_experience.py": "5029fb6c212801dbd63c00346df1278536385ade41dbba1d7fff0d7ea514dd0a",
+  "tools/test_cognition_episodes.py": "d1f0ac4ba360a56ea345ae873b3c89e3f8ec9a749fb8f1e4ca9495cbf6359b8e",
+  "tools/test_cognition_capability_experience.py": "027c9db689d7da237dc7ad2974e82a8339b7024ac32272a696b0b5e1ba916663",
+  "tools/test_cognition_review.py": "3798b8ffe29e9a1bccef9419d686aae3a42b3b1cc87e1918deda75b6c1fa9864",
+  "README.md": "63d28eb05cd19421ec5cf235b994a21e00edc698005242dc9ba7ff4f2314da9a",
+  "RECORD.md": "7aa9f344f76bb02d4a4472b5420266268be60b71d7f7403c53c7ce3f88644b47"
+}
