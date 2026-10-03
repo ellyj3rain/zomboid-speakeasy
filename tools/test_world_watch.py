@@ -13,6 +13,20 @@ import world_watch as W
 
 
 class ObserverCommands(unittest.TestCase):
+    def test_current_camera_controls_survive_an_older_image_epoch(self):
+        viewport = dict(zoom=1, targetZoom=1.25, zoomLevels=[.5, 1, 1.25, 2])
+        state = dict(sequence=12, updatedAtUnixMs=2000, viewport=viewport)
+        frame = dict(observerSequence=11, capturedAtUnixMs=1700)
+        self.assertIsNone(W.viewport_view(state, frame))
+        self.assertEqual(W.camera_controls(state), dict(capturedAtUnixMs=2000, viewport=viewport))
+        self.assertIsNone(W.camera_controls({}))
+        self.assertIsNone(W.camera_controls(dict(viewport=viewport)))
+        for clock in (True, -1, 1.5, 2**53):
+            with self.subTest(clock=clock), self.assertRaises(ValueError):
+                W.camera_controls(state | dict(updatedAtUnixMs=clock))
+        with self.assertRaises(ValueError):
+            W.camera_controls(state | dict(viewport=viewport | dict(targetZoom=3)))
+
     def test_independent_observer_layout_preserves_world_definition(self):
         definition = dict(extent=dict(minCellX=0,minCellY=0,cellsX=2,cellsY=2),
                           observation=dict(sites=[dict(id='original',label='Original',x=64,y=64,z=0)]))
@@ -40,6 +54,334 @@ class ObserverCommands(unittest.TestCase):
         self.session = "b3c4b15c-9564-4424-83b1-30ca3e3aab8c"
         self.state = {"viewX": 128, "viewY": 128, "viewZ": 0}
         self.people = [{"id": "person-1", "x": 200, "y": 190, "z": 0}]
+
+    @staticmethod
+    def layout_receipt(sites):
+        layout = dict(schema="sao-study-observer-layout/1", sites=sites)
+        return dict(observerLayout=layout, observerLayoutSha256=hashlib.sha256(json.dumps(
+            layout, ensure_ascii=True, allow_nan=False, sort_keys=True,
+            separators=(",", ":")).encode()).hexdigest())
+
+    def test_subject_layout_keeps_seal_and_rejects_invalid_or_duplicate_assignments(self):
+        definition = dict(extent=dict(minCellX=0, minCellY=0, cellsX=2, cellsY=2),
+                          observation=dict(sites=[]))
+        sites = [dict(id="west", label="Phillip McKinley", x=100, y=100, z=0, subjectId="sao-1"),
+                 dict(id="east", label="Barney Billingsley", x=104, y=100, z=0, subjectId="sao-2")]
+        original = copy.deepcopy(definition)
+        self.assertEqual(W.observer_definition(self.layout_receipt(sites), definition)["observation"]["sites"], sites)
+        self.assertEqual(definition, original)
+        self.assertEqual(len(W.observer_definition(self.layout_receipt(sites[:1]), definition)["observation"]["sites"]), 1)
+        for invalid in (None, True, "", "sao 1", "bad\n", "é", "x" * 129, "sao-2"):
+            bad = copy.deepcopy(sites)
+            bad[0]["subjectId"] = invalid
+            with self.subTest(subjectId=invalid), self.assertRaises(ValueError):
+                W.observer_definition(self.layout_receipt(bad), definition)
+        unsealed = self.layout_receipt(copy.deepcopy(sites))
+        unsealed["observerLayout"]["sites"][0]["subjectId"] = "changed"
+        with self.assertRaises(ValueError):
+            W.observer_definition(unsealed, definition)
+
+    def test_bound_cameras_do_not_converge_on_urgent_people_or_a_nearby_group(self):
+        bounds = (0, 0, 511, 511)
+        sites = [dict(id="west", x=100, y=100, z=0, subjectId="sao-1"),
+                 dict(id="east", x=104, y=100, z=0, subjectId="sao-2")]
+        cameras = [W.site_camera(site, bounds) for site in sites]
+        people = [dict(id="sao-1", x=100, y=100, z=0, record=dict(forename="Phillip", surname="McKinley")),
+                  dict(id="sao-2", x=104, y=100, z=0, record=dict(forename="Barney", surname="Billingsley", lastLivingHealth=.3)),
+                  dict(id="neighbor", x=102, y=100, z=0)]
+        original = copy.deepcopy(people)
+        states = [dict(paused=False, viewX=0, viewY=0, viewZ=0) for _ in sites]
+        for index in range(8):
+            for site, camera, state in zip(sites, cameras, states):
+                plan = camera.plan(people, 2 + index * .1, state, W.site_bounds(site, bounds), index * 4)
+                if plan:
+                    state.update(plan)
+                self.assertEqual(camera.subjects, [site["subjectId"]])
+                person = next(person for person in people if person["id"] == site["subjectId"])
+                self.assertEqual(state["viewX"], person["x"])
+                self.assertEqual(camera.view(people)["personIds"], [site["subjectId"]])
+        self.assertEqual(people, original)
+        people[0].update(x=260, y=270, z=1)
+        moved = cameras[0].plan(people, 3, states[0], W.site_bounds(sites[0], bounds), 40)
+        self.assertEqual(moved, dict(viewX=260, viewY=270, viewZ=1, residencyX=260, residencyY=270, residencyZ=1))
+        self.assertEqual(W.site_bounds(sites[0], bounds), bounds)
+        legacy = dict(id="area", x=100, y=100, z=0)
+        self.assertEqual(type(W.site_camera(legacy, bounds)), W.ActivityCamera)
+        self.assertEqual(W.site_bounds(legacy, bounds), (68, 68, 132, 132))
+
+    def test_subject_camera_pause_manual_resume_and_unavailable_are_safe(self):
+        bounds = (0, 0, 511, 511)
+        camera = W.SubjectCamera("person-1", bounds)
+        state = dict(paused=False, viewX=0, viewY=0, viewZ=0)
+        self.assertIsNotNone(camera.plan(self.people, 2, state, bounds, 0))
+        camera.manual()
+        self.assertIsNone(camera.plan(self.people, 2.1, state, bounds, 4))
+        self.assertEqual(camera.view(self.people)["personIds"], [])
+        camera.resume()
+        self.assertEqual(camera.subject_id, "person-1")
+        self.assertIsNone(camera.plan(self.people, 3, state | dict(paused=True), bounds, 5))
+        self.assertIsNone(camera.plan(self.people, 3, state | dict(failure="failed"), bounds, 6))
+        self.assertIsNotNone(camera.plan(self.people, 3, state, bounds, 7))
+        for people, reason in (([], "not observed"),
+                               ([self.people[0] | dict(record=dict(dead=True))], "recorded dead"),
+                               ([self.people[0] | dict(x=600)], "outside observed world"),
+                               ([self.people[0] | dict(x=float("nan"))], "position unavailable")):
+            people = [*people, dict(id="alternate", x=20, y=20, z=0)]
+            with self.subTest(reason=reason):
+                self.assertIsNone(camera.plan(people, 4, state | dict(paused=True), bounds, 8))
+                view = camera.view(people)
+                self.assertEqual(view["personIds"], [])
+                self.assertIn(reason, view["summary"])
+                self.assertNotIn("Following", view["summary"])
+                camera.resume()
+                self.assertIsNone(camera.plan(people, 4, state, bounds, 9))
+                self.assertEqual(camera.subject_id, "person-1")
+        self.assertIsNotNone(camera.plan(self.people, 5, state, bounds, 10))
+        self.assertEqual(camera.subjects, ["person-1"])
+
+    def test_subject_identity_requires_applied_captured_pose_but_not_latest_archive_pose(self):
+        camera = W.SubjectCamera("person-1", (0, 0, 511, 511))
+        plan = camera.plan(self.people, 2, dict(paused=False, viewX=0, viewY=0, viewZ=0), camera.bounds, 0)
+        value = camera.view(self.people)
+        capture = dict(native=7, applied=True, position=plan)
+        frame, pose = dict(observerSequence=7), dict(x=200, y=190, z=0)
+        self.people[0]["x"] = 204  # A later source sample must not relabel earlier pixels.
+        self.assertEqual(W.subject_view(camera, value, capture, self.people, frame, pose)["personIds"], ["person-1"])
+        self.assertEqual(W.subject_view(camera, value | dict(personIds=["neighbor"]), capture,
+                                       self.people, frame, pose)["personIds"], [])
+        for wrong_capture, wrong_frame, wrong_pose in ((capture | dict(applied=False), frame, pose),
+                (capture, dict(observerSequence=6), pose), (capture, dict(observerSequence=True), pose),
+                (capture, frame, pose | dict(x=204)), (capture, frame, pose | dict(z=1))):
+            with self.subTest(capture=wrong_capture, frame=wrong_frame, pose=wrong_pose):
+                self.assertEqual(W.subject_view(camera, value, wrong_capture, self.people,
+                                              wrong_frame, wrong_pose)["personIds"], [])
+        unavailable = W.subject_view(camera, value, capture, [], frame, pose)
+        self.assertEqual(unavailable["personIds"], [])
+        self.assertNotIn("Following", unavailable["summary"])
+        county_capture = dict(native=9, applied=True, position=dict(viewX=10001.005859375, viewY=9000.123046875, viewZ=1))
+        self.assertTrue(W.camera_capture_matches(county_capture, dict(observerSequence=9),
+                                                dict(x=10001.006, y=9000.123, z=1)))
+        self.assertFalse(W.camera_capture_matches(county_capture, dict(observerSequence=9),
+                                                 dict(x=10001.007, y=9000.123, z=1)))
+
+    def subject_watch_fixture(self, root, sites):
+        run, package, out = root / "run", root / "package", root / "feed"
+        (run / "native-view").mkdir(parents=True)
+        package.mkdir()
+        receipt = dict(host="observer", datasetAdmission="unreviewed", sessionId=self.session,
+                       definitionSha256="fixture", status="running") | self.layout_receipt(sites)
+        W.atomic(run / "run.json", W.encoded(receipt))
+        W.atomic(package / "package.json", W.encoded(dict(definitionSha256="fixture")))
+        W.atomic(package / "definition.json", W.encoded(dict(
+            extent=dict(minCellX=0, minCellY=0, cellsX=2, cellsY=2), observation=dict(sites=[]))))
+        state = dict(detached=True, sequence=0, rejectedSequence=-1, hours=2, paused=False,
+                     viewX=sites[0]["x"], viewY=sites[0]["y"], viewZ=sites[0]["z"],
+                     sites=[dict(id=site["id"], viewX=site["x"], viewY=site["y"], viewZ=site["z"])
+                            for site in sites])
+        people = [dict(id=site["subjectId"], x=site["x"], y=site["y"], z=site["z"],
+                       record=dict(forename=site["label"], lastLivingHealth=.3 if index else 1))
+                  for index, site in enumerate(sites)]
+        observation = dict(datasetAdmission="unreviewed", definitionSha256="fixture", people=people,
+                           population=dict(total=len(people)), hours=2)
+        live = run / "cache/Lua/StudyWorldLive.json"
+        live.parent.mkdir(parents=True)
+        frame = dict(sequence=0, observerSequence=0, capturedAtUnixMs=1000)
+
+        def publish(native_sequence=None, location=None):
+            if native_sequence is not None:
+                state["sequence"] = native_sequence
+            if location:
+                site_id, x, y, z = location
+                target = next(value for value in state["sites"] if value["id"] == site_id)
+                target.update(viewX=x, viewY=y, viewZ=z)
+                if site_id == sites[0]["id"]:
+                    state.update(viewX=x, viewY=y, viewZ=z)
+            frame.update(sequence=frame["sequence"] + 1, observerSequence=state["sequence"],
+                         capturedAtUnixMs=frame["capturedAtUnixMs"] + 100)
+            filename = f"study-live-{frame['sequence']:016d}.png"
+            def image(name, width, marker):
+                data = b"\x89PNG\r\n\x1a\n" + b"\0" * 8 + struct.pack(">II", width, 540) + bytes([marker])
+                (run / "native-view" / name).write_bytes(data)
+                return dict(file=name, sha256=hashlib.sha256(data).hexdigest(), width=width, height=540)
+            frame["image"] = image(filename, 960 * len(sites), 0)
+            if len(sites) > 1:
+                frame["views"] = [dict(id=site["id"], label=site["label"], slot=index,
+                    x=state["sites"][index]["viewX"], y=state["sites"][index]["viewY"],
+                    z=state["sites"][index]["viewZ"], left=960 * index, top=0,
+                    image=image(filename.replace(".png", f"-site{index}.png"), 960, index + 1))
+                    for index, site in enumerate(sites)]
+            W.atomic(run / "observer-state.json", W.encoded(state))
+            W.atomic(run / "native-view/native.json", W.encoded(frame))
+            W.atomic(live, W.encoded(observation))
+        publish()
+        return run, package, out, receipt, state, observation, publish
+
+    def test_two_subject_feeds_acknowledge_independently_and_resume_the_same_person(self):
+        with tempfile.TemporaryDirectory() as name:
+            sites = [dict(id="west", label="Phillip McKinley", x=100, y=100, z=0, subjectId="sao-1"),
+                     dict(id="east", label="Barney Billingsley", x=104, y=100, z=0, subjectId="sao-2")]
+            run, package, out, receipt, state, observation, publish = self.subject_watch_fixture(Path(name), sites)
+            ticks = []
+            now = [0]
+            def tick(_):
+                ticks.append(len(ticks) + 1)
+                now[0] += 1
+                views = {feed["id"]: feed for feed in W.read(out / "latest.json")["feeds"]}
+                west, east = views["site:west"], views["site:east"]
+                control = (run / "observer-control.properties").read_text()
+                step = len(ticks)
+                if step == 1:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), ([], []))
+                    self.assertIn("siteId=west", control)
+                    publish(1)
+                elif step == 2:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], []))
+                    self.assertIn("siteId=east", control)
+                    publish(2)
+                elif step == 3:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    self.assertEqual((west["label"], east["label"]), ("Phillip McKinley", "Barney Billingsley"))
+                    W.atomic(out / "commands/0000000000000001.json", W.encoded(self.command("pan", siteId="west", dx=8, dy=0)))
+                elif step == 4:
+                    self.assertEqual(west["camera"]["mode"], "manual")
+                    self.assertEqual(east["camera"]["personIds"], ["sao-2"])
+                    self.assertIn("siteId=west", control)
+                    self.assertIn("viewX=108", control)
+                    publish(3, ("west", 108, 100, 0))
+                    W.atomic(out / "commands/0000000000000002.json", W.encoded(self.command("auto", siteId="west") | dict(sequence=2)))
+                elif step == 5:
+                    self.assertEqual(west["camera"]["personIds"], [])
+                    self.assertEqual(east["camera"]["personIds"], ["sao-2"])
+                elif step == 6:
+                    self.assertEqual(east["camera"]["personIds"], ["sao-2"])
+                elif step == 7:
+                    self.assertIn("sequence=4", control)
+                    self.assertIn("siteId=west", control)
+                    self.assertIn("viewX=100", control)
+                    self.assertIn("residencyX=100", control)
+                    publish(4, ("west", 100, 100, 0))
+                elif step == 8:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    observation["people"][0]["x"] = 260
+                    observation["hours"] = 2.1
+                    publish()
+                elif step == 9:
+                    self.assertIn("sequence=5", control)
+                    self.assertIn("siteId=west", control)
+                    self.assertIn("viewX=260", control)
+                    self.assertIn("residencyX=260", control)
+                    publish(5, ("west", 260, 100, 0))
+                elif step == 10:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    observation["people"] = observation["people"][1:]
+                    publish()
+                elif step == 11:
+                    self.assertEqual(west["camera"]["personIds"], [])
+                    self.assertIn("not observed", west["camera"]["summary"])
+                    self.assertNotIn("Following", west["camera"]["summary"])
+                    self.assertEqual(east["camera"]["personIds"], ["sao-2"])
+                    receipt["status"] = "completed"
+                    W.atomic(run / "run.json", W.encoded(receipt))
+                else:
+                    self.fail("subject bridge stalled")
+            with patch.object(W.time, "sleep", side_effect=tick), patch.object(W.time, "monotonic", side_effect=lambda: now[0]):
+                self.assertEqual(W.watch(run, package, out, site_controls=True), 0)
+            journal = [json.loads(line) for line in (out / "camera.jsonl").read_text().splitlines()]
+            self.assertEqual([(row["siteId"], row["assignedSubjectId"]) for row in journal],
+                             [("west", "sao-1"), ("east", "sao-2"), ("west", "sao-1"), ("west", "sao-1")])
+            self.assertTrue(all(row["personIds"] == [row["assignedSubjectId"]] for row in journal))
+            self.assertTrue(all(row["datasetAdmission"] == "unreviewed" for row in journal))
+
+    def test_single_subject_layout_does_not_fall_back_to_activity_rotation(self):
+        with tempfile.TemporaryDirectory() as name:
+            site = dict(id="west", label="Phillip McKinley", x=100, y=100, z=0, subjectId="sao-1")
+            run, package, out, receipt, state, observation, publish = self.subject_watch_fixture(Path(name), [site])
+            observation["people"].append(dict(id="urgent", x=104, y=100, z=0, record=dict(lastLivingHealth=.2)))
+            publish()
+            ticks = []
+            def tick(_):
+                ticks.append(len(ticks))
+                snap = W.read(out / "latest.json")
+                if len(ticks) == 1:
+                    self.assertEqual(snap["camera"]["personIds"], [])
+                    self.assertIn("viewX=100", (run / "observer-control.properties").read_text())
+                    publish(1)
+                elif len(ticks) == 2:
+                    self.assertEqual(snap["camera"]["personIds"], ["sao-1"])
+                    self.assertIn("Following Phillip McKinley", snap["camera"]["summary"])
+                    self.assertEqual(snap["feeds"][0]["camera"]["personIds"], ["sao-1"])
+                    observation["people"][0]["record"]["dead"] = True
+                    publish()
+                elif len(ticks) == 3:
+                    self.assertEqual(snap["camera"]["personIds"], [])
+                    self.assertIn("recorded dead", snap["camera"]["summary"])
+                    self.assertNotIn("feeds", snap)
+                    receipt["status"] = "completed"
+                    W.atomic(run / "run.json", W.encoded(receipt))
+                else:
+                    self.fail("single subject bridge stalled")
+            with patch.object(W.time, "sleep", side_effect=tick):
+                self.assertEqual(W.watch(run, package, out), 0)
+            journal = [json.loads(line) for line in (out / "camera.jsonl").read_text().splitlines()]
+            self.assertEqual((journal[0]["siteId"], journal[0]["assignedSubjectId"]), ("west", "sao-1"))
+
+    def test_subject_zoom_preserves_follow_and_other_site_projection_through_motion(self):
+        with tempfile.TemporaryDirectory() as name:
+            sites = [dict(id="west", label="Phillip McKinley", x=100, y=100, z=0, subjectId="sao-1"),
+                     dict(id="east", label="Barney Billingsley", x=104, y=100, z=0, subjectId="sao-2")]
+            run, package, out, receipt, state, observation, publish = self.subject_watch_fixture(Path(name), sites)
+            viewport = dict(zoom=1, targetZoom=1, zoomLevels=[.5, 1, 1.25, 1.5])
+            state["viewport"] = copy.deepcopy(viewport)
+            for site in state["sites"]:
+                site["viewport"] = copy.deepcopy(viewport)
+            publish()
+            ticks, now = [], [0]
+            def tick(_):
+                ticks.append(len(ticks) + 1)
+                now[0] += 1
+                snap = W.read(out / "latest.json")
+                views = {feed["id"]: feed for feed in snap["feeds"]}
+                west, east = views["site:west"], views["site:east"]
+                control = (run / "observer-control.properties").read_text()
+                step = len(ticks)
+                if step == 1:
+                    publish(1)
+                elif step == 2:
+                    publish(2)
+                elif step == 3:
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    W.atomic(out / "commands/0000000000000001.json", W.encoded(self.command("zoom", siteId="west", value=1)))
+                elif step == 4:
+                    self.assertEqual(control, "sequence=3\nsiteId=west\nzoomStep=1\n")
+                    self.assertEqual((west["camera"]["mode"], east["camera"]["mode"]), ("automatic", "automatic"))
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    state["sites"][0]["viewport"].update(zoom=1.25, targetZoom=1.25)
+                    state["viewport"].update(zoom=1.25, targetZoom=1.25)
+                    publish(3)
+                elif step == 5:
+                    self.assertEqual((west["viewport"]["zoom"], east["viewport"]["zoom"]), (1.25, 1))
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    observation["people"][0]["x"] = 120
+                    observation["hours"] = 2.1
+                    publish()
+                elif step == 6:
+                    self.assertIn("sequence=4", control)
+                    self.assertIn("siteId=west", control)
+                    self.assertIn("viewX=120", control)
+                    self.assertNotIn("zoom", control.lower())
+                    self.assertEqual(east["camera"]["personIds"], ["sao-2"])
+                    publish(4, ("west", 120, 100, 0))
+                elif step == 7:
+                    self.assertEqual((west["viewport"]["zoom"], east["viewport"]["zoom"]), (1.25, 1))
+                    self.assertEqual((west["camera"]["mode"], east["camera"]["mode"]), ("automatic", "automatic"))
+                    self.assertEqual((west["camera"]["personIds"], east["camera"]["personIds"]), (["sao-1"], ["sao-2"]))
+                    self.assertEqual(snap["lastCommandSequence"], 1)
+                    receipt["status"] = "completed"
+                    W.atomic(run / "run.json", W.encoded(receipt))
+                else:
+                    self.fail("subject zoom bridge stalled")
+            with patch.object(W.time, "sleep", side_effect=tick), patch.object(W.time, "monotonic", side_effect=lambda: now[0]):
+                self.assertEqual(W.watch(run, package, out, site_controls=True), 0)
 
     def test_regional_pixels_are_bound_to_distinct_native_rectangles_and_sites(self):
         with tempfile.TemporaryDirectory() as name:

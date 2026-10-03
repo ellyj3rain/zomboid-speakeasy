@@ -3022,3 +3022,32 @@ verification and the native observer benchmark have separate receipts.
 Verification passes the complete 488-test Python suite with 27 environment/model
 skips. Independent review found no blocking defect. The source change preserves
 all image and session contracts; no training or gameplay behavior is changed.
+
+## Record 87 - Persistent observer subjects
+
+Timestamp: 2026-10-03 03:10 UTC / 20:10 PST
+
+The optional sealed `subjectId` assigns a camera to that exact person across
+the authored bounds. Other activity and urgency do not rotate the assignment.
+Missing, dead and unavailable subjects clear pictured identity without retargeting.
+Manual browsing affects one site; Follow resumes its assignment; zoom preserves
+automatic ownership. Single-site subject layouts use the same mechanism.
+
+Pictured subject claims require the applied native camera command and captured
+pose. Native Java floats compare by binary32 identity, including coordinates
+whose decimal JSON rounding exceeds the old tolerance. The previous imported
+bridge's stalled west acknowledgement is retained; the corrected native
+continuation acknowledges both different assigned subjects in distinct native
+images. That is bounded observation evidence rather than learned-policy proof.
+
+Optional current `cameraControls` retain the native sample clock and validated
+engine viewport independently of an older image's epoch. Image projection stays
+epoch-qualified; current control availability survives normal PNG lag. Legacy
+producers remain supported.
+
+Forty-four focused tests pass. The complete 496-test suite passes with 27
+environment/model skips. Restoring activity rotation and removing captured-command/pose checks
+produce the expected failures; subject-layout tamper and malformed assignments
+refuse. The current-controls case accepts a lagged picture without inventing its
+projection and refuses invalid controls. No dataset admission or teaching
+targets are created by this observer change.

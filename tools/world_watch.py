@@ -23,7 +23,7 @@ import decision_authoring as A
 import cognition_contract as Cognition
 import cognition_episodes as CognitionEpisodes
 import cognition_review as CognitionReview
-from world_camera import ActivityCamera
+from world_camera import ActivityCamera, SubjectCamera
 
 
 # Yield between atomic manifest checks without imposing a sub-120 Hz ceiling.
@@ -273,6 +273,17 @@ def viewport_view(state, frame=None):
     return {"zoom": zoom, "targetZoom": target, "zoomLevels": list(levels)}
 
 
+def camera_controls(state):
+    """Current engine controls have their own sample clock, separate from pixels."""
+    viewport = viewport_view(state)
+    if viewport is None or "updatedAtUnixMs" not in state:
+        return None
+    captured = state["updatedAtUnixMs"]
+    A.require(type(captured) is int and 0 <= captured <= 2**53 - 1,
+              "invalid native camera control clock")
+    return {"capturedAtUnixMs": captured, "viewport": viewport}
+
+
 def translate(command, session, sequence, state, people, bounds, native_sequence=None):
     """An allowlisted camera/time command, independent of character actions."""
     fields = {"schema", "sessionId", "sequence", "action"}
@@ -381,14 +392,22 @@ def observer_definition(receipt, definition):
     extent = definition["extent"]
     left, top = extent["minCellX"] * 256, extent["minCellY"] * 256
     right, bottom = left + extent["cellsX"] * 256, top + extent["cellsY"] * 256
-    identities, positions = set(), set()
+    identities, positions, subjects = set(), set(), set()
     for site in sites:
-        A.require(isinstance(site, dict) and set(site) == {"id", "label", "x", "y", "z"},
+        fields = {"id", "label", "x", "y", "z"}
+        A.require(isinstance(site, dict) and fields <= site.keys()
+                  and set(site) <= fields | {"subjectId"},
                   "observer area fields differ")
         A.require(isinstance(site["id"], str) and re.fullmatch(r"[a-z][a-z0-9-]{0,47}", site["id"])
                   and site["id"] not in identities, "invalid or duplicate observer area id")
         A.require(isinstance(site["label"], str) and 0 < len(site["label"]) <= 160
                   and all(32 <= ord(char) < 127 for char in site["label"]), "invalid observer area label")
+        if "subjectId" in site:
+            subject = site["subjectId"]
+            A.require(isinstance(subject, str) and 0 < len(subject) <= 128
+                      and all(33 <= ord(char) < 127 for char in subject)
+                      and subject not in subjects, "invalid or duplicate observer subject id")
+            subjects.add(subject)
         number(site["x"], left, math.nextafter(right, -math.inf))
         number(site["y"], top, math.nextafter(bottom, -math.inf))
         number(site["z"], -32, math.nextafter(32, -math.inf))
@@ -397,7 +416,52 @@ def observer_definition(receipt, definition):
                   "native observer coordinates leave world bounds")
         A.require(position not in positions, "observer areas share a native position")
         identities.add(site["id"]); positions.add(position)
-    return definition | {"observation": definition["observation"] | {"sites": sites}}
+    return definition | {"observation": definition.get("observation", {}) | {"sites": sites}}
+
+
+def site_camera(site, bounds):
+    return SubjectCamera(site["subjectId"], bounds) if "subjectId" in site else ActivityCamera()
+
+
+def site_bounds(site, bounds):
+    """Assigned people can leave their initial location within the authored world."""
+    if "subjectId" in site:
+        return bounds
+    return (max(bounds[0], site["x"] - 32), max(bounds[1], site["y"] - 32),
+            min(bounds[2], site["x"] + 32), min(bounds[3], site["y"] + 32))
+
+
+def camera_capture_matches(request, frame, position):
+    """A subject claim requires its applied command and that captured camera pose."""
+    epoch = frame.get("observerSequence")
+    if (not request.get("applied") or type(epoch) is not int
+            or epoch < request["native"]):
+        return False
+    for coordinate in ("x", "y", "z"):
+        expected = struct.unpack(">f", struct.pack(">f", request["position"]["view" + coordinate.upper()]))[0]
+        value = position.get(coordinate)
+        if type(value) not in (int, float) or not math.isfinite(value):
+            return False
+        # Java serializes native floats with their shortest round-trip decimal.
+        # Compare the native float identities, rather than decimal tolerance at
+        # large county coordinates whose representable spacing is already >1e-4.
+        actual = struct.unpack(">f", struct.pack(">f", value))[0]
+        if actual != expected:
+            return False
+    return True
+
+
+def subject_view(camera, value, capture, people, frame, position):
+    """Keep assignment, current availability and pictured identity separate."""
+    current = camera.view(people)
+    if current["mode"] == "manual" or not current["personIds"]:
+        return current
+    if (capture is None or value["personIds"] != [camera.subject_id]
+            or not camera_capture_matches(capture, frame, position)):
+        return {"mode": "automatic", "personIds": [], "summary": "Waiting for assigned subject image"}
+    # The latest archive position may already have moved beyond these pixels.
+    # The acknowledged captured pose establishes the pictured assignment.
+    return value
 
 
 def native_views(root, frame, definition, bounds):
@@ -631,11 +695,12 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     native_root = observer_root / "native-view"
     sequence, acknowledged, pending = 0, 0, None
     native_cursor = None
-    camera = ActivityCamera()
-    displayed_camera = camera.view([])
     declared_sites = view_definition.get("observation", {}).get("sites", [])
-    area_cameras = {site["id"]: ActivityCamera() for site in declared_sites} if len(declared_sites) > 1 else {}
+    camera = site_camera(declared_sites[0], bounds) if len(declared_sites) == 1 else ActivityCamera()
+    displayed_camera = camera.view([])
+    area_cameras = {site["id"]: site_camera(site, bounds) for site in declared_sites} if len(declared_sites) > 1 else {}
     area_views = {key: value.view([]) for key, value in area_cameras.items()}
+    camera_capture, area_captures = None, {}
     area_cursor = 0
     requested_camera = None
     command_result = None
@@ -678,6 +743,12 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
             A.require(type(state.get("detached")) is bool, "observer participation evidence unavailable")
             if not state["detached"]:
                 camera.manual()
+                for key, value in area_cameras.items():
+                    value.manual()
+                    area_views[key] = {"mode": "manual", "personIds": [],
+                                       "summary": "Observer invariant failed; stop remains available"}
+                area_captures.clear()
+                camera_capture = None
                 displayed_camera = {"mode": "manual", "personIds": [], "summary": "Observer invariant failed; stop remains available"}
                 requested_camera = None
             # UI numbering belongs to this feed. Native numbering belongs to
@@ -688,14 +759,23 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                 applied = state["sequence"] == pending["native"]
                 rejected = state.get("rejectedSequence") == pending["native"]
                 if applied or rejected:
+                    if applied and requested_camera and requested_camera["native"] == pending["native"]:
+                        requested_camera["applied"] = True
                     if pending["ui"] is not None:
                         acknowledged = pending["ui"]
                         command_result = {"sequence": acknowledged, "status": "applied" if applied else "rejected",
                             "message": "Observer request applied" if applied else str(state.get("error", "Native observer rejected the request"))[:512]}
                     elif rejected:
-                        camera.manual()
-                        camera.description = "Automatic camera stopped: " + str(state.get("error", "request rejected"))[:400]
-                        displayed_camera = camera.view(people)
+                        selected = (requested_camera or {}).get("site")
+                        rejected_camera = area_cameras[selected] if selected in area_cameras else camera
+                        rejected_camera.manual()
+                        rejected_camera.description = "Automatic camera stopped: " + str(state.get("error", "request rejected"))[:400]
+                        if selected in area_cameras:
+                            area_views[selected] = rejected_camera.view(people)
+                            area_captures.pop(selected, None)
+                        else:
+                            displayed_camera = rejected_camera.view(people)
+                            camera_capture = None
                         requested_camera = None
                     pending = None
             live_path = run / "cache/Lua/StudyWorldLive.json"
@@ -731,11 +811,22 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     # Inspection may fail while pixels and controls remain live.
                     observation_ready = False
             if requested_camera and frame.get("observerSequence", -1) >= requested_camera["native"]:
-                if requested_camera.get("site"):
-                    area_views[requested_camera["site"]] = requested_camera["value"]
-                else:
-                    displayed_camera = requested_camera["value"]
-                requested_camera = None
+                selected = requested_camera.get("site")
+                requested_owner = area_cameras[selected] if selected in area_cameras else camera
+                position = next((value for value in frame.get("views", []) if value["id"] == selected), {}) if selected else {
+                    key: state.get("view" + key.upper()) for key in ("x", "y", "z")}
+                captured = (not isinstance(requested_owner, SubjectCamera)
+                            or (requested_camera.get("applied")
+                                and (selected or frame.get("observerSequence") == state["sequence"])
+                                and camera_capture_matches(requested_camera, frame, position)))
+                if captured:
+                    if selected:
+                        area_views[selected] = requested_camera["value"]
+                        area_captures[selected] = requested_camera
+                    else:
+                        displayed_camera = requested_camera["value"]
+                        camera_capture = requested_camera
+                    requested_camera = None
             if pending is None:
                 command_path = destination / "commands" / f"{acknowledged+1:016d}.json"
                 if command_path.exists():
@@ -770,22 +861,31 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         elif command["action"] == "auto":
                             selected = command.get("siteId")
                             if area_cameras:
+                                if selected is None and any(isinstance(value, SubjectCamera) for value in area_cameras.values()):
+                                    selected = declared_sites[0]["id"]
                                 for key, value in area_cameras.items():
                                     if selected is None or selected == key:
                                         value.resume(); area_views[key] = value.view(people)
+                                        area_captures.pop(key, None)
                             else:
                                 camera.resume()
                                 displayed_camera = camera.view(people)
+                                camera_capture = None
+                            if requested_camera and (not area_cameras or selected is None or requested_camera.get("site") == selected):
+                                requested_camera = None
                             acknowledged += 1
-                            command_result = {"sequence": acknowledged, "status": "applied", "message": "Activity camera resumed"}
+                            command_result = {"sequence": acknowledged, "status": "applied", "message": "Automatic camera resumed"}
                         else:
                             if command["action"] in ("pan", "focus", "stop", "checkpoint"):
                                 selected = command.get("siteId") or (declared_sites[0]["id"] if area_cameras else None)
                                 if selected in area_cameras:
                                     area_cameras[selected].manual(); area_views[selected] = area_cameras[selected].view(people)
+                                    area_captures.pop(selected, None)
                                 else:
                                     camera.manual(); displayed_camera = camera.view(people)
-                                requested_camera = None
+                                    camera_capture = None
+                                if requested_camera and (not area_cameras or requested_camera.get("site") == selected):
+                                    requested_camera = None
                             atomic(observer_root / "observer-control.properties", control)
                             native_cursor += 1
                             pending = {"native": native_cursor, "ui": acknowledged + 1}
@@ -797,8 +897,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         site_id = site["id"]
                         active_camera = area_cameras[site_id]
                         camera_state = state | next((value for value in state.get("sites", []) if value["id"] == site_id), {})
-                        camera_bounds = (max(bounds[0], site["x"] - 32), max(bounds[1], site["y"] - 32),
-                                         min(bounds[2], site["x"] + 32), min(bounds[3], site["y"] + 32))
+                        camera_bounds = site_bounds(site, bounds)
                     plan = active_camera.plan(people, observation_hours, camera_state, camera_bounds, time.monotonic())
                     if plan is not None:
                         if site_id: plan["siteId"] = site_id
@@ -807,14 +906,21 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         atomic(observer_root / "observer-control.properties", "".join(
                             f"{key}={value}\n" for key, value in sorted(plan.items())).encode("ascii"))
                         pending = {"native": native_cursor, "ui": None}
-                        requested_camera = {"native": native_cursor, "value": active_camera.view(people), "site": site_id}
+                        requested_camera = {"native": native_cursor, "value": active_camera.view(people), "site": site_id,
+                                            "position": dict(plan), "applied": False}
                         if site_id:
-                            area_views[site_id] = {"mode": "automatic", "personIds": [], "summary": "Moving to the next local observed view"}
+                            area_views[site_id] = {"mode": "automatic", "personIds": [], "summary":
+                                "Waiting for assigned subject image" if isinstance(active_camera, SubjectCamera)
+                                else "Moving to the next local observed view"}
                         else:
-                            displayed_camera = {"mode": "automatic", "personIds": [], "summary": "Moving to the next observed view"}
+                            displayed_camera = {"mode": "automatic", "personIds": [], "summary":
+                                "Waiting for assigned subject image" if isinstance(active_camera, SubjectCamera)
+                                else "Moving to the next observed view"}
                         with (destination / "camera.jsonl").open("ab") as journal:
-                            journal.write(encoded({"nativeSequence": native_cursor, "shot": camera.shot,
+                            journal.write(encoded({"nativeSequence": native_cursor, "shot": active_camera.shot,
                                 "observedHours": observation_hours, "personIds": active_camera.subjects,
+                                "siteId": site_id or (declared_sites[0]["id"] if len(declared_sites) == 1 else None),
+                                "assignedSubjectId": getattr(active_camera, "subject_id", None),
                                 "view": plan, "datasetAdmission": "unreviewed"}))
             viewport = viewport_view(state, frame)
             if frame_cache.revision != regional_revision:
@@ -843,6 +949,13 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     A.require(images[name] == frame["image"], "native image filename reused with different metadata")
                 published_camera = displayed_camera | {
                     "personIds": [key for key in displayed_camera["personIds"] if key in available_ids]}
+                if isinstance(camera, SubjectCamera):
+                    position = {key: state.get("view" + key.upper()) for key in ("x", "y", "z")} if frame.get("observerSequence") == state["sequence"] else {}
+                    published_camera = subject_view(camera, displayed_camera, camera_capture, people, frame, position)
+                    # A fixed-subject view carries this frame, rather than an
+                    # activity contact sheet whose old labels can outlive death
+                    # or a later unavailable position for the assigned person.
+                    feed_slots.clear()
                 for key, feed in list(feed_slots.items()) if not regional_views else []:
                     visible = [person for person in feed["camera"]["personIds"] if person in available_ids]
                     if key not in visible:
@@ -860,15 +973,21 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         else:
                             A.require(images[filename] == region_image, "regional image filename reused")
                         region_camera = area_views[region["id"]] | {"personIds": [key for key in area_views[region["id"]]["personIds"] if key in available_ids]}
+                        if isinstance(area_cameras[region["id"]], SubjectCamera):
+                            region_camera = subject_view(area_cameras[region["id"]], region_camera,
+                                area_captures.get(region["id"]), people, frame, region)
                         feed = {"id": "site:" + region["id"], "label": region["label"],
                                 "capturedAtUnixMs": frame["capturedAtUnixMs"], "image": region_image,
-                                "camera": region_camera | {"summary": region["label"] + "; " + region_camera["summary"]}}
+                                "camera": region_camera if isinstance(area_cameras[region["id"]], SubjectCamera)
+                                else region_camera | {"summary": region["label"] + "; " + region_camera["summary"]}}
                         if site_controls:
                             feed["siteId"] = region["id"]
                             site = next((value for value in state.get("sites", []) if value["id"] == region["id"]), None)
                             A.require(site is not None, "regional viewport state unavailable")
                             region_viewport = viewport_view(state | site, frame)
                             if region_viewport is not None: feed["viewport"] = region_viewport
+                            controls = camera_controls(state | site)
+                            if controls is not None: feed["cameraControls"] = controls
                         if inspection_header and inspection_header["capturedAtUnixMs"] <= frame["capturedAtUnixMs"]:
                             person = next((value for value in displayed_people if value["id"] in region_camera["personIds"]), None)
                             if person:
@@ -909,6 +1028,9 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     snapshot["commandResult"] = command_result
                 if viewport is not None:
                     snapshot["viewport"] = viewport
+                controls = camera_controls(state)
+                if controls is not None:
+                    snapshot["cameraControls"] = controls
                 if inspection_header:
                     snapshot["inspection"] = inspection_header
                     snapshot["panels"] = [{"id": "person-inspection", "label": "Native person inspector"}]

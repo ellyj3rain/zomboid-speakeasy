@@ -235,3 +235,63 @@ class ActivityCamera:
         if not cut and math.hypot(x-state["viewX"], y-state["viewY"]) < 0.75 and z == state["viewZ"]:
             return None
         return dict(viewX=x, viewY=y, viewZ=z, residencyX=x, residencyY=y, residencyZ=z)
+
+
+class SubjectCamera(ActivityCamera):
+    """Follow one declared person without changing their assignment or state."""
+
+    def __init__(self, subject_id, bounds):
+        super().__init__()
+        self.subject_id = subject_id
+        self.bounds = bounds
+        self.description = "Waiting for assigned subject"
+
+    def subject(self, people):
+        person = next((person for person in people if person["id"] == self.subject_id), None)
+        if person is None:
+            return None, "Assigned subject unavailable: not observed"
+        if person.get("record", {}).get("dead"):
+            return None, "Assigned subject unavailable: recorded dead"
+        if not all(type(person.get(key)) in (int, float) and math.isfinite(person[key])
+                   for key in ("x", "y", "z")):
+            return None, "Assigned subject unavailable: position unavailable"
+        if not self.eligible(person, self.bounds):
+            return None, "Assigned subject unavailable: outside observed world"
+        return person, None
+
+    def manual(self):
+        super().manual()
+        self.description = "Manual camera; resume follows the assigned subject"
+
+    def resume(self):
+        super().resume()
+        self.description = "Waiting for assigned subject image"
+
+    def view(self, people):
+        if not self.automatic:
+            return super().view([])
+        _person, unavailable = self.subject(people)
+        if unavailable:
+            return {"mode": "automatic", "personIds": [], "summary": unavailable}
+        if not self.subjects:
+            return {"mode": "automatic", "personIds": [], "summary": "Waiting for assigned subject image"}
+        return super().view(people)
+
+    def plan(self, people, hours, state, bounds, now):
+        person, unavailable = self.subject(people)
+        if unavailable:
+            self.subjects = []
+            self.next_follow = 0.0
+            self.description = unavailable
+            return None
+        if not self.automatic or state["paused"] or state.get("failure") or now < self.next_follow:
+            return None
+        initial = not self.subjects
+        x, y, z = (person[key] for key in ("x", "y", "z"))
+        self.subjects = [self.subject_id]
+        self.description = "Following " + self.label(person)
+        self.next_follow = now + self.FOLLOW
+        if not initial and math.hypot(x-state["viewX"], y-state["viewY"]) < .75 and z == state["viewZ"]:
+            return None
+        self.shot += 1
+        return dict(viewX=x, viewY=y, viewZ=z, residencyX=x, residencyY=y, residencyZ=z)

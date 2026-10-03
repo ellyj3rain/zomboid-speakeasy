@@ -46,8 +46,11 @@ compatibility Unreal viewer accepts
 control writer; it can be reattached after a process exit without reusing native
 command numbers.
 
-The camera defaults to automatic activity viewing. It holds a scene for about
-22 seconds, tracks it at most once a second, and frames one person with up to
+Layouts with a sealed `subjectId` follow that exact person across the authored
+world; missing or dead people receive no substitute. Manual browsing applies
+to that view, and Follow returns to its assignment. Layouts without assignments
+retain automatic activity viewing. It holds a scene for about three seconds,
+tracks it at most twice a second, and frames one person with up to
 four nearby people. Observed movement and changes in activity or awareness
 influence selection. Recent-scene and recent-person cooldowns make room for
 quieter people and different groups. Nearby framing does not assert a social
@@ -61,9 +64,9 @@ attention, memory counts and survival needs, including the source sample time
 available when that frame was published.
 Mousecat presents the current frame and retained views as an equal-panel
 observatory. Panel size, visible screens and the four overlay groups remain
-independently adjustable while every panel keeps its exact age visible. These
-views are time-multiplexed samples from the one native renderer; they are not
-simultaneous cameras. Manual camera frames do not invent an activity subject or
+independently adjustable while every panel retains its exact capture time; fresh captions remain quiet. Definition-owned legacy retained activity views are time-multiplexed samples.
+Declared independent sites use distinct simultaneous pixels from one native
+frame, with one world clock and save. Manual camera frames do not invent an activity subject or
 reuse a later person's state, and people absent from the current source
 projection are removed from the observatory.
 
@@ -73,7 +76,7 @@ projection are removed from the observatory.
 | View toggles | Hide or restore individual current and retained screens without changing the simulation |
 | Activity / Attention / Memory / Needs | Show or hide the corresponding frame-aligned source facts on every screen |
 | Arrows or direction buttons | Move the camera and take manual control |
-| Follow activity | Resume automatic activity viewing |
+| Follow | Resume the assigned subject, or legacy activity viewing |
 | People search and selection | Inspect a person's recorded state |
 | Show in world | Focus the selected person's observed location; manual control |
 | Open / Close game panel | Control the native inspector for the selected person |
@@ -230,3 +233,10 @@ writes bounded duration and automatic-continuation settings for the supervisor.
 `continue` is admitted only from a saved session. These lifecycle requests use
 immutable exact-sequence files and cannot supply a behavior verdict, dataset
 admission, teaching target or training row.
+
+Current source `cameraControls` carry a native sample time and engine viewport
+independent of pictured `viewport`. A rendered frame can precede a subsequent
+camera command without disabling supported zoom. Image labels, overlays and
+displayed projection continue to require the captured epoch. The client can
+offer Wide, Square or Frame shape and Fit or Fill framing; Window opens a
+resizable independent feed with source-routed camera and time controls.
