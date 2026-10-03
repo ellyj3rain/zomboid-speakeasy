@@ -20,8 +20,29 @@ def require(ok, message):
         raise ValueError(message)
 
 
-def fields(value, required):
-    require(isinstance(value, dict) and set(value) == set(required.split()), "native video fields differ")
+def fields(value, required, optional=""):
+    required, optional = set(required.split()), set(optional.split())
+    require(isinstance(value, dict) and required <= set(value) <= required | optional, "native video fields differ")
+
+
+def validate_crops(crops, width, height):
+    require(isinstance(crops, list) and len(crops) <= 4, "native video crops differ")
+    ids, slots, rectangles = set(), set(), []
+    for crop in crops:
+        fields(crop, "id slot left top width height")
+        require(isinstance(crop["id"], str) and re.fullmatch(r"[a-z][a-z0-9-]{0,47}", crop["id"])
+                and crop["id"] not in ids, "native video crop identity differs")
+        ids.add(crop["id"])
+        integer(crop["slot"], 0, 3); require(crop["slot"] not in slots, "native video crop slot duplicated")
+        slots.add(crop["slot"])
+        for key in ("left", "top"): integer(crop[key])
+        for key in ("width", "height"): integer(crop[key], 1)
+        require(crop["left"] + crop["width"] <= width and crop["top"] + crop["height"] <= height,
+                "native video crop exceeds pixels")
+        rectangle = (crop["left"], crop["top"], crop["left"] + crop["width"], crop["top"] + crop["height"])
+        require(all(rectangle[2] <= other[0] or rectangle[0] >= other[2] or rectangle[3] <= other[1] or rectangle[1] >= other[3]
+                    for other in rectangles), "native video crop overlaps")
+        rectangles.append(rectangle)
 
 
 def integer(value, minimum=0, maximum=2**53 - 1):
@@ -68,7 +89,7 @@ def validate(value, *, now=None, schema="sao-study-video/1"):
     previous = None
     clock = int(time.time() * 1000) if now is None else now
     for segment in segments:
-        fields(segment, "sequence file sha256 ptsStartMs durationMs capturedAtUnixMs endCapturedAtUnixMs observerSequence worldHours endWorldHours firstFrameSequence lastFrameSequence sites")
+        fields(segment, "sequence file sha256 ptsStartMs durationMs capturedAtUnixMs endCapturedAtUnixMs observerSequence worldHours endWorldHours firstFrameSequence lastFrameSequence sites", "crops")
         integer(segment["sequence"], 1)
         require(segment["file"] == f"video-{value['streamId']}-{segment['sequence']:016d}.m4s"
                 and re.fullmatch(r"[0-9a-f]{64}", segment["sha256"]) is not None, "native video fragment identity differs")
@@ -106,6 +127,13 @@ def validate(value, *, now=None, schema="sao-study-video/1"):
                         for other in rectangles), "native video crop overlaps")
             rectangles.append(rectangle)
             number(site["zoom"], .01, 100); number(site["targetZoom"], .01, 100)
+        if "crops" in segment:
+            validate_crops(segment["crops"], value["width"], value["height"])
+            if sites:
+                crops = {crop["id"]: crop for crop in segment["crops"]}
+                require(len(crops) == len(sites) and all(
+                    crops.get(site["id"]) == {key: site[key] for key in ("id", "slot", "left", "top", "width", "height")}
+                    for site in sites), "native video crop and pose differ")
         previous = segment
     return value
 

@@ -31,6 +31,34 @@ class NativeVideoTests(unittest.TestCase):
         fallback = {'observerSequence': 2, 'capturedAtUnixMs': self.now}
         self.assertEqual(Video.acknowledged_frame(self.value, fallback), (fallback, None))
 
+    def test_mixed_pose_retains_authoritative_crop_without_camera_acknowledgment(self):
+        segment = self.value['segments'][0]
+        segment['crops'] = [{key: site[key] for key in ('id', 'slot', 'left', 'top', 'width', 'height')}
+                            for site in segment['sites']]
+        Video.validate(self.value, now=self.now)
+        segment['sites'] = []
+        Video.validate(self.value, now=self.now)
+        fallback = {'observerSequence': 2, 'capturedAtUnixMs': self.now}
+        self.assertEqual(Video.acknowledged_frame(self.value, fallback), (fallback, None))
+        segment['crops'] = []
+        Video.validate(self.value, now=self.now)
+
+    def test_crops_refuse_conflicting_pose_bounds_overlaps_and_extra_claims(self):
+        original = self.value['segments'][0]
+        original['crops'] = [{key: site[key] for key in ('id', 'slot', 'left', 'top', 'width', 'height')}
+                             for site in original['sites']]
+        changes = [lambda s: s['crops'][0].update(width=321), lambda s: s['crops'][0].update(slot=True),
+                   lambda s: s['crops'][0].update(x=10), lambda s: s['crops'].append(deepcopy(s['crops'][0])),
+                   lambda s: s['crops'][0].update(id='outside'), lambda s: s.update(crops=[]),
+                   lambda s: s['crops'][0].update(left=.5), lambda s: s['crops'][0].update(slot=1)]
+        for change in changes:
+            value = deepcopy(self.value); change(value['segments'][0])
+            with self.assertRaises(ValueError): Video.validate(value, now=self.now)
+        value = deepcopy(self.value); value['segments'][0]['sites'] = []
+        value['segments'][0]['crops'] = [original['crops'][0] | {'width': 200},
+                                     original['crops'][0] | {'id': 'other', 'slot': 1, 'left': 150, 'width': 170}]
+        with self.assertRaisesRegex(ValueError, 'overlaps'): Video.validate(value, now=self.now)
+
     def test_bad_identity_clocks_counts_geometry_and_types_are_refused(self):
         changes = [lambda v: v.update(streamId='../escape'),
                    lambda v: v['segments'][0].update(file='../outside.m4s'),
