@@ -24,6 +24,8 @@ import cognition_contract as Cognition
 import cognition_episodes as CognitionEpisodes
 import cognition_review as CognitionReview
 from world_camera import ActivityCamera, SubjectCamera
+import native_video as Video
+import observation_graph as ObservationGraph
 
 
 # Yield between atomic manifest checks without imposing a sub-120 Hz ceiling.
@@ -708,9 +710,14 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
     people, observation_hours, population = [], None, {}
     displayed_people, available_ids = [], set()
     inspection_header = None
+    observation_graph = None
+    inspection_details = {}
     images = {}
     feed_slots = {}
     receipt_cache, state_cache, frame_cache, observation_cache = (JsonSnapshot() for _ in range(4))
+    video_cache = JsonSnapshot()
+    video_relay = Video.VideoRelay(native_root, destination)
+    video_revision, video, video_error = None, None, None
     archive_path, next_archive_scan = None, 0.0
     last_publication = None
     regional_views, regional_revision = [], None
@@ -740,6 +747,17 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
         try:
             state = state_cache.read(observer_root / "observer-state.json")
             frame = frame_cache.read(native_root / "native.json")
+            video_path = native_root / "latest-video.json"
+            if video_path.exists():
+                try:
+                    native_video = video_cache.read(video_path)
+                    if video_cache.revision != video_revision:
+                        video = video_relay.publish(native_video)
+                        video_revision, video_error = video_cache.revision, None
+                except (ValueError, KeyError, TypeError, OSError, TransientRead):
+                    video = None
+                    video_error = "Continuous video unavailable; native images remain available."
+            ack_frame, ack_sites = Video.acknowledged_frame(video, frame)
             A.require(type(state.get("detached")) is bool, "observer participation evidence unavailable")
             if not state["detached"]:
                 camera.manual()
@@ -806,19 +824,26 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                         displayed_people = people_view(people, inspection_details,
                                                        (inspection_header or {}).get("selectedPersonId"))
                         available_ids = {p["id"] for p in displayed_people}
+                        graph_inspections = {key: detail | {
+                            "capturedAtUnixMs": (inspection_header or {}).get("capturedAtUnixMs", 0),
+                            "worldHours": (inspection_header or {}).get("worldHours")}
+                            for key, detail in inspection_details.items()}
+                        observation_graph = ObservationGraph.build_observation_graph(
+                            people, graph_inspections, captured_at_unix_ms=int(time.time() * 1000),
+                            world_hours=observation_hours)
                         last_observation = observation_cache.revision
                 except (FileNotFoundError, TransientRead, PermissionError):
                     # Inspection may fail while pixels and controls remain live.
                     observation_ready = False
-            if requested_camera and frame.get("observerSequence", -1) >= requested_camera["native"]:
+            if requested_camera and ack_frame.get("observerSequence", -1) >= requested_camera["native"]:
                 selected = requested_camera.get("site")
                 requested_owner = area_cameras[selected] if selected in area_cameras else camera
-                position = next((value for value in frame.get("views", []) if value["id"] == selected), {}) if selected else {
+                position = next((value for value in (ack_sites if ack_sites is not None else frame.get("views", [])) if value["id"] == selected), {}) if selected else {
                     key: state.get("view" + key.upper()) for key in ("x", "y", "z")}
                 captured = (not isinstance(requested_owner, SubjectCamera)
                             or (requested_camera.get("applied")
-                                and (selected or frame.get("observerSequence") == state["sequence"])
-                                and camera_capture_matches(requested_camera, frame, position)))
+                                and (selected or ack_frame.get("observerSequence") == state["sequence"])
+                                and camera_capture_matches(requested_camera, ack_frame, position)))
                 if captured:
                     if selected:
                         area_views[selected] = requested_camera["value"]
@@ -940,6 +965,7 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                            state["paused"], state.get("failure"), observation_ready, last_observation,
                            json.dumps(study, sort_keys=True), ended, receipt["status"],
                            review_status, review_message, review_interaction)
+            publication += (video_revision, video_error)
             if publication != last_publication:
                 name = frame["image"]["file"]
                 if name not in images:
@@ -980,6 +1006,20 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                                 "capturedAtUnixMs": frame["capturedAtUnixMs"], "image": region_image,
                                 "camera": region_camera if isinstance(area_cameras[region["id"]], SubjectCamera)
                                 else region_camera | {"summary": region["label"] + "; " + region_camera["summary"]}}
+                        if isinstance(area_cameras[region["id"]], SubjectCamera):
+                            subject_id = area_cameras[region["id"]].subject_id
+                            subject = next((person for person in displayed_people if person["id"] == subject_id), None)
+                            feed["label"] = subject["label"] if subject else subject_id
+                        video_site = next((site for site in (ack_sites or []) if site["id"] == region["id"]), None)
+                        if video_site is not None and video is not None:
+                            video_camera = area_views[region["id"]] | {
+                                "personIds": [key for key in area_views[region["id"]]["personIds"] if key in available_ids]}
+                            if isinstance(area_cameras[region["id"]], SubjectCamera):
+                                video_camera = subject_view(area_cameras[region["id"]], video_camera,
+                                    area_captures.get(region["id"]), people, ack_frame, video_site)
+                            feed["videoCamera"] = {"camera": video_camera,
+                                "capturedAtUnixMs": ack_frame["capturedAtUnixMs"],
+                                "observerSequence": ack_frame["observerSequence"]}
                         if site_controls:
                             feed["siteId"] = region["id"]
                             site = next((value for value in state.get("sites", []) if value["id"] == region["id"]), None)
@@ -1016,12 +1056,18 @@ def watch_locked(run, package, destination, registry=None, view_id="survival-obs
                     summary += " Native inspector rendering failed: " + str(state["inspectionError"])[:512]
                 if not observation_ready:
                     summary += " People inspection awaiting a complete observation."
+                if video_error:
+                    summary += " " + video_error
                 snapshot = {"schema": "mousecat.native-view/1",
                     "sessionId": session, "sequence": sequence, "capturedAtUnixMs": frame["capturedAtUnixMs"],
                     "image": frame["image"], "state": "ended" if ended else ("paused" if state["paused"] else "running"),
                     "title": "Simulation observatory", "summary": summary,
                     "people": displayed_people, "lastCommandSequence": acknowledged,
                     "camera": published_camera}
+                if video is not None:
+                    snapshot["video"] = video
+                if observation_graph is not None:
+                    snapshot["observationGraph"] = observation_graph
                 if feed_slots:
                     snapshot["feeds"] = list(reversed(feed_slots.values()))
                 if command_result:

@@ -3051,3 +3051,41 @@ produce the expected failures; subject-layout tamper and malformed assignments
 refuse. The current-controls case accepts a lagged picture without inventing its
 projection and refuses invalid controls. No dataset admission or teaching
 targets are created by this observer change.
+
+## Record 88 - Native video receipts and causal observation projection
+
+Verified source boundary: 2026-10-03 04:00 UTC / 21:00 PST.
+
+The observer bridge verifies and relays native H264 initialization and media
+fragments under immutable stream identities. Actual byte hashes, MP4 track and
+sample timing, sync samples, source acquisition ranges, camera rectangles and
+bounded frame counters govern admission. Initialization codec, dimensions and
+capture ceiling cannot change within an initialized stream. Cached descriptors
+remain immutable. Malformed complete timing boxes refuse through the ordinary
+video fallback instead of terminating the bridge.
+
+Video acknowledgements use exact native command epochs and stable fragment-end
+camera receipts. PNG projection clocks remain unchanged. Per-feed video camera
+identity is separately qualified; mixed fragments claim no captured pose.
+Source video publication can therefore advance without waiting for the PNG
+scheduler. Video failure preserves the independent PNG path.
+
+The observation graph projects actual people and private inspection records
+through typed nodes, reference edges, labels and metric units. Explicit episode
+and selected-action receipts govern results. Reported body positions remain
+distinct from durable locations. Unknown acquisition time remains zero; private
+claims, predictions and missing evidence retain their attribution. Temporal
+associations do not become causal claims or unreported externalities.
+
+The source and fragment fixtures exercise actual encoded bytes; their synthetic
+pixels establish no loaded gameplay or learned-policy performance. Full-suite
+and loaded integration receipts are recorded separately at closure. This display
+slice produces no dataset admission, teaching target or new gameplay knowledge.
+
+The final complete suite passes 523 tests in 152.825 seconds, with 27
+environment/model skips. Seven video tests exercise actual encoded initialization
+and media, complete malformed timing boxes, immutable cached descriptors and
+format/counter regression. Twenty graph tests include four executing source
+mutations for selected actions, results, source clocks and fractional positions.
+The integrated watcher suite retains 44 passing cases. Independent source review
+finds no remaining coherence defect in the producer, relay and consumer repairs.
