@@ -1,5 +1,12 @@
 # Zomboid-Speakeasy
 
+Record 87 assigns an observer camera to a sealed subject identity. Each
+camera follows that exact person's reported position across the authored world;
+other people and nearby urgency do not replace them. Pictured identity waits
+for native command and captured float-pose acknowledgement. Manual browsing and
+Follow remain per view, and zoom retains automatic following. Current native
+camera controls have their own source sample clock, separate from pictured zoom.
+
 Record 86 shortens the active native-view bridge polling yield to one
 millisecond. Native frame identity, publication checks and terminal backoff
 remain intact. Throughput still depends on producer and bridge work.
