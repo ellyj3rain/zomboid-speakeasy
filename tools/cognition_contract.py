@@ -8,12 +8,15 @@ from __future__ import annotations
 import copy
 import json
 import math
+import re
 
 ACTIONS = {"food", "water", "inspect", "continue"}
 MODELS = {"ordinary", "associative"}
 HYPOTHESIS_STATES = {"hypothesis", "supported", "refined", "falsified"}
-PRIVATE_EXPERIENCES = {"medication-use": "medicine", "physical-change": "body", "preparation": "food"}
-PRIVATE_FIELDS = {"itemId", "occurredAtHours", "stats", "beforeCookingTime", "afterCookingTime", "heatObserved"}
+PRIVATE_EXPERIENCES = {"medication-use": "medicine", "physical-change": "body", "preparation": "food",
+                       "entry-outcome": "body", "recovery-outcome": "body"}
+BEHAVIOR_FIELDS = {"actionKind", "apertureState", "succeeded", "beforeValue", "afterValue", "durationHours"}
+PRIVATE_FIELDS = {"itemId", "occurredAtHours", "stats", "beforeCookingTime", "afterCookingTime", "heatObserved"} | BEHAVIOR_FIELDS
 FELT_STATS = {"HUNGER", "THIRST", "FATIGUE", "ENDURANCE", "PANIC", "STRESS", "NICOTINE_WITHDRAWAL",
               "BOREDOM", "UNHAPPINESS", "DISCOMFORT", "INTOXICATION", "ANGER", "PAIN"}
 
@@ -151,6 +154,42 @@ def private_experience(value):
     require(value["category"] == PRIVATE_EXPERIENCES[kind] and value["perspective"] == "performed"
             and value["actorId"] == value["observerId"], "capability experience must be privately performed")
     number(value.get("occurredAtHours"), 0, value["worldHours"])
+    if kind in {"entry-outcome", "recovery-outcome"}:
+        required = common | {"actionKind", "succeeded"}
+        if kind == "entry-outcome":
+            required |= {"sourceId", "apertureState"}
+        else:
+            required |= {"beforeValue", "afterValue", "durationHours"}
+        fields(value, required, {"detail", "capabilities"})
+        require(value["status"] == "completed" and type(value["succeeded"]) is bool,
+                "behavior outcome must be a completed personal observation")
+        producer = "entry" if kind == "entry-outcome" else "recovery"
+        prefix = producer + "/" + value["actorId"] + "/"
+        require(value["id"].startswith(prefix), "behavior event owner differs")
+        sequence = value["id"][len(prefix):]
+        require(re.fullmatch(r"(?:[1-9][0-9]*|[1-9]\.[0-9]+E(?:14|15))", sequence) is not None,
+                "behavior sequence differs")
+        position = number(float(sequence), 1, 2**53 - 1, True)
+        digits = str(int(position))
+        # Installed KahluaUtil.numberToString switches integer formatting at
+        # 1e14; all admitted counters remain exactly representable integers.
+        canonical = (digits if position < 1e14 else
+                     digits[0] + "." + (digits[1:].rstrip("0") or "0") + "E" + str(len(digits)-1))
+        require(sequence == canonical, "behavior sequence is not canonical")
+        text(value["actionKind"], 32)
+        if kind == "entry-outcome":
+            text(value["apertureState"], 32)
+            require(value["actionKind"] in {"door", "window"}
+                    and value["apertureState"] in {"open", "closed", "clear", "smashed", "barricaded", "unknown"},
+                    "entry action or observed condition differs")
+        else:
+            require(value["actionKind"] in {"sleep", "rest"}, "recovery action differs")
+            number(value["beforeValue"], 0, 1); number(value["afterValue"], 0, 1)
+            number(value["durationHours"], math.nextafter(0, math.inf), 12)
+            improved = (value["afterValue"] < value["beforeValue"] if value["actionKind"] == "sleep"
+                        else value["afterValue"] > value["beforeValue"])
+            require(value["succeeded"] == improved, "recovery outcome differs from measured direction")
+        return
     if kind == "physical-change":
         fields(value, common | {"stats"}, {"detail", "capabilities"})
         stats = value["stats"]

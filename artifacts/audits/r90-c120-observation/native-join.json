@@ -1,0 +1,56 @@
+{
+  "schema": "speakeasy-c120-native-projection-join/1",
+  "status": "PASS",
+  "inputs": {
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\sao-c120-experience\\_scratch\\c120-entry-final\\entry-cognition-snapshot.json": "1f8410163eddcae10b38d7b8174ede8969eb0104466cd528126f0d010ac7df30",
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\sao-c120-experience\\_scratch\\c109-loaded-recovery\\checks\\recovery-cognition-snapshot.json": "3f285d14a7d1cb45a8ab4236c5623c3cc59e444d43308b1f93f920f8962b90bf",
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\sao-c120-experience\\_scratch\\c120-entry-final\\receipt.json": "aa98eaee71bd29250cb030bd1ece4228d9184d6ade6ff03caafca92b71ce99b8",
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\sao-c120-experience\\_scratch\\c109-loaded-recovery\\checks\\receipt.json": "9c3c42b9a3bf1e8f67d670aa1a961fc7cd3f4c7c3e4b2573f8f5495469921f27",
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\speakeasy-c120-observation\\tools\\cognition_contract.py": "258400fad8d028ac4e4dbcb765d1a7989705702c0173a4a21d18049c5bb57d42",
+    "C:\\Users\\jleyv\\Peanut Butter\\AI Assisted Software Engineering Mass Repository\\Projects\\.worktrees\\speakeasy-c120-observation\\tools\\cognition_episodes.py": "9fb592132fb669607c6e43b30175276a31ee990afe4d95ba9ba66a6228969c9d"
+  },
+  "sourceExperiences": 12,
+  "archivedSnapshots": 2,
+  "trainingRows": 0,
+  "teachingTargets": 0,
+  "observedPolicyTargets": 0,
+  "controls": [
+    {
+      "source": "entry-cognition-snapshot.json",
+      "control": "foreign-observer",
+      "result": "REFUSED",
+      "reason": "cognition: experience belongs to another observer"
+    },
+    {
+      "source": "entry-cognition-snapshot.json",
+      "control": "future-occurrence",
+      "result": "REFUSED",
+      "reason": "cognition: invalid number"
+    },
+    {
+      "source": "entry-cognition-snapshot.json",
+      "control": "extra-policy-credit",
+      "result": "REFUSED",
+      "reason": "cognition: fields differ"
+    },
+    {
+      "source": "recovery-cognition-snapshot.json",
+      "control": "foreign-observer",
+      "result": "REFUSED",
+      "reason": "cognition: experience belongs to another observer"
+    },
+    {
+      "source": "recovery-cognition-snapshot.json",
+      "control": "future-occurrence",
+      "result": "REFUSED",
+      "reason": "cognition: invalid number"
+    },
+    {
+      "source": "recovery-cognition-snapshot.json",
+      "control": "extra-policy-credit",
+      "result": "REFUSED",
+      "reason": "cognition: fields differ"
+    }
+  ],
+  "boundary": "Actual source-produced C.snapshot(full) data from installed native producer proofs; study envelope and external run-validation response are controlled. This establishes projection/archive compatibility, not a loaded gameplay run."
+}
