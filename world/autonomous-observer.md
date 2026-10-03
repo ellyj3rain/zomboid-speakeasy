@@ -278,3 +278,17 @@ reported results. Private beliefs and model predictions retain their perspective
 Unselected proposals remain proposals; missing receipts remain unknown. Temporal
 and associated observations have their own edge types. Proximity, chronology and
 later physical changes cannot manufacture a causal outcome or externality.
+
+Video fragments can additionally carry `crops`, a geometry-only receipt with
+`id`, `slot`, `left`, `top`, `width` and `height`. Every sampled native frame
+must agree on these camera rectangles for the producer to qualify them. Moving
+pose or command epochs can therefore leave `sites` empty while crops remain
+verified. An explicitly empty crop list withholds geometry. Missing `crops`
+preserves the earlier stable-site and retained-geometry interpretation.
+
+Crop fields cannot carry world position, person identity, zoom or acquisition
+claims. Geometry is bounded to the composite with unique identities and slots
+and no overlaps. If a fragment also qualifies pose sites, its crops must match
+those sites exactly. Camera acknowledgement continues to require the pose
+receipt. A crop-only first fragment can paint both native views without inventing
+picture-specific overlays or switching away from their assigned subjects.

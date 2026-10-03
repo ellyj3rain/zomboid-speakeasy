@@ -1,5 +1,10 @@
 # Zomboid-Speakeasy
 
+Record 89 separates verified video crop geometry from captured camera pose.
+Moving cameras can retain their independently qualified rectangles while their
+pose remains unknown. The bridge checks both receipts and their agreement;
+geometry cannot supply a person acknowledgement or pictured zoom.
+
 Record 88 relays native H264 fragments from the completed shared framebuffer.
 Hashed initialization and media bytes retain source time, command epochs and
 independent camera crops. PNG remains the fallback. Camera acknowledgement uses

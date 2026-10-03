@@ -3089,3 +3089,31 @@ format/counter regression. Twenty graph tests include four executing source
 mutations for selected actions, results, source clocks and fractional positions.
 The integrated watcher suite retains 44 passing cases. Independent source review
 finds no remaining coherence defect in the producer, relay and consumer repairs.
+
+## Record 89 - Independent crop geometry through moving camera poses
+
+The loaded C116 candidate produced real 2560 by 720 H264 and two native 1280 by
+720 images. Moving and easing camera poses correctly withheld fragment pose
+claims, but also prevented first video surfaces from obtaining crop geometry.
+The native candidate attempt 8 saved normally with exit zero and no reported
+runtime errors. Its prior and final engine times were 49.8312873840332 and
+51.08269500732422 hours. It is retained as diagnostic evidence rather than a
+successful continuous-view acceptance.
+
+Optional fragment `crops` retain only qualified camera identity, slot and pixel
+rectangle. Every sampled frame must agree on geometry independently of pose,
+zoom and command epochs. The relay rejects unknown fields, conflicting pose
+geometry, duplicate slots or identities, out-of-bounds and overlapping pixels.
+An explicitly empty list withholds geometry; legacy missing fields remain
+supported. Camera acknowledgement and picture-specific facts still require
+stable `sites`, preserving the original clock and identity boundaries.
+
+This repair changes observation transport and creates no training rows, personal
+knowledge, native outcomes or learned-policy claim. Final source and loaded
+acceptance receipts govern its closure.
+
+The final complete suite passes 525 tests in 143.518 seconds, with 27
+environment/model skips. Nine video cases preserve actual encoded bytes and
+clock/cached-file checks while adding first-fragment crop-only admission,
+authoritative empty geometry, conflicting pose, extra claims and pixel bounds.
+The existing graph source controls and native watcher cases remain green.
