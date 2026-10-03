@@ -240,3 +240,41 @@ camera command without disabling supported zoom. Image labels, overlays and
 displayed projection continue to require the captured epoch. The client can
 offer Wide, Square or Frame shape and Fit or Fill framing; Window opens a
 resizable independent feed with source-routed camera and time controls.
+
+## Continuous native video and observation graph
+
+The optional native `sao-study-video/1` manifest publishes one H264 composite
+stream and up to four camera rectangles. Speakeasy verifies immutable stream
+identity, initialization format, fragment hashes, native clocks, frame counts,
+MP4 sample timing, independent decoding and bounded geometry before relaying
+`mousecat.native-video/1`. The source's `fps` is the configured capture ceiling.
+It is separate from measured rendering and delivered playback rates. Retained
+fragments preserve gaps in source acquisition rather than accelerating time.
+
+Each fragment qualifies its camera pose only when every captured receipt has
+the same command epoch and site metadata. Mixed pose fragments keep their
+pixels with an empty site receipt. A compatible viewer can retain the last
+verified crop while withholding picture-specific pose and person overlays.
+Stable video camera acknowledgement uses the fragment's exact final native
+clock. PNG `camera` and `viewport` retain their own original image clock;
+`videoCamera` carries the separately acknowledged video identity. Current
+`cameraControls` continue to describe source command availability.
+
+Verified initialization and media files are source-bound and immutable. The
+relay retains a short bounded predecessor window for requests already issued.
+Missing, truncated, malformed or unsupported video leaves the ordinary PNG
+path usable. A completed stream retains its final fragments for local browsing;
+saved-pixel pan and zoom issue no native world or continuation command.
+
+The optional `simulation.observation-graph/1` projection supplies at most 128
+nodes and 256 edges from actual people and inspection records. Human labels and
+units accompany machine values. Native body and durable record positions retain
+their source and fractional floor. Every node and edge carries its own source
+record, world time and acquisition time; zero wall time means unknown acquisition.
+Graph sample time does not replace a missing source clock.
+
+Explicit cognition episode and action identities connect selected actions and
+reported results. Private beliefs and model predictions retain their perspective.
+Unselected proposals remain proposals; missing receipts remain unknown. Temporal
+and associated observations have their own edge types. Proximity, chronology and
+later physical changes cannot manufacture a causal outcome or externality.

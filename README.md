@@ -1,5 +1,18 @@
 # Zomboid-Speakeasy
 
+Record 88 relays native H264 fragments from the completed shared framebuffer.
+Hashed initialization and media bytes retain source time, command epochs and
+independent camera crops. PNG remains the fallback. Camera acknowledgement uses
+verified video receipts independently of the slower PNG publication clock;
+pictured PNG and video identity retain their separate acquisition times.
+
+The ancillary observation graph connects reported people, needs, beliefs,
+proposals, selected actions and outcomes through explicit source receipts.
+Private accounts, predictions and observed results remain distinguishable.
+Missing links and unknown acquisition times remain visible. Spatial proximity
+and chronology supply no causal claim. This display path creates no training
+rows or gameplay knowledge.
+
 Record 87 assigns an observer camera to a sealed subject identity. Each
 camera follows that exact person's reported position across the authored world;
 other people and nearby urgency do not replace them. Pictured identity waits
