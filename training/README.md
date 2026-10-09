@@ -136,7 +136,7 @@ of the task still does not approve its retrieval target.
 | Dataset and evaluation | Explicit offline admission and source-group split checks implemented | Understanding/retrieval samples admitted to offline evaluation; combined dataset excluded, no model evaluation run; historical conditioning unchanged |
 | Enacted coordination | Full-namespace recipient decision, current work/priorities, explicit pressure availability, executable options and later native receipts | Twenty C81 synthetic production rows received exact task-label review and bounded offline admission; they are not sampled gameplay |
 | Coordination reference | Frozen shared tokenizer, learned 8-dimensional byte-token base and typed feasible-response adapter | Deterministic 10/5/5 run is sealed and reproduces; decline/withdraw unsupported |
-| Native coordination shadow | Content-hashed FP32 bundle, exact Python/Java vectors, bounded async request contract and current-state revalidation | Mechanically integrated as observation only; it cannot choose a response or create work, and loaded gameplay is unobserved |
+| Native coordination shadow | Content-hashed FP32 bundle, exact Python/Java vectors, bounded async request contract and current-state revalidation | Mechanically integrated as observation only; it cannot choose a response or create work |
 | Learned runtime authority | Later reviewed activation of a compatible artifact | No learned behavior change |
 
 The current example's exact hashes and review standing live in

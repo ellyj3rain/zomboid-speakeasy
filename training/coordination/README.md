@@ -173,9 +173,8 @@ python tools/coordination_native_bundle.py validate --bundle-dir training/coordi
 ```
 
 The SAO consumer must independently prove Java/tokenizer parity, bounded async
-execution, stale/foreign/malformed refusal and current-owner revalidation. Even
-after those mechanical checks, shadow output remains observational until a
-separate behavior-activation review and loaded-world acceptance occur.
+execution, stale/foreign/malformed refusal and current-owner revalidation. Shadow output remains observational; behavior changes require separately
+authorized activation.
 
 ## Record 68 causal episode intake
 
