@@ -3170,3 +3170,8 @@ projections with archive export, rather than another loaded gameplay run.
 The final join uses C120's repeated measured counterexamples as well as its
 positive outcomes; the earlier four-experience join remains independently
 valid. Final receipts are retained in `artifacts/audits/r90-c120-observation/`.
+
+
+## [REPO] 2026-10-10 00:42 UTC - Markdown documentation maintenance
+
+The operator retires automatic Word companions. Markdown remains the complete canonical documentation. This maintenance removes 50 generated tracked DOCX exports and corrects the current documentation contract; current product source, versions and prior Markdown history remain preserved. Checks cover the exact deletion allowlist, current policy text, committed diff hygiene and affected producer lifecycle where changed. Generated derivatives receive no additional duplicate archive.

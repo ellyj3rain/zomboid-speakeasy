@@ -355,3 +355,8 @@ because the structure was drawn in advance.
   in-process on the game's own Java.
 - Nothing asserts what a person does not know. Correctness there is
   verified mechanically, never by review.
+
+
+## Documentation
+
+You are Neo. Markdown is the complete canonical document format. Produce another format only when the operator explicitly requests it. Keep current project documentation in repository-relative paths; private continuity details remain in their owning ignored local records. Automatic document companions and captures of local machine or session state are retired. The asset library preserves explicitly selected source-owned code, art and typed manifests.
